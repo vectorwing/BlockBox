@@ -3,16 +3,21 @@ package vectorwing.buildingbigger.data;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
+import net.minecraft.data.loot.LootTableProvider;
+import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import vectorwing.buildingbigger.BuildingBigger;
+import vectorwing.buildingbigger.data.provider.BlockLootTables;
 import vectorwing.buildingbigger.data.provider.BlockStates;
 import vectorwing.buildingbigger.data.provider.ItemModels;
 import vectorwing.buildingbigger.data.tag.BlockTags;
 import vectorwing.buildingbigger.data.tag.ItemTags;
 
+import java.util.Collections;
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 @SuppressWarnings("unused")
@@ -42,9 +47,9 @@ public class DataGenerators
 //		generator.addProvider(event.includeServer(), new Recipes(output, lookupProvider));
 //		generator.addProvider(event.includeServer(), new DataMaps(output, lookupProvider));
 //		generator.addProvider(event.includeServer(), new Advancements(output, lookupProvider, helper));
-//		generator.addProvider(event.includeServer(), new LootTableProvider(output, Collections.emptySet(), List.of(
-//				new LootTableProvider.SubProviderEntry(FDBlockLoot::new, LootContextParamSets.BLOCK)
-//		), lookupProvider));
+		generator.addProvider(event.includeServer(), new LootTableProvider(output, Collections.emptySet(), List.of(
+				new LootTableProvider.SubProviderEntry(BlockLootTables::new, LootContextParamSets.BLOCK)
+		), lookupProvider));
 //		generator.addProvider(event.includeServer(), new StructureUpdater("structures/village/houses", FarmersDelight.MODID, helper, output));
 //
 		BlockStates blockStates = new BlockStates(output, helper);
