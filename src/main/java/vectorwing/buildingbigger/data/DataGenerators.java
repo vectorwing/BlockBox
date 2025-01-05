@@ -13,6 +13,7 @@ import vectorwing.buildingbigger.BuildingBigger;
 import vectorwing.buildingbigger.data.provider.BlockLootTables;
 import vectorwing.buildingbigger.data.provider.BlockStates;
 import vectorwing.buildingbigger.data.provider.ItemModels;
+import vectorwing.buildingbigger.data.provider.Recipes;
 import vectorwing.buildingbigger.data.tag.BlockTags;
 import vectorwing.buildingbigger.data.tag.ItemTags;
 
@@ -44,7 +45,7 @@ public class DataGenerators
 //		generator.addProvider(event.includeServer(), datapackProvider);
 //		generator.addProvider(event.includeServer(), new EnchantmentTags(output, builtinLookupProvider, helper));
 
-//		generator.addProvider(event.includeServer(), new Recipes(output, lookupProvider));
+		generator.addProvider(event.includeServer(), new Recipes(output, lookupProvider));
 //		generator.addProvider(event.includeServer(), new DataMaps(output, lookupProvider));
 //		generator.addProvider(event.includeServer(), new Advancements(output, lookupProvider, helper));
 		generator.addProvider(event.includeServer(), new LootTableProvider(output, Collections.emptySet(), List.of(
