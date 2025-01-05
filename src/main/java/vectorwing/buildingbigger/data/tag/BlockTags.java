@@ -23,6 +23,18 @@ public class BlockTags extends BlockTagsProvider
 	}
 
 	protected void registerBlockMineables() {
+		tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(
+				ModBlocks.SANDSTONE_BRICKS.get(),
+				ModBlocks.RED_SANDSTONE_BRICKS.get(),
+				ModBlocks.CLAY_TILES.get(),
+				ModBlocks.POLISHED_PACKED_ICE.get(),
+				ModBlocks.PACKED_ICE_BRICKS.get(),
+				ModBlocks.CLAY_TILES.get(),
+				ModBlocks.IRON_PLATE.get(),
+				ModBlocks.IRON_TREAD_PLATE.get(),
+				ModBlocks.CORRUGATED_IRON_PLATE.get(),
+				ModBlocks.IRON_PLATE_PILLAR.get()
+		);
 		tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_SHOVEL).add(
 				ModBlocks.PACKED_SNOW.get(),
 				ModBlocks.PACKED_SNOW_BRICKS.get()

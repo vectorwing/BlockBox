@@ -20,8 +20,17 @@ public class BlockLootTables extends BlockLootSubProvider
 
 	@Override
 	protected void generate() {
+		dropSelf(ModBlocks.SANDSTONE_BRICKS.get());
+		dropSelf(ModBlocks.RED_SANDSTONE_BRICKS.get());
+		dropSelf(ModBlocks.CLAY_TILES.get());
 		dropSelf(ModBlocks.PACKED_SNOW.get());
 		dropSelf(ModBlocks.PACKED_SNOW_BRICKS.get());
+		dropSelf(ModBlocks.POLISHED_PACKED_ICE.get());
+		dropSelf(ModBlocks.PACKED_ICE_BRICKS.get());
+		dropSelf(ModBlocks.IRON_PLATE.get());
+		dropSelf(ModBlocks.IRON_TREAD_PLATE.get());
+		dropSelf(ModBlocks.CORRUGATED_IRON_PLATE.get());
+		dropSelf(ModBlocks.IRON_PLATE_PILLAR.get());
 	}
 
 	@Override

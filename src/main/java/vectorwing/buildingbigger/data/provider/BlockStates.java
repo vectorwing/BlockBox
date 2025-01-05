@@ -15,6 +15,11 @@ public class BlockStates extends BlockStateProvider
 
 	@Override
 	protected void registerStatesAndModels() {
+		simpleBlock(ModBlocks.SANDSTONE_BRICKS.get());
+		simpleBlock(ModBlocks.RED_SANDSTONE_BRICKS.get());
+		simpleBlock(ModBlocks.CLAY_TILES.get());
+		simpleBlock(ModBlocks.POLISHED_PACKED_ICE.get());
+		simpleBlock(ModBlocks.PACKED_ICE_BRICKS.get());
 		simpleBlock(ModBlocks.PACKED_SNOW.get());
 		simpleBlock(ModBlocks.PACKED_SNOW_BRICKS.get());
 		simpleBlock(ModBlocks.IRON_PLATE.get());

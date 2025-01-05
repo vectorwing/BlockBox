@@ -17,8 +17,16 @@ public class ModBlocks
 
 	public static final BlockBehaviour.Properties PROPERTIES_PACKED_SNOW = BlockBehaviour.Properties.of().mapColor(MapColor.SNOW).strength(0.4F).sound(SoundType.SNOW);
 
+	public static final Supplier<Block> SANDSTONE_BRICKS = BLOCKS.registerSimpleBlock("sandstone_bricks", BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE));
+	public static final Supplier<Block> RED_SANDSTONE_BRICKS = BLOCKS.registerSimpleBlock("red_sandstone_bricks", BlockBehaviour.Properties.ofFullCopy(Blocks.RED_SANDSTONE));
+
+	public static final Supplier<Block> CLAY_TILES = BLOCKS.registerSimpleBlock("clay_tiles", BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS));
+
 	public static final Supplier<Block> PACKED_SNOW = BLOCKS.registerSimpleBlock("packed_snow", PROPERTIES_PACKED_SNOW);
 	public static final Supplier<Block> PACKED_SNOW_BRICKS = BLOCKS.registerSimpleBlock("packed_snow_bricks", PROPERTIES_PACKED_SNOW);
+	public static final Supplier<Block> POLISHED_PACKED_ICE = BLOCKS.registerSimpleBlock("polished_packed_ice", BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_ICE));
+	public static final Supplier<Block> PACKED_ICE_BRICKS = BLOCKS.registerSimpleBlock("packed_ice_bricks", BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_ICE));
+
 	public static final Supplier<Block> IRON_PLATE = BLOCKS.registerSimpleBlock("iron_plate", BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK));
 	public static final Supplier<Block> IRON_TREAD_PLATE = BLOCKS.registerSimpleBlock("iron_tread_plate", BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK));
 	public static final Supplier<Block> CORRUGATED_IRON_PLATE = BLOCKS.registerSimpleBlock("corrugated_iron_plate", BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK));
