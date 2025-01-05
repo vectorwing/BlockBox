@@ -1,9 +1,17 @@
 {
   "block.buildingbigger.packed_snow": "Packed Snow",
   "block.buildingbigger.packed_snow_bricks": "Packed Snow Bricks",
+  "block.buildingbigger.iron_plate": "Iron Plate",
+  "block.buildingbigger.iron_tread_plate": "Iron Tread Plate",
+  "block.buildingbigger.corrugated_iron_plate": "Corrugated Iron Plate",
+  "block.buildingbigger.iron_plate_pillar": "Iron Plate Pillar",
 
   "item.buildingbigger.packed_snow": "Packed Snow",
   "item.buildingbigger.packed_snow_bricks": "Packed Snow Bricks",
+  "item.buildingbigger.iron_plate": "Iron Plate",
+  "item.buildingbigger.iron_tread_plate": "Iron Tread Plate",
+  "item.buildingbigger.corrugated_iron_plate": "Corrugated Iron Plate",
+  "item.buildingbigger.iron_plate_pillar": "Iron Plate Pillar",
 
   "itemGroup.buildingbigger": "Building Bigger"
 }

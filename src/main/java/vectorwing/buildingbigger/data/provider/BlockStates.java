@@ -1,6 +1,7 @@
 package vectorwing.buildingbigger.data.provider;
 
 import net.minecraft.data.PackOutput;
+import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import vectorwing.buildingbigger.BuildingBigger;
@@ -16,5 +17,9 @@ public class BlockStates extends BlockStateProvider
 	protected void registerStatesAndModels() {
 		simpleBlock(ModBlocks.PACKED_SNOW.get());
 		simpleBlock(ModBlocks.PACKED_SNOW_BRICKS.get());
+		simpleBlock(ModBlocks.IRON_PLATE.get());
+		simpleBlock(ModBlocks.IRON_TREAD_PLATE.get());
+		simpleBlock(ModBlocks.CORRUGATED_IRON_PLATE.get());
+		axisBlock((RotatedPillarBlock) ModBlocks.IRON_PLATE_PILLAR.get());
 	}
 }
