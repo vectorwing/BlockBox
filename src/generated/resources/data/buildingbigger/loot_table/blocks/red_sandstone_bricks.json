@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:air"
+          "name": "buildingbigger:red_sandstone_bricks"
         }
       ],
       "rolls": 1.0

@@ -15,17 +15,47 @@ public class CraftingRecipes
 	}
 
 	private static void recipesBlocks(RecipeOutput output) {
-		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.PACKED_SNOW.get())
+		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.SANDSTONE_BRICKS.get(), 4)
+				.pattern("ss")
+				.pattern("ss")
+				.define('s', Blocks.CUT_SANDSTONE)
+				.unlockedBy("has_sandstone", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.SANDSTONE))
+				.save(output);
+		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.RED_SANDSTONE_BRICKS.get(), 4)
+				.pattern("ss")
+				.pattern("ss")
+				.define('s', Blocks.CUT_RED_SANDSTONE)
+				.unlockedBy("has_red_sandstone", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.RED_SANDSTONE))
+				.save(output);
+		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.CLAY_TILES.get(), 4)
+				.pattern("ss")
+				.pattern("ss")
+				.define('s', Blocks.TERRACOTTA)
+				.unlockedBy("has_terracotta", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.TERRACOTTA))
+				.save(output);
+		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.PACKED_SNOW.get(), 4)
 				.pattern("ss")
 				.pattern("ss")
 				.define('s', Blocks.SNOW_BLOCK)
 				.unlockedBy("has_snow", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.SNOW_BLOCK))
 				.save(output);
-		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.PACKED_SNOW_BRICKS.get())
+		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.PACKED_SNOW_BRICKS.get(), 4)
 				.pattern("pp")
 				.pattern("pp")
 				.define('p', ModBlocks.PACKED_SNOW.get())
 				.unlockedBy("has_snow", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.SNOW_BLOCK))
+				.save(output);
+		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.POLISHED_PACKED_ICE.get(), 4)
+				.pattern("ss")
+				.pattern("ss")
+				.define('s', Blocks.PACKED_ICE)
+				.unlockedBy("has_packed_ice", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.PACKED_ICE))
+				.save(output);
+		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.PACKED_ICE_BRICKS.get(), 4)
+				.pattern("ss")
+				.pattern("ss")
+				.define('s', ModBlocks.POLISHED_PACKED_ICE.get())
+				.unlockedBy("has_packed_ice", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.PACKED_ICE))
 				.save(output);
 		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.IRON_PLATE.get(), 4)
 				.pattern("iI")

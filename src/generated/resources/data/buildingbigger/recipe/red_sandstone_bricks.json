@@ -2,16 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "p": {
-      "item": "buildingbigger:packed_snow"
+    "s": {
+      "item": "minecraft:cut_red_sandstone"
     }
   },
   "pattern": [
-    "pp",
-    "pp"
+    "ss",
+    "ss"
   ],
   "result": {
     "count": 4,
-    "id": "buildingbigger:packed_snow_bricks"
+    "id": "buildingbigger:red_sandstone_bricks"
   }
 }
