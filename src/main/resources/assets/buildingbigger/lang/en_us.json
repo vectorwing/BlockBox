@@ -10,6 +10,9 @@
   "block.buildingbigger.iron_tread_plate": "Iron Tread Plate",
   "block.buildingbigger.corrugated_iron_plate": "Corrugated Iron Plate",
   "block.buildingbigger.iron_plate_pillar": "Iron Plate Pillar",
+  "block.buildingbigger.golden_tiles": "Golden Tiles",
+  "block.buildingbigger.golden_bricks": "Golden Bricks",
+  "block.buildingbigger.golden_pillar": "Golden Pillar",
 
   "item.buildingbigger.sandstone_bricks": "Sandstone Bricks",
   "item.buildingbigger.red_sandstone_bricks": "Red Sandstone Bricks",
@@ -22,6 +25,9 @@
   "item.buildingbigger.iron_tread_plate": "Iron Tread Plate",
   "item.buildingbigger.corrugated_iron_plate": "Corrugated Iron Plate",
   "item.buildingbigger.iron_plate_pillar": "Iron Plate Pillar",
+  "item.buildingbigger.golden_tiles": "Golden Tiles",
+  "item.buildingbigger.golden_bricks": "Golden Bricks",
+  "item.buildingbigger.golden_pillar": "Golden Pillar",
 
   "itemGroup.buildingbigger": "Building Bigger"
 }

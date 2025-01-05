@@ -33,7 +33,10 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.IRON_PLATE.get(),
 				ModBlocks.IRON_TREAD_PLATE.get(),
 				ModBlocks.CORRUGATED_IRON_PLATE.get(),
-				ModBlocks.IRON_PLATE_PILLAR.get()
+				ModBlocks.IRON_PLATE_PILLAR.get(),
+				ModBlocks.GOLDEN_PILLAR.get(),
+				ModBlocks.GOLDEN_BRICKS.get(),
+				ModBlocks.GOLDEN_PILLAR.get()
 		);
 		tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_SHOVEL).add(
 				ModBlocks.PACKED_SNOW.get(),

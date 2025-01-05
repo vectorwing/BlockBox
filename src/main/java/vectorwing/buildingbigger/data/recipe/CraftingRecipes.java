@@ -82,5 +82,24 @@ public class CraftingRecipes
 				.define('i', ModBlocks.IRON_PLATE.get())
 				.unlockedBy("has_iron_plate", InventoryChangeTrigger.TriggerInstance.hasItems(ModBlocks.IRON_PLATE.get()))
 				.save(output);
+		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.GOLDEN_TILES.get(), 4)
+				.pattern(" g ")
+				.pattern("g g")
+				.pattern(" g ")
+				.define('g', Items.GOLD_INGOT)
+				.unlockedBy("has_gold_ingot", InventoryChangeTrigger.TriggerInstance.hasItems(Items.GOLD_INGOT))
+				.save(output);
+		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.GOLDEN_BRICKS.get(), 4)
+				.pattern("gg")
+				.pattern("gg")
+				.define('g', ModBlocks.GOLDEN_TILES.get())
+				.unlockedBy("has_gold_ingot", InventoryChangeTrigger.TriggerInstance.hasItems(Items.GOLD_INGOT))
+				.save(output);
+		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.GOLDEN_PILLAR.get(), 2)
+				.pattern("g")
+				.pattern("g")
+				.define('g', ModBlocks.GOLDEN_TILES.get())
+				.unlockedBy("has_gold_ingot", InventoryChangeTrigger.TriggerInstance.hasItems(Items.GOLD_INGOT))
+				.save(output);
 	}
 }

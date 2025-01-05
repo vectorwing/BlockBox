@@ -17,14 +17,21 @@ public class BlockStates extends BlockStateProvider
 	protected void registerStatesAndModels() {
 		simpleBlock(ModBlocks.SANDSTONE_BRICKS.get());
 		simpleBlock(ModBlocks.RED_SANDSTONE_BRICKS.get());
+
 		simpleBlock(ModBlocks.CLAY_TILES.get());
+
 		simpleBlock(ModBlocks.POLISHED_PACKED_ICE.get());
 		simpleBlock(ModBlocks.PACKED_ICE_BRICKS.get());
 		simpleBlock(ModBlocks.PACKED_SNOW.get());
 		simpleBlock(ModBlocks.PACKED_SNOW_BRICKS.get());
+
 		simpleBlock(ModBlocks.IRON_PLATE.get());
 		simpleBlock(ModBlocks.IRON_TREAD_PLATE.get());
 		simpleBlock(ModBlocks.CORRUGATED_IRON_PLATE.get());
 		axisBlock((RotatedPillarBlock) ModBlocks.IRON_PLATE_PILLAR.get());
+
+		simpleBlock(ModBlocks.GOLDEN_TILES.get());
+		simpleBlock(ModBlocks.GOLDEN_BRICKS.get());
+		axisBlock((RotatedPillarBlock) ModBlocks.GOLDEN_PILLAR.get());
 	}
 }

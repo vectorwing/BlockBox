@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "g": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "pattern": [
+    " g ",
+    "g g",
+    " g "
+  ],
+  "result": {
+    "count": 4,
+    "id": "buildingbigger:golden_tiles"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "g": {
+      "item": "buildingbigger:golden_tiles"
+    }
+  },
+  "pattern": [
+    "gg",
+    "gg"
+  ],
+  "result": {
+    "count": 4,
+    "id": "buildingbigger:golden_bricks"
+  }
+}

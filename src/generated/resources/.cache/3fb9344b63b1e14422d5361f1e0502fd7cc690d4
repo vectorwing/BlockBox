@@ -1,6 +1,9 @@
-// 1.21.1	2025-01-04T23:58:40.5388754	Item Models: buildingbigger
+// 1.21.1	2025-01-05T01:01:12.6122445	Item Models: buildingbigger
 ea16bf7e68dd08680cdf2e1de37a433a0b8041fc assets/buildingbigger/models/item/clay_tiles.json
 3d91c3149544849a65a809d5d6ad6ba0bdf5e19a assets/buildingbigger/models/item/corrugated_iron_plate.json
+046799e97221a51c8b6012a17c79a03a5d1db458 assets/buildingbigger/models/item/golden_bricks.json
+f14b766096b6f34432becbdea38b546dcdb2e61d assets/buildingbigger/models/item/golden_pillar.json
+ea2fc1aeb9cc9897ca659800692ae115defc05ee assets/buildingbigger/models/item/golden_tiles.json
 b405d4c0f3ec2f5d4dfcdc6a914515876dd66fae assets/buildingbigger/models/item/iron_plate.json
 3a5e384ac1ac302522c20bf2d2af7dabb885dbb7 assets/buildingbigger/models/item/iron_plate_pillar.json
 b749f5e21d6a112c2017e93c343adcd6555a6505 assets/buildingbigger/models/item/iron_tread_plate.json
