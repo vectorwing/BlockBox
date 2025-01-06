@@ -8,6 +8,7 @@ import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import vectorwing.buildingbigger.BuildingBigger;
+import vectorwing.buildingbigger.common.registry.ModItems;
 
 import java.util.*;
 import java.util.function.Predicate;
@@ -26,6 +27,11 @@ public class ItemModels extends ItemModelProvider
 	protected void registerModels() {
 		Set<Item> items = BuiltInRegistries.ITEM.stream().filter(i -> BuildingBigger.MODID.equals(BuiltInRegistries.ITEM.getKey(i).getNamespace()))
 				.collect(Collectors.toSet());
+
+		blockBasedModel(ModItems.OAK_PALISADE.get(), "_post");
+		items.remove(ModItems.OAK_PALISADE.get());
+		blockBasedModel(ModItems.SPIKED_OAK_PALISADE.get(), "_post");
+		items.remove(ModItems.SPIKED_OAK_PALISADE.get());
 
 		// Blocks with 3D models
 		takeAll(items, i -> i instanceof BlockItem).forEach(item -> blockBasedModel(item, ""));

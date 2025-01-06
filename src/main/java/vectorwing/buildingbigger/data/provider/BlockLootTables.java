@@ -20,6 +20,7 @@ public class BlockLootTables extends BlockLootSubProvider
 
 	@Override
 	protected void generate() {
+		dropSelf(ModBlocks.OAK_PALISADE.get());
 		dropSelf(ModBlocks.SANDSTONE_BRICKS.get());
 		dropSelf(ModBlocks.RED_SANDSTONE_BRICKS.get());
 		dropSelf(ModBlocks.CLAY_TILES.get());

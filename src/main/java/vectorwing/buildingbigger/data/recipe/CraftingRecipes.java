@@ -4,9 +4,11 @@ import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
 import vectorwing.buildingbigger.common.registry.ModBlocks;
+import vectorwing.buildingbigger.common.registry.ModItems;
 
 public class CraftingRecipes
 {
@@ -15,6 +17,16 @@ public class CraftingRecipes
 	}
 
 	private static void recipesBlocks(RecipeOutput output) {
+		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.OAK_PALISADE.get(), 12)
+				.pattern("ooo")
+				.pattern("ooo")
+				.define('o', Blocks.OAK_LOG)
+				.unlockedBy("has_oak", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.OAK_LOG))
+				.save(output);
+		ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.SPIKED_OAK_PALISADE.get(), 1)
+				.requires(ModItems.OAK_PALISADE.get())
+				.unlockedBy("has_palisade", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.OAK_PALISADE.get()))
+				.save(output);
 		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.SANDSTONE_BRICKS.get(), 4)
 				.pattern("ss")
 				.pattern("ss")

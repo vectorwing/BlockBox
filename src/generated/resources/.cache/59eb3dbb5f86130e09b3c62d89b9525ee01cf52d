@@ -1,9 +1,10 @@
-// 1.21.1	2025-01-05T00:27:30.8046282	Loot Tables
+// 1.21.1	2025-01-06T16:47:03.4428773	Loot Tables
 8ec4a996e1a278e75a200b662dc51cbc016fe149 data/buildingbigger/loot_table/blocks/clay_tiles.json
 ec18fb44c582fa96a9c7073433bb115001daec1c data/buildingbigger/loot_table/blocks/corrugated_iron_plate.json
 ff9ce2402943d224a602475f8de299b3292e8ca5 data/buildingbigger/loot_table/blocks/iron_plate.json
 5bb29071e5bb23b7c0f41a1f6e9593159e0ecb54 data/buildingbigger/loot_table/blocks/iron_plate_pillar.json
 856a3692f46e3ffdd343041c3350082b2d7ce54e data/buildingbigger/loot_table/blocks/iron_tread_plate.json
+1a89c2b2caa708879edcdd3c52b0b21687231941 data/buildingbigger/loot_table/blocks/oak_palisade.json
 40e9a8018e0653aeab0b272f58ec1c1e79b38d94 data/buildingbigger/loot_table/blocks/packed_ice_bricks.json
 05a3de619f2db19ecfa33c3adf4ed2aee7827008 data/buildingbigger/loot_table/blocks/packed_snow.json
 0de81fd8d7ff993a8f0087456f9e72154605e1a6 data/buildingbigger/loot_table/blocks/packed_snow_bricks.json

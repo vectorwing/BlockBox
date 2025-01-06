@@ -1,0 +1,8 @@
+{
+	"parent": "buildingbigger:block/template_spiked_palisade_post",
+	"render_type": "minecraft:cutout",
+	"textures": {
+		"top": "buildingbigger:block/oak_palisade_top",
+		"side": "buildingbigger:block/oak_palisade_side"
+	}
+}

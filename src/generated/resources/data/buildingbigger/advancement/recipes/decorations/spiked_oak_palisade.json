@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_palisade": {
+      "conditions": {
+        "items": [
+          {
+            "items": "buildingbigger:oak_palisade"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "buildingbigger:spiked_oak_palisade"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_palisade"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "buildingbigger:spiked_oak_palisade"
+    ]
+  }
+}

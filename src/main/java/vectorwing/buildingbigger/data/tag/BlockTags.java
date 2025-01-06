@@ -8,6 +8,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import vectorwing.buildingbigger.BuildingBigger;
 import vectorwing.buildingbigger.common.registry.ModBlocks;
+import vectorwing.buildingbigger.common.tag.ModTags;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -20,6 +21,11 @@ public class BlockTags extends BlockTagsProvider
 	@Override
 	protected void addTags(HolderLookup.@NotNull Provider provider) {
 		this.registerBlockMineables();
+		this.registerModTags();
+	}
+
+	private void registerModTags() {
+		tag(ModTags.PALISADES).add(ModBlocks.OAK_PALISADE.get(), ModBlocks.SPIKED_OAK_PALISADE.get());
 	}
 
 	protected void registerBlockMineables() {
