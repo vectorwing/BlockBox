@@ -33,5 +33,9 @@ public class BlockStates extends BlockStateProvider
 		simpleBlock(ModBlocks.GOLDEN_TILES.get());
 		simpleBlock(ModBlocks.GOLDEN_BRICKS.get());
 		axisBlock((RotatedPillarBlock) ModBlocks.GOLDEN_PILLAR.get());
+
+		simpleBlock(ModBlocks.POLISHED_AMETHYST.get());
+		simpleBlock(ModBlocks.AMETHYST_TILES.get());
+		simpleBlock(ModBlocks.CHISELED_AMETHYST.get());
 	}
 }

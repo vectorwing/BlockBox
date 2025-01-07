@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "buildingbigger:block/jagged_clay_tiles"
+      },
+      {
+        "model": "buildingbigger:block/jagged_clay_tiles_a"
+      },
+      {
+        "model": "buildingbigger:block/jagged_clay_tiles_b"
+      },
+      {
+        "model": "buildingbigger:block/jagged_clay_tiles_c"
+      }
+    ]
+  }
+}

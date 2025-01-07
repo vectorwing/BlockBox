@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "buildingbigger:block/jagged_clay_tiles_b"
+  }
+}
