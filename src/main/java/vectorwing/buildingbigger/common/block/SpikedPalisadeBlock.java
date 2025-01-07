@@ -7,9 +7,9 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.BooleanOp;
-import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import vectorwing.buildingbigger.common.registry.ModDamageTypes;
 
 public class SpikedPalisadeBlock extends PalisadeBlock
 {
@@ -26,7 +26,7 @@ public class SpikedPalisadeBlock extends PalisadeBlock
 				double d0 = Math.abs(entity.getX() - entity.xOld);
 				double d1 = Math.abs(entity.getZ() - entity.zOld);
 				if (d0 >= 0.003 || d1 >= 0.003) {
-					entity.hurt(level.damageSources().sweetBerryBush(), 1.0F);
+					entity.hurt(ModDamageTypes.getSimpleDamageSource(level, ModDamageTypes.PALISADE), 1.0F);
 				}
 			}
 		}

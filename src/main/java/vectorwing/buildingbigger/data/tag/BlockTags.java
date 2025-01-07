@@ -33,16 +33,23 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.SANDSTONE_BRICKS.get(),
 				ModBlocks.RED_SANDSTONE_BRICKS.get(),
 				ModBlocks.CLAY_TILES.get(),
+				ModBlocks.JAGGED_CLAY_TILES.get(),
 				ModBlocks.POLISHED_PACKED_ICE.get(),
 				ModBlocks.PACKED_ICE_BRICKS.get(),
-				ModBlocks.CLAY_TILES.get(),
 				ModBlocks.IRON_PLATE.get(),
 				ModBlocks.IRON_TREAD_PLATE.get(),
 				ModBlocks.CORRUGATED_IRON_PLATE.get(),
 				ModBlocks.IRON_PLATE_PILLAR.get(),
-				ModBlocks.GOLDEN_PILLAR.get(),
+				ModBlocks.GOLDEN_TILES.get(),
 				ModBlocks.GOLDEN_BRICKS.get(),
-				ModBlocks.GOLDEN_PILLAR.get()
+				ModBlocks.GOLDEN_PILLAR.get(),
+				ModBlocks.POLISHED_AMETHYST.get(),
+				ModBlocks.AMETHYST_TILES.get(),
+				ModBlocks.CHISELED_AMETHYST.get()
+		);
+		tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_AXE).add(
+				ModBlocks.OAK_PALISADE.get(),
+				ModBlocks.SPIKED_OAK_PALISADE.get()
 		);
 		tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_SHOVEL).add(
 				ModBlocks.PACKED_SNOW.get(),

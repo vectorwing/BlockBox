@@ -15,6 +15,7 @@ import vectorwing.buildingbigger.data.provider.BlockStates;
 import vectorwing.buildingbigger.data.provider.ItemModels;
 import vectorwing.buildingbigger.data.provider.Recipes;
 import vectorwing.buildingbigger.data.tag.BlockTags;
+import vectorwing.buildingbigger.data.tag.DamageTypeTags;
 import vectorwing.buildingbigger.data.tag.ItemTags;
 
 import java.util.Collections;
@@ -38,7 +39,7 @@ public class DataGenerators
 		generator.addProvider(event.includeServer(), blockTags);
 		generator.addProvider(event.includeServer(), new ItemTags(output, lookupProvider, blockTags.contentsGetter(), helper));
 //		generator.addProvider(event.includeServer(), new EntityTags(output, lookupProvider, helper));
-//		generator.addProvider(event.includeServer(), new DamageTypeTags(output, lookupProvider, FarmersDelight.MODID, helper));
+		generator.addProvider(event.includeServer(), new DamageTypeTags(output, lookupProvider, helper));
 
 //		DatapackBuiltinEntriesProvider datapackProvider = new DatapackBuiltinEntriesProvider(output, lookupProvider, registrySetBuilder, Set.of(FarmersDelight.MODID));
 //		CompletableFuture<HolderLookup.Provider> builtinLookupProvider = datapackProvider.getRegistryProvider();

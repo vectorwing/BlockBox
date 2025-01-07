@@ -4,6 +4,7 @@
   "block.buildingbigger.sandstone_bricks": "Sandstone Bricks",
   "block.buildingbigger.red_sandstone_bricks": "Red Sandstone Bricks",
   "block.buildingbigger.clay_tiles": "Clay Tiles",
+  "block.buildingbigger.jagged_clay_tiles": "Jagged Clay Tiles",
   "block.buildingbigger.packed_snow": "Packed Snow",
   "block.buildingbigger.packed_snow_bricks": "Packed Snow Bricks",
   "block.buildingbigger.polished_packed_ice": "Polished Packed Ice",
@@ -15,11 +16,15 @@
   "block.buildingbigger.golden_tiles": "Golden Tiles",
   "block.buildingbigger.golden_bricks": "Golden Bricks",
   "block.buildingbigger.golden_pillar": "Golden Pillar",
+  "block.buildingbigger.polished_amethyst": "Polished Amethyst",
+  "block.buildingbigger.amethyst_tiles": "Amethyst Tiles",
+  "block.buildingbigger.chiseled_amethyst": "Chiseled Amethyst",
 
   "item.buildingbigger.oak_palisade": "Oak Palisade",
   "item.buildingbigger.sandstone_bricks": "Sandstone Bricks",
   "item.buildingbigger.red_sandstone_bricks": "Red Sandstone Bricks",
   "item.buildingbigger.clay_tiles": "Clay Tiles",
+  "item.buildingbigger.jagged_clay_tiles": "Jagged Clay Tiles",
   "item.buildingbigger.packed_snow": "Packed Snow",
   "item.buildingbigger.packed_snow_bricks": "Packed Snow Bricks",
   "item.buildingbigger.polished_packed_ice": "Polished Packed Ice",
@@ -31,6 +36,11 @@
   "item.buildingbigger.golden_tiles": "Golden Tiles",
   "item.buildingbigger.golden_bricks": "Golden Bricks",
   "item.buildingbigger.golden_pillar": "Golden Pillar",
+  "item.buildingbigger.polished_amethyst": "Polished Amethyst",
+  "item.buildingbigger.amethyst_tiles": "Amethyst Tiles",
+  "item.buildingbigger.chiseled_amethyst": "Chiseled Amethyst",
 
-  "itemGroup.buildingbigger": "Building Bigger"
+  "itemGroup.buildingbigger": "Building Bigger",
+
+  "death.attack.buildingbigger.palisade": "%1$s got skewered through a palisade"
 }
