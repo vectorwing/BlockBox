@@ -4,8 +4,10 @@ import com.mojang.serialization.MapCodec;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CrossCollisionBlock;
@@ -15,6 +17,7 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.pathfinder.PathComputationType;
+import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.NotNull;
 import vectorwing.buildingbigger.common.tag.ModTags;
 
@@ -28,6 +31,16 @@ public class PalisadeBlock extends CrossCollisionBlock implements SimpleWaterlog
 
 	public PalisadeBlock(Properties properties) {
 		super(4.0F, 4.0F, 16.0F, 16.0F, 16.0F, properties);
+		this.registerDefaultState(this.stateDefinition.any()
+				.setValue(NORTH, false)
+				.setValue(EAST, false)
+				.setValue(SOUTH, false)
+				.setValue(WEST, false)
+				.setValue(WATERLOGGED, false));
+	}
+
+	public PalisadeBlock(float nodeWidth, float extensionWidth, float nodeHeight, float extensionHeight, float collisionHeight, Properties properties) {
+		super(nodeWidth, extensionWidth, nodeHeight, extensionHeight, collisionHeight, properties);
 		this.registerDefaultState(this.stateDefinition.any()
 				.setValue(NORTH, false)
 				.setValue(EAST, false)

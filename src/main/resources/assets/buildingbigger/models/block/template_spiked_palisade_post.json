@@ -1,11 +1,12 @@
 {
-	"credit": "Made with Blockbench",
 	"parent": "block/block",
+	"credit": "Made with Blockbench",
 	"textures": {
 		"particle": "#side"
 	},
 	"elements": [
 		{
+			"name": "post",
 			"from": [4, 0, 4],
 			"to": [12, 8, 12],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 4]},
@@ -19,45 +20,24 @@
 			}
 		},
 		{
+			"name": "spike_a",
 			"from": [4, 8, 8],
 			"to": [12, 16, 8],
 			"rotation": {"angle": 45, "axis": "y", "origin": [8, 8, 8], "rescale": true},
 			"faces": {
 				"north": {"uv": [0, 0, 8, 8], "texture": "#top"},
-				"east": {"uv": [0, 0, 0, 8], "texture": "#top"},
-				"south": {"uv": [0, 0, 8, 8], "texture": "#top"},
-				"west": {"uv": [0, 0, 0, 8], "texture": "#top"},
-				"up": {"uv": [0, 0, 8, 0], "texture": "#top"},
-				"down": {"uv": [0, 0, 8, 0], "texture": "#top"}
+				"south": {"uv": [0, 0, 8, 8], "texture": "#top"}
 			}
 		},
 		{
+			"name": "spike_b",
 			"from": [4, 8, 8],
 			"to": [12, 16, 8],
 			"rotation": {"angle": -45, "axis": "y", "origin": [8, 8, 8], "rescale": true},
 			"faces": {
 				"north": {"uv": [0, 0, 8, 8], "texture": "#top"},
-				"east": {"uv": [0, 0, 0, 8], "texture": "#top"},
-				"south": {"uv": [0, 0, 8, 8], "texture": "#top"},
-				"west": {"uv": [0, 0, 0, 8], "texture": "#top"},
-				"up": {"uv": [0, 0, 8, 0], "texture": "#top"},
-				"down": {"uv": [0, 0, 8, 0], "texture": "#top"}
+				"south": {"uv": [0, 0, 8, 8], "texture": "#top"}
 			}
-		}
-	],
-	"groups": [
-		{
-			"name": "upper demo",
-			"origin": [8, 24, 8],
-			"color": 0,
-			"children": [
-				{
-					"name": "spiked",
-					"origin": [8, 24, 8],
-					"color": 0,
-					"children": [0, 1, 2]
-				}
-			]
 		}
 	]
 }

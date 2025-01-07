@@ -5,29 +5,29 @@
 	},
 	"elements": [
 		{
+			"name": "post",
 			"from": [4, 0, 0],
 			"to": [12, 8, 4],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 0]},
 			"faces": {
 				"north": {"uv": [4, 8, 12, 16], "texture": "#core"},
 				"east": {"uv": [8, 8, 12, 16], "texture": "#side"},
-				"south": {"uv": [0, 8, 8, 16], "texture": "#side"},
 				"west": {"uv": [12, 8, 16, 16], "texture": "#side"},
 				"up": {"uv": [8, 12, 16, 16], "texture": "#top"},
 				"down": {"uv": [0, 8, 8, 12], "texture": "#top", "cullface": "down"}
 			}
 		},
 		{
+			"name": "spike_a",
 			"from": [8, 8, 4],
 			"to": [12, 16, 4],
 			"rotation": {"angle": -45, "axis": "y", "origin": [12, 8, 4], "rescale": true},
 			"faces": {
 				"north": {"uv": [8, 0, 12, 8], "texture": "#top"},
-				"east": {"uv": [0, 0, 0, 8], "texture": "#top"},
-				"south": {"uv": [12, 0, 16, 8], "texture": "#top"},
-				"west": {"uv": [0, 0, 0, 8], "texture": "#top"},
-				"up": {"uv": [0, 0, 4, 0], "texture": "#top"},
-				"down": {"uv": [0, 0, 4, 0], "texture": "#top"}
+				"south": {"uv": [12, 0, 16, 8], "texture": "#top"}
+			},
+			"neoforge_data": {
+				"ambient_occlusion": false
 			}
 		},
 		{
@@ -35,28 +35,12 @@
 			"to": [4, 16, 4],
 			"rotation": {"angle": -45, "axis": "y", "origin": [4, 8, 4], "rescale": true},
 			"faces": {
-				"north": {"uv": [0, 0, 0, 8], "texture": "#top"},
 				"east": {"uv": [8, 0, 12, 8], "texture": "#top"},
-				"south": {"uv": [0, 0, 0, 8], "texture": "#top"},
-				"west": {"uv": [12, 0, 16, 8], "texture": "#top"},
-				"up": {"uv": [0, 0, 4, 0], "rotation": 90, "texture": "#top"},
-				"down": {"uv": [0, 0, 4, 0], "rotation": 270, "texture": "#top"}
+				"west": {"uv": [12, 0, 16, 8], "texture": "#top"}
+			},
+			"neoforge_data": {
+				"ambient_occlusion": false
 			}
-		}
-	],
-	"groups": [
-		{
-			"name": "upper demo",
-			"origin": [8, 24, 8],
-			"color": 0,
-			"children": [
-				{
-					"name": "spiked",
-					"origin": [8, 24, 8],
-					"color": 0,
-					"children": [0, 1, 2]
-				}
-			]
 		}
 	]
 }
