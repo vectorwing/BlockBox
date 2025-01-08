@@ -25,7 +25,8 @@ public class BlockTags extends BlockTagsProvider
 	}
 
 	private void registerModTags() {
-		tag(ModTags.PALISADES).add(ModBlocks.OAK_PALISADE.get(), ModBlocks.SPIKED_OAK_PALISADE.get());
+		tag(ModTags.PALISADES).add(ModBlocks.OAK_PALISADE.get());
+		tag(ModTags.SPIKED_PALISADES).add(ModBlocks.SPIKED_OAK_PALISADE.get());
 	}
 
 	protected void registerBlockMineables() {

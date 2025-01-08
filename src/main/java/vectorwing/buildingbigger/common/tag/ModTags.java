@@ -13,6 +13,9 @@ public class ModTags
 	// Blocks that are palisades.
 	public static final TagKey<Block> PALISADES = modBlockTag("palisades");
 
+	// Blocks that are spiked palisades.
+	public static final TagKey<Block> SPIKED_PALISADES = modBlockTag("spiked_palisades");
+
 	private static TagKey<Block> modBlockTag(String path) {
 		return BlockTags.create(ResourceLocation.fromNamespaceAndPath(BuildingBigger.MODID, path));
 	}

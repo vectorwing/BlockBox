@@ -11,7 +11,16 @@
         "uvlock": true
       },
       "when": {
-        "north": "true"
+        "north": "full"
+      }
+    },
+    {
+      "apply": {
+        "model": "buildingbigger:block/spiked_oak_palisade_front",
+        "uvlock": true
+      },
+      "when": {
+        "north": "spiked"
       }
     },
     {
@@ -21,7 +30,17 @@
         "y": 90
       },
       "when": {
-        "east": "true"
+        "east": "full"
+      }
+    },
+    {
+      "apply": {
+        "model": "buildingbigger:block/spiked_oak_palisade_front",
+        "uvlock": false,
+        "y": 90
+      },
+      "when": {
+        "east": "spiked"
       }
     },
     {
@@ -30,7 +49,16 @@
         "uvlock": true
       },
       "when": {
-        "south": "true"
+        "south": "full"
+      }
+    },
+    {
+      "apply": {
+        "model": "buildingbigger:block/spiked_oak_palisade_back",
+        "uvlock": true
+      },
+      "when": {
+        "south": "spiked"
       }
     },
     {
@@ -40,7 +68,17 @@
         "y": 90
       },
       "when": {
-        "west": "true"
+        "west": "full"
+      }
+    },
+    {
+      "apply": {
+        "model": "buildingbigger:block/spiked_oak_palisade_back",
+        "uvlock": false,
+        "y": 90
+      },
+      "when": {
+        "west": "spiked"
       }
     }
   ]

@@ -1,5 +1,6 @@
-// 1.21.1	2025-01-07T17:54:16.3031454	Tags for minecraft:block mod id buildingbigger
-6a314db0f3ff965836b458a30ca3b2edb8cbf5f4 data/buildingbigger/tags/block/palisades.json
+// 1.21.1	2025-01-08T14:33:25.3675321	Tags for minecraft:block mod id buildingbigger
+bffcba35725c67d2dd7b0e86009a55ae4720cf8a data/buildingbigger/tags/block/palisades.json
+0cc4283c6b3a74450875f00e48e6c4dc84f9bd89 data/buildingbigger/tags/block/spiked_palisades.json
 6a314db0f3ff965836b458a30ca3b2edb8cbf5f4 data/minecraft/tags/block/mineable/axe.json
 d7e21870b13d0b0caddda4495a4a572439ca4f08 data/minecraft/tags/block/mineable/pickaxe.json
 b5e503d8ea37daa78f44c0f65cff785a364afe5f data/minecraft/tags/block/mineable/shovel.json
