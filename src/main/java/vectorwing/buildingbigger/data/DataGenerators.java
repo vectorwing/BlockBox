@@ -10,10 +10,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import vectorwing.buildingbigger.BuildingBigger;
-import vectorwing.buildingbigger.data.provider.BlockLootTables;
-import vectorwing.buildingbigger.data.provider.BlockStates;
-import vectorwing.buildingbigger.data.provider.ItemModels;
-import vectorwing.buildingbigger.data.provider.Recipes;
+import vectorwing.buildingbigger.data.provider.*;
 import vectorwing.buildingbigger.data.tag.BlockTags;
 import vectorwing.buildingbigger.data.tag.DamageTypeTags;
 import vectorwing.buildingbigger.data.tag.ItemTags;
@@ -57,5 +54,6 @@ public class DataGenerators
 		BlockStates blockStates = new BlockStates(output, helper);
 		generator.addProvider(event.includeClient(), blockStates);
 		generator.addProvider(event.includeClient(), new ItemModels(output, blockStates.models().existingFileHelper));
+		generator.addProvider(event.includeClient(), new ParticleTypes(output, helper));
 	}
 }

@@ -9,6 +9,7 @@ import org.slf4j.Logger;
 import vectorwing.buildingbigger.common.registry.ModBlocks;
 import vectorwing.buildingbigger.common.registry.ModCreativeTabs;
 import vectorwing.buildingbigger.common.registry.ModItems;
+import vectorwing.buildingbigger.common.registry.ModParticleTypes;
 
 @Mod(BuildingBigger.MODID)
 public class BuildingBigger
@@ -21,6 +22,7 @@ public class BuildingBigger
 
 		ModBlocks.BLOCKS.register(modEventBus);
 		ModItems.ITEMS.register(modEventBus);
+		ModParticleTypes.PARTICLE_TYPES.register(modEventBus);
 		ModCreativeTabs.CREATIVE_MODE_TABS.register(modEventBus);
 	}
 }
