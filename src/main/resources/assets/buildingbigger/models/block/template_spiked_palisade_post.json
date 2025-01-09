@@ -21,6 +21,7 @@
 		},
 		{
 			"name": "spike_a",
+			"shade": false,
 			"from": [4, 8, 8],
 			"to": [12, 16, 8],
 			"rotation": {"angle": 45, "axis": "y", "origin": [8, 8, 8], "rescale": true},
@@ -31,6 +32,7 @@
 		},
 		{
 			"name": "spike_b",
+			"shade": false,
 			"from": [4, 8, 8],
 			"to": [12, 16, 8],
 			"rotation": {"angle": -45, "axis": "y", "origin": [8, 8, 8], "rescale": true},
