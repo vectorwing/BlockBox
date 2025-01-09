@@ -3,6 +3,6 @@
 	"textures": {
 		"top": "buildingbigger:block/oak_palisade_top",
 		"side": "buildingbigger:block/oak_palisade_side",
-		"core": "minecraft:block/stripped_oak_log"
+		"core": "buildingbigger:block/oak_palisade_core"
 	}
 }

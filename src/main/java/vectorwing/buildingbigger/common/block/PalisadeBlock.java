@@ -126,7 +126,8 @@ public class PalisadeBlock extends CrossCollisionBlock implements SimpleWaterlog
 		if (state.is(ModTags.SPIKED_PALISADES)) {
 			return PalisadeConnection.SPIKED;
 		}
-		if (state.is(ModTags.PALISADES) || (!isExceptionForConnection(state) && isSideSolid)) {
+		boolean isFenceGateAligned = state.getBlock() instanceof FenceGateBlock && FenceGateBlock.connectsToDirection(state, direction);
+		if (state.is(ModTags.PALISADES) || (!isExceptionForConnection(state) && isSideSolid) || isFenceGateAligned) {
 			return PalisadeConnection.FULL;
 		}
 		return type;
