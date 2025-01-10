@@ -1,13 +1,18 @@
-// 1.21.1	2025-01-06T23:01:20.9594933	Item Models: buildingbigger
+// 1.21.1	2025-01-10T12:40:42.8978252	Item Models: buildingbigger
 5ca900e35053a861ebdde442a948690aca6d33ab assets/buildingbigger/models/item/amethyst_tiles.json
 6084a83daf329ffc94666ee9cabfd57c17b8a19b assets/buildingbigger/models/item/chiseled_amethyst.json
+0e6287989d6b190ca9cd6f5781c0d7485704ae17 assets/buildingbigger/models/item/chiseled_gold.json
 ea16bf7e68dd08680cdf2e1de37a433a0b8041fc assets/buildingbigger/models/item/clay_tiles.json
 3d91c3149544849a65a809d5d6ad6ba0bdf5e19a assets/buildingbigger/models/item/corrugated_iron_plate.json
 046799e97221a51c8b6012a17c79a03a5d1db458 assets/buildingbigger/models/item/golden_bricks.json
+1827e7421f55e8015a934f6a88e20ab151951565 assets/buildingbigger/models/item/golden_door.json
 f14b766096b6f34432becbdea38b546dcdb2e61d assets/buildingbigger/models/item/golden_pillar.json
 ea2fc1aeb9cc9897ca659800692ae115defc05ee assets/buildingbigger/models/item/golden_tiles.json
+2cece43138c23ba16f8b5162d2f3af79c13eb4d0 assets/buildingbigger/models/item/golden_trapdoor.json
 b405d4c0f3ec2f5d4dfcdc6a914515876dd66fae assets/buildingbigger/models/item/iron_plate.json
+cd5e0dd663f2164e7daaa7c4c4a94cf35dfa17e1 assets/buildingbigger/models/item/iron_plate_door.json
 3a5e384ac1ac302522c20bf2d2af7dabb885dbb7 assets/buildingbigger/models/item/iron_plate_pillar.json
+c55094997a43199d2bd590e7fcd1192931180740 assets/buildingbigger/models/item/iron_plate_trapdoor.json
 b749f5e21d6a112c2017e93c343adcd6555a6505 assets/buildingbigger/models/item/iron_tread_plate.json
 40be9c7166cd21b8f24c08cb18223f034a29ad02 assets/buildingbigger/models/item/jagged_clay_tiles.json
 e0ea223951e97b25cb79c42e925bbfd012766b23 assets/buildingbigger/models/item/oak_palisade.json

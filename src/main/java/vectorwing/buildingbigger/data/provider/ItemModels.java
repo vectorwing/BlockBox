@@ -28,13 +28,31 @@ public class ItemModels extends ItemModelProvider
 		Set<Item> items = BuiltInRegistries.ITEM.stream().filter(i -> BuildingBigger.MODID.equals(BuiltInRegistries.ITEM.getKey(i).getNamespace()))
 				.collect(Collectors.toSet());
 
-		blockBasedModel(ModItems.OAK_PALISADE.get(), "_post");
+		palisadeModel(ModItems.OAK_PALISADE.get());
 		items.remove(ModItems.OAK_PALISADE.get());
-		blockBasedModel(ModItems.SPIKED_OAK_PALISADE.get(), "_post");
+		palisadeModel(ModItems.SPIKED_OAK_PALISADE.get());
 		items.remove(ModItems.SPIKED_OAK_PALISADE.get());
+
+		trapdoorModel(ModItems.IRON_PLATE_TRAPDOOR.get());
+		items.remove(ModItems.IRON_PLATE_TRAPDOOR.get());
+		trapdoorModel(ModItems.GOLDEN_TRAPDOOR.get());
+		items.remove(ModItems.GOLDEN_TRAPDOOR.get());
+
+		itemGeneratedModel(ModItems.IRON_PLATE_DOOR.get(), resourceItem(itemName(ModItems.IRON_PLATE_DOOR.get())));
+		items.remove(ModItems.IRON_PLATE_DOOR.get());
+		itemGeneratedModel(ModItems.GOLDEN_DOOR.get(), resourceItem(itemName(ModItems.GOLDEN_DOOR.get())));
+		items.remove(ModItems.GOLDEN_DOOR.get());
 
 		// Blocks with 3D models
 		takeAll(items, i -> i instanceof BlockItem).forEach(item -> blockBasedModel(item, ""));
+	}
+
+	public void palisadeModel(Item item) {
+		blockBasedModel(item, "_post");
+	}
+
+	public void trapdoorModel(Item item) {
+		blockBasedModel(item, "_bottom");
 	}
 
 	public void blockBasedModel(Item item, String suffix) {

@@ -14,9 +14,12 @@ public class CraftingRecipes
 {
 	public static void register(RecipeOutput output) {
 		recipesBlocks(output);
+		craftPalisades(output);
+		craftIronPlateBlocks(output);
+		craftGoldBlocks(output);
 	}
 
-	private static void recipesBlocks(RecipeOutput output) {
+	private static void craftPalisades(RecipeOutput output) {
 		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.OAK_PALISADE.get(), 12)
 				.pattern("ooo")
 				.pattern("ooo")
@@ -27,6 +30,90 @@ public class CraftingRecipes
 				.requires(ModItems.OAK_PALISADE.get())
 				.unlockedBy("has_palisade", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.OAK_PALISADE.get()))
 				.save(output);
+	}
+
+	private static void craftIronPlateBlocks(RecipeOutput output) {
+		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.IRON_PLATE.get(), 4)
+				.pattern("iI")
+				.pattern("Ii")
+				.define('i', Items.IRON_NUGGET)
+				.define('I', Items.IRON_INGOT)
+				.unlockedBy("has_iron", InventoryChangeTrigger.TriggerInstance.hasItems(Items.IRON_INGOT))
+				.save(output);
+		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.IRON_TREAD_PLATE.get(), 4)
+				.pattern("ii")
+				.pattern("ii")
+				.define('i', ModBlocks.IRON_PLATE.get())
+				.unlockedBy("has_iron_plate", InventoryChangeTrigger.TriggerInstance.hasItems(ModBlocks.IRON_PLATE.get()))
+				.save(output);
+		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.CORRUGATED_IRON_PLATE.get(), 4)
+				.pattern("ii")
+				.pattern("ii")
+				.define('i', ModBlocks.IRON_TREAD_PLATE.get())
+				.unlockedBy("has_iron_plate", InventoryChangeTrigger.TriggerInstance.hasItems(ModBlocks.IRON_PLATE.get()))
+				.save(output);
+		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.IRON_PLATE_PILLAR.get(), 2)
+				.pattern("i")
+				.pattern("i")
+				.define('i', ModBlocks.IRON_PLATE.get())
+				.unlockedBy("has_iron_plate", InventoryChangeTrigger.TriggerInstance.hasItems(ModBlocks.IRON_PLATE.get()))
+				.save(output);
+		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.IRON_PLATE_DOOR.get(), 3)
+				.pattern("ii")
+				.pattern("ii")
+				.pattern("ii")
+				.define('i', ModBlocks.IRON_PLATE.get())
+				.unlockedBy("has_iron_plate", InventoryChangeTrigger.TriggerInstance.hasItems(ModBlocks.IRON_PLATE.get()))
+				.save(output);
+		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.IRON_PLATE_TRAPDOOR.get(), 2)
+				.pattern("iii")
+				.pattern("iii")
+				.define('i', ModBlocks.IRON_PLATE.get())
+				.unlockedBy("has_iron_plate", InventoryChangeTrigger.TriggerInstance.hasItems(ModBlocks.IRON_PLATE.get()))
+				.save(output);
+	}
+
+	private static void craftGoldBlocks(RecipeOutput output) {
+		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.CHISELED_GOLD.get(), 4)
+				.pattern("gg")
+				.pattern("gg")
+				.define('g', Items.GOLD_INGOT)
+				.unlockedBy("has_gold_ingot", InventoryChangeTrigger.TriggerInstance.hasItems(Items.GOLD_INGOT))
+				.save(output);
+		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.GOLDEN_TILES.get(), 4)
+				.pattern("gg")
+				.pattern("gg")
+				.define('g', ModBlocks.CHISELED_GOLD.get())
+				.unlockedBy("has_gold_ingot", InventoryChangeTrigger.TriggerInstance.hasItems(Items.GOLD_INGOT))
+				.save(output);
+		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.GOLDEN_BRICKS.get(), 4)
+				.pattern("gg")
+				.pattern("gg")
+				.define('g', ModBlocks.GOLDEN_TILES.get())
+				.unlockedBy("has_gold_ingot", InventoryChangeTrigger.TriggerInstance.hasItems(Items.GOLD_INGOT))
+				.save(output);
+		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.GOLDEN_PILLAR.get(), 2)
+				.pattern("g")
+				.pattern("g")
+				.define('g', ModBlocks.GOLDEN_TILES.get())
+				.unlockedBy("has_gold_ingot", InventoryChangeTrigger.TriggerInstance.hasItems(Items.GOLD_INGOT))
+				.save(output);
+		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.GOLDEN_DOOR.get(), 3)
+				.pattern("gg")
+				.pattern("gg")
+				.pattern("gg")
+				.define('g', Items.GOLD_INGOT)
+				.unlockedBy("has_gold_ingot", InventoryChangeTrigger.TriggerInstance.hasItems(Items.GOLD_INGOT))
+				.save(output);
+		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.GOLDEN_TRAPDOOR.get(), 2)
+				.pattern("ggg")
+				.pattern("ggg")
+				.define('g', Items.GOLD_INGOT)
+				.unlockedBy("has_gold_ingot", InventoryChangeTrigger.TriggerInstance.hasItems(Items.GOLD_INGOT))
+				.save(output);
+	}
+
+	private static void recipesBlocks(RecipeOutput output) {
 		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.SANDSTONE_BRICKS.get(), 4)
 				.pattern("ss")
 				.pattern("ss")
@@ -68,50 +155,6 @@ public class CraftingRecipes
 				.pattern("ss")
 				.define('s', ModBlocks.POLISHED_PACKED_ICE.get())
 				.unlockedBy("has_packed_ice", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.PACKED_ICE))
-				.save(output);
-		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.IRON_PLATE.get(), 4)
-				.pattern("iI")
-				.pattern("Ii")
-				.define('i', Items.IRON_NUGGET)
-				.define('I', Items.IRON_INGOT)
-				.unlockedBy("has_iron", InventoryChangeTrigger.TriggerInstance.hasItems(Items.IRON_INGOT))
-				.save(output);
-		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.IRON_TREAD_PLATE.get(), 4)
-				.pattern("ii")
-				.pattern("ii")
-				.define('i', ModBlocks.IRON_PLATE.get())
-				.unlockedBy("has_iron_plate", InventoryChangeTrigger.TriggerInstance.hasItems(ModBlocks.IRON_PLATE.get()))
-				.save(output);
-		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.CORRUGATED_IRON_PLATE.get(), 4)
-				.pattern("ii")
-				.pattern("ii")
-				.define('i', ModBlocks.IRON_TREAD_PLATE.get())
-				.unlockedBy("has_iron_plate", InventoryChangeTrigger.TriggerInstance.hasItems(ModBlocks.IRON_PLATE.get()))
-				.save(output);
-		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.IRON_PLATE_PILLAR.get(), 2)
-				.pattern("i")
-				.pattern("i")
-				.define('i', ModBlocks.IRON_PLATE.get())
-				.unlockedBy("has_iron_plate", InventoryChangeTrigger.TriggerInstance.hasItems(ModBlocks.IRON_PLATE.get()))
-				.save(output);
-		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.GOLDEN_TILES.get(), 4)
-				.pattern(" g ")
-				.pattern("g g")
-				.pattern(" g ")
-				.define('g', Items.GOLD_INGOT)
-				.unlockedBy("has_gold_ingot", InventoryChangeTrigger.TriggerInstance.hasItems(Items.GOLD_INGOT))
-				.save(output);
-		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.GOLDEN_BRICKS.get(), 4)
-				.pattern("gg")
-				.pattern("gg")
-				.define('g', ModBlocks.GOLDEN_TILES.get())
-				.unlockedBy("has_gold_ingot", InventoryChangeTrigger.TriggerInstance.hasItems(Items.GOLD_INGOT))
-				.save(output);
-		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.GOLDEN_PILLAR.get(), 2)
-				.pattern("g")
-				.pattern("g")
-				.define('g', ModBlocks.GOLDEN_TILES.get())
-				.unlockedBy("has_gold_ingot", InventoryChangeTrigger.TriggerInstance.hasItems(Items.GOLD_INGOT))
 				.save(output);
 	}
 }

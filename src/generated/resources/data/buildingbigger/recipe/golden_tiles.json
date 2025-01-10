@@ -3,13 +3,12 @@
   "category": "misc",
   "key": {
     "g": {
-      "item": "minecraft:gold_ingot"
+      "item": "buildingbigger:chiseled_gold"
     }
   },
   "pattern": [
-    " g ",
-    "g g",
-    " g "
+    "gg",
+    "gg"
   ],
   "result": {
     "count": 4,

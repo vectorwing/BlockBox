@@ -1,1 +1,3 @@
-// 1.21.1	2025-01-04T20:39:44.3306456	Tags for minecraft:item mod id vanilla
+// 1.21.1	2025-01-10T18:05:17.1217213	Tags for minecraft:item mod id vanilla
+1098fd9b78bb5635f2be70976e9ce8fcd2edd6dc data/minecraft/tags/item/doors.json
+e87e455adc84fbe453504374956bab21308a8a0f data/minecraft/tags/item/trapdoors.json

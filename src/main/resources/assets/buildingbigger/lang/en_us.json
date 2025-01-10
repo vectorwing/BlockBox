@@ -13,9 +13,14 @@
   "block.buildingbigger.iron_tread_plate": "Iron Tread Plate",
   "block.buildingbigger.corrugated_iron_plate": "Corrugated Iron Plate",
   "block.buildingbigger.iron_plate_pillar": "Iron Plate Pillar",
+  "block.buildingbigger.iron_plate_door": "Iron Plate Door",
+  "block.buildingbigger.iron_plate_trapdoor": "Iron Plate Trapdoor",
+  "block.buildingbigger.chiseled_gold": "Chiseled Gold",
   "block.buildingbigger.golden_tiles": "Golden Tiles",
   "block.buildingbigger.golden_bricks": "Golden Bricks",
   "block.buildingbigger.golden_pillar": "Golden Pillar",
+  "block.buildingbigger.golden_door": "Golden Door",
+  "block.buildingbigger.golden_trapdoor": "Golden Trapdoor",
   "block.buildingbigger.polished_amethyst": "Polished Amethyst",
   "block.buildingbigger.amethyst_tiles": "Amethyst Tiles",
   "block.buildingbigger.chiseled_amethyst": "Chiseled Amethyst",
@@ -33,14 +38,19 @@
   "item.buildingbigger.iron_tread_plate": "Iron Tread Plate",
   "item.buildingbigger.corrugated_iron_plate": "Corrugated Iron Plate",
   "item.buildingbigger.iron_plate_pillar": "Iron Plate Pillar",
+  "item.buildingbigger.iron_plate_door": "Iron Plate Door",
+  "item.buildingbigger.iron_plate_trapdoor": "Iron Plate Trapdoor",
+  "item.buildingbigger.chiseled_gold": "Chiseled Gold",
   "item.buildingbigger.golden_tiles": "Golden Tiles",
   "item.buildingbigger.golden_bricks": "Golden Bricks",
   "item.buildingbigger.golden_pillar": "Golden Pillar",
+  "item.buildingbigger.golden_door": "Golden Door",
+  "item.buildingbigger.golden_trapdoor": "Golden Trapdoor",
   "item.buildingbigger.polished_amethyst": "Polished Amethyst",
   "item.buildingbigger.amethyst_tiles": "Amethyst Tiles",
   "item.buildingbigger.chiseled_amethyst": "Chiseled Amethyst",
 
   "itemGroup.buildingbigger": "Building Bigger",
 
-  "death.attack.buildingbigger.palisade": "%1$s got skewered through a palisade"
+  "death.attack.buildingbigger.palisade": "%1$s failed to climb a spiked palisade"
 }

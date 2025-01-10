@@ -38,10 +38,15 @@ public class BlockLootTables extends BlockLootSubProvider
 		dropSelf(ModBlocks.IRON_TREAD_PLATE.get());
 		dropSelf(ModBlocks.CORRUGATED_IRON_PLATE.get());
 		dropSelf(ModBlocks.IRON_PLATE_PILLAR.get());
+		createDoorTable(ModBlocks.IRON_PLATE_DOOR.get());
+		dropSelf(ModBlocks.IRON_PLATE_TRAPDOOR.get());
 
+		dropSelf(ModBlocks.CHISELED_GOLD.get());
 		dropSelf(ModBlocks.GOLDEN_TILES.get());
 		dropSelf(ModBlocks.GOLDEN_BRICKS.get());
 		dropSelf(ModBlocks.GOLDEN_PILLAR.get());
+		createDoorTable(ModBlocks.GOLDEN_DOOR.get());
+		dropSelf(ModBlocks.GOLDEN_TRAPDOOR.get());
 
 		dropSelf(ModBlocks.POLISHED_AMETHYST.get());
 		dropSelf(ModBlocks.AMETHYST_TILES.get());

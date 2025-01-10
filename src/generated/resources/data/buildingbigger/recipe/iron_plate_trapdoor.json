@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "i": {
+      "item": "buildingbigger:iron_plate"
+    }
+  },
+  "pattern": [
+    "iii",
+    "iii"
+  ],
+  "result": {
+    "count": 2,
+    "id": "buildingbigger:iron_plate_trapdoor"
+  }
+}

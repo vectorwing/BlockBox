@@ -20,8 +20,18 @@ public class BlockTags extends BlockTagsProvider
 
 	@Override
 	protected void addTags(HolderLookup.@NotNull Provider provider) {
-		this.registerBlockMineables();
+		this.registerMinecraftTags();
 		this.registerModTags();
+		this.registerBlockMineables();
+	}
+
+	private void registerMinecraftTags() {
+		tag(net.minecraft.tags.BlockTags.DOORS)
+				.add(ModBlocks.IRON_PLATE_DOOR.get())
+				.add(ModBlocks.GOLDEN_DOOR.get());
+		tag(net.minecraft.tags.BlockTags.TRAPDOORS)
+				.add(ModBlocks.IRON_PLATE_TRAPDOOR.get())
+				.add(ModBlocks.GOLDEN_TRAPDOOR.get());
 	}
 
 	private void registerModTags() {
@@ -41,9 +51,14 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.IRON_TREAD_PLATE.get(),
 				ModBlocks.CORRUGATED_IRON_PLATE.get(),
 				ModBlocks.IRON_PLATE_PILLAR.get(),
+				ModBlocks.IRON_PLATE_DOOR.get(),
+				ModBlocks.IRON_PLATE_TRAPDOOR.get(),
+				ModBlocks.CHISELED_GOLD.get(),
 				ModBlocks.GOLDEN_TILES.get(),
 				ModBlocks.GOLDEN_BRICKS.get(),
 				ModBlocks.GOLDEN_PILLAR.get(),
+				ModBlocks.GOLDEN_DOOR.get(),
+				ModBlocks.GOLDEN_TRAPDOOR.get(),
 				ModBlocks.POLISHED_AMETHYST.get(),
 				ModBlocks.AMETHYST_TILES.get(),
 				ModBlocks.CHISELED_AMETHYST.get()
