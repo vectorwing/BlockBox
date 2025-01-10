@@ -16,6 +16,7 @@ public class ModBlocks
 
 	public static final BlockBehaviour.Properties PROPERTIES_PACKED_SNOW = BlockBehaviour.Properties.of().mapColor(MapColor.SNOW).strength(0.6F).sound(SoundType.SNOW);
 	public static final BlockBehaviour.Properties PROPERTIES_PALISADE = BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(2.0F).sound(SoundType.WOOD).ignitedByLava();
+	public static final BlockBehaviour.Properties PROPERTIES_IRON_PLATE = BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).strength(4.0F, 6.0F).sound(SoundType.NETHERITE_BLOCK);
 
 	public static final Supplier<Block> OAK_PALISADE = BLOCKS.register("oak_palisade", () -> new PalisadeBlock(PROPERTIES_PALISADE));
 	public static final Supplier<Block> SPIKED_OAK_PALISADE = BLOCKS.register("spiked_oak_palisade", () -> new SpikedPalisadeBlock(PROPERTIES_PALISADE));
@@ -31,11 +32,11 @@ public class ModBlocks
 	public static final Supplier<Block> POLISHED_PACKED_ICE = BLOCKS.registerSimpleBlock("polished_packed_ice", BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_ICE));
 	public static final Supplier<Block> PACKED_ICE_BRICKS = BLOCKS.registerSimpleBlock("packed_ice_bricks", BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_ICE));
 
-	public static final Supplier<Block> IRON_PLATE = BLOCKS.registerSimpleBlock("iron_plate", BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK));
-	public static final Supplier<Block> IRON_TREAD_PLATE = BLOCKS.registerSimpleBlock("iron_tread_plate", BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK));
-	public static final Supplier<Block> CORRUGATED_IRON_PLATE = BLOCKS.registerSimpleBlock("corrugated_iron_plate", BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK));
+	public static final Supplier<Block> IRON_PLATE = BLOCKS.registerSimpleBlock("iron_plate", PROPERTIES_IRON_PLATE);
+	public static final Supplier<Block> IRON_TREAD_PLATE = BLOCKS.registerSimpleBlock("iron_tread_plate", PROPERTIES_IRON_PLATE);
+	public static final Supplier<Block> CORRUGATED_IRON_PLATE = BLOCKS.registerSimpleBlock("corrugated_iron_plate", PROPERTIES_IRON_PLATE);
 	public static final Supplier<Block> IRON_PLATE_PILLAR = BLOCKS.register("iron_plate_pillar",
-			() -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK)));
+			() -> new RotatedPillarBlock(PROPERTIES_IRON_PLATE));
 	public static final Supplier<Block> IRON_PLATE_DOOR = BLOCKS.register("iron_plate_door",
 			() -> new DoorBlock(ModBlockSets.IRON_PLATE.get(), BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_DOOR)));
 	public static final Supplier<Block> IRON_PLATE_TRAPDOOR = BLOCKS.register("iron_plate_trapdoor",
