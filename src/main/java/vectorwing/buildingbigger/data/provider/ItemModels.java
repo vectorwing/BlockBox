@@ -43,6 +43,9 @@ public class ItemModels extends ItemModelProvider
 		itemGeneratedModel(ModItems.GOLDEN_DOOR.get(), resourceItem(itemName(ModItems.GOLDEN_DOOR.get())));
 		items.remove(ModItems.GOLDEN_DOOR.get());
 
+		handheldItem(ModItems.MALLET.get());
+		items.remove(ModItems.MALLET.get());
+
 		// Blocks with 3D models
 		takeAll(items, i -> i instanceof BlockItem).forEach(item -> blockBasedModel(item, ""));
 	}

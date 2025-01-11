@@ -6,6 +6,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import vectorwing.buildingbigger.BuildingBigger;
+import vectorwing.buildingbigger.common.item.MalletItem;
 
 import java.util.LinkedHashSet;
 import java.util.function.Supplier;
@@ -27,6 +28,8 @@ public class ModItems
 		CREATIVE_TAB_ITEMS.add(block);
 		return block;
 	}
+
+	public static final Supplier<Item> MALLET = registerItem("mallet", () -> new MalletItem(new Item.Properties().durability(512)));
 
 	public static final Supplier<BlockItem> OAK_PALISADE = registerSimpleBlockItem("oak_palisade", ModBlocks.OAK_PALISADE);
 	public static final Supplier<BlockItem> SPIKED_OAK_PALISADE = registerSimpleBlockItem("spiked_oak_palisade", ModBlocks.SPIKED_OAK_PALISADE);
