@@ -54,5 +54,7 @@
 
   "itemGroup.buildingbigger": "Building Bigger",
 
+  "buildingbigger.item.mallet.failure": "Can't push...",
+
   "death.attack.buildingbigger.palisade": "%1$s failed to climb a spiked palisade"
 }
