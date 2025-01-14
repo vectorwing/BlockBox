@@ -16,11 +16,13 @@ public class ParticleTypes extends ParticleDescriptionProvider
 	@Override
 	protected void addDescriptions() {
 		spriteSet(ModParticleTypes.SPARKLE.get(),
-				// The base name.
 				ResourceLocation.fromNamespaceAndPath(BuildingBigger.MODID, "sparkle"),
-				// The amount of textures.
 				4,
-				// Whether to reverse the list, i.e. start at the last element instead of the first.
+				false
+		);
+		spriteSet(ModParticleTypes.STRIKE.get(),
+				ResourceLocation.fromNamespaceAndPath(BuildingBigger.MODID, "strike"),
+				4,
 				false
 		);
 	}

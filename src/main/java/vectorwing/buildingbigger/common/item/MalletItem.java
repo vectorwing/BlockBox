@@ -4,6 +4,8 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.Vec3i;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
@@ -20,10 +22,12 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.piston.MovingPistonBlock;
 import net.minecraft.world.level.block.piston.PistonStructureResolver;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.material.PushReaction;
 import net.neoforged.neoforge.network.PacketDistributor;
 import org.jetbrains.annotations.NotNull;
 import vectorwing.buildingbigger.BuildingBigger;
 import vectorwing.buildingbigger.common.network.payload.MalletPushPayload;
+import vectorwing.buildingbigger.common.registry.ModParticleTypes;
 
 import java.util.List;
 import java.util.Map;
@@ -47,16 +51,13 @@ public class MalletItem extends Item
 
 		if (level.isClientSide) {
 			PistonStructureResolver structureResolver = new PistonStructureResolver(level, pos, pushDirection, true);
-			if (structureResolver.resolve()) {
-				return InteractionResult.SUCCESS;
-			}
-			return InteractionResult.PASS;
+			return canPush(level, pos, pushDirection, structureResolver) ? InteractionResult.SUCCESS : InteractionResult.PASS;
 		}
 
-		if (moveBlocks(level, pos, context.getClickedFace().getOpposite())) {
-			level.playSound(null, pos, SoundEvents.ZOMBIE_ATTACK_IRON_DOOR, SoundSource.BLOCKS, 0.5F, level.random.nextFloat() * 0.25F + 0.6F);
+		if (moveBlocks(level, pos, pushDirection)) {
+			level.playSound(null, pos, SoundEvents.ZOMBIE_ATTACK_IRON_DOOR, SoundSource.BLOCKS, 0.2F, level.random.nextFloat() * 0.25F + 0.6F);
 			if (player != null) {
-				player.getCooldowns().addCooldown(this, 10);
+				player.getCooldowns().addCooldown(this, 15);
 			}
 			PacketDistributor.sendToPlayersTrackingChunk((ServerLevel) level, level.getChunkAt(pos).getPos(), new MalletPushPayload(pos, pushDirection));
 			return InteractionResult.CONSUME;
@@ -69,11 +70,22 @@ public class MalletItem extends Item
 		}
 	}
 
+	public static boolean canPush(Level level, BlockPos pos, Direction facing, PistonStructureResolver structureResolver) {
+		BlockState targetBlockState = level.getBlockState(pos.relative(facing));
+		return targetBlockState.getPistonPushReaction() != PushReaction.DESTROY && structureResolver.resolve();
+	}
+
 	public static boolean moveBlocks(Level level, BlockPos pos, Direction facing) {
 		PistonStructureResolver structureResolver = new PistonStructureResolver(level, pos, facing, true);
-		if (!structureResolver.resolve()) {
+		if (!canPush(level, pos, facing, structureResolver)) {
 			return false;
 		}
+
+		Vec3i clickedVector = facing.getNormal();
+		double x = pos.getX() + 0.5 + (clickedVector.getX() * 0.5);
+		double y = pos.getY() + 0.5 + (clickedVector.getY() * 0.5);
+		double z = pos.getZ() + 0.5 + (clickedVector.getZ() * 0.5);
+		level.addParticle(ModParticleTypes.STRIKE.get(), x, y, z, 0.0, 0.0, 0.0);
 
 		Map<BlockPos, BlockState> blocksToPush = Maps.newHashMap();
 		List<BlockPos> positionsToPush = structureResolver.getToPush();
