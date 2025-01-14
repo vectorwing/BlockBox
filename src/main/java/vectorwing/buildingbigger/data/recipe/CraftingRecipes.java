@@ -7,6 +7,7 @@ import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
+import net.neoforged.neoforge.common.Tags;
 import vectorwing.buildingbigger.common.registry.ModBlocks;
 import vectorwing.buildingbigger.common.registry.ModItems;
 
@@ -14,9 +15,23 @@ public class CraftingRecipes
 {
 	public static void register(RecipeOutput output) {
 		recipesBlocks(output);
+		craftTools(output);
 		craftPalisades(output);
 		craftIronPlateBlocks(output);
 		craftGoldBlocks(output);
+	}
+
+	private static void craftTools(RecipeOutput output) {
+		ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.MALLET.get())
+				.pattern("cIc")
+				.pattern(" s ")
+				.pattern(" s ")
+				.define('c', Tags.Items.INGOTS_COPPER)
+				.define('I', Blocks.IRON_BLOCK)
+				.define('s', Tags.Items.RODS_WOODEN)
+				.unlockedBy("has_copper", InventoryChangeTrigger.TriggerInstance.hasItems(Items.COPPER_INGOT))
+				.unlockedBy("has_iron", InventoryChangeTrigger.TriggerInstance.hasItems(Items.IRON_INGOT))
+				.save(output);
 	}
 
 	private static void craftPalisades(RecipeOutput output) {

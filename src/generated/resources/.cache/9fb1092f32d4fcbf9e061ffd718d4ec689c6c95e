@@ -1,4 +1,4 @@
-// 1.21.1	2025-01-10T17:58:05.4662625	Recipes
+// 1.21.1	2025-01-14T20:14:39.5244674	Recipes
 975fdb7062ecb8878c87d9dc104cee5638294044 data/buildingbigger/advancement/recipes/decorations/chiseled_gold.json
 23a2bad211ab806ea2e142670072d3ac8d33e386 data/buildingbigger/advancement/recipes/decorations/clay_tiles.json
 3e46e67e673e1fab24c4fb9b32b000d63a71b74b data/buildingbigger/advancement/recipes/decorations/corrugated_iron_plate.json
@@ -20,6 +20,7 @@ be7c221f741591bbee65f12f9681cfbc863d62e8 data/buildingbigger/advancement/recipes
 a398be37a57915a477d166d6af9ad5287e4214cd data/buildingbigger/advancement/recipes/decorations/red_sandstone_bricks.json
 4a00bf046a835d0c7d6d2f0488e216aecb3f2b55 data/buildingbigger/advancement/recipes/decorations/sandstone_bricks.json
 b6ff0789e35e922ef3224d10465c492f94ba12f1 data/buildingbigger/advancement/recipes/decorations/spiked_oak_palisade.json
+ae61a1bbc977b7832b4880a8b80dea307c7dc363 data/buildingbigger/advancement/recipes/tools/mallet.json
 000c132d16ca78b06e23f26d5521ea9136e03bca data/buildingbigger/recipe/chiseled_gold.json
 9ba20d86d53c17be1f70a45dc2faec5a147517be data/buildingbigger/recipe/clay_tiles.json
 9ffc7965b0824309c3dd76c44cbbf86002cec6c2 data/buildingbigger/recipe/corrugated_iron_plate.json
@@ -33,6 +34,7 @@ fbb6022aec7a40a773eb622f6f99978154880248 data/buildingbigger/recipe/golden_trapd
 ba1de99a19ee43d93ace7c543f09af0b021b0155 data/buildingbigger/recipe/iron_plate_pillar.json
 bfe06daced79ee00957baa56c4fd8d000b5d3042 data/buildingbigger/recipe/iron_plate_trapdoor.json
 800ee5380160372bb73a82edbc09414f71c497a6 data/buildingbigger/recipe/iron_tread_plate.json
+f2a5016dce5ef8dc5d6a116ccc25de153a705baf data/buildingbigger/recipe/mallet.json
 7fa5515ff6e7020c16039c5de400107d10adbe26 data/buildingbigger/recipe/oak_palisade.json
 ec88f74d0fe0566d65103774a66f0617f19b2c9d data/buildingbigger/recipe/packed_ice_bricks.json
 adab5f4ccddcb01a4b553de6b18a2a8697f2221c data/buildingbigger/recipe/packed_snow.json

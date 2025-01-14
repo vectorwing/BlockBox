@@ -12,8 +12,10 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
@@ -25,6 +27,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.PushReaction;
 import net.neoforged.neoforge.network.PacketDistributor;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import vectorwing.buildingbigger.BuildingBigger;
 import vectorwing.buildingbigger.common.network.payload.MalletPushPayload;
 import vectorwing.buildingbigger.common.registry.ModParticleTypes;
@@ -51,21 +54,22 @@ public class MalletItem extends Item
 
 		if (level.isClientSide) {
 			PistonStructureResolver structureResolver = new PistonStructureResolver(level, pos, pushDirection, true);
-			return canPush(level, pos, pushDirection, structureResolver) ? InteractionResult.SUCCESS : InteractionResult.PASS;
+			if (canPush(level, pos, pushDirection, structureResolver)) {
+				return InteractionResult.SUCCESS;
+			}
+			return InteractionResult.PASS;
 		}
 
 		if (moveBlocks(level, pos, pushDirection)) {
 			level.playSound(null, pos, SoundEvents.ZOMBIE_ATTACK_IRON_DOOR, SoundSource.BLOCKS, 0.2F, level.random.nextFloat() * 0.25F + 0.6F);
+			PacketDistributor.sendToPlayersTrackingChunk((ServerLevel) level, level.getChunkAt(pos).getPos(), new MalletPushPayload(pos, pushDirection));
 			if (player != null) {
 				player.getCooldowns().addCooldown(this, 15);
+				context.getItemInHand().hurtAndBreak(1, player, LivingEntity.getSlotForHand(context.getHand()));
 			}
-			PacketDistributor.sendToPlayersTrackingChunk((ServerLevel) level, level.getChunkAt(pos).getPos(), new MalletPushPayload(pos, pushDirection));
 			return InteractionResult.CONSUME;
 		} else {
 			level.playSound(null, pos, SoundEvents.NETHERITE_BLOCK_HIT, SoundSource.BLOCKS, 0.5F, level.random.nextFloat() * 0.25F + 0.6F);
-			if (player != null) {
-				player.displayClientMessage(Component.translatable(BuildingBigger.MODID + ".item.mallet.failure"), true);
-			}
 			return InteractionResult.PASS;
 		}
 	}
@@ -151,6 +155,8 @@ public class MalletItem extends Item
 		for (int i1 = positionsToPush.size() - 1; i1 >= 0; i1--) {
 			level.updateNeighborsAt(positionsToPush.get(i1), positionsToAffect[i++].getBlock());
 		}
+
+
 
 		return true;
 	}
