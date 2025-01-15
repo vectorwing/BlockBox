@@ -32,6 +32,10 @@ public class ItemModels extends ItemModelProvider
 		items.remove(ModItems.OAK_PALISADE.get());
 		palisadeModel(ModItems.SPIKED_OAK_PALISADE.get());
 		items.remove(ModItems.SPIKED_OAK_PALISADE.get());
+		palisadeModel(ModItems.BIRCH_PALISADE.get());
+		items.remove(ModItems.BIRCH_PALISADE.get());
+		palisadeModel(ModItems.SPIKED_BIRCH_PALISADE.get());
+		items.remove(ModItems.SPIKED_BIRCH_PALISADE.get());
 
 		trapdoorModel(ModItems.IRON_PLATE_TRAPDOOR.get());
 		items.remove(ModItems.IRON_PLATE_TRAPDOOR.get());

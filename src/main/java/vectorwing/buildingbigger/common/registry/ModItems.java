@@ -30,6 +30,8 @@ public class ModItems
 
 	public static final Supplier<BlockItem> OAK_PALISADE = registerSimpleBlockItem("oak_palisade", ModBlocks.OAK_PALISADE);
 	public static final Supplier<BlockItem> SPIKED_OAK_PALISADE = registerSimpleBlockItem("spiked_oak_palisade", ModBlocks.SPIKED_OAK_PALISADE);
+	public static final Supplier<BlockItem> BIRCH_PALISADE = registerSimpleBlockItem("birch_palisade", ModBlocks.BIRCH_PALISADE);
+	public static final Supplier<BlockItem> SPIKED_BIRCH_PALISADE = registerSimpleBlockItem("spiked_birch_palisade", ModBlocks.SPIKED_BIRCH_PALISADE);
 
 	public static final Supplier<BlockItem> SANDSTONE_BRICKS = registerSimpleBlockItem("sandstone_bricks", ModBlocks.SANDSTONE_BRICKS);
 	public static final Supplier<BlockItem> RED_SANDSTONE_BRICKS = registerSimpleBlockItem("red_sandstone_bricks", ModBlocks.RED_SANDSTONE_BRICKS);

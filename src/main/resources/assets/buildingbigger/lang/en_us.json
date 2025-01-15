@@ -1,6 +1,8 @@
 {
   "block.buildingbigger.oak_palisade": "Oak Palisade",
+  "block.buildingbigger.birch_palisade": "Birch Palisade",
   "block.buildingbigger.spiked_oak_palisade": "Spiked Oak Palisade",
+  "block.buildingbigger.spiked_birch_palisade": "Spiked Birch Palisade",
   "block.buildingbigger.sandstone_bricks": "Sandstone Bricks",
   "block.buildingbigger.red_sandstone_bricks": "Red Sandstone Bricks",
   "block.buildingbigger.clay_tiles": "Clay Tiles",
@@ -26,6 +28,9 @@
   "block.buildingbigger.chiseled_amethyst": "Chiseled Amethyst",
 
   "item.buildingbigger.oak_palisade": "Oak Palisade",
+  "item.buildingbigger.birch_palisade": "Birch Palisade",
+  "item.buildingbigger.spiked_oak_palisade": "Spiked Oak Palisade",
+  "item.buildingbigger.spiked_birch_palisade": "Spiked Birch Palisade",
   "item.buildingbigger.sandstone_bricks": "Sandstone Bricks",
   "item.buildingbigger.red_sandstone_bricks": "Red Sandstone Bricks",
   "item.buildingbigger.clay_tiles": "Clay Tiles",

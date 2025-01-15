@@ -35,8 +35,12 @@ public class BlockTags extends BlockTagsProvider
 	}
 
 	private void registerModTags() {
-		tag(ModTags.PALISADES).add(ModBlocks.OAK_PALISADE.get());
-		tag(ModTags.SPIKED_PALISADES).add(ModBlocks.SPIKED_OAK_PALISADE.get());
+		tag(ModTags.PALISADES)
+				.add(ModBlocks.OAK_PALISADE.get())
+				.add(ModBlocks.BIRCH_PALISADE.get());
+		tag(ModTags.SPIKED_PALISADES)
+				.add(ModBlocks.SPIKED_OAK_PALISADE.get())
+				.add(ModBlocks.SPIKED_BIRCH_PALISADE.get());
 	}
 
 	protected void registerBlockMineables() {
@@ -65,7 +69,9 @@ public class BlockTags extends BlockTagsProvider
 		);
 		tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_AXE).add(
 				ModBlocks.OAK_PALISADE.get(),
-				ModBlocks.SPIKED_OAK_PALISADE.get()
+				ModBlocks.SPIKED_OAK_PALISADE.get(),
+				ModBlocks.BIRCH_PALISADE.get(),
+				ModBlocks.SPIKED_BIRCH_PALISADE.get()
 		);
 		tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_SHOVEL).add(
 				ModBlocks.PACKED_SNOW.get(),

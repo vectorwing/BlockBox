@@ -1,5 +1,6 @@
-// 1.21.1	2025-01-10T12:40:42.8978252	Item Models: buildingbigger
+// 1.21.1	2025-01-15T20:10:13.1404555	Item Models: buildingbigger
 5ca900e35053a861ebdde442a948690aca6d33ab assets/buildingbigger/models/item/amethyst_tiles.json
+880b8d8a4f6730ff47720d243c80c4e5dabde2b2 assets/buildingbigger/models/item/birch_palisade.json
 6084a83daf329ffc94666ee9cabfd57c17b8a19b assets/buildingbigger/models/item/chiseled_amethyst.json
 0e6287989d6b190ca9cd6f5781c0d7485704ae17 assets/buildingbigger/models/item/chiseled_gold.json
 ea16bf7e68dd08680cdf2e1de37a433a0b8041fc assets/buildingbigger/models/item/clay_tiles.json
@@ -23,4 +24,5 @@ e0ea223951e97b25cb79c42e925bbfd012766b23 assets/buildingbigger/models/item/oak_p
 23d52c4fc7f12d9e1616e50126d141da96fb85e2 assets/buildingbigger/models/item/polished_packed_ice.json
 3a2549a5f383616401f0d48c9ae93bbf3ad20520 assets/buildingbigger/models/item/red_sandstone_bricks.json
 3251578d2ed497155724cf3d7dfd98478e32f310 assets/buildingbigger/models/item/sandstone_bricks.json
+4cdd680f60735f5193ad1486319dfb60060d066c assets/buildingbigger/models/item/spiked_birch_palisade.json
 b6795416abd71c09775023b06367e15c5d77f72d assets/buildingbigger/models/item/spiked_oak_palisade.json

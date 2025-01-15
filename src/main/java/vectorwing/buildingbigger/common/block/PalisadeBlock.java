@@ -39,7 +39,6 @@ public class PalisadeBlock extends CrossCollisionBlock implements SimpleWaterlog
 		map.put(Direction.SOUTH, TYPE_SOUTH);
 		map.put(Direction.WEST, TYPE_WEST);
 	});
-//	private final Object2IntMap<BlockState> stateToIndex = new Object2IntOpenHashMap<>();
 
 	public PalisadeBlock(Properties properties) {
 		this(4.0F, 4.0F, 16.0F, 16.0F, 16.0F, properties);
@@ -123,11 +122,11 @@ public class PalisadeBlock extends CrossCollisionBlock implements SimpleWaterlog
 
 	public PalisadeConnection getConnectionType(BlockState state, boolean isSideSolid, Direction direction) {
 		PalisadeConnection type = PalisadeConnection.NONE;
-		if (state.is(ModTags.SPIKED_PALISADES)) {
+		if (state.is(ModTags.SPIKED_PALISADES) || state.getBlock() instanceof SpikedPalisadeBlock) {
 			return PalisadeConnection.SPIKED;
 		}
 		boolean isFenceGateAligned = state.getBlock() instanceof FenceGateBlock && FenceGateBlock.connectsToDirection(state, direction);
-		if (state.is(ModTags.PALISADES) || (!isExceptionForConnection(state) && isSideSolid) || isFenceGateAligned) {
+		if (state.is(ModTags.PALISADES) || state.getBlock() instanceof PalisadeBlock || (!isExceptionForConnection(state) && isSideSolid) || isFenceGateAligned) {
 			return PalisadeConnection.FULL;
 		}
 		return type;
