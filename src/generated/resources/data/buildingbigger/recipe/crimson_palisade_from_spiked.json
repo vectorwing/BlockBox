@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "buildingbigger:spiked_crimson_palisade"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "buildingbigger:crimson_palisade"
+  }
+}

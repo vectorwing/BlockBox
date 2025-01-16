@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "buildingbigger:spiked_dark_oak_palisade"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "buildingbigger:dark_oak_palisade"
+  }
+}

@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_matching_palisade": {
+    "has_matching_log": {
       "conditions": {
         "items": [
           {
-            "items": "buildingbigger:oak_palisade"
+            "items": "minecraft:acacia_log"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "buildingbigger:spiked_oak_palisade"
+        "recipe": "buildingbigger:acacia_palisade_from_spiked"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_matching_palisade"
+      "has_matching_log"
     ]
   ],
   "rewards": {
     "recipes": [
-      "buildingbigger:spiked_oak_palisade"
+      "buildingbigger:acacia_palisade_from_spiked"
     ]
   }
 }

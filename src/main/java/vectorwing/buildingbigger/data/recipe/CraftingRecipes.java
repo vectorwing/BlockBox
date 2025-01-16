@@ -1,12 +1,16 @@
 package vectorwing.buildingbigger.data.recipe;
 
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
+import vectorwing.buildingbigger.BuildingBigger;
 import vectorwing.buildingbigger.common.registry.ModBlocks;
 import vectorwing.buildingbigger.common.registry.ModItems;
 
@@ -20,16 +24,16 @@ public class CraftingRecipes
 	}
 
 	private static void craftPalisades(RecipeOutput output) {
-		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.OAK_PALISADE.get(), 12)
-				.pattern("ooo")
-				.pattern("ooo")
-				.define('o', Blocks.OAK_LOG)
-				.unlockedBy("has_oak", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.OAK_LOG))
-				.save(output);
-		ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.SPIKED_OAK_PALISADE.get(), 1)
-				.requires(ModItems.OAK_PALISADE.get())
-				.unlockedBy("has_palisade", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.OAK_PALISADE.get()))
-				.save(output);
+		palisade(output, ModBlocks.OAK_PALISADE.get(), ModBlocks.SPIKED_OAK_PALISADE.get(), Blocks.OAK_LOG);
+		palisade(output, ModBlocks.SPRUCE_PALISADE.get(), ModBlocks.SPIKED_SPRUCE_PALISADE.get(), Blocks.SPRUCE_LOG);
+		palisade(output, ModBlocks.BIRCH_PALISADE.get(), ModBlocks.SPIKED_BIRCH_PALISADE.get(), Blocks.BIRCH_LOG);
+		palisade(output, ModBlocks.JUNGLE_PALISADE.get(), ModBlocks.SPIKED_JUNGLE_PALISADE.get(), Blocks.JUNGLE_LOG);
+		palisade(output, ModBlocks.ACACIA_PALISADE.get(), ModBlocks.SPIKED_ACACIA_PALISADE.get(), Blocks.ACACIA_LOG);
+		palisade(output, ModBlocks.DARK_OAK_PALISADE.get(), ModBlocks.SPIKED_DARK_OAK_PALISADE.get(), Blocks.DARK_OAK_LOG);
+		palisade(output, ModBlocks.MANGROVE_PALISADE.get(), ModBlocks.SPIKED_MANGROVE_PALISADE.get(), Blocks.MANGROVE_LOG);
+		palisade(output, ModBlocks.CHERRY_PALISADE.get(), ModBlocks.SPIKED_CHERRY_PALISADE.get(), Blocks.CHERRY_LOG);
+		palisade(output, ModBlocks.CRIMSON_PALISADE.get(), ModBlocks.SPIKED_CRIMSON_PALISADE.get(), Blocks.CRIMSON_STEM);
+		palisade(output, ModBlocks.WARPED_PALISADE.get(), ModBlocks.SPIKED_WARPED_PALISADE.get(), Blocks.WARPED_STEM);
 	}
 
 	private static void craftIronPlateBlocks(RecipeOutput output) {
@@ -156,5 +160,34 @@ public class CraftingRecipes
 				.define('s', ModBlocks.POLISHED_PACKED_ICE.get())
 				.unlockedBy("has_packed_ice", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.PACKED_ICE))
 				.save(output);
+	}
+
+	public static void palisade(RecipeOutput output, ItemLike palisade, ItemLike spikedPalisade, ItemLike log) {
+		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, palisade, 12)
+				.pattern("ooo")
+				.pattern("ooo")
+				.define('o', log)
+				.unlockedBy("has_matching_log", InventoryChangeTrigger.TriggerInstance.hasItems(log))
+				.save(output);
+		ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, palisade, 1)
+				.requires(spikedPalisade)
+				.unlockedBy("has_matching_log", InventoryChangeTrigger.TriggerInstance.hasItems(log))
+				.save(output, nameWithSuffix(itemName(palisade), "_from_spiked"));
+		ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, spikedPalisade, 1)
+				.requires(palisade)
+				.unlockedBy("has_matching_palisade", InventoryChangeTrigger.TriggerInstance.hasItems(palisade))
+				.save(output);
+	}
+
+	private static ResourceLocation customName(String name) {
+		return ResourceLocation.fromNamespaceAndPath(BuildingBigger.MODID, name);
+	}
+
+	private static ResourceLocation nameWithSuffix(String name, String suffix) {
+		return ResourceLocation.fromNamespaceAndPath(BuildingBigger.MODID, name + suffix);
+	}
+
+	private static String itemName(ItemLike itemLike) {
+		return BuiltInRegistries.ITEM.getKey(itemLike.asItem()).getPath();
 	}
 }

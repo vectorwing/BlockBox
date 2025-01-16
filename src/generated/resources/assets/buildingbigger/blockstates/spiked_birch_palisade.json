@@ -8,15 +8,6 @@
     {
       "apply": {
         "model": "buildingbigger:block/spiked_birch_palisade_front",
-        "y": 270
-      },
-      "when": {
-        "west": "true"
-      }
-    },
-    {
-      "apply": {
-        "model": "buildingbigger:block/spiked_birch_palisade_front",
         "uvlock": true
       },
       "when": {
@@ -25,11 +16,11 @@
     },
     {
       "apply": {
-        "model": "buildingbigger:block/spiked_birch_palisade_back",
-        "uvlock": true
+        "model": "buildingbigger:block/spiked_birch_palisade_front",
+        "y": 270
       },
       "when": {
-        "south": "true"
+        "west": "true"
       }
     },
     {
@@ -39,6 +30,15 @@
       },
       "when": {
         "east": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "buildingbigger:block/spiked_birch_palisade_back",
+        "uvlock": true
+      },
+      "when": {
+        "south": "true"
       }
     }
   ]
