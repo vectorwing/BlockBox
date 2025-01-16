@@ -1,3 +1,4 @@
 {
-  "parent": "buildingbigger:block/spruce_palisade_post"
+  "parent": "buildingbigger:block/spruce_palisade_post",
+  "gui_light": "front"
 }

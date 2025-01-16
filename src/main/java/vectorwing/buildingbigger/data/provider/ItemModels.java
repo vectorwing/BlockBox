@@ -1,5 +1,6 @@
 package vectorwing.buildingbigger.data.provider;
 
+import net.minecraft.client.renderer.block.model.BlockModel;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -62,7 +63,7 @@ public class ItemModels extends ItemModelProvider
 	}
 
 	public void palisadeModel(Item item, Set<Item> items) {
-		blockBasedModel(item, "_post");
+		blockBasedModelFrontLight(item, "_post");
 		items.remove(item);
 	}
 
@@ -73,6 +74,10 @@ public class ItemModels extends ItemModelProvider
 
 	public void blockBasedModel(Item item, String suffix) {
 		withExistingParent(itemName(item), resourceBlock(itemName(item) + suffix));
+	}
+
+	public void blockBasedModelFrontLight(Item item, String suffix) {
+		withExistingParent(itemName(item), resourceBlock(itemName(item) + suffix)).guiLight(BlockModel.GuiLight.FRONT);
 	}
 
 	public void itemHandheldModel(Item item, ResourceLocation texture) {

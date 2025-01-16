@@ -1,3 +1,4 @@
 {
-  "parent": "buildingbigger:block/oak_palisade_post"
+  "parent": "buildingbigger:block/oak_palisade_post",
+  "gui_light": "front"
 }

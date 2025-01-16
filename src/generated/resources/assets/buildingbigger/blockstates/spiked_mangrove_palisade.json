@@ -26,19 +26,19 @@
     {
       "apply": {
         "model": "buildingbigger:block/spiked_mangrove_palisade_back",
-        "y": 270
+        "uvlock": true
       },
       "when": {
-        "east": "true"
+        "south": "true"
       }
     },
     {
       "apply": {
         "model": "buildingbigger:block/spiked_mangrove_palisade_back",
-        "uvlock": true
+        "y": 270
       },
       "when": {
-        "south": "true"
+        "east": "true"
       }
     }
   ]
