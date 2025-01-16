@@ -22,6 +22,24 @@ public class BlockLootTables extends BlockLootSubProvider
 	protected void generate() {
 		dropSelf(ModBlocks.OAK_PALISADE.get());
 		dropSelf(ModBlocks.SPIKED_OAK_PALISADE.get());
+		dropSelf(ModBlocks.SPRUCE_PALISADE.get());
+		dropSelf(ModBlocks.SPIKED_SPRUCE_PALISADE.get());
+		dropSelf(ModBlocks.BIRCH_PALISADE.get());
+		dropSelf(ModBlocks.SPIKED_BIRCH_PALISADE.get());
+		dropSelf(ModBlocks.JUNGLE_PALISADE.get());
+		dropSelf(ModBlocks.SPIKED_JUNGLE_PALISADE.get());
+		dropSelf(ModBlocks.ACACIA_PALISADE.get());
+		dropSelf(ModBlocks.SPIKED_ACACIA_PALISADE.get());
+		dropSelf(ModBlocks.DARK_OAK_PALISADE.get());
+		dropSelf(ModBlocks.SPIKED_DARK_OAK_PALISADE.get());
+		dropSelf(ModBlocks.MANGROVE_PALISADE.get());
+		dropSelf(ModBlocks.SPIKED_MANGROVE_PALISADE.get());
+		dropSelf(ModBlocks.CHERRY_PALISADE.get());
+		dropSelf(ModBlocks.SPIKED_CHERRY_PALISADE.get());
+		dropSelf(ModBlocks.CRIMSON_PALISADE.get());
+		dropSelf(ModBlocks.SPIKED_CRIMSON_PALISADE.get());
+		dropSelf(ModBlocks.WARPED_PALISADE.get());
+		dropSelf(ModBlocks.SPIKED_WARPED_PALISADE.get());
 
 		dropSelf(ModBlocks.SANDSTONE_BRICKS.get());
 		dropSelf(ModBlocks.RED_SANDSTONE_BRICKS.get());

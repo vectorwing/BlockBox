@@ -1,8 +1,8 @@
-// 1.21.1	2025-01-15T20:13:51.5366619	Tags for minecraft:block mod id buildingbigger
-6e671d1257392f4c5ab629d148ef24425e5264d5 data/buildingbigger/tags/block/palisades.json
-885e0de74108c3d081413ca3bf6dfb75a7f94105 data/buildingbigger/tags/block/spiked_palisades.json
+// 1.21.1	2025-01-16T13:19:34.7040436	Tags for minecraft:block mod id buildingbigger
+86881e501bbbd1c9fea8c3b144c891b5fd399ae4 data/buildingbigger/tags/block/palisades.json
+0007636dd3dbdf166831b44cd067dcb96a20b1bc data/buildingbigger/tags/block/spiked_palisades.json
 1098fd9b78bb5635f2be70976e9ce8fcd2edd6dc data/minecraft/tags/block/doors.json
-1cd4a1326333b69ad07bb633a7b7b336890194d1 data/minecraft/tags/block/mineable/axe.json
+62d4a47329785ec64999410a1a41f034f8c2d6be data/minecraft/tags/block/mineable/axe.json
 5c84445febedd51de4d4e3319dd73115dbb52217 data/minecraft/tags/block/mineable/pickaxe.json
 b5e503d8ea37daa78f44c0f65cff785a364afe5f data/minecraft/tags/block/mineable/shovel.json
 e87e455adc84fbe453504374956bab21308a8a0f data/minecraft/tags/block/trapdoors.json

@@ -1,6 +1,14 @@
 {
   "values": [
     "buildingbigger:oak_palisade",
-    "buildingbigger:birch_palisade"
+    "buildingbigger:spruce_palisade",
+    "buildingbigger:birch_palisade",
+    "buildingbigger:jungle_palisade",
+    "buildingbigger:acacia_palisade",
+    "buildingbigger:dark_oak_palisade",
+    "buildingbigger:mangrove_palisade",
+    "buildingbigger:cherry_palisade",
+    "buildingbigger:crimson_palisade",
+    "buildingbigger:warped_palisade"
   ]
 }

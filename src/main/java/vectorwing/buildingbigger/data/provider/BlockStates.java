@@ -59,8 +59,26 @@ public class BlockStates extends BlockStateProvider
 		simpleBlock(ModBlocks.AMETHYST_TILES.get());
 		simpleBlock(ModBlocks.CHISELED_AMETHYST.get());
 
+		palisadeBlock((PalisadeBlock) ModBlocks.OAK_PALISADE.get());
+		spikedPalisadeBlock((SpikedPalisadeBlock) ModBlocks.SPIKED_OAK_PALISADE.get(), name(ModBlocks.OAK_PALISADE.get()));
+		palisadeBlock((PalisadeBlock) ModBlocks.SPRUCE_PALISADE.get());
+		spikedPalisadeBlock((SpikedPalisadeBlock) ModBlocks.SPIKED_SPRUCE_PALISADE.get(), name(ModBlocks.SPRUCE_PALISADE.get()));
 		palisadeBlock((PalisadeBlock) ModBlocks.BIRCH_PALISADE.get());
 		spikedPalisadeBlock((SpikedPalisadeBlock) ModBlocks.SPIKED_BIRCH_PALISADE.get(), name(ModBlocks.BIRCH_PALISADE.get()));
+		palisadeBlock((PalisadeBlock) ModBlocks.JUNGLE_PALISADE.get());
+		spikedPalisadeBlock((SpikedPalisadeBlock) ModBlocks.SPIKED_JUNGLE_PALISADE.get(), name(ModBlocks.JUNGLE_PALISADE.get()));
+		palisadeBlock((PalisadeBlock) ModBlocks.ACACIA_PALISADE.get());
+		spikedPalisadeBlock((SpikedPalisadeBlock) ModBlocks.SPIKED_ACACIA_PALISADE.get(), name(ModBlocks.ACACIA_PALISADE.get()));
+		palisadeBlock((PalisadeBlock) ModBlocks.DARK_OAK_PALISADE.get());
+		spikedPalisadeBlock((SpikedPalisadeBlock) ModBlocks.SPIKED_DARK_OAK_PALISADE.get(), name(ModBlocks.DARK_OAK_PALISADE.get()));
+		palisadeBlock((PalisadeBlock) ModBlocks.MANGROVE_PALISADE.get());
+		spikedPalisadeBlock((SpikedPalisadeBlock) ModBlocks.SPIKED_MANGROVE_PALISADE.get(), name(ModBlocks.MANGROVE_PALISADE.get()));
+		palisadeBlock((PalisadeBlock) ModBlocks.CHERRY_PALISADE.get());
+		spikedPalisadeBlock((SpikedPalisadeBlock) ModBlocks.SPIKED_CHERRY_PALISADE.get(), name(ModBlocks.CHERRY_PALISADE.get()));
+		palisadeBlock((PalisadeBlock) ModBlocks.CRIMSON_PALISADE.get());
+		spikedPalisadeBlock((SpikedPalisadeBlock) ModBlocks.SPIKED_CRIMSON_PALISADE.get(), name(ModBlocks.CRIMSON_PALISADE.get()));
+		palisadeBlock((PalisadeBlock) ModBlocks.WARPED_PALISADE.get());
+		spikedPalisadeBlock((SpikedPalisadeBlock) ModBlocks.SPIKED_WARPED_PALISADE.get(), name(ModBlocks.WARPED_PALISADE.get()));
 	}
 
 	private void ironPlateTrapdoor(TrapDoorBlock block, String baseName, ResourceLocation texture, ResourceLocation renderType) {

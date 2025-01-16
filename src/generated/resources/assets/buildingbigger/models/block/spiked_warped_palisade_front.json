@@ -1,0 +1,9 @@
+{
+  "parent": "buildingbigger:block/template_spiked_palisade_front",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "core": "buildingbigger:block/warped_palisade_core",
+    "side": "buildingbigger:block/warped_palisade_side",
+    "top": "buildingbigger:block/warped_palisade_top"
+  }
+}

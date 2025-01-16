@@ -35,12 +35,30 @@ public class BlockTags extends BlockTagsProvider
 	}
 
 	private void registerModTags() {
-		tag(ModTags.PALISADES)
-				.add(ModBlocks.OAK_PALISADE.get())
-				.add(ModBlocks.BIRCH_PALISADE.get());
-		tag(ModTags.SPIKED_PALISADES)
-				.add(ModBlocks.SPIKED_OAK_PALISADE.get())
-				.add(ModBlocks.SPIKED_BIRCH_PALISADE.get());
+		tag(ModTags.PALISADES).add(
+				ModBlocks.OAK_PALISADE.get(),
+				ModBlocks.SPRUCE_PALISADE.get(),
+				ModBlocks.BIRCH_PALISADE.get(),
+				ModBlocks.JUNGLE_PALISADE.get(),
+				ModBlocks.ACACIA_PALISADE.get(),
+				ModBlocks.DARK_OAK_PALISADE.get(),
+				ModBlocks.MANGROVE_PALISADE.get(),
+				ModBlocks.CHERRY_PALISADE.get(),
+				ModBlocks.CRIMSON_PALISADE.get(),
+				ModBlocks.WARPED_PALISADE.get()
+		);
+		tag(ModTags.SPIKED_PALISADES).add(
+				ModBlocks.SPIKED_OAK_PALISADE.get(),
+				ModBlocks.SPIKED_SPRUCE_PALISADE.get(),
+				ModBlocks.SPIKED_BIRCH_PALISADE.get(),
+				ModBlocks.SPIKED_JUNGLE_PALISADE.get(),
+				ModBlocks.SPIKED_ACACIA_PALISADE.get(),
+				ModBlocks.SPIKED_DARK_OAK_PALISADE.get(),
+				ModBlocks.SPIKED_MANGROVE_PALISADE.get(),
+				ModBlocks.SPIKED_CHERRY_PALISADE.get(),
+				ModBlocks.SPIKED_CRIMSON_PALISADE.get(),
+				ModBlocks.SPIKED_WARPED_PALISADE.get()
+		);
 	}
 
 	protected void registerBlockMineables() {
@@ -67,12 +85,9 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.AMETHYST_TILES.get(),
 				ModBlocks.CHISELED_AMETHYST.get()
 		);
-		tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_AXE).add(
-				ModBlocks.OAK_PALISADE.get(),
-				ModBlocks.SPIKED_OAK_PALISADE.get(),
-				ModBlocks.BIRCH_PALISADE.get(),
-				ModBlocks.SPIKED_BIRCH_PALISADE.get()
-		);
+		tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_AXE)
+				.addTag(ModTags.PALISADES)
+				.addTag(ModTags.SPIKED_PALISADES);
 		tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_SHOVEL).add(
 				ModBlocks.PACKED_SNOW.get(),
 				ModBlocks.PACKED_SNOW_BRICKS.get()

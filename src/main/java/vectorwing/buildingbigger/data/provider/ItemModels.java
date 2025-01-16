@@ -28,19 +28,29 @@ public class ItemModels extends ItemModelProvider
 		Set<Item> items = BuiltInRegistries.ITEM.stream().filter(i -> BuildingBigger.MODID.equals(BuiltInRegistries.ITEM.getKey(i).getNamespace()))
 				.collect(Collectors.toSet());
 
-		palisadeModel(ModItems.OAK_PALISADE.get());
-		items.remove(ModItems.OAK_PALISADE.get());
-		palisadeModel(ModItems.SPIKED_OAK_PALISADE.get());
-		items.remove(ModItems.SPIKED_OAK_PALISADE.get());
-		palisadeModel(ModItems.BIRCH_PALISADE.get());
-		items.remove(ModItems.BIRCH_PALISADE.get());
-		palisadeModel(ModItems.SPIKED_BIRCH_PALISADE.get());
-		items.remove(ModItems.SPIKED_BIRCH_PALISADE.get());
+		palisadeModel(ModItems.OAK_PALISADE.get(), items);
+		palisadeModel(ModItems.SPIKED_OAK_PALISADE.get(), items);
+		palisadeModel(ModItems.SPRUCE_PALISADE.get(), items);
+		palisadeModel(ModItems.SPIKED_SPRUCE_PALISADE.get(), items);
+		palisadeModel(ModItems.BIRCH_PALISADE.get(), items);
+		palisadeModel(ModItems.SPIKED_BIRCH_PALISADE.get(), items);
+		palisadeModel(ModItems.JUNGLE_PALISADE.get(), items);
+		palisadeModel(ModItems.SPIKED_JUNGLE_PALISADE.get(), items);
+		palisadeModel(ModItems.ACACIA_PALISADE.get(), items);
+		palisadeModel(ModItems.SPIKED_ACACIA_PALISADE.get(), items);
+		palisadeModel(ModItems.DARK_OAK_PALISADE.get(), items);
+		palisadeModel(ModItems.SPIKED_DARK_OAK_PALISADE.get(), items);
+		palisadeModel(ModItems.MANGROVE_PALISADE.get(), items);
+		palisadeModel(ModItems.SPIKED_MANGROVE_PALISADE.get(), items);
+		palisadeModel(ModItems.CHERRY_PALISADE.get(), items);
+		palisadeModel(ModItems.SPIKED_CHERRY_PALISADE.get(), items);
+		palisadeModel(ModItems.CRIMSON_PALISADE.get(), items);
+		palisadeModel(ModItems.SPIKED_CRIMSON_PALISADE.get(), items);
+		palisadeModel(ModItems.WARPED_PALISADE.get(), items);
+		palisadeModel(ModItems.SPIKED_WARPED_PALISADE.get(), items);
 
-		trapdoorModel(ModItems.IRON_PLATE_TRAPDOOR.get());
-		items.remove(ModItems.IRON_PLATE_TRAPDOOR.get());
-		trapdoorModel(ModItems.GOLDEN_TRAPDOOR.get());
-		items.remove(ModItems.GOLDEN_TRAPDOOR.get());
+		trapdoorModel(ModItems.IRON_PLATE_TRAPDOOR.get(), items);
+		trapdoorModel(ModItems.GOLDEN_TRAPDOOR.get(), items);
 
 		itemGeneratedModel(ModItems.IRON_PLATE_DOOR.get(), resourceItem(itemName(ModItems.IRON_PLATE_DOOR.get())));
 		items.remove(ModItems.IRON_PLATE_DOOR.get());
@@ -51,12 +61,14 @@ public class ItemModels extends ItemModelProvider
 		takeAll(items, i -> i instanceof BlockItem).forEach(item -> blockBasedModel(item, ""));
 	}
 
-	public void palisadeModel(Item item) {
+	public void palisadeModel(Item item, Set<Item> items) {
 		blockBasedModel(item, "_post");
+		items.remove(item);
 	}
 
-	public void trapdoorModel(Item item) {
+	public void trapdoorModel(Item item, Set<Item> items) {
 		blockBasedModel(item, "_bottom");
+		items.remove(item);
 	}
 
 	public void blockBasedModel(Item item, String suffix) {

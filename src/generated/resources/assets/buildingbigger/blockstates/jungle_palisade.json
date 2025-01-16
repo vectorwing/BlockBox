@@ -1,0 +1,81 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "buildingbigger:block/jungle_palisade_post"
+      }
+    },
+    {
+      "apply": {
+        "model": "buildingbigger:block/jungle_palisade_front",
+        "uvlock": true
+      },
+      "when": {
+        "north": "full"
+      }
+    },
+    {
+      "apply": {
+        "model": "buildingbigger:block/spiked_jungle_palisade_front",
+        "uvlock": true
+      },
+      "when": {
+        "north": "spiked"
+      }
+    },
+    {
+      "apply": {
+        "model": "buildingbigger:block/jungle_palisade_front",
+        "y": 270
+      },
+      "when": {
+        "west": "full"
+      }
+    },
+    {
+      "apply": {
+        "model": "buildingbigger:block/spiked_jungle_palisade_front",
+        "y": 270
+      },
+      "when": {
+        "west": "spiked"
+      }
+    },
+    {
+      "apply": {
+        "model": "buildingbigger:block/jungle_palisade_back",
+        "y": 270
+      },
+      "when": {
+        "east": "full"
+      }
+    },
+    {
+      "apply": {
+        "model": "buildingbigger:block/spiked_jungle_palisade_back",
+        "y": 270
+      },
+      "when": {
+        "east": "spiked"
+      }
+    },
+    {
+      "apply": {
+        "model": "buildingbigger:block/jungle_palisade_back",
+        "uvlock": true
+      },
+      "when": {
+        "south": "full"
+      }
+    },
+    {
+      "apply": {
+        "model": "buildingbigger:block/spiked_jungle_palisade_back",
+        "uvlock": true
+      },
+      "when": {
+        "south": "spiked"
+      }
+    }
+  ]
+}
