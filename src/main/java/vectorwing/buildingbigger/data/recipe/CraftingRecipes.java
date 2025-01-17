@@ -167,14 +167,17 @@ public class CraftingRecipes
 				.pattern("ooo")
 				.pattern("ooo")
 				.define('o', log)
+				.group("bb_palisades")
 				.unlockedBy("has_matching_log", InventoryChangeTrigger.TriggerInstance.hasItems(log))
 				.save(output);
 		ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, palisade, 1)
 				.requires(spikedPalisade)
+				.group("bb_palisades")
 				.unlockedBy("has_matching_log", InventoryChangeTrigger.TriggerInstance.hasItems(log))
 				.save(output, nameWithSuffix(itemName(palisade), "_from_spiked"));
 		ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, spikedPalisade, 1)
 				.requires(palisade)
+				.group("bb_spiked_palisades")
 				.unlockedBy("has_matching_palisade", InventoryChangeTrigger.TriggerInstance.hasItems(palisade))
 				.save(output);
 	}

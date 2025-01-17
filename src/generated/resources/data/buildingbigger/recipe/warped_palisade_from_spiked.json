@@ -1,6 +1,7 @@
 {
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
+  "group": "bb_palisades",
   "ingredients": [
     {
       "item": "buildingbigger:spiked_warped_palisade"
