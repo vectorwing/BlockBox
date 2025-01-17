@@ -17,7 +17,6 @@ public class ModBlocks
 
 	public static final BlockBehaviour.Properties PROPERTIES_PACKED_SNOW = BlockBehaviour.Properties.of().mapColor(MapColor.SNOW).strength(0.6F).sound(SoundType.SNOW);
 	public static final BlockBehaviour.Properties PROPERTIES_IRON_PLATE = BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).strength(4.0F, 6.0F).sound(SoundType.NETHERITE_BLOCK);
-
 	public static final BlockBehaviour.Properties PROPERTIES_PALISADE = BlockBehaviour.Properties.of().strength(2.0F).instrument(NoteBlockInstrument.BASS);
 
 	public static final Supplier<Block> OAK_PALISADE = BLOCKS.register("oak_palisade", () -> palisade(MapColor.WOOD));
@@ -73,7 +72,7 @@ public class ModBlocks
 			() -> new TrapDoorBlock(ModBlockSets.GOLD.get(), BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_TRAPDOOR)));
 
 	public static final Supplier<Block> POLISHED_AMETHYST = BLOCKS.registerSimpleBlock("polished_amethyst", BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK));
-	public static final Supplier<Block> AMETHYST_TILES = BLOCKS.registerSimpleBlock("amethyst_tiles", BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK));
+	public static final Supplier<Block> CUT_AMETHYST = BLOCKS.registerSimpleBlock("cut_amethyst", BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK));
 	public static final Supplier<Block> CHISELED_AMETHYST = BLOCKS.registerSimpleBlock("chiseled_amethyst", BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK));
 
 

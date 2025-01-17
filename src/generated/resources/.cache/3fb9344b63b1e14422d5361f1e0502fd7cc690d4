@@ -1,6 +1,5 @@
-// 1.21.1	2025-01-16T13:47:26.6324369	Item Models: buildingbigger
+// 1.21.1	2025-01-17T12:24:40.8238309	Item Models: buildingbigger
 d6af8b3875876d49852b06984d80dc7a3b4f982b assets/buildingbigger/models/item/acacia_palisade.json
-5ca900e35053a861ebdde442a948690aca6d33ab assets/buildingbigger/models/item/amethyst_tiles.json
 823c69c006ebe5b16197f05e3911ed02072668dd assets/buildingbigger/models/item/birch_palisade.json
 c36fdfb741be65d84206d2a224ebd36b15b52d00 assets/buildingbigger/models/item/cherry_palisade.json
 6084a83daf329ffc94666ee9cabfd57c17b8a19b assets/buildingbigger/models/item/chiseled_amethyst.json
@@ -8,6 +7,7 @@ c36fdfb741be65d84206d2a224ebd36b15b52d00 assets/buildingbigger/models/item/cherr
 ea16bf7e68dd08680cdf2e1de37a433a0b8041fc assets/buildingbigger/models/item/clay_tiles.json
 3d91c3149544849a65a809d5d6ad6ba0bdf5e19a assets/buildingbigger/models/item/corrugated_iron_plate.json
 51383b7486373427ebd9120fa695ce5a0c8cef29 assets/buildingbigger/models/item/crimson_palisade.json
+db47474a55b6cc8e0480128554a5159a9ed699a5 assets/buildingbigger/models/item/cut_amethyst.json
 37c89b21eb13946b72f4ff6bad1157d478a84faf assets/buildingbigger/models/item/dark_oak_palisade.json
 046799e97221a51c8b6012a17c79a03a5d1db458 assets/buildingbigger/models/item/golden_bricks.json
 1827e7421f55e8015a934f6a88e20ab151951565 assets/buildingbigger/models/item/golden_door.json

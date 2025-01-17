@@ -67,7 +67,7 @@ public class BlockLootTables extends BlockLootSubProvider
 		dropSelf(ModBlocks.GOLDEN_TRAPDOOR.get());
 
 		dropSelf(ModBlocks.POLISHED_AMETHYST.get());
-		dropSelf(ModBlocks.AMETHYST_TILES.get());
+		dropSelf(ModBlocks.CUT_AMETHYST.get());
 		dropSelf(ModBlocks.CHISELED_AMETHYST.get());
 	}
 

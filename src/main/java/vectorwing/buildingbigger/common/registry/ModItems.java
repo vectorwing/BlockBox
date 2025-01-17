@@ -75,6 +75,6 @@ public class ModItems
 	public static final Supplier<BlockItem> GOLDEN_TRAPDOOR = registerSimpleBlockItem("golden_trapdoor", ModBlocks.GOLDEN_TRAPDOOR);
 
 	public static final Supplier<BlockItem> POLISHED_AMETHYST = registerSimpleBlockItem("polished_amethyst", ModBlocks.POLISHED_AMETHYST);
-	public static final Supplier<BlockItem> AMETHYST_TILES = registerSimpleBlockItem("amethyst_tiles", ModBlocks.AMETHYST_TILES);
+	public static final Supplier<BlockItem> CUT_AMETHYST = registerSimpleBlockItem("cut_amethyst", ModBlocks.CUT_AMETHYST);
 	public static final Supplier<BlockItem> CHISELED_AMETHYST = registerSimpleBlockItem("chiseled_amethyst", ModBlocks.CHISELED_AMETHYST);
 }

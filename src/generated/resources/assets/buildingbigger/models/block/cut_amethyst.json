@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "buildingbigger:block/amethyst_tiles"
+    "all": "buildingbigger:block/cut_amethyst"
   }
 }

@@ -40,7 +40,7 @@
   "block.buildingbigger.golden_door": "Golden Door",
   "block.buildingbigger.golden_trapdoor": "Golden Trapdoor",
   "block.buildingbigger.polished_amethyst": "Polished Amethyst",
-  "block.buildingbigger.amethyst_tiles": "Amethyst Tiles",
+  "block.buildingbigger.cut_amethyst": "Cut Amethyst",
   "block.buildingbigger.chiseled_amethyst": "Chiseled Amethyst",
 
   "item.buildingbigger.oak_palisade": "Oak Palisade",
@@ -84,7 +84,7 @@
   "item.buildingbigger.golden_door": "Golden Door",
   "item.buildingbigger.golden_trapdoor": "Golden Trapdoor",
   "item.buildingbigger.polished_amethyst": "Polished Amethyst",
-  "item.buildingbigger.amethyst_tiles": "Amethyst Tiles",
+  "item.buildingbigger.cut_amethyst": "Cut Amethyst",
   "item.buildingbigger.chiseled_amethyst": "Chiseled Amethyst",
 
   "itemGroup.buildingbigger": "Building Bigger",

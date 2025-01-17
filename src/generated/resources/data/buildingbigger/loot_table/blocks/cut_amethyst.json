@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "buildingbigger:amethyst_tiles"
+          "name": "buildingbigger:cut_amethyst"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "buildingbigger:blocks/amethyst_tiles"
+  "random_sequence": "buildingbigger:blocks/cut_amethyst"
 }

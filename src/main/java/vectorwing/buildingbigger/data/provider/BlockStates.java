@@ -1,7 +1,6 @@
 package vectorwing.buildingbigger.data.provider;
 
 import com.google.common.collect.ImmutableMap;
-import net.minecraft.Util;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -56,7 +55,7 @@ public class BlockStates extends BlockStateProvider
 		trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.GOLDEN_TRAPDOOR.get(), resourceBlock("golden_trapdoor"), false, RenderType.CUTOUT.name);
 
 		simpleBlock(ModBlocks.POLISHED_AMETHYST.get());
-		simpleBlock(ModBlocks.AMETHYST_TILES.get());
+		simpleBlock(ModBlocks.CUT_AMETHYST.get());
 		simpleBlock(ModBlocks.CHISELED_AMETHYST.get());
 
 		palisadeBlock((PalisadeBlock) ModBlocks.OAK_PALISADE.get());
@@ -126,11 +125,17 @@ public class BlockStates extends BlockStateProvider
 				});
 	}
 
-	protected static final Map<Direction, BooleanProperty> SPIKED_PALISADE_PROPS = PipeBlock.PROPERTY_BY_DIRECTION
-			.entrySet()
-			.stream()
-			.filter(p_52346_ -> p_52346_.getKey().getAxis().isHorizontal())
-			.collect(Util.toMap());
+	protected static final ImmutableMap<Direction, BooleanProperty> SPIKED_PALISADE_PROPS = ImmutableMap.<Direction, BooleanProperty>builder()
+			.put(Direction.EAST, CrossCollisionBlock.EAST)
+			.put(Direction.NORTH, CrossCollisionBlock.NORTH)
+			.put(Direction.SOUTH, CrossCollisionBlock.SOUTH)
+			.put(Direction.WEST, CrossCollisionBlock.WEST)
+			.build();
+//			PipeBlock.PROPERTY_BY_DIRECTION
+//			.entrySet()
+//			.stream()
+//			.filter(p_52346_ -> p_52346_.getKey().getAxis().isHorizontal())
+//			.collect(Util.toMap());
 
 	public void spikedPalisadeBlock(SpikedPalisadeBlock block, String textureName) {
 		String baseName = name(block);

@@ -82,7 +82,7 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.GOLDEN_DOOR.get(),
 				ModBlocks.GOLDEN_TRAPDOOR.get(),
 				ModBlocks.POLISHED_AMETHYST.get(),
-				ModBlocks.AMETHYST_TILES.get(),
+				ModBlocks.CUT_AMETHYST.get(),
 				ModBlocks.CHISELED_AMETHYST.get()
 		);
 		tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_AXE)
