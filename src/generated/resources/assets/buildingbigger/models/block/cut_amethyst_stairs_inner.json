@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "buildingbigger:block/cut_amethyst",
+    "side": "buildingbigger:block/cut_amethyst",
+    "top": "buildingbigger:block/cut_amethyst"
+  }
+}

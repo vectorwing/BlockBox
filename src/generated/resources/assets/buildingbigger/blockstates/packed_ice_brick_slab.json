@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "buildingbigger:block/packed_ice_brick_slab"
+    },
+    "type=double": {
+      "model": "buildingbigger:block/packed_ice_bricks"
+    },
+    "type=top": {
+      "model": "buildingbigger:block/packed_ice_brick_slab_top"
+    }
+  }
+}

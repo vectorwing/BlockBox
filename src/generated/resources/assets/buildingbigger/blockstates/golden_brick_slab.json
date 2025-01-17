@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "buildingbigger:block/golden_brick_slab"
+    },
+    "type=double": {
+      "model": "buildingbigger:block/golden_bricks"
+    },
+    "type=top": {
+      "model": "buildingbigger:block/golden_brick_slab_top"
+    }
+  }
+}

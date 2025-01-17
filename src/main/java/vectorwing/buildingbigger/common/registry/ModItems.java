@@ -57,15 +57,23 @@ public class ModItems
 	public static final Supplier<BlockItem> RED_SANDSTONE_BRICK_SLAB = registerSimpleBlockItem("red_sandstone_brick_slab", ModBlocks.RED_SANDSTONE_BRICK_SLAB);
 
 	public static final Supplier<BlockItem> CLAY_TILES = registerSimpleBlockItem("clay_tiles", ModBlocks.CLAY_TILES);
+	public static final Supplier<BlockItem> CLAY_TILE_STAIRS = registerSimpleBlockItem("clay_tile_stairs", ModBlocks.CLAY_TILE_STAIRS);
+	public static final Supplier<BlockItem> CLAY_TILE_SLAB = registerSimpleBlockItem("clay_tile_slab", ModBlocks.CLAY_TILE_SLAB);
 	public static final Supplier<BlockItem> JAGGED_CLAY_TILES = registerSimpleBlockItem("jagged_clay_tiles", ModBlocks.JAGGED_CLAY_TILES);
 
 	public static final Supplier<BlockItem> PACKED_SNOW = registerSimpleBlockItem("packed_snow", ModBlocks.PACKED_SNOW);
 	public static final Supplier<BlockItem> PACKED_SNOW_BRICKS = registerSimpleBlockItem("packed_snow_bricks", ModBlocks.PACKED_SNOW_BRICKS);
+	public static final Supplier<BlockItem> PACKED_SNOW_BRICK_STAIRS = registerSimpleBlockItem("packed_snow_brick_stairs", ModBlocks.PACKED_SNOW_BRICK_STAIRS);
+	public static final Supplier<BlockItem> PACKED_SNOW_BRICK_SLAB = registerSimpleBlockItem("packed_snow_brick_slab", ModBlocks.PACKED_SNOW_BRICK_SLAB);
 	public static final Supplier<BlockItem> POLISHED_PACKED_ICE = registerSimpleBlockItem("polished_packed_ice", ModBlocks.POLISHED_PACKED_ICE);
 	public static final Supplier<BlockItem> PACKED_ICE_BRICKS = registerSimpleBlockItem("packed_ice_bricks", ModBlocks.PACKED_ICE_BRICKS);
+	public static final Supplier<BlockItem> PACKED_ICE_BRICKS_STAIRS = registerSimpleBlockItem("packed_ice_brick_stairs", ModBlocks.PACKED_ICE_BRICKS_STAIRS);
+	public static final Supplier<BlockItem> PACKED_ICE_BRICKS_SLAB = registerSimpleBlockItem("packed_ice_brick_slab", ModBlocks.PACKED_ICE_BRICKS_SLAB);
 
 	public static final Supplier<BlockItem> IRON_PLATE = registerSimpleBlockItem("iron_plate", ModBlocks.IRON_PLATE);
 	public static final Supplier<BlockItem> IRON_TREAD_PLATE = registerSimpleBlockItem("iron_tread_plate", ModBlocks.IRON_TREAD_PLATE);
+	public static final Supplier<BlockItem> IRON_TREAD_PLATE_STAIRS = registerSimpleBlockItem("iron_tread_plate_stairs", ModBlocks.IRON_TREAD_PLATE_STAIRS);
+	public static final Supplier<BlockItem> IRON_TREAD_PLATE_SLAB = registerSimpleBlockItem("iron_tread_plate_slab", ModBlocks.IRON_TREAD_PLATE_SLAB);
 	public static final Supplier<BlockItem> CORRUGATED_IRON_PLATE = registerSimpleBlockItem("corrugated_iron_plate", ModBlocks.CORRUGATED_IRON_PLATE);
 	public static final Supplier<BlockItem> IRON_PLATE_PILLAR = registerSimpleBlockItem("iron_plate_pillar", ModBlocks.IRON_PLATE_PILLAR);
 	public static final Supplier<BlockItem> IRON_PLATE_DOOR = registerSimpleBlockItem("iron_plate_door", ModBlocks.IRON_PLATE_DOOR);
@@ -74,11 +82,17 @@ public class ModItems
 	public static final Supplier<BlockItem> CHISELED_GOLD = registerSimpleBlockItem("chiseled_gold", ModBlocks.CHISELED_GOLD);
 	public static final Supplier<BlockItem> GOLDEN_TILES = registerSimpleBlockItem("golden_tiles", ModBlocks.GOLDEN_TILES);
 	public static final Supplier<BlockItem> GOLDEN_BRICKS = registerSimpleBlockItem("golden_bricks", ModBlocks.GOLDEN_BRICKS);
+	public static final Supplier<BlockItem> GOLDEN_BRICK_STAIRS = registerSimpleBlockItem("golden_brick_stairs", ModBlocks.GOLDEN_BRICK_STAIRS);
+	public static final Supplier<BlockItem> GOLDEN_BRICK_SLAB = registerSimpleBlockItem("golden_brick_slab", ModBlocks.GOLDEN_BRICK_SLAB);
 	public static final Supplier<BlockItem> GOLDEN_PILLAR = registerSimpleBlockItem("golden_pillar", ModBlocks.GOLDEN_PILLAR);
 	public static final Supplier<BlockItem> GOLDEN_DOOR = registerSimpleBlockItem("golden_door", ModBlocks.GOLDEN_DOOR);
 	public static final Supplier<BlockItem> GOLDEN_TRAPDOOR = registerSimpleBlockItem("golden_trapdoor", ModBlocks.GOLDEN_TRAPDOOR);
 
 	public static final Supplier<BlockItem> POLISHED_AMETHYST = registerSimpleBlockItem("polished_amethyst", ModBlocks.POLISHED_AMETHYST);
 	public static final Supplier<BlockItem> CUT_AMETHYST = registerSimpleBlockItem("cut_amethyst", ModBlocks.CUT_AMETHYST);
+	public static final Supplier<BlockItem> CUT_AMETHYST_STAIRS = registerSimpleBlockItem("cut_amethyst_stairs", ModBlocks.CUT_AMETHYST_STAIRS);
+	public static final Supplier<BlockItem> CUT_AMETHYST_SLAB = registerSimpleBlockItem("cut_amethyst_slab", ModBlocks.CUT_AMETHYST_SLAB);
 	public static final Supplier<BlockItem> CHISELED_AMETHYST = registerSimpleBlockItem("chiseled_amethyst", ModBlocks.CHISELED_AMETHYST);
+	public static final Supplier<BlockItem> CHISELED_AMETHYST_STAIRS = registerSimpleBlockItem("chiseled_amethyst_stairs", ModBlocks.CHISELED_AMETHYST_STAIRS);
+	public static final Supplier<BlockItem> CHISELED_AMETHYST_SLAB = registerSimpleBlockItem("chiseled_amethyst_slab", ModBlocks.CHISELED_AMETHYST_SLAB);
 }

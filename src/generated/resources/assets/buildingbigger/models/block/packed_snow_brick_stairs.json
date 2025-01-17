@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "buildingbigger:block/packed_snow_bricks",
+    "side": "buildingbigger:block/packed_snow_bricks",
+    "top": "buildingbigger:block/packed_snow_bricks"
+  }
+}

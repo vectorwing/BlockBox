@@ -41,23 +41,19 @@ public class BlockLootTables extends BlockLootSubProvider
 		dropSelf(ModBlocks.WARPED_PALISADE.get());
 		dropSelf(ModBlocks.SPIKED_WARPED_PALISADE.get());
 
-		dropSelf(ModBlocks.SANDSTONE_BRICKS.get());
-		dropSelf(ModBlocks.SANDSTONE_BRICK_STAIRS.get());
-		add(ModBlocks.SANDSTONE_BRICK_SLAB.get(), this::createSlabItemTable);
-		dropSelf(ModBlocks.RED_SANDSTONE_BRICKS.get());
-		dropSelf(ModBlocks.RED_SANDSTONE_BRICK_STAIRS.get());
-		add(ModBlocks.RED_SANDSTONE_BRICK_SLAB.get(), this::createSlabItemTable);
+		addBlockStairSlab(ModBlocks.SANDSTONE_BRICKS.get(), ModBlocks.SANDSTONE_BRICK_STAIRS.get(), ModBlocks.SANDSTONE_BRICK_SLAB.get());
+		addBlockStairSlab(ModBlocks.RED_SANDSTONE_BRICKS.get(), ModBlocks.RED_SANDSTONE_BRICK_STAIRS.get(), ModBlocks.RED_SANDSTONE_BRICK_SLAB.get());
 
-		dropSelf(ModBlocks.CLAY_TILES.get());
+		addBlockStairSlab(ModBlocks.CLAY_TILES.get(), ModBlocks.CLAY_TILE_STAIRS.get(), ModBlocks.CLAY_TILE_SLAB.get());
 		dropSelf(ModBlocks.JAGGED_CLAY_TILES.get());
 
 		dropSelf(ModBlocks.PACKED_SNOW.get());
-		dropSelf(ModBlocks.PACKED_SNOW_BRICKS.get());
+		addBlockStairSlab(ModBlocks.PACKED_SNOW_BRICKS.get(), ModBlocks.PACKED_SNOW_BRICK_STAIRS.get(), ModBlocks.PACKED_SNOW_BRICK_SLAB.get());
 		dropSelf(ModBlocks.POLISHED_PACKED_ICE.get());
-		dropSelf(ModBlocks.PACKED_ICE_BRICKS.get());
+		addBlockStairSlab(ModBlocks.PACKED_ICE_BRICKS.get(), ModBlocks.PACKED_ICE_BRICKS_STAIRS.get(), ModBlocks.PACKED_ICE_BRICKS_SLAB.get());
 
 		dropSelf(ModBlocks.IRON_PLATE.get());
-		dropSelf(ModBlocks.IRON_TREAD_PLATE.get());
+		addBlockStairSlab(ModBlocks.IRON_TREAD_PLATE.get(), ModBlocks.IRON_TREAD_PLATE_STAIRS.get(), ModBlocks.IRON_TREAD_PLATE_SLAB.get());
 		dropSelf(ModBlocks.CORRUGATED_IRON_PLATE.get());
 		dropSelf(ModBlocks.IRON_PLATE_PILLAR.get());
 		add(ModBlocks.IRON_PLATE_DOOR.get(), this::createDoorTable);
@@ -65,14 +61,20 @@ public class BlockLootTables extends BlockLootSubProvider
 
 		dropSelf(ModBlocks.CHISELED_GOLD.get());
 		dropSelf(ModBlocks.GOLDEN_TILES.get());
-		dropSelf(ModBlocks.GOLDEN_BRICKS.get());
+		addBlockStairSlab(ModBlocks.GOLDEN_BRICKS.get(), ModBlocks.GOLDEN_BRICK_STAIRS.get(), ModBlocks.GOLDEN_BRICK_SLAB.get());
 		dropSelf(ModBlocks.GOLDEN_PILLAR.get());
 		add(ModBlocks.GOLDEN_DOOR.get(), this::createDoorTable);
 		dropSelf(ModBlocks.GOLDEN_TRAPDOOR.get());
 
 		dropSelf(ModBlocks.POLISHED_AMETHYST.get());
-		dropSelf(ModBlocks.CUT_AMETHYST.get());
-		dropSelf(ModBlocks.CHISELED_AMETHYST.get());
+		addBlockStairSlab(ModBlocks.CUT_AMETHYST.get(), ModBlocks.CUT_AMETHYST_STAIRS.get(), ModBlocks.CUT_AMETHYST_SLAB.get());
+		addBlockStairSlab(ModBlocks.CHISELED_AMETHYST.get(), ModBlocks.CHISELED_AMETHYST_STAIRS.get(), ModBlocks.CHISELED_AMETHYST_SLAB.get());
+	}
+
+	protected void addBlockStairSlab(Block block, Block stair, Block slab) {
+		dropSelf(block);
+		dropSelf(stair);
+		add(slab, this::createSlabItemTable);
 	}
 
 	@Override

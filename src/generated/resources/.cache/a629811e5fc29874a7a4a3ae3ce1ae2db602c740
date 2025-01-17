@@ -1,10 +1,10 @@
-// 1.21.1	2025-01-17T13:36:33.8213938	Tags for minecraft:block mod id buildingbigger
+// 1.21.1	2025-01-17T15:15:08.1758611	Tags for minecraft:block mod id buildingbigger
 86881e501bbbd1c9fea8c3b144c891b5fd399ae4 data/buildingbigger/tags/block/palisades.json
 0007636dd3dbdf166831b44cd067dcb96a20b1bc data/buildingbigger/tags/block/spiked_palisades.json
 1098fd9b78bb5635f2be70976e9ce8fcd2edd6dc data/minecraft/tags/block/doors.json
 62d4a47329785ec64999410a1a41f034f8c2d6be data/minecraft/tags/block/mineable/axe.json
-a2d8ba882c63c3b37ed2fc046cd9c169fee8af2b data/minecraft/tags/block/mineable/pickaxe.json
+a48af4ec37d83d3306998413aeff9b8ca784b824 data/minecraft/tags/block/mineable/pickaxe.json
 b5e503d8ea37daa78f44c0f65cff785a364afe5f data/minecraft/tags/block/mineable/shovel.json
-a712315024d28958b1e5994cfd48ffad48ac8f97 data/minecraft/tags/block/slabs.json
-dbc519944cc4f6ef353acaaaaec4262a7feefd92 data/minecraft/tags/block/stairs.json
+16d687defd9eb49378896bd3e1a5e8a83e36c6f1 data/minecraft/tags/block/slabs.json
+c62434dac7381d8b662878c9af7db632b62289ea data/minecraft/tags/block/stairs.json
 e87e455adc84fbe453504374956bab21308a8a0f data/minecraft/tags/block/trapdoors.json

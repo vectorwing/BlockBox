@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "buildingbigger:block/clay_tile_slab"
+    },
+    "type=double": {
+      "model": "buildingbigger:block/clay_tiles"
+    },
+    "type=top": {
+      "model": "buildingbigger:block/clay_tile_slab_top"
+    }
+  }
+}

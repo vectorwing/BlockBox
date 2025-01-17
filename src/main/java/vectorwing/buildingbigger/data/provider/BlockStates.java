@@ -33,15 +33,15 @@ public class BlockStates extends BlockStateProvider
 		blockWithStairAndSlab(ModBlocks.SANDSTONE_BRICKS.get(), ModBlocks.SANDSTONE_BRICK_STAIRS.get(), ModBlocks.SANDSTONE_BRICK_SLAB.get());
 		blockWithStairAndSlab(ModBlocks.RED_SANDSTONE_BRICKS.get(), ModBlocks.RED_SANDSTONE_BRICK_STAIRS.get(), ModBlocks.RED_SANDSTONE_BRICK_SLAB.get());
 
-		simpleBlock(ModBlocks.CLAY_TILES.get());
+		blockWithStairAndSlab(ModBlocks.CLAY_TILES.get(), ModBlocks.CLAY_TILE_STAIRS.get(), ModBlocks.CLAY_TILE_SLAB.get());
 
 		simpleBlock(ModBlocks.POLISHED_PACKED_ICE.get());
-		simpleBlock(ModBlocks.PACKED_ICE_BRICKS.get());
+		blockWithStairAndSlab(ModBlocks.PACKED_SNOW_BRICKS.get(), ModBlocks.PACKED_SNOW_BRICK_STAIRS.get(), ModBlocks.PACKED_SNOW_BRICK_SLAB.get());
 		simpleBlock(ModBlocks.PACKED_SNOW.get());
-		simpleBlock(ModBlocks.PACKED_SNOW_BRICKS.get());
+		blockWithStairAndSlab(ModBlocks.PACKED_ICE_BRICKS.get(), ModBlocks.PACKED_ICE_BRICKS_STAIRS.get(), ModBlocks.PACKED_ICE_BRICKS_SLAB.get());
 
 		simpleBlock(ModBlocks.IRON_PLATE.get());
-		simpleBlock(ModBlocks.IRON_TREAD_PLATE.get());
+		blockWithStairAndSlab(ModBlocks.IRON_TREAD_PLATE.get(), ModBlocks.IRON_TREAD_PLATE_STAIRS.get(), ModBlocks.IRON_TREAD_PLATE_SLAB.get());
 		simpleBlock(ModBlocks.CORRUGATED_IRON_PLATE.get());
 		axisBlock((RotatedPillarBlock) ModBlocks.IRON_PLATE_PILLAR.get());
 		doorBlockWithRenderType((DoorBlock) ModBlocks.IRON_PLATE_DOOR.get(), resourceBlock("iron_plate_door_bottom"), resourceBlock("iron_plate_door_top"), RenderType.CUTOUT.name);
@@ -49,14 +49,14 @@ public class BlockStates extends BlockStateProvider
 
 		simpleBlock(ModBlocks.CHISELED_GOLD.get());
 		simpleBlock(ModBlocks.GOLDEN_TILES.get());
-		simpleBlock(ModBlocks.GOLDEN_BRICKS.get());
+		blockWithStairAndSlab(ModBlocks.GOLDEN_BRICKS.get(), ModBlocks.GOLDEN_BRICK_STAIRS.get(), ModBlocks.GOLDEN_BRICK_SLAB.get());
 		axisBlock((RotatedPillarBlock) ModBlocks.GOLDEN_PILLAR.get());
 		doorBlockWithRenderType((DoorBlock) ModBlocks.GOLDEN_DOOR.get(), resourceBlock("golden_door_bottom"), resourceBlock("golden_door_top"), RenderType.CUTOUT.name);
 		trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.GOLDEN_TRAPDOOR.get(), resourceBlock("golden_trapdoor"), false, RenderType.CUTOUT.name);
 
 		simpleBlock(ModBlocks.POLISHED_AMETHYST.get());
-		simpleBlock(ModBlocks.CUT_AMETHYST.get());
-		simpleBlock(ModBlocks.CHISELED_AMETHYST.get());
+		blockWithStairAndSlab(ModBlocks.CUT_AMETHYST.get(), ModBlocks.CUT_AMETHYST_STAIRS.get(), ModBlocks.CUT_AMETHYST_SLAB.get());
+		blockWithStairAndSlab(ModBlocks.CHISELED_AMETHYST.get(), ModBlocks.CHISELED_AMETHYST_STAIRS.get(), ModBlocks.CHISELED_AMETHYST_SLAB.get());
 
 		palisadeBlock((PalisadeBlock) ModBlocks.OAK_PALISADE.get());
 		spikedPalisadeBlock((SpikedPalisadeBlock) ModBlocks.SPIKED_OAK_PALISADE.get(), name(ModBlocks.OAK_PALISADE.get()));

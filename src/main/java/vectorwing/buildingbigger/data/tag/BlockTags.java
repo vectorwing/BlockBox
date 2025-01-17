@@ -28,11 +28,21 @@ public class BlockTags extends BlockTagsProvider
 	private void registerMinecraftTags() {
 		tag(net.minecraft.tags.BlockTags.STAIRS).add(
 				ModBlocks.SANDSTONE_BRICK_STAIRS.get(),
-				ModBlocks.RED_SANDSTONE_BRICK_STAIRS.get()
+				ModBlocks.RED_SANDSTONE_BRICK_STAIRS.get(),
+				ModBlocks.CLAY_TILE_STAIRS.get(),
+				ModBlocks.IRON_TREAD_PLATE_STAIRS.get(),
+				ModBlocks.GOLDEN_BRICK_STAIRS.get(),
+				ModBlocks.CUT_AMETHYST_STAIRS.get(),
+				ModBlocks.CHISELED_AMETHYST_STAIRS.get()
 		);
 		tag(net.minecraft.tags.BlockTags.SLABS).add(
 				ModBlocks.SANDSTONE_BRICK_SLAB.get(),
-				ModBlocks.RED_SANDSTONE_BRICK_SLAB.get()
+				ModBlocks.RED_SANDSTONE_BRICK_SLAB.get(),
+				ModBlocks.CLAY_TILE_SLAB.get(),
+				ModBlocks.IRON_TREAD_PLATE_SLAB.get(),
+				ModBlocks.GOLDEN_BRICK_SLAB.get(),
+				ModBlocks.CUT_AMETHYST_SLAB.get(),
+				ModBlocks.CHISELED_AMETHYST_SLAB.get()
 		);
 		tag(net.minecraft.tags.BlockTags.DOORS).add(
 				ModBlocks.IRON_PLATE_DOOR.get(),
@@ -80,11 +90,15 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.RED_SANDSTONE_BRICK_STAIRS.get(),
 				ModBlocks.RED_SANDSTONE_BRICK_SLAB.get(),
 				ModBlocks.CLAY_TILES.get(),
+				ModBlocks.CLAY_TILE_STAIRS.get(),
+				ModBlocks.CLAY_TILE_SLAB.get(),
 				ModBlocks.JAGGED_CLAY_TILES.get(),
 				ModBlocks.POLISHED_PACKED_ICE.get(),
 				ModBlocks.PACKED_ICE_BRICKS.get(),
 				ModBlocks.IRON_PLATE.get(),
 				ModBlocks.IRON_TREAD_PLATE.get(),
+				ModBlocks.IRON_TREAD_PLATE_STAIRS.get(),
+				ModBlocks.IRON_TREAD_PLATE_SLAB.get(),
 				ModBlocks.CORRUGATED_IRON_PLATE.get(),
 				ModBlocks.IRON_PLATE_PILLAR.get(),
 				ModBlocks.IRON_PLATE_DOOR.get(),
@@ -92,11 +106,17 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.CHISELED_GOLD.get(),
 				ModBlocks.GOLDEN_TILES.get(),
 				ModBlocks.GOLDEN_BRICKS.get(),
+				ModBlocks.GOLDEN_BRICK_STAIRS.get(),
+				ModBlocks.GOLDEN_BRICK_SLAB.get(),
 				ModBlocks.GOLDEN_PILLAR.get(),
 				ModBlocks.GOLDEN_DOOR.get(),
 				ModBlocks.GOLDEN_TRAPDOOR.get(),
 				ModBlocks.POLISHED_AMETHYST.get(),
 				ModBlocks.CUT_AMETHYST.get(),
+				ModBlocks.CUT_AMETHYST_STAIRS.get(),
+				ModBlocks.CUT_AMETHYST_SLAB.get(),
+				ModBlocks.CHISELED_AMETHYST_STAIRS.get(),
+				ModBlocks.CHISELED_AMETHYST_SLAB.get(),
 				ModBlocks.CHISELED_AMETHYST.get()
 		);
 		tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_AXE)

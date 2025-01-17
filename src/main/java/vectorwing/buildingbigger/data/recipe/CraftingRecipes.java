@@ -49,6 +49,7 @@ public class CraftingRecipes
 				.define('i', ModBlocks.IRON_PLATE.get())
 				.unlockedBy("has_iron_plate", InventoryChangeTrigger.TriggerInstance.hasItems(ModBlocks.IRON_PLATE.get()))
 				.save(output);
+		stairAndSlab(output, ModBlocks.IRON_TREAD_PLATE_STAIRS.get(), ModBlocks.IRON_TREAD_PLATE_SLAB.get(), ModBlocks.IRON_TREAD_PLATE.get());
 		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.CORRUGATED_IRON_PLATE.get(), 4)
 				.pattern("ii")
 				.pattern("ii")
@@ -95,6 +96,7 @@ public class CraftingRecipes
 				.define('g', ModBlocks.GOLDEN_TILES.get())
 				.unlockedBy("has_gold_ingot", InventoryChangeTrigger.TriggerInstance.hasItems(Items.GOLD_INGOT))
 				.save(output);
+		stairAndSlab(output, ModBlocks.GOLDEN_BRICK_STAIRS.get(), ModBlocks.GOLDEN_BRICK_SLAB.get(), ModBlocks.GOLDEN_BRICKS.get());
 		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.GOLDEN_PILLAR.get(), 2)
 				.pattern("g")
 				.pattern("g")
@@ -137,6 +139,7 @@ public class CraftingRecipes
 				.define('s', Blocks.TERRACOTTA)
 				.unlockedBy("has_terracotta", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.TERRACOTTA))
 				.save(output);
+		stairAndSlab(output, ModBlocks.CLAY_TILE_STAIRS.get(), ModBlocks.CLAY_TILE_SLAB.get(), ModBlocks.CLAY_TILES.get());
 		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.PACKED_SNOW.get(), 4)
 				.pattern("ss")
 				.pattern("ss")
@@ -149,6 +152,7 @@ public class CraftingRecipes
 				.define('p', ModBlocks.PACKED_SNOW.get())
 				.unlockedBy("has_snow", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.SNOW_BLOCK))
 				.save(output);
+		stairAndSlab(output, ModBlocks.PACKED_SNOW_BRICK_STAIRS.get(), ModBlocks.PACKED_SNOW_BRICK_SLAB.get(), ModBlocks.PACKED_SNOW_BRICKS.get());
 		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.POLISHED_PACKED_ICE.get(), 4)
 				.pattern("ss")
 				.pattern("ss")
@@ -161,6 +165,7 @@ public class CraftingRecipes
 				.define('s', ModBlocks.POLISHED_PACKED_ICE.get())
 				.unlockedBy("has_packed_ice", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.PACKED_ICE))
 				.save(output);
+		stairAndSlab(output, ModBlocks.PACKED_ICE_BRICKS_STAIRS.get(), ModBlocks.PACKED_ICE_BRICKS_SLAB.get(), ModBlocks.PACKED_ICE_BRICKS.get());
 	}
 
 	public static void stairAndSlab(RecipeOutput output, ItemLike stair, ItemLike slab, ItemLike block) {
