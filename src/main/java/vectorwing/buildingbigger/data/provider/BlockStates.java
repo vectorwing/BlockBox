@@ -30,8 +30,8 @@ public class BlockStates extends BlockStateProvider
 
 	@Override
 	protected void registerStatesAndModels() {
-		simpleBlock(ModBlocks.SANDSTONE_BRICKS.get());
-		simpleBlock(ModBlocks.RED_SANDSTONE_BRICKS.get());
+		blockWithStairAndSlab(ModBlocks.SANDSTONE_BRICKS.get(), ModBlocks.SANDSTONE_BRICK_STAIRS.get(), ModBlocks.SANDSTONE_BRICK_SLAB.get());
+		blockWithStairAndSlab(ModBlocks.RED_SANDSTONE_BRICKS.get(), ModBlocks.RED_SANDSTONE_BRICK_STAIRS.get(), ModBlocks.RED_SANDSTONE_BRICK_SLAB.get());
 
 		simpleBlock(ModBlocks.CLAY_TILES.get());
 
@@ -97,6 +97,16 @@ public class BlockStates extends BlockStateProvider
 		}, TrapDoorBlock.POWERED, TrapDoorBlock.WATERLOGGED);
 	}
 
+	// HELPER METHODS
+
+	public void blockWithStairAndSlab(Block block, Block stair, Block slab) {
+		simpleBlock(block);
+
+		ResourceLocation texture = resourceBlock(name(block));
+		stairsBlock((StairBlock) stair, texture);
+		slabBlock((SlabBlock) slab, texture, texture);
+	}
+
 	public static final ImmutableMap<Direction, Property<PalisadeConnection>> PALISADE_PROPS = ImmutableMap.<Direction, Property<PalisadeConnection>>builder()
 			.put(Direction.EAST, PalisadeBlock.TYPE_EAST)
 			.put(Direction.NORTH, PalisadeBlock.TYPE_NORTH)
@@ -131,11 +141,6 @@ public class BlockStates extends BlockStateProvider
 			.put(Direction.SOUTH, CrossCollisionBlock.SOUTH)
 			.put(Direction.WEST, CrossCollisionBlock.WEST)
 			.build();
-//			PipeBlock.PROPERTY_BY_DIRECTION
-//			.entrySet()
-//			.stream()
-//			.filter(p_52346_ -> p_52346_.getKey().getAxis().isHorizontal())
-//			.collect(Util.toMap());
 
 	public void spikedPalisadeBlock(SpikedPalisadeBlock block, String textureName) {
 		String baseName = name(block);

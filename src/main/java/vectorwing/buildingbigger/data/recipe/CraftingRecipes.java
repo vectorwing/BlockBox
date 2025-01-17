@@ -12,12 +12,11 @@ import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
 import vectorwing.buildingbigger.BuildingBigger;
 import vectorwing.buildingbigger.common.registry.ModBlocks;
-import vectorwing.buildingbigger.common.registry.ModItems;
 
 public class CraftingRecipes
 {
 	public static void register(RecipeOutput output) {
-		recipesBlocks(output);
+		craftBasicBlocks(output);
 		craftPalisades(output);
 		craftIronPlateBlocks(output);
 		craftGoldBlocks(output);
@@ -117,19 +116,21 @@ public class CraftingRecipes
 				.save(output);
 	}
 
-	private static void recipesBlocks(RecipeOutput output) {
+	private static void craftBasicBlocks(RecipeOutput output) {
 		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.SANDSTONE_BRICKS.get(), 4)
 				.pattern("ss")
 				.pattern("ss")
 				.define('s', Blocks.CUT_SANDSTONE)
 				.unlockedBy("has_sandstone", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.SANDSTONE))
 				.save(output);
+		stairAndSlab(output, ModBlocks.SANDSTONE_BRICK_STAIRS.get(), ModBlocks.SANDSTONE_BRICK_SLAB.get(), ModBlocks.SANDSTONE_BRICKS.get());
 		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.RED_SANDSTONE_BRICKS.get(), 4)
 				.pattern("ss")
 				.pattern("ss")
 				.define('s', Blocks.CUT_RED_SANDSTONE)
 				.unlockedBy("has_red_sandstone", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.RED_SANDSTONE))
 				.save(output);
+		stairAndSlab(output, ModBlocks.RED_SANDSTONE_BRICK_STAIRS.get(), ModBlocks.RED_SANDSTONE_BRICK_SLAB.get(), ModBlocks.RED_SANDSTONE_BRICKS.get());
 		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.CLAY_TILES.get(), 4)
 				.pattern("ss")
 				.pattern("ss")
@@ -159,6 +160,21 @@ public class CraftingRecipes
 				.pattern("ss")
 				.define('s', ModBlocks.POLISHED_PACKED_ICE.get())
 				.unlockedBy("has_packed_ice", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.PACKED_ICE))
+				.save(output);
+	}
+
+	public static void stairAndSlab(RecipeOutput output, ItemLike stair, ItemLike slab, ItemLike block) {
+		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, stair, 4)
+				.pattern("#  ")
+				.pattern("## ")
+				.pattern("###")
+				.define('#', block)
+				.unlockedBy("has_matching_block", InventoryChangeTrigger.TriggerInstance.hasItems(block))
+				.save(output);
+		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, slab, 6)
+				.pattern("###")
+				.define('#', block)
+				.unlockedBy("has_matching_block", InventoryChangeTrigger.TriggerInstance.hasItems(block))
 				.save(output);
 	}
 

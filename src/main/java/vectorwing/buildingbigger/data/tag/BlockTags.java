@@ -26,12 +26,22 @@ public class BlockTags extends BlockTagsProvider
 	}
 
 	private void registerMinecraftTags() {
-		tag(net.minecraft.tags.BlockTags.DOORS)
-				.add(ModBlocks.IRON_PLATE_DOOR.get())
-				.add(ModBlocks.GOLDEN_DOOR.get());
-		tag(net.minecraft.tags.BlockTags.TRAPDOORS)
-				.add(ModBlocks.IRON_PLATE_TRAPDOOR.get())
-				.add(ModBlocks.GOLDEN_TRAPDOOR.get());
+		tag(net.minecraft.tags.BlockTags.STAIRS).add(
+				ModBlocks.SANDSTONE_BRICK_STAIRS.get(),
+				ModBlocks.RED_SANDSTONE_BRICK_STAIRS.get()
+		);
+		tag(net.minecraft.tags.BlockTags.SLABS).add(
+				ModBlocks.SANDSTONE_BRICK_SLAB.get(),
+				ModBlocks.RED_SANDSTONE_BRICK_SLAB.get()
+		);
+		tag(net.minecraft.tags.BlockTags.DOORS).add(
+				ModBlocks.IRON_PLATE_DOOR.get(),
+				ModBlocks.GOLDEN_DOOR.get()
+		);
+		tag(net.minecraft.tags.BlockTags.TRAPDOORS).add(
+				ModBlocks.IRON_PLATE_TRAPDOOR.get(),
+				ModBlocks.GOLDEN_TRAPDOOR.get()
+		);
 	}
 
 	private void registerModTags() {
@@ -64,7 +74,11 @@ public class BlockTags extends BlockTagsProvider
 	protected void registerBlockMineables() {
 		tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(
 				ModBlocks.SANDSTONE_BRICKS.get(),
+				ModBlocks.SANDSTONE_BRICK_STAIRS.get(),
+				ModBlocks.SANDSTONE_BRICK_SLAB.get(),
 				ModBlocks.RED_SANDSTONE_BRICKS.get(),
+				ModBlocks.RED_SANDSTONE_BRICK_STAIRS.get(),
+				ModBlocks.RED_SANDSTONE_BRICK_SLAB.get(),
 				ModBlocks.CLAY_TILES.get(),
 				ModBlocks.JAGGED_CLAY_TILES.get(),
 				ModBlocks.POLISHED_PACKED_ICE.get(),

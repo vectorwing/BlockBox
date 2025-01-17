@@ -42,7 +42,11 @@ public class BlockLootTables extends BlockLootSubProvider
 		dropSelf(ModBlocks.SPIKED_WARPED_PALISADE.get());
 
 		dropSelf(ModBlocks.SANDSTONE_BRICKS.get());
+		dropSelf(ModBlocks.SANDSTONE_BRICK_STAIRS.get());
+		add(ModBlocks.SANDSTONE_BRICK_SLAB.get(), this::createSlabItemTable);
 		dropSelf(ModBlocks.RED_SANDSTONE_BRICKS.get());
+		dropSelf(ModBlocks.RED_SANDSTONE_BRICK_STAIRS.get());
+		add(ModBlocks.RED_SANDSTONE_BRICK_SLAB.get(), this::createSlabItemTable);
 
 		dropSelf(ModBlocks.CLAY_TILES.get());
 		dropSelf(ModBlocks.JAGGED_CLAY_TILES.get());
@@ -56,14 +60,14 @@ public class BlockLootTables extends BlockLootSubProvider
 		dropSelf(ModBlocks.IRON_TREAD_PLATE.get());
 		dropSelf(ModBlocks.CORRUGATED_IRON_PLATE.get());
 		dropSelf(ModBlocks.IRON_PLATE_PILLAR.get());
-		createDoorTable(ModBlocks.IRON_PLATE_DOOR.get());
+		add(ModBlocks.IRON_PLATE_DOOR.get(), this::createDoorTable);
 		dropSelf(ModBlocks.IRON_PLATE_TRAPDOOR.get());
 
 		dropSelf(ModBlocks.CHISELED_GOLD.get());
 		dropSelf(ModBlocks.GOLDEN_TILES.get());
 		dropSelf(ModBlocks.GOLDEN_BRICKS.get());
 		dropSelf(ModBlocks.GOLDEN_PILLAR.get());
-		createDoorTable(ModBlocks.GOLDEN_DOOR.get());
+		add(ModBlocks.GOLDEN_DOOR.get(), this::createDoorTable);
 		dropSelf(ModBlocks.GOLDEN_TRAPDOOR.get());
 
 		dropSelf(ModBlocks.POLISHED_AMETHYST.get());

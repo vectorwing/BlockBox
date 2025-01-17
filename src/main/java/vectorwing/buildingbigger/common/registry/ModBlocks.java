@@ -41,7 +41,11 @@ public class ModBlocks
 	public static final Supplier<Block> SPIKED_WARPED_PALISADE = BLOCKS.register("spiked_warped_palisade", () -> netherSpikedPalisade(MapColor.WARPED_STEM));
 
 	public static final Supplier<Block> SANDSTONE_BRICKS = BLOCKS.registerSimpleBlock("sandstone_bricks", BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE));
+	public static final Supplier<Block> SANDSTONE_BRICK_STAIRS = BLOCKS.register("sandstone_brick_stairs", () -> stair(ModBlocks.SANDSTONE_BRICKS.get(), BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE)));
+	public static final Supplier<Block> SANDSTONE_BRICK_SLAB = BLOCKS.register("sandstone_brick_slab", () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(ModBlocks.SANDSTONE_BRICKS.get())));
 	public static final Supplier<Block> RED_SANDSTONE_BRICKS = BLOCKS.registerSimpleBlock("red_sandstone_bricks", BlockBehaviour.Properties.ofFullCopy(Blocks.RED_SANDSTONE));
+	public static final Supplier<Block> RED_SANDSTONE_BRICK_STAIRS = BLOCKS.register("red_sandstone_brick_stairs", () -> stair(ModBlocks.RED_SANDSTONE_BRICKS.get(), BlockBehaviour.Properties.ofFullCopy(Blocks.RED_SANDSTONE)));
+	public static final Supplier<Block> RED_SANDSTONE_BRICK_SLAB = BLOCKS.register("red_sandstone_brick_slab", () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(ModBlocks.RED_SANDSTONE_BRICKS.get())));
 
 	public static final Supplier<Block> CLAY_TILES = BLOCKS.registerSimpleBlock("clay_tiles", BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS));
 	public static final Supplier<Block> JAGGED_CLAY_TILES = BLOCKS.registerSimpleBlock("jagged_clay_tiles", BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS));
@@ -75,6 +79,9 @@ public class ModBlocks
 	public static final Supplier<Block> CUT_AMETHYST = BLOCKS.registerSimpleBlock("cut_amethyst", BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK));
 	public static final Supplier<Block> CHISELED_AMETHYST = BLOCKS.registerSimpleBlock("chiseled_amethyst", BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK));
 
+	private static Block stair(Block baseBlock, BlockBehaviour.Properties properties) {
+		return new StairBlock(baseBlock.defaultBlockState(), properties);
+	}
 
 	private static Block palisade(MapColor mapColor) {
 		return palisade(mapColor, SoundType.WOOD);

@@ -50,7 +50,11 @@ public class ModItems
 	public static final Supplier<BlockItem> SPIKED_WARPED_PALISADE = registerSimpleBlockItem("spiked_warped_palisade", ModBlocks.SPIKED_WARPED_PALISADE);
 
 	public static final Supplier<BlockItem> SANDSTONE_BRICKS = registerSimpleBlockItem("sandstone_bricks", ModBlocks.SANDSTONE_BRICKS);
+	public static final Supplier<BlockItem> SANDSTONE_BRICK_STAIRS = registerSimpleBlockItem("sandstone_brick_stairs", ModBlocks.SANDSTONE_BRICK_STAIRS);
+	public static final Supplier<BlockItem> SANDSTONE_BRICK_SLAB = registerSimpleBlockItem("sandstone_brick_slab", ModBlocks.SANDSTONE_BRICK_SLAB);
 	public static final Supplier<BlockItem> RED_SANDSTONE_BRICKS = registerSimpleBlockItem("red_sandstone_bricks", ModBlocks.RED_SANDSTONE_BRICKS);
+	public static final Supplier<BlockItem> RED_SANDSTONE_BRICK_STAIRS = registerSimpleBlockItem("red_sandstone_brick_stairs", ModBlocks.RED_SANDSTONE_BRICK_STAIRS);
+	public static final Supplier<BlockItem> RED_SANDSTONE_BRICK_SLAB = registerSimpleBlockItem("red_sandstone_brick_slab", ModBlocks.RED_SANDSTONE_BRICK_SLAB);
 
 	public static final Supplier<BlockItem> CLAY_TILES = registerSimpleBlockItem("clay_tiles", ModBlocks.CLAY_TILES);
 	public static final Supplier<BlockItem> JAGGED_CLAY_TILES = registerSimpleBlockItem("jagged_clay_tiles", ModBlocks.JAGGED_CLAY_TILES);
