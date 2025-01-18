@@ -10,6 +10,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
+import net.neoforged.neoforge.common.Tags;
 import vectorwing.buildingbigger.BuildingBigger;
 import vectorwing.buildingbigger.common.registry.ModBlocks;
 
@@ -20,6 +21,7 @@ public class CraftingRecipes
 		craftPalisades(output);
 		craftIronPlateBlocks(output);
 		craftGoldBlocks(output);
+		craftCopperBlocks(output);
 	}
 
 	private static void craftPalisades(RecipeOutput output) {
@@ -115,6 +117,16 @@ public class CraftingRecipes
 				.pattern("ggg")
 				.define('g', Items.GOLD_INGOT)
 				.unlockedBy("has_gold_ingot", InventoryChangeTrigger.TriggerInstance.hasItems(Items.GOLD_INGOT))
+				.save(output);
+	}
+
+	private static void craftCopperBlocks(RecipeOutput output) {
+		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.COPPER_BARS.get(), 6)
+				.pattern("# #")
+				.pattern(" # ")
+				.pattern("# #")
+				.define('#', Tags.Items.INGOTS_COPPER)
+				.unlockedBy("has_copper", InventoryChangeTrigger.TriggerInstance.hasItems(Items.COPPER_INGOT))
 				.save(output);
 	}
 

@@ -52,6 +52,8 @@ public class BlockLootTables extends BlockLootSubProvider
 		dropSelf(ModBlocks.POLISHED_PACKED_ICE.get());
 		addBlockStairSlab(ModBlocks.PACKED_ICE_BRICKS.get(), ModBlocks.PACKED_ICE_BRICKS_STAIRS.get(), ModBlocks.PACKED_ICE_BRICKS_SLAB.get());
 
+		dropSelf(ModBlocks.COPPER_BARS.get());
+
 		dropSelf(ModBlocks.IRON_PLATE.get());
 		addBlockStairSlab(ModBlocks.IRON_TREAD_PLATE.get(), ModBlocks.IRON_TREAD_PLATE_STAIRS.get(), ModBlocks.IRON_TREAD_PLATE_SLAB.get());
 		dropSelf(ModBlocks.CORRUGATED_IRON_PLATE.get());

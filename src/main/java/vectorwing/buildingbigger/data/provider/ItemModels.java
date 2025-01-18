@@ -1,5 +1,6 @@
 package vectorwing.buildingbigger.data.provider;
 
+import com.google.common.collect.Sets;
 import net.minecraft.client.renderer.block.model.BlockModel;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
@@ -58,6 +59,11 @@ public class ItemModels extends ItemModelProvider
 		itemGeneratedModel(ModItems.GOLDEN_DOOR.get(), resourceItem(itemName(ModItems.GOLDEN_DOOR.get())));
 		items.remove(ModItems.GOLDEN_DOOR.get());
 
+		Set<Item> flatBlockItems = Sets.newHashSet(
+				ModItems.COPPER_BARS.get()
+		);
+		takeAll(items, flatBlockItems.toArray(new Item[0])).forEach(item -> itemGeneratedModel(item, resourceBlock(itemName(item))));
+
 		// Blocks with 3D models
 		takeAll(items, i -> i instanceof BlockItem).forEach(item -> blockBasedModel(item, ""));
 	}
@@ -98,6 +104,21 @@ public class ItemModels extends ItemModelProvider
 
 	public ResourceLocation resourceItem(String path) {
 		return ResourceLocation.fromNamespaceAndPath(BuildingBigger.MODID, "item/" + path);
+	}
+
+	@SafeVarargs
+	@SuppressWarnings("varargs")
+	public static <T> Collection<T> takeAll(Set<? extends T> src, T... items) {
+		List<T> ret = Arrays.asList(items);
+		for (T item : items) {
+			if (!src.contains(item)) {
+				BuildingBigger.LOGGER.warn("Item {} not found in set", item);
+			}
+		}
+		if (!src.removeAll(ret)) {
+			BuildingBigger.LOGGER.warn("takeAll array didn't yield anything ({})", Arrays.toString(items));
+		}
+		return ret;
 	}
 
 	public static <T> Collection<T> takeAll(Set<T> src, Predicate<T> pred) {

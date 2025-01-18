@@ -95,6 +95,7 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.JAGGED_CLAY_TILES.get(),
 				ModBlocks.POLISHED_PACKED_ICE.get(),
 				ModBlocks.PACKED_ICE_BRICKS.get(),
+				ModBlocks.COPPER_BARS.get(),
 				ModBlocks.IRON_PLATE.get(),
 				ModBlocks.IRON_TREAD_PLATE.get(),
 				ModBlocks.IRON_TREAD_PLATE_STAIRS.get(),

@@ -1,4 +1,4 @@
-// 1.21.1	2025-01-17T15:08:23.7987339	Loot Tables
+// 1.21.1	2025-01-18T12:02:54.7202222	Loot Tables
 dccb7a434f98a00c31c1b7a4d8293381824cc71d data/buildingbigger/loot_table/blocks/acacia_palisade.json
 fd880075679cc26def41cd4467ea3d747ad08609 data/buildingbigger/loot_table/blocks/birch_palisade.json
 fecf4d64549b428827bcdf8a46ee1e305f4d3672 data/buildingbigger/loot_table/blocks/cherry_palisade.json
@@ -9,6 +9,7 @@ fedb7107607df9d6deb04dc446955a8e51d860bd data/buildingbigger/loot_table/blocks/c
 8ec4a996e1a278e75a200b662dc51cbc016fe149 data/buildingbigger/loot_table/blocks/clay_tiles.json
 bdaf620c57e951acb309185642c2a549e9dbb66d data/buildingbigger/loot_table/blocks/clay_tile_slab.json
 f1791ac32dace609b0099369ab038e9db7b1f890 data/buildingbigger/loot_table/blocks/clay_tile_stairs.json
+9197d4175d8332695161e051dc3338ef0b0d1053 data/buildingbigger/loot_table/blocks/copper_bars.json
 ec18fb44c582fa96a9c7073433bb115001daec1c data/buildingbigger/loot_table/blocks/corrugated_iron_plate.json
 fc09a52a0b5eb0244760f3da992b0c53e182c450 data/buildingbigger/loot_table/blocks/crimson_palisade.json
 b5ffc0c744d30bbeb3df7bec1e448d572cbd6c6b data/buildingbigger/loot_table/blocks/cut_amethyst.json

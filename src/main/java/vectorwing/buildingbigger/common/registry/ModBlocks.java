@@ -61,6 +61,8 @@ public class ModBlocks
 	public static final Supplier<Block> PACKED_ICE_BRICKS_STAIRS = BLOCKS.register("packed_ice_brick_stairs", () -> stair(ModBlocks.PACKED_ICE_BRICKS.get(), BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_ICE)));
 	public static final Supplier<Block> PACKED_ICE_BRICKS_SLAB = BLOCKS.register("packed_ice_brick_slab", () -> slab(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_ICE)));
 
+	public static final Supplier<Block> COPPER_BARS = BLOCKS.register("copper_bars", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_GRATE)));
+
 	public static final Supplier<Block> IRON_PLATE = BLOCKS.registerSimpleBlock("iron_plate", PROPERTIES_IRON_PLATE);
 	public static final Supplier<Block> IRON_TREAD_PLATE = BLOCKS.registerSimpleBlock("iron_tread_plate", PROPERTIES_IRON_PLATE);
 	public static final Supplier<Block> IRON_TREAD_PLATE_STAIRS = BLOCKS.register("iron_tread_plate_stairs", () -> stair(ModBlocks.IRON_TREAD_PLATE.get(), PROPERTIES_IRON_PLATE));

@@ -70,6 +70,8 @@ public class ModItems
 	public static final Supplier<BlockItem> PACKED_ICE_BRICKS_STAIRS = registerSimpleBlockItem("packed_ice_brick_stairs", ModBlocks.PACKED_ICE_BRICKS_STAIRS);
 	public static final Supplier<BlockItem> PACKED_ICE_BRICKS_SLAB = registerSimpleBlockItem("packed_ice_brick_slab", ModBlocks.PACKED_ICE_BRICKS_SLAB);
 
+	public static final Supplier<BlockItem> COPPER_BARS = registerSimpleBlockItem("copper_bars", ModBlocks.COPPER_BARS);
+
 	public static final Supplier<BlockItem> IRON_PLATE = registerSimpleBlockItem("iron_plate", ModBlocks.IRON_PLATE);
 	public static final Supplier<BlockItem> IRON_TREAD_PLATE = registerSimpleBlockItem("iron_tread_plate", ModBlocks.IRON_TREAD_PLATE);
 	public static final Supplier<BlockItem> IRON_TREAD_PLATE_STAIRS = registerSimpleBlockItem("iron_tread_plate_stairs", ModBlocks.IRON_TREAD_PLATE_STAIRS);

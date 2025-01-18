@@ -1,4 +1,4 @@
-// 1.21.1	2025-01-17T15:15:08.1698596	Recipes
+// 1.21.1	2025-01-18T13:21:26.5230224	Recipes
 e3f759493131ec6d467a490a437f849f838a9556 data/buildingbigger/advancement/recipes/decorations/acacia_palisade.json
 d27d1d14aff6cb972f52b1ced83b89226f51fb24 data/buildingbigger/advancement/recipes/decorations/acacia_palisade_from_spiked.json
 3dada712c7e5a84e5bff2f0c9648d14f1f8d1cb3 data/buildingbigger/advancement/recipes/decorations/birch_palisade.json
@@ -9,6 +9,7 @@ a8dd724af233410b060e633bbf68b3a95a333e16 data/buildingbigger/advancement/recipes
 23a2bad211ab806ea2e142670072d3ac8d33e386 data/buildingbigger/advancement/recipes/decorations/clay_tiles.json
 29fe32d22b45a0b20f01b13cc7b76a75c4235c33 data/buildingbigger/advancement/recipes/decorations/clay_tile_slab.json
 47fa61dece19d233dc1100b3d24c9e842c2efe27 data/buildingbigger/advancement/recipes/decorations/clay_tile_stairs.json
+f2d90177204933e4fd2b4cb9ff637474900ec3e5 data/buildingbigger/advancement/recipes/decorations/copper_bars.json
 3e46e67e673e1fab24c4fb9b32b000d63a71b74b data/buildingbigger/advancement/recipes/decorations/corrugated_iron_plate.json
 5354d1f3abe43cbc997ca2fd6058d25cb2b5ac65 data/buildingbigger/advancement/recipes/decorations/crimson_palisade.json
 926dd7edf9db1f60d615ef73c1bd971d92584c8e data/buildingbigger/advancement/recipes/decorations/crimson_palisade_from_spiked.json
@@ -72,6 +73,7 @@ d4b10a3ed617cd61be2ead402d80296585d74778 data/buildingbigger/advancement/recipes
 9ba20d86d53c17be1f70a45dc2faec5a147517be data/buildingbigger/recipe/clay_tiles.json
 ec9aafd6a979f8967793260170d86b4531454789 data/buildingbigger/recipe/clay_tile_slab.json
 49d984bb42965fce16f7fc0f84db6c44cc158d3d data/buildingbigger/recipe/clay_tile_stairs.json
+2f1fd811875608942d433d13c5d58e4ce005cb8c data/buildingbigger/recipe/copper_bars.json
 9ffc7965b0824309c3dd76c44cbbf86002cec6c2 data/buildingbigger/recipe/corrugated_iron_plate.json
 81738fa081c9c2dfc9c8ae67d7d3a0995d887809 data/buildingbigger/recipe/crimson_palisade.json
 d1b829508c920cf20be69846f88854c6ddf5db93 data/buildingbigger/recipe/crimson_palisade_from_spiked.json
