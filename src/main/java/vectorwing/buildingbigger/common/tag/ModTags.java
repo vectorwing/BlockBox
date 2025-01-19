@@ -16,6 +16,9 @@ public class ModTags
 	// Blocks that are spiked palisades.
 	public static final TagKey<Block> SPIKED_PALISADES = modBlockTag("spiked_palisades");
 
+	// Blocks that are made out of Amethyst.
+	public static final TagKey<Block> AMETHYST_BLOCKS = modBlockTag("amethyst_blocks");
+
 	private static TagKey<Block> modBlockTag(String path) {
 		return BlockTags.create(ResourceLocation.fromNamespaceAndPath(BuildingBigger.MODID, path));
 	}

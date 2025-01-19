@@ -2,6 +2,7 @@ package vectorwing.buildingbigger.data.tag;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
+import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.NotNull;
@@ -22,6 +23,7 @@ public class BlockTags extends BlockTagsProvider
 	protected void addTags(HolderLookup.@NotNull Provider provider) {
 		this.registerMinecraftTags();
 		this.registerModTags();
+		this.registerCommonTags();
 		this.registerBlockMineables();
 	}
 
@@ -52,6 +54,8 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.IRON_PLATE_TRAPDOOR.get(),
 				ModBlocks.GOLDEN_TRAPDOOR.get()
 		);
+		tag(net.minecraft.tags.BlockTags.CRYSTAL_SOUND_BLOCKS).addTag(ModTags.AMETHYST_BLOCKS);
+		tag(net.minecraft.tags.BlockTags.VIBRATION_RESONATORS).addTag(ModTags.AMETHYST_BLOCKS);
 	}
 
 	private void registerModTags() {
@@ -78,6 +82,26 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.SPIKED_CHERRY_PALISADE.get(),
 				ModBlocks.SPIKED_CRIMSON_PALISADE.get(),
 				ModBlocks.SPIKED_WARPED_PALISADE.get()
+		);
+		tag(ModTags.AMETHYST_BLOCKS).add(
+				ModBlocks.POLISHED_AMETHYST.get(),
+				ModBlocks.CUT_AMETHYST.get(),
+				ModBlocks.CUT_AMETHYST_STAIRS.get(),
+				ModBlocks.CUT_AMETHYST_SLAB.get(),
+				ModBlocks.CHISELED_AMETHYST.get(),
+				ModBlocks.CHISELED_AMETHYST_STAIRS.get(),
+				ModBlocks.CHISELED_AMETHYST_SLAB.get()
+		);
+	}
+
+	protected void registerCommonTags() {
+		tag(Tags.Blocks.SANDSTONE_BLOCKS).add(
+				ModBlocks.SANDSTONE_BRICKS.get(),
+				ModBlocks.SANDSTONE_BRICK_STAIRS.get(),
+				ModBlocks.SANDSTONE_BRICK_SLAB.get(),
+				ModBlocks.RED_SANDSTONE_BRICKS.get(),
+				ModBlocks.RED_SANDSTONE_BRICK_STAIRS.get(),
+				ModBlocks.RED_SANDSTONE_BRICK_SLAB.get()
 		);
 	}
 

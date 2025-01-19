@@ -178,6 +178,26 @@ public class CraftingRecipes
 				.unlockedBy("has_packed_ice", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.PACKED_ICE))
 				.save(output);
 		stairAndSlab(output, ModBlocks.PACKED_ICE_BRICKS_STAIRS.get(), ModBlocks.PACKED_ICE_BRICKS_SLAB.get(), ModBlocks.PACKED_ICE_BRICKS.get());
+		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.POLISHED_AMETHYST.get(), 4)
+				.pattern("ss")
+				.pattern("ss")
+				.define('s', Blocks.AMETHYST_BLOCK)
+				.unlockedBy("has_amethyst_block", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.AMETHYST_BLOCK))
+				.save(output);
+		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.CUT_AMETHYST.get(), 4)
+				.pattern("ss")
+				.pattern("ss")
+				.define('s', ModBlocks.POLISHED_AMETHYST.get())
+				.unlockedBy("has_amethyst_block", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.AMETHYST_BLOCK))
+				.save(output);
+		stairAndSlab(output, ModBlocks.CUT_AMETHYST_STAIRS.get(), ModBlocks.CUT_AMETHYST_SLAB.get(), ModBlocks.CUT_AMETHYST.get());
+		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.CHISELED_AMETHYST.get(), 4)
+				.pattern("ss")
+				.pattern("ss")
+				.define('s', ModBlocks.CUT_AMETHYST.get())
+				.unlockedBy("has_amethyst_block", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.AMETHYST_BLOCK))
+				.save(output);
+		stairAndSlab(output, ModBlocks.CHISELED_AMETHYST_STAIRS.get(), ModBlocks.CHISELED_AMETHYST_SLAB.get(), ModBlocks.CHISELED_AMETHYST.get());
 	}
 
 	public static void stairAndSlab(RecipeOutput output, ItemLike stair, ItemLike slab, ItemLike block) {
