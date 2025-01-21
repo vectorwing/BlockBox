@@ -60,9 +60,21 @@ public class ItemModels extends ItemModelProvider
 		items.remove(ModItems.GOLDEN_DOOR.get());
 
 		Set<Item> flatBlockItems = Sets.newHashSet(
-				ModItems.COPPER_BARS.get()
+				ModItems.COPPER_BARS.get(),
+				ModItems.EXPOSED_COPPER_BARS.get(),
+				ModItems.WEATHERED_COPPER_BARS.get(),
+				ModItems.OXIDIZED_COPPER_BARS.get()
 		);
 		takeAll(items, flatBlockItems.toArray(new Item[0])).forEach(item -> itemGeneratedModel(item, resourceBlock(itemName(item))));
+
+		itemGeneratedModel(ModItems.WAXED_COPPER_BARS.get(), resourceBlock(itemName(ModItems.COPPER_BARS.get())));
+		items.remove(ModItems.WAXED_COPPER_BARS.get());
+		itemGeneratedModel(ModItems.WAXED_EXPOSED_COPPER_BARS.get(), resourceBlock(itemName(ModItems.EXPOSED_COPPER_BARS.get())));
+		items.remove(ModItems.WAXED_EXPOSED_COPPER_BARS.get());
+		itemGeneratedModel(ModItems.WAXED_WEATHERED_COPPER_BARS.get(), resourceBlock(itemName(ModItems.WEATHERED_COPPER_BARS.get())));
+		items.remove(ModItems.WAXED_WEATHERED_COPPER_BARS.get());
+		itemGeneratedModel(ModItems.WAXED_OXIDIZED_COPPER_BARS.get(), resourceBlock(itemName(ModItems.OXIDIZED_COPPER_BARS.get())));
+		items.remove(ModItems.WAXED_OXIDIZED_COPPER_BARS.get());
 
 		// Blocks with 3D models
 		takeAll(items, i -> i instanceof BlockItem).forEach(item -> blockBasedModel(item, ""));

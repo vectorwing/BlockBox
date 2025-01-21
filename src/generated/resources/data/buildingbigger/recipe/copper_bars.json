@@ -7,12 +7,12 @@
     }
   },
   "pattern": [
-    "# #",
     " # ",
-    "# #"
+    "# #",
+    " # "
   ],
   "result": {
-    "count": 6,
+    "count": 4,
     "id": "buildingbigger:copper_bars"
   }
 }

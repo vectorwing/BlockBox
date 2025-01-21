@@ -1,0 +1,6 @@
+{
+  "parent": "buildingbigger:block/template_bars_cap",
+  "textures": {
+    "bars": "buildingbigger:block/exposed_copper_bars"
+  }
+}

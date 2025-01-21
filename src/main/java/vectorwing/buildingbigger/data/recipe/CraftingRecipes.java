@@ -121,13 +121,17 @@ public class CraftingRecipes
 	}
 
 	private static void craftCopperBlocks(RecipeOutput output) {
-		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.COPPER_BARS.get(), 6)
-				.pattern("# #")
+		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.COPPER_BARS.get(), 4)
 				.pattern(" # ")
 				.pattern("# #")
+				.pattern(" # ")
 				.define('#', Tags.Items.INGOTS_COPPER)
 				.unlockedBy("has_copper", InventoryChangeTrigger.TriggerInstance.hasItems(Items.COPPER_INGOT))
 				.save(output);
+		waxing(output, ModBlocks.WAXED_COPPER_BARS.get(), ModBlocks.COPPER_BARS.get());
+		waxing(output, ModBlocks.WAXED_EXPOSED_COPPER_BARS.get(), ModBlocks.EXPOSED_COPPER_BARS.get());
+		waxing(output, ModBlocks.WAXED_WEATHERED_COPPER_BARS.get(), ModBlocks.WEATHERED_COPPER_BARS.get());
+		waxing(output, ModBlocks.WAXED_OXIDIZED_COPPER_BARS.get(), ModBlocks.OXIDIZED_COPPER_BARS.get());
 	}
 
 	private static void craftBasicBlocks(RecipeOutput output) {
@@ -200,6 +204,16 @@ public class CraftingRecipes
 		stairAndSlab(output, ModBlocks.CHISELED_AMETHYST_STAIRS.get(), ModBlocks.CHISELED_AMETHYST_SLAB.get(), ModBlocks.CHISELED_AMETHYST.get());
 	}
 
+	// HELPER METHODS
+
+	public static void waxing(RecipeOutput output, ItemLike waxedBlock, ItemLike block) {
+		ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, waxedBlock)
+				.requires(block)
+				.requires(Items.HONEYCOMB)
+				.unlockedBy("has_copper_block", InventoryChangeTrigger.TriggerInstance.hasItems(block))
+				.save(output, nameWithSuffix(itemName(waxedBlock), "from_honeycomb"));
+	}
+
 	public static void stairAndSlab(RecipeOutput output, ItemLike stair, ItemLike slab, ItemLike block) {
 		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, stair, 4)
 				.pattern("#  ")
@@ -227,7 +241,7 @@ public class CraftingRecipes
 				.requires(spikedPalisade)
 				.group("bb_palisades")
 				.unlockedBy("has_matching_log", InventoryChangeTrigger.TriggerInstance.hasItems(log))
-				.save(output, nameWithSuffix(itemName(palisade), "_from_spiked"));
+				.save(output, nameWithSuffix(itemName(palisade), "from_spiked"));
 		ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, spikedPalisade, 1)
 				.requires(palisade)
 				.group("bb_spiked_palisades")
@@ -240,7 +254,7 @@ public class CraftingRecipes
 	}
 
 	private static ResourceLocation nameWithSuffix(String name, String suffix) {
-		return ResourceLocation.fromNamespaceAndPath(BuildingBigger.MODID, name + suffix);
+		return ResourceLocation.fromNamespaceAndPath(BuildingBigger.MODID, name + "_" + suffix);
 	}
 
 	private static String itemName(ItemLike itemLike) {

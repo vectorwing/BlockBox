@@ -120,6 +120,13 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.POLISHED_PACKED_ICE.get(),
 				ModBlocks.PACKED_ICE_BRICKS.get(),
 				ModBlocks.COPPER_BARS.get(),
+				ModBlocks.EXPOSED_COPPER_BARS.get(),
+				ModBlocks.WEATHERED_COPPER_BARS.get(),
+				ModBlocks.OXIDIZED_COPPER_BARS.get(),
+				ModBlocks.WAXED_COPPER_BARS.get(),
+				ModBlocks.WAXED_EXPOSED_COPPER_BARS.get(),
+				ModBlocks.WAXED_WEATHERED_COPPER_BARS.get(),
+				ModBlocks.WAXED_OXIDIZED_COPPER_BARS.get(),
 				ModBlocks.IRON_PLATE.get(),
 				ModBlocks.IRON_TREAD_PLATE.get(),
 				ModBlocks.IRON_TREAD_PLATE_STAIRS.get(),
@@ -150,6 +157,16 @@ public class BlockTags extends BlockTagsProvider
 		tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_SHOVEL).add(
 				ModBlocks.PACKED_SNOW.get(),
 				ModBlocks.PACKED_SNOW_BRICKS.get()
+		);
+		tag(net.minecraft.tags.BlockTags.NEEDS_STONE_TOOL).add(
+				ModBlocks.COPPER_BARS.get(),
+				ModBlocks.EXPOSED_COPPER_BARS.get(),
+				ModBlocks.WEATHERED_COPPER_BARS.get(),
+				ModBlocks.OXIDIZED_COPPER_BARS.get(),
+				ModBlocks.WAXED_COPPER_BARS.get(),
+				ModBlocks.WAXED_EXPOSED_COPPER_BARS.get(),
+				ModBlocks.WAXED_WEATHERED_COPPER_BARS.get(),
+				ModBlocks.WAXED_OXIDIZED_COPPER_BARS.get()
 		);
 	}
 }

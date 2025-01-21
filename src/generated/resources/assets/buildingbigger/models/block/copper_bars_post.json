@@ -1,7 +1,6 @@
 {
   "parent": "buildingbigger:block/template_bars_post",
   "textures": {
-    "particle": "buildingbigger:block/copper_bars_single",
     "bars": "buildingbigger:block/copper_bars_single"
   }
 }

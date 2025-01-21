@@ -1,0 +1,6 @@
+{
+  "parent": "buildingbigger:block/template_bars_side_flat",
+  "textures": {
+    "bars": "buildingbigger:block/weathered_copper_bars"
+  }
+}

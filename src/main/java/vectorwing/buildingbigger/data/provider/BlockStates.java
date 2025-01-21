@@ -54,6 +54,11 @@ public class BlockStates extends BlockStateProvider
 		doorBlockWithRenderType((DoorBlock) ModBlocks.GOLDEN_DOOR.get(), resourceBlock("golden_door_bottom"), resourceBlock("golden_door_top"), RenderType.CUTOUT.name);
 		trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.GOLDEN_TRAPDOOR.get(), resourceBlock("golden_trapdoor"), false, RenderType.CUTOUT.name);
 
+		copperBars(ModBlocks.COPPER_BARS.get(), ModBlocks.WAXED_COPPER_BARS.get());
+		copperBars(ModBlocks.EXPOSED_COPPER_BARS.get(), ModBlocks.WAXED_EXPOSED_COPPER_BARS.get());
+		copperBars(ModBlocks.WEATHERED_COPPER_BARS.get(), ModBlocks.WAXED_WEATHERED_COPPER_BARS.get());
+		copperBars(ModBlocks.OXIDIZED_COPPER_BARS.get(), ModBlocks.WAXED_OXIDIZED_COPPER_BARS.get());
+
 		simpleBlock(ModBlocks.POLISHED_AMETHYST.get());
 		blockWithStairAndSlab(ModBlocks.CUT_AMETHYST.get(), ModBlocks.CUT_AMETHYST_STAIRS.get(), ModBlocks.CUT_AMETHYST_SLAB.get());
 		blockWithStairAndSlab(ModBlocks.CHISELED_AMETHYST.get(), ModBlocks.CHISELED_AMETHYST_STAIRS.get(), ModBlocks.CHISELED_AMETHYST_SLAB.get());
@@ -95,6 +100,58 @@ public class BlockStates extends BlockStateProvider
 					.rotationY(yRot)
 					.build();
 		}, TrapDoorBlock.POWERED, TrapDoorBlock.WATERLOGGED);
+	}
+
+	private void copperBars(Block block, Block waxedBlock) {
+		String textureName = name(block);
+		flatBarsBlock(block, textureName);
+		flatBarsBlock(waxedBlock, textureName);
+	}
+
+	private void flatBarsBlock(Block block, String textureName) {
+		ResourceLocation textureSide = resourceBlock(textureName);
+		ResourceLocation textureSingle = resourceBlock(textureName + "_single");
+
+		ModelFile cap = models().singleTexture(textureName + "_cap", resourceBlock("template_bars_cap"), "bars", textureSide);
+		ModelFile capAlt = models().singleTexture(textureName + "_cap_alt", resourceBlock("template_bars_cap_alt"), "bars", textureSide);
+		ModelFile post = models().singleTexture(textureName + "_post", resourceBlock("template_bars_post"), "bars", textureSingle);
+		ModelFile postEnds = models().singleTexture(textureName + "_post_ends", resourceBlock("template_bars_post_ends"), "edge", textureSide);
+		ModelFile side = models().singleTexture(textureName + "_side", resourceBlock("template_bars_side_flat"), "bars", textureSide);
+		ModelFile sideAlt = models().singleTexture(textureName + "_side_alt", resourceBlock("template_bars_side_flat_alt"), "bars", textureSide);
+
+		MultiPartBlockStateBuilder builder = getMultipartBuilder(block);
+
+		builder.part().modelFile(post).addModel()
+				.condition(PipeBlock.NORTH, false)
+				.condition(PipeBlock.EAST, false)
+				.condition(PipeBlock.SOUTH, false)
+				.condition(PipeBlock.WEST, false);
+		builder.part().modelFile(postEnds).addModel()
+				.condition(PipeBlock.NORTH, false)
+				.condition(PipeBlock.EAST, false)
+				.condition(PipeBlock.SOUTH, false)
+				.condition(PipeBlock.WEST, false);
+
+		PipeBlock.PROPERTY_BY_DIRECTION.forEach((dir, value) -> {
+			if (dir.getAxis().isHorizontal()) {
+				boolean isNorthEast = dir == Direction.NORTH || dir == Direction.EAST;
+
+				builder.part().modelFile(isNorthEast ? cap : capAlt).rotationY(dir.getAxis() == Direction.Axis.X ? 90 : 0).addModel()
+						.condition(PipeBlock.NORTH, dir.equals(Direction.NORTH))
+						.condition(PipeBlock.EAST, dir.equals(Direction.EAST))
+						.condition(PipeBlock.SOUTH, dir.equals(Direction.SOUTH))
+						.condition(PipeBlock.WEST, dir.equals(Direction.WEST));
+			}
+		});
+
+		PipeBlock.PROPERTY_BY_DIRECTION.forEach((dir, value) -> {
+			if (dir.getAxis().isHorizontal()) {
+				boolean isNorthEast = dir == Direction.NORTH || dir == Direction.EAST;
+
+				builder.part().modelFile(isNorthEast ? side : sideAlt).rotationY(dir.getAxis() == Direction.Axis.X ? 90 : 0).addModel()
+						.condition(value, true);
+			}
+		});
 	}
 
 	// HELPER METHODS
