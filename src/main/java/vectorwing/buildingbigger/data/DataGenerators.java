@@ -29,28 +29,20 @@ public class DataGenerators
 		PackOutput output = generator.getPackOutput();
 		CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
 		ExistingFileHelper helper = event.getExistingFileHelper();
-//		RegistrySetBuilder registrySetBuilder = new RegistrySetBuilder()
-//				.add(Registries.ENCHANTMENT, ModEnchantments::bootstrap);
 
+		// Data packs
 		BlockTags blockTags = new BlockTags(output, lookupProvider, helper);
 		generator.addProvider(event.includeServer(), blockTags);
 		generator.addProvider(event.includeServer(), new ItemTags(output, lookupProvider, blockTags.contentsGetter(), helper));
-//		generator.addProvider(event.includeServer(), new EntityTags(output, lookupProvider, helper));
 		generator.addProvider(event.includeServer(), new DamageTypeTags(output, lookupProvider, helper));
 
-//		DatapackBuiltinEntriesProvider datapackProvider = new DatapackBuiltinEntriesProvider(output, lookupProvider, registrySetBuilder, Set.of(FarmersDelight.MODID));
-//		CompletableFuture<HolderLookup.Provider> builtinLookupProvider = datapackProvider.getRegistryProvider();
-//		generator.addProvider(event.includeServer(), datapackProvider);
-//		generator.addProvider(event.includeServer(), new EnchantmentTags(output, builtinLookupProvider, helper));
-
 		generator.addProvider(event.includeServer(), new Recipes(output, lookupProvider));
-//		generator.addProvider(event.includeServer(), new DataMaps(output, lookupProvider));
-//		generator.addProvider(event.includeServer(), new Advancements(output, lookupProvider, helper));
+		generator.addProvider(event.includeServer(), new DataMaps(output, lookupProvider));
 		generator.addProvider(event.includeServer(), new LootTableProvider(output, Collections.emptySet(), List.of(
 				new LootTableProvider.SubProviderEntry(BlockLootTables::new, LootContextParamSets.BLOCK)
 		), lookupProvider));
-//		generator.addProvider(event.includeServer(), new StructureUpdater("structures/village/houses", FarmersDelight.MODID, helper, output));
-//
+
+		// Resource packs
 		BlockStates blockStates = new BlockStates(output, helper);
 		generator.addProvider(event.includeClient(), blockStates);
 		generator.addProvider(event.includeClient(), new ItemModels(output, blockStates.models().existingFileHelper));

@@ -8,6 +8,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import vectorwing.buildingbigger.BuildingBigger;
 import vectorwing.buildingbigger.common.block.PalisadeBlock;
 import vectorwing.buildingbigger.common.block.SpikedPalisadeBlock;
+import vectorwing.buildingbigger.common.block.WeatheringCopperBarsBlock;
 
 import java.util.function.Supplier;
 
@@ -61,7 +62,10 @@ public class ModBlocks
 	public static final Supplier<Block> PACKED_ICE_BRICKS_STAIRS = BLOCKS.register("packed_ice_brick_stairs", () -> stair(ModBlocks.PACKED_ICE_BRICKS.get(), BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_ICE)));
 	public static final Supplier<Block> PACKED_ICE_BRICKS_SLAB = BLOCKS.register("packed_ice_brick_slab", () -> slab(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_ICE)));
 
-	public static final Supplier<Block> COPPER_BARS = BLOCKS.register("copper_bars", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_GRATE)));
+	public static final Supplier<Block> COPPER_BARS = BLOCKS.register("copper_bars", () -> new WeatheringCopperBarsBlock(WeatheringCopper.WeatherState.UNAFFECTED, BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_GRATE)));
+	public static final Supplier<Block> EXPOSED_COPPER_BARS = BLOCKS.register("exposed_copper_bars", () -> new WeatheringCopperBarsBlock(WeatheringCopper.WeatherState.EXPOSED, BlockBehaviour.Properties.ofFullCopy(Blocks.EXPOSED_COPPER_GRATE)));
+	public static final Supplier<Block> WEATHERED_COPPER_BARS = BLOCKS.register("weathered_copper_bars", () -> new WeatheringCopperBarsBlock(WeatheringCopper.WeatherState.WEATHERED, BlockBehaviour.Properties.ofFullCopy(Blocks.WEATHERED_COPPER_GRATE)));
+	public static final Supplier<Block> OXIDIZED_COPPER_BARS = BLOCKS.register("oxidized_copper_bars", () -> new WeatheringCopperBarsBlock(WeatheringCopper.WeatherState.OXIDIZED, BlockBehaviour.Properties.ofFullCopy(Blocks.OXIDIZED_COPPER_GRATE)));
 
 	public static final Supplier<Block> IRON_PLATE = BLOCKS.registerSimpleBlock("iron_plate", PROPERTIES_IRON_PLATE);
 	public static final Supplier<Block> IRON_TREAD_PLATE = BLOCKS.registerSimpleBlock("iron_tread_plate", PROPERTIES_IRON_PLATE);

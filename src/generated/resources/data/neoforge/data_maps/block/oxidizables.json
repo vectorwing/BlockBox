@@ -1,0 +1,13 @@
+{
+  "values": {
+    "buildingbigger:copper_bars": {
+      "next_oxidation_stage": "buildingbigger:exposed_copper_bars"
+    },
+    "buildingbigger:exposed_copper_bars": {
+      "next_oxidation_stage": "buildingbigger:weathered_copper_bars"
+    },
+    "buildingbigger:weathered_copper_bars": {
+      "next_oxidation_stage": "buildingbigger:oxidized_copper_bars"
+    }
+  }
+}
