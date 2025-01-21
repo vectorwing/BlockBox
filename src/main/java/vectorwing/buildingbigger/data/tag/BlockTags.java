@@ -127,6 +127,14 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.WAXED_EXPOSED_COPPER_BARS.get(),
 				ModBlocks.WAXED_WEATHERED_COPPER_BARS.get(),
 				ModBlocks.WAXED_OXIDIZED_COPPER_BARS.get(),
+				ModBlocks.COPPER_PILLAR.get(),
+				ModBlocks.EXPOSED_COPPER_PILLAR.get(),
+				ModBlocks.WEATHERED_COPPER_PILLAR.get(),
+				ModBlocks.OXIDIZED_COPPER_PILLAR.get(),
+				ModBlocks.WAXED_COPPER_PILLAR.get(),
+				ModBlocks.WAXED_EXPOSED_COPPER_PILLAR.get(),
+				ModBlocks.WAXED_WEATHERED_COPPER_PILLAR.get(),
+				ModBlocks.WAXED_OXIDIZED_COPPER_PILLAR.get(),
 				ModBlocks.IRON_PLATE.get(),
 				ModBlocks.IRON_TREAD_PLATE.get(),
 				ModBlocks.IRON_TREAD_PLATE_STAIRS.get(),
@@ -166,7 +174,15 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.WAXED_COPPER_BARS.get(),
 				ModBlocks.WAXED_EXPOSED_COPPER_BARS.get(),
 				ModBlocks.WAXED_WEATHERED_COPPER_BARS.get(),
-				ModBlocks.WAXED_OXIDIZED_COPPER_BARS.get()
+				ModBlocks.WAXED_OXIDIZED_COPPER_BARS.get(),
+				ModBlocks.COPPER_PILLAR.get(),
+				ModBlocks.EXPOSED_COPPER_PILLAR.get(),
+				ModBlocks.WEATHERED_COPPER_PILLAR.get(),
+				ModBlocks.OXIDIZED_COPPER_PILLAR.get(),
+				ModBlocks.WAXED_COPPER_PILLAR.get(),
+				ModBlocks.WAXED_EXPOSED_COPPER_PILLAR.get(),
+				ModBlocks.WAXED_WEATHERED_COPPER_PILLAR.get(),
+				ModBlocks.WAXED_OXIDIZED_COPPER_PILLAR.get()
 		);
 	}
 }

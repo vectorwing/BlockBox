@@ -132,6 +132,63 @@ public class CraftingRecipes
 		waxing(output, ModBlocks.WAXED_EXPOSED_COPPER_BARS.get(), ModBlocks.EXPOSED_COPPER_BARS.get());
 		waxing(output, ModBlocks.WAXED_WEATHERED_COPPER_BARS.get(), ModBlocks.WEATHERED_COPPER_BARS.get());
 		waxing(output, ModBlocks.WAXED_OXIDIZED_COPPER_BARS.get(), ModBlocks.OXIDIZED_COPPER_BARS.get());
+		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.COPPER_PILLAR.get(), 2)
+				.pattern("#")
+				.pattern("#")
+				.define('#', Blocks.CUT_COPPER)
+				.unlockedBy("has_copper", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.COPPER_BLOCK))
+				.save(output);
+		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.EXPOSED_COPPER_PILLAR.get(), 2)
+				.pattern("#")
+				.pattern("#")
+				.define('#', Blocks.EXPOSED_CUT_COPPER)
+				.unlockedBy("has_copper", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.EXPOSED_COPPER))
+				.save(output);
+		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.WEATHERED_COPPER_PILLAR.get(), 2)
+				.pattern("#")
+				.pattern("#")
+				.define('#', Blocks.WEATHERED_CUT_COPPER)
+				.unlockedBy("has_copper", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.WEATHERED_COPPER))
+				.save(output);
+		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.OXIDIZED_COPPER_PILLAR.get(), 2)
+				.pattern("#")
+				.pattern("#")
+				.define('#', Blocks.OXIDIZED_CUT_COPPER)
+				.unlockedBy("has_copper", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.OXIDIZED_COPPER))
+				.save(output);
+
+		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.WAXED_COPPER_PILLAR.get(), 2)
+				.pattern("#")
+				.pattern("#")
+				.define('#', Blocks.WAXED_CUT_COPPER)
+				.unlockedBy("has_copper", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.COPPER_BLOCK))
+				.group("waxed_copper_pillar")
+				.save(output);
+		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.WAXED_EXPOSED_COPPER_PILLAR.get(), 2)
+				.pattern("#")
+				.pattern("#")
+				.define('#', Blocks.WAXED_EXPOSED_CUT_COPPER)
+				.unlockedBy("has_copper", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.EXPOSED_COPPER))
+				.group("waxed_exposed_copper_pillar")
+				.save(output);
+		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.WAXED_WEATHERED_COPPER_PILLAR.get(), 2)
+				.pattern("#")
+				.pattern("#")
+				.define('#', Blocks.WAXED_WEATHERED_CUT_COPPER)
+				.unlockedBy("has_copper", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.WEATHERED_COPPER))
+				.group("waxed_weathered_copper_pillar")
+				.save(output);
+		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.WAXED_OXIDIZED_COPPER_PILLAR.get(), 2)
+				.pattern("#")
+				.pattern("#")
+				.define('#', Blocks.WAXED_OXIDIZED_CUT_COPPER)
+				.unlockedBy("has_copper", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.OXIDIZED_COPPER))
+				.group("waxed_oxidized_copper_pillar")
+				.save(output);
+		waxing(output, ModBlocks.WAXED_COPPER_PILLAR.get(), ModBlocks.COPPER_PILLAR.get(), "waxed_copper_pillar");
+		waxing(output, ModBlocks.WAXED_EXPOSED_COPPER_PILLAR.get(), ModBlocks.EXPOSED_COPPER_PILLAR.get(), "waxed_exposed_copper_pillar");
+		waxing(output, ModBlocks.WAXED_WEATHERED_COPPER_PILLAR.get(), ModBlocks.WEATHERED_COPPER_PILLAR.get(), "waxed_weathered_copper_pillar");
+		waxing(output, ModBlocks.WAXED_OXIDIZED_COPPER_PILLAR.get(), ModBlocks.OXIDIZED_COPPER_PILLAR.get(), "waxed_oxidized_copper_pillar");
 	}
 
 	private static void craftBasicBlocks(RecipeOutput output) {
@@ -211,6 +268,15 @@ public class CraftingRecipes
 				.requires(block)
 				.requires(Items.HONEYCOMB)
 				.unlockedBy("has_copper_block", InventoryChangeTrigger.TriggerInstance.hasItems(block))
+				.save(output, nameWithSuffix(itemName(waxedBlock), "from_honeycomb"));
+	}
+
+	public static void waxing(RecipeOutput output, ItemLike waxedBlock, ItemLike block, String group) {
+		ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, waxedBlock)
+				.requires(block)
+				.requires(Items.HONEYCOMB)
+				.unlockedBy("has_copper_block", InventoryChangeTrigger.TriggerInstance.hasItems(block))
+				.group(group)
 				.save(output, nameWithSuffix(itemName(waxedBlock), "from_honeycomb"));
 	}
 

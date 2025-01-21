@@ -61,6 +61,15 @@ public class BlockLootTables extends BlockLootSubProvider
 		dropSelf(ModBlocks.WAXED_WEATHERED_COPPER_BARS.get());
 		dropSelf(ModBlocks.WAXED_OXIDIZED_COPPER_BARS.get());
 
+		dropSelf(ModBlocks.COPPER_PILLAR.get());
+		dropSelf(ModBlocks.EXPOSED_COPPER_PILLAR.get());
+		dropSelf(ModBlocks.WEATHERED_COPPER_PILLAR.get());
+		dropSelf(ModBlocks.OXIDIZED_COPPER_PILLAR.get());
+		dropSelf(ModBlocks.WAXED_COPPER_PILLAR.get());
+		dropSelf(ModBlocks.WAXED_EXPOSED_COPPER_PILLAR.get());
+		dropSelf(ModBlocks.WAXED_WEATHERED_COPPER_PILLAR.get());
+		dropSelf(ModBlocks.WAXED_OXIDIZED_COPPER_PILLAR.get());
+
 		dropSelf(ModBlocks.IRON_PLATE.get());
 		addBlockStairSlab(ModBlocks.IRON_TREAD_PLATE.get(), ModBlocks.IRON_TREAD_PLATE_STAIRS.get(), ModBlocks.IRON_TREAD_PLATE_SLAB.get());
 		dropSelf(ModBlocks.CORRUGATED_IRON_PLATE.get());

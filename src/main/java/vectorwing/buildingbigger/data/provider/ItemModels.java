@@ -10,6 +10,7 @@ import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import vectorwing.buildingbigger.BuildingBigger;
+import vectorwing.buildingbigger.common.registry.ModBlocks;
 import vectorwing.buildingbigger.common.registry.ModItems;
 
 import java.util.*;
@@ -76,6 +77,15 @@ public class ItemModels extends ItemModelProvider
 		itemGeneratedModel(ModItems.WAXED_OXIDIZED_COPPER_BARS.get(), resourceBlock(itemName(ModItems.OXIDIZED_COPPER_BARS.get())));
 		items.remove(ModItems.WAXED_OXIDIZED_COPPER_BARS.get());
 
+		blockBasedOnOtherModel(ModItems.WAXED_COPPER_PILLAR.get(), ModItems.COPPER_PILLAR.get());
+		items.remove(ModItems.WAXED_COPPER_PILLAR.get());
+		blockBasedOnOtherModel(ModItems.WAXED_EXPOSED_COPPER_PILLAR.get(), ModItems.EXPOSED_COPPER_PILLAR.get());
+		items.remove(ModItems.WAXED_EXPOSED_COPPER_PILLAR.get());
+		blockBasedOnOtherModel(ModItems.WAXED_WEATHERED_COPPER_PILLAR.get(), ModItems.WEATHERED_COPPER_PILLAR.get());
+		items.remove(ModItems.WAXED_WEATHERED_COPPER_PILLAR.get());
+		blockBasedOnOtherModel(ModItems.WAXED_OXIDIZED_COPPER_PILLAR.get(), ModItems.OXIDIZED_COPPER_PILLAR.get());
+		items.remove(ModItems.WAXED_OXIDIZED_COPPER_PILLAR.get());
+
 		// Blocks with 3D models
 		takeAll(items, i -> i instanceof BlockItem).forEach(item -> blockBasedModel(item, ""));
 	}
@@ -88,6 +98,10 @@ public class ItemModels extends ItemModelProvider
 	public void trapdoorModel(Item item, Set<Item> items) {
 		blockBasedModel(item, "_bottom");
 		items.remove(item);
+	}
+
+	public void blockBasedOnOtherModel(Item item, Item modelItem) {
+		withExistingParent(itemName(item), resourceBlock(itemName(modelItem)));
 	}
 
 	public void blockBasedModel(Item item, String suffix) {

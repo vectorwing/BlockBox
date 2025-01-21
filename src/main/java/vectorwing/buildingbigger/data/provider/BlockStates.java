@@ -59,6 +59,11 @@ public class BlockStates extends BlockStateProvider
 		copperBars(ModBlocks.WEATHERED_COPPER_BARS.get(), ModBlocks.WAXED_WEATHERED_COPPER_BARS.get());
 		copperBars(ModBlocks.OXIDIZED_COPPER_BARS.get(), ModBlocks.WAXED_OXIDIZED_COPPER_BARS.get());
 
+		copperPillar(ModBlocks.COPPER_PILLAR.get(), ModBlocks.WAXED_COPPER_PILLAR.get());
+		copperPillar(ModBlocks.EXPOSED_COPPER_PILLAR.get(), ModBlocks.WAXED_EXPOSED_COPPER_PILLAR.get());
+		copperPillar(ModBlocks.WEATHERED_COPPER_PILLAR.get(), ModBlocks.WAXED_WEATHERED_COPPER_PILLAR.get());
+		copperPillar(ModBlocks.OXIDIZED_COPPER_PILLAR.get(), ModBlocks.WAXED_OXIDIZED_COPPER_PILLAR.get());
+
 		simpleBlock(ModBlocks.POLISHED_AMETHYST.get());
 		blockWithStairAndSlab(ModBlocks.CUT_AMETHYST.get(), ModBlocks.CUT_AMETHYST_STAIRS.get(), ModBlocks.CUT_AMETHYST_SLAB.get());
 		blockWithStairAndSlab(ModBlocks.CHISELED_AMETHYST.get(), ModBlocks.CHISELED_AMETHYST_STAIRS.get(), ModBlocks.CHISELED_AMETHYST_SLAB.get());
@@ -100,6 +105,11 @@ public class BlockStates extends BlockStateProvider
 					.rotationY(yRot)
 					.build();
 		}, TrapDoorBlock.POWERED, TrapDoorBlock.WATERLOGGED);
+	}
+
+	private void copperPillar(Block block, Block waxedBlock) {
+		axisBlock((RotatedPillarBlock) block);
+		axisBlock((RotatedPillarBlock) waxedBlock, resourceBlock(name(block)));
 	}
 
 	private void copperBars(Block block, Block waxedBlock) {

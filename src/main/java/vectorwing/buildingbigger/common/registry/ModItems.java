@@ -79,6 +79,15 @@ public class ModItems
 	public static final Supplier<BlockItem> WAXED_WEATHERED_COPPER_BARS = registerSimpleBlockItem("waxed_weathered_copper_bars", ModBlocks.WAXED_WEATHERED_COPPER_BARS);
 	public static final Supplier<BlockItem> WAXED_OXIDIZED_COPPER_BARS = registerSimpleBlockItem("waxed_oxidized_copper_bars", ModBlocks.WAXED_OXIDIZED_COPPER_BARS);
 
+	public static final Supplier<BlockItem> COPPER_PILLAR = registerSimpleBlockItem("copper_pillar", ModBlocks.COPPER_PILLAR);
+	public static final Supplier<BlockItem> EXPOSED_COPPER_PILLAR = registerSimpleBlockItem("exposed_copper_pillar", ModBlocks.EXPOSED_COPPER_PILLAR);
+	public static final Supplier<BlockItem> WEATHERED_COPPER_PILLAR = registerSimpleBlockItem("weathered_copper_pillar", ModBlocks.WEATHERED_COPPER_PILLAR);
+	public static final Supplier<BlockItem> OXIDIZED_COPPER_PILLAR = registerSimpleBlockItem("oxidized_copper_pillar", ModBlocks.OXIDIZED_COPPER_PILLAR);
+	public static final Supplier<BlockItem> WAXED_COPPER_PILLAR = registerSimpleBlockItem("waxed_copper_pillar", ModBlocks.WAXED_COPPER_PILLAR);
+	public static final Supplier<BlockItem> WAXED_EXPOSED_COPPER_PILLAR = registerSimpleBlockItem("waxed_exposed_copper_pillar", ModBlocks.WAXED_EXPOSED_COPPER_PILLAR);
+	public static final Supplier<BlockItem> WAXED_WEATHERED_COPPER_PILLAR = registerSimpleBlockItem("waxed_weathered_copper_pillar", ModBlocks.WAXED_WEATHERED_COPPER_PILLAR);
+	public static final Supplier<BlockItem> WAXED_OXIDIZED_COPPER_PILLAR = registerSimpleBlockItem("waxed_oxidized_copper_pillar", ModBlocks.WAXED_OXIDIZED_COPPER_PILLAR);
+
 	public static final Supplier<BlockItem> IRON_PLATE = registerSimpleBlockItem("iron_plate", ModBlocks.IRON_PLATE);
 	public static final Supplier<BlockItem> IRON_TREAD_PLATE = registerSimpleBlockItem("iron_tread_plate", ModBlocks.IRON_TREAD_PLATE);
 	public static final Supplier<BlockItem> IRON_TREAD_PLATE_STAIRS = registerSimpleBlockItem("iron_tread_plate_stairs", ModBlocks.IRON_TREAD_PLATE_STAIRS);
