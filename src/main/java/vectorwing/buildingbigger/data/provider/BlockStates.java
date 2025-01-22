@@ -98,13 +98,13 @@ public class BlockStates extends BlockStateProvider
 	 */
 	private void blockWithVariations(Block block, List<String> variationSuffixes) {
 		VariantBlockStateBuilder.PartialBlockstate partialBlockstate = getVariantBuilder(block).partialState();
-		String baseName = name(block);
 
+		String baseName = name(block);
 		partialBlockstate.addModels(new ConfiguredModel(models().cubeAll(baseName, resourceBlock(baseName))));
 
 		for (String suffix : variationSuffixes) {
-			String fullSuffix = "_" + suffix;
-			partialBlockstate.addModels(new ConfiguredModel(models().cubeAll(baseName + fullSuffix, resourceBlock(baseName + fullSuffix))));
+			String variantName = baseName + "_" + suffix;
+			partialBlockstate.addModels(new ConfiguredModel(models().cubeAll(variantName, resourceBlock(variantName))));
 		}
 	}
 
@@ -296,9 +296,5 @@ public class BlockStates extends BlockStateProvider
 
 	private String name(Block block) {
 		return key(block).getPath();
-	}
-
-	private ResourceLocation blockTexture(String name) {
-		return ResourceLocation.fromNamespaceAndPath(BuildingBigger.MODID, name);
 	}
 }
