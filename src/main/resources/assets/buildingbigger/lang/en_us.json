@@ -76,6 +76,7 @@
   "block.buildingbigger.chiseled_amethyst": "Chiseled Amethyst",
   "block.buildingbigger.chiseled_amethyst_stairs": "Chiseled Amethyst Stairs",
   "block.buildingbigger.chiseled_amethyst_slab": "Chiseled Amethyst Slab",
+  "block.buildingbigger.oak_seat": "Oak Seat",
 
   "item.buildingbigger.oak_palisade": "Oak Palisade",
   "item.buildingbigger.spruce_palisade": "Spruce Palisade",
@@ -154,6 +155,7 @@
   "item.buildingbigger.chiseled_amethyst": "Chiseled Amethyst",
   "item.buildingbigger.chiseled_amethyst_stairs": "Chiseled Amethyst Stairs",
   "item.buildingbigger.chiseled_amethyst_slab": "Chiseled Amethyst Slab",
+  "item.buildingbigger.oak_seat": "Oak Seat",
 
   "itemGroup.buildingbigger": "Building Bigger",
 

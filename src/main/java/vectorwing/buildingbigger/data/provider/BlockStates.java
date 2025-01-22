@@ -91,6 +91,8 @@ public class BlockStates extends BlockStateProvider
 		spikedPalisadeBlock((SpikedPalisadeBlock) ModBlocks.SPIKED_CRIMSON_PALISADE.get(), name(ModBlocks.CRIMSON_PALISADE.get()));
 		palisadeBlock((PalisadeBlock) ModBlocks.WARPED_PALISADE.get());
 		spikedPalisadeBlock((SpikedPalisadeBlock) ModBlocks.SPIKED_WARPED_PALISADE.get(), name(ModBlocks.WARPED_PALISADE.get()));
+
+		chairBlock(ModBlocks.OAK_SEAT.get());
 	}
 
 	/**
@@ -106,6 +108,13 @@ public class BlockStates extends BlockStateProvider
 			String variantName = baseName + "_" + suffix;
 			partialBlockstate.addModels(new ConfiguredModel(models().cubeAll(variantName, resourceBlock(variantName))));
 		}
+	}
+
+	private void chairBlock(Block block) {
+		String baseName = name(block);
+		horizontalBlock(block, models().withExistingParent(baseName, resourceBlock("template_seat"))
+				.texture("top", resourceBlock(baseName + "_top"))
+				.texture("side", resourceBlock(baseName + "_side")));
 	}
 
 	private void ironPlateTrapdoor(TrapDoorBlock block, String baseName, ResourceLocation texture, ResourceLocation renderType) {

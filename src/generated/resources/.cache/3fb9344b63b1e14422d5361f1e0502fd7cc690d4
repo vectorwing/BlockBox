@@ -1,4 +1,4 @@
-// 1.21.1	2025-01-21T19:59:39.2126687	Item Models: buildingbigger
+// 1.21.1	2025-01-22T18:40:02.7803721	Item Models: buildingbigger
 d6af8b3875876d49852b06984d80dc7a3b4f982b assets/buildingbigger/models/item/acacia_palisade.json
 823c69c006ebe5b16197f05e3911ed02072668dd assets/buildingbigger/models/item/birch_palisade.json
 c36fdfb741be65d84206d2a224ebd36b15b52d00 assets/buildingbigger/models/item/cherry_palisade.json
@@ -37,6 +37,7 @@ f99a6e25c3733c6cfcd8ecb4015fa4831a6a3078 assets/buildingbigger/models/item/iron_
 53d19bbb0e051fd1eea5a7b7f9729c941056e115 assets/buildingbigger/models/item/jungle_palisade.json
 d03b25bb504c4bbc3a1fdca60225d7b3340f6d95 assets/buildingbigger/models/item/mangrove_palisade.json
 47eb39b02b773e178a2ca86bc7d415bc782fd058 assets/buildingbigger/models/item/oak_palisade.json
+81fb66ace101d5f5e41a3ccb6a1bdb6625794c3f assets/buildingbigger/models/item/oak_seat.json
 6c29a0ddf16500aaca1e0abc237445a019ed1eb0 assets/buildingbigger/models/item/oxidized_copper_bars.json
 8128531c87f63c6879a60cbd63633cd18dfa01aa assets/buildingbigger/models/item/oxidized_copper_pillar.json
 05c520b564309575d5f5b935bbec0a9c4f000f95 assets/buildingbigger/models/item/packed_ice_bricks.json

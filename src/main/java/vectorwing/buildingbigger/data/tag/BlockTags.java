@@ -161,7 +161,8 @@ public class BlockTags extends BlockTagsProvider
 		);
 		tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_AXE)
 				.addTag(ModTags.PALISADES)
-				.addTag(ModTags.SPIKED_PALISADES);
+				.addTag(ModTags.SPIKED_PALISADES)
+				.add(ModBlocks.OAK_SEAT.get());
 		tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_SHOVEL).add(
 				ModBlocks.PACKED_SNOW.get(),
 				ModBlocks.PACKED_SNOW_BRICKS.get()

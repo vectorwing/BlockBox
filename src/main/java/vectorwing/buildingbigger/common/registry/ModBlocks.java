@@ -6,10 +6,7 @@ import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import vectorwing.buildingbigger.BuildingBigger;
-import vectorwing.buildingbigger.common.block.PalisadeBlock;
-import vectorwing.buildingbigger.common.block.SpikedPalisadeBlock;
-import vectorwing.buildingbigger.common.block.WeatheringCopperBarsBlock;
-import vectorwing.buildingbigger.common.block.WeatheringCopperPillarBlock;
+import vectorwing.buildingbigger.common.block.*;
 
 import java.util.function.Supplier;
 
@@ -112,6 +109,8 @@ public class ModBlocks
 	public static final Supplier<Block> CHISELED_AMETHYST = BLOCKS.registerSimpleBlock("chiseled_amethyst", BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK));
 	public static final Supplier<Block> CHISELED_AMETHYST_STAIRS = BLOCKS.register("chiseled_amethyst_stairs", () -> stair(ModBlocks.CHISELED_AMETHYST.get(), BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK)));
 	public static final Supplier<Block> CHISELED_AMETHYST_SLAB = BLOCKS.register("chiseled_amethyst_slab", () -> slab(BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK)));
+
+	public static final Supplier<Block> OAK_SEAT = BLOCKS.register("oak_seat", () -> new SeatBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
 
 	private static Block stair(Block baseBlock, BlockBehaviour.Properties properties) {
 		return new StairBlock(baseBlock.defaultBlockState(), properties);

@@ -22,6 +22,11 @@ public class CraftingRecipes
 		craftIronPlateBlocks(output);
 		craftGoldBlocks(output);
 		craftCopperBlocks(output);
+		craftFurniture(output);
+	}
+
+	private static void craftFurniture(RecipeOutput output) {
+		chair(output, ModBlocks.OAK_SEAT.get(), Blocks.OAK_PLANKS);
 	}
 
 	private static void craftPalisades(RecipeOutput output) {
@@ -312,6 +317,17 @@ public class CraftingRecipes
 				.requires(palisade)
 				.group("bb_spiked_palisades")
 				.unlockedBy("has_matching_palisade", InventoryChangeTrigger.TriggerInstance.hasItems(palisade))
+				.save(output);
+	}
+
+	public static void chair(RecipeOutput output, ItemLike chair, ItemLike plank) {
+		ShapedRecipeBuilder.shaped(RecipeCategory.MISC, chair)
+				.pattern("###")
+				.pattern("/ /")
+				.define('#', plank)
+				.define('/', Items.STICK)
+				.group("bb_chairs")
+				.unlockedBy("has_matching_plank", InventoryChangeTrigger.TriggerInstance.hasItems(plank))
 				.save(output);
 	}
 

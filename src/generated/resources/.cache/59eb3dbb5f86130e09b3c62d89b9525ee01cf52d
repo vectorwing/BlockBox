@@ -1,4 +1,4 @@
-// 1.21.1	2025-01-21T19:59:39.2036669	Loot Tables
+// 1.21.1	2025-01-22T18:40:02.7579155	Loot Tables
 dccb7a434f98a00c31c1b7a4d8293381824cc71d data/buildingbigger/loot_table/blocks/acacia_palisade.json
 fd880075679cc26def41cd4467ea3d747ad08609 data/buildingbigger/loot_table/blocks/birch_palisade.json
 fecf4d64549b428827bcdf8a46ee1e305f4d3672 data/buildingbigger/loot_table/blocks/cherry_palisade.json
@@ -37,6 +37,7 @@ b45fe8bd7ec5c91cfa6e195317435525ad8626d2 data/buildingbigger/loot_table/blocks/i
 96dd666fe9baf4028eb82fc26906e6d21f9f3be3 data/buildingbigger/loot_table/blocks/jungle_palisade.json
 3c4326b14949ebb15e8fba24ebf466ccd0e442a0 data/buildingbigger/loot_table/blocks/mangrove_palisade.json
 1a89c2b2caa708879edcdd3c52b0b21687231941 data/buildingbigger/loot_table/blocks/oak_palisade.json
+28f747f4ec63f8f865789aeee1ddd5473af72983 data/buildingbigger/loot_table/blocks/oak_seat.json
 63a39f67d570142cc163b5677fe2cce8a54c529a data/buildingbigger/loot_table/blocks/oxidized_copper_bars.json
 0434f84bf46783d596b887f511e4fc9c45f5f28d data/buildingbigger/loot_table/blocks/oxidized_copper_pillar.json
 40e9a8018e0653aeab0b272f58ec1c1e79b38d94 data/buildingbigger/loot_table/blocks/packed_ice_bricks.json

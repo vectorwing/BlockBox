@@ -6,10 +6,7 @@ import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import org.slf4j.Logger;
-import vectorwing.buildingbigger.common.registry.ModBlocks;
-import vectorwing.buildingbigger.common.registry.ModCreativeTabs;
-import vectorwing.buildingbigger.common.registry.ModItems;
-import vectorwing.buildingbigger.common.registry.ModParticleTypes;
+import vectorwing.buildingbigger.common.registry.*;
 
 @Mod(BuildingBigger.MODID)
 public class BuildingBigger
@@ -22,6 +19,7 @@ public class BuildingBigger
 
 		ModBlocks.BLOCKS.register(modEventBus);
 		ModItems.ITEMS.register(modEventBus);
+		ModEntityTypes.ENTITY_TYPES.register(modEventBus);
 		ModParticleTypes.PARTICLE_TYPES.register(modEventBus);
 		ModCreativeTabs.CREATIVE_MODE_TABS.register(modEventBus);
 	}

@@ -1,4 +1,4 @@
-// 1.21.1	2025-01-22T13:33:17.5251998	Block States: buildingbigger
+// 1.21.1	2025-01-22T18:41:55.6742719	Block States: buildingbigger
 23e8d76a7560b664f47b2f9096fb30c94ea44197 assets/buildingbigger/blockstates/acacia_palisade.json
 7974177d67f26d777f66fb7aad896c86b972e7c4 assets/buildingbigger/blockstates/birch_palisade.json
 95e9fa7fb39bc443ff411a6d6095d5f41633d124 assets/buildingbigger/blockstates/cherry_palisade.json
@@ -37,6 +37,7 @@ c1a88b1ebe6d40826135d7ca208d672df6b38b61 assets/buildingbigger/blockstates/iron_
 b19438494956bdfa3d5e140b7e77f11469f7a946 assets/buildingbigger/blockstates/jungle_palisade.json
 92e0ca0f5b20c4f6ee11c213343ea8f9c408aecd assets/buildingbigger/blockstates/mangrove_palisade.json
 eaa040cf793c4963ffb1fec50d419a18493fbf36 assets/buildingbigger/blockstates/oak_palisade.json
+2d6a349e41eda066f96b8f9467df8173f8288619 assets/buildingbigger/blockstates/oak_seat.json
 41bde7fb22f076abfa2b554b9f61e620b8379bef assets/buildingbigger/blockstates/oxidized_copper_bars.json
 0f45b42b63f51b5cfb8c4ae67fc469c1c9cb147e assets/buildingbigger/blockstates/oxidized_copper_pillar.json
 c3fbb5d5a3b35a7fdafec9e67f7d16f92bc6108c assets/buildingbigger/blockstates/packed_ice_bricks.json
@@ -180,6 +181,7 @@ f456294c2c9e7279363d5e2232c447c394420a41 assets/buildingbigger/models/block/mang
 241780c29c06bc6aeb1fb40cbc740af802fac0a7 assets/buildingbigger/models/block/oak_palisade_back.json
 43e80d2378f4778dbebf54b75cc78c7f95b34308 assets/buildingbigger/models/block/oak_palisade_front.json
 1c63caf0584762547e0f38e4d3093ae3cfe05423 assets/buildingbigger/models/block/oak_palisade_post.json
+7de6ff0d8e0a28cfb564050034393282fef3f280 assets/buildingbigger/models/block/oak_seat.json
 c644c5450aecb4060c90b90178eb0ab2020bbc11 assets/buildingbigger/models/block/oxidized_copper_bars_cap.json
 b3fb31cd9f40dc6fc40a555674cdc7bacb865b88 assets/buildingbigger/models/block/oxidized_copper_bars_cap_alt.json
 0a72c0c494270e382b4d1a3d440eacd043b25834 assets/buildingbigger/models/block/oxidized_copper_bars_post.json

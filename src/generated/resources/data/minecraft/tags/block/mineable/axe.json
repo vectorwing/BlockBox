@@ -1,6 +1,7 @@
 {
   "values": [
     "#buildingbigger:palisades",
-    "#buildingbigger:spiked_palisades"
+    "#buildingbigger:spiked_palisades",
+    "buildingbigger:oak_seat"
   ]
 }

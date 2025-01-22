@@ -1,5 +1,6 @@
 {
 	"credit": "Made with Blockbench",
+	"parent": "block/block",
 	"textures": {
 		"particle": "#side"
 	},
@@ -68,7 +69,7 @@
 	],
 	"groups": [
 		{
-			"name": "chair",
+			"name": "seat",
 			"origin": [0, 0, 0],
 			"color": 0,
 			"children": [0, 1, 2, 3, 4]
