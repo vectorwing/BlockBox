@@ -18,6 +18,7 @@ import vectorwing.buildingbigger.common.block.SpikedPalisadeBlock;
 import vectorwing.buildingbigger.common.block.state.PalisadeConnection;
 import vectorwing.buildingbigger.common.registry.ModBlocks;
 
+import java.util.List;
 import java.util.Map;
 
 public class BlockStates extends BlockStateProvider
@@ -34,6 +35,8 @@ public class BlockStates extends BlockStateProvider
 		blockWithStairAndSlab(ModBlocks.RED_SANDSTONE_BRICKS.get(), ModBlocks.RED_SANDSTONE_BRICK_STAIRS.get(), ModBlocks.RED_SANDSTONE_BRICK_SLAB.get());
 
 		blockWithStairAndSlab(ModBlocks.CLAY_TILES.get(), ModBlocks.CLAY_TILE_STAIRS.get(), ModBlocks.CLAY_TILE_SLAB.get());
+
+		blockWithVariations(ModBlocks.JAGGED_CLAY_TILES.get(), List.of("a", "b", "c"));
 
 		simpleBlock(ModBlocks.POLISHED_PACKED_ICE.get());
 		blockWithStairAndSlab(ModBlocks.PACKED_SNOW_BRICKS.get(), ModBlocks.PACKED_SNOW_BRICK_STAIRS.get(), ModBlocks.PACKED_SNOW_BRICK_SLAB.get());
@@ -88,6 +91,21 @@ public class BlockStates extends BlockStateProvider
 		spikedPalisadeBlock((SpikedPalisadeBlock) ModBlocks.SPIKED_CRIMSON_PALISADE.get(), name(ModBlocks.CRIMSON_PALISADE.get()));
 		palisadeBlock((PalisadeBlock) ModBlocks.WARPED_PALISADE.get());
 		spikedPalisadeBlock((SpikedPalisadeBlock) ModBlocks.SPIKED_WARPED_PALISADE.get(), name(ModBlocks.WARPED_PALISADE.get()));
+	}
+
+	/**
+	 * Creates a simple blockstate with random variations based on a list of suffixes. The first element is always the base name with no suffix.
+	 */
+	private void blockWithVariations(Block block, List<String> variationSuffixes) {
+		VariantBlockStateBuilder.PartialBlockstate partialBlockstate = getVariantBuilder(block).partialState();
+		String baseName = name(block);
+
+		partialBlockstate.addModels(new ConfiguredModel(models().cubeAll(baseName, resourceBlock(baseName))));
+
+		for (String suffix : variationSuffixes) {
+			String fullSuffix = "_" + suffix;
+			partialBlockstate.addModels(new ConfiguredModel(models().cubeAll(baseName + fullSuffix, resourceBlock(baseName + fullSuffix))));
+		}
 	}
 
 	private void ironPlateTrapdoor(TrapDoorBlock block, String baseName, ResourceLocation texture, ResourceLocation renderType) {
