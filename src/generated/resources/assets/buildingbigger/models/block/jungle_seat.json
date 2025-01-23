@@ -1,0 +1,7 @@
+{
+  "parent": "buildingbigger:block/template_seat",
+  "textures": {
+    "side": "buildingbigger:block/jungle_seat_side",
+    "top": "buildingbigger:block/jungle_seat_top"
+  }
+}

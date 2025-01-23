@@ -27,6 +27,15 @@ public class CraftingRecipes
 
 	private static void craftFurniture(RecipeOutput output) {
 		chair(output, ModBlocks.OAK_SEAT.get(), Blocks.OAK_PLANKS);
+		chair(output, ModBlocks.SPRUCE_SEAT.get(), Blocks.SPRUCE_PLANKS);
+		chair(output, ModBlocks.BIRCH_SEAT.get(), Blocks.BIRCH_PLANKS);
+		chair(output, ModBlocks.JUNGLE_SEAT.get(), Blocks.JUNGLE_PLANKS);
+		chair(output, ModBlocks.ACACIA_SEAT.get(), Blocks.ACACIA_PLANKS);
+		chair(output, ModBlocks.DARK_OAK_SEAT.get(), Blocks.DARK_OAK_PLANKS);
+		chair(output, ModBlocks.MANGROVE_SEAT.get(), Blocks.MANGROVE_PLANKS);
+		chair(output, ModBlocks.CHERRY_SEAT.get(), Blocks.CHERRY_PLANKS);
+		chair(output, ModBlocks.CRIMSON_SEAT.get(), Blocks.CRIMSON_PLANKS);
+		chair(output, ModBlocks.WARPED_SEAT.get(), Blocks.WARPED_PLANKS);
 	}
 
 	private static void craftPalisades(RecipeOutput output) {
@@ -321,7 +330,7 @@ public class CraftingRecipes
 	}
 
 	public static void chair(RecipeOutput output, ItemLike chair, ItemLike plank) {
-		ShapedRecipeBuilder.shaped(RecipeCategory.MISC, chair)
+		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, chair)
 				.pattern("###")
 				.pattern("/ /")
 				.define('#', plank)

@@ -115,4 +115,13 @@ public class ModItems
 	public static final Supplier<BlockItem> CHISELED_AMETHYST_SLAB = registerSimpleBlockItem("chiseled_amethyst_slab", ModBlocks.CHISELED_AMETHYST_SLAB);
 
 	public static final Supplier<BlockItem> OAK_SEAT = registerSimpleBlockItem("oak_seat", ModBlocks.OAK_SEAT);
+	public static final Supplier<BlockItem> SPRUCE_SEAT = registerSimpleBlockItem("spruce_seat", ModBlocks.SPRUCE_SEAT);
+	public static final Supplier<BlockItem> BIRCH_SEAT = registerSimpleBlockItem("birch_seat", ModBlocks.BIRCH_SEAT);
+	public static final Supplier<BlockItem> JUNGLE_SEAT = registerSimpleBlockItem("jungle_seat", ModBlocks.JUNGLE_SEAT);
+	public static final Supplier<BlockItem> ACACIA_SEAT = registerSimpleBlockItem("acacia_seat", ModBlocks.ACACIA_SEAT);
+	public static final Supplier<BlockItem> DARK_OAK_SEAT = registerSimpleBlockItem("dark_oak_seat", ModBlocks.DARK_OAK_SEAT);
+	public static final Supplier<BlockItem> MANGROVE_SEAT = registerSimpleBlockItem("mangrove_seat", ModBlocks.MANGROVE_SEAT);
+	public static final Supplier<BlockItem> CHERRY_SEAT = registerSimpleBlockItem("cherry_seat", ModBlocks.CHERRY_SEAT);
+	public static final Supplier<BlockItem> CRIMSON_SEAT = registerSimpleBlockItem("crimson_seat", ModBlocks.CRIMSON_SEAT);
+	public static final Supplier<BlockItem> WARPED_SEAT = registerSimpleBlockItem("warped_seat", ModBlocks.WARPED_SEAT);
 }

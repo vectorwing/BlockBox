@@ -93,6 +93,15 @@ public class BlockStates extends BlockStateProvider
 		spikedPalisadeBlock((SpikedPalisadeBlock) ModBlocks.SPIKED_WARPED_PALISADE.get(), name(ModBlocks.WARPED_PALISADE.get()));
 
 		chairBlock(ModBlocks.OAK_SEAT.get());
+		chairBlock(ModBlocks.SPRUCE_SEAT.get());
+		chairBlock(ModBlocks.BIRCH_SEAT.get());
+		chairBlock(ModBlocks.JUNGLE_SEAT.get());
+		chairBlock(ModBlocks.ACACIA_SEAT.get());
+		chairBlock(ModBlocks.DARK_OAK_SEAT.get());
+		chairBlock(ModBlocks.MANGROVE_SEAT.get());
+		chairBlock(ModBlocks.CHERRY_SEAT.get());
+		chairBlock(ModBlocks.CRIMSON_SEAT.get());
+		chairBlock(ModBlocks.WARPED_SEAT.get());
 	}
 
 	/**

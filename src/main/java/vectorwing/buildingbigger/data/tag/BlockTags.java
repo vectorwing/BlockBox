@@ -83,6 +83,18 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.SPIKED_CRIMSON_PALISADE.get(),
 				ModBlocks.SPIKED_WARPED_PALISADE.get()
 		);
+		tag(ModTags.WOODEN_SEATS).add(
+				ModBlocks.OAK_SEAT.get(),
+				ModBlocks.SPRUCE_SEAT.get(),
+				ModBlocks.BIRCH_SEAT.get(),
+				ModBlocks.JUNGLE_SEAT.get(),
+				ModBlocks.ACACIA_SEAT.get(),
+				ModBlocks.DARK_OAK_SEAT.get(),
+				ModBlocks.MANGROVE_SEAT.get(),
+				ModBlocks.CHERRY_SEAT.get(),
+				ModBlocks.CRIMSON_SEAT.get(),
+				ModBlocks.WARPED_SEAT.get()
+		);
 		tag(ModTags.AMETHYST_BLOCKS).add(
 				ModBlocks.POLISHED_AMETHYST.get(),
 				ModBlocks.CUT_AMETHYST.get(),
@@ -162,6 +174,7 @@ public class BlockTags extends BlockTagsProvider
 		tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_AXE)
 				.addTag(ModTags.PALISADES)
 				.addTag(ModTags.SPIKED_PALISADES)
+				.addTag(ModTags.WOODEN_SEATS)
 				.add(ModBlocks.OAK_SEAT.get());
 		tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_SHOVEL).add(
 				ModBlocks.PACKED_SNOW.get(),
