@@ -64,7 +64,8 @@ public class ItemModels extends ItemModelProvider
 				ModItems.COPPER_BARS.get(),
 				ModItems.EXPOSED_COPPER_BARS.get(),
 				ModItems.WEATHERED_COPPER_BARS.get(),
-				ModItems.OXIDIZED_COPPER_BARS.get()
+				ModItems.OXIDIZED_COPPER_BARS.get(),
+				ModItems.GOLDEN_BARS.get()
 		);
 		takeAll(items, flatBlockItems.toArray(new Item[0])).forEach(item -> itemGeneratedModel(item, resourceBlock(itemName(item))));
 

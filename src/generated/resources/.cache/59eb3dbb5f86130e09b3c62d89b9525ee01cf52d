@@ -1,4 +1,4 @@
-// 1.21.1	2025-01-22T21:47:03.6792022	Loot Tables
+// 1.21.1	2025-01-23T18:48:36.6735637	Loot Tables
 dccb7a434f98a00c31c1b7a4d8293381824cc71d data/buildingbigger/loot_table/blocks/acacia_palisade.json
 9260712b451ae4d28d5fbaa8a0d13a59f4be770e data/buildingbigger/loot_table/blocks/acacia_seat.json
 fd880075679cc26def41cd4467ea3d747ad08609 data/buildingbigger/loot_table/blocks/birch_palisade.json
@@ -24,6 +24,7 @@ f1125cd8fbada539d1cb536110a88a04200867dd data/buildingbigger/loot_table/blocks/c
 8162b14c2c05b50a93a33d391c9c32ba4fcfb45d data/buildingbigger/loot_table/blocks/dark_oak_seat.json
 78806d927fe14da1bd0dabd246fb90576cdd0757 data/buildingbigger/loot_table/blocks/exposed_copper_bars.json
 88553c3bd5adcf835cf724e9a8fb204ac6911ca8 data/buildingbigger/loot_table/blocks/exposed_copper_pillar.json
+88f382b0888aed0545dada760cd34931ded5fc75 data/buildingbigger/loot_table/blocks/golden_bars.json
 9f2f7d2b3af80f40fab19c37fbfefc4b0f315de7 data/buildingbigger/loot_table/blocks/golden_bricks.json
 fa5c07fd2d5ea6cd0f54068185d1dff373adeab3 data/buildingbigger/loot_table/blocks/golden_brick_slab.json
 c849e612f0466ef132b37b1f647641c5821a5298 data/buildingbigger/loot_table/blocks/golden_brick_stairs.json

@@ -95,8 +95,9 @@ public class CraftingRecipes
 
 	private static void craftGoldBlocks(RecipeOutput output) {
 		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_GOLD.get(), 4)
-				.pattern("gg")
-				.pattern("gg")
+				.pattern(" g ")
+				.pattern("g g")
+				.pattern(" g ")
 				.define('g', Items.GOLD_INGOT)
 				.unlockedBy("has_gold_ingot", InventoryChangeTrigger.TriggerInstance.hasItems(Items.GOLD_INGOT))
 				.save(output);
@@ -127,6 +128,12 @@ public class CraftingRecipes
 				.unlockedBy("has_gold_ingot", InventoryChangeTrigger.TriggerInstance.hasItems(Items.GOLD_INGOT))
 				.save(output);
 		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GOLDEN_TRAPDOOR.get(), 2)
+				.pattern("gg")
+				.pattern("gg")
+				.define('g', Items.GOLD_INGOT)
+				.unlockedBy("has_gold_ingot", InventoryChangeTrigger.TriggerInstance.hasItems(Items.GOLD_INGOT))
+				.save(output);
+		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GOLDEN_BARS.get(), 16)
 				.pattern("ggg")
 				.pattern("ggg")
 				.define('g', Items.GOLD_INGOT)

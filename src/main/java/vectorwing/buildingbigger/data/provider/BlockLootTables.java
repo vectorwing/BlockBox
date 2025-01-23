@@ -83,6 +83,7 @@ public class BlockLootTables extends BlockLootSubProvider
 		dropSelf(ModBlocks.GOLDEN_PILLAR.get());
 		add(ModBlocks.GOLDEN_DOOR.get(), this::createDoorTable);
 		dropSelf(ModBlocks.GOLDEN_TRAPDOOR.get());
+		dropSelf(ModBlocks.GOLDEN_BARS.get());
 
 		dropSelf(ModBlocks.POLISHED_AMETHYST.get());
 		addBlockStairSlab(ModBlocks.CUT_AMETHYST.get(), ModBlocks.CUT_AMETHYST_STAIRS.get(), ModBlocks.CUT_AMETHYST_SLAB.get());

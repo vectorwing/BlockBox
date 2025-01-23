@@ -1,4 +1,4 @@
-// 1.21.1	2025-01-22T21:47:03.7122091	Item Models: buildingbigger
+// 1.21.1	2025-01-23T17:44:45.4944119	Item Models: buildingbigger
 d6af8b3875876d49852b06984d80dc7a3b4f982b assets/buildingbigger/models/item/acacia_palisade.json
 a1c3b4801220dcd41530181ff0d6ef3e65fe39a7 assets/buildingbigger/models/item/acacia_seat.json
 823c69c006ebe5b16197f05e3911ed02072668dd assets/buildingbigger/models/item/birch_palisade.json
@@ -24,6 +24,7 @@ ecbc1c2ec63180c52b6e2dd3eb14a862f1959eb6 assets/buildingbigger/models/item/cut_a
 a1c019428bae829b8f0e77682d3f9febe143ab32 assets/buildingbigger/models/item/dark_oak_seat.json
 9cac9b40913d8610ff6d058e9278b6a905747179 assets/buildingbigger/models/item/exposed_copper_bars.json
 955cb23bea0ee86764b6f88d4bcb459105d30f12 assets/buildingbigger/models/item/exposed_copper_pillar.json
+c5b8cc621d84ee820c8768ddfdb271a14c47e706 assets/buildingbigger/models/item/golden_bars.json
 046799e97221a51c8b6012a17c79a03a5d1db458 assets/buildingbigger/models/item/golden_bricks.json
 fd3fc647759d8eefe80b03c3fec0dad14574bbd2 assets/buildingbigger/models/item/golden_brick_slab.json
 9a7675abc081072f0f2c58967f51da1be4677a68 assets/buildingbigger/models/item/golden_brick_stairs.json
