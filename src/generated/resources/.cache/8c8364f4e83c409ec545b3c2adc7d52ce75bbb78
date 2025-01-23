@@ -1,3 +1,5 @@
-// 1.21.1	2025-01-10T18:05:17.1217213	Tags for minecraft:item mod id vanilla
+// 1.21.1	2025-01-23T20:13:24.8181475	Tags for minecraft:item mod id vanilla
+f449d64450493a1132c75f77b3e1846db14438e0 data/buildingbigger/tags/item/golden_blocks.json
 1098fd9b78bb5635f2be70976e9ce8fcd2edd6dc data/minecraft/tags/item/doors.json
+f7a366e646842d4921bd962e9f16f43e96f2d81b data/minecraft/tags/item/piglin_loved.json
 e87e455adc84fbe453504374956bab21308a8a0f data/minecraft/tags/item/trapdoors.json

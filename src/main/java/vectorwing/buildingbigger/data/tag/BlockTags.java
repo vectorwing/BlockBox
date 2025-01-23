@@ -54,6 +54,7 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.IRON_PLATE_TRAPDOOR.get(),
 				ModBlocks.GOLDEN_TRAPDOOR.get()
 		);
+		tag(net.minecraft.tags.BlockTags.GUARDED_BY_PIGLINS).addTag(ModTags.GOLDEN_BLOCKS);
 		tag(net.minecraft.tags.BlockTags.CRYSTAL_SOUND_BLOCKS).addTag(ModTags.AMETHYST_BLOCKS);
 		tag(net.minecraft.tags.BlockTags.VIBRATION_RESONATORS).addTag(ModTags.AMETHYST_BLOCKS);
 	}
@@ -103,6 +104,18 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.CHISELED_AMETHYST.get(),
 				ModBlocks.CHISELED_AMETHYST_STAIRS.get(),
 				ModBlocks.CHISELED_AMETHYST_SLAB.get()
+		);
+
+		tag(ModTags.GOLDEN_BLOCKS).add(
+				ModBlocks.CHISELED_GOLD.get(),
+				ModBlocks.GOLDEN_TILES.get(),
+				ModBlocks.GOLDEN_BRICKS.get(),
+				ModBlocks.GOLDEN_BRICK_STAIRS.get(),
+				ModBlocks.GOLDEN_BRICK_SLAB.get(),
+				ModBlocks.GOLDEN_PILLAR.get(),
+				ModBlocks.GOLDEN_DOOR.get(),
+				ModBlocks.GOLDEN_TRAPDOOR.get(),
+				ModBlocks.GOLDEN_BARS.get()
 		);
 	}
 

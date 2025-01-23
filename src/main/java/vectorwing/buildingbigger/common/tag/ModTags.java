@@ -22,6 +22,12 @@ public class ModTags
 	// Blocks that are made out of Amethyst.
 	public static final TagKey<Block> AMETHYST_BLOCKS = modBlockTag("amethyst_blocks");
 
+	// Blocks that are made out of Gold.
+	public static final TagKey<Block> GOLDEN_BLOCKS = modBlockTag("golden_blocks");
+
+	// Item forms of blocks made out of Gold.
+	public static final TagKey<Item> GOLDEN_BLOCK_ITEMS = modItemTag("golden_blocks");
+
 	private static TagKey<Block> modBlockTag(String path) {
 		return BlockTags.create(ResourceLocation.fromNamespaceAndPath(BuildingBigger.MODID, path));
 	}
