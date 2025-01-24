@@ -57,7 +57,7 @@ public class BlockStates extends BlockStateProvider
 		doorBlockWithRenderType((DoorBlock) ModBlocks.GOLDEN_DOOR.get(), resourceBlock("golden_door_bottom"), resourceBlock("golden_door_top"), RenderType.CUTOUT.name);
 		trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.GOLDEN_TRAPDOOR.get(), resourceBlock("golden_trapdoor"), false, RenderType.CUTOUT.name);
 
-		barsBlock(ModBlocks.GOLDEN_BARS.get(), name(ModBlocks.GOLDEN_BARS.get()));
+		goldenBars(ModBlocks.GOLDEN_BARS.get(), name(ModBlocks.GOLDEN_BARS.get()));
 
 		copperBars(ModBlocks.COPPER_BARS.get(), ModBlocks.WAXED_COPPER_BARS.get());
 		copperBars(ModBlocks.EXPOSED_COPPER_BARS.get(), ModBlocks.WAXED_EXPOSED_COPPER_BARS.get());
@@ -202,12 +202,10 @@ public class BlockStates extends BlockStateProvider
 		});
 	}
 
-	private void barsBlock(Block block, String textureName) {
+	private void goldenBars(Block block, String textureName) {
 		ResourceLocation textureSide = resourceBlock(textureName);
 		ResourceLocation textureSingle = resourceBlock(textureName + "_single");
 
-		ModelFile cap = models().singleTexture(textureName + "_cap", resourceBlock("template_bars_cap"), "bars", textureSingle);
-		ModelFile capAlt = models().singleTexture(textureName + "_cap_alt", resourceBlock("template_bars_cap_alt"), "bars", textureSingle);
 		ModelFile post = models().singleTexture(textureName + "_post", resourceBlock("template_bars_post"), "bars", textureSingle);
 		ModelFile postEnds = models().singleTexture(textureName + "_post_ends", resourceBlock("template_bars_post_ends"), "edge", textureSingle);
 		ModelFile side = models().withExistingParent(textureName + "_side", resourceBlock("template_bars_side"))
@@ -225,18 +223,6 @@ public class BlockStates extends BlockStateProvider
 				.condition(PipeBlock.EAST, false)
 				.condition(PipeBlock.SOUTH, false)
 				.condition(PipeBlock.WEST, false);
-
-		PipeBlock.PROPERTY_BY_DIRECTION.forEach((dir, value) -> {
-			if (dir.getAxis().isHorizontal()) {
-				boolean isNorthEast = dir == Direction.NORTH || dir == Direction.EAST;
-
-				builder.part().modelFile(isNorthEast ? cap : capAlt).rotationY(dir.getAxis() == Direction.Axis.X ? 90 : 0).addModel()
-						.condition(PipeBlock.NORTH, dir.equals(Direction.NORTH))
-						.condition(PipeBlock.EAST, dir.equals(Direction.EAST))
-						.condition(PipeBlock.SOUTH, dir.equals(Direction.SOUTH))
-						.condition(PipeBlock.WEST, dir.equals(Direction.WEST));
-			}
-		});
 
 		PipeBlock.PROPERTY_BY_DIRECTION.forEach((dir, value) -> {
 			if (dir.getAxis().isHorizontal()) {
