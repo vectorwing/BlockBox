@@ -69,6 +69,9 @@ public class ItemModels extends ItemModelProvider
 		);
 		takeAll(items, flatBlockItems.toArray(new Item[0])).forEach(item -> itemGeneratedModel(item, resourceBlock(itemName(item))));
 
+		wallInventory(itemName(ModItems.PACKED_SNOW_BRICK_WALL.get()), resourceBlock(itemName(ModItems.PACKED_SNOW_BRICKS.get())));
+		items.remove(ModItems.PACKED_SNOW_BRICK_WALL.get());
+
 		itemGeneratedModel(ModItems.WAXED_COPPER_BARS.get(), resourceBlock(itemName(ModItems.COPPER_BARS.get())));
 		items.remove(ModItems.WAXED_COPPER_BARS.get());
 		itemGeneratedModel(ModItems.WAXED_EXPOSED_COPPER_BARS.get(), resourceBlock(itemName(ModItems.EXPOSED_COPPER_BARS.get())));

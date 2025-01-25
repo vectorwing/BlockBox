@@ -1,4 +1,4 @@
-// 1.21.1	2025-01-24T23:46:46.5177199	Tags for minecraft:block mod id buildingbigger
+// 1.21.1	2025-01-25T14:46:29.1287614	Tags for minecraft:block mod id buildingbigger
 3bfb26f79e7fc8c9e9c00c768ec83ed599f3c738 data/buildingbigger/tags/block/amethyst_blocks.json
 f449d64450493a1132c75f77b3e1846db14438e0 data/buildingbigger/tags/block/golden_blocks.json
 86881e501bbbd1c9fea8c3b144c891b5fd399ae4 data/buildingbigger/tags/block/palisades.json
@@ -11,10 +11,11 @@ af8ff324539d1413aa0e5a0287dd5b96b140bebb data/minecraft/tags/block/dragon_immune
 f7a366e646842d4921bd962e9f16f43e96f2d81b data/minecraft/tags/block/guarded_by_piglins.json
 dd628ca801e5e536c504ebcdcafa233b88f48e8c data/minecraft/tags/block/mineable/axe.json
 cdfa96de402ca598b35517f319cf8f7a1e068f38 data/minecraft/tags/block/mineable/pickaxe.json
-b5e503d8ea37daa78f44c0f65cff785a364afe5f data/minecraft/tags/block/mineable/shovel.json
+942e8eccd34f32f6bd43a0d7b5cdc81ece0f425a data/minecraft/tags/block/mineable/shovel.json
 af8ff324539d1413aa0e5a0287dd5b96b140bebb data/minecraft/tags/block/needs_diamond_tool.json
 96300a6521a815b993c310b6fd27eeee549a02a7 data/minecraft/tags/block/needs_stone_tool.json
 16d687defd9eb49378896bd3e1a5e8a83e36c6f1 data/minecraft/tags/block/slabs.json
 c62434dac7381d8b662878c9af7db632b62289ea data/minecraft/tags/block/stairs.json
 e87e455adc84fbe453504374956bab21308a8a0f data/minecraft/tags/block/trapdoors.json
 dfbed0038efc2f9fa118a77204bdab4eb79e4b04 data/minecraft/tags/block/vibration_resonators.json
+a7a93b093f4989200cf9198fa09ee6afae1d3d3e data/minecraft/tags/block/walls.json
