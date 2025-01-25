@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "buildingbigger:cut_amethyst"
+  },
+  "result": {
+    "count": 2,
+    "id": "buildingbigger:cut_amethyst_slab"
+  }
+}

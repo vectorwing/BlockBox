@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "buildingbigger:chiseled_gold"
+  },
+  "result": {
+    "count": 1,
+    "id": "buildingbigger:golden_pillar"
+  }
+}

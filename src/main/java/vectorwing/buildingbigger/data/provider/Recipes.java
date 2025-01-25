@@ -6,6 +6,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import vectorwing.buildingbigger.data.recipe.CraftingRecipes;
+import vectorwing.buildingbigger.data.recipe.StonecuttingRecipes;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.concurrent.CompletableFuture;
@@ -21,5 +22,6 @@ public class Recipes extends RecipeProvider
 	@Override
 	protected void buildRecipes(RecipeOutput output) {
 		CraftingRecipes.register(output);
+		StonecuttingRecipes.register(output);
 	}
 }

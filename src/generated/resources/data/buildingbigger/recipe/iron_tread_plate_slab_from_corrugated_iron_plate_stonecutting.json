@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "buildingbigger:corrugated_iron_plate"
+  },
+  "result": {
+    "count": 2,
+    "id": "buildingbigger:iron_tread_plate_slab"
+  }
+}
