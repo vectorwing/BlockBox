@@ -60,7 +60,7 @@ public class ModBlocks
 	public static final Supplier<Block> PACKED_ICE_BRICKS_STAIRS = BLOCKS.register("packed_ice_brick_stairs", () -> stair(ModBlocks.PACKED_ICE_BRICKS.get(), BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_ICE)));
 	public static final Supplier<Block> PACKED_ICE_BRICKS_SLAB = BLOCKS.register("packed_ice_brick_slab", () -> slab(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_ICE)));
 
-	public static final Supplier<Block> POLISHED_OBSIDIAN = BLOCKS.registerSimpleBlock("polished_obsidian", BlockBehaviour.Properties.ofFullCopy(Blocks.OBSIDIAN));
+	public static final Supplier<Block> POLISHED_OBSIDIAN = BLOCKS.register("polished_obsidian", () -> new PortalFrameBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OBSIDIAN)));
 
 	public static final Supplier<Block> COPPER_BARS = BLOCKS.register("copper_bars", () -> new WeatheringCopperBarsBlock(WeatheringCopper.WeatherState.UNAFFECTED, BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_GRATE)));
 	public static final Supplier<Block> EXPOSED_COPPER_BARS = BLOCKS.register("exposed_copper_bars", () -> new WeatheringCopperBarsBlock(WeatheringCopper.WeatherState.EXPOSED, BlockBehaviour.Properties.ofFullCopy(Blocks.EXPOSED_COPPER_GRATE)));
