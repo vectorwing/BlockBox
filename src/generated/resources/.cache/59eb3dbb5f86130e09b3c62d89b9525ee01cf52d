@@ -1,4 +1,4 @@
-// 1.21.1	2025-01-23T18:48:36.6735637	Loot Tables
+// 1.21.1	2025-01-24T23:46:46.494715	Loot Tables
 dccb7a434f98a00c31c1b7a4d8293381824cc71d data/buildingbigger/loot_table/blocks/acacia_palisade.json
 9260712b451ae4d28d5fbaa8a0d13a59f4be770e data/buildingbigger/loot_table/blocks/acacia_seat.json
 fd880075679cc26def41cd4467ea3d747ad08609 data/buildingbigger/loot_table/blocks/birch_palisade.json
@@ -56,6 +56,7 @@ b58e5e534f6e115a84111617b5b8825851eefff7 data/buildingbigger/loot_table/blocks/p
 1b836b6849c3f1452c312190d3468986a4bef4d0 data/buildingbigger/loot_table/blocks/packed_snow_brick_slab.json
 c71b24f4046f9866c672bfd44baf9b4f8895501f data/buildingbigger/loot_table/blocks/packed_snow_brick_stairs.json
 259867a4379d195b3c104a26044107acf5c4b613 data/buildingbigger/loot_table/blocks/polished_amethyst.json
+9d2341294af1878f03b9fb8bcfa1ae4b01c7de05 data/buildingbigger/loot_table/blocks/polished_obsidian.json
 af3010fa01735e93db20137f2657365d85c87a95 data/buildingbigger/loot_table/blocks/polished_packed_ice.json
 2240c5fdda907380c57419b8bc76425a896e677e data/buildingbigger/loot_table/blocks/red_sandstone_bricks.json
 c1aca6597e701f378ff8aa018612165fbcd5af3c data/buildingbigger/loot_table/blocks/red_sandstone_brick_slab.json

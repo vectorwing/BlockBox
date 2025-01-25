@@ -260,6 +260,14 @@ public class CraftingRecipes
 				.unlockedBy("has_packed_ice", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.PACKED_ICE))
 				.save(output);
 		stairAndSlab(output, ModBlocks.PACKED_ICE_BRICKS_STAIRS.get(), ModBlocks.PACKED_ICE_BRICKS_SLAB.get(), ModBlocks.PACKED_ICE_BRICKS.get());
+
+		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_OBSIDIAN.get(), 4)
+				.pattern("##")
+				.pattern("##")
+				.define('#', Blocks.OBSIDIAN)
+				.unlockedBy("has_obsidian", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.OBSIDIAN))
+				.save(output);
+
 		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_AMETHYST.get(), 4)
 				.pattern("ss")
 				.pattern("ss")

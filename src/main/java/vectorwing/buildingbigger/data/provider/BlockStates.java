@@ -43,6 +43,8 @@ public class BlockStates extends BlockStateProvider
 		simpleBlock(ModBlocks.PACKED_SNOW.get());
 		blockWithStairAndSlab(ModBlocks.PACKED_ICE_BRICKS.get(), ModBlocks.PACKED_ICE_BRICKS_STAIRS.get(), ModBlocks.PACKED_ICE_BRICKS_SLAB.get());
 
+		simpleBlock(ModBlocks.POLISHED_OBSIDIAN.get());
+
 		simpleBlock(ModBlocks.IRON_PLATE.get());
 		blockWithStairAndSlab(ModBlocks.IRON_TREAD_PLATE.get(), ModBlocks.IRON_TREAD_PLATE_STAIRS.get(), ModBlocks.IRON_TREAD_PLATE_SLAB.get());
 		simpleBlock(ModBlocks.CORRUGATED_IRON_PLATE.get());

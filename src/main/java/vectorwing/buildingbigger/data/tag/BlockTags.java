@@ -57,6 +57,7 @@ public class BlockTags extends BlockTagsProvider
 		tag(net.minecraft.tags.BlockTags.GUARDED_BY_PIGLINS).addTag(ModTags.GOLDEN_BLOCKS);
 		tag(net.minecraft.tags.BlockTags.CRYSTAL_SOUND_BLOCKS).addTag(ModTags.AMETHYST_BLOCKS);
 		tag(net.minecraft.tags.BlockTags.VIBRATION_RESONATORS).addTag(ModTags.AMETHYST_BLOCKS);
+		tag(net.minecraft.tags.BlockTags.DRAGON_IMMUNE).add(ModBlocks.POLISHED_OBSIDIAN.get());
 	}
 
 	private void registerModTags() {
@@ -144,6 +145,7 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.JAGGED_CLAY_TILES.get(),
 				ModBlocks.POLISHED_PACKED_ICE.get(),
 				ModBlocks.PACKED_ICE_BRICKS.get(),
+				ModBlocks.POLISHED_OBSIDIAN.get(),
 				ModBlocks.COPPER_BARS.get(),
 				ModBlocks.EXPOSED_COPPER_BARS.get(),
 				ModBlocks.WEATHERED_COPPER_BARS.get(),
@@ -211,5 +213,6 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.WAXED_WEATHERED_COPPER_PILLAR.get(),
 				ModBlocks.WAXED_OXIDIZED_COPPER_PILLAR.get()
 		);
+		tag(net.minecraft.tags.BlockTags.NEEDS_DIAMOND_TOOL).add(ModBlocks.POLISHED_OBSIDIAN.get());
 	}
 }

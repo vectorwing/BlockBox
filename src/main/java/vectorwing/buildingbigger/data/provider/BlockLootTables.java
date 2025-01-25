@@ -52,6 +52,8 @@ public class BlockLootTables extends BlockLootSubProvider
 		dropSelf(ModBlocks.POLISHED_PACKED_ICE.get());
 		addBlockStairSlab(ModBlocks.PACKED_ICE_BRICKS.get(), ModBlocks.PACKED_ICE_BRICKS_STAIRS.get(), ModBlocks.PACKED_ICE_BRICKS_SLAB.get());
 
+		dropSelf(ModBlocks.POLISHED_OBSIDIAN.get());
+
 		dropSelf(ModBlocks.COPPER_BARS.get());
 		dropSelf(ModBlocks.EXPOSED_COPPER_BARS.get());
 		dropSelf(ModBlocks.WEATHERED_COPPER_BARS.get());

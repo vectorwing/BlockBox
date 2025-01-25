@@ -47,6 +47,9 @@ public class StonecuttingRecipes
 		stonecutting(output, ModItems.PACKED_ICE_BRICKS.get(), ModItems.PACKED_ICE_BRICKS_STAIRS.get());
 		stonecutting(output, ModItems.PACKED_ICE_BRICKS.get(), ModItems.PACKED_ICE_BRICKS_SLAB.get(), 2);
 
+		stonecutting(output, Items.OBSIDIAN, ModItems.POLISHED_OBSIDIAN.get());
+		stonecutting(output, ModItems.POLISHED_OBSIDIAN.get(), Items.OBSIDIAN);
+
 		stonecutting(output, Items.COPPER_BLOCK, ModItems.COPPER_PILLAR.get(), 4);
 		stonecutting(output, Items.EXPOSED_COPPER, ModItems.EXPOSED_COPPER_PILLAR.get(), 4);
 		stonecutting(output, Items.WEATHERED_COPPER, ModItems.WEATHERED_COPPER_PILLAR.get(), 4);
