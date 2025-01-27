@@ -102,6 +102,8 @@ public class BlockLootTables extends BlockLootSubProvider
 		dropSelf(ModBlocks.CHERRY_SEAT.get());
 		dropSelf(ModBlocks.CRIMSON_SEAT.get());
 		dropSelf(ModBlocks.WARPED_SEAT.get());
+
+		dropSelf(ModBlocks.SKY_LANTERN.get());
 	}
 
 	protected void addBlockStairSlab(Block block, Block stair, Block slab) {

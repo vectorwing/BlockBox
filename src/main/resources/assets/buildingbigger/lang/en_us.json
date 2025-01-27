@@ -89,6 +89,7 @@
   "block.buildingbigger.cherry_seat": "Cherry Seat",
   "block.buildingbigger.crimson_seat": "Crimson Seat",
   "block.buildingbigger.warped_seat": "Warped Seat",
+  "block.buildingbigger.sky_lantern": "Sky Lantern",
 
   "item.buildingbigger.oak_palisade": "Oak Palisade",
   "item.buildingbigger.spruce_palisade": "Spruce Palisade",
@@ -180,8 +181,11 @@
   "item.buildingbigger.cherry_seat": "Cherry Seat",
   "item.buildingbigger.crimson_seat": "Crimson Seat",
   "item.buildingbigger.warped_seat": "Warped Seat",
+  "item.buildingbigger.sky_lantern": "Sky Lantern",
 
   "itemGroup.buildingbigger": "Building Bigger",
+
+  "buildingbigger.tooltip.sky_lantern": "Can be placed in mid-air",
 
   "death.attack.buildingbigger.palisade": "%1$s failed to climb a spiked palisade"
 }

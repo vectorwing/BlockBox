@@ -55,20 +55,6 @@ public class ItemModels extends ItemModelProvider
 		trapdoorModel(ModItems.IRON_PLATE_TRAPDOOR.get(), items);
 		trapdoorModel(ModItems.GOLDEN_TRAPDOOR.get(), items);
 
-		itemGeneratedModel(ModItems.IRON_PLATE_DOOR.get(), resourceItem(itemName(ModItems.IRON_PLATE_DOOR.get())));
-		items.remove(ModItems.IRON_PLATE_DOOR.get());
-		itemGeneratedModel(ModItems.GOLDEN_DOOR.get(), resourceItem(itemName(ModItems.GOLDEN_DOOR.get())));
-		items.remove(ModItems.GOLDEN_DOOR.get());
-
-		Set<Item> flatBlockItems = Sets.newHashSet(
-				ModItems.COPPER_BARS.get(),
-				ModItems.EXPOSED_COPPER_BARS.get(),
-				ModItems.WEATHERED_COPPER_BARS.get(),
-				ModItems.OXIDIZED_COPPER_BARS.get(),
-				ModItems.GOLDEN_BARS.get()
-		);
-		takeAll(items, flatBlockItems.toArray(new Item[0])).forEach(item -> itemGeneratedModel(item, resourceBlock(itemName(item))));
-
 		wallInventory(itemName(ModItems.PACKED_SNOW_BRICK_WALL.get()), resourceBlock(itemName(ModItems.PACKED_SNOW_BRICKS.get())));
 		items.remove(ModItems.PACKED_SNOW_BRICK_WALL.get());
 
@@ -89,6 +75,24 @@ public class ItemModels extends ItemModelProvider
 		items.remove(ModItems.WAXED_WEATHERED_COPPER_PILLAR.get());
 		blockBasedOnOtherModel(ModItems.WAXED_OXIDIZED_COPPER_PILLAR.get(), ModItems.OXIDIZED_COPPER_PILLAR.get());
 		items.remove(ModItems.WAXED_OXIDIZED_COPPER_PILLAR.get());
+
+		// Blocks with a flat block texture for an item
+		Set<Item> flatBlockItems = Sets.newHashSet(
+				ModItems.COPPER_BARS.get(),
+				ModItems.EXPOSED_COPPER_BARS.get(),
+				ModItems.WEATHERED_COPPER_BARS.get(),
+				ModItems.OXIDIZED_COPPER_BARS.get(),
+				ModItems.GOLDEN_BARS.get()
+		);
+		takeAll(items, flatBlockItems.toArray(new Item[0])).forEach(item -> itemGeneratedModel(item, resourceBlock(itemName(item))));
+
+		// Blocks with an unique item sprite
+		Set<Item> spritedBlockItems = Sets.newHashSet(
+				ModItems.IRON_PLATE_DOOR.get(),
+				ModItems.GOLDEN_DOOR.get(),
+				ModItems.SKY_LANTERN.get()
+		);
+		takeAll(items, spritedBlockItems.toArray(new Item[0])).forEach(item -> itemGeneratedModel(item, resourceItem(itemName(item))));
 
 		// Blocks with 3D models
 		takeAll(items, i -> i instanceof BlockItem).forEach(item -> blockBasedModel(item, ""));

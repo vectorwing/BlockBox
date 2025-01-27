@@ -7,6 +7,8 @@ import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
@@ -23,6 +25,19 @@ public class CraftingRecipes
 		craftGoldBlocks(output);
 		craftCopperBlocks(output);
 		craftFurniture(output);
+		craftSkyLanterns(output);
+	}
+
+	private static void craftSkyLanterns(RecipeOutput output) {
+		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.SKY_LANTERN.get())
+				.pattern("ppp")
+				.pattern("p p")
+				.pattern("/c/")
+				.define('p', Items.PAPER)
+				.define('/', Items.STICK)
+				.define('c', ItemTags.CANDLES)
+				.unlockedBy("has_candle", InventoryChangeTrigger.TriggerInstance.hasItems(Items.CANDLE))
+				.save(output);
 	}
 
 	private static void craftFurniture(RecipeOutput output) {

@@ -126,6 +126,13 @@ public class ModBlocks
 	public static final Supplier<Block> CRIMSON_SEAT = BLOCKS.register("crimson_seat", () -> new SeatBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRIMSON_PLANKS)));
 	public static final Supplier<Block> WARPED_SEAT = BLOCKS.register("warped_seat", () -> new SeatBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS)));
 
+	public static final Supplier<Block> SKY_LANTERN = BLOCKS.register("sky_lantern", () ->  new SkyLanternBlock(BlockBehaviour.Properties.of()
+			.mapColor(MapColor.SNOW)
+			.noOcclusion()
+			.lightLevel((state) -> 15)
+			.sound(SoundType.WOOL)
+	));
+
 	private static Block stair(Block baseBlock, BlockBehaviour.Properties properties) {
 		return new StairBlock(baseBlock.defaultBlockState(), properties);
 	}

@@ -6,6 +6,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import vectorwing.buildingbigger.BuildingBigger;
+import vectorwing.buildingbigger.common.item.SkyLanternItem;
 
 import java.util.LinkedHashSet;
 import java.util.function.Supplier;
@@ -128,4 +129,6 @@ public class ModItems
 	public static final Supplier<BlockItem> CHERRY_SEAT = registerSimpleBlockItem("cherry_seat", ModBlocks.CHERRY_SEAT);
 	public static final Supplier<BlockItem> CRIMSON_SEAT = registerSimpleBlockItem("crimson_seat", ModBlocks.CRIMSON_SEAT);
 	public static final Supplier<BlockItem> WARPED_SEAT = registerSimpleBlockItem("warped_seat", ModBlocks.WARPED_SEAT);
+
+	public static final Supplier<Item> SKY_LANTERN = registerItem("sky_lantern", () -> new SkyLanternItem(ModBlocks.SKY_LANTERN.get(), new Item.Properties()));
 }

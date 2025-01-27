@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "/": {
+      "item": "minecraft:stick"
+    },
+    "c": {
+      "tag": "minecraft:candles"
+    },
+    "p": {
+      "item": "minecraft:paper"
+    }
+  },
+  "pattern": [
+    "ppp",
+    "p p",
+    "/c/"
+  ],
+  "result": {
+    "count": 1,
+    "id": "buildingbigger:sky_lantern"
+  }
+}

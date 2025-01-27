@@ -1,4 +1,4 @@
-// 1.21.1	2025-01-25T14:40:45.5480785	Item Models: buildingbigger
+// 1.21.1	2025-01-27T18:27:54.4053546	Item Models: buildingbigger
 d6af8b3875876d49852b06984d80dc7a3b4f982b assets/buildingbigger/models/item/acacia_palisade.json
 a1c3b4801220dcd41530181ff0d6ef3e65fe39a7 assets/buildingbigger/models/item/acacia_seat.json
 823c69c006ebe5b16197f05e3911ed02072668dd assets/buildingbigger/models/item/birch_palisade.json
@@ -65,6 +65,7 @@ e2917304e8eb77a30258552d459f2d2da5069b22 assets/buildingbigger/models/item/red_s
 3251578d2ed497155724cf3d7dfd98478e32f310 assets/buildingbigger/models/item/sandstone_bricks.json
 289a34aad762ef8eaafae3db9bf2e6f8d123f0b1 assets/buildingbigger/models/item/sandstone_brick_slab.json
 0b980a1a6d25e9a035047a15d86a1e2d1a118dfc assets/buildingbigger/models/item/sandstone_brick_stairs.json
+674d9d276a514c3c629480d66d2edd08f64eb25a assets/buildingbigger/models/item/sky_lantern.json
 fa6c6d3ce90120af63cedf035451719d20813415 assets/buildingbigger/models/item/spiked_acacia_palisade.json
 4767ac02d5c426aceb0bbb4615c6609b50d3bdc9 assets/buildingbigger/models/item/spiked_birch_palisade.json
 c2344d17136f77c1eacb609f5c0be70b8eae5937 assets/buildingbigger/models/item/spiked_cherry_palisade.json

@@ -107,6 +107,8 @@ public class BlockStates extends BlockStateProvider
 		chairBlock(ModBlocks.CHERRY_SEAT.get());
 		chairBlock(ModBlocks.CRIMSON_SEAT.get());
 		chairBlock(ModBlocks.WARPED_SEAT.get());
+
+		simpleBlock(ModBlocks.SKY_LANTERN.get(), existingModel(ModBlocks.SKY_LANTERN.get()));
 	}
 
 	/**
@@ -351,5 +353,9 @@ public class BlockStates extends BlockStateProvider
 
 	private String name(Block block) {
 		return key(block).getPath();
+	}
+
+	public ModelFile existingModel(Block block) {
+		return new ModelFile.ExistingModelFile(resourceBlock(name(block)), models().existingFileHelper);
 	}
 }

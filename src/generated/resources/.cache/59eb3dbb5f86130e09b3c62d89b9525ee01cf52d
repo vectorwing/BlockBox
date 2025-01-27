@@ -1,4 +1,4 @@
-// 1.21.1	2025-01-25T14:40:45.5337719	Loot Tables
+// 1.21.1	2025-01-27T18:27:54.3881449	Loot Tables
 dccb7a434f98a00c31c1b7a4d8293381824cc71d data/buildingbigger/loot_table/blocks/acacia_palisade.json
 9260712b451ae4d28d5fbaa8a0d13a59f4be770e data/buildingbigger/loot_table/blocks/acacia_seat.json
 fd880075679cc26def41cd4467ea3d747ad08609 data/buildingbigger/loot_table/blocks/birch_palisade.json
@@ -65,6 +65,7 @@ c6c772cf1fa7d5b679cefe1d1ed59605cd72416e data/buildingbigger/loot_table/blocks/r
 594dee9dbbac3c5653c0941df13422a033e4e3cc data/buildingbigger/loot_table/blocks/sandstone_bricks.json
 4e49b2f5e702e191c45bfd7953a6c7492f812b51 data/buildingbigger/loot_table/blocks/sandstone_brick_slab.json
 8e1d8291bbd9da285b877c5c931c4508bbd84af3 data/buildingbigger/loot_table/blocks/sandstone_brick_stairs.json
+6e63f8b1a79ab28092a560f61ee934e18b9aedaa data/buildingbigger/loot_table/blocks/sky_lantern.json
 c764dd6cd7dec3a2283a9403ef8ee526c8d231cc data/buildingbigger/loot_table/blocks/spiked_acacia_palisade.json
 748f1e27bc35c492e52d9badb0c29fc47a56c650 data/buildingbigger/loot_table/blocks/spiked_birch_palisade.json
 974a256735f069c53f7b0fef86a6af2159c29640 data/buildingbigger/loot_table/blocks/spiked_cherry_palisade.json

@@ -1,4 +1,4 @@
-// 1.21.1	2025-01-25T14:40:45.5419345	Block States: buildingbigger
+// 1.21.1	2025-01-27T18:27:54.4003534	Block States: buildingbigger
 23e8d76a7560b664f47b2f9096fb30c94ea44197 assets/buildingbigger/blockstates/acacia_palisade.json
 daa12d7dc217530abd67bebefb690c88a3db69a8 assets/buildingbigger/blockstates/acacia_seat.json
 7974177d67f26d777f66fb7aad896c86b972e7c4 assets/buildingbigger/blockstates/birch_palisade.json
@@ -65,6 +65,7 @@ e5a204e0571ab1829de8e327ff10b53a987b8cf6 assets/buildingbigger/blockstates/red_s
 b9021bcf3e030e07527ec0593e06026e2f6fc277 assets/buildingbigger/blockstates/sandstone_bricks.json
 75b9b63dcef3cadda601a25f90db03b044d46e6a assets/buildingbigger/blockstates/sandstone_brick_slab.json
 b433ec59ef6d293b5d97e72be73c3cda85f072f3 assets/buildingbigger/blockstates/sandstone_brick_stairs.json
+a2286e7357e67679a835bbe6b25060b407165a00 assets/buildingbigger/blockstates/sky_lantern.json
 894bc3f57cbc79e7c6b2f426eabbd0ad0fbc4150 assets/buildingbigger/blockstates/spiked_acacia_palisade.json
 59b4179f9662b952912abe13066d8f10f4028129 assets/buildingbigger/blockstates/spiked_birch_palisade.json
 7bee968432b4a930ef6545abbbd23a75a36afe08 assets/buildingbigger/blockstates/spiked_cherry_palisade.json
