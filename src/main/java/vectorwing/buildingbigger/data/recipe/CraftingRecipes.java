@@ -117,7 +117,7 @@ public class CraftingRecipes
 		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GOLDEN_PILLAR.get(), 2)
 				.pattern("g")
 				.pattern("g")
-				.define('g', ModBlocks.GOLDEN_TILES.get())
+				.define('g', ModBlocks.CHISELED_GOLD.get())
 				.unlockedBy("has_gold_ingot", InventoryChangeTrigger.TriggerInstance.hasItems(Items.GOLD_INGOT))
 				.save(output);
 		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GOLDEN_DOOR.get(), 3)
