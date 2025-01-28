@@ -191,6 +191,7 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.GOLDEN_PILLAR.get(),
 				ModBlocks.GOLDEN_DOOR.get(),
 				ModBlocks.GOLDEN_TRAPDOOR.get(),
+				ModBlocks.GOLDEN_BARS.get(),
 				ModBlocks.POLISHED_AMETHYST.get(),
 				ModBlocks.CUT_AMETHYST.get(),
 				ModBlocks.CUT_AMETHYST_STAIRS.get(),
