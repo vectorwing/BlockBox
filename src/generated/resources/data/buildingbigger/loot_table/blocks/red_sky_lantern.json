@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "buildingbigger:sky_lantern"
+          "name": "buildingbigger:red_sky_lantern"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "buildingbigger:blocks/sky_lantern"
+  "random_sequence": "buildingbigger:blocks/red_sky_lantern"
 }

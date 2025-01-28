@@ -28,7 +28,7 @@ public class SkyLanternBlock extends Block
 	@Override
 	public void animateTick(BlockState state, Level level, BlockPos pos, RandomSource random) {
 		double x = pos.getX() + 0.5;
-		double y = pos.getY() + 0.4;
+		double y = pos.getY() + 0.2;
 		double z = pos.getZ() + 0.5;
 		float chance = random.nextFloat();
 

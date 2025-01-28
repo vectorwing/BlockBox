@@ -108,7 +108,22 @@ public class BlockStates extends BlockStateProvider
 		chairBlock(ModBlocks.CRIMSON_SEAT.get());
 		chairBlock(ModBlocks.WARPED_SEAT.get());
 
-		simpleBlock(ModBlocks.SKY_LANTERN.get(), existingModel(ModBlocks.SKY_LANTERN.get()));
+		skyLanternBlock(ModBlocks.WHITE_SKY_LANTERN.get());
+		skyLanternBlock(ModBlocks.LIGHT_GRAY_SKY_LANTERN.get());
+		skyLanternBlock(ModBlocks.GRAY_SKY_LANTERN.get());
+		skyLanternBlock(ModBlocks.BLACK_SKY_LANTERN.get());
+		skyLanternBlock(ModBlocks.BROWN_SKY_LANTERN.get());
+		skyLanternBlock(ModBlocks.RED_SKY_LANTERN.get());
+		skyLanternBlock(ModBlocks.ORANGE_SKY_LANTERN.get());
+		skyLanternBlock(ModBlocks.YELLOW_SKY_LANTERN.get());
+		skyLanternBlock(ModBlocks.LIME_SKY_LANTERN.get());
+		skyLanternBlock(ModBlocks.GREEN_SKY_LANTERN.get());
+		skyLanternBlock(ModBlocks.CYAN_SKY_LANTERN.get());
+		skyLanternBlock(ModBlocks.LIGHT_BLUE_SKY_LANTERN.get());
+		skyLanternBlock(ModBlocks.BLUE_SKY_LANTERN.get());
+		skyLanternBlock(ModBlocks.PURPLE_SKY_LANTERN.get());
+		skyLanternBlock(ModBlocks.MAGENTA_SKY_LANTERN.get());
+		skyLanternBlock(ModBlocks.PINK_SKY_LANTERN.get());
 	}
 
 	/**
@@ -320,6 +335,15 @@ public class BlockStates extends BlockStateProvider
 				.uvLock(!rotated)
 				.addModel()
 				.condition(entry.getValue(), true);
+	}
+
+	private void skyLanternBlock(Block block) {
+		String baseName = name(block);
+		simpleBlock(block, models().withExistingParent(baseName, resourceBlock("template_sky_lantern"))
+				.texture("top", resourceBlock(baseName + "_top"))
+				.texture("side", resourceBlock(baseName + "_side"))
+				.texture("bottom", resourceBlock("sky_lantern_bottom"))
+				.texture("candle", ResourceLocation.parse("block/candle_lit")));
 	}
 
 	private ModelFile modelPalisadePost(String baseName, String textureName) {

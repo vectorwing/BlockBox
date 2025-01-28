@@ -36,6 +36,24 @@ public class ItemTags extends ItemTagsProvider
 				ModItems.GOLDEN_TRAPDOOR.get(),
 				ModItems.GOLDEN_BARS.get()
 		);
+		tag(ModTags.SKY_LANTERNS).add(
+				ModItems.WHITE_SKY_LANTERN.get(),
+				ModItems.LIGHT_GRAY_SKY_LANTERN.get(),
+				ModItems.GRAY_SKY_LANTERN.get(),
+				ModItems.BLACK_SKY_LANTERN.get(),
+				ModItems.BROWN_SKY_LANTERN.get(),
+				ModItems.RED_SKY_LANTERN.get(),
+				ModItems.ORANGE_SKY_LANTERN.get(),
+				ModItems.YELLOW_SKY_LANTERN.get(),
+				ModItems.LIME_SKY_LANTERN.get(),
+				ModItems.GREEN_SKY_LANTERN.get(),
+				ModItems.CYAN_SKY_LANTERN.get(),
+				ModItems.LIGHT_BLUE_SKY_LANTERN.get(),
+				ModItems.BLUE_SKY_LANTERN.get(),
+				ModItems.PURPLE_SKY_LANTERN.get(),
+				ModItems.MAGENTA_SKY_LANTERN.get(),
+				ModItems.PINK_SKY_LANTERN.get()
+		);
 	}
 
 	private void registerMinecraftTags() {

@@ -17,6 +17,7 @@ public class ModBlocks
 	public static final BlockBehaviour.Properties PROPERTIES_PACKED_SNOW = BlockBehaviour.Properties.of().mapColor(MapColor.SNOW).strength(0.6F).sound(SoundType.SNOW);
 	public static final BlockBehaviour.Properties PROPERTIES_IRON_PLATE = BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).strength(4.0F, 6.0F).sound(SoundType.NETHERITE_BLOCK);
 	public static final BlockBehaviour.Properties PROPERTIES_PALISADE = BlockBehaviour.Properties.of().strength(2.0F).instrument(NoteBlockInstrument.BASS);
+	public static final BlockBehaviour.Properties PROPERTIES_SKY_LANTERN = BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.GUITAR).noOcclusion().lightLevel((state) -> 15).ignitedByLava().sound(SoundType.WOOL);
 
 	public static final Supplier<Block> OAK_PALISADE = BLOCKS.register("oak_palisade", () -> palisade(MapColor.WOOD));
 	public static final Supplier<Block> SPIKED_OAK_PALISADE = BLOCKS.register("spiked_oak_palisade", () -> spikedPalisade(MapColor.WOOD));
@@ -126,12 +127,22 @@ public class ModBlocks
 	public static final Supplier<Block> CRIMSON_SEAT = BLOCKS.register("crimson_seat", () -> new SeatBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRIMSON_PLANKS)));
 	public static final Supplier<Block> WARPED_SEAT = BLOCKS.register("warped_seat", () -> new SeatBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS)));
 
-	public static final Supplier<Block> SKY_LANTERN = BLOCKS.register("sky_lantern", () ->  new SkyLanternBlock(BlockBehaviour.Properties.of()
-			.mapColor(MapColor.SNOW)
-			.noOcclusion()
-			.lightLevel((state) -> 15)
-			.sound(SoundType.WOOL)
-	));
+	public static final Supplier<Block> WHITE_SKY_LANTERN = BLOCKS.register("white_sky_lantern", () ->  new SkyLanternBlock(PROPERTIES_SKY_LANTERN.mapColor(MapColor.SNOW)));
+	public static final Supplier<Block> LIGHT_GRAY_SKY_LANTERN = BLOCKS.register("light_gray_sky_lantern", () ->  new SkyLanternBlock(PROPERTIES_SKY_LANTERN.mapColor(MapColor.COLOR_LIGHT_GRAY)));
+	public static final Supplier<Block> GRAY_SKY_LANTERN = BLOCKS.register("gray_sky_lantern", () ->  new SkyLanternBlock(PROPERTIES_SKY_LANTERN.mapColor(MapColor.COLOR_GRAY)));
+	public static final Supplier<Block> BLACK_SKY_LANTERN = BLOCKS.register("black_sky_lantern", () ->  new SkyLanternBlock(PROPERTIES_SKY_LANTERN.mapColor(MapColor.COLOR_BLACK)));
+	public static final Supplier<Block> BROWN_SKY_LANTERN = BLOCKS.register("brown_sky_lantern", () ->  new SkyLanternBlock(PROPERTIES_SKY_LANTERN.mapColor(MapColor.COLOR_BROWN)));
+	public static final Supplier<Block> RED_SKY_LANTERN = BLOCKS.register("red_sky_lantern", () ->  new SkyLanternBlock(PROPERTIES_SKY_LANTERN.mapColor(MapColor.COLOR_RED)));
+	public static final Supplier<Block> ORANGE_SKY_LANTERN = BLOCKS.register("orange_sky_lantern", () ->  new SkyLanternBlock(PROPERTIES_SKY_LANTERN.mapColor(MapColor.COLOR_ORANGE)));
+	public static final Supplier<Block> YELLOW_SKY_LANTERN = BLOCKS.register("yellow_sky_lantern", () ->  new SkyLanternBlock(PROPERTIES_SKY_LANTERN.mapColor(MapColor.COLOR_YELLOW)));
+	public static final Supplier<Block> LIME_SKY_LANTERN = BLOCKS.register("lime_sky_lantern", () ->  new SkyLanternBlock(PROPERTIES_SKY_LANTERN.mapColor(MapColor.COLOR_LIGHT_GREEN)));
+	public static final Supplier<Block> GREEN_SKY_LANTERN = BLOCKS.register("green_sky_lantern", () ->  new SkyLanternBlock(PROPERTIES_SKY_LANTERN.mapColor(MapColor.COLOR_GREEN)));
+	public static final Supplier<Block> CYAN_SKY_LANTERN = BLOCKS.register("cyan_sky_lantern", () ->  new SkyLanternBlock(PROPERTIES_SKY_LANTERN.mapColor(MapColor.COLOR_CYAN)));
+	public static final Supplier<Block> LIGHT_BLUE_SKY_LANTERN = BLOCKS.register("light_blue_sky_lantern", () ->  new SkyLanternBlock(PROPERTIES_SKY_LANTERN.mapColor(MapColor.COLOR_LIGHT_BLUE)));
+	public static final Supplier<Block> BLUE_SKY_LANTERN = BLOCKS.register("blue_sky_lantern", () ->  new SkyLanternBlock(PROPERTIES_SKY_LANTERN.mapColor(MapColor.COLOR_BLUE)));
+	public static final Supplier<Block> PURPLE_SKY_LANTERN = BLOCKS.register("purple_sky_lantern", () ->  new SkyLanternBlock(PROPERTIES_SKY_LANTERN.mapColor(MapColor.COLOR_PURPLE)));
+	public static final Supplier<Block> MAGENTA_SKY_LANTERN = BLOCKS.register("magenta_sky_lantern", () ->  new SkyLanternBlock(PROPERTIES_SKY_LANTERN.mapColor(MapColor.COLOR_MAGENTA)));
+	public static final Supplier<Block> PINK_SKY_LANTERN = BLOCKS.register("pink_sky_lantern", () ->  new SkyLanternBlock(PROPERTIES_SKY_LANTERN.mapColor(MapColor.COLOR_PINK)));
 
 	private static Block stair(Block baseBlock, BlockBehaviour.Properties properties) {
 		return new StairBlock(baseBlock.defaultBlockState(), properties);

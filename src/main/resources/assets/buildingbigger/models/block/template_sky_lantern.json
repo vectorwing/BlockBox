@@ -3,31 +3,30 @@
 	"parent": "block/block",
 	"render_type": "minecraft:cutout",
 	"textures": {
-		"particle": "buildingbigger:block/sky_lantern_side",
-		"top": "buildingbigger:block/sky_lantern_top",
-		"side": "buildingbigger:block/sky_lantern_side",
-		"bottom": "buildingbigger:block/sky_lantern_bottom",
+		"particle": "#side",
+		"top": "#top",
+		"side": "#side",
+		"bottom": "#bottom",
 		"candle": "minecraft:block/candle_lit"
 	},
 	"elements": [
 		{
 			"name": "body",
 			"from": [7, 0.001, 7],
-			"to": [9, 4.001, 9],
+			"to": [9, 2.001, 9],
 			"faces": {
-				"north": {"uv": [0, 8, 2, 12], "texture": "#candle"},
-				"east": {"uv": [0, 8, 2, 12], "texture": "#candle"},
-				"south": {"uv": [0, 8, 2, 12], "texture": "#candle"},
-				"west": {"uv": [0, 8, 2, 12], "texture": "#candle"},
-				"up": {"uv": [0, 6, 2, 8], "texture": "#candle"},
-				"down": {"uv": [0, 14, 2, 16], "texture": "#candle"}
+				"north": {"uv": [0, 8, 2, 10], "texture": "#candle"},
+				"east": {"uv": [0, 8, 2, 10], "texture": "#candle"},
+				"south": {"uv": [0, 8, 2, 10], "texture": "#candle"},
+				"west": {"uv": [0, 8, 2, 10], "texture": "#candle"},
+				"up": {"uv": [0, 6, 2, 8], "texture": "#candle"}
 			}
 		},
 		{
 			"name": "wick A",
-			"from": [7.5, 4, 8],
-			"to": [8.5, 5, 8],
-			"rotation": {"angle": 45, "axis": "y", "origin": [8, 4, 8]},
+			"from": [7.5, 2, 8],
+			"to": [8.5, 3, 8],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 2, 8]},
 			"faces": {
 				"north": {"uv": [0, 5, 1, 6], "texture": "#candle"},
 				"south": {"uv": [0, 5, 1, 6], "texture": "#candle"}
@@ -35,9 +34,9 @@
 		},
 		{
 			"name": "wick B",
-			"from": [7.5, 4, 8],
-			"to": [8.5, 5, 8],
-			"rotation": {"angle": -45, "axis": "y", "origin": [8, 4, 8]},
+			"from": [7.5, 2, 8],
+			"to": [8.5, 3, 8],
+			"rotation": {"angle": -45, "axis": "y", "origin": [8, 2, 8]},
 			"faces": {
 				"north": {"uv": [0, 5, 1, 6], "texture": "#candle"},
 				"south": {"uv": [0, 5, 1, 6], "texture": "#candle"}

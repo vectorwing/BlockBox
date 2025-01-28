@@ -7,14 +7,17 @@ import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.Tags;
 import vectorwing.buildingbigger.BuildingBigger;
 import vectorwing.buildingbigger.common.registry.ModBlocks;
+import vectorwing.buildingbigger.common.registry.ModItems;
+import vectorwing.buildingbigger.common.tag.ModTags;
 
 public class CraftingRecipes
 {
@@ -29,15 +32,31 @@ public class CraftingRecipes
 	}
 
 	private static void craftSkyLanterns(RecipeOutput output) {
-		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.SKY_LANTERN.get())
+		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.WHITE_SKY_LANTERN.get())
 				.pattern("ppp")
 				.pattern("p p")
 				.pattern("/c/")
 				.define('p', Items.PAPER)
-				.define('/', Items.STICK)
+				.define('/', Items.STRING)
 				.define('c', ItemTags.CANDLES)
 				.unlockedBy("has_candle", InventoryChangeTrigger.TriggerInstance.hasItems(Items.CANDLE))
 				.save(output);
+		dyeItem(output, ModItems.WHITE_SKY_LANTERN.get(), Items.WHITE_DYE, ModTags.SKY_LANTERNS, Tags.Items.DYES_WHITE);
+		dyeItem(output, ModItems.LIGHT_GRAY_SKY_LANTERN.get(), Items.LIGHT_GRAY_DYE, ModTags.SKY_LANTERNS, Tags.Items.DYES_LIGHT_GRAY);
+		dyeItem(output, ModItems.GRAY_SKY_LANTERN.get(), Items.GRAY_DYE, ModTags.SKY_LANTERNS, Tags.Items.DYES_GRAY);
+		dyeItem(output, ModItems.BLACK_SKY_LANTERN.get(), Items.BLACK_DYE, ModTags.SKY_LANTERNS, Tags.Items.DYES_BLACK);
+		dyeItem(output, ModItems.BROWN_SKY_LANTERN.get(), Items.BROWN_DYE, ModTags.SKY_LANTERNS, Tags.Items.DYES_BROWN);
+		dyeItem(output, ModItems.RED_SKY_LANTERN.get(), Items.RED_DYE, ModTags.SKY_LANTERNS, Tags.Items.DYES_RED);
+		dyeItem(output, ModItems.ORANGE_SKY_LANTERN.get(), Items.ORANGE_DYE, ModTags.SKY_LANTERNS, Tags.Items.DYES_ORANGE);
+		dyeItem(output, ModItems.YELLOW_SKY_LANTERN.get(), Items.YELLOW_DYE, ModTags.SKY_LANTERNS, Tags.Items.DYES_YELLOW);
+		dyeItem(output, ModItems.LIME_SKY_LANTERN.get(), Items.LIME_DYE, ModTags.SKY_LANTERNS, Tags.Items.DYES_LIME);
+		dyeItem(output, ModItems.GREEN_SKY_LANTERN.get(), Items.GREEN_DYE, ModTags.SKY_LANTERNS, Tags.Items.DYES_GREEN);
+		dyeItem(output, ModItems.CYAN_SKY_LANTERN.get(), Items.CYAN_DYE, ModTags.SKY_LANTERNS, Tags.Items.DYES_CYAN);
+		dyeItem(output, ModItems.LIGHT_BLUE_SKY_LANTERN.get(), Items.LIGHT_BLUE_DYE, ModTags.SKY_LANTERNS, Tags.Items.DYES_LIGHT_BLUE);
+		dyeItem(output, ModItems.BLUE_SKY_LANTERN.get(), Items.BLUE_DYE, ModTags.SKY_LANTERNS, Tags.Items.DYES_BLUE);
+		dyeItem(output, ModItems.PURPLE_SKY_LANTERN.get(), Items.PURPLE_DYE, ModTags.SKY_LANTERNS, Tags.Items.DYES_PURPLE);
+		dyeItem(output, ModItems.MAGENTA_SKY_LANTERN.get(), Items.MAGENTA_DYE, ModTags.SKY_LANTERNS, Tags.Items.DYES_MAGENTA);
+		dyeItem(output, ModItems.PINK_SKY_LANTERN.get(), Items.PINK_DYE, ModTags.SKY_LANTERNS, Tags.Items.DYES_PINK);
 	}
 
 	private static void craftFurniture(RecipeOutput output) {
@@ -374,6 +393,18 @@ public class CraftingRecipes
 				.group("bb_chairs")
 				.unlockedBy("has_matching_plank", InventoryChangeTrigger.TriggerInstance.hasItems(plank))
 				.save(output);
+	}
+
+	private static void dyeItem(RecipeOutput output, ItemLike result, ItemLike mainDye, TagKey<Item> itemTag, TagKey<Item> dyeTag) {
+		ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.WHITE_SKY_LANTERN.get())
+				.requires(dyeTag)
+				.requires(itemTag)
+				.unlockedBy("has_needed_dye", InventoryChangeTrigger.TriggerInstance.hasItems(mainDye))
+				.save(output, nameDye(result));
+	}
+
+	private static ResourceLocation nameDye(ItemLike item) {
+		return ResourceLocation.fromNamespaceAndPath(BuildingBigger.MODID, "dye_" + itemName(item));
 	}
 
 	private static ResourceLocation customName(String name) {

@@ -130,5 +130,20 @@ public class ModItems
 	public static final Supplier<BlockItem> CRIMSON_SEAT = registerSimpleBlockItem("crimson_seat", ModBlocks.CRIMSON_SEAT);
 	public static final Supplier<BlockItem> WARPED_SEAT = registerSimpleBlockItem("warped_seat", ModBlocks.WARPED_SEAT);
 
-	public static final Supplier<Item> SKY_LANTERN = registerItem("sky_lantern", () -> new SkyLanternItem(ModBlocks.SKY_LANTERN.get(), new Item.Properties()));
+	public static final Supplier<Item> WHITE_SKY_LANTERN = registerItem("white_sky_lantern", () -> new SkyLanternItem(ModBlocks.WHITE_SKY_LANTERN.get(), new Item.Properties()));
+	public static final Supplier<Item> LIGHT_GRAY_SKY_LANTERN = registerItem("light_gray_sky_lantern", () -> new SkyLanternItem(ModBlocks.LIGHT_GRAY_SKY_LANTERN.get(), new Item.Properties()));
+	public static final Supplier<Item> GRAY_SKY_LANTERN = registerItem("gray_sky_lantern", () -> new SkyLanternItem(ModBlocks.GRAY_SKY_LANTERN.get(), new Item.Properties()));
+	public static final Supplier<Item> BLACK_SKY_LANTERN = registerItem("black_sky_lantern", () -> new SkyLanternItem(ModBlocks.BLACK_SKY_LANTERN.get(), new Item.Properties()));
+	public static final Supplier<Item> BROWN_SKY_LANTERN = registerItem("brown_sky_lantern", () -> new SkyLanternItem(ModBlocks.BROWN_SKY_LANTERN.get(), new Item.Properties()));
+	public static final Supplier<Item> RED_SKY_LANTERN = registerItem("red_sky_lantern", () -> new SkyLanternItem(ModBlocks.RED_SKY_LANTERN.get(), new Item.Properties()));
+	public static final Supplier<Item> ORANGE_SKY_LANTERN = registerItem("orange_sky_lantern", () -> new SkyLanternItem(ModBlocks.ORANGE_SKY_LANTERN.get(), new Item.Properties()));
+	public static final Supplier<Item> YELLOW_SKY_LANTERN = registerItem("yellow_sky_lantern", () -> new SkyLanternItem(ModBlocks.YELLOW_SKY_LANTERN.get(), new Item.Properties()));
+	public static final Supplier<Item> LIME_SKY_LANTERN = registerItem("lime_sky_lantern", () -> new SkyLanternItem(ModBlocks.LIME_SKY_LANTERN.get(), new Item.Properties()));
+	public static final Supplier<Item> GREEN_SKY_LANTERN = registerItem("green_sky_lantern", () -> new SkyLanternItem(ModBlocks.GREEN_SKY_LANTERN.get(), new Item.Properties()));
+	public static final Supplier<Item> CYAN_SKY_LANTERN = registerItem("cyan_sky_lantern", () -> new SkyLanternItem(ModBlocks.CYAN_SKY_LANTERN.get(), new Item.Properties()));
+	public static final Supplier<Item> LIGHT_BLUE_SKY_LANTERN = registerItem("light_blue_sky_lantern", () -> new SkyLanternItem(ModBlocks.LIGHT_BLUE_SKY_LANTERN.get(), new Item.Properties()));
+	public static final Supplier<Item> BLUE_SKY_LANTERN = registerItem("blue_sky_lantern", () -> new SkyLanternItem(ModBlocks.BLUE_SKY_LANTERN.get(), new Item.Properties()));
+	public static final Supplier<Item> PURPLE_SKY_LANTERN = registerItem("purple_sky_lantern", () -> new SkyLanternItem(ModBlocks.PURPLE_SKY_LANTERN.get(), new Item.Properties()));
+	public static final Supplier<Item> MAGENTA_SKY_LANTERN = registerItem("magenta_sky_lantern", () -> new SkyLanternItem(ModBlocks.MAGENTA_SKY_LANTERN.get(), new Item.Properties()));
+	public static final Supplier<Item> PINK_SKY_LANTERN = registerItem("pink_sky_lantern", () -> new SkyLanternItem(ModBlocks.PINK_SKY_LANTERN.get(), new Item.Properties()));
 }

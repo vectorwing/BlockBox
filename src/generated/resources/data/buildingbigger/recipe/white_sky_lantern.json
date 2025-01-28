@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "/": {
-      "item": "minecraft:stick"
+      "item": "minecraft:string"
     },
     "c": {
       "tag": "minecraft:candles"
@@ -19,6 +19,6 @@
   ],
   "result": {
     "count": 1,
-    "id": "buildingbigger:sky_lantern"
+    "id": "buildingbigger:white_sky_lantern"
   }
 }

@@ -103,7 +103,22 @@ public class BlockLootTables extends BlockLootSubProvider
 		dropSelf(ModBlocks.CRIMSON_SEAT.get());
 		dropSelf(ModBlocks.WARPED_SEAT.get());
 
-		dropSelf(ModBlocks.SKY_LANTERN.get());
+		dropSelf(ModBlocks.WHITE_SKY_LANTERN.get());
+		dropSelf(ModBlocks.LIGHT_GRAY_SKY_LANTERN.get());
+		dropSelf(ModBlocks.GRAY_SKY_LANTERN.get());
+		dropSelf(ModBlocks.BLACK_SKY_LANTERN.get());
+		dropSelf(ModBlocks.BROWN_SKY_LANTERN.get());
+		dropSelf(ModBlocks.RED_SKY_LANTERN.get());
+		dropSelf(ModBlocks.ORANGE_SKY_LANTERN.get());
+		dropSelf(ModBlocks.YELLOW_SKY_LANTERN.get());
+		dropSelf(ModBlocks.LIME_SKY_LANTERN.get());
+		dropSelf(ModBlocks.GREEN_SKY_LANTERN.get());
+		dropSelf(ModBlocks.CYAN_SKY_LANTERN.get());
+		dropSelf(ModBlocks.LIGHT_BLUE_SKY_LANTERN.get());
+		dropSelf(ModBlocks.BLUE_SKY_LANTERN.get());
+		dropSelf(ModBlocks.PURPLE_SKY_LANTERN.get());
+		dropSelf(ModBlocks.MAGENTA_SKY_LANTERN.get());
+		dropSelf(ModBlocks.PINK_SKY_LANTERN.get());
 	}
 
 	protected void addBlockStairSlab(Block block, Block stair, Block slab) {

@@ -28,6 +28,9 @@ public class ModTags
 	// Item forms of blocks made out of Gold.
 	public static final TagKey<Item> GOLDEN_BLOCK_ITEMS = modItemTag("golden_blocks");
 
+	// Item forms of sky lanterns.
+	public static final TagKey<Item> SKY_LANTERNS = modItemTag("sky_lanterns");
+
 	private static TagKey<Block> modBlockTag(String path) {
 		return BlockTags.create(ResourceLocation.fromNamespaceAndPath(BuildingBigger.MODID, path));
 	}

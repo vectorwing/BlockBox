@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "c:dyes/purple"
+    },
+    {
+      "tag": "buildingbigger:sky_lanterns"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "buildingbigger:white_sky_lantern"
+  }
+}
