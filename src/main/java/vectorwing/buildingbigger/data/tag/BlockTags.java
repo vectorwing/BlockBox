@@ -122,12 +122,22 @@ public class BlockTags extends BlockTagsProvider
 	}
 
 	protected void registerCommonTags() {
-		tag(Tags.Blocks.SANDSTONE_BLOCKS).add(
-				ModBlocks.SANDSTONE_BRICKS.get(),
-				ModBlocks.SANDSTONE_BRICK_STAIRS.get(),
-				ModBlocks.SANDSTONE_BRICK_SLAB.get(),
-				ModBlocks.RED_SANDSTONE_BRICKS.get(),
-				ModBlocks.RED_SANDSTONE_BRICK_STAIRS.get(),
+		tag(Tags.Blocks.SANDSTONE_UNCOLORED_BLOCKS).add(
+				ModBlocks.SANDSTONE_BRICKS.get()
+		);
+		tag(Tags.Blocks.SANDSTONE_UNCOLORED_STAIRS).add(
+				ModBlocks.SANDSTONE_BRICK_STAIRS.get()
+		);
+		tag(Tags.Blocks.SANDSTONE_UNCOLORED_SLABS).add(
+				ModBlocks.SANDSTONE_BRICK_SLAB.get()
+		);
+		tag(Tags.Blocks.SANDSTONE_RED_BLOCKS).add(
+				ModBlocks.RED_SANDSTONE_BRICKS.get()
+		);
+		tag(Tags.Blocks.SANDSTONE_RED_STAIRS).add(
+				ModBlocks.RED_SANDSTONE_BRICK_STAIRS.get()
+		);
+		tag(Tags.Blocks.SANDSTONE_RED_SLABS).add(
 				ModBlocks.RED_SANDSTONE_BRICK_SLAB.get()
 		);
 	}
@@ -146,6 +156,8 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.JAGGED_CLAY_TILES.get(),
 				ModBlocks.POLISHED_PACKED_ICE.get(),
 				ModBlocks.PACKED_ICE_BRICKS.get(),
+				ModBlocks.PACKED_ICE_BRICKS_STAIRS.get(),
+				ModBlocks.PACKED_ICE_BRICKS_SLAB.get(),
 				ModBlocks.POLISHED_OBSIDIAN.get(),
 				ModBlocks.COPPER_BARS.get(),
 				ModBlocks.EXPOSED_COPPER_BARS.get(),

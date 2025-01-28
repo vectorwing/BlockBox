@@ -1,16 +1,21 @@
-// 1.21.1	2025-01-25T14:46:29.1287614	Tags for minecraft:block mod id buildingbigger
+// 1.21.1	2025-01-27T22:10:54.9045648	Tags for minecraft:block mod id buildingbigger
 3bfb26f79e7fc8c9e9c00c768ec83ed599f3c738 data/buildingbigger/tags/block/amethyst_blocks.json
 f449d64450493a1132c75f77b3e1846db14438e0 data/buildingbigger/tags/block/golden_blocks.json
 86881e501bbbd1c9fea8c3b144c891b5fd399ae4 data/buildingbigger/tags/block/palisades.json
 0007636dd3dbdf166831b44cd067dcb96a20b1bc data/buildingbigger/tags/block/spiked_palisades.json
 51b9a62d11026ae68a2e4afd96e7372d5613b692 data/buildingbigger/tags/block/wooden_seats.json
-26c42debf204507d9c1f68f52c536b8ae4bad52a data/c/tags/block/sandstone/blocks.json
+26b10b2ec5eacb2ba28ae08ebb99e8d04ba84975 data/c/tags/block/sandstone/red_blocks.json
+5acf28d5b7b3eff8fdfcefaf2e7aaf1201409e8c data/c/tags/block/sandstone/red_slabs.json
+8494b55e91d0fdd603717b09ff047b4212e5117c data/c/tags/block/sandstone/red_stairs.json
+f684e02aef1b86261cd7463cd1b58417d25d33a5 data/c/tags/block/sandstone/uncolored_blocks.json
+d38a615fb1369ae07da25db2240bb7262fc0a202 data/c/tags/block/sandstone/uncolored_slabs.json
+2272021c67f7df4b6e436bac970acd2023264aa5 data/c/tags/block/sandstone/uncolored_stairs.json
 dfbed0038efc2f9fa118a77204bdab4eb79e4b04 data/minecraft/tags/block/crystal_sound_blocks.json
 1098fd9b78bb5635f2be70976e9ce8fcd2edd6dc data/minecraft/tags/block/doors.json
 af8ff324539d1413aa0e5a0287dd5b96b140bebb data/minecraft/tags/block/dragon_immune.json
 f7a366e646842d4921bd962e9f16f43e96f2d81b data/minecraft/tags/block/guarded_by_piglins.json
 dd628ca801e5e536c504ebcdcafa233b88f48e8c data/minecraft/tags/block/mineable/axe.json
-cdfa96de402ca598b35517f319cf8f7a1e068f38 data/minecraft/tags/block/mineable/pickaxe.json
+3132990c0ad2edcff1f5fa140bb63cad917146cd data/minecraft/tags/block/mineable/pickaxe.json
 942e8eccd34f32f6bd43a0d7b5cdc81ece0f425a data/minecraft/tags/block/mineable/shovel.json
 af8ff324539d1413aa0e5a0287dd5b96b140bebb data/minecraft/tags/block/needs_diamond_tool.json
 96300a6521a815b993c310b6fd27eeee549a02a7 data/minecraft/tags/block/needs_stone_tool.json
