@@ -2,7 +2,7 @@
   "parent": "buildingbigger:block/template_sky_lantern",
   "textures": {
     "bottom": "buildingbigger:block/sky_lantern_bottom",
-    "candle": "minecraft:block/candle_lit",
+    "candle": "minecraft:block/red_candle_lit",
     "side": "buildingbigger:block/red_sky_lantern_side",
     "top": "buildingbigger:block/red_sky_lantern_top"
   }

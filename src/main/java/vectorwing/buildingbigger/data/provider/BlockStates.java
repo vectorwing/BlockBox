@@ -6,6 +6,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.Half;
@@ -108,22 +109,22 @@ public class BlockStates extends BlockStateProvider
 		chairBlock(ModBlocks.CRIMSON_SEAT.get());
 		chairBlock(ModBlocks.WARPED_SEAT.get());
 
-		skyLanternBlock(ModBlocks.WHITE_SKY_LANTERN.get());
-		skyLanternBlock(ModBlocks.LIGHT_GRAY_SKY_LANTERN.get());
-		skyLanternBlock(ModBlocks.GRAY_SKY_LANTERN.get());
-		skyLanternBlock(ModBlocks.BLACK_SKY_LANTERN.get());
-		skyLanternBlock(ModBlocks.BROWN_SKY_LANTERN.get());
-		skyLanternBlock(ModBlocks.RED_SKY_LANTERN.get());
-		skyLanternBlock(ModBlocks.ORANGE_SKY_LANTERN.get());
-		skyLanternBlock(ModBlocks.YELLOW_SKY_LANTERN.get());
-		skyLanternBlock(ModBlocks.LIME_SKY_LANTERN.get());
-		skyLanternBlock(ModBlocks.GREEN_SKY_LANTERN.get());
-		skyLanternBlock(ModBlocks.CYAN_SKY_LANTERN.get());
-		skyLanternBlock(ModBlocks.LIGHT_BLUE_SKY_LANTERN.get());
-		skyLanternBlock(ModBlocks.BLUE_SKY_LANTERN.get());
-		skyLanternBlock(ModBlocks.PURPLE_SKY_LANTERN.get());
-		skyLanternBlock(ModBlocks.MAGENTA_SKY_LANTERN.get());
-		skyLanternBlock(ModBlocks.PINK_SKY_LANTERN.get());
+		skyLanternBlock(ModBlocks.WHITE_SKY_LANTERN.get(), Blocks.WHITE_CANDLE);
+		skyLanternBlock(ModBlocks.LIGHT_GRAY_SKY_LANTERN.get(), Blocks.LIGHT_GRAY_CANDLE);
+		skyLanternBlock(ModBlocks.GRAY_SKY_LANTERN.get(), Blocks.GRAY_CANDLE);
+		skyLanternBlock(ModBlocks.BLACK_SKY_LANTERN.get(), Blocks.BLACK_CANDLE);
+		skyLanternBlock(ModBlocks.BROWN_SKY_LANTERN.get(), Blocks.BROWN_CANDLE);
+		skyLanternBlock(ModBlocks.RED_SKY_LANTERN.get(), Blocks.RED_CANDLE);
+		skyLanternBlock(ModBlocks.ORANGE_SKY_LANTERN.get(), Blocks.ORANGE_CANDLE);
+		skyLanternBlock(ModBlocks.YELLOW_SKY_LANTERN.get(), Blocks.YELLOW_CANDLE);
+		skyLanternBlock(ModBlocks.LIME_SKY_LANTERN.get(), Blocks.LIME_CANDLE);
+		skyLanternBlock(ModBlocks.GREEN_SKY_LANTERN.get(), Blocks.GREEN_CANDLE);
+		skyLanternBlock(ModBlocks.CYAN_SKY_LANTERN.get(), Blocks.CYAN_CANDLE);
+		skyLanternBlock(ModBlocks.LIGHT_BLUE_SKY_LANTERN.get(), Blocks.LIGHT_BLUE_CANDLE);
+		skyLanternBlock(ModBlocks.BLUE_SKY_LANTERN.get(), Blocks.BLUE_CANDLE);
+		skyLanternBlock(ModBlocks.PURPLE_SKY_LANTERN.get(), Blocks.PURPLE_CANDLE);
+		skyLanternBlock(ModBlocks.MAGENTA_SKY_LANTERN.get(), Blocks.MAGENTA_CANDLE);
+		skyLanternBlock(ModBlocks.PINK_SKY_LANTERN.get(), Blocks.PINK_CANDLE);
 	}
 
 	/**
@@ -337,13 +338,14 @@ public class BlockStates extends BlockStateProvider
 				.condition(entry.getValue(), true);
 	}
 
-	private void skyLanternBlock(Block block) {
+	private void skyLanternBlock(Block block, Block candle) {
 		String baseName = name(block);
 		simpleBlock(block, models().withExistingParent(baseName, resourceBlock("template_sky_lantern"))
 				.texture("top", resourceBlock(baseName + "_top"))
 				.texture("side", resourceBlock(baseName + "_side"))
 				.texture("bottom", resourceBlock("sky_lantern_bottom"))
-				.texture("candle", ResourceLocation.parse("block/candle_lit")));
+				.texture("candle", resourceMcBlock(name(candle) + "_lit"))
+		);
 	}
 
 	private ModelFile modelPalisadePost(String baseName, String textureName) {
@@ -369,6 +371,10 @@ public class BlockStates extends BlockStateProvider
 
 	public static ResourceLocation resourceBlock(String name) {
 		return ResourceLocation.fromNamespaceAndPath(BuildingBigger.MODID, ModelProvider.BLOCK_FOLDER + "/" + name);
+	}
+
+	public static ResourceLocation resourceMcBlock(String name) {
+		return ResourceLocation.parse(ModelProvider.BLOCK_FOLDER + "/" + name);
 	}
 
 	private static ResourceLocation key(Block block) {

@@ -396,7 +396,7 @@ public class CraftingRecipes
 	}
 
 	private static void dyeItem(RecipeOutput output, ItemLike result, ItemLike mainDye, TagKey<Item> itemTag, TagKey<Item> dyeTag) {
-		ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.WHITE_SKY_LANTERN.get())
+		ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, result)
 				.requires(dyeTag)
 				.requires(itemTag)
 				.unlockedBy("has_needed_dye", InventoryChangeTrigger.TriggerInstance.hasItems(mainDye))

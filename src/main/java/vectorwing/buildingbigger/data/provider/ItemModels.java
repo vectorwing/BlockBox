@@ -89,22 +89,22 @@ public class ItemModels extends ItemModelProvider
 		Set<Item> spritedBlockItems = Sets.newHashSet(
 				ModItems.IRON_PLATE_DOOR.get(),
 				ModItems.GOLDEN_DOOR.get(),
-				ModItems.WHITE_SKY_LANTERN.get()
-//				ModItems.LIGHT_GRAY_SKY_LANTERN.get(),
-//				ModItems.GRAY_SKY_LANTERN.get(),
-//				ModItems.BLACK_SKY_LANTERN.get(),
-//				ModItems.BROWN_SKY_LANTERN.get(),
-//				ModItems.RED_SKY_LANTERN.get(),
-//				ModItems.ORANGE_SKY_LANTERN.get(),
-//				ModItems.YELLOW_SKY_LANTERN.get(),
-//				ModItems.LIME_SKY_LANTERN.get(),
-//				ModItems.GREEN_SKY_LANTERN.get(),
-//				ModItems.CYAN_SKY_LANTERN.get(),
-//				ModItems.LIGHT_BLUE_SKY_LANTERN.get(),
-//				ModItems.BLUE_SKY_LANTERN.get(),
-//				ModItems.PURPLE_SKY_LANTERN.get(),
-//				ModItems.MAGENTA_SKY_LANTERN.get(),
-//				ModItems.PINK_SKY_LANTERN.get()
+				ModItems.WHITE_SKY_LANTERN.get(),
+				ModItems.LIGHT_GRAY_SKY_LANTERN.get(),
+				ModItems.GRAY_SKY_LANTERN.get(),
+				ModItems.BLACK_SKY_LANTERN.get(),
+				ModItems.BROWN_SKY_LANTERN.get(),
+				ModItems.RED_SKY_LANTERN.get(),
+				ModItems.ORANGE_SKY_LANTERN.get(),
+				ModItems.YELLOW_SKY_LANTERN.get(),
+				ModItems.LIME_SKY_LANTERN.get(),
+				ModItems.GREEN_SKY_LANTERN.get(),
+				ModItems.CYAN_SKY_LANTERN.get(),
+				ModItems.LIGHT_BLUE_SKY_LANTERN.get(),
+				ModItems.BLUE_SKY_LANTERN.get(),
+				ModItems.PURPLE_SKY_LANTERN.get(),
+				ModItems.MAGENTA_SKY_LANTERN.get(),
+				ModItems.PINK_SKY_LANTERN.get()
 		);
 		takeAll(items, spritedBlockItems.toArray(new Item[0])).forEach(item -> itemGeneratedModel(item, resourceItem(itemName(item))));
 

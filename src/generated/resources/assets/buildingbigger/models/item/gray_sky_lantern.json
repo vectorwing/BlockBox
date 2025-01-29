@@ -1,3 +1,6 @@
 {
-  "parent": "buildingbigger:block/gray_sky_lantern"
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "buildingbigger:item/gray_sky_lantern"
+  }
 }
