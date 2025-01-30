@@ -2,15 +2,14 @@ package vectorwing.blockbox.data.recipe;
 
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.data.recipes.RecipeCategory;
-import net.minecraft.data.recipes.RecipeOutput;
-import net.minecraft.data.recipes.ShapedRecipeBuilder;
-import net.minecraft.data.recipes.ShapelessRecipeBuilder;
+import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.SmeltingRecipe;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.Tags;
@@ -22,6 +21,11 @@ import vectorwing.blockbox.common.tag.ModTags;
 public class CraftingRecipes
 {
 	public static void register(RecipeOutput output) {
+		// TODO: Move this to its own class.
+		SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModBlocks.CLAY_TILES.get()), RecipeCategory.BUILDING_BLOCKS, ModItems.JAGGED_CLAY_TILES.get(), 0.1F, 200)
+				.unlockedBy("has_clay_tiles", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.CLAY_TILES.get()))
+						.save(output);
+
 		craftBasicBlocks(output);
 		craftTools(output);
 		craftPalisades(output);

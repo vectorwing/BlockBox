@@ -215,7 +215,7 @@
   "item.blockbox.magenta_sky_lantern": "Magenta Sky Lantern",
   "item.blockbox.pink_sky_lantern": "Pink Sky Lantern",
 
-  "itemGroup.blockbox": "Building Bigger",
+  "itemGroup.blockbox": "Block Box",
 
   "blockbox.tooltip.sky_lantern": "Can be placed in mid-air",
   "blockbox.item.mallet.failure": "Can't push...",
