@@ -108,6 +108,9 @@ public class ItemModels extends ItemModelProvider
 		);
 		takeAll(items, spritedBlockItems.toArray(new Item[0])).forEach(item -> itemGeneratedModel(item, resourceItem(itemName(item))));
 
+		handheldItem(ModItems.MALLET.get());
+		items.remove(ModItems.MALLET.get());
+
 		// Blocks with 3D models
 		takeAll(items, i -> i instanceof BlockItem).forEach(item -> blockBasedModel(item, ""));
 	}

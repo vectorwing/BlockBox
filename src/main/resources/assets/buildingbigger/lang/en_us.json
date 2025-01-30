@@ -106,6 +106,8 @@
   "block.buildingbigger.magenta_sky_lantern": "Magenta Sky Lantern",
   "block.buildingbigger.pink_sky_lantern": "Pink Sky Lantern",
 
+  "item.buildingbigger.mallet": "Mallet",
+
   "item.buildingbigger.oak_palisade": "Oak Palisade",
   "item.buildingbigger.spruce_palisade": "Spruce Palisade",
   "item.buildingbigger.birch_palisade": "Birch Palisade",
@@ -216,6 +218,7 @@
   "itemGroup.buildingbigger": "Building Bigger",
 
   "buildingbigger.tooltip.sky_lantern": "Can be placed in mid-air",
+  "buildingbigger.item.mallet.failure": "Can't push...",
 
   "death.attack.buildingbigger.palisade": "%1$s failed to climb a spiked palisade"
 }

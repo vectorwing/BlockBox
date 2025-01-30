@@ -7,6 +7,7 @@ import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import vectorwing.buildingbigger.BuildingBigger;
 import vectorwing.buildingbigger.common.item.SkyLanternItem;
+import vectorwing.buildingbigger.common.item.MalletItem;
 
 import java.util.LinkedHashSet;
 import java.util.function.Supplier;
@@ -28,6 +29,8 @@ public class ModItems
 		CREATIVE_TAB_ITEMS.add(block);
 		return block;
 	}
+
+	public static final Supplier<Item> MALLET = registerItem("mallet", () -> new MalletItem(new Item.Properties().durability(512)));
 
 	public static final Supplier<BlockItem> SANDSTONE_BRICKS = registerSimpleBlockItem("sandstone_bricks", ModBlocks.SANDSTONE_BRICKS);
 	public static final Supplier<BlockItem> SANDSTONE_BRICK_STAIRS = registerSimpleBlockItem("sandstone_brick_stairs", ModBlocks.SANDSTONE_BRICK_STAIRS);

@@ -1,13 +1,5 @@
-// 1.21.1	2025-01-29T12:35:43.5699317	Item Models: buildingbigger
-d6af8b3875876d49852b06984d80dc7a3b4f982b assets/buildingbigger/models/item/acacia_palisade.json
-a1c3b4801220dcd41530181ff0d6ef3e65fe39a7 assets/buildingbigger/models/item/acacia_seat.json
-823c69c006ebe5b16197f05e3911ed02072668dd assets/buildingbigger/models/item/birch_palisade.json
-27f1ba1c823a56d586d8112518b306fb4689fbfa assets/buildingbigger/models/item/birch_seat.json
-25e788ff60a12e4c85c372b9776556dfa223b154 assets/buildingbigger/models/item/black_sky_lantern.json
-339c94bd68e82586a889be3c9502b644468bbc3b assets/buildingbigger/models/item/blue_sky_lantern.json
-3d902ab6a880e4b1ba5a5a83e2a8001468eb64f3 assets/buildingbigger/models/item/brown_sky_lantern.json
-c36fdfb741be65d84206d2a224ebd36b15b52d00 assets/buildingbigger/models/item/cherry_palisade.json
-e7d50c3b55608b931dc17d99fdb6afff0a2ba216 assets/buildingbigger/models/item/cherry_seat.json
+// 1.21.1	2025-01-11T11:53:50.6454582	Item Models: buildingbigger
+5ca900e35053a861ebdde442a948690aca6d33ab assets/buildingbigger/models/item/amethyst_tiles.json
 6084a83daf329ffc94666ee9cabfd57c17b8a19b assets/buildingbigger/models/item/chiseled_amethyst.json
 1a3925fb7098fc27d48a48eaac09ac8f51267c1c assets/buildingbigger/models/item/chiseled_amethyst_slab.json
 4581671a0c5a20bec961354c1e4708c8209ed99f assets/buildingbigger/models/item/chiseled_amethyst_stairs.json

@@ -14,4 +14,6 @@ public class ModParticleTypes
 
 	public static final Supplier<SimpleParticleType> SPARKLE = PARTICLE_TYPES.register("sparkle",
 			() -> new SimpleParticleType(true));
+	public static final Supplier<SimpleParticleType> STRIKE = PARTICLE_TYPES.register("strike",
+			() -> new SimpleParticleType(true));
 }
