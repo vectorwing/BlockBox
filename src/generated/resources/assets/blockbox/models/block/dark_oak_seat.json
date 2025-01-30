@@ -1,0 +1,7 @@
+{
+  "parent": "blockbox:block/template_seat",
+  "textures": {
+    "side": "blockbox:block/dark_oak_seat_side",
+    "top": "blockbox:block/dark_oak_seat_top"
+  }
+}

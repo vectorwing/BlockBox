@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "blockbox:block/iron_tread_plate",
+    "side": "blockbox:block/iron_tread_plate",
+    "top": "blockbox:block/iron_tread_plate"
+  }
+}

@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "buildingbigger:item/white_sky_lantern"
-  }
-}

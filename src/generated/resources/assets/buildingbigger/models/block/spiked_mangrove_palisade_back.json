@@ -1,9 +1,0 @@
-{
-  "parent": "buildingbigger:block/template_spiked_palisade_back",
-  "render_type": "minecraft:cutout",
-  "textures": {
-    "core": "buildingbigger:block/mangrove_palisade_core",
-    "side": "buildingbigger:block/mangrove_palisade_side",
-    "top": "buildingbigger:block/mangrove_palisade_top"
-  }
-}

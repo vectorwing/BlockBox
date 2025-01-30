@@ -1,9 +1,0 @@
-{
-  "parent": "buildingbigger:block/template_palisade_front",
-  "render_type": "minecraft:cutout",
-  "textures": {
-    "core": "buildingbigger:block/birch_palisade_core",
-    "side": "buildingbigger:block/birch_palisade_side",
-    "top": "buildingbigger:block/birch_palisade_top"
-  }
-}

@@ -1,0 +1,6 @@
+{
+  "parent": "blockbox:block/template_bars_cap_alt",
+  "textures": {
+    "bars": "blockbox:block/exposed_copper_bars"
+  }
+}

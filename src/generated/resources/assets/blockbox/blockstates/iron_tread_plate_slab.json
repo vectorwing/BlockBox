@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "blockbox:block/iron_tread_plate_slab"
+    },
+    "type=double": {
+      "model": "blockbox:block/iron_tread_plate"
+    },
+    "type=top": {
+      "model": "blockbox:block/iron_tread_plate_slab_top"
+    }
+  }
+}

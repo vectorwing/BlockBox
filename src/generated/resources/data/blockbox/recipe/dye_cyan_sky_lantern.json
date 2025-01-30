@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "c:dyes/cyan"
+    },
+    {
+      "tag": "blockbox:sky_lanterns"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "blockbox:cyan_sky_lantern"
+  }
+}

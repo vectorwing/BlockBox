@@ -1,22 +1,22 @@
 {
   "values": {
-    "buildingbigger:copper_bars": {
-      "next_oxidation_stage": "buildingbigger:exposed_copper_bars"
+    "blockbox:copper_bars": {
+      "next_oxidation_stage": "blockbox:exposed_copper_bars"
     },
-    "buildingbigger:copper_pillar": {
-      "next_oxidation_stage": "buildingbigger:exposed_copper_pillar"
+    "blockbox:copper_pillar": {
+      "next_oxidation_stage": "blockbox:exposed_copper_pillar"
     },
-    "buildingbigger:exposed_copper_bars": {
-      "next_oxidation_stage": "buildingbigger:weathered_copper_bars"
+    "blockbox:exposed_copper_bars": {
+      "next_oxidation_stage": "blockbox:weathered_copper_bars"
     },
-    "buildingbigger:exposed_copper_pillar": {
-      "next_oxidation_stage": "buildingbigger:weathered_copper_pillar"
+    "blockbox:exposed_copper_pillar": {
+      "next_oxidation_stage": "blockbox:weathered_copper_pillar"
     },
-    "buildingbigger:weathered_copper_bars": {
-      "next_oxidation_stage": "buildingbigger:oxidized_copper_bars"
+    "blockbox:weathered_copper_bars": {
+      "next_oxidation_stage": "blockbox:oxidized_copper_bars"
     },
-    "buildingbigger:weathered_copper_pillar": {
-      "next_oxidation_stage": "buildingbigger:oxidized_copper_pillar"
+    "blockbox:weathered_copper_pillar": {
+      "next_oxidation_stage": "blockbox:oxidized_copper_pillar"
     }
   }
 }

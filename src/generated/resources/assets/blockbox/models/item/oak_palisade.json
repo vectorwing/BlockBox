@@ -1,0 +1,4 @@
+{
+  "parent": "blockbox:block/oak_palisade_post",
+  "gui_light": "front"
+}

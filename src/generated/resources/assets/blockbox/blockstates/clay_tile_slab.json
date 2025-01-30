@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "blockbox:block/clay_tile_slab"
+    },
+    "type=double": {
+      "model": "blockbox:block/clay_tiles"
+    },
+    "type=top": {
+      "model": "blockbox:block/clay_tile_slab_top"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "waxed_oxidized_copper_pillar",
+  "ingredients": [
+    {
+      "item": "blockbox:oxidized_copper_pillar"
+    },
+    {
+      "item": "minecraft:honeycomb"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "blockbox:waxed_oxidized_copper_pillar"
+  }
+}

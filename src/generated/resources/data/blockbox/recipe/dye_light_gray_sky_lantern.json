@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "c:dyes/light_gray"
+    },
+    {
+      "tag": "blockbox:sky_lanterns"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "blockbox:light_gray_sky_lantern"
+  }
+}

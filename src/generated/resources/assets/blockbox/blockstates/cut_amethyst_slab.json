@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "blockbox:block/cut_amethyst_slab"
+    },
+    "type=double": {
+      "model": "blockbox:block/cut_amethyst"
+    },
+    "type=top": {
+      "model": "blockbox:block/cut_amethyst_slab_top"
+    }
+  }
+}

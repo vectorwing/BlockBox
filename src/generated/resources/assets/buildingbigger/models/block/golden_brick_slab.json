@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "buildingbigger:block/golden_bricks",
-    "side": "buildingbigger:block/golden_bricks",
-    "top": "buildingbigger:block/golden_bricks"
-  }
-}

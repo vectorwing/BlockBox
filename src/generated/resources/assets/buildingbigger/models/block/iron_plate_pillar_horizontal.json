@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column_horizontal",
-  "textures": {
-    "end": "buildingbigger:block/iron_plate_pillar_end",
-    "side": "buildingbigger:block/iron_plate_pillar_side"
-  }
-}

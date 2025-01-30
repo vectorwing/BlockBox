@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "/": {
+      "item": "minecraft:string"
+    },
+    "c": {
+      "tag": "minecraft:candles"
+    },
+    "p": {
+      "item": "minecraft:paper"
+    }
+  },
+  "pattern": [
+    "ppp",
+    "p p",
+    "/c/"
+  ],
+  "result": {
+    "count": 1,
+    "id": "blockbox:white_sky_lantern"
+  }
+}

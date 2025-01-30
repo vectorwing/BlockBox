@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "blockbox:chiseled_gold"
+  },
+  "result": {
+    "count": 1,
+    "id": "blockbox:golden_brick_stairs"
+  }
+}

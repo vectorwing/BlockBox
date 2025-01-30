@@ -1,6 +1,0 @@
-{
-  "parent": "buildingbigger:block/template_bars_side_flat_alt",
-  "textures": {
-    "bars": "buildingbigger:block/exposed_copper_bars"
-  }
-}

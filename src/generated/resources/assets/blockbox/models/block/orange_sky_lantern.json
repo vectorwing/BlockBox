@@ -1,0 +1,9 @@
+{
+  "parent": "blockbox:block/template_sky_lantern",
+  "textures": {
+    "bottom": "blockbox:block/sky_lantern_bottom",
+    "candle": "minecraft:block/orange_candle_lit",
+    "side": "blockbox:block/orange_sky_lantern_side",
+    "top": "blockbox:block/orange_sky_lantern_top"
+  }
+}

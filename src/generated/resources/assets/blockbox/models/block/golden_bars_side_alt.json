@@ -1,0 +1,7 @@
+{
+  "parent": "blockbox:block/template_bars_side_alt",
+  "textures": {
+    "bars": "blockbox:block/golden_bars",
+    "edge": "blockbox:block/golden_bars_single"
+  }
+}

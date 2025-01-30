@@ -1,9 +1,0 @@
-{
-  "parent": "buildingbigger:block/template_sky_lantern",
-  "textures": {
-    "bottom": "buildingbigger:block/sky_lantern_bottom",
-    "candle": "minecraft:block/gray_candle_lit",
-    "side": "buildingbigger:block/gray_sky_lantern_side",
-    "top": "buildingbigger:block/gray_sky_lantern_top"
-  }
-}

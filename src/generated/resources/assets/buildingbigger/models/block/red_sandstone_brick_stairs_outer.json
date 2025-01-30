@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "buildingbigger:block/red_sandstone_bricks",
-    "side": "buildingbigger:block/red_sandstone_bricks",
-    "top": "buildingbigger:block/red_sandstone_bricks"
-  }
-}

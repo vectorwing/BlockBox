@@ -1,0 +1,20 @@
+{
+  "values": [
+    "blockbox:white_sky_lantern",
+    "blockbox:light_gray_sky_lantern",
+    "blockbox:gray_sky_lantern",
+    "blockbox:black_sky_lantern",
+    "blockbox:brown_sky_lantern",
+    "blockbox:red_sky_lantern",
+    "blockbox:orange_sky_lantern",
+    "blockbox:yellow_sky_lantern",
+    "blockbox:lime_sky_lantern",
+    "blockbox:green_sky_lantern",
+    "blockbox:cyan_sky_lantern",
+    "blockbox:light_blue_sky_lantern",
+    "blockbox:blue_sky_lantern",
+    "blockbox:purple_sky_lantern",
+    "blockbox:magenta_sky_lantern",
+    "blockbox:pink_sky_lantern"
+  ]
+}

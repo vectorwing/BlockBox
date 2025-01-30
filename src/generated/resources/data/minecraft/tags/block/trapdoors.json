@@ -1,6 +1,6 @@
 {
   "values": [
-    "buildingbigger:iron_plate_trapdoor",
-    "buildingbigger:golden_trapdoor"
+    "blockbox:iron_plate_trapdoor",
+    "blockbox:golden_trapdoor"
   ]
 }

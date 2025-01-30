@@ -1,0 +1,7 @@
+{
+  "parent": "blockbox:block/template_palisade_post",
+  "textures": {
+    "side": "blockbox:block/oak_palisade_side",
+    "top": "blockbox:block/oak_palisade_top"
+  }
+}

@@ -1,9 +1,0 @@
-{
-  "parent": "buildingbigger:block/template_palisade_back",
-  "render_type": "minecraft:cutout",
-  "textures": {
-    "core": "buildingbigger:block/crimson_palisade_core",
-    "side": "buildingbigger:block/crimson_palisade_side",
-    "top": "buildingbigger:block/crimson_palisade_top"
-  }
-}

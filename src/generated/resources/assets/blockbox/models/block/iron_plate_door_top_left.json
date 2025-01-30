@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/door_top_left",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bottom": "blockbox:block/iron_plate_door_bottom",
+    "top": "blockbox:block/iron_plate_door_top"
+  }
+}

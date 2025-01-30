@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "blockbox:block/cut_amethyst",
+    "side": "blockbox:block/cut_amethyst",
+    "top": "blockbox:block/cut_amethyst"
+  }
+}

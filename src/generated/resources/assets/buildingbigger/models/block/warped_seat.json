@@ -1,7 +1,0 @@
-{
-  "parent": "buildingbigger:block/template_seat",
-  "textures": {
-    "side": "buildingbigger:block/warped_seat_side",
-    "top": "buildingbigger:block/warped_seat_top"
-  }
-}

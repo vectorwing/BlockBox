@@ -1,6 +1,0 @@
-{
-  "parent": "buildingbigger:block/template_bars_post_ends",
-  "textures": {
-    "edge": "buildingbigger:block/exposed_copper_bars"
-  }
-}

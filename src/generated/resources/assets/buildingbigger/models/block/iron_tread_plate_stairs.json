@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "buildingbigger:block/iron_tread_plate",
-    "side": "buildingbigger:block/iron_tread_plate",
-    "top": "buildingbigger:block/iron_tread_plate"
-  }
-}

@@ -1,28 +1,28 @@
 {
   "values": {
-    "buildingbigger:copper_bars": {
-      "waxed": "buildingbigger:waxed_copper_bars"
+    "blockbox:copper_bars": {
+      "waxed": "blockbox:waxed_copper_bars"
     },
-    "buildingbigger:copper_pillar": {
-      "waxed": "buildingbigger:waxed_copper_pillar"
+    "blockbox:copper_pillar": {
+      "waxed": "blockbox:waxed_copper_pillar"
     },
-    "buildingbigger:exposed_copper_bars": {
-      "waxed": "buildingbigger:waxed_exposed_copper_bars"
+    "blockbox:exposed_copper_bars": {
+      "waxed": "blockbox:waxed_exposed_copper_bars"
     },
-    "buildingbigger:exposed_copper_pillar": {
-      "waxed": "buildingbigger:waxed_exposed_copper_pillar"
+    "blockbox:exposed_copper_pillar": {
+      "waxed": "blockbox:waxed_exposed_copper_pillar"
     },
-    "buildingbigger:oxidized_copper_bars": {
-      "waxed": "buildingbigger:waxed_oxidized_copper_bars"
+    "blockbox:oxidized_copper_bars": {
+      "waxed": "blockbox:waxed_oxidized_copper_bars"
     },
-    "buildingbigger:oxidized_copper_pillar": {
-      "waxed": "buildingbigger:waxed_oxidized_copper_pillar"
+    "blockbox:oxidized_copper_pillar": {
+      "waxed": "blockbox:waxed_oxidized_copper_pillar"
     },
-    "buildingbigger:weathered_copper_bars": {
-      "waxed": "buildingbigger:waxed_weathered_copper_bars"
+    "blockbox:weathered_copper_bars": {
+      "waxed": "blockbox:waxed_weathered_copper_bars"
     },
-    "buildingbigger:weathered_copper_pillar": {
-      "waxed": "buildingbigger:waxed_weathered_copper_pillar"
+    "blockbox:weathered_copper_pillar": {
+      "waxed": "blockbox:waxed_weathered_copper_pillar"
     }
   }
 }

@@ -1,0 +1,9 @@
+{
+  "parent": "blockbox:block/template_palisade_front",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "core": "blockbox:block/dark_oak_palisade_core",
+    "side": "blockbox:block/dark_oak_palisade_side",
+    "top": "blockbox:block/dark_oak_palisade_top"
+  }
+}

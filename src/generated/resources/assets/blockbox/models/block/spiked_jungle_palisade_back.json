@@ -1,0 +1,9 @@
+{
+  "parent": "blockbox:block/template_spiked_palisade_back",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "core": "blockbox:block/jungle_palisade_core",
+    "side": "blockbox:block/jungle_palisade_side",
+    "top": "blockbox:block/jungle_palisade_top"
+  }
+}

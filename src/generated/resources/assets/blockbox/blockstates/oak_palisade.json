@@ -1,0 +1,81 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "blockbox:block/oak_palisade_post"
+      }
+    },
+    {
+      "apply": {
+        "model": "blockbox:block/oak_palisade_front",
+        "uvlock": true
+      },
+      "when": {
+        "north": "full"
+      }
+    },
+    {
+      "apply": {
+        "model": "blockbox:block/spiked_oak_palisade_front",
+        "uvlock": true
+      },
+      "when": {
+        "north": "spiked"
+      }
+    },
+    {
+      "apply": {
+        "model": "blockbox:block/oak_palisade_front",
+        "y": 270
+      },
+      "when": {
+        "west": "full"
+      }
+    },
+    {
+      "apply": {
+        "model": "blockbox:block/spiked_oak_palisade_front",
+        "y": 270
+      },
+      "when": {
+        "west": "spiked"
+      }
+    },
+    {
+      "apply": {
+        "model": "blockbox:block/oak_palisade_back",
+        "y": 270
+      },
+      "when": {
+        "east": "full"
+      }
+    },
+    {
+      "apply": {
+        "model": "blockbox:block/spiked_oak_palisade_back",
+        "y": 270
+      },
+      "when": {
+        "east": "spiked"
+      }
+    },
+    {
+      "apply": {
+        "model": "blockbox:block/oak_palisade_back",
+        "uvlock": true
+      },
+      "when": {
+        "south": "full"
+      }
+    },
+    {
+      "apply": {
+        "model": "blockbox:block/spiked_oak_palisade_back",
+        "uvlock": true
+      },
+      "when": {
+        "south": "spiked"
+      }
+    }
+  ]
+}

@@ -1,6 +1,6 @@
-// 1.21.1	2025-01-28T19:59:30.4709998	Tags for minecraft:item mod id vanilla
-f449d64450493a1132c75f77b3e1846db14438e0 data/buildingbigger/tags/item/golden_blocks.json
-199d504c952210e99519e788f075ff8d1c117e69 data/buildingbigger/tags/item/sky_lanterns.json
-1098fd9b78bb5635f2be70976e9ce8fcd2edd6dc data/minecraft/tags/item/doors.json
-f7a366e646842d4921bd962e9f16f43e96f2d81b data/minecraft/tags/item/piglin_loved.json
-e87e455adc84fbe453504374956bab21308a8a0f data/minecraft/tags/item/trapdoors.json
+// 1.21.1	2025-01-30T14:01:52.4979258	Tags for minecraft:item mod id vanilla
+ac505c538459acba3d5cbbc8d6cef561ae253f92 data/blockbox/tags/item/golden_blocks.json
+888158b7f20bfc6d8b528f2d3cada3de04678dd0 data/blockbox/tags/item/sky_lanterns.json
+baae533a53a683480091c4ade29013ea2f5813ef data/minecraft/tags/item/doors.json
+c4500297f029dde8936912f27afdbcd675d074f7 data/minecraft/tags/item/piglin_loved.json
+bdd7279042a7b839eab436fa8ed89aee817a9a44 data/minecraft/tags/item/trapdoors.json

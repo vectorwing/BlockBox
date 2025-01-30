@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "blockbox:block/jungle_seat",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "blockbox:block/jungle_seat"
+    },
+    "facing=south": {
+      "model": "blockbox:block/jungle_seat",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "blockbox:block/jungle_seat",
+      "y": 270
+    }
+  }
+}

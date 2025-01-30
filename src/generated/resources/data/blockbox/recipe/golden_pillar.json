@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "g": {
+      "item": "blockbox:chiseled_gold"
+    }
+  },
+  "pattern": [
+    "g",
+    "g"
+  ],
+  "result": {
+    "count": 2,
+    "id": "blockbox:golden_pillar"
+  }
+}

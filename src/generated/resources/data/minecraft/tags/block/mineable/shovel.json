@@ -1,9 +1,9 @@
 {
   "values": [
-    "buildingbigger:packed_snow",
-    "buildingbigger:packed_snow_bricks",
-    "buildingbigger:packed_snow_brick_stairs",
-    "buildingbigger:packed_snow_brick_slab",
-    "buildingbigger:packed_snow_brick_wall"
+    "blockbox:packed_snow",
+    "blockbox:packed_snow_bricks",
+    "blockbox:packed_snow_brick_stairs",
+    "blockbox:packed_snow_brick_slab",
+    "blockbox:packed_snow_brick_wall"
   ]
 }

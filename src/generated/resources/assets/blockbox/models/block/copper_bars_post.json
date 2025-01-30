@@ -1,0 +1,6 @@
+{
+  "parent": "blockbox:block/template_bars_post",
+  "textures": {
+    "bars": "blockbox:block/copper_bars_single"
+  }
+}

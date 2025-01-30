@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "bb_palisades",
+  "key": {
+    "o": {
+      "item": "minecraft:warped_stem"
+    }
+  },
+  "pattern": [
+    "ooo",
+    "ooo"
+  ],
+  "result": {
+    "count": 12,
+    "id": "blockbox:warped_palisade"
+  }
+}

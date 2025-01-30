@@ -1,8 +1,8 @@
 {
   "values": [
-    "#buildingbigger:palisades",
-    "#buildingbigger:spiked_palisades",
-    "#buildingbigger:wooden_seats",
-    "buildingbigger:oak_seat"
+    "#blockbox:palisades",
+    "#blockbox:spiked_palisades",
+    "#blockbox:wooden_seats",
+    "blockbox:oak_seat"
   ]
 }

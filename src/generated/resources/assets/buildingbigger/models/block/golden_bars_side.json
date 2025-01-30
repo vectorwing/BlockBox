@@ -1,7 +1,0 @@
-{
-  "parent": "buildingbigger:block/template_bars_side",
-  "textures": {
-    "bars": "buildingbigger:block/golden_bars",
-    "edge": "buildingbigger:block/golden_bars_single"
-  }
-}

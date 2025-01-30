@@ -1,7 +1,0 @@
-{
-  "parent": "buildingbigger:block/template_palisade_post",
-  "textures": {
-    "side": "buildingbigger:block/oak_palisade_side",
-    "top": "buildingbigger:block/oak_palisade_top"
-  }
-}

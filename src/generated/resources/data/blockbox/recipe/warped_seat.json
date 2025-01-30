@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "bb_chairs",
+  "key": {
+    "#": {
+      "item": "minecraft:warped_planks"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "###",
+    "/ /"
+  ],
+  "result": {
+    "count": 1,
+    "id": "blockbox:warped_seat"
+  }
+}

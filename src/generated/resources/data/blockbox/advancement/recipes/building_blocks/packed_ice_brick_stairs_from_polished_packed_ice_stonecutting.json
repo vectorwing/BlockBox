@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_polished_packed_ice": {
+      "conditions": {
+        "items": [
+          {
+            "items": "blockbox:polished_packed_ice"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "blockbox:packed_ice_brick_stairs_from_polished_packed_ice_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_polished_packed_ice"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "blockbox:packed_ice_brick_stairs_from_polished_packed_ice_stonecutting"
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "bb_palisades",
+  "ingredients": [
+    {
+      "item": "blockbox:spiked_mangrove_palisade"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "blockbox:mangrove_palisade"
+  }
+}

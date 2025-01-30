@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "blockbox:block/golden_brick_slab"
+    },
+    "type=double": {
+      "model": "blockbox:block/golden_bricks"
+    },
+    "type=top": {
+      "model": "blockbox:block/golden_brick_slab_top"
+    }
+  }
+}
