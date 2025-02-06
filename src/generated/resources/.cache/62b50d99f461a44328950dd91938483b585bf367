@@ -1,5 +1,6 @@
-// 1.21.1	2025-02-06T01:00:52.1325361	Tags for minecraft:block mod id blockbox
+// 1.21.1	2025-02-06T01:47:34.1201074	Tags for minecraft:block mod id blockbox
 d764f37eb2e1a27bfcd1397244659553f88a7f95 data/blockbox/tags/block/amethyst_blocks.json
+58396f7792ed668419d6e489e8af3d1fc7345eef data/blockbox/tags/block/braziers.json
 ac505c538459acba3d5cbbc8d6cef561ae253f92 data/blockbox/tags/block/golden_blocks.json
 15387432c4650ed2fc45cd70f46404ce8ec57c23 data/blockbox/tags/block/iron_plate_blocks.json
 30add1977efea838c878cd39a8ab6e8b83e7e061 data/blockbox/tags/block/palisades.json

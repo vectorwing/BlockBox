@@ -358,20 +358,32 @@ public class BlockStates extends BlockStateProvider
 		String baseName = name(block);
 		String campfireName = name(campfire);
 		ModelFile standing = models().withExistingParent(baseName, resourceBlock("template_brazier"))
+				.texture("top", resourceBlock(baseName + "_top"))
+				.texture("side", resourceBlock("brazier_side"))
+				.texture("bottom", resourceBlock("brazier_bottom"));
+		ModelFile standingLit = models().withExistingParent(baseName + "_lit", resourceBlock("template_brazier_lit"))
 				.texture("top", resourceBlock(baseName + "_top_lit"))
 				.texture("side", resourceBlock(baseName + "_side_lit"))
 				.texture("bottom", resourceBlock("brazier_bottom"))
 				.texture("fire", resourceMcBlock(campfireName + "_fire"));
 		ModelFile hanging = models().withExistingParent("hanging_" + baseName, resourceBlock("template_hanging_brazier"))
+				.texture("top", resourceBlock(baseName + "_top"))
+				.texture("side", resourceBlock("hanging_brazier_side"))
+				.texture("bottom", resourceBlock("brazier_bottom"));
+		ModelFile hangingLit = models().withExistingParent("hanging_" + baseName + "_lit", resourceBlock("template_hanging_brazier_lit"))
 				.texture("top", resourceBlock(baseName + "_top_lit"))
 				.texture("side", resourceBlock("hanging_" + baseName + "_side_lit"))
 				.texture("bottom", resourceBlock("brazier_bottom"))
 				.texture("fire", resourceMcBlock(campfireName + "_fire"));
 		getVariantBuilder(block)
-				.partialState().with(BrazierBlock.HANGING, false)
+				.partialState().with(BrazierBlock.HANGING, false).with(BrazierBlock.LIT, false)
 				.modelForState().modelFile(standing).addModel()
-				.partialState().with(BrazierBlock.HANGING, true)
-				.modelForState().modelFile(hanging).addModel();
+				.partialState().with(BrazierBlock.HANGING, false).with(BrazierBlock.LIT, true)
+				.modelForState().modelFile(standingLit).addModel()
+				.partialState().with(BrazierBlock.HANGING, true).with(BrazierBlock.LIT, false)
+				.modelForState().modelFile(hanging).addModel()
+				.partialState().with(BrazierBlock.HANGING, true).with(BrazierBlock.LIT, true)
+				.modelForState().modelFile(hangingLit).addModel();
 	}
 
 	private ModelFile modelPalisadePost(String baseName, String textureName) {

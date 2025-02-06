@@ -25,6 +25,9 @@ public class ModTags
 	// Blocks that are made out of Iron Plate.
 	public static final TagKey<Block> IRON_PLATE_BLOCKS = modBlockTag("iron_plate_blocks");
 
+	// Blocks that are braziers.
+	public static final TagKey<Block> BRAZIERS = modBlockTag("braziers");
+
 	// Blocks that are made out of Gold.
 	public static final TagKey<Block> GOLDEN_BLOCKS = modBlockTag("golden_blocks");
 

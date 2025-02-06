@@ -121,6 +121,11 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.IRON_PLATE_TRAPDOOR.get()
 		);
 
+		tag(ModTags.BRAZIERS).add(
+				ModBlocks.BRAZIER.get(),
+				ModBlocks.SOUL_BRAZIER.get()
+		);
+
 		tag(ModTags.GOLDEN_BLOCKS).add(
 				ModBlocks.CHISELED_GOLD.get(),
 				ModBlocks.GOLDEN_TILES.get(),

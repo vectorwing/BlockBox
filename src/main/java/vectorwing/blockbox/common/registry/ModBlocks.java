@@ -2,6 +2,8 @@ package vectorwing.blockbox.common.registry;
 
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -9,6 +11,7 @@ import vectorwing.blockbox.BlockBox;
 import vectorwing.blockbox.common.block.*;
 
 import java.util.function.Supplier;
+import java.util.function.ToIntFunction;
 
 public class ModBlocks
 {
@@ -132,8 +135,12 @@ public class ModBlocks
 	public static final Supplier<Block> WARPED_PALISADE = BLOCKS.register("warped_palisade", () -> netherPalisade(MapColor.WARPED_STEM));
 	public static final Supplier<Block> SPIKED_WARPED_PALISADE = BLOCKS.register("spiked_warped_palisade", () -> netherSpikedPalisade(MapColor.WARPED_STEM));
 
-	public static final Supplier<Block> BRAZIER = BLOCKS.register("brazier", () ->  new BrazierBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LANTERN)));
-	public static final Supplier<Block> SOUL_BRAZIER = BLOCKS.register("soul_brazier", () ->  new BrazierBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_LANTERN)));
+	public static final Supplier<Block> BRAZIER = BLOCKS.register("brazier", () ->  new BrazierBlock(1, BlockBehaviour.Properties.ofFullCopy(Blocks.LANTERN)
+			.lightLevel(litBlockEmission(15))
+	));
+	public static final Supplier<Block> SOUL_BRAZIER = BLOCKS.register("soul_brazier", () ->  new BrazierBlock(2, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_LANTERN)
+			.lightLevel(litBlockEmission(10))
+	));
 
 	public static final Supplier<Block> WHITE_SKY_LANTERN = BLOCKS.register("white_sky_lantern", () ->  new SkyLanternBlock(PROPERTIES_SKY_LANTERN.mapColor(MapColor.SNOW)));
 	public static final Supplier<Block> LIGHT_GRAY_SKY_LANTERN = BLOCKS.register("light_gray_sky_lantern", () ->  new SkyLanternBlock(PROPERTIES_SKY_LANTERN.mapColor(MapColor.COLOR_LIGHT_GRAY)));
@@ -151,6 +158,10 @@ public class ModBlocks
 	public static final Supplier<Block> PURPLE_SKY_LANTERN = BLOCKS.register("purple_sky_lantern", () ->  new SkyLanternBlock(PROPERTIES_SKY_LANTERN.mapColor(MapColor.COLOR_PURPLE)));
 	public static final Supplier<Block> MAGENTA_SKY_LANTERN = BLOCKS.register("magenta_sky_lantern", () ->  new SkyLanternBlock(PROPERTIES_SKY_LANTERN.mapColor(MapColor.COLOR_MAGENTA)));
 	public static final Supplier<Block> PINK_SKY_LANTERN = BLOCKS.register("pink_sky_lantern", () ->  new SkyLanternBlock(PROPERTIES_SKY_LANTERN.mapColor(MapColor.COLOR_PINK)));
+
+	private static ToIntFunction<BlockState> litBlockEmission(int lightValue) {
+		return state -> state.getValue(BlockStateProperties.LIT) ? lightValue : 0;
+	}
 
 	private static Block stair(Block baseBlock, BlockBehaviour.Properties properties) {
 		return new StairBlock(baseBlock.defaultBlockState(), properties);

@@ -1,0 +1,9 @@
+{
+  "parent": "blockbox:block/template_hanging_brazier_lit",
+  "textures": {
+    "bottom": "blockbox:block/brazier_bottom",
+    "fire": "minecraft:block/soul_campfire_fire",
+    "side": "blockbox:block/hanging_soul_brazier_side_lit",
+    "top": "blockbox:block/soul_brazier_top_lit"
+  }
+}
