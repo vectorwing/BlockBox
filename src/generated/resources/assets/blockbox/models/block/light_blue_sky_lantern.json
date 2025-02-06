@@ -3,6 +3,8 @@
   "textures": {
     "bottom": "blockbox:block/sky_lantern_bottom",
     "candle": "minecraft:block/light_blue_candle_lit",
+    "inner_side": "blockbox:block/light_blue_sky_lantern_inner_side",
+    "inner_top": "blockbox:block/light_blue_sky_lantern_inner_top",
     "side": "blockbox:block/light_blue_sky_lantern_side",
     "top": "blockbox:block/light_blue_sky_lantern_top"
   }

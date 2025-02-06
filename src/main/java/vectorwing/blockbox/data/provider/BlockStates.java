@@ -349,6 +349,8 @@ public class BlockStates extends BlockStateProvider
 		simpleBlock(block, models().withExistingParent(baseName, resourceBlock("template_sky_lantern"))
 				.texture("top", resourceBlock(baseName + "_top"))
 				.texture("side", resourceBlock(baseName + "_side"))
+				.texture("inner_top", resourceBlock(baseName + "_inner_top"))
+				.texture("inner_side", resourceBlock(baseName + "_inner_side"))
 				.texture("bottom", resourceBlock("sky_lantern_bottom"))
 				.texture("candle", resourceMcBlock(name(candle) + "_lit"))
 		);
