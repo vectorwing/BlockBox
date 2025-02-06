@@ -36,6 +36,8 @@
     "blockbox:iron_tread_plate_stairs",
     "blockbox:iron_tread_plate_slab",
     "blockbox:corrugated_iron_plate",
+    "blockbox:corrugated_iron_plate_stairs",
+    "blockbox:corrugated_iron_plate_slab",
     "blockbox:iron_plate_pillar",
     "blockbox:iron_plate_door",
     "blockbox:iron_plate_trapdoor",
@@ -54,6 +56,8 @@
     "blockbox:cut_amethyst_slab",
     "blockbox:chiseled_amethyst_stairs",
     "blockbox:chiseled_amethyst_slab",
-    "blockbox:chiseled_amethyst"
+    "blockbox:chiseled_amethyst",
+    "blockbox:lapis_lazuli_bricks",
+    "blockbox:lapis_lazuli_mosaic"
   ]
 }

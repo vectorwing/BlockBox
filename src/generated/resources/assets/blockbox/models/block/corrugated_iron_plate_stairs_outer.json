@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "blockbox:block/corrugated_iron_plate",
+    "side": "blockbox:block/corrugated_iron_plate",
+    "top": "blockbox:block/corrugated_iron_plate"
+  }
+}

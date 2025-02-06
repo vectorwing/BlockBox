@@ -118,12 +118,15 @@ public class CraftingRecipes
 				.unlockedBy("has_iron_plate", InventoryChangeTrigger.TriggerInstance.hasItems(ModBlocks.IRON_PLATE.get()))
 				.save(output);
 		stairAndSlab(output, ModBlocks.IRON_TREAD_PLATE_STAIRS.get(), ModBlocks.IRON_TREAD_PLATE_SLAB.get(), ModBlocks.IRON_TREAD_PLATE.get());
+
 		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CORRUGATED_IRON_PLATE.get(), 4)
 				.pattern("ii")
 				.pattern("ii")
 				.define('i', ModBlocks.IRON_TREAD_PLATE.get())
 				.unlockedBy("has_iron_plate", InventoryChangeTrigger.TriggerInstance.hasItems(ModBlocks.IRON_PLATE.get()))
 				.save(output);
+		stairAndSlab(output, ModBlocks.CORRUGATED_IRON_PLATE_STAIRS.get(), ModBlocks.CORRUGATED_IRON_PLATE_SLAB.get(), ModBlocks.CORRUGATED_IRON_PLATE.get());
+
 		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.IRON_PLATE_PILLAR.get(), 2)
 				.pattern("i")
 				.pattern("i")
@@ -272,6 +275,7 @@ public class CraftingRecipes
 				.unlockedBy("has_sandstone", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.SANDSTONE))
 				.save(output);
 		stairAndSlab(output, ModBlocks.SANDSTONE_BRICK_STAIRS.get(), ModBlocks.SANDSTONE_BRICK_SLAB.get(), ModBlocks.SANDSTONE_BRICKS.get());
+
 		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_SANDSTONE_BRICKS.get(), 4)
 				.pattern("ss")
 				.pattern("ss")
@@ -279,6 +283,7 @@ public class CraftingRecipes
 				.unlockedBy("has_red_sandstone", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.RED_SANDSTONE))
 				.save(output);
 		stairAndSlab(output, ModBlocks.RED_SANDSTONE_BRICK_STAIRS.get(), ModBlocks.RED_SANDSTONE_BRICK_SLAB.get(), ModBlocks.RED_SANDSTONE_BRICKS.get());
+
 		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CLAY_TILES.get(), 4)
 				.pattern("ss")
 				.pattern("ss")
@@ -286,6 +291,7 @@ public class CraftingRecipes
 				.unlockedBy("has_terracotta", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.TERRACOTTA))
 				.save(output);
 		stairAndSlab(output, ModBlocks.CLAY_TILE_STAIRS.get(), ModBlocks.CLAY_TILE_SLAB.get(), ModBlocks.CLAY_TILES.get());
+
 		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PACKED_SNOW.get(), 4)
 				.pattern("ss")
 				.pattern("ss")
@@ -299,6 +305,7 @@ public class CraftingRecipes
 				.unlockedBy("has_snow", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.SNOW_BLOCK))
 				.save(output);
 		stairAndSlab(output, ModBlocks.PACKED_SNOW_BRICK_STAIRS.get(), ModBlocks.PACKED_SNOW_BRICK_SLAB.get(), ModBlocks.PACKED_SNOW_BRICKS.get());
+
 		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PACKED_SNOW_BRICK_WALL.get(), 6)
 				.pattern("ppp")
 				.pattern("ppp")
@@ -339,6 +346,7 @@ public class CraftingRecipes
 				.unlockedBy("has_amethyst_block", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.AMETHYST_BLOCK))
 				.save(output);
 		stairAndSlab(output, ModBlocks.CUT_AMETHYST_STAIRS.get(), ModBlocks.CUT_AMETHYST_SLAB.get(), ModBlocks.CUT_AMETHYST.get());
+
 		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_AMETHYST.get(), 4)
 				.pattern("ss")
 				.pattern("ss")
@@ -346,6 +354,19 @@ public class CraftingRecipes
 				.unlockedBy("has_amethyst_block", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.AMETHYST_BLOCK))
 				.save(output);
 		stairAndSlab(output, ModBlocks.CHISELED_AMETHYST_STAIRS.get(), ModBlocks.CHISELED_AMETHYST_SLAB.get(), ModBlocks.CHISELED_AMETHYST.get());
+
+		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LAPIS_LAZULI_BRICKS.get(), 4)
+				.pattern("ss")
+				.pattern("ss")
+				.define('s', Items.LAPIS_LAZULI)
+				.unlockedBy("has_lapis_lazuli", InventoryChangeTrigger.TriggerInstance.hasItems(Items.LAPIS_LAZULI))
+				.save(output);
+		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LAPIS_LAZULI_MOSAIC.get(), 4)
+				.pattern("ss")
+				.pattern("ss")
+				.define('s', ModBlocks.LAPIS_LAZULI_BRICKS.get())
+				.unlockedBy("has_lapis_lazuli", InventoryChangeTrigger.TriggerInstance.hasItems(Items.LAPIS_LAZULI))
+				.save(output);
 	}
 
 	// HELPER METHODS

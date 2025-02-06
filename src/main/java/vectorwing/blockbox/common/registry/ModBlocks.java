@@ -66,6 +66,8 @@ public class ModBlocks
 	public static final Supplier<Block> IRON_TREAD_PLATE_STAIRS = BLOCKS.register("iron_tread_plate_stairs", () -> stair(ModBlocks.IRON_TREAD_PLATE.get(), PROPERTIES_IRON_PLATE));
 	public static final Supplier<Block> IRON_TREAD_PLATE_SLAB = BLOCKS.register("iron_tread_plate_slab", () -> slab(PROPERTIES_IRON_PLATE));
 	public static final Supplier<Block> CORRUGATED_IRON_PLATE = BLOCKS.registerSimpleBlock("corrugated_iron_plate", PROPERTIES_IRON_PLATE);
+	public static final Supplier<Block> CORRUGATED_IRON_PLATE_STAIRS = BLOCKS.register("corrugated_iron_plate_stairs", () -> stair(ModBlocks.CORRUGATED_IRON_PLATE.get(), PROPERTIES_IRON_PLATE));
+	public static final Supplier<Block> CORRUGATED_IRON_PLATE_SLAB = BLOCKS.register("corrugated_iron_plate_slab", () -> slab(PROPERTIES_IRON_PLATE));
 	public static final Supplier<Block> IRON_PLATE_PILLAR = BLOCKS.register("iron_plate_pillar",
 			() -> new RotatedPillarBlock(PROPERTIES_IRON_PLATE));
 	public static final Supplier<Block> IRON_PLATE_DOOR = BLOCKS.register("iron_plate_door",
@@ -94,6 +96,9 @@ public class ModBlocks
 	public static final Supplier<Block> CHISELED_AMETHYST = BLOCKS.registerSimpleBlock("chiseled_amethyst", BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK));
 	public static final Supplier<Block> CHISELED_AMETHYST_STAIRS = BLOCKS.register("chiseled_amethyst_stairs", () -> stair(ModBlocks.CHISELED_AMETHYST.get(), BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK)));
 	public static final Supplier<Block> CHISELED_AMETHYST_SLAB = BLOCKS.register("chiseled_amethyst_slab", () -> slab(BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK)));
+
+	public static final Supplier<Block> LAPIS_LAZULI_BRICKS = BLOCKS.registerSimpleBlock("lapis_lazuli_bricks", BlockBehaviour.Properties.ofFullCopy(Blocks.LAPIS_BLOCK));
+	public static final Supplier<Block> LAPIS_LAZULI_MOSAIC = BLOCKS.registerSimpleBlock("lapis_lazuli_mosaic", BlockBehaviour.Properties.ofFullCopy(Blocks.LAPIS_BLOCK));
 
 	public static final Supplier<Block> OAK_SEAT = BLOCKS.register("oak_seat", () -> new SeatBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
 	public static final Supplier<Block> SPRUCE_SEAT = BLOCKS.register("spruce_seat", () -> new SeatBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_PLANKS)));

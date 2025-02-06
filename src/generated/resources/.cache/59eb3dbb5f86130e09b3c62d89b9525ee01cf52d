@@ -1,4 +1,4 @@
-// 1.21.1	2025-01-30T14:01:52.5009276	Loot Tables
+// 1.21.1	2025-02-03T18:59:36.169226	Loot Tables
 21d023bbc6803113198cdc6b2685f08f98d6e6e5 data/blockbox/loot_table/blocks/acacia_palisade.json
 efe77edd4c80c7ac1a0560a0e8e7cc2c6f8add76 data/blockbox/loot_table/blocks/acacia_seat.json
 28a3e88599b28b28e0aa6ab30196c311d9887cf8 data/blockbox/loot_table/blocks/birch_palisade.json
@@ -18,6 +18,8 @@ e6abb48c72e0a5bdd748bc833fee522c7b8a99f7 data/blockbox/loot_table/blocks/clay_ti
 5be0e6e99e2285f231880f691492eb68af841f37 data/blockbox/loot_table/blocks/copper_bars.json
 8151d5ea9e7bec036a407e79020b9f1dee889207 data/blockbox/loot_table/blocks/copper_pillar.json
 15dbb555b6c7d9254b60c21b41edf873be064a87 data/blockbox/loot_table/blocks/corrugated_iron_plate.json
+8329dd7c21eae9bfeb363954fe967ccee5842b68 data/blockbox/loot_table/blocks/corrugated_iron_plate_slab.json
+6e1b3b1f38ac9ad5039e66e5aaaf62323cb5ec89 data/blockbox/loot_table/blocks/corrugated_iron_plate_stairs.json
 3e47ad85d67c773e96475b299ea923864656e0db data/blockbox/loot_table/blocks/crimson_palisade.json
 a9bec9f8154241a4353fa5536e3df379eefbe818 data/blockbox/loot_table/blocks/crimson_seat.json
 60b3a23c8a8353444d1be001b025acdc5a419988 data/blockbox/loot_table/blocks/cut_amethyst.json
@@ -48,6 +50,8 @@ aac7fa2104bdb2da7e7ee6c3da8708a32660ef1c data/blockbox/loot_table/blocks/iron_tr
 9778fb6515ad7539b4c6327ccc35e49cce3922f9 data/blockbox/loot_table/blocks/jagged_clay_tiles.json
 d67b9d6eef9143eb1818cfe624afd35bc879bdc1 data/blockbox/loot_table/blocks/jungle_palisade.json
 795875e0ad5c76cfa7b32315f626ae29c1f49edc data/blockbox/loot_table/blocks/jungle_seat.json
+b61e10f6b5ccbbdecbdfb16a49ddbae1971e22f1 data/blockbox/loot_table/blocks/lapis_lazuli_bricks.json
+d9ef5fd2581e4d02f353412eb668a97266b8e94f data/blockbox/loot_table/blocks/lapis_lazuli_mosaic.json
 98f83782d9cb69f10e9ccc919a78d000b9bc85db data/blockbox/loot_table/blocks/light_blue_sky_lantern.json
 3be09e1c0fb0a66c2e96029652b00daa89eab46a data/blockbox/loot_table/blocks/light_gray_sky_lantern.json
 b596906a09c604fc995b22768456d8c76e4a94e8 data/blockbox/loot_table/blocks/lime_sky_lantern.json

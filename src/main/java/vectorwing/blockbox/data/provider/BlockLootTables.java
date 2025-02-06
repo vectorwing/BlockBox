@@ -75,7 +75,7 @@ public class BlockLootTables extends BlockLootSubProvider
 
 		dropSelf(ModBlocks.IRON_PLATE.get());
 		addBlockStairSlab(ModBlocks.IRON_TREAD_PLATE.get(), ModBlocks.IRON_TREAD_PLATE_STAIRS.get(), ModBlocks.IRON_TREAD_PLATE_SLAB.get());
-		dropSelf(ModBlocks.CORRUGATED_IRON_PLATE.get());
+		addBlockStairSlab(ModBlocks.CORRUGATED_IRON_PLATE.get(), ModBlocks.CORRUGATED_IRON_PLATE_STAIRS.get(), ModBlocks.CORRUGATED_IRON_PLATE_SLAB.get());
 		dropSelf(ModBlocks.IRON_PLATE_PILLAR.get());
 		add(ModBlocks.IRON_PLATE_DOOR.get(), this::createDoorTable);
 		dropSelf(ModBlocks.IRON_PLATE_TRAPDOOR.get());
@@ -91,6 +91,9 @@ public class BlockLootTables extends BlockLootSubProvider
 		dropSelf(ModBlocks.POLISHED_AMETHYST.get());
 		addBlockStairSlab(ModBlocks.CUT_AMETHYST.get(), ModBlocks.CUT_AMETHYST_STAIRS.get(), ModBlocks.CUT_AMETHYST_SLAB.get());
 		addBlockStairSlab(ModBlocks.CHISELED_AMETHYST.get(), ModBlocks.CHISELED_AMETHYST_STAIRS.get(), ModBlocks.CHISELED_AMETHYST_SLAB.get());
+
+		dropSelf(ModBlocks.LAPIS_LAZULI_BRICKS.get());
+		dropSelf(ModBlocks.LAPIS_LAZULI_MOSAIC.get());
 
 		dropSelf(ModBlocks.OAK_SEAT.get());
 		dropSelf(ModBlocks.SPRUCE_SEAT.get());

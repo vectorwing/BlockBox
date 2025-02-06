@@ -79,6 +79,8 @@ public class ModItems
 	public static final Supplier<BlockItem> IRON_TREAD_PLATE_STAIRS = registerSimpleBlockItem("iron_tread_plate_stairs", ModBlocks.IRON_TREAD_PLATE_STAIRS);
 	public static final Supplier<BlockItem> IRON_TREAD_PLATE_SLAB = registerSimpleBlockItem("iron_tread_plate_slab", ModBlocks.IRON_TREAD_PLATE_SLAB);
 	public static final Supplier<BlockItem> CORRUGATED_IRON_PLATE = registerSimpleBlockItem("corrugated_iron_plate", ModBlocks.CORRUGATED_IRON_PLATE);
+	public static final Supplier<BlockItem> CORRUGATED_IRON_PLATE_STAIRS = registerSimpleBlockItem("corrugated_iron_plate_stairs", ModBlocks.CORRUGATED_IRON_PLATE_STAIRS);
+	public static final Supplier<BlockItem> CORRUGATED_IRON_PLATE_SLAB = registerSimpleBlockItem("corrugated_iron_plate_slab", ModBlocks.CORRUGATED_IRON_PLATE_SLAB);
 	public static final Supplier<BlockItem> IRON_PLATE_PILLAR = registerSimpleBlockItem("iron_plate_pillar", ModBlocks.IRON_PLATE_PILLAR);
 	public static final Supplier<BlockItem> IRON_PLATE_DOOR = registerSimpleBlockItem("iron_plate_door", ModBlocks.IRON_PLATE_DOOR);
 	public static final Supplier<BlockItem> IRON_PLATE_TRAPDOOR = registerSimpleBlockItem("iron_plate_trapdoor", ModBlocks.IRON_PLATE_TRAPDOOR);
@@ -100,6 +102,9 @@ public class ModItems
 	public static final Supplier<BlockItem> CHISELED_AMETHYST = registerSimpleBlockItem("chiseled_amethyst", ModBlocks.CHISELED_AMETHYST);
 	public static final Supplier<BlockItem> CHISELED_AMETHYST_STAIRS = registerSimpleBlockItem("chiseled_amethyst_stairs", ModBlocks.CHISELED_AMETHYST_STAIRS);
 	public static final Supplier<BlockItem> CHISELED_AMETHYST_SLAB = registerSimpleBlockItem("chiseled_amethyst_slab", ModBlocks.CHISELED_AMETHYST_SLAB);
+
+	public static final Supplier<BlockItem> LAPIS_LAZULI_BRICKS = registerSimpleBlockItem("lapis_lazuli_bricks", ModBlocks.LAPIS_LAZULI_BRICKS);
+	public static final Supplier<BlockItem> LAPIS_LAZULI_MOSAIC = registerSimpleBlockItem("lapis_lazuli_mosaic", ModBlocks.LAPIS_LAZULI_MOSAIC);
 
 	public static final Supplier<BlockItem> OAK_SEAT = registerSimpleBlockItem("oak_seat", ModBlocks.OAK_SEAT);
 	public static final Supplier<BlockItem> SPRUCE_SEAT = registerSimpleBlockItem("spruce_seat", ModBlocks.SPRUCE_SEAT);

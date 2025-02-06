@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "blockbox:block/corrugated_iron_plate_slab"
+    },
+    "type=double": {
+      "model": "blockbox:block/corrugated_iron_plate"
+    },
+    "type=top": {
+      "model": "blockbox:block/corrugated_iron_plate_slab_top"
+    }
+  }
+}

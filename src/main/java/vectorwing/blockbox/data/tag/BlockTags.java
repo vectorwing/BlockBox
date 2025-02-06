@@ -108,6 +108,19 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.CHISELED_AMETHYST_SLAB.get()
 		);
 
+		tag(ModTags.IRON_PLATE_BLOCKS).add(
+				ModBlocks.IRON_PLATE.get(),
+				ModBlocks.IRON_TREAD_PLATE.get(),
+				ModBlocks.IRON_TREAD_PLATE_STAIRS.get(),
+				ModBlocks.IRON_TREAD_PLATE_SLAB.get(),
+				ModBlocks.CORRUGATED_IRON_PLATE.get(),
+				ModBlocks.CORRUGATED_IRON_PLATE_STAIRS.get(),
+				ModBlocks.CORRUGATED_IRON_PLATE_SLAB.get(),
+				ModBlocks.IRON_PLATE_PILLAR.get(),
+				ModBlocks.IRON_PLATE_DOOR.get(),
+				ModBlocks.IRON_PLATE_TRAPDOOR.get()
+		);
+
 		tag(ModTags.GOLDEN_BLOCKS).add(
 				ModBlocks.CHISELED_GOLD.get(),
 				ModBlocks.GOLDEN_TILES.get(),
@@ -180,6 +193,8 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.IRON_TREAD_PLATE_STAIRS.get(),
 				ModBlocks.IRON_TREAD_PLATE_SLAB.get(),
 				ModBlocks.CORRUGATED_IRON_PLATE.get(),
+				ModBlocks.CORRUGATED_IRON_PLATE_STAIRS.get(),
+				ModBlocks.CORRUGATED_IRON_PLATE_SLAB.get(),
 				ModBlocks.IRON_PLATE_PILLAR.get(),
 				ModBlocks.IRON_PLATE_DOOR.get(),
 				ModBlocks.IRON_PLATE_TRAPDOOR.get(),
@@ -198,7 +213,9 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.CUT_AMETHYST_SLAB.get(),
 				ModBlocks.CHISELED_AMETHYST_STAIRS.get(),
 				ModBlocks.CHISELED_AMETHYST_SLAB.get(),
-				ModBlocks.CHISELED_AMETHYST.get()
+				ModBlocks.CHISELED_AMETHYST.get(),
+				ModBlocks.LAPIS_LAZULI_BRICKS.get(),
+				ModBlocks.LAPIS_LAZULI_MOSAIC.get()
 		);
 		tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_AXE)
 				.addTag(ModTags.PALISADES)

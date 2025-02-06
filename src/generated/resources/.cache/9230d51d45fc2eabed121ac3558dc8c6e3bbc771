@@ -1,4 +1,4 @@
-// 1.21.1	2025-01-30T14:01:52.4959258	Item Models: blockbox
+// 1.21.1	2025-02-03T18:59:36.1652265	Item Models: blockbox
 fca27dcf20ce91e90812b733713a36b943ebfc8b assets/blockbox/models/item/acacia_palisade.json
 56edae35411785995cfa08df92b58e026b257027 assets/blockbox/models/item/acacia_seat.json
 e26e93ede660590aade714bcbeb4481832a77fd8 assets/blockbox/models/item/birch_palisade.json
@@ -18,6 +18,8 @@ cbae626f2f053761f348b157e15bec585dbe5a2e assets/blockbox/models/item/clay_tile_s
 d3abe89106dcf9e38123982aa5efc58660e6ba1f assets/blockbox/models/item/copper_bars.json
 3fa9b5f5879a5fa9432c629f60e84872947db918 assets/blockbox/models/item/copper_pillar.json
 f0c1075d223ed88745c2907d51b66dda67a9c3ff assets/blockbox/models/item/corrugated_iron_plate.json
+c5c890ba3be94c7285fb879e106da864f8c139c9 assets/blockbox/models/item/corrugated_iron_plate_slab.json
+64f122c617b5e21960354392b2a1b8a5e3ca9e1c assets/blockbox/models/item/corrugated_iron_plate_stairs.json
 9b8e3927e6177ba1a228009586052bde807ed450 assets/blockbox/models/item/crimson_palisade.json
 2cb9d8f2d278434114a4f7416cad6f29a20300f7 assets/blockbox/models/item/crimson_seat.json
 9870a237c676dbf3870b5f3e75e0f6f100b1161e assets/blockbox/models/item/cut_amethyst.json
@@ -48,6 +50,8 @@ f054011ee452b502d41fd0e0779b712e936b5647 assets/blockbox/models/item/iron_tread_
 68f6f1b0d24863b57df5255bfcacb5d88a0d4992 assets/blockbox/models/item/jagged_clay_tiles.json
 354f2947f6439f4272b4a7a4774ac147a7044f03 assets/blockbox/models/item/jungle_palisade.json
 74cf31489e3735bdaf7aefcfe8886ef5cb4a9094 assets/blockbox/models/item/jungle_seat.json
+3482f7c756e4bb66a58d44fdd1ed973d3645d509 assets/blockbox/models/item/lapis_lazuli_bricks.json
+db51fc57052ef4cc853f15eb21e9fff57da655de assets/blockbox/models/item/lapis_lazuli_mosaic.json
 f58743971c545bac1d39721d679e5332e2aa7f34 assets/blockbox/models/item/light_blue_sky_lantern.json
 2d74e62d7b5c9bb67807b86578774a149e82c9ed assets/blockbox/models/item/light_gray_sky_lantern.json
 1c2b617483f5a3aa579fb576151b5464fcd0af29 assets/blockbox/models/item/lime_sky_lantern.json

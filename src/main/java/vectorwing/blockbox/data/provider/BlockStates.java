@@ -48,7 +48,7 @@ public class BlockStates extends BlockStateProvider
 
 		simpleBlock(ModBlocks.IRON_PLATE.get());
 		blockWithStairAndSlab(ModBlocks.IRON_TREAD_PLATE.get(), ModBlocks.IRON_TREAD_PLATE_STAIRS.get(), ModBlocks.IRON_TREAD_PLATE_SLAB.get());
-		simpleBlock(ModBlocks.CORRUGATED_IRON_PLATE.get());
+		blockWithStairAndSlab(ModBlocks.CORRUGATED_IRON_PLATE.get(), ModBlocks.CORRUGATED_IRON_PLATE_STAIRS.get(), ModBlocks.CORRUGATED_IRON_PLATE_SLAB.get());
 		axisBlock((RotatedPillarBlock) ModBlocks.IRON_PLATE_PILLAR.get());
 		doorBlockWithRenderType((DoorBlock) ModBlocks.IRON_PLATE_DOOR.get(), resourceBlock("iron_plate_door_bottom"), resourceBlock("iron_plate_door_top"), RenderType.CUTOUT.name);
 		ironPlateTrapdoor((TrapDoorBlock) ModBlocks.IRON_PLATE_TRAPDOOR.get(), key(ModBlocks.IRON_PLATE_TRAPDOOR.get()).toString(), resourceBlock("iron_plate_trapdoor"), ResourceLocation.tryParse(RenderType.CUTOUT.name));
@@ -75,6 +75,9 @@ public class BlockStates extends BlockStateProvider
 		simpleBlock(ModBlocks.POLISHED_AMETHYST.get());
 		blockWithStairAndSlab(ModBlocks.CUT_AMETHYST.get(), ModBlocks.CUT_AMETHYST_STAIRS.get(), ModBlocks.CUT_AMETHYST_SLAB.get());
 		blockWithStairAndSlab(ModBlocks.CHISELED_AMETHYST.get(), ModBlocks.CHISELED_AMETHYST_STAIRS.get(), ModBlocks.CHISELED_AMETHYST_SLAB.get());
+
+		simpleBlock(ModBlocks.LAPIS_LAZULI_BRICKS.get());
+		simpleBlock(ModBlocks.LAPIS_LAZULI_MOSAIC.get());
 
 		palisadeBlock((PalisadeBlock) ModBlocks.OAK_PALISADE.get());
 		spikedPalisadeBlock((SpikedPalisadeBlock) ModBlocks.SPIKED_OAK_PALISADE.get(), name(ModBlocks.OAK_PALISADE.get()));

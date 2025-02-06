@@ -71,22 +71,30 @@ public class StonecuttingRecipes
 		stonecutting(output, ModItems.IRON_PLATE.get(), ModItems.IRON_TREAD_PLATE_STAIRS.get());
 		stonecutting(output, ModItems.IRON_PLATE.get(), ModItems.IRON_TREAD_PLATE_SLAB.get(), 2);
 		stonecutting(output, ModItems.IRON_PLATE.get(), ModItems.CORRUGATED_IRON_PLATE.get());
+		stonecutting(output, ModItems.IRON_PLATE.get(), ModItems.CORRUGATED_IRON_PLATE_STAIRS.get());
+		stonecutting(output, ModItems.IRON_PLATE.get(), ModItems.CORRUGATED_IRON_PLATE_SLAB.get(), 2);
 		stonecutting(output, ModItems.IRON_PLATE.get(), ModItems.IRON_PLATE_PILLAR.get());
 		stonecutting(output, ModItems.IRON_TREAD_PLATE.get(), ModItems.IRON_PLATE.get());
 		stonecutting(output, ModItems.IRON_TREAD_PLATE.get(), ModItems.IRON_TREAD_PLATE_STAIRS.get());
 		stonecutting(output, ModItems.IRON_TREAD_PLATE.get(), ModItems.IRON_TREAD_PLATE_SLAB.get(), 2);
 		stonecutting(output, ModItems.IRON_TREAD_PLATE.get(), ModItems.CORRUGATED_IRON_PLATE.get());
+		stonecutting(output, ModItems.IRON_TREAD_PLATE.get(), ModItems.CORRUGATED_IRON_PLATE_STAIRS.get());
+		stonecutting(output, ModItems.IRON_TREAD_PLATE.get(), ModItems.CORRUGATED_IRON_PLATE_SLAB.get(), 2);
 		stonecutting(output, ModItems.IRON_TREAD_PLATE.get(), ModItems.IRON_PLATE_PILLAR.get());
 		stonecutting(output, ModItems.CORRUGATED_IRON_PLATE.get(), ModItems.IRON_PLATE.get());
 		stonecutting(output, ModItems.CORRUGATED_IRON_PLATE.get(), ModItems.IRON_TREAD_PLATE.get());
 		stonecutting(output, ModItems.CORRUGATED_IRON_PLATE.get(), ModItems.IRON_TREAD_PLATE_STAIRS.get());
 		stonecutting(output, ModItems.CORRUGATED_IRON_PLATE.get(), ModItems.IRON_TREAD_PLATE_SLAB.get(), 2);
+		stonecutting(output, ModItems.CORRUGATED_IRON_PLATE.get(), ModItems.CORRUGATED_IRON_PLATE_STAIRS.get());
+		stonecutting(output, ModItems.CORRUGATED_IRON_PLATE.get(), ModItems.CORRUGATED_IRON_PLATE_SLAB.get(), 2);
 		stonecutting(output, ModItems.CORRUGATED_IRON_PLATE.get(), ModItems.IRON_PLATE_PILLAR.get());
 		stonecutting(output, ModItems.IRON_PLATE_PILLAR.get(), ModItems.IRON_PLATE.get());
 		stonecutting(output, ModItems.IRON_PLATE_PILLAR.get(), ModItems.IRON_TREAD_PLATE.get());
 		stonecutting(output, ModItems.IRON_PLATE_PILLAR.get(), ModItems.IRON_TREAD_PLATE_STAIRS.get());
 		stonecutting(output, ModItems.IRON_PLATE_PILLAR.get(), ModItems.IRON_TREAD_PLATE_SLAB.get(), 2);
 		stonecutting(output, ModItems.IRON_PLATE_PILLAR.get(), ModItems.CORRUGATED_IRON_PLATE.get());
+		stonecutting(output, ModItems.IRON_PLATE_PILLAR.get(), ModItems.CORRUGATED_IRON_PLATE_STAIRS.get());
+		stonecutting(output, ModItems.IRON_PLATE_PILLAR.get(), ModItems.CORRUGATED_IRON_PLATE_SLAB.get(), 2);
 
 		stonecutting(output, ModItems.CHISELED_GOLD.get(), ModItems.GOLDEN_TILES.get());
 		stonecutting(output, ModItems.CHISELED_GOLD.get(), ModItems.GOLDEN_BRICKS.get());
@@ -116,6 +124,9 @@ public class StonecuttingRecipes
 		stonecutting(output, Items.AMETHYST_BLOCK, ModItems.CHISELED_AMETHYST.get());
 		stonecutting(output, Items.AMETHYST_BLOCK, ModItems.CHISELED_AMETHYST_STAIRS.get());
 		stonecutting(output, Items.AMETHYST_BLOCK, ModItems.CHISELED_AMETHYST_SLAB.get(), 2);
+
+		stonecutting(output, ModItems.LAPIS_LAZULI_BRICKS.get(), ModItems.LAPIS_LAZULI_MOSAIC.get(), 1);
+		stonecutting(output, ModItems.LAPIS_LAZULI_MOSAIC.get(), ModItems.LAPIS_LAZULI_BRICKS.get(), 1);
 
 		stonecutting(output, ModItems.POLISHED_AMETHYST.get(), Items.AMETHYST_BLOCK);
 		stonecutting(output, ModItems.POLISHED_AMETHYST.get(), ModItems.CUT_AMETHYST.get());
