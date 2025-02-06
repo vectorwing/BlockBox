@@ -89,6 +89,8 @@ public class ItemModels extends ItemModelProvider
 		Set<Item> spritedBlockItems = Sets.newHashSet(
 				ModItems.IRON_PLATE_DOOR.get(),
 				ModItems.GOLDEN_DOOR.get(),
+				ModItems.BRAZIER.get(),
+				ModItems.SOUL_BRAZIER.get(),
 				ModItems.WHITE_SKY_LANTERN.get(),
 				ModItems.LIGHT_GRAY_SKY_LANTERN.get(),
 				ModItems.GRAY_SKY_LANTERN.get(),

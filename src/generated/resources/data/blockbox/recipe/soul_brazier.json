@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "tag": "minecraft:soul_fire_base_blocks"
+    },
+    "c": {
+      "item": "minecraft:chain"
+    },
+    "i": {
+      "tag": "c:ingots/iron"
+    }
+  },
+  "pattern": [
+    "c c",
+    "iSi",
+    " i "
+  ],
+  "result": {
+    "count": 1,
+    "id": "blockbox:soul_brazier"
+  }
+}

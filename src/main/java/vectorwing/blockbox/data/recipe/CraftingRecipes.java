@@ -9,7 +9,6 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.crafting.SmeltingRecipe;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.Tags;
@@ -24,7 +23,7 @@ public class CraftingRecipes
 		// TODO: Move this to its own class.
 		SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModBlocks.CLAY_TILES.get()), RecipeCategory.BUILDING_BLOCKS, ModItems.JAGGED_CLAY_TILES.get(), 0.1F, 200)
 				.unlockedBy("has_clay_tiles", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.CLAY_TILES.get()))
-						.save(output);
+				.save(output);
 
 		craftBasicBlocks(output);
 		craftTools(output);
@@ -78,6 +77,34 @@ public class CraftingRecipes
 	}
 
 	private static void craftFurniture(RecipeOutput output) {
+		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.BRAZIER.get())
+				.pattern("c c")
+				.pattern("iNi")
+				.pattern(" i ")
+				.define('c', Items.CHAIN)
+				.define('N', Items.NETHERRACK)
+				.define('i', Tags.Items.INGOTS_IRON)
+				.unlockedBy("has_netherrack", InventoryChangeTrigger.TriggerInstance.hasItems(Items.NETHERRACK))
+				.save(output);
+		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.SOUL_BRAZIER.get())
+				.pattern("c c")
+				.pattern("iSi")
+				.pattern(" i ")
+				.define('c', Items.CHAIN)
+				.define('S', ItemTags.SOUL_FIRE_BASE_BLOCKS)
+				.define('i', Tags.Items.INGOTS_IRON)
+				.unlockedBy("has_soul_sand", InventoryChangeTrigger.TriggerInstance.hasItems(Items.SOUL_SAND, Items.SOUL_SOIL))
+				.save(output);
+		ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.BRAZIER.get())
+				.requires(ModItems.SOUL_BRAZIER.get())
+				.requires(Items.NETHERRACK)
+				.unlockedBy("has_netherrack", InventoryChangeTrigger.TriggerInstance.hasItems(Items.NETHERRACK))
+				.save(output, nameWithSuffix(itemName(ModItems.BRAZIER.get()), "from_swap"));
+		ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.SOUL_BRAZIER.get())
+				.requires(ModItems.BRAZIER.get())
+				.requires(ItemTags.SOUL_FIRE_BASE_BLOCKS)
+				.unlockedBy("has_soul_sand", InventoryChangeTrigger.TriggerInstance.hasItems(Items.SOUL_SAND, Items.SOUL_SOIL))
+				.save(output, nameWithSuffix(itemName(ModItems.SOUL_BRAZIER.get()), "from_swap"));
 		chair(output, ModBlocks.OAK_SEAT.get(), Blocks.OAK_PLANKS);
 		chair(output, ModBlocks.SPRUCE_SEAT.get(), Blocks.SPRUCE_PLANKS);
 		chair(output, ModBlocks.BIRCH_SEAT.get(), Blocks.BIRCH_PLANKS);

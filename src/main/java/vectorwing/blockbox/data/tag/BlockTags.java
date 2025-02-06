@@ -215,7 +215,9 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.CHISELED_AMETHYST_SLAB.get(),
 				ModBlocks.CHISELED_AMETHYST.get(),
 				ModBlocks.LAPIS_LAZULI_BRICKS.get(),
-				ModBlocks.LAPIS_LAZULI_MOSAIC.get()
+				ModBlocks.LAPIS_LAZULI_MOSAIC.get(),
+				ModBlocks.BRAZIER.get(),
+				ModBlocks.SOUL_BRAZIER.get()
 		);
 		tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_AXE)
 				.addTag(ModTags.PALISADES)

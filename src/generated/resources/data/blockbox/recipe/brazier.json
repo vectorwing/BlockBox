@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "N": {
+      "item": "minecraft:netherrack"
+    },
+    "c": {
+      "item": "minecraft:chain"
+    },
+    "i": {
+      "tag": "c:ingots/iron"
+    }
+  },
+  "pattern": [
+    "c c",
+    "iNi",
+    " i "
+  ],
+  "result": {
+    "count": 1,
+    "id": "blockbox:brazier"
+  }
+}

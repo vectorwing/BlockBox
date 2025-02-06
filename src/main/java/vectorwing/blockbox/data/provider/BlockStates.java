@@ -13,6 +13,7 @@ import net.minecraft.world.level.block.state.properties.Property;
 import net.neoforged.neoforge.client.model.generators.*;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import vectorwing.blockbox.BlockBox;
+import vectorwing.blockbox.common.block.BrazierBlock;
 import vectorwing.blockbox.common.block.PalisadeBlock;
 import vectorwing.blockbox.common.block.SpikedPalisadeBlock;
 import vectorwing.blockbox.common.block.state.PalisadeConnection;
@@ -110,6 +111,9 @@ public class BlockStates extends BlockStateProvider
 		chairBlock(ModBlocks.CHERRY_SEAT.get());
 		chairBlock(ModBlocks.CRIMSON_SEAT.get());
 		chairBlock(ModBlocks.WARPED_SEAT.get());
+
+		brazierBlock(ModBlocks.BRAZIER.get(), Blocks.CAMPFIRE);
+		brazierBlock(ModBlocks.SOUL_BRAZIER.get(), Blocks.SOUL_CAMPFIRE);
 
 		skyLanternBlock(ModBlocks.WHITE_SKY_LANTERN.get(), Blocks.WHITE_CANDLE);
 		skyLanternBlock(ModBlocks.LIGHT_GRAY_SKY_LANTERN.get(), Blocks.LIGHT_GRAY_CANDLE);
@@ -348,6 +352,26 @@ public class BlockStates extends BlockStateProvider
 				.texture("bottom", resourceBlock("sky_lantern_bottom"))
 				.texture("candle", resourceMcBlock(name(candle) + "_lit"))
 		);
+	}
+
+	private void brazierBlock(Block block, Block campfire) {
+		String baseName = name(block);
+		String campfireName = name(campfire);
+		ModelFile standing = models().withExistingParent(baseName, resourceBlock("template_brazier"))
+				.texture("top", resourceBlock(baseName + "_top_lit"))
+				.texture("side", resourceBlock(baseName + "_side_lit"))
+				.texture("bottom", resourceBlock("brazier_bottom"))
+				.texture("fire", resourceMcBlock(campfireName + "_fire"));
+		ModelFile hanging = models().withExistingParent("hanging_" + baseName, resourceBlock("template_hanging_brazier"))
+				.texture("top", resourceBlock(baseName + "_top_lit"))
+				.texture("side", resourceBlock("hanging_" + baseName + "_side_lit"))
+				.texture("bottom", resourceBlock("brazier_bottom"))
+				.texture("fire", resourceMcBlock(campfireName + "_fire"));
+		getVariantBuilder(block)
+				.partialState().with(BrazierBlock.HANGING, false)
+				.modelForState().modelFile(standing).addModel()
+				.partialState().with(BrazierBlock.HANGING, true)
+				.modelForState().modelFile(hanging).addModel();
 	}
 
 	private ModelFile modelPalisadePost(String baseName, String textureName) {

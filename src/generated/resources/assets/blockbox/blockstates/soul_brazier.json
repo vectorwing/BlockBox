@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "blockbox:block/soul_brazier"
+    },
+    "hanging=true": {
+      "model": "blockbox:block/hanging_soul_brazier"
+    }
+  }
+}

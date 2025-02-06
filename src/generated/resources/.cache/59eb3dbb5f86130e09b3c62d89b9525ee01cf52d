@@ -1,10 +1,11 @@
-// 1.21.1	2025-02-03T18:59:36.169226	Loot Tables
+// 1.21.1	2025-02-06T00:54:48.2442581	Loot Tables
 21d023bbc6803113198cdc6b2685f08f98d6e6e5 data/blockbox/loot_table/blocks/acacia_palisade.json
 efe77edd4c80c7ac1a0560a0e8e7cc2c6f8add76 data/blockbox/loot_table/blocks/acacia_seat.json
 28a3e88599b28b28e0aa6ab30196c311d9887cf8 data/blockbox/loot_table/blocks/birch_palisade.json
 9bd0598610bf1a1e8418d3cf4c712f31d3855982 data/blockbox/loot_table/blocks/birch_seat.json
 a64a57a9d8b5f02aab63b55ae41936bb8b11eb91 data/blockbox/loot_table/blocks/black_sky_lantern.json
 7243036303db9bb9d1434ea10e73a0ca21f880b4 data/blockbox/loot_table/blocks/blue_sky_lantern.json
+03ba6770887d18f9df936a10b4f265f83e8f93af data/blockbox/loot_table/blocks/brazier.json
 9fd18b33815cc10d063fa916b3f84e6f9b81b2fe data/blockbox/loot_table/blocks/brown_sky_lantern.json
 a9b0c38fee6d5acdde0d6764030a455f84ec5d4e data/blockbox/loot_table/blocks/cherry_palisade.json
 2ebbd87222913dae07f33f16776b16d983d638f2 data/blockbox/loot_table/blocks/cherry_seat.json
@@ -83,6 +84,7 @@ b86ddcd1203418cf5cdbdb0fb2078fc2943b46f8 data/blockbox/loot_table/blocks/red_san
 8cba02ca751bf7e70a179a7e578e89d737833589 data/blockbox/loot_table/blocks/sandstone_bricks.json
 cad7f5e96682f7015f73ca74b465972d6bea26ea data/blockbox/loot_table/blocks/sandstone_brick_slab.json
 7f246c78144a04ce65d4b73a46c1960fccceaa0f data/blockbox/loot_table/blocks/sandstone_brick_stairs.json
+2b7f80da9d87fd29054697c042f7f80a39cb1262 data/blockbox/loot_table/blocks/soul_brazier.json
 28fbbcd07d5a5bd362be92a390b82c5afcac204a data/blockbox/loot_table/blocks/spiked_acacia_palisade.json
 076485c310948ad1957183d5a3c18d143ce77faa data/blockbox/loot_table/blocks/spiked_birch_palisade.json
 b4b42acdcc616bf0ae2985087c8b24244ee916d4 data/blockbox/loot_table/blocks/spiked_cherry_palisade.json

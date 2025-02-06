@@ -132,6 +132,9 @@ public class ModBlocks
 	public static final Supplier<Block> WARPED_PALISADE = BLOCKS.register("warped_palisade", () -> netherPalisade(MapColor.WARPED_STEM));
 	public static final Supplier<Block> SPIKED_WARPED_PALISADE = BLOCKS.register("spiked_warped_palisade", () -> netherSpikedPalisade(MapColor.WARPED_STEM));
 
+	public static final Supplier<Block> BRAZIER = BLOCKS.register("brazier", () ->  new BrazierBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LANTERN)));
+	public static final Supplier<Block> SOUL_BRAZIER = BLOCKS.register("soul_brazier", () ->  new BrazierBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_LANTERN)));
+
 	public static final Supplier<Block> WHITE_SKY_LANTERN = BLOCKS.register("white_sky_lantern", () ->  new SkyLanternBlock(PROPERTIES_SKY_LANTERN.mapColor(MapColor.SNOW)));
 	public static final Supplier<Block> LIGHT_GRAY_SKY_LANTERN = BLOCKS.register("light_gray_sky_lantern", () ->  new SkyLanternBlock(PROPERTIES_SKY_LANTERN.mapColor(MapColor.COLOR_LIGHT_GRAY)));
 	public static final Supplier<Block> GRAY_SKY_LANTERN = BLOCKS.register("gray_sky_lantern", () ->  new SkyLanternBlock(PROPERTIES_SKY_LANTERN.mapColor(MapColor.COLOR_GRAY)));

@@ -138,6 +138,9 @@ public class ModItems
 	public static final Supplier<BlockItem> WARPED_PALISADE = registerSimpleBlockItem("warped_palisade", ModBlocks.WARPED_PALISADE);
 	public static final Supplier<BlockItem> SPIKED_WARPED_PALISADE = registerSimpleBlockItem("spiked_warped_palisade", ModBlocks.SPIKED_WARPED_PALISADE);
 
+	public static final Supplier<BlockItem> BRAZIER = registerSimpleBlockItem("brazier", ModBlocks.BRAZIER);
+	public static final Supplier<BlockItem> SOUL_BRAZIER = registerSimpleBlockItem("soul_brazier", ModBlocks.SOUL_BRAZIER);
+
 	public static final Supplier<Item> WHITE_SKY_LANTERN = registerItem("white_sky_lantern", () -> new SkyLanternItem(ModBlocks.WHITE_SKY_LANTERN.get(), new Item.Properties()));
 	public static final Supplier<Item> LIGHT_GRAY_SKY_LANTERN = registerItem("light_gray_sky_lantern", () -> new SkyLanternItem(ModBlocks.LIGHT_GRAY_SKY_LANTERN.get(), new Item.Properties()));
 	public static final Supplier<Item> GRAY_SKY_LANTERN = registerItem("gray_sky_lantern", () -> new SkyLanternItem(ModBlocks.GRAY_SKY_LANTERN.get(), new Item.Properties()));

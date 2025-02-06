@@ -58,6 +58,8 @@
     "blockbox:chiseled_amethyst_slab",
     "blockbox:chiseled_amethyst",
     "blockbox:lapis_lazuli_bricks",
-    "blockbox:lapis_lazuli_mosaic"
+    "blockbox:lapis_lazuli_mosaic",
+    "blockbox:brazier",
+    "blockbox:soul_brazier"
   ]
 }
