@@ -395,12 +395,14 @@ public class CraftingRecipes
 				.define('s', Items.LAPIS_LAZULI)
 				.unlockedBy("has_lapis_lazuli", InventoryChangeTrigger.TriggerInstance.hasItems(Items.LAPIS_LAZULI))
 				.save(output);
+		stairAndSlab(output, ModBlocks.LAPIS_LAZULI_BRICK_STAIRS.get(), ModBlocks.LAPIS_LAZULI_BRICK_SLAB.get(), ModBlocks.LAPIS_LAZULI_BRICKS.get());
 		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LAPIS_LAZULI_MOSAIC.get(), 4)
 				.pattern("ss")
 				.pattern("ss")
 				.define('s', ModBlocks.LAPIS_LAZULI_BRICKS.get())
 				.unlockedBy("has_lapis_lazuli", InventoryChangeTrigger.TriggerInstance.hasItems(Items.LAPIS_LAZULI))
 				.save(output);
+		stairAndSlab(output, ModBlocks.LAPIS_LAZULI_MOSAIC_STAIRS.get(), ModBlocks.LAPIS_LAZULI_MOSAIC_SLAB.get(), ModBlocks.LAPIS_LAZULI_MOSAIC.get());
 	}
 
 	// HELPER METHODS

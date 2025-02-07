@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "blockbox:block/lapis_lazuli_mosaic_slab"
+    },
+    "type=double": {
+      "model": "blockbox:block/lapis_lazuli_mosaic"
+    },
+    "type=top": {
+      "model": "blockbox:block/lapis_lazuli_mosaic_slab_top"
+    }
+  }
+}

@@ -128,8 +128,12 @@ public class StonecuttingRecipes
 		stonecutting(output, Items.AMETHYST_BLOCK, ModItems.CHISELED_AMETHYST_STAIRS.get());
 		stonecutting(output, Items.AMETHYST_BLOCK, ModItems.CHISELED_AMETHYST_SLAB.get(), 2);
 
-		stonecutting(output, ModItems.LAPIS_LAZULI_BRICKS.get(), ModItems.LAPIS_LAZULI_MOSAIC.get(), 1);
-		stonecutting(output, ModItems.LAPIS_LAZULI_MOSAIC.get(), ModItems.LAPIS_LAZULI_BRICKS.get(), 1);
+		stonecutting(output, ModItems.LAPIS_LAZULI_BRICKS.get(), ModItems.LAPIS_LAZULI_BRICK_STAIRS.get());
+		stonecutting(output, ModItems.LAPIS_LAZULI_BRICKS.get(), ModItems.LAPIS_LAZULI_BRICK_SLAB.get(), 2);
+		stonecutting(output, ModItems.LAPIS_LAZULI_BRICKS.get(), ModItems.LAPIS_LAZULI_MOSAIC.get());
+		stonecutting(output, ModItems.LAPIS_LAZULI_MOSAIC.get(), ModItems.LAPIS_LAZULI_MOSAIC_STAIRS.get());
+		stonecutting(output, ModItems.LAPIS_LAZULI_MOSAIC.get(), ModItems.LAPIS_LAZULI_MOSAIC_SLAB.get(), 2);
+		stonecutting(output, ModItems.LAPIS_LAZULI_MOSAIC.get(), ModItems.LAPIS_LAZULI_BRICKS.get());
 
 		stonecutting(output, ModItems.POLISHED_AMETHYST.get(), Items.AMETHYST_BLOCK);
 		stonecutting(output, ModItems.POLISHED_AMETHYST.get(), ModItems.CUT_AMETHYST.get());

@@ -18,7 +18,7 @@ public class ModBlocks
 	public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(BlockBox.MODID);
 
 	public static final BlockBehaviour.Properties PROPERTIES_PACKED_SNOW = BlockBehaviour.Properties.of().mapColor(MapColor.SNOW).strength(0.6F).sound(SoundType.SNOW);
-	public static final BlockBehaviour.Properties PROPERTIES_PACKED_ICE = BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_ICE).requiresCorrectToolForDrops();
+	public static final BlockBehaviour.Properties PROPERTIES_PACKED_ICE = BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_ICE).strength(0.4F).requiresCorrectToolForDrops();
 	public static final BlockBehaviour.Properties PROPERTIES_IRON_PLATE = BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).strength(4.0F, 6.0F).sound(SoundType.NETHERITE_BLOCK);
 	public static final BlockBehaviour.Properties PROPERTIES_PALISADE = BlockBehaviour.Properties.of().strength(2.0F).instrument(NoteBlockInstrument.BASS);
 	public static final BlockBehaviour.Properties PROPERTIES_SKY_LANTERN = BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.GUITAR).noOcclusion().lightLevel((state) -> 15).ignitedByLava().sound(SoundType.WOOL);
@@ -103,7 +103,11 @@ public class ModBlocks
 	public static final Supplier<Block> CHISELED_AMETHYST_SLAB = BLOCKS.register("chiseled_amethyst_slab", () -> slab(BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK)));
 
 	public static final Supplier<Block> LAPIS_LAZULI_BRICKS = BLOCKS.registerSimpleBlock("lapis_lazuli_bricks", BlockBehaviour.Properties.ofFullCopy(Blocks.LAPIS_BLOCK));
+	public static final Supplier<Block> LAPIS_LAZULI_BRICK_STAIRS = BLOCKS.register("lapis_lazuli_brick_stairs", () -> stair(ModBlocks.LAPIS_LAZULI_BRICKS.get(), BlockBehaviour.Properties.ofFullCopy(Blocks.LAPIS_BLOCK)));
+	public static final Supplier<Block> LAPIS_LAZULI_BRICK_SLAB = BLOCKS.register("lapis_lazuli_brick_slab", () -> slab(BlockBehaviour.Properties.ofFullCopy(Blocks.LAPIS_BLOCK)));
 	public static final Supplier<Block> LAPIS_LAZULI_MOSAIC = BLOCKS.registerSimpleBlock("lapis_lazuli_mosaic", BlockBehaviour.Properties.ofFullCopy(Blocks.LAPIS_BLOCK));
+	public static final Supplier<Block> LAPIS_LAZULI_MOSAIC_STAIRS = BLOCKS.register("lapis_lazuli_mosaic_stairs", () -> stair(ModBlocks.LAPIS_LAZULI_MOSAIC.get(), BlockBehaviour.Properties.ofFullCopy(Blocks.LAPIS_BLOCK)));
+	public static final Supplier<Block> LAPIS_LAZULI_MOSAIC_SLAB = BLOCKS.register("lapis_lazuli_mosaic_slab", () -> slab(BlockBehaviour.Properties.ofFullCopy(Blocks.LAPIS_BLOCK)));
 
 	public static final Supplier<Block> OAK_SEAT = BLOCKS.register("oak_seat", () -> new SeatBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
 	public static final Supplier<Block> SPRUCE_SEAT = BLOCKS.register("spruce_seat", () -> new SeatBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_PLANKS)));

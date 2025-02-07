@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "blockbox:block/lapis_lazuli_mosaic",
+    "side": "blockbox:block/lapis_lazuli_mosaic",
+    "top": "blockbox:block/lapis_lazuli_mosaic"
+  }
+}

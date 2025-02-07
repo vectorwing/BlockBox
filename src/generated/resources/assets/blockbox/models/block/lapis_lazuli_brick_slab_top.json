@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "blockbox:block/lapis_lazuli_bricks",
+    "side": "blockbox:block/lapis_lazuli_bricks",
+    "top": "blockbox:block/lapis_lazuli_bricks"
+  }
+}

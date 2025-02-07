@@ -1,4 +1,4 @@
-// 1.21.1	2025-02-07T17:55:01.2001418	Loot Tables
+// 1.21.1	2025-02-07T19:48:18.5524964	Loot Tables
 21d023bbc6803113198cdc6b2685f08f98d6e6e5 data/blockbox/loot_table/blocks/acacia_palisade.json
 efe77edd4c80c7ac1a0560a0e8e7cc2c6f8add76 data/blockbox/loot_table/blocks/acacia_seat.json
 4ccdf7f67199a3c2622089212c33cc3cc77e5500 data/blockbox/loot_table/blocks/bamboo_seat.json
@@ -53,7 +53,11 @@ aac7fa2104bdb2da7e7ee6c3da8708a32660ef1c data/blockbox/loot_table/blocks/iron_tr
 d67b9d6eef9143eb1818cfe624afd35bc879bdc1 data/blockbox/loot_table/blocks/jungle_palisade.json
 795875e0ad5c76cfa7b32315f626ae29c1f49edc data/blockbox/loot_table/blocks/jungle_seat.json
 b61e10f6b5ccbbdecbdfb16a49ddbae1971e22f1 data/blockbox/loot_table/blocks/lapis_lazuli_bricks.json
+4aaddff38f9a00e77681c904955b11b9430092c2 data/blockbox/loot_table/blocks/lapis_lazuli_brick_slab.json
+c1100e2744c92b0c747c31446fb287eba9fa6b8c data/blockbox/loot_table/blocks/lapis_lazuli_brick_stairs.json
 d9ef5fd2581e4d02f353412eb668a97266b8e94f data/blockbox/loot_table/blocks/lapis_lazuli_mosaic.json
+154f2cbdc6cafdc4c2e5e32f80c54abfe2558005 data/blockbox/loot_table/blocks/lapis_lazuli_mosaic_slab.json
+79dcd50c84d50e30e7407527bbe70239dad80d32 data/blockbox/loot_table/blocks/lapis_lazuli_mosaic_stairs.json
 98f83782d9cb69f10e9ccc919a78d000b9bc85db data/blockbox/loot_table/blocks/light_blue_sky_lantern.json
 3be09e1c0fb0a66c2e96029652b00daa89eab46a data/blockbox/loot_table/blocks/light_gray_sky_lantern.json
 b596906a09c604fc995b22768456d8c76e4a94e8 data/blockbox/loot_table/blocks/lime_sky_lantern.json

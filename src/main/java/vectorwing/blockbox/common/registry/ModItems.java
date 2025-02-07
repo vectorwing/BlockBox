@@ -105,7 +105,11 @@ public class ModItems
 	public static final Supplier<BlockItem> CHISELED_AMETHYST_SLAB = registerSimpleBlockItem("chiseled_amethyst_slab", ModBlocks.CHISELED_AMETHYST_SLAB);
 
 	public static final Supplier<BlockItem> LAPIS_LAZULI_BRICKS = registerSimpleBlockItem("lapis_lazuli_bricks", ModBlocks.LAPIS_LAZULI_BRICKS);
+	public static final Supplier<BlockItem> LAPIS_LAZULI_BRICK_STAIRS = registerSimpleBlockItem("lapis_lazuli_brick_stairs", ModBlocks.LAPIS_LAZULI_BRICK_STAIRS);
+	public static final Supplier<BlockItem> LAPIS_LAZULI_BRICK_SLAB = registerSimpleBlockItem("lapis_lazuli_brick_slab", ModBlocks.LAPIS_LAZULI_BRICK_SLAB);
 	public static final Supplier<BlockItem> LAPIS_LAZULI_MOSAIC = registerSimpleBlockItem("lapis_lazuli_mosaic", ModBlocks.LAPIS_LAZULI_MOSAIC);
+	public static final Supplier<BlockItem> LAPIS_LAZULI_MOSAIC_STAIRS = registerSimpleBlockItem("lapis_lazuli_mosaic_stairs", ModBlocks.LAPIS_LAZULI_MOSAIC_STAIRS);
+	public static final Supplier<BlockItem> LAPIS_LAZULI_MOSAIC_SLAB = registerSimpleBlockItem("lapis_lazuli_mosaic_slab", ModBlocks.LAPIS_LAZULI_MOSAIC_SLAB);
 
 	public static final Supplier<BlockItem> OAK_SEAT = registerSimpleBlockItem("oak_seat", ModBlocks.OAK_SEAT);
 	public static final Supplier<BlockItem> SPRUCE_SEAT = registerSimpleBlockItem("spruce_seat", ModBlocks.SPRUCE_SEAT);
