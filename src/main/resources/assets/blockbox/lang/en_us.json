@@ -19,16 +19,19 @@
   "block.blockbox.spiked_cherry_palisade": "Spiked Cherry Palisade",
   "block.blockbox.spiked_crimson_palisade": "Spiked Crimson Palisade",
   "block.blockbox.spiked_warped_palisade": "Spiked Warped Palisade",
+
   "block.blockbox.sandstone_bricks": "Sandstone Bricks",
   "block.blockbox.sandstone_brick_stairs": "Sandstone Brick Stairs",
   "block.blockbox.sandstone_brick_slab": "Sandstone Brick Slab",
   "block.blockbox.red_sandstone_bricks": "Red Sandstone Bricks",
   "block.blockbox.red_sandstone_brick_stairs": "Red Sandstone Brick Stairs",
   "block.blockbox.red_sandstone_brick_slab": "Red Sandstone Brick Slab",
+
   "block.blockbox.clay_tiles": "Clay Tiles",
   "block.blockbox.clay_tile_stairs": "Clay Tile Stairs",
   "block.blockbox.clay_tile_slab": "Clay Tile Slab",
   "block.blockbox.jagged_clay_tiles": "Jagged Clay Tiles",
+
   "block.blockbox.packed_snow": "Packed Snow",
   "block.blockbox.packed_snow_bricks": "Packed Snow Bricks",
   "block.blockbox.packed_snow_brick_stairs": "Packed Snow Brick Stairs",
@@ -38,7 +41,10 @@
   "block.blockbox.packed_ice_bricks": "Packed Ice Bricks",
   "block.blockbox.packed_ice_brick_stairs": "Packed Ice Brick Stairs",
   "block.blockbox.packed_ice_brick_slab": "Packed Ice Brick Slab",
+  "block.blockbox.packed_ice_brick_wall": "Packed Ice Brick Wall",
+
   "block.blockbox.polished_obsidian": "Polished Obsidian",
+
   "block.blockbox.copper_bars": "Copper Bars",
   "block.blockbox.exposed_copper_bars": "Exposed Copper Bars",
   "block.blockbox.weathered_copper_bars": "Weathered Copper Bars",
@@ -55,6 +61,7 @@
   "block.blockbox.waxed_exposed_copper_pillar": "Waxed Exposed Copper Pillar",
   "block.blockbox.waxed_weathered_copper_pillar": "Waxed Weathered Copper Pillar",
   "block.blockbox.waxed_oxidized_copper_pillar": "Waxed Oxidized Copper Pillar",
+
   "block.blockbox.iron_plate": "Iron Plate",
   "block.blockbox.iron_tread_plate": "Iron Tread Plate",
   "block.blockbox.iron_tread_plate_stairs": "Iron Tread Plate Stairs",
@@ -65,6 +72,7 @@
   "block.blockbox.iron_plate_pillar": "Iron Plate Pillar",
   "block.blockbox.iron_plate_door": "Iron Plate Door",
   "block.blockbox.iron_plate_trapdoor": "Iron Plate Trapdoor",
+
   "block.blockbox.chiseled_gold": "Chiseled Gold",
   "block.blockbox.golden_tiles": "Golden Tiles",
   "block.blockbox.golden_bricks": "Golden Bricks",
@@ -74,6 +82,7 @@
   "block.blockbox.golden_door": "Golden Door",
   "block.blockbox.golden_trapdoor": "Golden Trapdoor",
   "block.blockbox.golden_bars": "Golden Bars",
+
   "block.blockbox.polished_amethyst": "Polished Amethyst",
   "block.blockbox.cut_amethyst": "Cut Amethyst",
   "block.blockbox.cut_amethyst_stairs": "Cut Amethyst Stairs",
@@ -81,8 +90,10 @@
   "block.blockbox.chiseled_amethyst": "Chiseled Amethyst",
   "block.blockbox.chiseled_amethyst_stairs": "Chiseled Amethyst Stairs",
   "block.blockbox.chiseled_amethyst_slab": "Chiseled Amethyst Slab",
+
   "block.blockbox.lapis_lazuli_bricks": "Lapis Lazuli Bricks",
   "block.blockbox.lapis_lazuli_mosaic": "Lapis Lazuli Mosaic",
+
   "block.blockbox.oak_seat": "Oak Seat",
   "block.blockbox.spruce_seat": "Spruce Seat",
   "block.blockbox.birch_seat": "Birch Seat",
@@ -93,6 +104,7 @@
   "block.blockbox.cherry_seat": "Cherry Seat",
   "block.blockbox.crimson_seat": "Crimson Seat",
   "block.blockbox.warped_seat": "Warped Seat",
+
   "block.blockbox.brazier": "Brazier",
   "block.blockbox.soul_brazier": "Soul Brazier",
   "block.blockbox.white_sky_lantern": "White Sky Lantern",
@@ -134,16 +146,19 @@
   "item.blockbox.spiked_cherry_palisade": "Spiked Cherry Palisade",
   "item.blockbox.spiked_crimson_palisade": "Spiked Crimson Palisade",
   "item.blockbox.spiked_warped_palisade": "Spiked Warped Palisade",
+
   "item.blockbox.sandstone_bricks": "Sandstone Bricks",
   "item.blockbox.sandstone_brick_stairs": "Sandstone Brick Stairs",
   "item.blockbox.sandstone_brick_slab": "Sandstone Brick Slab",
   "item.blockbox.red_sandstone_bricks": "Red Sandstone Bricks",
   "item.blockbox.red_sandstone_brick_stairs": "Red Sandstone Brick Stairs",
   "item.blockbox.red_sandstone_brick_slab": "Red Sandstone Brick Slab",
+
   "item.blockbox.clay_tiles": "Clay Tiles",
   "item.blockbox.clay_tile_stairs": "Clay Tile Stairs",
   "item.blockbox.clay_tile_slab": "Clay Tile Slab",
   "item.blockbox.jagged_clay_tiles": "Jagged Clay Tiles",
+
   "item.blockbox.packed_snow": "Packed Snow",
   "item.blockbox.packed_snow_bricks": "Packed Snow Bricks",
   "item.blockbox.packed_snow_brick_stairs": "Packed Snow Brick Stairs",
@@ -153,7 +168,10 @@
   "item.blockbox.packed_ice_bricks": "Packed Ice Bricks",
   "item.blockbox.packed_ice_brick_stairs": "Packed Ice Brick Stairs",
   "item.blockbox.packed_ice_brick_slab": "Packed Ice Brick Slab",
+  "item.blockbox.packed_ice_brick_wall": "Packed Ice Brick Wall",
+
   "item.blockbox.polished_obsidian": "Polished Obsidian",
+
   "item.blockbox.copper_bars": "Copper Bars",
   "item.blockbox.exposed_copper_bars": "Exposed Copper Bars",
   "item.blockbox.weathered_copper_bars": "Weathered Copper Bars",
@@ -170,6 +188,7 @@
   "item.blockbox.waxed_exposed_copper_pillar": "Waxed Exposed Copper Pillar",
   "item.blockbox.waxed_weathered_copper_pillar": "Waxed Weathered Copper Pillar",
   "item.blockbox.waxed_oxidized_copper_pillar": "Waxed Oxidized Copper Pillar",
+
   "item.blockbox.iron_plate": "Iron Plate",
   "item.blockbox.iron_tread_plate": "Iron Tread Plate",
   "item.blockbox.iron_tread_plate_stairs": "Iron Tread Plate Stairs",
@@ -180,6 +199,7 @@
   "item.blockbox.iron_plate_pillar": "Iron Plate Pillar",
   "item.blockbox.iron_plate_door": "Iron Plate Door",
   "item.blockbox.iron_plate_trapdoor": "Iron Plate Trapdoor",
+
   "item.blockbox.chiseled_gold": "Chiseled Gold",
   "item.blockbox.golden_tiles": "Golden Tiles",
   "item.blockbox.golden_bricks": "Golden Bricks",
@@ -189,6 +209,7 @@
   "item.blockbox.golden_door": "Golden Door",
   "item.blockbox.golden_trapdoor": "Golden Trapdoor",
   "item.blockbox.golden_bars": "Golden Bars",
+
   "item.blockbox.polished_amethyst": "Polished Amethyst",
   "item.blockbox.cut_amethyst": "Cut Amethyst",
   "item.blockbox.cut_amethyst_stairs": "Cut Amethyst Stairs",
@@ -196,8 +217,10 @@
   "item.blockbox.chiseled_amethyst": "Chiseled Amethyst",
   "item.blockbox.chiseled_amethyst_stairs": "Chiseled Amethyst Stairs",
   "item.blockbox.chiseled_amethyst_slab": "Chiseled Amethyst Slab",
+
   "item.blockbox.lapis_lazuli_bricks": "Lapis Lazuli Bricks",
   "item.blockbox.lapis_lazuli_mosaic": "Lapis Lazuli Mosaic",
+
   "item.blockbox.oak_seat": "Oak Seat",
   "item.blockbox.spruce_seat": "Spruce Seat",
   "item.blockbox.birch_seat": "Birch Seat",
@@ -208,6 +231,7 @@
   "item.blockbox.cherry_seat": "Cherry Seat",
   "item.blockbox.crimson_seat": "Crimson Seat",
   "item.blockbox.warped_seat": "Warped Seat",
+
   "item.blockbox.brazier": "Brazier",
   "item.blockbox.soul_brazier": "Soul Brazier",
   "item.blockbox.white_sky_lantern": "White Sky Lantern",
@@ -232,5 +256,5 @@
   "blockbox.tooltip.sky_lantern": "Can be placed in mid-air",
   "blockbox.item.mallet.failure": "Can't push...",
 
-  "death.attack.blockbox.palisade": "%1$s failed to climb a spiked palisade"
+  "death.attack.blockbox.palisade": "%1$s was skewered by a spiked palisade"
 }

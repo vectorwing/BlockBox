@@ -1,4 +1,4 @@
-// 1.21.1	2025-02-06T00:54:48.2412574	Item Models: blockbox
+// 1.21.1	2025-02-07T13:40:00.8160859	Item Models: blockbox
 fca27dcf20ce91e90812b733713a36b943ebfc8b assets/blockbox/models/item/acacia_palisade.json
 56edae35411785995cfa08df92b58e026b257027 assets/blockbox/models/item/acacia_seat.json
 e26e93ede660590aade714bcbeb4481832a77fd8 assets/blockbox/models/item/birch_palisade.json
@@ -68,6 +68,7 @@ b744cc11cbdf03cf2200d7540aaf2417b671b703 assets/blockbox/models/item/oxidized_co
 e518fb1968e7d0fa33b8865865da1391f3fc0406 assets/blockbox/models/item/packed_ice_bricks.json
 6f129dc412458996290a42e15e19b40006a4dd61 assets/blockbox/models/item/packed_ice_brick_slab.json
 18dba6f7f00151b5b429d576810b280f03a4e531 assets/blockbox/models/item/packed_ice_brick_stairs.json
+9e9eff29e92fd8850108e6f14cce545e7a7573a5 assets/blockbox/models/item/packed_ice_brick_wall.json
 31076118414fbdb56a5f6dc24c1421e4be19f1bb assets/blockbox/models/item/packed_snow.json
 3f28533a3c9751d96690ad0263ca13c5aafcfa28 assets/blockbox/models/item/packed_snow_bricks.json
 fcae696d6a471a17d2d3e2a05d6fe863bebd76c8 assets/blockbox/models/item/packed_snow_brick_slab.json

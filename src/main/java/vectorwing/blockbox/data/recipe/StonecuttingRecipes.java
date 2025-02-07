@@ -36,16 +36,19 @@ public class StonecuttingRecipes
 
 		stonecutting(output, Items.PACKED_ICE, ModItems.POLISHED_PACKED_ICE.get());
 		stonecutting(output, Items.PACKED_ICE, ModItems.PACKED_ICE_BRICKS.get());
-		stonecutting(output, Items.PACKED_ICE, ModItems.PACKED_ICE_BRICKS_STAIRS.get());
-		stonecutting(output, Items.PACKED_ICE, ModItems.PACKED_ICE_BRICKS_SLAB.get(), 2);
+		stonecutting(output, Items.PACKED_ICE, ModItems.PACKED_ICE_BRICK_STAIRS.get());
+		stonecutting(output, Items.PACKED_ICE, ModItems.PACKED_ICE_BRICK_SLAB.get(), 2);
+		stonecutting(output, Items.PACKED_ICE, ModItems.PACKED_ICE_BRICK_WALL.get());
 		stonecutting(output, ModItems.POLISHED_PACKED_ICE.get(), Items.PACKED_ICE);
 		stonecutting(output, ModItems.POLISHED_PACKED_ICE.get(), ModItems.PACKED_ICE_BRICKS.get());
-		stonecutting(output, ModItems.POLISHED_PACKED_ICE.get(), ModItems.PACKED_ICE_BRICKS_STAIRS.get());
-		stonecutting(output, ModItems.POLISHED_PACKED_ICE.get(), ModItems.PACKED_ICE_BRICKS_SLAB.get(), 2);
+		stonecutting(output, ModItems.POLISHED_PACKED_ICE.get(), ModItems.PACKED_ICE_BRICK_STAIRS.get());
+		stonecutting(output, ModItems.POLISHED_PACKED_ICE.get(), ModItems.PACKED_ICE_BRICK_SLAB.get(), 2);
+		stonecutting(output, ModItems.POLISHED_PACKED_ICE.get(), ModItems.PACKED_ICE_BRICK_WALL.get());
 		stonecutting(output, ModItems.PACKED_ICE_BRICKS.get(), Items.PACKED_ICE);
 		stonecutting(output, ModItems.PACKED_ICE_BRICKS.get(), ModItems.POLISHED_PACKED_ICE.get());
-		stonecutting(output, ModItems.PACKED_ICE_BRICKS.get(), ModItems.PACKED_ICE_BRICKS_STAIRS.get());
-		stonecutting(output, ModItems.PACKED_ICE_BRICKS.get(), ModItems.PACKED_ICE_BRICKS_SLAB.get(), 2);
+		stonecutting(output, ModItems.PACKED_ICE_BRICKS.get(), ModItems.PACKED_ICE_BRICK_STAIRS.get());
+		stonecutting(output, ModItems.PACKED_ICE_BRICKS.get(), ModItems.PACKED_ICE_BRICK_SLAB.get(), 2);
+		stonecutting(output, ModItems.PACKED_ICE_BRICKS.get(), ModItems.PACKED_ICE_BRICK_WALL.get());
 
 		stonecutting(output, Items.OBSIDIAN, ModItems.POLISHED_OBSIDIAN.get());
 		stonecutting(output, ModItems.POLISHED_OBSIDIAN.get(), Items.OBSIDIAN);

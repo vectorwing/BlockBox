@@ -1,4 +1,4 @@
-// 1.21.1	2025-02-06T13:38:34.0598036	Block States: blockbox
+// 1.21.1	2025-02-07T13:40:00.8020829	Block States: blockbox
 57741ed53ecabbf959a88b1adb4fb893265c9703 assets/blockbox/blockstates/acacia_palisade.json
 231dc493a7620b450bac3161ea140406621455eb assets/blockbox/blockstates/acacia_seat.json
 4997fe2fa24fa20c3a5bc8772a387819b36377bb assets/blockbox/blockstates/birch_palisade.json
@@ -67,6 +67,7 @@ b9b882bd8d5f503d020c9ec9379f614a357365fb assets/blockbox/blockstates/oxidized_co
 09bbb70fb3c2e125aa416970e5fa7471f5a91763 assets/blockbox/blockstates/packed_ice_bricks.json
 fa3de52420ea5237631048b85c6da64149a0b147 assets/blockbox/blockstates/packed_ice_brick_slab.json
 b9de8427db1564e9cb5c390002ec44f9381bbacb assets/blockbox/blockstates/packed_ice_brick_stairs.json
+6abeab4763df2730f57de2284d98681d02b6ce4f assets/blockbox/blockstates/packed_ice_brick_wall.json
 e6a4c22afb60227016a19473eabdfecc084b1146 assets/blockbox/blockstates/packed_snow.json
 7fc66751c3657ae252b7d248eb67d7d7c40cb3de assets/blockbox/blockstates/packed_snow_bricks.json
 a313135cd1632407acb66cfdd51ae07e949594e8 assets/blockbox/blockstates/packed_snow_brick_slab.json
@@ -265,6 +266,9 @@ e2923da253dc1ba46dc16a8cbbb9ac632b0f12e1 assets/blockbox/models/block/packed_ice
 522348875f2363b95a7d7cfc48f6dcc240805345 assets/blockbox/models/block/packed_ice_brick_stairs.json
 6794277329e3c755f499b35fcff01c2e9ef3cf08 assets/blockbox/models/block/packed_ice_brick_stairs_inner.json
 f70ea5ce6d93bdb9f2e20022758fd4650964efcc assets/blockbox/models/block/packed_ice_brick_stairs_outer.json
+46aee09d12204ba42493e9336390727d36089d99 assets/blockbox/models/block/packed_ice_brick_wall_post.json
+d52e62e438c612867f73f0f256df9072003854c3 assets/blockbox/models/block/packed_ice_brick_wall_side.json
+c6ee0e31d1f888e3a4c0f473c3b2da6eb7e0901f assets/blockbox/models/block/packed_ice_brick_wall_side_tall.json
 1f733f82522489a1747c3f9c27f99406648556f8 assets/blockbox/models/block/packed_snow.json
 b2c6fb1e10db83f20c94400e74a9d0ed9590409b assets/blockbox/models/block/packed_snow_bricks.json
 4b73464a9d98004085f07e92db04922cea76c26a assets/blockbox/models/block/packed_snow_brick_slab.json

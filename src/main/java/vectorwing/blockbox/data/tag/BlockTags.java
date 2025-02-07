@@ -54,7 +54,10 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.IRON_PLATE_TRAPDOOR.get(),
 				ModBlocks.GOLDEN_TRAPDOOR.get()
 		);
-		tag(net.minecraft.tags.BlockTags.WALLS).add(ModBlocks.PACKED_SNOW_BRICK_WALL.get());
+		tag(net.minecraft.tags.BlockTags.WALLS).add(
+				ModBlocks.PACKED_SNOW_BRICK_WALL.get(),
+				ModBlocks.PACKED_ICE_BRICK_WALL.get()
+		);
 		tag(net.minecraft.tags.BlockTags.GUARDED_BY_PIGLINS).addTag(ModTags.GOLDEN_BLOCKS);
 		tag(net.minecraft.tags.BlockTags.CRYSTAL_SOUND_BLOCKS).addTag(ModTags.AMETHYST_BLOCKS);
 		tag(net.minecraft.tags.BlockTags.VIBRATION_RESONATORS).addTag(ModTags.AMETHYST_BLOCKS);
@@ -174,8 +177,9 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.JAGGED_CLAY_TILES.get(),
 				ModBlocks.POLISHED_PACKED_ICE.get(),
 				ModBlocks.PACKED_ICE_BRICKS.get(),
-				ModBlocks.PACKED_ICE_BRICKS_STAIRS.get(),
-				ModBlocks.PACKED_ICE_BRICKS_SLAB.get(),
+				ModBlocks.PACKED_ICE_BRICK_STAIRS.get(),
+				ModBlocks.PACKED_ICE_BRICK_SLAB.get(),
+				ModBlocks.PACKED_ICE_BRICK_WALL.get(),
 				ModBlocks.POLISHED_OBSIDIAN.get(),
 				ModBlocks.COPPER_BARS.get(),
 				ModBlocks.EXPOSED_COPPER_BARS.get(),

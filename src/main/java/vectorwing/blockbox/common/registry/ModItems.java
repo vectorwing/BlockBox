@@ -51,8 +51,9 @@ public class ModItems
 	public static final Supplier<BlockItem> PACKED_SNOW_BRICK_WALL = registerSimpleBlockItem("packed_snow_brick_wall", ModBlocks.PACKED_SNOW_BRICK_WALL);
 	public static final Supplier<BlockItem> POLISHED_PACKED_ICE = registerSimpleBlockItem("polished_packed_ice", ModBlocks.POLISHED_PACKED_ICE);
 	public static final Supplier<BlockItem> PACKED_ICE_BRICKS = registerSimpleBlockItem("packed_ice_bricks", ModBlocks.PACKED_ICE_BRICKS);
-	public static final Supplier<BlockItem> PACKED_ICE_BRICKS_STAIRS = registerSimpleBlockItem("packed_ice_brick_stairs", ModBlocks.PACKED_ICE_BRICKS_STAIRS);
-	public static final Supplier<BlockItem> PACKED_ICE_BRICKS_SLAB = registerSimpleBlockItem("packed_ice_brick_slab", ModBlocks.PACKED_ICE_BRICKS_SLAB);
+	public static final Supplier<BlockItem> PACKED_ICE_BRICK_STAIRS = registerSimpleBlockItem("packed_ice_brick_stairs", ModBlocks.PACKED_ICE_BRICK_STAIRS);
+	public static final Supplier<BlockItem> PACKED_ICE_BRICK_SLAB = registerSimpleBlockItem("packed_ice_brick_slab", ModBlocks.PACKED_ICE_BRICK_SLAB);
+	public static final Supplier<BlockItem> PACKED_ICE_BRICK_WALL = registerSimpleBlockItem("packed_ice_brick_wall", ModBlocks.PACKED_ICE_BRICK_WALL);
 
 	public static final Supplier<BlockItem> POLISHED_OBSIDIAN = registerSimpleBlockItem("polished_obsidian", ModBlocks.POLISHED_OBSIDIAN);
 
