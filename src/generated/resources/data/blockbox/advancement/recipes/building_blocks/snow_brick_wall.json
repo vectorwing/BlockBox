@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "blockbox:packed_snow_bricks"
+            "items": "blockbox:snow_bricks"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blockbox:packed_snow_brick_wall"
+        "recipe": "blockbox:snow_brick_wall"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "blockbox:packed_snow_brick_wall"
+      "blockbox:snow_brick_wall"
     ]
   }
 }

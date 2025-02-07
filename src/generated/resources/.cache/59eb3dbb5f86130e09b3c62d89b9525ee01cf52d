@@ -1,4 +1,4 @@
-// 1.21.1	2025-02-07T14:55:36.9233064	Loot Tables
+// 1.21.1	2025-02-07T17:55:01.2001418	Loot Tables
 21d023bbc6803113198cdc6b2685f08f98d6e6e5 data/blockbox/loot_table/blocks/acacia_palisade.json
 efe77edd4c80c7ac1a0560a0e8e7cc2c6f8add76 data/blockbox/loot_table/blocks/acacia_seat.json
 4ccdf7f67199a3c2622089212c33cc3cc77e5500 data/blockbox/loot_table/blocks/bamboo_seat.json
@@ -70,10 +70,6 @@ bb436d7931af77f44c2fbfbda0fa087995293935 data/blockbox/loot_table/blocks/oxidize
 5db998fecb288bfe23330b26be74d21d8df90044 data/blockbox/loot_table/blocks/packed_ice_brick_stairs.json
 b4d540af90802d0820914c1347a41f29bcf601e6 data/blockbox/loot_table/blocks/packed_ice_brick_wall.json
 5861900eff4c14a3bf768d7ca65653edacc57216 data/blockbox/loot_table/blocks/packed_snow.json
-324d8555d72fe31f04804d5715b7df904fe75491 data/blockbox/loot_table/blocks/packed_snow_bricks.json
-8e40ae37c5f2a47bba72f17a09969df0347027d6 data/blockbox/loot_table/blocks/packed_snow_brick_slab.json
-5388a44ebb8c2021db5a427fc0385707c2663270 data/blockbox/loot_table/blocks/packed_snow_brick_stairs.json
-0b3f9307593b900a7ec88700b30359c9892bf4aa data/blockbox/loot_table/blocks/packed_snow_brick_wall.json
 034904ba4d1f0dfbfdd427da007711837f77f599 data/blockbox/loot_table/blocks/pink_sky_lantern.json
 fa39cbc7c71df60bb5cc64ce892075eb9dc6d252 data/blockbox/loot_table/blocks/polished_amethyst.json
 daf802972b790415dce94dce701bd80a4f34aff9 data/blockbox/loot_table/blocks/polished_obsidian.json
@@ -86,6 +82,10 @@ b86ddcd1203418cf5cdbdb0fb2078fc2943b46f8 data/blockbox/loot_table/blocks/red_san
 8cba02ca751bf7e70a179a7e578e89d737833589 data/blockbox/loot_table/blocks/sandstone_bricks.json
 cad7f5e96682f7015f73ca74b465972d6bea26ea data/blockbox/loot_table/blocks/sandstone_brick_slab.json
 7f246c78144a04ce65d4b73a46c1960fccceaa0f data/blockbox/loot_table/blocks/sandstone_brick_stairs.json
+3c3c9fb64f57cab60d948721a905b80dae62eb39 data/blockbox/loot_table/blocks/snow_bricks.json
+f4d1104f405ade173060b1759bf955dae9e8db7b data/blockbox/loot_table/blocks/snow_brick_slab.json
+1037739fb979ec4145031941b4cf39ec649430a7 data/blockbox/loot_table/blocks/snow_brick_stairs.json
+8da2861553772eab6ae146eff988fd00898a504c data/blockbox/loot_table/blocks/snow_brick_wall.json
 2b7f80da9d87fd29054697c042f7f80a39cb1262 data/blockbox/loot_table/blocks/soul_brazier.json
 28fbbcd07d5a5bd362be92a390b82c5afcac204a data/blockbox/loot_table/blocks/spiked_acacia_palisade.json
 076485c310948ad1957183d5a3c18d143ce77faa data/blockbox/loot_table/blocks/spiked_birch_palisade.json

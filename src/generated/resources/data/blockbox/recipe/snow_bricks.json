@@ -3,15 +3,15 @@
   "category": "building",
   "key": {
     "p": {
-      "item": "blockbox:packed_snow_bricks"
+      "item": "blockbox:packed_snow"
     }
   },
   "pattern": [
-    "ppp",
-    "ppp"
+    "pp",
+    "pp"
   ],
   "result": {
-    "count": 6,
-    "id": "blockbox:packed_snow_brick_wall"
+    "count": 4,
+    "id": "blockbox:snow_bricks"
   }
 }

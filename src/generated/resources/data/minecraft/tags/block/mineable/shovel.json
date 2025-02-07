@@ -1,9 +1,9 @@
 {
   "values": [
     "blockbox:packed_snow",
-    "blockbox:packed_snow_bricks",
-    "blockbox:packed_snow_brick_stairs",
-    "blockbox:packed_snow_brick_slab",
-    "blockbox:packed_snow_brick_wall"
+    "blockbox:snow_bricks",
+    "blockbox:snow_brick_stairs",
+    "blockbox:snow_brick_slab",
+    "blockbox:snow_brick_wall"
   ]
 }

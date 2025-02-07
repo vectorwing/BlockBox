@@ -3,7 +3,7 @@
   "category": "building",
   "key": {
     "#": {
-      "item": "blockbox:packed_snow_bricks"
+      "item": "blockbox:snow_bricks"
     }
   },
   "pattern": [
@@ -11,6 +11,6 @@
   ],
   "result": {
     "count": 6,
-    "id": "blockbox:packed_snow_brick_slab"
+    "id": "blockbox:snow_brick_slab"
   }
 }

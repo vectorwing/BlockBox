@@ -11,7 +11,7 @@
               "add": false,
               "conditions": [
                 {
-                  "block": "blockbox:packed_snow_brick_slab",
+                  "block": "blockbox:snow_brick_slab",
                   "condition": "minecraft:block_state_property",
                   "properties": {
                     "type": "double"
@@ -25,11 +25,11 @@
               "function": "minecraft:explosion_decay"
             }
           ],
-          "name": "blockbox:packed_snow_brick_slab"
+          "name": "blockbox:snow_brick_slab"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "blockbox:blocks/packed_snow_brick_slab"
+  "random_sequence": "blockbox:blocks/snow_brick_slab"
 }

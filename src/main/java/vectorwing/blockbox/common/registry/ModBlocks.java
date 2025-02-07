@@ -18,6 +18,7 @@ public class ModBlocks
 	public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(BlockBox.MODID);
 
 	public static final BlockBehaviour.Properties PROPERTIES_PACKED_SNOW = BlockBehaviour.Properties.of().mapColor(MapColor.SNOW).strength(0.6F).sound(SoundType.SNOW);
+	public static final BlockBehaviour.Properties PROPERTIES_PACKED_ICE = BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_ICE).requiresCorrectToolForDrops();
 	public static final BlockBehaviour.Properties PROPERTIES_IRON_PLATE = BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).strength(4.0F, 6.0F).sound(SoundType.NETHERITE_BLOCK);
 	public static final BlockBehaviour.Properties PROPERTIES_PALISADE = BlockBehaviour.Properties.of().strength(2.0F).instrument(NoteBlockInstrument.BASS);
 	public static final BlockBehaviour.Properties PROPERTIES_SKY_LANTERN = BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.GUITAR).noOcclusion().lightLevel((state) -> 15).ignitedByLava().sound(SoundType.WOOL);
@@ -35,15 +36,15 @@ public class ModBlocks
 	public static final Supplier<Block> JAGGED_CLAY_TILES = BLOCKS.registerSimpleBlock("jagged_clay_tiles", BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS));
 
 	public static final Supplier<Block> PACKED_SNOW = BLOCKS.registerSimpleBlock("packed_snow", PROPERTIES_PACKED_SNOW);
-	public static final Supplier<Block> PACKED_SNOW_BRICKS = BLOCKS.registerSimpleBlock("packed_snow_bricks", PROPERTIES_PACKED_SNOW);
-	public static final Supplier<Block> PACKED_SNOW_BRICK_STAIRS = BLOCKS.register("packed_snow_brick_stairs", () -> stair(ModBlocks.PACKED_SNOW_BRICKS.get(), PROPERTIES_PACKED_SNOW));
-	public static final Supplier<Block> PACKED_SNOW_BRICK_SLAB = BLOCKS.register("packed_snow_brick_slab", () -> slab(PROPERTIES_PACKED_SNOW));
-	public static final Supplier<Block> PACKED_SNOW_BRICK_WALL = BLOCKS.register("packed_snow_brick_wall", () -> new WallBlock(PROPERTIES_PACKED_SNOW.forceSolidOn()));
-	public static final Supplier<Block> POLISHED_PACKED_ICE = BLOCKS.registerSimpleBlock("polished_packed_ice", BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_ICE));
-	public static final Supplier<Block> PACKED_ICE_BRICKS = BLOCKS.registerSimpleBlock("packed_ice_bricks", BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_ICE));
-	public static final Supplier<Block> PACKED_ICE_BRICK_STAIRS = BLOCKS.register("packed_ice_brick_stairs", () -> stair(ModBlocks.PACKED_ICE_BRICKS.get(), BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_ICE)));
-	public static final Supplier<Block> PACKED_ICE_BRICK_SLAB = BLOCKS.register("packed_ice_brick_slab", () -> slab(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_ICE)));
-	public static final Supplier<Block> PACKED_ICE_BRICK_WALL = BLOCKS.register("packed_ice_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_ICE).forceSolidOn()));
+	public static final Supplier<Block> SNOW_BRICKS = BLOCKS.registerSimpleBlock("snow_bricks", PROPERTIES_PACKED_SNOW);
+	public static final Supplier<Block> SNOW_BRICK_STAIRS = BLOCKS.register("snow_brick_stairs", () -> stair(ModBlocks.SNOW_BRICKS.get(), PROPERTIES_PACKED_SNOW));
+	public static final Supplier<Block> SNOW_BRICK_SLAB = BLOCKS.register("snow_brick_slab", () -> slab(PROPERTIES_PACKED_SNOW));
+	public static final Supplier<Block> SNOW_BRICK_WALL = BLOCKS.register("snow_brick_wall", () -> new WallBlock(PROPERTIES_PACKED_SNOW.forceSolidOn()));
+	public static final Supplier<Block> POLISHED_PACKED_ICE = BLOCKS.registerSimpleBlock("polished_packed_ice", PROPERTIES_PACKED_ICE);
+	public static final Supplier<Block> PACKED_ICE_BRICKS = BLOCKS.registerSimpleBlock("packed_ice_bricks", PROPERTIES_PACKED_ICE);
+	public static final Supplier<Block> PACKED_ICE_BRICK_STAIRS = BLOCKS.register("packed_ice_brick_stairs", () -> stair(ModBlocks.PACKED_ICE_BRICKS.get(), PROPERTIES_PACKED_ICE));
+	public static final Supplier<Block> PACKED_ICE_BRICK_SLAB = BLOCKS.register("packed_ice_brick_slab", () -> slab(PROPERTIES_PACKED_ICE));
+	public static final Supplier<Block> PACKED_ICE_BRICK_WALL = BLOCKS.register("packed_ice_brick_wall", () -> new WallBlock(PROPERTIES_PACKED_ICE.forceSolidOn()));
 
 	public static final Supplier<Block> POLISHED_OBSIDIAN = BLOCKS.register("polished_obsidian", () -> new PortalFrameBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OBSIDIAN)));
 

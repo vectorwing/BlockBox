@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "blockbox:packed_snow_brick_wall"
+          "name": "blockbox:snow_bricks"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "blockbox:blocks/packed_snow_brick_wall"
+  "random_sequence": "blockbox:blocks/snow_bricks"
 }

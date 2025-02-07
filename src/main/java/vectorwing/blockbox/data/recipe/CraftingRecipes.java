@@ -326,18 +326,18 @@ public class CraftingRecipes
 				.define('s', Blocks.SNOW_BLOCK)
 				.unlockedBy("has_snow", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.SNOW_BLOCK))
 				.save(output);
-		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PACKED_SNOW_BRICKS.get(), 4)
+		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SNOW_BRICKS.get(), 4)
 				.pattern("pp")
 				.pattern("pp")
 				.define('p', ModBlocks.PACKED_SNOW.get())
 				.unlockedBy("has_snow", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.SNOW_BLOCK))
 				.save(output);
-		stairAndSlab(output, ModBlocks.PACKED_SNOW_BRICK_STAIRS.get(), ModBlocks.PACKED_SNOW_BRICK_SLAB.get(), ModBlocks.PACKED_SNOW_BRICKS.get());
-		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PACKED_SNOW_BRICK_WALL.get(), 6)
+		stairAndSlab(output, ModBlocks.SNOW_BRICK_STAIRS.get(), ModBlocks.SNOW_BRICK_SLAB.get(), ModBlocks.SNOW_BRICKS.get());
+		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SNOW_BRICK_WALL.get(), 6)
 				.pattern("ppp")
 				.pattern("ppp")
-				.define('p', ModBlocks.PACKED_SNOW_BRICKS.get())
-				.unlockedBy("has_snow_bricks", InventoryChangeTrigger.TriggerInstance.hasItems(ModBlocks.PACKED_SNOW_BRICKS.get()))
+				.define('p', ModBlocks.SNOW_BRICKS.get())
+				.unlockedBy("has_snow_bricks", InventoryChangeTrigger.TriggerInstance.hasItems(ModBlocks.SNOW_BRICKS.get()))
 				.save(output);
 
 		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_PACKED_ICE.get(), 4)

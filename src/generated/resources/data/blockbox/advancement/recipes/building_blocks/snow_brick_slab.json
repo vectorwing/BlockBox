@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_snow": {
+    "has_matching_block": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:snow_block"
+            "items": "blockbox:snow_bricks"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blockbox:packed_snow_bricks"
+        "recipe": "blockbox:snow_brick_slab"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_snow"
+      "has_matching_block"
     ]
   ],
   "rewards": {
     "recipes": [
-      "blockbox:packed_snow_bricks"
+      "blockbox:snow_brick_slab"
     ]
   }
 }
