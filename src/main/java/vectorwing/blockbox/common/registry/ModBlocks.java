@@ -112,6 +112,7 @@ public class ModBlocks
 	public static final Supplier<Block> DARK_OAK_SEAT = BLOCKS.register("dark_oak_seat", () -> new SeatBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_PLANKS)));
 	public static final Supplier<Block> MANGROVE_SEAT = BLOCKS.register("mangrove_seat", () -> new SeatBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MANGROVE_PLANKS)));
 	public static final Supplier<Block> CHERRY_SEAT = BLOCKS.register("cherry_seat", () -> new SeatBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_PLANKS)));
+	public static final Supplier<Block> BAMBOO_SEAT = BLOCKS.register("bamboo_seat", () -> new SeatBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_PLANKS)));
 	public static final Supplier<Block> CRIMSON_SEAT = BLOCKS.register("crimson_seat", () -> new SeatBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRIMSON_PLANKS)));
 	public static final Supplier<Block> WARPED_SEAT = BLOCKS.register("warped_seat", () -> new SeatBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS)));
 

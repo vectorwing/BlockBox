@@ -1,6 +1,7 @@
-// 1.21.1	2025-02-07T13:40:00.8240866	Loot Tables
+// 1.21.1	2025-02-07T14:55:36.9233064	Loot Tables
 21d023bbc6803113198cdc6b2685f08f98d6e6e5 data/blockbox/loot_table/blocks/acacia_palisade.json
 efe77edd4c80c7ac1a0560a0e8e7cc2c6f8add76 data/blockbox/loot_table/blocks/acacia_seat.json
+4ccdf7f67199a3c2622089212c33cc3cc77e5500 data/blockbox/loot_table/blocks/bamboo_seat.json
 28a3e88599b28b28e0aa6ab30196c311d9887cf8 data/blockbox/loot_table/blocks/birch_palisade.json
 9bd0598610bf1a1e8418d3cf4c712f31d3855982 data/blockbox/loot_table/blocks/birch_seat.json
 a64a57a9d8b5f02aab63b55ae41936bb8b11eb91 data/blockbox/loot_table/blocks/black_sky_lantern.json

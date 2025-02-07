@@ -1,6 +1,7 @@
-// 1.21.1	2025-02-07T13:40:00.8020829	Block States: blockbox
+// 1.21.1	2025-02-07T14:55:36.9081642	Block States: blockbox
 57741ed53ecabbf959a88b1adb4fb893265c9703 assets/blockbox/blockstates/acacia_palisade.json
 231dc493a7620b450bac3161ea140406621455eb assets/blockbox/blockstates/acacia_seat.json
+e281754efc9e1aa53909c2a753565c8c569ffa37 assets/blockbox/blockstates/bamboo_seat.json
 4997fe2fa24fa20c3a5bc8772a387819b36377bb assets/blockbox/blockstates/birch_palisade.json
 dcf35dfbb1305e4a834fede2051259c999edee71 assets/blockbox/blockstates/birch_seat.json
 3170b6540e5a43759916387b1284a217adfcadd4 assets/blockbox/blockstates/black_sky_lantern.json
@@ -116,6 +117,7 @@ d2256defaa30baf2f537005af4ae0f00e7c540af assets/blockbox/models/block/acacia_pal
 9963280da7725034fc773faea3471ab9626df513 assets/blockbox/models/block/acacia_palisade_front.json
 02d309b7928737bfaa002909e658a36d335cfc78 assets/blockbox/models/block/acacia_palisade_post.json
 cd42005435c6a2dba57e0875e77e577b28f7302f assets/blockbox/models/block/acacia_seat.json
+cf4cb3793bc1c9c4a58222080739e7e5f7171fab assets/blockbox/models/block/bamboo_seat.json
 cf5d870173c625dc00449587117d9c0d355d3e5b assets/blockbox/models/block/birch_palisade_back.json
 d89695fb3173c745048da96f3491c696635cd406 assets/blockbox/models/block/birch_palisade_front.json
 2b51601c07b92147458bf60b25dbbc386a523087 assets/blockbox/models/block/birch_palisade_post.json

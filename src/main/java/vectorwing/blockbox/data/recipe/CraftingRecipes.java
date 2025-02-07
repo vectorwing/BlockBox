@@ -113,6 +113,7 @@ public class CraftingRecipes
 		chair(output, ModBlocks.DARK_OAK_SEAT.get(), Blocks.DARK_OAK_PLANKS);
 		chair(output, ModBlocks.MANGROVE_SEAT.get(), Blocks.MANGROVE_PLANKS);
 		chair(output, ModBlocks.CHERRY_SEAT.get(), Blocks.CHERRY_PLANKS);
+		chair(output, ModBlocks.BAMBOO_SEAT.get(), Blocks.BAMBOO_PLANKS);
 		chair(output, ModBlocks.CRIMSON_SEAT.get(), Blocks.CRIMSON_PLANKS);
 		chair(output, ModBlocks.WARPED_SEAT.get(), Blocks.WARPED_PLANKS);
 	}

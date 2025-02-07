@@ -102,16 +102,17 @@ public class BlockStates extends BlockStateProvider
 		palisadeBlock((PalisadeBlock) ModBlocks.WARPED_PALISADE.get());
 		spikedPalisadeBlock((SpikedPalisadeBlock) ModBlocks.SPIKED_WARPED_PALISADE.get(), name(ModBlocks.WARPED_PALISADE.get()));
 
-		chairBlock(ModBlocks.OAK_SEAT.get());
-		chairBlock(ModBlocks.SPRUCE_SEAT.get());
-		chairBlock(ModBlocks.BIRCH_SEAT.get());
-		chairBlock(ModBlocks.JUNGLE_SEAT.get());
-		chairBlock(ModBlocks.ACACIA_SEAT.get());
-		chairBlock(ModBlocks.DARK_OAK_SEAT.get());
-		chairBlock(ModBlocks.MANGROVE_SEAT.get());
-		chairBlock(ModBlocks.CHERRY_SEAT.get());
-		chairBlock(ModBlocks.CRIMSON_SEAT.get());
-		chairBlock(ModBlocks.WARPED_SEAT.get());
+		seatBlock(ModBlocks.OAK_SEAT.get());
+		seatBlock(ModBlocks.SPRUCE_SEAT.get());
+		seatBlock(ModBlocks.BIRCH_SEAT.get());
+		seatBlock(ModBlocks.JUNGLE_SEAT.get());
+		seatBlock(ModBlocks.ACACIA_SEAT.get());
+		seatBlock(ModBlocks.DARK_OAK_SEAT.get());
+		seatBlock(ModBlocks.MANGROVE_SEAT.get());
+		seatBlock(ModBlocks.CHERRY_SEAT.get());
+		seatBlock(ModBlocks.BAMBOO_SEAT.get());
+		seatBlock(ModBlocks.CRIMSON_SEAT.get());
+		seatBlock(ModBlocks.WARPED_SEAT.get());
 
 		brazierBlock(ModBlocks.BRAZIER.get(), Blocks.CAMPFIRE);
 		brazierBlock(ModBlocks.SOUL_BRAZIER.get(), Blocks.SOUL_CAMPFIRE);
@@ -149,7 +150,7 @@ public class BlockStates extends BlockStateProvider
 		}
 	}
 
-	private void chairBlock(Block block) {
+	private void seatBlock(Block block) {
 		String baseName = name(block);
 		horizontalBlock(block, models().withExistingParent(baseName, resourceBlock("template_seat"))
 				.texture("top", resourceBlock(baseName + "_top"))

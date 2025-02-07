@@ -104,6 +104,7 @@ public class BlockLootTables extends BlockLootSubProvider
 		dropSelf(ModBlocks.DARK_OAK_SEAT.get());
 		dropSelf(ModBlocks.MANGROVE_SEAT.get());
 		dropSelf(ModBlocks.CHERRY_SEAT.get());
+		dropSelf(ModBlocks.BAMBOO_SEAT.get());
 		dropSelf(ModBlocks.CRIMSON_SEAT.get());
 		dropSelf(ModBlocks.WARPED_SEAT.get());
 
