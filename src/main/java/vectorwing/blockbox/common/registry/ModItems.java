@@ -45,6 +45,7 @@ public class ModItems
 	public static final Supplier<BlockItem> JAGGED_CLAY_TILES = registerSimpleBlockItem("jagged_clay_tiles", ModBlocks.JAGGED_CLAY_TILES);
 
 	public static final Supplier<BlockItem> PACKED_SNOW = registerSimpleBlockItem("packed_snow", ModBlocks.PACKED_SNOW);
+	public static final Supplier<BlockItem> CARVED_SNOW = registerSimpleBlockItem("carved_snow", ModBlocks.CARVED_SNOW);
 	public static final Supplier<BlockItem> SNOW_BRICKS = registerSimpleBlockItem("snow_bricks", ModBlocks.SNOW_BRICKS);
 	public static final Supplier<BlockItem> SNOW_BRICK_STAIRS = registerSimpleBlockItem("snow_brick_stairs", ModBlocks.SNOW_BRICK_STAIRS);
 	public static final Supplier<BlockItem> SNOW_BRICK_SLAB = registerSimpleBlockItem("snow_brick_slab", ModBlocks.SNOW_BRICK_SLAB);

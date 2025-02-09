@@ -1,4 +1,4 @@
-// 1.21.1	2025-02-07T19:48:18.5504958	Item Models: blockbox
+// 1.21.1	2025-02-08T22:54:11.0514992	Item Models: blockbox
 fca27dcf20ce91e90812b733713a36b943ebfc8b assets/blockbox/models/item/acacia_palisade.json
 56edae35411785995cfa08df92b58e026b257027 assets/blockbox/models/item/acacia_seat.json
 10a4d5d338db4ebb777168e3befa226c3940e98c assets/blockbox/models/item/bamboo_seat.json
@@ -8,6 +8,7 @@ dc25cd4ddf6651100780bf58d3d907cc7e1783d5 assets/blockbox/models/item/black_sky_l
 990dc292c70e296efcca721cd1d81d7005bc0ce4 assets/blockbox/models/item/blue_sky_lantern.json
 8dde497fd8bc1c394a0815fd8d37bf8ad6da9d7e assets/blockbox/models/item/brazier.json
 e906564c7bc89388175b4f06ef6e52920437e99c assets/blockbox/models/item/brown_sky_lantern.json
+783ba73fb9f989ee98e75ae39a0ff062f739f3fd assets/blockbox/models/item/carved_snow.json
 9fadb5ae875b6cbba6270834fd422617bb054bfb assets/blockbox/models/item/cherry_palisade.json
 f6bd126baa5124e2f45092b525c49addcf03b3d5 assets/blockbox/models/item/cherry_seat.json
 b2a1266189560e4d6bb15b18ff1300e278a63631 assets/blockbox/models/item/chiseled_amethyst.json

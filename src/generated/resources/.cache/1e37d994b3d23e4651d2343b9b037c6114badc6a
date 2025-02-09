@@ -1,4 +1,4 @@
-// 1.21.1	2025-02-07T19:48:18.5424941	Block States: blockbox
+// 1.21.1	2025-02-08T22:54:11.0464974	Block States: blockbox
 57741ed53ecabbf959a88b1adb4fb893265c9703 assets/blockbox/blockstates/acacia_palisade.json
 231dc493a7620b450bac3161ea140406621455eb assets/blockbox/blockstates/acacia_seat.json
 e281754efc9e1aa53909c2a753565c8c569ffa37 assets/blockbox/blockstates/bamboo_seat.json
@@ -8,6 +8,7 @@ dcf35dfbb1305e4a834fede2051259c999edee71 assets/blockbox/blockstates/birch_seat.
 c5658042688b344c4f16d61dad90431e519ad9d9 assets/blockbox/blockstates/blue_sky_lantern.json
 e95b664b89f086b68d40b7fd39d8aea5510abc17 assets/blockbox/blockstates/brazier.json
 6cb7e8d5faf8499baee89f4ab6b537fe922f81ce assets/blockbox/blockstates/brown_sky_lantern.json
+81d6db4c09afeac14ca23b0e4bf0f5c624b08394 assets/blockbox/blockstates/carved_snow.json
 76c4cdfada58f7bfea420ff8b02db0814e163540 assets/blockbox/blockstates/cherry_palisade.json
 ba095b5bd97867251f2f0fd71f0dabb885a83278 assets/blockbox/blockstates/cherry_seat.json
 94fecd1df8b2463e9eea7753a48f8bf46c84a346 assets/blockbox/blockstates/chiseled_amethyst.json
@@ -131,6 +132,7 @@ a63889d0fc1b20ea9ef6fe44d9a235ab4f69054e assets/blockbox/models/block/black_sky_
 a2732ffa26a48e988b7790c3b2e29a374c350dd4 assets/blockbox/models/block/brazier.json
 3835c33af331d239ea960a95624741e938a081c7 assets/blockbox/models/block/brazier_lit.json
 748743b534ff1b39969bf6ace24a54e99eba905b assets/blockbox/models/block/brown_sky_lantern.json
+39f68b67886336faf94d6a3e27c8218970cd3909 assets/blockbox/models/block/carved_snow.json
 b55ae37bac439fd681d473e071722cea42f9bfcc assets/blockbox/models/block/cherry_palisade_back.json
 c0c154939237c2a9b8fa02ec96ec153efa262f97 assets/blockbox/models/block/cherry_palisade_front.json
 9a07048ab1c26576b49d7a5201688dd2d51b85ca assets/blockbox/models/block/cherry_palisade_post.json

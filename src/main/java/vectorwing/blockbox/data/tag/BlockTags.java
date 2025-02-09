@@ -235,6 +235,7 @@ public class BlockTags extends BlockTagsProvider
 				.addTag(ModTags.WOODEN_SEATS);
 		tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_SHOVEL).add(
 				ModBlocks.PACKED_SNOW.get(),
+				ModBlocks.CARVED_SNOW.get(),
 				ModBlocks.SNOW_BRICKS.get(),
 				ModBlocks.SNOW_BRICK_STAIRS.get(),
 				ModBlocks.SNOW_BRICK_SLAB.get(),

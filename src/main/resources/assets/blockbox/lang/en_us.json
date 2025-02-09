@@ -33,6 +33,7 @@
   "block.blockbox.jagged_clay_tiles": "Jagged Clay Tiles",
 
   "block.blockbox.packed_snow": "Packed Snow",
+  "block.blockbox.carved_snow": "Carved Snow",
   "block.blockbox.snow_bricks": "Snow Bricks",
   "block.blockbox.snow_brick_stairs": "Snow Brick Stairs",
   "block.blockbox.snow_brick_slab": "Snow Brick Slab",
@@ -165,6 +166,7 @@
   "item.blockbox.jagged_clay_tiles": "Jagged Clay Tiles",
 
   "item.blockbox.packed_snow": "Packed Snow",
+  "item.blockbox.carved_snow": "Carved Snow",
   "item.blockbox.snow_bricks": "Snow Bricks",
   "item.blockbox.snow_brick_stairs": "Snow Brick Stairs",
   "item.blockbox.snow_brick_slab": "Snow Brick Slab",
@@ -257,7 +259,7 @@
   "item.blockbox.magenta_sky_lantern": "Magenta Sky Lantern",
   "item.blockbox.pink_sky_lantern": "Pink Sky Lantern",
 
-  "itemGroup.blockbox": "Block Box",
+  "itemGroup.blockbox": "The Block Box",
 
   "blockbox.tooltip.sky_lantern": "Can be placed in mid-air",
   "blockbox.item.mallet.failure": "Can't push...",

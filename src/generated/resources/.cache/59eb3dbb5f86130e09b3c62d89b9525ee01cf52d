@@ -1,4 +1,4 @@
-// 1.21.1	2025-02-07T19:48:18.5524964	Loot Tables
+// 1.21.1	2025-02-08T22:54:11.0553178	Loot Tables
 21d023bbc6803113198cdc6b2685f08f98d6e6e5 data/blockbox/loot_table/blocks/acacia_palisade.json
 efe77edd4c80c7ac1a0560a0e8e7cc2c6f8add76 data/blockbox/loot_table/blocks/acacia_seat.json
 4ccdf7f67199a3c2622089212c33cc3cc77e5500 data/blockbox/loot_table/blocks/bamboo_seat.json
@@ -8,6 +8,7 @@ a64a57a9d8b5f02aab63b55ae41936bb8b11eb91 data/blockbox/loot_table/blocks/black_s
 7243036303db9bb9d1434ea10e73a0ca21f880b4 data/blockbox/loot_table/blocks/blue_sky_lantern.json
 03ba6770887d18f9df936a10b4f265f83e8f93af data/blockbox/loot_table/blocks/brazier.json
 9fd18b33815cc10d063fa916b3f84e6f9b81b2fe data/blockbox/loot_table/blocks/brown_sky_lantern.json
+18ff45ee88be67368a282419067253792b668deb data/blockbox/loot_table/blocks/carved_snow.json
 a9b0c38fee6d5acdde0d6764030a455f84ec5d4e data/blockbox/loot_table/blocks/cherry_palisade.json
 2ebbd87222913dae07f33f16776b16d983d638f2 data/blockbox/loot_table/blocks/cherry_seat.json
 8816c52cc972dc026eb84012b81b26f0be4856fd data/blockbox/loot_table/blocks/chiseled_amethyst.json

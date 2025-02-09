@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "blockbox:block/carved_snow",
+    "side": "blockbox:block/packed_snow",
+    "top": "blockbox:block/packed_snow"
+  }
+}

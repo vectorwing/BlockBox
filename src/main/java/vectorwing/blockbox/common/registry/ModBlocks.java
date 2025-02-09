@@ -35,7 +35,8 @@ public class ModBlocks
 	public static final Supplier<Block> CLAY_TILE_SLAB = BLOCKS.register("clay_tile_slab", () -> slab(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
 	public static final Supplier<Block> JAGGED_CLAY_TILES = BLOCKS.registerSimpleBlock("jagged_clay_tiles", BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS));
 
-	public static final Supplier<Block> PACKED_SNOW = BLOCKS.registerSimpleBlock("packed_snow", PROPERTIES_PACKED_SNOW);
+	public static final Supplier<Block> PACKED_SNOW = BLOCKS.register("packed_snow", () -> new PackedSnowBlock(PROPERTIES_PACKED_SNOW));
+	public static final Supplier<Block> CARVED_SNOW = BLOCKS.register("carved_snow", () -> new CarvedSnowBlock(PROPERTIES_PACKED_SNOW));
 	public static final Supplier<Block> SNOW_BRICKS = BLOCKS.registerSimpleBlock("snow_bricks", PROPERTIES_PACKED_SNOW);
 	public static final Supplier<Block> SNOW_BRICK_STAIRS = BLOCKS.register("snow_brick_stairs", () -> stair(ModBlocks.SNOW_BRICKS.get(), PROPERTIES_PACKED_SNOW));
 	public static final Supplier<Block> SNOW_BRICK_SLAB = BLOCKS.register("snow_brick_slab", () -> slab(PROPERTIES_PACKED_SNOW));

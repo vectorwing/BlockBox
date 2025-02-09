@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "blockbox:block/carved_snow",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "blockbox:block/carved_snow"
+    },
+    "facing=south": {
+      "model": "blockbox:block/carved_snow",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "blockbox:block/carved_snow",
+      "y": 270
+    }
+  }
+}

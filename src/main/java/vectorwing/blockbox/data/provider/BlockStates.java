@@ -39,10 +39,19 @@ public class BlockStates extends BlockStateProvider
 
 		blockWithVariations(ModBlocks.JAGGED_CLAY_TILES.get(), List.of("a", "b", "c"));
 
-		simpleBlock(ModBlocks.POLISHED_PACKED_ICE.get());
+		simpleBlock(ModBlocks.PACKED_SNOW.get());
+
+		String packedSnow = name(ModBlocks.PACKED_SNOW.get());
+		String carvedSnow = name(ModBlocks.CARVED_SNOW.get());
+		horizontalBlock(ModBlocks.CARVED_SNOW.get(), models().orientable(
+				carvedSnow,
+				resourceBlock(packedSnow),
+				resourceBlock(carvedSnow),
+				resourceBlock(packedSnow)
+		));
 		blockWithStairAndSlab(ModBlocks.SNOW_BRICKS.get(), ModBlocks.SNOW_BRICK_STAIRS.get(), ModBlocks.SNOW_BRICK_SLAB.get());
 		wallBlock((WallBlock) ModBlocks.SNOW_BRICK_WALL.get(), resourceBlock(name(ModBlocks.SNOW_BRICKS.get())));
-		simpleBlock(ModBlocks.PACKED_SNOW.get());
+		simpleBlock(ModBlocks.POLISHED_PACKED_ICE.get());
 		blockWithStairAndSlab(ModBlocks.PACKED_ICE_BRICKS.get(), ModBlocks.PACKED_ICE_BRICK_STAIRS.get(), ModBlocks.PACKED_ICE_BRICK_SLAB.get());
 		wallBlock((WallBlock) ModBlocks.PACKED_ICE_BRICK_WALL.get(), resourceBlock(name(ModBlocks.PACKED_ICE_BRICKS.get())));
 
