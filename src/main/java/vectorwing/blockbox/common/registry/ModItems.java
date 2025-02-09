@@ -32,6 +32,19 @@ public class ModItems
 
 	public static final Supplier<Item> MALLET = registerItem("mallet", () -> new MalletItem(new Item.Properties().durability(512)));
 
+	public static final Supplier<BlockItem> GRANITE_BRICKS = registerSimpleBlockItem("granite_bricks", ModBlocks.GRANITE_BRICKS);
+	public static final Supplier<BlockItem> GRANITE_BRICK_STAIRS = registerSimpleBlockItem("granite_brick_stairs", ModBlocks.GRANITE_BRICK_STAIRS);
+	public static final Supplier<BlockItem> GRANITE_BRICK_SLAB = registerSimpleBlockItem("granite_brick_slab", ModBlocks.GRANITE_BRICK_SLAB);
+	public static final Supplier<BlockItem> GRANITE_BRICK_WALL = registerSimpleBlockItem("granite_brick_wall", ModBlocks.GRANITE_BRICK_WALL);
+	public static final Supplier<BlockItem> DIORITE_BRICKS = registerSimpleBlockItem("diorite_bricks", ModBlocks.DIORITE_BRICKS);
+	public static final Supplier<BlockItem> DIORITE_BRICK_STAIRS = registerSimpleBlockItem("diorite_brick_stairs", ModBlocks.DIORITE_BRICK_STAIRS);
+	public static final Supplier<BlockItem> DIORITE_BRICK_SLAB = registerSimpleBlockItem("diorite_brick_slab", ModBlocks.DIORITE_BRICK_SLAB);
+	public static final Supplier<BlockItem> DIORITE_BRICK_WALL = registerSimpleBlockItem("diorite_brick_wall", ModBlocks.DIORITE_BRICK_WALL);
+	public static final Supplier<BlockItem> ANDESITE_BRICKS = registerSimpleBlockItem("andesite_bricks", ModBlocks.ANDESITE_BRICKS);
+	public static final Supplier<BlockItem> ANDESITE_BRICK_STAIRS = registerSimpleBlockItem("andesite_brick_stairs", ModBlocks.ANDESITE_BRICK_STAIRS);
+	public static final Supplier<BlockItem> ANDESITE_BRICK_SLAB = registerSimpleBlockItem("andesite_brick_slab", ModBlocks.ANDESITE_BRICK_SLAB);
+	public static final Supplier<BlockItem> ANDESITE_BRICK_WALL = registerSimpleBlockItem("andesite_brick_wall", ModBlocks.ANDESITE_BRICK_WALL);
+
 	public static final Supplier<BlockItem> SANDSTONE_BRICKS = registerSimpleBlockItem("sandstone_bricks", ModBlocks.SANDSTONE_BRICKS);
 	public static final Supplier<BlockItem> SANDSTONE_BRICK_STAIRS = registerSimpleBlockItem("sandstone_brick_stairs", ModBlocks.SANDSTONE_BRICK_STAIRS);
 	public static final Supplier<BlockItem> SANDSTONE_BRICK_SLAB = registerSimpleBlockItem("sandstone_brick_slab", ModBlocks.SANDSTONE_BRICK_SLAB);

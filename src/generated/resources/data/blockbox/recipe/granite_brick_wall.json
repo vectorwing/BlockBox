@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "p": {
+      "item": "blockbox:granite_bricks"
+    }
+  },
+  "pattern": [
+    "ppp",
+    "ppp"
+  ],
+  "result": {
+    "count": 6,
+    "id": "blockbox:granite_brick_wall"
+  }
+}

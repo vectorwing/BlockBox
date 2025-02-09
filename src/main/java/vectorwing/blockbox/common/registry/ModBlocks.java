@@ -23,6 +23,19 @@ public class ModBlocks
 	public static final BlockBehaviour.Properties PROPERTIES_PALISADE = BlockBehaviour.Properties.of().strength(2.0F).instrument(NoteBlockInstrument.BASS);
 	public static final BlockBehaviour.Properties PROPERTIES_SKY_LANTERN = BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.GUITAR).noOcclusion().lightLevel((state) -> 15).ignitedByLava().sound(SoundType.WOOL);
 
+	public static final Supplier<Block> GRANITE_BRICKS = BLOCKS.registerSimpleBlock("granite_bricks", BlockBehaviour.Properties.ofFullCopy(Blocks.GRANITE));
+	public static final Supplier<Block> GRANITE_BRICK_STAIRS = BLOCKS.register("granite_brick_stairs", () -> stair(ModBlocks.GRANITE_BRICKS.get(), BlockBehaviour.Properties.ofFullCopy(Blocks.GRANITE)));
+	public static final Supplier<Block> GRANITE_BRICK_SLAB = BLOCKS.register("granite_brick_slab", () -> slab(BlockBehaviour.Properties.ofFullCopy(Blocks.GRANITE)));
+	public static final Supplier<Block> GRANITE_BRICK_WALL = BLOCKS.register("granite_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GRANITE).forceSolidOn()));
+	public static final Supplier<Block> DIORITE_BRICKS = BLOCKS.registerSimpleBlock("diorite_bricks", BlockBehaviour.Properties.ofFullCopy(Blocks.DIORITE));
+	public static final Supplier<Block> DIORITE_BRICK_STAIRS = BLOCKS.register("diorite_brick_stairs", () -> stair(ModBlocks.DIORITE_BRICKS.get(), BlockBehaviour.Properties.ofFullCopy(Blocks.DIORITE)));
+	public static final Supplier<Block> DIORITE_BRICK_SLAB = BLOCKS.register("diorite_brick_slab", () -> slab(BlockBehaviour.Properties.ofFullCopy(Blocks.DIORITE)));
+	public static final Supplier<Block> DIORITE_BRICK_WALL = BLOCKS.register("diorite_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DIORITE).forceSolidOn()));
+	public static final Supplier<Block> ANDESITE_BRICKS = BLOCKS.registerSimpleBlock("andesite_bricks", BlockBehaviour.Properties.ofFullCopy(Blocks.ANDESITE));
+	public static final Supplier<Block> ANDESITE_BRICK_STAIRS = BLOCKS.register("andesite_brick_stairs", () -> stair(ModBlocks.ANDESITE_BRICKS.get(), BlockBehaviour.Properties.ofFullCopy(Blocks.ANDESITE)));
+	public static final Supplier<Block> ANDESITE_BRICK_SLAB = BLOCKS.register("andesite_brick_slab", () -> slab(BlockBehaviour.Properties.ofFullCopy(Blocks.ANDESITE)));
+	public static final Supplier<Block> ANDESITE_BRICK_WALL = BLOCKS.register("andesite_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ANDESITE).forceSolidOn()));
+
 	public static final Supplier<Block> SANDSTONE_BRICKS = BLOCKS.registerSimpleBlock("sandstone_bricks", BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE));
 	public static final Supplier<Block> SANDSTONE_BRICK_STAIRS = BLOCKS.register("sandstone_brick_stairs", () -> stair(ModBlocks.SANDSTONE_BRICKS.get(), BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE)));
 	public static final Supplier<Block> SANDSTONE_BRICK_SLAB = BLOCKS.register("sandstone_brick_slab", () -> slab(BlockBehaviour.Properties.ofFullCopy(ModBlocks.SANDSTONE_BRICKS.get())));

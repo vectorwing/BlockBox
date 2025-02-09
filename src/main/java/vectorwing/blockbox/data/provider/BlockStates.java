@@ -32,6 +32,13 @@ public class BlockStates extends BlockStateProvider
 
 	@Override
 	protected void registerStatesAndModels() {
+		blockWithStairAndSlab(ModBlocks.GRANITE_BRICKS.get(), ModBlocks.GRANITE_BRICK_STAIRS.get(), ModBlocks.GRANITE_BRICK_SLAB.get());
+		wallBlock((WallBlock) ModBlocks.GRANITE_BRICK_WALL.get(), resourceBlock(name(ModBlocks.GRANITE_BRICKS.get())));
+		blockWithStairAndSlab(ModBlocks.DIORITE_BRICKS.get(), ModBlocks.DIORITE_BRICK_STAIRS.get(), ModBlocks.DIORITE_BRICK_SLAB.get());
+		wallBlock((WallBlock) ModBlocks.DIORITE_BRICK_WALL.get(), resourceBlock(name(ModBlocks.DIORITE_BRICKS.get())));
+		blockWithStairAndSlab(ModBlocks.ANDESITE_BRICKS.get(), ModBlocks.ANDESITE_BRICK_STAIRS.get(), ModBlocks.ANDESITE_BRICK_SLAB.get());
+		wallBlock((WallBlock) ModBlocks.ANDESITE_BRICK_WALL.get(), resourceBlock(name(ModBlocks.ANDESITE_BRICKS.get())));
+
 		blockWithStairAndSlab(ModBlocks.SANDSTONE_BRICKS.get(), ModBlocks.SANDSTONE_BRICK_STAIRS.get(), ModBlocks.SANDSTONE_BRICK_SLAB.get());
 		blockWithStairAndSlab(ModBlocks.RED_SANDSTONE_BRICKS.get(), ModBlocks.RED_SANDSTONE_BRICK_STAIRS.get(), ModBlocks.RED_SANDSTONE_BRICK_SLAB.get());
 

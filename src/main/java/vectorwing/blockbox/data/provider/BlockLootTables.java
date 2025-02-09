@@ -20,6 +20,13 @@ public class BlockLootTables extends BlockLootSubProvider
 
 	@Override
 	protected void generate() {
+		addBlockStairSlab(ModBlocks.GRANITE_BRICKS.get(), ModBlocks.GRANITE_BRICK_STAIRS.get(), ModBlocks.GRANITE_BRICK_SLAB.get());
+		dropSelf(ModBlocks.GRANITE_BRICK_WALL.get());
+		addBlockStairSlab(ModBlocks.DIORITE_BRICKS.get(), ModBlocks.DIORITE_BRICK_STAIRS.get(), ModBlocks.DIORITE_BRICK_SLAB.get());
+		dropSelf(ModBlocks.DIORITE_BRICK_WALL.get());
+		addBlockStairSlab(ModBlocks.ANDESITE_BRICKS.get(), ModBlocks.ANDESITE_BRICK_STAIRS.get(), ModBlocks.ANDESITE_BRICK_SLAB.get());
+		dropSelf(ModBlocks.ANDESITE_BRICK_WALL.get());
+
 		dropSelf(ModBlocks.OAK_PALISADE.get());
 		dropSelf(ModBlocks.SPIKED_OAK_PALISADE.get());
 		dropSelf(ModBlocks.SPRUCE_PALISADE.get());

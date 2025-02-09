@@ -1,5 +1,17 @@
 {
   "values": [
+    "blockbox:granite_bricks",
+    "blockbox:granite_brick_stairs",
+    "blockbox:granite_brick_slab",
+    "blockbox:granite_brick_wall",
+    "blockbox:diorite_bricks",
+    "blockbox:diorite_brick_stairs",
+    "blockbox:diorite_brick_slab",
+    "blockbox:diorite_brick_wall",
+    "blockbox:andesite_bricks",
+    "blockbox:andesite_brick_stairs",
+    "blockbox:andesite_brick_slab",
+    "blockbox:andesite_brick_wall",
     "blockbox:sandstone_bricks",
     "blockbox:sandstone_brick_stairs",
     "blockbox:sandstone_brick_slab",

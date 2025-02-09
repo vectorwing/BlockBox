@@ -1,6 +1,10 @@
-// 1.21.1	2025-02-08T22:54:11.0514992	Item Models: blockbox
+// 1.21.1	2025-02-09T15:11:28.6568355	Item Models: blockbox
 fca27dcf20ce91e90812b733713a36b943ebfc8b assets/blockbox/models/item/acacia_palisade.json
 56edae35411785995cfa08df92b58e026b257027 assets/blockbox/models/item/acacia_seat.json
+e12842d08f5c4549ec54b5f285ad05e19032d75a assets/blockbox/models/item/andesite_bricks.json
+5c04596f831d038b600a562a0b4882d421cf49d9 assets/blockbox/models/item/andesite_brick_slab.json
+b147b236446ec824aebb9310145deb9fade501ef assets/blockbox/models/item/andesite_brick_stairs.json
+82ce4d903f0a42b73d35e45a166a59b557f8cd4c assets/blockbox/models/item/andesite_brick_wall.json
 10a4d5d338db4ebb777168e3befa226c3940e98c assets/blockbox/models/item/bamboo_seat.json
 e26e93ede660590aade714bcbeb4481832a77fd8 assets/blockbox/models/item/birch_palisade.json
 48f57a5da0b4f46d047538fa8e47622fdaa3fd51 assets/blockbox/models/item/birch_seat.json
@@ -31,6 +35,10 @@ c5c890ba3be94c7285fb879e106da864f8c139c9 assets/blockbox/models/item/corrugated_
 bea75d30a73676063622e97b78d18e0433945a73 assets/blockbox/models/item/cyan_sky_lantern.json
 a75982f3a76d28fc954d739ea28c40049eaee3b3 assets/blockbox/models/item/dark_oak_palisade.json
 3eb56b6c06ae4fd72a0dd7d19f406e26b582e394 assets/blockbox/models/item/dark_oak_seat.json
+121a503d7f3522910a7770389fed018e98cca5a0 assets/blockbox/models/item/diorite_bricks.json
+ddcb794c2c4dd0b57317ae4b11ecb2bd6454fe04 assets/blockbox/models/item/diorite_brick_slab.json
+f74568c5a6f329e2116b10f4ace74743b0d05f8b assets/blockbox/models/item/diorite_brick_stairs.json
+08826fea2507500b3209434eea58da764cd08259 assets/blockbox/models/item/diorite_brick_wall.json
 b7bd71d85cb16436bf102804762e4d7634fa2862 assets/blockbox/models/item/exposed_copper_bars.json
 52d0fb62e3fc37b3809e40789005df3b2fd540e7 assets/blockbox/models/item/exposed_copper_pillar.json
 11f4541f68dca6454233620c649af8043af9bd68 assets/blockbox/models/item/golden_bars.json
@@ -41,6 +49,10 @@ f092954eae7019cacf50237a8f3180090fa7c5ad assets/blockbox/models/item/golden_door
 2ab2b669d5786ed61cd753cda2e524c602ae0a1c assets/blockbox/models/item/golden_pillar.json
 b1519fc4c13538925748e0c13be91c3f9c3a6ea7 assets/blockbox/models/item/golden_tiles.json
 066620de12498a58fab4329cb01a73e1cc218b05 assets/blockbox/models/item/golden_trapdoor.json
+7239e1b9a99a66bec7b4dc073a0d72014b890481 assets/blockbox/models/item/granite_bricks.json
+b6c89d6c81da48b6ba898cb2a67a9092d88fb0d4 assets/blockbox/models/item/granite_brick_slab.json
+e5f8cb9e2fc3847228d3e1cdca6afdc86986cff9 assets/blockbox/models/item/granite_brick_stairs.json
+4180653bc7d8a8860730b9e749ff1b145b5b5491 assets/blockbox/models/item/granite_brick_wall.json
 4fecab6cc4e39ee8bceae1381fd4e694c5edad44 assets/blockbox/models/item/gray_sky_lantern.json
 9ae070ff7d8399992073ec0d4cf331f94b9f8861 assets/blockbox/models/item/green_sky_lantern.json
 b023836dbcefdbb8c907c8eb0e3802771bc18c36 assets/blockbox/models/item/iron_plate.json

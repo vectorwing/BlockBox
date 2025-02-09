@@ -54,6 +54,12 @@ public class ItemModels extends ItemModelProvider
 		trapdoorModel(ModItems.IRON_PLATE_TRAPDOOR.get(), items);
 		trapdoorModel(ModItems.GOLDEN_TRAPDOOR.get(), items);
 
+		wallInventory(itemName(ModItems.GRANITE_BRICK_WALL.get()), resourceBlock(itemName(ModItems.GRANITE_BRICKS.get())));
+		items.remove(ModItems.GRANITE_BRICK_WALL.get());
+		wallInventory(itemName(ModItems.DIORITE_BRICK_WALL.get()), resourceBlock(itemName(ModItems.DIORITE_BRICKS.get())));
+		items.remove(ModItems.DIORITE_BRICK_WALL.get());
+		wallInventory(itemName(ModItems.ANDESITE_BRICK_WALL.get()), resourceBlock(itemName(ModItems.ANDESITE_BRICKS.get())));
+		items.remove(ModItems.ANDESITE_BRICK_WALL.get());
 		wallInventory(itemName(ModItems.SNOW_BRICK_WALL.get()), resourceBlock(itemName(ModItems.SNOW_BRICKS.get())));
 		items.remove(ModItems.SNOW_BRICK_WALL.get());
 		wallInventory(itemName(ModItems.PACKED_ICE_BRICK_WALL.get()), resourceBlock(itemName(ModItems.PACKED_ICE_BRICKS.get())));

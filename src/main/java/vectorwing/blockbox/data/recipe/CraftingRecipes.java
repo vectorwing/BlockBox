@@ -296,6 +296,28 @@ public class CraftingRecipes
 	}
 
 	private static void craftBasicBlocks(RecipeOutput output) {
+		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRANITE_BRICKS.get(), 4)
+				.pattern("##")
+				.pattern("##")
+				.define('#', Blocks.POLISHED_GRANITE)
+				.unlockedBy("has_granite", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.GRANITE))
+				.save(output);
+		stairSlabWall(output, ModBlocks.GRANITE_BRICK_STAIRS.get(), ModBlocks.GRANITE_BRICK_SLAB.get(), ModBlocks.GRANITE_BRICKS.get(), ModBlocks.GRANITE_BRICK_WALL.get());
+		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DIORITE_BRICKS.get(), 4)
+				.pattern("##")
+				.pattern("##")
+				.define('#', Blocks.POLISHED_DIORITE)
+				.unlockedBy("has_granite", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.DIORITE))
+				.save(output);
+		stairSlabWall(output, ModBlocks.DIORITE_BRICK_STAIRS.get(), ModBlocks.DIORITE_BRICK_SLAB.get(), ModBlocks.DIORITE_BRICKS.get(), ModBlocks.DIORITE_BRICK_WALL.get());
+		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ANDESITE_BRICKS.get(), 4)
+				.pattern("##")
+				.pattern("##")
+				.define('#', Blocks.POLISHED_ANDESITE)
+				.unlockedBy("has_granite", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.ANDESITE))
+				.save(output);
+		stairSlabWall(output, ModBlocks.ANDESITE_BRICK_STAIRS.get(), ModBlocks.ANDESITE_BRICK_SLAB.get(), ModBlocks.ANDESITE_BRICKS.get(), ModBlocks.ANDESITE_BRICK_WALL.get());
+
 		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SANDSTONE_BRICKS.get(), 4)
 				.pattern("ss")
 				.pattern("ss")
@@ -332,13 +354,7 @@ public class CraftingRecipes
 				.define('p', ModBlocks.PACKED_SNOW.get())
 				.unlockedBy("has_snow", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.SNOW_BLOCK))
 				.save(output);
-		stairAndSlab(output, ModBlocks.SNOW_BRICK_STAIRS.get(), ModBlocks.SNOW_BRICK_SLAB.get(), ModBlocks.SNOW_BRICKS.get());
-		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SNOW_BRICK_WALL.get(), 6)
-				.pattern("ppp")
-				.pattern("ppp")
-				.define('p', ModBlocks.SNOW_BRICKS.get())
-				.unlockedBy("has_snow_bricks", InventoryChangeTrigger.TriggerInstance.hasItems(ModBlocks.SNOW_BRICKS.get()))
-				.save(output);
+		stairSlabWall(output, ModBlocks.SNOW_BRICK_STAIRS.get(), ModBlocks.SNOW_BRICK_SLAB.get(), ModBlocks.SNOW_BRICKS.get(), ModBlocks.SNOW_BRICK_WALL.get());
 
 		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_PACKED_ICE.get(), 4)
 				.pattern("ss")
@@ -352,13 +368,7 @@ public class CraftingRecipes
 				.define('s', ModBlocks.POLISHED_PACKED_ICE.get())
 				.unlockedBy("has_packed_ice", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.PACKED_ICE))
 				.save(output);
-		stairAndSlab(output, ModBlocks.PACKED_ICE_BRICK_STAIRS.get(), ModBlocks.PACKED_ICE_BRICK_SLAB.get(), ModBlocks.PACKED_ICE_BRICKS.get());
-		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PACKED_ICE_BRICK_WALL.get(), 6)
-				.pattern("ppp")
-				.pattern("ppp")
-				.define('p', ModBlocks.PACKED_ICE_BRICKS.get())
-				.unlockedBy("has_snow_bricks", InventoryChangeTrigger.TriggerInstance.hasItems(ModBlocks.PACKED_ICE_BRICKS.get()))
-				.save(output);
+		stairSlabWall(output, ModBlocks.PACKED_ICE_BRICK_STAIRS.get(), ModBlocks.PACKED_ICE_BRICK_SLAB.get(), ModBlocks.PACKED_ICE_BRICKS.get(), ModBlocks.PACKED_ICE_BRICK_WALL.get());
 
 		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_OBSIDIAN.get(), 4)
 				.pattern("##")
@@ -435,6 +445,16 @@ public class CraftingRecipes
 		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, slab, 6)
 				.pattern("###")
 				.define('#', block)
+				.unlockedBy("has_matching_block", InventoryChangeTrigger.TriggerInstance.hasItems(block))
+				.save(output);
+	}
+
+	public static void stairSlabWall(RecipeOutput output, ItemLike stair, ItemLike slab, ItemLike block, ItemLike wall) {
+		stairAndSlab(output, stair, slab, block);
+		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, wall, 6)
+				.pattern("ppp")
+				.pattern("ppp")
+				.define('p', block)
 				.unlockedBy("has_matching_block", InventoryChangeTrigger.TriggerInstance.hasItems(block))
 				.save(output);
 	}

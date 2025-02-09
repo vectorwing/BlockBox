@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_snow_bricks": {
+    "has_matching_block": {
       "conditions": {
         "items": [
           {
-            "items": "blockbox:packed_ice_bricks"
+            "items": "blockbox:diorite_bricks"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blockbox:packed_ice_brick_wall"
+        "recipe": "blockbox:diorite_brick_slab"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_snow_bricks"
+      "has_matching_block"
     ]
   ],
   "rewards": {
     "recipes": [
-      "blockbox:packed_ice_brick_wall"
+      "blockbox:diorite_brick_slab"
     ]
   }
 }

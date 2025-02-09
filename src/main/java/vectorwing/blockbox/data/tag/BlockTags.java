@@ -55,6 +55,9 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.GOLDEN_TRAPDOOR.get()
 		);
 		tag(net.minecraft.tags.BlockTags.WALLS).add(
+				ModBlocks.GRANITE_BRICK_WALL.get(),
+				ModBlocks.DIORITE_BRICK_WALL.get(),
+				ModBlocks.ANDESITE_BRICK_WALL.get(),
 				ModBlocks.SNOW_BRICK_WALL.get(),
 				ModBlocks.PACKED_ICE_BRICK_WALL.get()
 		);
@@ -166,6 +169,18 @@ public class BlockTags extends BlockTagsProvider
 
 	protected void registerBlockMineables() {
 		tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(
+				ModBlocks.GRANITE_BRICKS.get(),
+				ModBlocks.GRANITE_BRICK_STAIRS.get(),
+				ModBlocks.GRANITE_BRICK_SLAB.get(),
+				ModBlocks.GRANITE_BRICK_WALL.get(),
+				ModBlocks.DIORITE_BRICKS.get(),
+				ModBlocks.DIORITE_BRICK_STAIRS.get(),
+				ModBlocks.DIORITE_BRICK_SLAB.get(),
+				ModBlocks.DIORITE_BRICK_WALL.get(),
+				ModBlocks.ANDESITE_BRICKS.get(),
+				ModBlocks.ANDESITE_BRICK_STAIRS.get(),
+				ModBlocks.ANDESITE_BRICK_SLAB.get(),
+				ModBlocks.ANDESITE_BRICK_WALL.get(),
 				ModBlocks.SANDSTONE_BRICKS.get(),
 				ModBlocks.SANDSTONE_BRICK_STAIRS.get(),
 				ModBlocks.SANDSTONE_BRICK_SLAB.get(),

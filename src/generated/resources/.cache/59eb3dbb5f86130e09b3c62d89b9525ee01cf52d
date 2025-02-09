@@ -1,6 +1,10 @@
-// 1.21.1	2025-02-08T22:54:11.0553178	Loot Tables
+// 1.21.1	2025-02-09T15:11:28.6608363	Loot Tables
 21d023bbc6803113198cdc6b2685f08f98d6e6e5 data/blockbox/loot_table/blocks/acacia_palisade.json
 efe77edd4c80c7ac1a0560a0e8e7cc2c6f8add76 data/blockbox/loot_table/blocks/acacia_seat.json
+ad771d1a04b0f35ab39a1810e91a82b724464f7f data/blockbox/loot_table/blocks/andesite_bricks.json
+d8b265c6f068ecd6a5ef1437b17f4da04cd7820a data/blockbox/loot_table/blocks/andesite_brick_slab.json
+58d59ecbe800e2b15a9ab7ea02ad8328415a1a4c data/blockbox/loot_table/blocks/andesite_brick_stairs.json
+79edba1d74912f39a7d6b9135f76aaaf54a23f1d data/blockbox/loot_table/blocks/andesite_brick_wall.json
 4ccdf7f67199a3c2622089212c33cc3cc77e5500 data/blockbox/loot_table/blocks/bamboo_seat.json
 28a3e88599b28b28e0aa6ab30196c311d9887cf8 data/blockbox/loot_table/blocks/birch_palisade.json
 9bd0598610bf1a1e8418d3cf4c712f31d3855982 data/blockbox/loot_table/blocks/birch_seat.json
@@ -31,6 +35,10 @@ c1960cda37b3c7877e4c0dca106e082df2de2ee3 data/blockbox/loot_table/blocks/cut_ame
 06688e3968029b8e602cee27f68e03293982991f data/blockbox/loot_table/blocks/cyan_sky_lantern.json
 721bf409a6f33e36a125ebf0d47ffad666f91c42 data/blockbox/loot_table/blocks/dark_oak_palisade.json
 6070ef0ac927166cdff1ea954e8023379ed0d9d0 data/blockbox/loot_table/blocks/dark_oak_seat.json
+0a54becf0e5bddcdedfd2bfe60ca9bc4193ffd91 data/blockbox/loot_table/blocks/diorite_bricks.json
+6a1fa0f47548525c1d90b7af450c4c25c3174abf data/blockbox/loot_table/blocks/diorite_brick_slab.json
+025d1e777eef8a71198d8184ebcdfd09b6cd798b data/blockbox/loot_table/blocks/diorite_brick_stairs.json
+29d44c61e7c197e65a9cad4aef5b21ae8d7fde1e data/blockbox/loot_table/blocks/diorite_brick_wall.json
 3d98028461e69fbf73437f0c7f52ecb472c05dbd data/blockbox/loot_table/blocks/exposed_copper_bars.json
 b9dd4aca15179b77575b82981e4a23f43b522461 data/blockbox/loot_table/blocks/exposed_copper_pillar.json
 6e4ca8ba652ab7792bb5dd3f4dd501e23fd07dd4 data/blockbox/loot_table/blocks/golden_bars.json
@@ -41,6 +49,10 @@ af0c2790659bc518666cc0f1a9d5ab052788e9f7 data/blockbox/loot_table/blocks/golden_
 2c8f4e35e0a90aa38e922530db79393e5bea27d7 data/blockbox/loot_table/blocks/golden_pillar.json
 d6563f9408212450e68e80bac92df84951efc135 data/blockbox/loot_table/blocks/golden_tiles.json
 b4842355acab13e730d8a0dc0446279f57aebe97 data/blockbox/loot_table/blocks/golden_trapdoor.json
+6a906d71fdf2c9ac2de7095480e769fbd43062cd data/blockbox/loot_table/blocks/granite_bricks.json
+5495eed746a460ff1ca7fffd4e0be93cce5f8db9 data/blockbox/loot_table/blocks/granite_brick_slab.json
+24bcb9469ac30064082944457387152caff5e13c data/blockbox/loot_table/blocks/granite_brick_stairs.json
+c06bc9c5e04268d6695019a6ccc645cefcb4a7b4 data/blockbox/loot_table/blocks/granite_brick_wall.json
 784e8e808f523bba4efe88fefd6ccab42db157f0 data/blockbox/loot_table/blocks/gray_sky_lantern.json
 bf5efe0d29bf622f1e87aed6a6a0e7e34cca804c data/blockbox/loot_table/blocks/green_sky_lantern.json
 cab1d56e7cf87de2aba7b1a420f113e876dddadf data/blockbox/loot_table/blocks/iron_plate.json
