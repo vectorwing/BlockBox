@@ -29,8 +29,8 @@ public class CarvedSnowBlock extends HorizontalDirectionalBlock
 	@Override
 	protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
 		if (player.isSecondaryUseActive()) {
-			level.playSound(null, pos, SoundEvents.SNOW_BREAK, SoundSource.BLOCKS, 1.0F, 1.0F);
-			level.setBlock(pos, ModBlocks.CARVED_SNOW.get().defaultBlockState(), 11);
+			level.playSound(null, pos, SoundEvents.SNOW_HIT, SoundSource.BLOCKS, 1.0F, 1.0F);
+			level.setBlock(pos, ModBlocks.PACKED_SNOW.get().defaultBlockState(), 11);
 			return InteractionResult.sidedSuccess(level.isClientSide);
 		}
 		return super.useWithoutItem(state, level, pos, player, hitResult);
