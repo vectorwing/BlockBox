@@ -35,7 +35,7 @@ public class SkyLanternItem extends BlockItem
 	@Override
 	public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltip, TooltipFlag isAdvanced) {
 		MutableComponent textEmpty = Component.translatable(BlockBox.MODID + ".tooltip.sky_lantern");
-		tooltip.add(textEmpty.withStyle(ChatFormatting.DARK_GRAY));
+		tooltip.add(textEmpty.withStyle(ChatFormatting.GRAY));
 	}
 
 	public static BlockHitResult getPlayerAimHitResult(Level level, Player player, ClipContext.Fluid fluidMode) {
