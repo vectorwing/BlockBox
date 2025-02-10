@@ -1,7 +1,6 @@
 package vectorwing.blockbox.data.recipe;
 
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
@@ -16,15 +15,11 @@ import vectorwing.blockbox.BlockBox;
 import vectorwing.blockbox.common.registry.ModBlocks;
 import vectorwing.blockbox.common.registry.ModItems;
 import vectorwing.blockbox.common.tag.ModTags;
+import vectorwing.blockbox.data.provider.Recipes;
 
 public class CraftingRecipes
 {
 	public static void register(RecipeOutput output) {
-		// TODO: Move this to its own class.
-		SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModBlocks.CLAY_TILES.get()), RecipeCategory.BUILDING_BLOCKS, ModItems.JAGGED_CLAY_TILES.get(), 0.1F, 200)
-				.unlockedBy("has_clay_tiles", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.CLAY_TILES.get()))
-				.save(output);
-
 		craftBasicBlocks(output);
 		craftTools(output);
 		craftPalisades(output);
@@ -99,12 +94,12 @@ public class CraftingRecipes
 				.requires(ModItems.SOUL_BRAZIER.get())
 				.requires(Items.NETHERRACK)
 				.unlockedBy("has_netherrack", InventoryChangeTrigger.TriggerInstance.hasItems(Items.NETHERRACK))
-				.save(output, nameWithSuffix(itemName(ModItems.BRAZIER.get()), "from_swap"));
+				.save(output, nameWithSuffix(Recipes.itemName(ModItems.BRAZIER.get()), "from_swap"));
 		ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.SOUL_BRAZIER.get())
 				.requires(ModItems.BRAZIER.get())
 				.requires(ItemTags.SOUL_FIRE_BASE_BLOCKS)
 				.unlockedBy("has_soul_sand", InventoryChangeTrigger.TriggerInstance.hasItems(Items.SOUL_SAND, Items.SOUL_SOIL))
-				.save(output, nameWithSuffix(itemName(ModItems.SOUL_BRAZIER.get()), "from_swap"));
+				.save(output, nameWithSuffix(Recipes.itemName(ModItems.SOUL_BRAZIER.get()), "from_swap"));
 		chair(output, ModBlocks.OAK_SEAT.get(), Blocks.OAK_PLANKS);
 		chair(output, ModBlocks.SPRUCE_SEAT.get(), Blocks.SPRUCE_PLANKS);
 		chair(output, ModBlocks.BIRCH_SEAT.get(), Blocks.BIRCH_PLANKS);
@@ -377,6 +372,13 @@ public class CraftingRecipes
 				.unlockedBy("has_obsidian", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.OBSIDIAN))
 				.save(output);
 
+		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ROUGH_GLASS_PANE.get(), 16)
+				.pattern("###")
+				.pattern("###")
+				.define('#', ModBlocks.ROUGH_GLASS.get())
+				.unlockedBy("has_rough_glass", InventoryChangeTrigger.TriggerInstance.hasItems(ModBlocks.ROUGH_GLASS.get()))
+				.save(output);
+
 		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_AMETHYST.get(), 4)
 				.pattern("ss")
 				.pattern("ss")
@@ -422,7 +424,7 @@ public class CraftingRecipes
 				.requires(block)
 				.requires(Items.HONEYCOMB)
 				.unlockedBy("has_copper_block", InventoryChangeTrigger.TriggerInstance.hasItems(block))
-				.save(output, nameWithSuffix(itemName(waxedBlock), "from_honeycomb"));
+				.save(output, nameWithSuffix(Recipes.itemName(waxedBlock), "from_honeycomb"));
 	}
 
 	public static void waxing(RecipeOutput output, ItemLike waxedBlock, ItemLike block, String group) {
@@ -431,7 +433,7 @@ public class CraftingRecipes
 				.requires(Items.HONEYCOMB)
 				.unlockedBy("has_copper_block", InventoryChangeTrigger.TriggerInstance.hasItems(block))
 				.group(group)
-				.save(output, nameWithSuffix(itemName(waxedBlock), "from_honeycomb"));
+				.save(output, nameWithSuffix(Recipes.itemName(waxedBlock), "from_honeycomb"));
 	}
 
 	public static void stairAndSlab(RecipeOutput output, ItemLike stair, ItemLike slab, ItemLike block) {
@@ -471,7 +473,7 @@ public class CraftingRecipes
 				.requires(spikedPalisade)
 				.group("bb_palisades")
 				.unlockedBy("has_matching_log", InventoryChangeTrigger.TriggerInstance.hasItems(log))
-				.save(output, nameWithSuffix(itemName(palisade), "from_spiked"));
+				.save(output, nameWithSuffix(Recipes.itemName(palisade), "from_spiked"));
 		ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, spikedPalisade, 1)
 				.requires(palisade)
 				.group("bb_spiked_palisades")
@@ -499,18 +501,10 @@ public class CraftingRecipes
 	}
 
 	private static ResourceLocation nameDye(ItemLike item) {
-		return ResourceLocation.fromNamespaceAndPath(BlockBox.MODID, "dye_" + itemName(item));
-	}
-
-	private static ResourceLocation customName(String name) {
-		return ResourceLocation.fromNamespaceAndPath(BlockBox.MODID, name);
+		return ResourceLocation.fromNamespaceAndPath(BlockBox.MODID, "dye_" + Recipes.itemName(item));
 	}
 
 	private static ResourceLocation nameWithSuffix(String name, String suffix) {
 		return ResourceLocation.fromNamespaceAndPath(BlockBox.MODID, name + "_" + suffix);
-	}
-
-	private static String itemName(ItemLike itemLike) {
-		return BuiltInRegistries.ITEM.getKey(itemLike.asItem()).getPath();
 	}
 }

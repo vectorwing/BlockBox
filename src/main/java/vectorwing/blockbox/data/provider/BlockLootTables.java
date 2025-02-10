@@ -64,6 +64,9 @@ public class BlockLootTables extends BlockLootSubProvider
 
 		dropSelf(ModBlocks.POLISHED_OBSIDIAN.get());
 
+		dropWhenSilkTouch(ModBlocks.ROUGH_GLASS.get());
+		dropWhenSilkTouch(ModBlocks.ROUGH_GLASS_PANE.get());
+
 		dropSelf(ModBlocks.COPPER_BARS.get());
 		dropSelf(ModBlocks.EXPOSED_COPPER_BARS.get());
 		dropSelf(ModBlocks.WEATHERED_COPPER_BARS.get());

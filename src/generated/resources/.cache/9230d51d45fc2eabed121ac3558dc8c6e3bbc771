@@ -1,4 +1,4 @@
-// 1.21.1	2025-02-09T15:11:28.6568355	Item Models: blockbox
+// 1.21.1	2025-02-10T16:32:23.1158565	Item Models: blockbox
 fca27dcf20ce91e90812b733713a36b943ebfc8b assets/blockbox/models/item/acacia_palisade.json
 56edae35411785995cfa08df92b58e026b257027 assets/blockbox/models/item/acacia_seat.json
 e12842d08f5c4549ec54b5f285ad05e19032d75a assets/blockbox/models/item/andesite_bricks.json
@@ -97,6 +97,8 @@ d821980d86aef9aadb8e0eca83aaae35ab57afe4 assets/blockbox/models/item/red_sandsto
 f542535a48a6bbcaa99173049e7978b6b7ed7fb4 assets/blockbox/models/item/red_sandstone_brick_slab.json
 f524bb5bb8e0f2ef31615bbc2b658fc93c7a8e10 assets/blockbox/models/item/red_sandstone_brick_stairs.json
 7d888133b2c479e78c401402f7c4d588d0e6bc3e assets/blockbox/models/item/red_sky_lantern.json
+7132403593fe40123eb7cab69743ec78cb1f458f assets/blockbox/models/item/rough_glass.json
+963bd76c15f45d36228c1cbe63966202ffb1e7ce assets/blockbox/models/item/rough_glass_pane.json
 2a2e0a194dbbc56b4dc88d57e82077ddd59aea40 assets/blockbox/models/item/sandstone_bricks.json
 5f1bd13483ebdc027550ae75cc8b9af157e065f8 assets/blockbox/models/item/sandstone_brick_slab.json
 da55aee7b0e301b65f64c354085b2ae61ab44ba2 assets/blockbox/models/item/sandstone_brick_stairs.json

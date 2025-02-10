@@ -59,6 +59,9 @@
 
   "block.blockbox.polished_obsidian": "Polished Obsidian",
 
+  "block.blockbox.rough_glass": "Rough Glass",
+  "block.blockbox.rough_glass_pane": "Rough Glass Pane",
+
   "block.blockbox.copper_bars": "Copper Bars",
   "block.blockbox.exposed_copper_bars": "Exposed Copper Bars",
   "block.blockbox.weathered_copper_bars": "Weathered Copper Bars",
@@ -204,6 +207,9 @@
   "item.blockbox.packed_ice_brick_wall": "Packed Ice Brick Wall",
 
   "item.blockbox.polished_obsidian": "Polished Obsidian",
+
+  "item.blockbox.rough_glass": "Rough Glass",
+  "item.blockbox.rough_glass_pane": "Rough Glass Pane",
 
   "item.blockbox.copper_bars": "Copper Bars",
   "item.blockbox.exposed_copper_bars": "Exposed Copper Bars",

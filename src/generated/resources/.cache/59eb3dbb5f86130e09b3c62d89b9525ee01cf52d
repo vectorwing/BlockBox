@@ -1,4 +1,4 @@
-// 1.21.1	2025-02-09T15:11:28.6608363	Loot Tables
+// 1.21.1	2025-02-10T16:32:23.1198565	Loot Tables
 21d023bbc6803113198cdc6b2685f08f98d6e6e5 data/blockbox/loot_table/blocks/acacia_palisade.json
 efe77edd4c80c7ac1a0560a0e8e7cc2c6f8add76 data/blockbox/loot_table/blocks/acacia_seat.json
 ad771d1a04b0f35ab39a1810e91a82b724464f7f data/blockbox/loot_table/blocks/andesite_bricks.json
@@ -96,6 +96,8 @@ daf802972b790415dce94dce701bd80a4f34aff9 data/blockbox/loot_table/blocks/polishe
 610a22b2cde4dec733f85ee675bc450dd594d065 data/blockbox/loot_table/blocks/red_sandstone_brick_slab.json
 b86ddcd1203418cf5cdbdb0fb2078fc2943b46f8 data/blockbox/loot_table/blocks/red_sandstone_brick_stairs.json
 606573185c8ac494ab14b6a1ba813be758a700f3 data/blockbox/loot_table/blocks/red_sky_lantern.json
+541d16fd48c9a440b88b148c2ce86e5053feb028 data/blockbox/loot_table/blocks/rough_glass.json
+1e6305626d9e5763b0c6a9cdfebf263d23e856d9 data/blockbox/loot_table/blocks/rough_glass_pane.json
 8cba02ca751bf7e70a179a7e578e89d737833589 data/blockbox/loot_table/blocks/sandstone_bricks.json
 cad7f5e96682f7015f73ca74b465972d6bea26ea data/blockbox/loot_table/blocks/sandstone_brick_slab.json
 7f246c78144a04ce65d4b73a46c1960fccceaa0f data/blockbox/loot_table/blocks/sandstone_brick_stairs.json

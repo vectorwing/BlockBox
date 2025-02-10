@@ -64,6 +64,11 @@ public class BlockStates extends BlockStateProvider
 
 		simpleBlock(ModBlocks.POLISHED_OBSIDIAN.get());
 
+		String roughGlass = name(ModBlocks.ROUGH_GLASS.get());
+		simpleBlock(ModBlocks.ROUGH_GLASS.get(), models().cubeAll(roughGlass, resourceBlock(roughGlass)).renderType(ResourceLocation.parse(RenderType.TRANSLUCENT.name)));
+
+		paneBlockWithRenderType((IronBarsBlock) ModBlocks.ROUGH_GLASS_PANE.get(), resourceBlock(roughGlass), resourceMcBlock("glass_pane_top"), RenderType.TRANSLUCENT.name);
+
 		simpleBlock(ModBlocks.IRON_PLATE.get());
 		blockWithStairAndSlab(ModBlocks.IRON_TREAD_PLATE.get(), ModBlocks.IRON_TREAD_PLATE_STAIRS.get(), ModBlocks.IRON_TREAD_PLATE_SLAB.get());
 		blockWithStairAndSlab(ModBlocks.CORRUGATED_IRON_PLATE.get(), ModBlocks.CORRUGATED_IRON_PLATE_STAIRS.get(), ModBlocks.CORRUGATED_IRON_PLATE_SLAB.get());

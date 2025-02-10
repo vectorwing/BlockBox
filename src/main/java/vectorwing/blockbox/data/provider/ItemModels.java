@@ -83,6 +83,9 @@ public class ItemModels extends ItemModelProvider
 		blockBasedOnOtherModel(ModItems.WAXED_OXIDIZED_COPPER_PILLAR.get(), ModItems.OXIDIZED_COPPER_PILLAR.get());
 		items.remove(ModItems.WAXED_OXIDIZED_COPPER_PILLAR.get());
 
+		itemGeneratedModel(ModItems.ROUGH_GLASS_PANE.get(), resourceBlock(itemName(ModItems.ROUGH_GLASS.get())));
+		items.remove(ModItems.ROUGH_GLASS_PANE.get());
+		
 		// Blocks with a flat block texture for an item
 		Set<Item> flatBlockItems = Sets.newHashSet(
 				ModItems.COPPER_BARS.get(),
