@@ -16,6 +16,28 @@ import vectorwing.blockbox.common.registry.ModItems;
 public class StonecuttingRecipes
 {
 	public static void register(RecipeOutput output) {
+		stonecutting(output, Items.POLISHED_GRANITE, ModItems.GRANITE_BRICKS.get());
+		stonecutting(output, Items.POLISHED_GRANITE, ModItems.GRANITE_BRICK_STAIRS.get());
+		stonecutting(output, Items.POLISHED_GRANITE, ModItems.GRANITE_BRICK_SLAB.get(), 2);
+		stonecutting(output, Items.POLISHED_GRANITE, ModItems.GRANITE_BRICK_WALL.get());
+		stonecutting(output, ModItems.GRANITE_BRICKS.get(), ModItems.GRANITE_BRICK_STAIRS.get());
+		stonecutting(output, ModItems.GRANITE_BRICKS.get(), ModItems.GRANITE_BRICK_SLAB.get(), 2);
+		stonecutting(output, ModItems.GRANITE_BRICKS.get(), ModItems.GRANITE_BRICK_WALL.get());
+		stonecutting(output, Items.POLISHED_DIORITE, ModItems.DIORITE_BRICKS.get());
+		stonecutting(output, Items.POLISHED_DIORITE, ModItems.DIORITE_BRICK_STAIRS.get());
+		stonecutting(output, Items.POLISHED_DIORITE, ModItems.DIORITE_BRICK_SLAB.get(), 2);
+		stonecutting(output, Items.POLISHED_DIORITE, ModItems.DIORITE_BRICK_WALL.get());
+		stonecutting(output, ModItems.DIORITE_BRICKS.get(), ModItems.DIORITE_BRICK_STAIRS.get());
+		stonecutting(output, ModItems.DIORITE_BRICKS.get(), ModItems.DIORITE_BRICK_SLAB.get(), 2);
+		stonecutting(output, ModItems.DIORITE_BRICKS.get(), ModItems.DIORITE_BRICK_WALL.get());
+		stonecutting(output, Items.POLISHED_ANDESITE, ModItems.ANDESITE_BRICKS.get());
+		stonecutting(output, Items.POLISHED_ANDESITE, ModItems.ANDESITE_BRICK_STAIRS.get());
+		stonecutting(output, Items.POLISHED_ANDESITE, ModItems.ANDESITE_BRICK_SLAB.get(), 2);
+		stonecutting(output, Items.POLISHED_ANDESITE, ModItems.ANDESITE_BRICK_WALL.get());
+		stonecutting(output, ModItems.ANDESITE_BRICKS.get(), ModItems.ANDESITE_BRICK_STAIRS.get());
+		stonecutting(output, ModItems.ANDESITE_BRICKS.get(), ModItems.ANDESITE_BRICK_SLAB.get(), 2);
+		stonecutting(output, ModItems.ANDESITE_BRICKS.get(), ModItems.ANDESITE_BRICK_WALL.get());
+
 		stonecutting(output, Items.SANDSTONE, ModItems.SANDSTONE_BRICKS.get());
 		stonecutting(output, Items.SANDSTONE, ModItems.SANDSTONE_BRICK_STAIRS.get());
 		stonecutting(output, Items.SANDSTONE, ModItems.SANDSTONE_BRICK_SLAB.get(), 2);
