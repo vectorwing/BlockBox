@@ -1,25 +1,12 @@
+# The Block Box
+A collection of assorted building blocks, furniture and decorations!
 
-Installation information
-=======
+### Overview
 
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions provided by [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+The Block Box is exactly what the name says - a box full of blocks!
 
-Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
+Here you'll find a variety of block sets, furniture, light sources and decorations. Ever wanted to build an opulent mansion with gold and lapis? How about an industrial complex with iron and copper? Or maybe you just want to sit down in a chair and watch the sky lanterns fly? This mod has got you covered!
 
-If at any point you are missing libraries in your IDE, or you've run into problems you can
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
+The Block Box aims to extend the block palette of Minecraft, adding blocks for themes and use cases that aren't well-covered by existing blocks. Also, the mod does not generate anything in your world - you can just drop it in at any time!
 
-Mapping Names:
-============
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
-
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
+Take a look around and see if anything fits your next build!
