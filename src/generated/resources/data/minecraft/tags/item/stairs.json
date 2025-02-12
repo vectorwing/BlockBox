@@ -1,0 +1,19 @@
+{
+  "values": [
+    "blockbox:granite_brick_stairs",
+    "blockbox:diorite_brick_stairs",
+    "blockbox:andesite_brick_stairs",
+    "blockbox:sandstone_brick_stairs",
+    "blockbox:red_sandstone_brick_stairs",
+    "blockbox:clay_tile_stairs",
+    "blockbox:packed_ice_brick_stairs",
+    "blockbox:snow_brick_stairs",
+    "blockbox:iron_tread_plate_stairs",
+    "blockbox:corrugated_iron_plate_stairs",
+    "blockbox:golden_brick_stairs",
+    "blockbox:cut_amethyst_stairs",
+    "blockbox:chiseled_amethyst_stairs",
+    "blockbox:lapis_lazuli_brick_stairs",
+    "blockbox:lapis_lazuli_mosaic_stairs"
+  ]
+}

@@ -56,12 +56,55 @@ public class ItemTags extends ItemTagsProvider
 	}
 
 	private void registerMinecraftTags() {
-		tag(net.minecraft.tags.ItemTags.DOORS)
-				.add(ModItems.IRON_PLATE_DOOR.get())
-				.add(ModItems.GOLDEN_DOOR.get());
-		tag(net.minecraft.tags.ItemTags.TRAPDOORS)
-				.add(ModItems.IRON_PLATE_TRAPDOOR.get())
-				.add(ModItems.GOLDEN_TRAPDOOR.get());
+		tag(net.minecraft.tags.ItemTags.STAIRS).add(
+				ModItems.GRANITE_BRICK_STAIRS.get(),
+				ModItems.DIORITE_BRICK_STAIRS.get(),
+				ModItems.ANDESITE_BRICK_STAIRS.get(),
+				ModItems.SANDSTONE_BRICK_STAIRS.get(),
+				ModItems.RED_SANDSTONE_BRICK_STAIRS.get(),
+				ModItems.CLAY_TILE_STAIRS.get(),
+				ModItems.PACKED_ICE_BRICK_STAIRS.get(),
+				ModItems.SNOW_BRICK_STAIRS.get(),
+				ModItems.IRON_TREAD_PLATE_STAIRS.get(),
+				ModItems.CORRUGATED_IRON_PLATE_STAIRS.get(),
+				ModItems.GOLDEN_BRICK_STAIRS.get(),
+				ModItems.CUT_AMETHYST_STAIRS.get(),
+				ModItems.CHISELED_AMETHYST_STAIRS.get(),
+				ModItems.LAPIS_LAZULI_BRICK_STAIRS.get(),
+				ModItems.LAPIS_LAZULI_MOSAIC_STAIRS.get()
+		);
+		tag(net.minecraft.tags.ItemTags.SLABS).add(
+				ModItems.GRANITE_BRICK_SLAB.get(),
+				ModItems.DIORITE_BRICK_SLAB.get(),
+				ModItems.ANDESITE_BRICK_SLAB.get(),
+				ModItems.SANDSTONE_BRICK_SLAB.get(),
+				ModItems.RED_SANDSTONE_BRICK_SLAB.get(),
+				ModItems.CLAY_TILE_SLAB.get(),
+				ModItems.PACKED_ICE_BRICK_SLAB.get(),
+				ModItems.SNOW_BRICK_SLAB.get(),
+				ModItems.IRON_TREAD_PLATE_SLAB.get(),
+				ModItems.CORRUGATED_IRON_PLATE_SLAB.get(),
+				ModItems.GOLDEN_BRICK_SLAB.get(),
+				ModItems.CUT_AMETHYST_SLAB.get(),
+				ModItems.CHISELED_AMETHYST_SLAB.get(),
+				ModItems.LAPIS_LAZULI_BRICK_SLAB.get(),
+				ModItems.LAPIS_LAZULI_MOSAIC_SLAB.get()
+		);
+		tag(net.minecraft.tags.ItemTags.DOORS).add(
+				ModItems.IRON_PLATE_DOOR.get(),
+				ModItems.GOLDEN_DOOR.get()
+		);
+		tag(net.minecraft.tags.ItemTags.TRAPDOORS).add(
+				ModItems.IRON_PLATE_TRAPDOOR.get(),
+				ModItems.GOLDEN_TRAPDOOR.get()
+		);
+		tag(net.minecraft.tags.ItemTags.WALLS).add(
+				ModItems.GRANITE_BRICK_WALL.get(),
+				ModItems.DIORITE_BRICK_WALL.get(),
+				ModItems.ANDESITE_BRICK_WALL.get(),
+				ModItems.SNOW_BRICK_WALL.get(),
+				ModItems.PACKED_ICE_BRICK_WALL.get()
+		);
 		tag(net.minecraft.tags.ItemTags.PIGLIN_LOVED).addTag(ModTags.GOLDEN_BLOCK_ITEMS);
 	}
 }
