@@ -41,12 +41,18 @@ public class StonecuttingRecipes
 		stonecutting(output, Items.SANDSTONE, ModItems.SANDSTONE_BRICKS.get());
 		stonecutting(output, Items.SANDSTONE, ModItems.SANDSTONE_BRICK_STAIRS.get());
 		stonecutting(output, Items.SANDSTONE, ModItems.SANDSTONE_BRICK_SLAB.get(), 2);
+		stonecutting(output, Items.CUT_SANDSTONE, ModItems.SANDSTONE_BRICKS.get());
+		stonecutting(output, Items.CUT_SANDSTONE, ModItems.SANDSTONE_BRICK_STAIRS.get());
+		stonecutting(output, Items.CUT_SANDSTONE, ModItems.SANDSTONE_BRICK_SLAB.get(), 2);
 		stonecutting(output, ModItems.SANDSTONE_BRICKS.get(), ModItems.SANDSTONE_BRICK_STAIRS.get());
 		stonecutting(output, ModItems.SANDSTONE_BRICKS.get(), ModItems.SANDSTONE_BRICK_SLAB.get(), 2);
 
 		stonecutting(output, Items.RED_SANDSTONE, ModItems.RED_SANDSTONE_BRICKS.get());
 		stonecutting(output, Items.RED_SANDSTONE, ModItems.RED_SANDSTONE_BRICK_STAIRS.get());
 		stonecutting(output, Items.RED_SANDSTONE, ModItems.RED_SANDSTONE_BRICK_SLAB.get(), 2);
+		stonecutting(output, Items.CUT_RED_SANDSTONE, ModItems.RED_SANDSTONE_BRICKS.get());
+		stonecutting(output, Items.CUT_RED_SANDSTONE, ModItems.RED_SANDSTONE_BRICK_STAIRS.get());
+		stonecutting(output, Items.CUT_RED_SANDSTONE, ModItems.RED_SANDSTONE_BRICK_SLAB.get(), 2);
 		stonecutting(output, ModItems.RED_SANDSTONE_BRICKS.get(), ModItems.RED_SANDSTONE_BRICK_STAIRS.get());
 		stonecutting(output, ModItems.RED_SANDSTONE_BRICKS.get(), ModItems.RED_SANDSTONE_BRICK_SLAB.get(), 2);
 

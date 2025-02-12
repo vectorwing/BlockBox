@@ -29,22 +29,38 @@ public class BlockTags extends BlockTagsProvider
 
 	private void registerMinecraftTags() {
 		tag(net.minecraft.tags.BlockTags.STAIRS).add(
+				ModBlocks.GRANITE_BRICK_STAIRS.get(),
+				ModBlocks.DIORITE_BRICK_STAIRS.get(),
+				ModBlocks.ANDESITE_BRICK_STAIRS.get(),
 				ModBlocks.SANDSTONE_BRICK_STAIRS.get(),
 				ModBlocks.RED_SANDSTONE_BRICK_STAIRS.get(),
 				ModBlocks.CLAY_TILE_STAIRS.get(),
+				ModBlocks.PACKED_ICE_BRICK_STAIRS.get(),
+				ModBlocks.SNOW_BRICK_STAIRS.get(),
 				ModBlocks.IRON_TREAD_PLATE_STAIRS.get(),
+				ModBlocks.CORRUGATED_IRON_PLATE_STAIRS.get(),
 				ModBlocks.GOLDEN_BRICK_STAIRS.get(),
 				ModBlocks.CUT_AMETHYST_STAIRS.get(),
-				ModBlocks.CHISELED_AMETHYST_STAIRS.get()
+				ModBlocks.CHISELED_AMETHYST_STAIRS.get(),
+				ModBlocks.LAPIS_LAZULI_BRICK_STAIRS.get(),
+				ModBlocks.LAPIS_LAZULI_MOSAIC_STAIRS.get()
 		);
 		tag(net.minecraft.tags.BlockTags.SLABS).add(
+				ModBlocks.GRANITE_BRICK_SLAB.get(),
+				ModBlocks.DIORITE_BRICK_SLAB.get(),
+				ModBlocks.ANDESITE_BRICK_SLAB.get(),
 				ModBlocks.SANDSTONE_BRICK_SLAB.get(),
 				ModBlocks.RED_SANDSTONE_BRICK_SLAB.get(),
 				ModBlocks.CLAY_TILE_SLAB.get(),
+				ModBlocks.PACKED_ICE_BRICK_SLAB.get(),
+				ModBlocks.SNOW_BRICK_SLAB.get(),
 				ModBlocks.IRON_TREAD_PLATE_SLAB.get(),
+				ModBlocks.CORRUGATED_IRON_PLATE_SLAB.get(),
 				ModBlocks.GOLDEN_BRICK_SLAB.get(),
 				ModBlocks.CUT_AMETHYST_SLAB.get(),
-				ModBlocks.CHISELED_AMETHYST_SLAB.get()
+				ModBlocks.CHISELED_AMETHYST_SLAB.get(),
+				ModBlocks.LAPIS_LAZULI_BRICK_SLAB.get(),
+				ModBlocks.LAPIS_LAZULI_MOSAIC_SLAB.get()
 		);
 		tag(net.minecraft.tags.BlockTags.DOORS).add(
 				ModBlocks.IRON_PLATE_DOOR.get(),
@@ -150,11 +166,6 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.IRON_PLATE_TRAPDOOR.get()
 		);
 
-		tag(ModTags.BRAZIERS).add(
-				ModBlocks.BRAZIER.get(),
-				ModBlocks.SOUL_BRAZIER.get()
-		);
-
 		tag(ModTags.GOLDEN_BLOCKS).add(
 				ModBlocks.CHISELED_GOLD.get(),
 				ModBlocks.GOLDEN_TILES.get(),
@@ -165,6 +176,11 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.GOLDEN_DOOR.get(),
 				ModBlocks.GOLDEN_TRAPDOOR.get(),
 				ModBlocks.GOLDEN_BARS.get()
+		);
+
+		tag(ModTags.BRAZIERS).add(
+				ModBlocks.BRAZIER.get(),
+				ModBlocks.SOUL_BRAZIER.get()
 		);
 	}
 
@@ -288,23 +304,32 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.SNOW_BRICK_WALL.get()
 		);
 		tag(net.minecraft.tags.BlockTags.NEEDS_STONE_TOOL).add(
-				ModBlocks.COPPER_BARS.get(),
-				ModBlocks.EXPOSED_COPPER_BARS.get(),
-				ModBlocks.WEATHERED_COPPER_BARS.get(),
-				ModBlocks.OXIDIZED_COPPER_BARS.get(),
-				ModBlocks.WAXED_COPPER_BARS.get(),
-				ModBlocks.WAXED_EXPOSED_COPPER_BARS.get(),
-				ModBlocks.WAXED_WEATHERED_COPPER_BARS.get(),
-				ModBlocks.WAXED_OXIDIZED_COPPER_BARS.get(),
-				ModBlocks.COPPER_PILLAR.get(),
-				ModBlocks.EXPOSED_COPPER_PILLAR.get(),
-				ModBlocks.WEATHERED_COPPER_PILLAR.get(),
-				ModBlocks.OXIDIZED_COPPER_PILLAR.get(),
-				ModBlocks.WAXED_COPPER_PILLAR.get(),
-				ModBlocks.WAXED_EXPOSED_COPPER_PILLAR.get(),
-				ModBlocks.WAXED_WEATHERED_COPPER_PILLAR.get(),
-				ModBlocks.WAXED_OXIDIZED_COPPER_PILLAR.get()
-		);
+						ModBlocks.COPPER_BARS.get(),
+						ModBlocks.EXPOSED_COPPER_BARS.get(),
+						ModBlocks.WEATHERED_COPPER_BARS.get(),
+						ModBlocks.OXIDIZED_COPPER_BARS.get(),
+						ModBlocks.WAXED_COPPER_BARS.get(),
+						ModBlocks.WAXED_EXPOSED_COPPER_BARS.get(),
+						ModBlocks.WAXED_WEATHERED_COPPER_BARS.get(),
+						ModBlocks.WAXED_OXIDIZED_COPPER_BARS.get(),
+						ModBlocks.COPPER_PILLAR.get(),
+						ModBlocks.EXPOSED_COPPER_PILLAR.get(),
+						ModBlocks.WEATHERED_COPPER_PILLAR.get(),
+						ModBlocks.OXIDIZED_COPPER_PILLAR.get(),
+						ModBlocks.WAXED_COPPER_PILLAR.get(),
+						ModBlocks.WAXED_EXPOSED_COPPER_PILLAR.get(),
+						ModBlocks.WAXED_WEATHERED_COPPER_PILLAR.get(),
+						ModBlocks.WAXED_OXIDIZED_COPPER_PILLAR.get(),
+						ModBlocks.LAPIS_LAZULI_BRICKS.get(),
+						ModBlocks.LAPIS_LAZULI_BRICK_STAIRS.get(),
+						ModBlocks.LAPIS_LAZULI_BRICK_SLAB.get(),
+						ModBlocks.LAPIS_LAZULI_MOSAIC.get(),
+						ModBlocks.LAPIS_LAZULI_MOSAIC_STAIRS.get(),
+						ModBlocks.LAPIS_LAZULI_MOSAIC_SLAB.get(),
+						ModBlocks.WAXED_OXIDIZED_COPPER_PILLAR.get()
+				)
+				.addTag(ModTags.IRON_PLATE_BLOCKS);
+		tag(net.minecraft.tags.BlockTags.NEEDS_IRON_TOOL).addTag(ModTags.GOLDEN_BLOCKS);
 		tag(net.minecraft.tags.BlockTags.NEEDS_DIAMOND_TOOL).add(ModBlocks.POLISHED_OBSIDIAN.get());
 	}
 }

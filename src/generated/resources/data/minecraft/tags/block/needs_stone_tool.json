@@ -15,6 +15,14 @@
     "blockbox:waxed_copper_pillar",
     "blockbox:waxed_exposed_copper_pillar",
     "blockbox:waxed_weathered_copper_pillar",
-    "blockbox:waxed_oxidized_copper_pillar"
+    "blockbox:waxed_oxidized_copper_pillar",
+    "blockbox:lapis_lazuli_bricks",
+    "blockbox:lapis_lazuli_brick_stairs",
+    "blockbox:lapis_lazuli_brick_slab",
+    "blockbox:lapis_lazuli_mosaic",
+    "blockbox:lapis_lazuli_mosaic_stairs",
+    "blockbox:lapis_lazuli_mosaic_slab",
+    "blockbox:waxed_oxidized_copper_pillar",
+    "#blockbox:iron_plate_blocks"
   ]
 }
