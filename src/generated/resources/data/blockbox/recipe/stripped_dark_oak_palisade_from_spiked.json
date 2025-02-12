@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "bb_palisades",
+  "ingredients": [
+    {
+      "item": "blockbox:stripped_spiked_dark_oak_palisade"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "blockbox:stripped_dark_oak_palisade"
+  }
+}

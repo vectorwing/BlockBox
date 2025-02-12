@@ -48,6 +48,27 @@ public class BlockLootTables extends BlockLootSubProvider
 		dropSelf(ModBlocks.WARPED_PALISADE.get());
 		dropSelf(ModBlocks.SPIKED_WARPED_PALISADE.get());
 
+		dropSelf(ModBlocks.STRIPPED_OAK_PALISADE.get());
+		dropSelf(ModBlocks.STRIPPED_SPIKED_OAK_PALISADE.get());
+		dropSelf(ModBlocks.STRIPPED_SPRUCE_PALISADE.get());
+		dropSelf(ModBlocks.STRIPPED_SPIKED_SPRUCE_PALISADE.get());
+		dropSelf(ModBlocks.STRIPPED_BIRCH_PALISADE.get());
+		dropSelf(ModBlocks.STRIPPED_SPIKED_BIRCH_PALISADE.get());
+		dropSelf(ModBlocks.STRIPPED_JUNGLE_PALISADE.get());
+		dropSelf(ModBlocks.STRIPPED_SPIKED_JUNGLE_PALISADE.get());
+		dropSelf(ModBlocks.STRIPPED_ACACIA_PALISADE.get());
+		dropSelf(ModBlocks.STRIPPED_SPIKED_ACACIA_PALISADE.get());
+		dropSelf(ModBlocks.STRIPPED_DARK_OAK_PALISADE.get());
+		dropSelf(ModBlocks.STRIPPED_SPIKED_DARK_OAK_PALISADE.get());
+		dropSelf(ModBlocks.STRIPPED_MANGROVE_PALISADE.get());
+		dropSelf(ModBlocks.STRIPPED_SPIKED_MANGROVE_PALISADE.get());
+		dropSelf(ModBlocks.STRIPPED_CHERRY_PALISADE.get());
+		dropSelf(ModBlocks.STRIPPED_SPIKED_CHERRY_PALISADE.get());
+		dropSelf(ModBlocks.STRIPPED_CRIMSON_PALISADE.get());
+		dropSelf(ModBlocks.STRIPPED_SPIKED_CRIMSON_PALISADE.get());
+		dropSelf(ModBlocks.STRIPPED_WARPED_PALISADE.get());
+		dropSelf(ModBlocks.STRIPPED_SPIKED_WARPED_PALISADE.get());
+
 		addBlockStairSlab(ModBlocks.SANDSTONE_BRICKS.get(), ModBlocks.SANDSTONE_BRICK_STAIRS.get(), ModBlocks.SANDSTONE_BRICK_SLAB.get());
 		addBlockStairSlab(ModBlocks.RED_SANDSTONE_BRICKS.get(), ModBlocks.RED_SANDSTONE_BRICK_STAIRS.get(), ModBlocks.RED_SANDSTONE_BRICK_SLAB.get());
 

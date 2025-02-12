@@ -124,6 +124,17 @@ public class CraftingRecipes
 		palisade(output, ModBlocks.CHERRY_PALISADE.get(), ModBlocks.SPIKED_CHERRY_PALISADE.get(), Blocks.CHERRY_LOG);
 		palisade(output, ModBlocks.CRIMSON_PALISADE.get(), ModBlocks.SPIKED_CRIMSON_PALISADE.get(), Blocks.CRIMSON_STEM);
 		palisade(output, ModBlocks.WARPED_PALISADE.get(), ModBlocks.SPIKED_WARPED_PALISADE.get(), Blocks.WARPED_STEM);
+
+		palisade(output, ModBlocks.STRIPPED_OAK_PALISADE.get(), ModBlocks.STRIPPED_SPIKED_OAK_PALISADE.get(), Blocks.STRIPPED_OAK_LOG);
+		palisade(output, ModBlocks.STRIPPED_SPRUCE_PALISADE.get(), ModBlocks.STRIPPED_SPIKED_SPRUCE_PALISADE.get(), Blocks.STRIPPED_SPRUCE_LOG);
+		palisade(output, ModBlocks.STRIPPED_BIRCH_PALISADE.get(), ModBlocks.STRIPPED_SPIKED_BIRCH_PALISADE.get(), Blocks.STRIPPED_BIRCH_LOG);
+		palisade(output, ModBlocks.STRIPPED_JUNGLE_PALISADE.get(), ModBlocks.STRIPPED_SPIKED_JUNGLE_PALISADE.get(), Blocks.STRIPPED_JUNGLE_LOG);
+		palisade(output, ModBlocks.STRIPPED_ACACIA_PALISADE.get(), ModBlocks.STRIPPED_SPIKED_ACACIA_PALISADE.get(), Blocks.STRIPPED_ACACIA_LOG);
+		palisade(output, ModBlocks.STRIPPED_DARK_OAK_PALISADE.get(), ModBlocks.STRIPPED_SPIKED_DARK_OAK_PALISADE.get(), Blocks.STRIPPED_DARK_OAK_LOG);
+		palisade(output, ModBlocks.STRIPPED_MANGROVE_PALISADE.get(), ModBlocks.STRIPPED_SPIKED_MANGROVE_PALISADE.get(), Blocks.STRIPPED_MANGROVE_LOG);
+		palisade(output, ModBlocks.STRIPPED_CHERRY_PALISADE.get(), ModBlocks.STRIPPED_SPIKED_CHERRY_PALISADE.get(), Blocks.STRIPPED_CHERRY_LOG);
+		palisade(output, ModBlocks.STRIPPED_CRIMSON_PALISADE.get(), ModBlocks.STRIPPED_SPIKED_CRIMSON_PALISADE.get(), Blocks.STRIPPED_CRIMSON_STEM);
+		palisade(output, ModBlocks.STRIPPED_WARPED_PALISADE.get(), ModBlocks.STRIPPED_SPIKED_WARPED_PALISADE.get(), Blocks.STRIPPED_WARPED_STEM);
 	}
 
 	private static void craftIronPlateBlocks(RecipeOutput output) {

@@ -4,13 +4,16 @@ import com.mojang.serialization.MapCodec;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CrossCollisionBlock;
+import net.minecraft.world.level.block.IronBarsBlock;
 import net.minecraft.world.level.block.SimpleWaterloggedBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -20,10 +23,14 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.neoforged.neoforge.common.ItemAbilities;
+import net.neoforged.neoforge.common.ItemAbility;
 import vectorwing.blockbox.common.registry.ModDamageTypes;
 import vectorwing.blockbox.common.tag.ModTags;
 
+import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.function.Supplier;
 
 @ParametersAreNonnullByDefault
 @MethodsReturnNonnullByDefault
@@ -33,14 +40,37 @@ public class SpikedPalisadeBlock extends CrossCollisionBlock implements SimpleWa
 
 	protected static final VoxelShape SPIKE_SHAPE = Block.box(4.0D, 8.0D, 4.0D, 12.0D, 16.0D, 12.0D);
 
+	public final Supplier<Block> strippedForm;
+
 	public SpikedPalisadeBlock(Properties properties) {
+		this(null, properties);
+	}
+
+	public SpikedPalisadeBlock(@Nullable Supplier<Block> strippedForm, Properties properties) {
 		super(4.0F, 4.0F, 8.0F, 8.0F, 8.0F, properties);
+		this.strippedForm = strippedForm;
 		this.registerDefaultState(this.stateDefinition.any()
 				.setValue(NORTH, false)
 				.setValue(EAST, false)
 				.setValue(SOUTH, false)
 				.setValue(WEST, false)
 				.setValue(WATERLOGGED, false));
+	}
+
+	@Override
+	public BlockState getToolModifiedState(BlockState state, UseOnContext context, ItemAbility itemAbility, boolean simulate) {
+		if (strippedForm == null) {
+			return null;
+		}
+		if (itemAbility == ItemAbilities.AXE_STRIP) {
+			return strippedForm.get().defaultBlockState()
+					.setValue(NORTH, state.getValue(NORTH))
+					.setValue(EAST, state.getValue(EAST))
+					.setValue(SOUTH, state.getValue(SOUTH))
+					.setValue(WEST, state.getValue(WEST))
+					.setValue(WATERLOGGED, state.getValue(WATERLOGGED));
+		}
+		return null;
 	}
 
 	protected void entityInside(BlockState state, Level level, BlockPos pos, Entity entity) {
@@ -90,7 +120,11 @@ public class SpikedPalisadeBlock extends CrossCollisionBlock implements SimpleWa
 	}
 
 	public boolean connectsTo(BlockState state, boolean isSideSolid, Direction direction) {
-		return !isExceptionForConnection(state) && isSideSolid || state.is(ModTags.PALISADES) || state.is(ModTags.SPIKED_PALISADES);
+		return !isExceptionForConnection(state) && isSideSolid
+				|| state.is(ModTags.PALISADES)
+				|| state.is(ModTags.SPIKED_PALISADES)
+				|| state.is(BlockTags.WALLS)
+				|| state.getBlock() instanceof IronBarsBlock;
 	}
 
 	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {

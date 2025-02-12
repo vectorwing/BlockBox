@@ -10,6 +10,7 @@ import vectorwing.blockbox.common.registry.ModBlocks;
 
 import java.util.concurrent.CompletableFuture;
 
+@SuppressWarnings("deprecation")
 public class DataMaps extends DataMapProvider
 {
 	public DataMaps(PackOutput packOutput, CompletableFuture<HolderLookup.Provider> lookupProvider) {

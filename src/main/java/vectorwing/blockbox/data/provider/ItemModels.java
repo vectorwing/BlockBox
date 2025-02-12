@@ -51,6 +51,27 @@ public class ItemModels extends ItemModelProvider
 		palisadeModel(ModItems.WARPED_PALISADE.get(), items);
 		palisadeModel(ModItems.SPIKED_WARPED_PALISADE.get(), items);
 
+		palisadeModel(ModItems.STRIPPED_OAK_PALISADE.get(), items);
+		palisadeModel(ModItems.STRIPPED_SPIKED_OAK_PALISADE.get(), items);
+		palisadeModel(ModItems.STRIPPED_SPRUCE_PALISADE.get(), items);
+		palisadeModel(ModItems.STRIPPED_SPIKED_SPRUCE_PALISADE.get(), items);
+		palisadeModel(ModItems.STRIPPED_BIRCH_PALISADE.get(), items);
+		palisadeModel(ModItems.STRIPPED_SPIKED_BIRCH_PALISADE.get(), items);
+		palisadeModel(ModItems.STRIPPED_JUNGLE_PALISADE.get(), items);
+		palisadeModel(ModItems.STRIPPED_SPIKED_JUNGLE_PALISADE.get(), items);
+		palisadeModel(ModItems.STRIPPED_ACACIA_PALISADE.get(), items);
+		palisadeModel(ModItems.STRIPPED_SPIKED_ACACIA_PALISADE.get(), items);
+		palisadeModel(ModItems.STRIPPED_DARK_OAK_PALISADE.get(), items);
+		palisadeModel(ModItems.STRIPPED_SPIKED_DARK_OAK_PALISADE.get(), items);
+		palisadeModel(ModItems.STRIPPED_MANGROVE_PALISADE.get(), items);
+		palisadeModel(ModItems.STRIPPED_SPIKED_MANGROVE_PALISADE.get(), items);
+		palisadeModel(ModItems.STRIPPED_CHERRY_PALISADE.get(), items);
+		palisadeModel(ModItems.STRIPPED_SPIKED_CHERRY_PALISADE.get(), items);
+		palisadeModel(ModItems.STRIPPED_CRIMSON_PALISADE.get(), items);
+		palisadeModel(ModItems.STRIPPED_SPIKED_CRIMSON_PALISADE.get(), items);
+		palisadeModel(ModItems.STRIPPED_WARPED_PALISADE.get(), items);
+		palisadeModel(ModItems.STRIPPED_SPIKED_WARPED_PALISADE.get(), items);
+
 		trapdoorModel(ModItems.IRON_PLATE_TRAPDOOR.get(), items);
 		trapdoorModel(ModItems.GOLDEN_TRAPDOOR.get(), items);
 

@@ -9,6 +9,16 @@
     "blockbox:mangrove_palisade",
     "blockbox:cherry_palisade",
     "blockbox:crimson_palisade",
-    "blockbox:warped_palisade"
+    "blockbox:warped_palisade",
+    "blockbox:stripped_oak_palisade",
+    "blockbox:stripped_spruce_palisade",
+    "blockbox:stripped_birch_palisade",
+    "blockbox:stripped_jungle_palisade",
+    "blockbox:stripped_acacia_palisade",
+    "blockbox:stripped_dark_oak_palisade",
+    "blockbox:stripped_mangrove_palisade",
+    "blockbox:stripped_cherry_palisade",
+    "blockbox:stripped_crimson_palisade",
+    "blockbox:stripped_warped_palisade"
   ]
 }

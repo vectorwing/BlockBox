@@ -55,12 +55,13 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.GOLDEN_TRAPDOOR.get()
 		);
 		tag(net.minecraft.tags.BlockTags.WALLS).add(
-				ModBlocks.GRANITE_BRICK_WALL.get(),
-				ModBlocks.DIORITE_BRICK_WALL.get(),
-				ModBlocks.ANDESITE_BRICK_WALL.get(),
-				ModBlocks.SNOW_BRICK_WALL.get(),
-				ModBlocks.PACKED_ICE_BRICK_WALL.get()
-		);
+						ModBlocks.GRANITE_BRICK_WALL.get(),
+						ModBlocks.DIORITE_BRICK_WALL.get(),
+						ModBlocks.ANDESITE_BRICK_WALL.get(),
+						ModBlocks.SNOW_BRICK_WALL.get(),
+						ModBlocks.PACKED_ICE_BRICK_WALL.get())
+				.addTag(ModTags.PALISADES)
+				.addTag(ModTags.SPIKED_PALISADES);
 		tag(net.minecraft.tags.BlockTags.GUARDED_BY_PIGLINS).addTag(ModTags.GOLDEN_BLOCKS);
 		tag(net.minecraft.tags.BlockTags.CRYSTAL_SOUND_BLOCKS).addTag(ModTags.AMETHYST_BLOCKS);
 		tag(net.minecraft.tags.BlockTags.VIBRATION_RESONATORS).addTag(ModTags.AMETHYST_BLOCKS);
@@ -78,7 +79,17 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.MANGROVE_PALISADE.get(),
 				ModBlocks.CHERRY_PALISADE.get(),
 				ModBlocks.CRIMSON_PALISADE.get(),
-				ModBlocks.WARPED_PALISADE.get()
+				ModBlocks.WARPED_PALISADE.get(),
+				ModBlocks.STRIPPED_OAK_PALISADE.get(),
+				ModBlocks.STRIPPED_SPRUCE_PALISADE.get(),
+				ModBlocks.STRIPPED_BIRCH_PALISADE.get(),
+				ModBlocks.STRIPPED_JUNGLE_PALISADE.get(),
+				ModBlocks.STRIPPED_ACACIA_PALISADE.get(),
+				ModBlocks.STRIPPED_DARK_OAK_PALISADE.get(),
+				ModBlocks.STRIPPED_MANGROVE_PALISADE.get(),
+				ModBlocks.STRIPPED_CHERRY_PALISADE.get(),
+				ModBlocks.STRIPPED_CRIMSON_PALISADE.get(),
+				ModBlocks.STRIPPED_WARPED_PALISADE.get()
 		);
 		tag(ModTags.SPIKED_PALISADES).add(
 				ModBlocks.SPIKED_OAK_PALISADE.get(),
@@ -90,7 +101,17 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.SPIKED_MANGROVE_PALISADE.get(),
 				ModBlocks.SPIKED_CHERRY_PALISADE.get(),
 				ModBlocks.SPIKED_CRIMSON_PALISADE.get(),
-				ModBlocks.SPIKED_WARPED_PALISADE.get()
+				ModBlocks.SPIKED_WARPED_PALISADE.get(),
+				ModBlocks.STRIPPED_SPIKED_OAK_PALISADE.get(),
+				ModBlocks.STRIPPED_SPIKED_SPRUCE_PALISADE.get(),
+				ModBlocks.STRIPPED_SPIKED_BIRCH_PALISADE.get(),
+				ModBlocks.STRIPPED_SPIKED_JUNGLE_PALISADE.get(),
+				ModBlocks.STRIPPED_SPIKED_ACACIA_PALISADE.get(),
+				ModBlocks.STRIPPED_SPIKED_DARK_OAK_PALISADE.get(),
+				ModBlocks.STRIPPED_SPIKED_MANGROVE_PALISADE.get(),
+				ModBlocks.STRIPPED_SPIKED_CHERRY_PALISADE.get(),
+				ModBlocks.STRIPPED_SPIKED_CRIMSON_PALISADE.get(),
+				ModBlocks.STRIPPED_SPIKED_WARPED_PALISADE.get()
 		);
 		tag(ModTags.WOODEN_SEATS).add(
 				ModBlocks.OAK_SEAT.get(),

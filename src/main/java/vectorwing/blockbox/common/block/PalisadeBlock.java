@@ -6,21 +6,28 @@ import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.Util;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
+import net.neoforged.neoforge.common.ItemAbilities;
+import net.neoforged.neoforge.common.ItemAbility;
 import org.jetbrains.annotations.NotNull;
 import vectorwing.blockbox.common.block.state.PalisadeConnection;
 import vectorwing.blockbox.common.tag.ModTags;
 
+import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.Map;
+import java.util.function.Supplier;
 
 @ParametersAreNonnullByDefault
 @MethodsReturnNonnullByDefault
@@ -33,6 +40,8 @@ public class PalisadeBlock extends CrossCollisionBlock implements SimpleWaterlog
 	public static final EnumProperty<PalisadeConnection> TYPE_SOUTH = EnumProperty.create("south", PalisadeConnection.class);
 	public static final EnumProperty<PalisadeConnection> TYPE_WEST = EnumProperty.create("west", PalisadeConnection.class);
 
+	public final Supplier<Block> strippedForm;
+
 	public static final Map<Direction, EnumProperty<PalisadeConnection>> PROPERTY_BY_DIRECTION = Util.make(Maps.newHashMap(), (map) -> {
 		map.put(Direction.NORTH, TYPE_NORTH);
 		map.put(Direction.EAST, TYPE_EAST);
@@ -41,7 +50,16 @@ public class PalisadeBlock extends CrossCollisionBlock implements SimpleWaterlog
 	});
 
 	public PalisadeBlock(Properties properties) {
-		this(4.0F, 4.0F, 16.0F, 16.0F, 16.0F, properties);
+		this(null, 4.0F, 4.0F, 16.0F, 16.0F, 16.0F, properties);
+	}
+
+	public PalisadeBlock(@Nullable Supplier<Block> strippedForm, Properties properties) {
+		this(strippedForm, 4.0F, 4.0F, 16.0F, 16.0F, 16.0F, properties);
+	}
+
+	public PalisadeBlock(@Nullable Supplier<Block> strippedForm, float nodeWidth, float extensionWidth, float nodeHeight, float extensionHeight, float collisionHeight, Properties properties) {
+		super(nodeWidth, extensionWidth, nodeHeight, extensionHeight, collisionHeight, properties);
+		this.strippedForm = strippedForm;
 		this.registerDefaultState(this.stateDefinition.any()
 				.setValue(TYPE_NORTH, PalisadeConnection.NONE)
 				.setValue(TYPE_EAST, PalisadeConnection.NONE)
@@ -50,14 +68,20 @@ public class PalisadeBlock extends CrossCollisionBlock implements SimpleWaterlog
 				.setValue(WATERLOGGED, false));
 	}
 
-	public PalisadeBlock(float nodeWidth, float extensionWidth, float nodeHeight, float extensionHeight, float collisionHeight, Properties properties) {
-		super(nodeWidth, extensionWidth, nodeHeight, extensionHeight, collisionHeight, properties);
-		this.registerDefaultState(this.stateDefinition.any()
-				.setValue(TYPE_NORTH, PalisadeConnection.NONE)
-				.setValue(TYPE_EAST, PalisadeConnection.NONE)
-				.setValue(TYPE_SOUTH, PalisadeConnection.NONE)
-				.setValue(TYPE_WEST, PalisadeConnection.NONE)
-				.setValue(WATERLOGGED, false));
+	@Override
+	public BlockState getToolModifiedState(BlockState state, UseOnContext context, ItemAbility itemAbility, boolean simulate) {
+		if (strippedForm == null) {
+			return null;
+		}
+		if (itemAbility == ItemAbilities.AXE_STRIP) {
+			return strippedForm.get().defaultBlockState()
+					.setValue(TYPE_NORTH, state.getValue(TYPE_NORTH))
+					.setValue(TYPE_EAST, state.getValue(TYPE_EAST))
+					.setValue(TYPE_SOUTH, state.getValue(TYPE_SOUTH))
+					.setValue(TYPE_WEST, state.getValue(TYPE_WEST))
+					.setValue(WATERLOGGED, state.getValue(WATERLOGGED));
+		}
+		return null;
 	}
 
 	@Override
@@ -126,7 +150,7 @@ public class PalisadeBlock extends CrossCollisionBlock implements SimpleWaterlog
 			return PalisadeConnection.SPIKED;
 		}
 		boolean isFenceGateAligned = state.getBlock() instanceof FenceGateBlock && FenceGateBlock.connectsToDirection(state, direction);
-		if (state.is(ModTags.PALISADES) || state.getBlock() instanceof PalisadeBlock || (!isExceptionForConnection(state) && isSideSolid) || isFenceGateAligned) {
+		if (state.is(ModTags.PALISADES) || state.is(BlockTags.WALLS) || state.getBlock() instanceof IronBarsBlock || (!isExceptionForConnection(state) && isSideSolid) || isFenceGateAligned) {
 			return PalisadeConnection.FULL;
 		}
 		return type;

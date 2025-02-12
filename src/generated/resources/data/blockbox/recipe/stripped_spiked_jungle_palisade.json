@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "bb_spiked_palisades",
+  "ingredients": [
+    {
+      "item": "blockbox:stripped_jungle_palisade"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "blockbox:stripped_spiked_jungle_palisade"
+  }
+}

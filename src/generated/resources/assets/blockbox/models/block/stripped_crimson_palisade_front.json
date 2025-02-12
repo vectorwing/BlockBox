@@ -1,0 +1,9 @@
+{
+  "parent": "blockbox:block/template_palisade_front",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "core": "blockbox:block/stripped_crimson_palisade_core",
+    "side": "blockbox:block/stripped_crimson_palisade_side",
+    "top": "blockbox:block/stripped_crimson_palisade_top"
+  }
+}

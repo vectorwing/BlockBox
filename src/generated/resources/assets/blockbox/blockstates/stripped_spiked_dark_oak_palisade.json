@@ -1,0 +1,45 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "blockbox:block/stripped_spiked_dark_oak_palisade_post"
+      }
+    },
+    {
+      "apply": {
+        "model": "blockbox:block/spiked_stripped_dark_oak_palisade_front",
+        "uvlock": true
+      },
+      "when": {
+        "north": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "blockbox:block/spiked_stripped_dark_oak_palisade_front",
+        "y": 270
+      },
+      "when": {
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "blockbox:block/spiked_stripped_dark_oak_palisade_back",
+        "y": 270
+      },
+      "when": {
+        "east": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "blockbox:block/spiked_stripped_dark_oak_palisade_back",
+        "uvlock": true
+      },
+      "when": {
+        "south": "true"
+      }
+    }
+  ]
+}

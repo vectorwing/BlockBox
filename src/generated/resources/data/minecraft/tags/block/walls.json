@@ -4,6 +4,8 @@
     "blockbox:diorite_brick_wall",
     "blockbox:andesite_brick_wall",
     "blockbox:snow_brick_wall",
-    "blockbox:packed_ice_brick_wall"
+    "blockbox:packed_ice_brick_wall",
+    "#blockbox:palisades",
+    "#blockbox:spiked_palisades"
   ]
 }

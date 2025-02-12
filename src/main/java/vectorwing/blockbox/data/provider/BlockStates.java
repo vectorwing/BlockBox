@@ -123,6 +123,27 @@ public class BlockStates extends BlockStateProvider
 		palisadeBlock((PalisadeBlock) ModBlocks.WARPED_PALISADE.get());
 		spikedPalisadeBlock((SpikedPalisadeBlock) ModBlocks.SPIKED_WARPED_PALISADE.get(), name(ModBlocks.WARPED_PALISADE.get()));
 
+		palisadeBlock((PalisadeBlock) ModBlocks.STRIPPED_OAK_PALISADE.get());
+		spikedPalisadeBlock((SpikedPalisadeBlock) ModBlocks.STRIPPED_SPIKED_OAK_PALISADE.get(), name(ModBlocks.STRIPPED_OAK_PALISADE.get()));
+		palisadeBlock((PalisadeBlock) ModBlocks.STRIPPED_SPRUCE_PALISADE.get());
+		spikedPalisadeBlock((SpikedPalisadeBlock) ModBlocks.STRIPPED_SPIKED_SPRUCE_PALISADE.get(), name(ModBlocks.STRIPPED_SPRUCE_PALISADE.get()));
+		palisadeBlock((PalisadeBlock) ModBlocks.STRIPPED_BIRCH_PALISADE.get());
+		spikedPalisadeBlock((SpikedPalisadeBlock) ModBlocks.STRIPPED_SPIKED_BIRCH_PALISADE.get(), name(ModBlocks.STRIPPED_BIRCH_PALISADE.get()));
+		palisadeBlock((PalisadeBlock) ModBlocks.STRIPPED_JUNGLE_PALISADE.get());
+		spikedPalisadeBlock((SpikedPalisadeBlock) ModBlocks.STRIPPED_SPIKED_JUNGLE_PALISADE.get(), name(ModBlocks.STRIPPED_JUNGLE_PALISADE.get()));
+		palisadeBlock((PalisadeBlock) ModBlocks.STRIPPED_ACACIA_PALISADE.get());
+		spikedPalisadeBlock((SpikedPalisadeBlock) ModBlocks.STRIPPED_SPIKED_ACACIA_PALISADE.get(), name(ModBlocks.STRIPPED_ACACIA_PALISADE.get()));
+		palisadeBlock((PalisadeBlock) ModBlocks.STRIPPED_DARK_OAK_PALISADE.get());
+		spikedPalisadeBlock((SpikedPalisadeBlock) ModBlocks.STRIPPED_SPIKED_DARK_OAK_PALISADE.get(), name(ModBlocks.STRIPPED_DARK_OAK_PALISADE.get()));
+		palisadeBlock((PalisadeBlock) ModBlocks.STRIPPED_MANGROVE_PALISADE.get());
+		spikedPalisadeBlock((SpikedPalisadeBlock) ModBlocks.STRIPPED_SPIKED_MANGROVE_PALISADE.get(), name(ModBlocks.STRIPPED_MANGROVE_PALISADE.get()));
+		palisadeBlock((PalisadeBlock) ModBlocks.STRIPPED_CHERRY_PALISADE.get());
+		spikedPalisadeBlock((SpikedPalisadeBlock) ModBlocks.STRIPPED_SPIKED_CHERRY_PALISADE.get(), name(ModBlocks.STRIPPED_CHERRY_PALISADE.get()));
+		palisadeBlock((PalisadeBlock) ModBlocks.STRIPPED_CRIMSON_PALISADE.get());
+		spikedPalisadeBlock((SpikedPalisadeBlock) ModBlocks.STRIPPED_SPIKED_CRIMSON_PALISADE.get(), name(ModBlocks.STRIPPED_CRIMSON_PALISADE.get()));
+		palisadeBlock((PalisadeBlock) ModBlocks.STRIPPED_WARPED_PALISADE.get());
+		spikedPalisadeBlock((SpikedPalisadeBlock) ModBlocks.STRIPPED_SPIKED_WARPED_PALISADE.get(), name(ModBlocks.STRIPPED_WARPED_PALISADE.get()));
+
 		seatBlock(ModBlocks.OAK_SEAT.get());
 		seatBlock(ModBlocks.SPRUCE_SEAT.get());
 		seatBlock(ModBlocks.BIRCH_SEAT.get());
