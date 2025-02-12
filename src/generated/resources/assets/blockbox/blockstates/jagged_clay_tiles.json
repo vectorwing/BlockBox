@@ -1,18 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "blockbox:block/jagged_clay_tiles"
-      },
-      {
-        "model": "blockbox:block/jagged_clay_tiles_a"
-      },
-      {
-        "model": "blockbox:block/jagged_clay_tiles_b"
-      },
-      {
-        "model": "blockbox:block/jagged_clay_tiles_c"
-      }
-    ]
+    "": {
+      "model": "blockbox:block/jagged_clay_tiles"
+    }
   }
 }

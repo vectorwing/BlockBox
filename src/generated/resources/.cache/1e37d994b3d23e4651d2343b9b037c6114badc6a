@@ -1,4 +1,4 @@
-// 1.21.1	2025-02-11T19:21:45.7464673	Block States: blockbox
+// 1.21.1	2025-02-12T20:33:42.2889279	Block States: blockbox
 57741ed53ecabbf959a88b1adb4fb893265c9703 assets/blockbox/blockstates/acacia_palisade.json
 231dc493a7620b450bac3161ea140406621455eb assets/blockbox/blockstates/acacia_seat.json
 6ee0dc204de28168bdc1a0eecad1727b2321bfbd assets/blockbox/blockstates/andesite_bricks.json
@@ -62,7 +62,7 @@ dd2d9efbfbd63a5fd281aa53f820af57c9ea92ef assets/blockbox/blockstates/iron_plate_
 86b3e2308733e29cfd3728928ebcd7c6df40779a assets/blockbox/blockstates/iron_tread_plate.json
 b54cfdf513d08638c4061a141bc9444b166007a1 assets/blockbox/blockstates/iron_tread_plate_slab.json
 efb794a4e892d662a40cc8b5c16cdf6e3ec20a11 assets/blockbox/blockstates/iron_tread_plate_stairs.json
-bf3ec01c6c809ff57b7fde56ce9d7cf39f964553 assets/blockbox/blockstates/jagged_clay_tiles.json
+60083c635842e2feec419272cd1009bbc0f4ccba assets/blockbox/blockstates/jagged_clay_tiles.json
 a05d354efd713c01236b44e1f703de0190582952 assets/blockbox/blockstates/jungle_palisade.json
 e4971c95a2fbf27521c09c9603a417dd7b114d86 assets/blockbox/blockstates/jungle_seat.json
 8d857de285fe0bbda7790376c21ba0b87a24a584 assets/blockbox/blockstates/lapis_lazuli_bricks.json
@@ -299,9 +299,6 @@ fd8c7990dd3f8a6975f09150ccc5b34e812a08a2 assets/blockbox/models/block/iron_plate
 1678775e1de2fecc50c1f459935013340a18d2d2 assets/blockbox/models/block/iron_tread_plate_stairs_inner.json
 6e729b7fdb4677da1721b6c9c4dd597b37bb0a85 assets/blockbox/models/block/iron_tread_plate_stairs_outer.json
 4aead138043e7a0b56c9cfeff3cc512cbb3d9887 assets/blockbox/models/block/jagged_clay_tiles.json
-c804a06d0f3bbcee17399eafffecaae5d8919b28 assets/blockbox/models/block/jagged_clay_tiles_a.json
-89e7a1e46d4903af5bf961ccb4b71c4a324dba18 assets/blockbox/models/block/jagged_clay_tiles_b.json
-76e762d111a0e342cbae35b9a37d9c36ca2f8d07 assets/blockbox/models/block/jagged_clay_tiles_c.json
 6894c18b8cbb31eea654231b72db18e7bfc207e7 assets/blockbox/models/block/jungle_palisade_back.json
 5aa83bc8dd707f9841ad3aea46f50029e5117a9f assets/blockbox/models/block/jungle_palisade_front.json
 cf00484a0a58556c42a9d50c0e799c45ae306e60 assets/blockbox/models/block/jungle_palisade_post.json

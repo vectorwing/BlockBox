@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "blockbox:block/jagged_clay_tiles_c"
-  }
-}
