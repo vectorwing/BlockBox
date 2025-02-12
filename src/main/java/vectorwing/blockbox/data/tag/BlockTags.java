@@ -66,6 +66,7 @@ public class BlockTags extends BlockTagsProvider
 		tag(net.minecraft.tags.BlockTags.CRYSTAL_SOUND_BLOCKS).addTag(ModTags.AMETHYST_BLOCKS);
 		tag(net.minecraft.tags.BlockTags.VIBRATION_RESONATORS).addTag(ModTags.AMETHYST_BLOCKS);
 		tag(net.minecraft.tags.BlockTags.DRAGON_IMMUNE).add(ModBlocks.POLISHED_OBSIDIAN.get());
+		tag(net.minecraft.tags.BlockTags.IMPERMEABLE).add(ModBlocks.ROUGH_GLASS.get());
 	}
 
 	private void registerModTags() {
@@ -167,7 +168,7 @@ public class BlockTags extends BlockTagsProvider
 		);
 	}
 
-	protected void registerCommonTags() {
+	private void registerCommonTags() {
 		tag(Tags.Blocks.SANDSTONE_UNCOLORED_BLOCKS).add(
 				ModBlocks.SANDSTONE_BRICKS.get()
 		);
@@ -186,9 +187,18 @@ public class BlockTags extends BlockTagsProvider
 		tag(Tags.Blocks.SANDSTONE_RED_SLABS).add(
 				ModBlocks.RED_SANDSTONE_BRICK_SLAB.get()
 		);
+		tag(Tags.Blocks.GLASS_BLOCKS_CHEAP).add(
+				ModBlocks.ROUGH_GLASS.get()
+		);
+		tag(Tags.Blocks.GLASS_BLOCKS_COLORLESS).add(
+				ModBlocks.ROUGH_GLASS.get()
+		);
+		tag(Tags.Blocks.GLASS_PANES_COLORLESS).add(
+				ModBlocks.ROUGH_GLASS_PANE.get()
+		);
 	}
 
-	protected void registerBlockMineables() {
+	private void registerBlockMineables() {
 		tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(
 				ModBlocks.GRANITE_BRICKS.get(),
 				ModBlocks.GRANITE_BRICK_STAIRS.get(),
