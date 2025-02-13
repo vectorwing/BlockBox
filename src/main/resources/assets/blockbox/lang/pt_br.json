@@ -333,5 +333,12 @@
   "item.blockbox.blue_sky_lantern": "Balão de papel azul",
   "item.blockbox.purple_sky_lantern": "Balão de papel roxo",
   "item.blockbox.magenta_sky_lantern": "Balão de papel magenta",
-  "item.blockbox.pink_sky_lantern": "Balão de papel rosa"
+  "item.blockbox.pink_sky_lantern": "Balão de papel rosa",
+
+  "itemGroup.blockbox": "The Block Box",
+
+  "blockbox.tooltip.sky_lantern": "Pode ser colocado no ar",
+  "blockbox.item.mallet.failure": "Can't push...",
+
+  "death.attack.blockbox.palisade": "%1$s foi perfurado pelo espinho de uma paliçada"
 }
