@@ -11,7 +11,7 @@ public class ModCreativeTabs
 {
 	public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, BlockBox.MODID);
 
-	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TAB_BUILDING_BIGGER = CREATIVE_MODE_TABS.register("example_tab", () -> CreativeModeTab.builder()
+	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TAB_BLOCK_BOX = CREATIVE_MODE_TABS.register("example_tab", () -> CreativeModeTab.builder()
 			.title(Component.translatable("itemGroup." + BlockBox.MODID))
 			.icon(() -> ModItems.CHISELED_GOLD.get().getDefaultInstance())
 			.displayItems((parameters, output) -> ModItems.CREATIVE_TAB_ITEMS.forEach((item) -> output.accept(item.get())))
