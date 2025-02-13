@@ -87,8 +87,8 @@ public class SpikedPalisadeBlock extends CrossCollisionBlock implements SimpleWa
 	}
 
 	protected boolean isEntityTouchingSpike(Entity entity, BlockPos pos) {
-		VoxelShape voxelshape1 = SPIKE_SHAPE.move(pos.getX(), pos.getY(), pos.getZ());
-		return Shapes.joinIsNotEmpty(voxelshape1, Shapes.create(entity.getBoundingBox()), BooleanOp.AND);
+		VoxelShape collisionShape = SPIKE_SHAPE.move(pos.getX(), pos.getY(), pos.getZ());
+		return Shapes.joinIsNotEmpty(collisionShape, Shapes.create(entity.getBoundingBox()), BooleanOp.AND);
 	}
 
 	protected BlockState updateShape(BlockState state, Direction facing, BlockState facingState, LevelAccessor level, BlockPos currentPos, BlockPos facingPos) {

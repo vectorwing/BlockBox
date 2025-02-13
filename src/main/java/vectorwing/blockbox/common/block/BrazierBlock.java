@@ -8,6 +8,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.BlockGetter;
@@ -27,6 +28,7 @@ import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.pathfinder.PathComputationType;
+import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -55,6 +57,9 @@ public class BrazierBlock extends Block implements SimpleWaterloggedBlock
 			Block.box(1.0, 0.0, 1.0, 15.0, 6.0, 15.0)
 	);
 
+	protected static final VoxelShape SHAPE_FLAME = Block.box(1.0, 12.0, 1.0, 15.0, 16.0, 15.0);
+	protected static final VoxelShape SHAPE_FLAME_HANGING = Block.box(1.0, 6.0, 1.0, 15.0, 12.0, 15.0);
+
 	public BrazierBlock(int fireDamage, Properties properties) {
 		super(properties);
 		this.fireDamage = fireDamage;
@@ -70,6 +75,22 @@ public class BrazierBlock extends Block implements SimpleWaterloggedBlock
 			return state.setValue(BlockStateProperties.LIT, false);
 		}
 		return null;
+	}
+
+	@Override
+	protected void entityInside(BlockState state, Level level, BlockPos pos, Entity entity) {
+		if (state.getValue(LIT) && entity instanceof LivingEntity && isEntityTouchingFlame(entity, pos, state)) {
+			entity.hurt(level.damageSources().campfire(), (float)this.fireDamage);
+		}
+
+		super.entityInside(state, level, pos, entity);
+	}
+
+	protected boolean isEntityTouchingFlame(Entity entity, BlockPos pos, BlockState state) {
+		VoxelShape collisionShape = state.getValue(HANGING)
+				? SHAPE_FLAME_HANGING.move(pos.getX(), pos.getY(), pos.getZ())
+				: SHAPE_FLAME.move(pos.getX(), pos.getY(), pos.getZ());
+		return Shapes.joinIsNotEmpty(collisionShape, Shapes.create(entity.getBoundingBox()), BooleanOp.AND);
 	}
 
 	@Nullable
