@@ -66,7 +66,7 @@
   "block.blockbox.jagged_clay_tiles": "Jagged Clay Tiles",
 
   "block.blockbox.packed_snow": "Packed Snow",
-  "block.blockbox.carved_snow": "Carved Snow",
+  "block.blockbox.carved_snow": "\"Carved\" Snow",
   "block.blockbox.snow_bricks": "Snow Bricks",
   "block.blockbox.snow_brick_stairs": "Snow Brick Stairs",
   "block.blockbox.snow_brick_slab": "Snow Brick Slab",
@@ -235,7 +235,7 @@
   "item.blockbox.jagged_clay_tiles": "Jagged Clay Tiles",
 
   "item.blockbox.packed_snow": "Packed Snow",
-  "item.blockbox.carved_snow": "Carved Snow",
+  "item.blockbox.carved_snow": "\"Carved\" Snow",
   "item.blockbox.snow_bricks": "Snow Bricks",
   "item.blockbox.snow_brick_stairs": "Snow Brick Stairs",
   "item.blockbox.snow_brick_slab": "Snow Brick Slab",
@@ -298,7 +298,11 @@
   "item.blockbox.amethyst_mosaic_slab": "Amethyst Mosaic Slab",
 
   "item.blockbox.lapis_lazuli_bricks": "Lapis Lazuli Bricks",
+  "item.blockbox.lapis_lazuli_brick_stairs": "Lapis Lazuli Brick Stairs",
+  "item.blockbox.lapis_lazuli_brick_slab": "Lapis Lazuli Brick Slab",
   "item.blockbox.lapis_lazuli_mosaic": "Lapis Lazuli Mosaic",
+  "item.blockbox.lapis_lazuli_mosaic_stairs": "Lapis Lazuli Mosaic Stairs",
+  "item.blockbox.lapis_lazuli_mosaic_slab": "Lapis Lazuli Mosaic Slab",
 
   "item.blockbox.oak_seat": "Oak Seat",
   "item.blockbox.spruce_seat": "Spruce Seat",
