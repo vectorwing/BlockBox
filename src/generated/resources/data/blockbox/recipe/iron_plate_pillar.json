@@ -2,13 +2,13 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "i": {
+    "#": {
       "item": "blockbox:iron_plate"
     }
   },
   "pattern": [
-    "i",
-    "i"
+    "#",
+    "#"
   ],
   "result": {
     "count": 2,

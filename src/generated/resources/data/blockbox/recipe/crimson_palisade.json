@@ -3,13 +3,13 @@
   "category": "misc",
   "group": "bb_palisades",
   "key": {
-    "o": {
+    "#": {
       "item": "minecraft:crimson_stem"
     }
   },
   "pattern": [
-    "ooo",
-    "ooo"
+    "###",
+    "###"
   ],
   "result": {
     "count": 12,

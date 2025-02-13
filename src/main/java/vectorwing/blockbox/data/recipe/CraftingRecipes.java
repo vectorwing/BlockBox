@@ -124,93 +124,93 @@ public class CraftingRecipes
 
 	private static void craftIronPlateBlocks(RecipeOutput output) {
 		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.IRON_PLATE.get(), 4)
-				.pattern("iI")
-				.pattern("Ii")
-				.define('i', Items.IRON_NUGGET)
+				.pattern("IN")
+				.pattern("NI")
 				.define('I', Items.IRON_INGOT)
+				.define('N', Items.IRON_NUGGET)
 				.unlockedBy("has_iron", InventoryChangeTrigger.TriggerInstance.hasItems(Items.IRON_INGOT))
 				.save(output);
 		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.IRON_TREAD_PLATE.get(), 4)
-				.pattern("ii")
-				.pattern("ii")
-				.define('i', ModBlocks.IRON_PLATE.get())
+				.pattern("##")
+				.pattern("##")
+				.define('#', ModBlocks.IRON_PLATE.get())
 				.unlockedBy("has_iron_plate", InventoryChangeTrigger.TriggerInstance.hasItems(ModBlocks.IRON_PLATE.get()))
 				.save(output);
 		stairAndSlab(output, ModBlocks.IRON_TREAD_PLATE_STAIRS.get(), ModBlocks.IRON_TREAD_PLATE_SLAB.get(), ModBlocks.IRON_TREAD_PLATE.get());
 
 		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CORRUGATED_IRON_PLATE.get(), 4)
-				.pattern("ii")
-				.pattern("ii")
-				.define('i', ModBlocks.IRON_TREAD_PLATE.get())
+				.pattern("##")
+				.pattern("##")
+				.define('#', ModBlocks.IRON_TREAD_PLATE.get())
 				.unlockedBy("has_iron_plate", InventoryChangeTrigger.TriggerInstance.hasItems(ModBlocks.IRON_PLATE.get()))
 				.save(output);
 		stairAndSlab(output, ModBlocks.CORRUGATED_IRON_PLATE_STAIRS.get(), ModBlocks.CORRUGATED_IRON_PLATE_SLAB.get(), ModBlocks.CORRUGATED_IRON_PLATE.get());
 
 		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.IRON_PLATE_PILLAR.get(), 2)
-				.pattern("i")
-				.pattern("i")
-				.define('i', ModBlocks.IRON_PLATE.get())
+				.pattern("#")
+				.pattern("#")
+				.define('#', ModBlocks.IRON_PLATE.get())
 				.unlockedBy("has_iron_plate", InventoryChangeTrigger.TriggerInstance.hasItems(ModBlocks.IRON_PLATE.get()))
 				.save(output);
 		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.IRON_PLATE_DOOR.get(), 3)
-				.pattern("ii")
-				.pattern("ii")
-				.pattern("ii")
-				.define('i', ModBlocks.IRON_PLATE.get())
+				.pattern("##")
+				.pattern("##")
+				.pattern("##")
+				.define('#', ModBlocks.IRON_PLATE.get())
 				.unlockedBy("has_iron_plate", InventoryChangeTrigger.TriggerInstance.hasItems(ModBlocks.IRON_PLATE.get()))
 				.save(output);
 		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.IRON_PLATE_TRAPDOOR.get(), 2)
-				.pattern("iii")
-				.pattern("iii")
-				.define('i', ModBlocks.IRON_PLATE.get())
+				.pattern("###")
+				.pattern("###")
+				.define('#', ModBlocks.IRON_PLATE.get())
 				.unlockedBy("has_iron_plate", InventoryChangeTrigger.TriggerInstance.hasItems(ModBlocks.IRON_PLATE.get()))
 				.save(output);
 	}
 
 	private static void craftGoldBlocks(RecipeOutput output) {
 		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_GOLD.get(), 4)
-				.pattern(" g ")
-				.pattern("g g")
-				.pattern(" g ")
-				.define('g', Items.GOLD_INGOT)
+				.pattern(" # ")
+				.pattern("# #")
+				.pattern(" # ")
+				.define('#', Items.GOLD_INGOT)
 				.unlockedBy("has_gold_ingot", InventoryChangeTrigger.TriggerInstance.hasItems(Items.GOLD_INGOT))
 				.save(output);
 		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GOLDEN_TILES.get(), 4)
-				.pattern("gg")
-				.pattern("gg")
-				.define('g', ModBlocks.CHISELED_GOLD.get())
+				.pattern("##")
+				.pattern("##")
+				.define('#', ModBlocks.CHISELED_GOLD.get())
 				.unlockedBy("has_gold_ingot", InventoryChangeTrigger.TriggerInstance.hasItems(Items.GOLD_INGOT))
 				.save(output);
 		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GOLDEN_BRICKS.get(), 4)
-				.pattern("gg")
-				.pattern("gg")
-				.define('g', ModBlocks.GOLDEN_TILES.get())
+				.pattern("##")
+				.pattern("##")
+				.define('#', ModBlocks.GOLDEN_TILES.get())
 				.unlockedBy("has_gold_ingot", InventoryChangeTrigger.TriggerInstance.hasItems(Items.GOLD_INGOT))
 				.save(output);
 		stairAndSlab(output, ModBlocks.GOLDEN_BRICK_STAIRS.get(), ModBlocks.GOLDEN_BRICK_SLAB.get(), ModBlocks.GOLDEN_BRICKS.get());
 		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GOLDEN_PILLAR.get(), 2)
-				.pattern("g")
-				.pattern("g")
-				.define('g', ModBlocks.CHISELED_GOLD.get())
+				.pattern("#")
+				.pattern("#")
+				.define('#', ModBlocks.CHISELED_GOLD.get())
 				.unlockedBy("has_gold_ingot", InventoryChangeTrigger.TriggerInstance.hasItems(Items.GOLD_INGOT))
 				.save(output);
 		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GOLDEN_DOOR.get(), 3)
-				.pattern("gg")
-				.pattern("gg")
-				.pattern("gg")
-				.define('g', Items.GOLD_INGOT)
+				.pattern("##")
+				.pattern("##")
+				.pattern("##")
+				.define('#', Items.GOLD_INGOT)
 				.unlockedBy("has_gold_ingot", InventoryChangeTrigger.TriggerInstance.hasItems(Items.GOLD_INGOT))
 				.save(output);
 		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GOLDEN_TRAPDOOR.get(), 2)
-				.pattern("gg")
-				.pattern("gg")
-				.define('g', Items.GOLD_INGOT)
+				.pattern("##")
+				.pattern("##")
+				.define('#', Items.GOLD_INGOT)
 				.unlockedBy("has_gold_ingot", InventoryChangeTrigger.TriggerInstance.hasItems(Items.GOLD_INGOT))
 				.save(output);
 		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GOLDEN_BARS.get(), 16)
-				.pattern("ggg")
-				.pattern("ggg")
-				.define('g', Items.GOLD_INGOT)
+				.pattern("###")
+				.pattern("###")
+				.define('#', Items.GOLD_INGOT)
 				.unlockedBy("has_gold_ingot", InventoryChangeTrigger.TriggerInstance.hasItems(Items.GOLD_INGOT))
 				.save(output);
 	}
@@ -310,53 +310,53 @@ public class CraftingRecipes
 		stairSlabWall(output, ModBlocks.ANDESITE_BRICK_STAIRS.get(), ModBlocks.ANDESITE_BRICK_SLAB.get(), ModBlocks.ANDESITE_BRICKS.get(), ModBlocks.ANDESITE_BRICK_WALL.get());
 
 		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SANDSTONE_BRICKS.get(), 4)
-				.pattern("ss")
-				.pattern("ss")
-				.define('s', Blocks.CUT_SANDSTONE)
+				.pattern("##")
+				.pattern("##")
+				.define('#', Blocks.CUT_SANDSTONE)
 				.unlockedBy("has_sandstone", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.SANDSTONE))
 				.save(output);
 		stairAndSlab(output, ModBlocks.SANDSTONE_BRICK_STAIRS.get(), ModBlocks.SANDSTONE_BRICK_SLAB.get(), ModBlocks.SANDSTONE_BRICKS.get());
 
 		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_SANDSTONE_BRICKS.get(), 4)
-				.pattern("ss")
-				.pattern("ss")
-				.define('s', Blocks.CUT_RED_SANDSTONE)
+				.pattern("##")
+				.pattern("##")
+				.define('#', Blocks.CUT_RED_SANDSTONE)
 				.unlockedBy("has_red_sandstone", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.RED_SANDSTONE))
 				.save(output);
 		stairAndSlab(output, ModBlocks.RED_SANDSTONE_BRICK_STAIRS.get(), ModBlocks.RED_SANDSTONE_BRICK_SLAB.get(), ModBlocks.RED_SANDSTONE_BRICKS.get());
 
-		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CLAY_TILES.get(), 4)
-				.pattern("ss")
-				.pattern("ss")
-				.define('s', Blocks.TERRACOTTA)
-				.unlockedBy("has_terracotta", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.TERRACOTTA))
+		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CLAY_TILES.get())
+				.pattern("#")
+				.pattern("#")
+				.define('#', Items.BRICK)
+				.unlockedBy("has_brick", InventoryChangeTrigger.TriggerInstance.hasItems(Items.BRICK))
 				.save(output);
 		stairAndSlab(output, ModBlocks.CLAY_TILE_STAIRS.get(), ModBlocks.CLAY_TILE_SLAB.get(), ModBlocks.CLAY_TILES.get());
 
 		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PACKED_SNOW.get(), 4)
-				.pattern("ss")
-				.pattern("ss")
-				.define('s', Blocks.SNOW_BLOCK)
+				.pattern("##")
+				.pattern("##")
+				.define('#', Blocks.SNOW_BLOCK)
 				.unlockedBy("has_snow", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.SNOW_BLOCK))
 				.save(output);
 		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SNOW_BRICKS.get(), 4)
-				.pattern("pp")
-				.pattern("pp")
-				.define('p', ModBlocks.PACKED_SNOW.get())
+				.pattern("##")
+				.pattern("##")
+				.define('#', ModBlocks.PACKED_SNOW.get())
 				.unlockedBy("has_snow", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.SNOW_BLOCK))
 				.save(output);
 		stairSlabWall(output, ModBlocks.SNOW_BRICK_STAIRS.get(), ModBlocks.SNOW_BRICK_SLAB.get(), ModBlocks.SNOW_BRICKS.get(), ModBlocks.SNOW_BRICK_WALL.get());
 
 		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_PACKED_ICE.get(), 4)
-				.pattern("ss")
-				.pattern("ss")
-				.define('s', Blocks.PACKED_ICE)
+				.pattern("##")
+				.pattern("##")
+				.define('#', Blocks.PACKED_ICE)
 				.unlockedBy("has_packed_ice", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.PACKED_ICE))
 				.save(output);
 		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PACKED_ICE_BRICKS.get(), 4)
-				.pattern("ss")
-				.pattern("ss")
-				.define('s', ModBlocks.POLISHED_PACKED_ICE.get())
+				.pattern("##")
+				.pattern("##")
+				.define('#', ModBlocks.POLISHED_PACKED_ICE.get())
 				.unlockedBy("has_packed_ice", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.PACKED_ICE))
 				.save(output);
 		stairSlabWall(output, ModBlocks.PACKED_ICE_BRICK_STAIRS.get(), ModBlocks.PACKED_ICE_BRICK_SLAB.get(), ModBlocks.PACKED_ICE_BRICKS.get(), ModBlocks.PACKED_ICE_BRICK_WALL.get());
@@ -376,38 +376,38 @@ public class CraftingRecipes
 				.save(output);
 
 		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_AMETHYST.get(), 4)
-				.pattern("ss")
-				.pattern("ss")
-				.define('s', Blocks.AMETHYST_BLOCK)
+				.pattern("##")
+				.pattern("##")
+				.define('#', Blocks.AMETHYST_BLOCK)
 				.unlockedBy("has_amethyst_block", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.AMETHYST_BLOCK))
 				.save(output);
 		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_AMETHYST.get(), 4)
-				.pattern("ss")
-				.pattern("ss")
-				.define('s', ModBlocks.POLISHED_AMETHYST.get())
+				.pattern("##")
+				.pattern("##")
+				.define('#', ModBlocks.POLISHED_AMETHYST.get())
 				.unlockedBy("has_amethyst_block", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.AMETHYST_BLOCK))
 				.save(output);
 		stairAndSlab(output, ModBlocks.CUT_AMETHYST_STAIRS.get(), ModBlocks.CUT_AMETHYST_SLAB.get(), ModBlocks.CUT_AMETHYST.get());
 
 		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.AMETHYST_MOSAIC.get(), 4)
-				.pattern("ss")
-				.pattern("ss")
-				.define('s', ModBlocks.CUT_AMETHYST.get())
+				.pattern("##")
+				.pattern("##")
+				.define('#', ModBlocks.CUT_AMETHYST.get())
 				.unlockedBy("has_amethyst_block", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.AMETHYST_BLOCK))
 				.save(output);
 		stairAndSlab(output, ModBlocks.AMETHYST_MOSAIC_STAIRS.get(), ModBlocks.AMETHYST_MOSAIC_SLAB.get(), ModBlocks.AMETHYST_MOSAIC.get());
 
 		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LAPIS_LAZULI_BRICKS.get(), 4)
-				.pattern("ss")
-				.pattern("ss")
-				.define('s', Items.LAPIS_LAZULI)
+				.pattern("##")
+				.pattern("##")
+				.define('#', Items.LAPIS_LAZULI)
 				.unlockedBy("has_lapis_lazuli", InventoryChangeTrigger.TriggerInstance.hasItems(Items.LAPIS_LAZULI))
 				.save(output);
 		stairAndSlab(output, ModBlocks.LAPIS_LAZULI_BRICK_STAIRS.get(), ModBlocks.LAPIS_LAZULI_BRICK_SLAB.get(), ModBlocks.LAPIS_LAZULI_BRICKS.get());
 		ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LAPIS_LAZULI_MOSAIC.get(), 4)
-				.pattern("ss")
-				.pattern("ss")
-				.define('s', ModBlocks.LAPIS_LAZULI_BRICKS.get())
+				.pattern("##")
+				.pattern("##")
+				.define('#', ModBlocks.LAPIS_LAZULI_BRICKS.get())
 				.unlockedBy("has_lapis_lazuli", InventoryChangeTrigger.TriggerInstance.hasItems(Items.LAPIS_LAZULI))
 				.save(output);
 		stairAndSlab(output, ModBlocks.LAPIS_LAZULI_MOSAIC_STAIRS.get(), ModBlocks.LAPIS_LAZULI_MOSAIC_SLAB.get(), ModBlocks.LAPIS_LAZULI_MOSAIC.get());
@@ -450,18 +450,18 @@ public class CraftingRecipes
 	public static void stairSlabWall(RecipeOutput output, ItemLike stair, ItemLike slab, ItemLike block, ItemLike wall) {
 		stairAndSlab(output, stair, slab, block);
 		ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, wall, 6)
-				.pattern("ppp")
-				.pattern("ppp")
-				.define('p', block)
+				.pattern("###")
+				.pattern("###")
+				.define('#', block)
 				.unlockedBy("has_matching_block", InventoryChangeTrigger.TriggerInstance.hasItems(block))
 				.save(output);
 	}
 
 	public static void palisade(RecipeOutput output, ItemLike palisade, ItemLike spikedPalisade, ItemLike log) {
 		ShapedRecipeBuilder.shaped(RecipeCategory.MISC, palisade, 12)
-				.pattern("ooo")
-				.pattern("ooo")
-				.define('o', log)
+				.pattern("###")
+				.pattern("###")
+				.define('#', log)
 				.group("bb_palisades")
 				.unlockedBy("has_matching_log", InventoryChangeTrigger.TriggerInstance.hasItems(log))
 				.save(output);

@@ -5,13 +5,13 @@
     "I": {
       "item": "minecraft:iron_ingot"
     },
-    "i": {
+    "N": {
       "item": "minecraft:iron_nugget"
     }
   },
   "pattern": [
-    "iI",
-    "Ii"
+    "IN",
+    "NI"
   ],
   "result": {
     "count": 4,

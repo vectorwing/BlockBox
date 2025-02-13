@@ -2,13 +2,13 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "g": {
+    "#": {
       "item": "minecraft:gold_ingot"
     }
   },
   "pattern": [
-    "ggg",
-    "ggg"
+    "###",
+    "###"
   ],
   "result": {
     "count": 16,

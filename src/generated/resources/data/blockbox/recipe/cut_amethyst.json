@@ -2,13 +2,13 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "s": {
+    "#": {
       "item": "blockbox:polished_amethyst"
     }
   },
   "pattern": [
-    "ss",
-    "ss"
+    "##",
+    "##"
   ],
   "result": {
     "count": 4,

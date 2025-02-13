@@ -2,13 +2,13 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "g": {
+    "#": {
       "item": "blockbox:chiseled_gold"
     }
   },
   "pattern": [
-    "gg",
-    "gg"
+    "##",
+    "##"
   ],
   "result": {
     "count": 4,

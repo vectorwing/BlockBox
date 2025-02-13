@@ -3,13 +3,13 @@
   "category": "misc",
   "group": "bb_palisades",
   "key": {
-    "o": {
+    "#": {
       "item": "minecraft:acacia_log"
     }
   },
   "pattern": [
-    "ooo",
-    "ooo"
+    "###",
+    "###"
   ],
   "result": {
     "count": 12,

@@ -2,13 +2,13 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "s": {
+    "#": {
       "item": "minecraft:lapis_lazuli"
     }
   },
   "pattern": [
-    "ss",
-    "ss"
+    "##",
+    "##"
   ],
   "result": {
     "count": 4,

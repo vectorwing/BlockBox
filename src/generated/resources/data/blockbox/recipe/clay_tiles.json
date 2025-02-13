@@ -2,16 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "s": {
-      "item": "minecraft:terracotta"
+    "#": {
+      "item": "minecraft:brick"
     }
   },
   "pattern": [
-    "ss",
-    "ss"
+    "#",
+    "#"
   ],
   "result": {
-    "count": 4,
+    "count": 1,
     "id": "blockbox:clay_tiles"
   }
 }
