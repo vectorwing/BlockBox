@@ -7,27 +7,14 @@ import net.minecraft.world.item.Items;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
-import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
-import net.neoforged.neoforge.network.registration.PayloadRegistrar;
 import vectorwing.blockbox.BlockBox;
 import vectorwing.blockbox.Config;
-import vectorwing.blockbox.common.network.ClientPayloadHandler;
-import vectorwing.blockbox.common.network.payload.MalletPushPayload;
 import vectorwing.blockbox.common.registry.ModItems;
 
 @EventBusSubscriber(modid = BlockBox.MODID, bus = EventBusSubscriber.Bus.MOD)
+@SuppressWarnings("unused")
 public class CommonEvents
 {
-	@SubscribeEvent
-	public static void register(final RegisterPayloadHandlersEvent event) {
-		final PayloadRegistrar registrar = event.registrar("1");
-		registrar.playToClient(
-				MalletPushPayload.TYPE,
-				MalletPushPayload.STREAM_CODEC,
-				ClientPayloadHandler::handleMalletPush
-		);
-	}
-
 	@SubscribeEvent
 	public static void addItemsToVanillaCreativeTabs(BuildCreativeModeTabContentsEvent event) {
 		if (!Config.ADD_ITEMS_TO_VANILLA_TABS.get()) {
@@ -35,9 +22,7 @@ public class CommonEvents
 		}
 
 		if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-			VanillaTabOrdering.BUILDING_BLOCKS.reversed().forEach((item, startingPoint) -> {
-				event.insertAfter(new ItemStack(startingPoint), new ItemStack(item.get()), CreativeModeTab.TabVisibility.PARENT_TAB_ONLY);
-			});
+			VanillaTabOrdering.BUILDING_BLOCKS.reversed().forEach((item, startingPoint) -> event.insertAfter(new ItemStack(startingPoint), new ItemStack(item.get()), CreativeModeTab.TabVisibility.PARENT_TAB_ONLY));
 		}
 		if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
 			// TODO: Figure out a better way of handling the methods which organize this. Manual or automated?

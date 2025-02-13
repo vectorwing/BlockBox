@@ -20,10 +20,5 @@ public class ParticleTypes extends ParticleDescriptionProvider
 				4,
 				false
 		);
-		spriteSet(ModParticleTypes.STRIKE.get(),
-				ResourceLocation.fromNamespaceAndPath(BlockBox.MODID, "strike"),
-				4,
-				false
-		);
 	}
 }

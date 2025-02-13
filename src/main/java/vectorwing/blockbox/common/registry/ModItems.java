@@ -10,7 +10,6 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import vectorwing.blockbox.BlockBox;
 import vectorwing.blockbox.common.event.VanillaTabOrdering;
 import vectorwing.blockbox.common.item.SkyLanternItem;
-import vectorwing.blockbox.common.item.MalletItem;
 
 import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
@@ -47,8 +46,6 @@ public class ModItems
 		VanillaTabOrdering.BUILDING_BLOCKS.put(block, vanillaTabNeighbor);
 		return block;
 	}
-
-	public static final Supplier<Item> MALLET = registerItem("mallet", () -> new MalletItem(new Item.Properties().durability(512)));
 
 	public static final Supplier<BlockItem> GRANITE_BRICKS = registerSimpleBlockItem("granite_bricks", ModBlocks.GRANITE_BRICKS, Items.POLISHED_GRANITE_SLAB);
 	public static final Supplier<BlockItem> GRANITE_BRICK_STAIRS = registerSimpleBlockItem("granite_brick_stairs", ModBlocks.GRANITE_BRICK_STAIRS, Items.POLISHED_GRANITE_SLAB);

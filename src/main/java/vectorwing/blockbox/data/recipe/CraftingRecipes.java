@@ -20,26 +20,12 @@ public class CraftingRecipes
 {
 	public static void register(RecipeOutput output) {
 		craftBasicBlocks(output);
-		craftTools(output);
 		craftPalisades(output);
 		craftIronPlateBlocks(output);
 		craftGoldBlocks(output);
 		craftCopperBlocks(output);
 		craftFurniture(output);
 		craftSkyLanterns(output);
-	}
-
-	private static void craftTools(RecipeOutput output) {
-		ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.MALLET.get())
-				.pattern("cIc")
-				.pattern(" s ")
-				.pattern(" s ")
-				.define('c', Tags.Items.INGOTS_COPPER)
-				.define('I', Blocks.IRON_BLOCK)
-				.define('s', Tags.Items.RODS_WOODEN)
-				.unlockedBy("has_copper", InventoryChangeTrigger.TriggerInstance.hasItems(Items.COPPER_INGOT))
-				.unlockedBy("has_iron", InventoryChangeTrigger.TriggerInstance.hasItems(Items.IRON_INGOT))
-				.save(output);
 	}
 
 	private static void craftSkyLanterns(RecipeOutput output) {
