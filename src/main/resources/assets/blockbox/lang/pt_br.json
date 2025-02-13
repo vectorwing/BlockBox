@@ -60,10 +60,10 @@
   "block.blockbox.red_sandstone_brick_stairs": "Escadas de tijolos de arenito vermelho",
   "block.blockbox.red_sandstone_brick_slab": "Laje de tijolos de arenito vermelho",
 
-  "block.blockbox.clay_tiles": "Ladrilhos",
-  "block.blockbox.clay_tile_stairs": "Escadas de ladrilhos",
-  "block.blockbox.clay_tile_slab": "Laje de ladrilhos",
-  "block.blockbox.jagged_clay_tiles": "Caquinhos de ladrilhos",
+  "block.blockbox.tiles": "Ladrilhos",
+  "block.blockbox.tile_stairs": "Escadas de ladrilhos",
+  "block.blockbox.tile_slab": "Laje de ladrilhos",
+  "block.blockbox.broken_tile_mosaic": "Caquinhos de ladrilhos",
 
   "block.blockbox.packed_snow": "Neve compactada",
   "block.blockbox.carved_snow": "Neve \"esculpida\"",
@@ -166,8 +166,6 @@
   "block.blockbox.magenta_sky_lantern": "Balão de papel magenta",
   "block.blockbox.pink_sky_lantern": "Balão de papel rosa",
 
-  "item.blockbox.mallet": "Mallet",
-
   "item.blockbox.oak_palisade": "Paliçada de carvalho",
   "item.blockbox.spruce_palisade": "Paliçada de pinheiro",
   "item.blockbox.birch_palisade": "Paliçada de bétula",
@@ -229,10 +227,10 @@
   "item.blockbox.red_sandstone_brick_stairs": "Escadas de tijolos de arenito vermelho",
   "item.blockbox.red_sandstone_brick_slab": "Laje de tijolos de arenito vermelho",
 
-  "item.blockbox.clay_tiles": "Ladrilhos",
-  "item.blockbox.clay_tile_stairs": "Escadas de ladrilhos",
-  "item.blockbox.clay_tile_slab": "Laje de ladrilhos",
-  "item.blockbox.jagged_clay_tiles": "Caquinhos de ladrilhos",
+  "item.blockbox.tiles": "Ladrilhos",
+  "item.blockbox.tile_stairs": "Escadas de ladrilhos",
+  "item.blockbox.tile_slab": "Laje de ladrilhos",
+  "item.blockbox.broken_tile_mosaic": "Caquinhos de ladrilhos",
 
   "item.blockbox.packed_snow": "Neve compactada",
   "item.blockbox.carved_snow": "Neve \"esculpida\"",
@@ -338,7 +336,6 @@
   "itemGroup.blockbox": "The Block Box",
 
   "blockbox.tooltip.sky_lantern": "Pode ser colocado no ar",
-  "blockbox.item.mallet.failure": "Can't push...",
 
   "death.attack.blockbox.palisade": "%1$s foi perfurado pelo espinho de uma paliçada"
 }

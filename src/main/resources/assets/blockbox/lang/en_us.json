@@ -166,8 +166,6 @@
   "block.blockbox.magenta_sky_lantern": "Magenta Sky Lantern",
   "block.blockbox.pink_sky_lantern": "Pink Sky Lantern",
 
-  "item.blockbox.mallet": "Mallet",
-
   "item.blockbox.oak_palisade": "Oak Palisade",
   "item.blockbox.spruce_palisade": "Spruce Palisade",
   "item.blockbox.birch_palisade": "Birch Palisade",
@@ -338,7 +336,6 @@
   "itemGroup.blockbox": "The Block Box",
 
   "blockbox.tooltip.sky_lantern": "Can be placed in mid-air",
-  "blockbox.item.mallet.failure": "Can't push...",
 
   "death.attack.blockbox.palisade": "%1$s was skewered by a spiked palisade"
 }
