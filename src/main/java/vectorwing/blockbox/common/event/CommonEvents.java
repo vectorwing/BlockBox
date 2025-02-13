@@ -36,6 +36,19 @@ public class CommonEvents
 //			VanillaTabOrdering.FUNCTIONAL_BLOCKS.reversed().forEach((item, startingPoint) -> {
 //				event.insertAfter(new ItemStack(startingPoint), new ItemStack(item.get()), CreativeModeTab.TabVisibility.PARENT_TAB_ONLY);
 //			});
+			event.insertAfter(new ItemStack(Items.TINTED_GLASS), new ItemStack(ModItems.ROUGH_GLASS_PANE.get()), CreativeModeTab.TabVisibility.PARENT_TAB_ONLY);
+			event.insertAfter(new ItemStack(Items.TINTED_GLASS), new ItemStack(ModItems.ROUGH_GLASS.get()), CreativeModeTab.TabVisibility.PARENT_TAB_ONLY);
+			event.insertAfter(new ItemStack(Items.RESPAWN_ANCHOR), new ItemStack(ModItems.WARPED_SEAT.get()), CreativeModeTab.TabVisibility.PARENT_TAB_ONLY);
+			event.insertAfter(new ItemStack(Items.RESPAWN_ANCHOR), new ItemStack(ModItems.CRIMSON_SEAT.get()), CreativeModeTab.TabVisibility.PARENT_TAB_ONLY);
+			event.insertAfter(new ItemStack(Items.RESPAWN_ANCHOR), new ItemStack(ModItems.CHERRY_SEAT.get()), CreativeModeTab.TabVisibility.PARENT_TAB_ONLY);
+			event.insertAfter(new ItemStack(Items.RESPAWN_ANCHOR), new ItemStack(ModItems.BAMBOO_SEAT.get()), CreativeModeTab.TabVisibility.PARENT_TAB_ONLY);
+			event.insertAfter(new ItemStack(Items.RESPAWN_ANCHOR), new ItemStack(ModItems.MANGROVE_SEAT.get()), CreativeModeTab.TabVisibility.PARENT_TAB_ONLY);
+			event.insertAfter(new ItemStack(Items.RESPAWN_ANCHOR), new ItemStack(ModItems.DARK_OAK_SEAT.get()), CreativeModeTab.TabVisibility.PARENT_TAB_ONLY);
+			event.insertAfter(new ItemStack(Items.RESPAWN_ANCHOR), new ItemStack(ModItems.ACACIA_SEAT.get()), CreativeModeTab.TabVisibility.PARENT_TAB_ONLY);
+			event.insertAfter(new ItemStack(Items.RESPAWN_ANCHOR), new ItemStack(ModItems.JUNGLE_SEAT.get()), CreativeModeTab.TabVisibility.PARENT_TAB_ONLY);
+			event.insertAfter(new ItemStack(Items.RESPAWN_ANCHOR), new ItemStack(ModItems.BIRCH_SEAT.get()), CreativeModeTab.TabVisibility.PARENT_TAB_ONLY);
+			event.insertAfter(new ItemStack(Items.RESPAWN_ANCHOR), new ItemStack(ModItems.SPRUCE_SEAT.get()), CreativeModeTab.TabVisibility.PARENT_TAB_ONLY);
+			event.insertAfter(new ItemStack(Items.RESPAWN_ANCHOR), new ItemStack(ModItems.OAK_SEAT.get()), CreativeModeTab.TabVisibility.PARENT_TAB_ONLY);
 			event.insertAfter(new ItemStack(Items.SOUL_CAMPFIRE), new ItemStack(ModItems.SOUL_BRAZIER.get()), CreativeModeTab.TabVisibility.PARENT_TAB_ONLY);
 			event.insertAfter(new ItemStack(Items.SOUL_CAMPFIRE), new ItemStack(ModItems.BRAZIER.get()), CreativeModeTab.TabVisibility.PARENT_TAB_ONLY);
 			event.insertAfter(new ItemStack(Items.PINK_CANDLE), new ItemStack(ModItems.PINK_SKY_LANTERN.get()), CreativeModeTab.TabVisibility.PARENT_TAB_ONLY);
