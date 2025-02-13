@@ -1,0 +1,9 @@
+The Block Box
+Copyright (c) 2025 vectorwing
+
+All code within this project is licensed under the MIT License.
+See `LICENSE-code.md` for more details.
+
+All assets (images and audio) within this project are licensed under the Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) license.
+To view a copy of this license, visit https://creativecommons.org/licenses/by-nc/4.0/.
+See `LICENSE-assets.md` for more details.
