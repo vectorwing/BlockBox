@@ -1,6 +1,9 @@
-// 1.21.1	2025-02-11T19:21:45.7594696	Loot Tables
+// 1.21.1	2025-02-12T23:18:00.1956911	Loot Tables
 21d023bbc6803113198cdc6b2685f08f98d6e6e5 data/blockbox/loot_table/blocks/acacia_palisade.json
 efe77edd4c80c7ac1a0560a0e8e7cc2c6f8add76 data/blockbox/loot_table/blocks/acacia_seat.json
+cf59f53d85513df5b7135ad8bb3f1c9cc166529b data/blockbox/loot_table/blocks/amethyst_mosaic.json
+62140835c7f2015b374e18cb496ea2637c30d2fd data/blockbox/loot_table/blocks/amethyst_mosaic_slab.json
+7032d0e2ecfcd64dbb1334d548b971b956f6c81e data/blockbox/loot_table/blocks/amethyst_mosaic_stairs.json
 ad771d1a04b0f35ab39a1810e91a82b724464f7f data/blockbox/loot_table/blocks/andesite_bricks.json
 d8b265c6f068ecd6a5ef1437b17f4da04cd7820a data/blockbox/loot_table/blocks/andesite_brick_slab.json
 58d59ecbe800e2b15a9ab7ea02ad8328415a1a4c data/blockbox/loot_table/blocks/andesite_brick_stairs.json
@@ -15,9 +18,6 @@ a64a57a9d8b5f02aab63b55ae41936bb8b11eb91 data/blockbox/loot_table/blocks/black_s
 18ff45ee88be67368a282419067253792b668deb data/blockbox/loot_table/blocks/carved_snow.json
 a9b0c38fee6d5acdde0d6764030a455f84ec5d4e data/blockbox/loot_table/blocks/cherry_palisade.json
 2ebbd87222913dae07f33f16776b16d983d638f2 data/blockbox/loot_table/blocks/cherry_seat.json
-8816c52cc972dc026eb84012b81b26f0be4856fd data/blockbox/loot_table/blocks/chiseled_amethyst.json
-160220191dc968b3798b085e0f90d0ab7d97b8c1 data/blockbox/loot_table/blocks/chiseled_amethyst_slab.json
-e9d71a0a05bfe8851b3ee976c2d813c2357eadef data/blockbox/loot_table/blocks/chiseled_amethyst_stairs.json
 4ea86fe77a8377858192592b018fdb84ce1df3bf data/blockbox/loot_table/blocks/chiseled_gold.json
 d7e67450cf489e676f4f64b529674eb938a0dac4 data/blockbox/loot_table/blocks/clay_tiles.json
 e6abb48c72e0a5bdd748bc833fee522c7b8a99f7 data/blockbox/loot_table/blocks/clay_tile_slab.json

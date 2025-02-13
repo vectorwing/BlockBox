@@ -1,5 +1,5 @@
-// 1.21.1	2025-02-12T12:40:37.3437881	Tags for minecraft:block mod id blockbox
-d764f37eb2e1a27bfcd1397244659553f88a7f95 data/blockbox/tags/block/amethyst_blocks.json
+// 1.21.1	2025-02-12T23:18:00.1806876	Tags for minecraft:block mod id blockbox
+713e4d947f67872698e3d4c43443368401cd7332 data/blockbox/tags/block/amethyst_blocks.json
 58396f7792ed668419d6e489e8af3d1fc7345eef data/blockbox/tags/block/braziers.json
 ac505c538459acba3d5cbbc8d6cef561ae253f92 data/blockbox/tags/block/golden_blocks.json
 15387432c4650ed2fc45cd70f46404ce8ec57c23 data/blockbox/tags/block/iron_plate_blocks.json
@@ -21,13 +21,13 @@ cc2f82a43ed6af49b6c45ce5336ff1af022d3306 data/minecraft/tags/block/dragon_immune
 c4500297f029dde8936912f27afdbcd675d074f7 data/minecraft/tags/block/guarded_by_piglins.json
 7bb19f21df82244955c2b13fc902e89d28bad4ef data/minecraft/tags/block/impermeable.json
 a236871b1fd06943160d4e7eb06e26824f35d448 data/minecraft/tags/block/mineable/axe.json
-a84e74a6ecc0de2b9c886d4eee778820192501c7 data/minecraft/tags/block/mineable/pickaxe.json
+736450819dc014e11b267c6b5693414e831960f0 data/minecraft/tags/block/mineable/pickaxe.json
 fc557e82e3627addd330344d6ab0bffe35f30ddf data/minecraft/tags/block/mineable/shovel.json
 cc2f82a43ed6af49b6c45ce5336ff1af022d3306 data/minecraft/tags/block/needs_diamond_tool.json
 c4500297f029dde8936912f27afdbcd675d074f7 data/minecraft/tags/block/needs_iron_tool.json
 2876dfa713a30a88e248e2d5e4d96cd158663dc9 data/minecraft/tags/block/needs_stone_tool.json
-287ec7c9078c9fa80d5ff1f382400d133730058a data/minecraft/tags/block/slabs.json
-1b7d38d022de160d551e4d6a7a8cf76627028bc8 data/minecraft/tags/block/stairs.json
+b8ff8a5dd09d7fd7d96be3c60339d806bb8b191f data/minecraft/tags/block/slabs.json
+286c2e6738d9d49d162c5d542afa3d3c5a0800ae data/minecraft/tags/block/stairs.json
 bdd7279042a7b839eab436fa8ed89aee817a9a44 data/minecraft/tags/block/trapdoors.json
 3de224e3efed2c4bc1754bf3817cc9dcbbbf1709 data/minecraft/tags/block/vibration_resonators.json
 c18e3e90b423d958201ca372f4903f354739b6f9 data/minecraft/tags/block/walls.json

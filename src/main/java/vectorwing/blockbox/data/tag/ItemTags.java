@@ -69,7 +69,7 @@ public class ItemTags extends ItemTagsProvider
 				ModItems.CORRUGATED_IRON_PLATE_STAIRS.get(),
 				ModItems.GOLDEN_BRICK_STAIRS.get(),
 				ModItems.CUT_AMETHYST_STAIRS.get(),
-				ModItems.CHISELED_AMETHYST_STAIRS.get(),
+				ModItems.AMETHYST_MOSAIC_STAIRS.get(),
 				ModItems.LAPIS_LAZULI_BRICK_STAIRS.get(),
 				ModItems.LAPIS_LAZULI_MOSAIC_STAIRS.get()
 		);
@@ -86,7 +86,7 @@ public class ItemTags extends ItemTagsProvider
 				ModItems.CORRUGATED_IRON_PLATE_SLAB.get(),
 				ModItems.GOLDEN_BRICK_SLAB.get(),
 				ModItems.CUT_AMETHYST_SLAB.get(),
-				ModItems.CHISELED_AMETHYST_SLAB.get(),
+				ModItems.AMETHYST_MOSAIC_SLAB.get(),
 				ModItems.LAPIS_LAZULI_BRICK_SLAB.get(),
 				ModItems.LAPIS_LAZULI_MOSAIC_SLAB.get()
 		);

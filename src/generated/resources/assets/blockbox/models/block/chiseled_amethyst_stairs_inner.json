@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "blockbox:block/chiseled_amethyst",
-    "side": "blockbox:block/chiseled_amethyst",
-    "top": "blockbox:block/chiseled_amethyst"
-  }
-}

@@ -135,9 +135,9 @@ public class ModItems
 	public static final Supplier<BlockItem> CUT_AMETHYST = registerSimpleBlockItem("cut_amethyst", ModBlocks.CUT_AMETHYST, Items.AMETHYST_BLOCK);
 	public static final Supplier<BlockItem> CUT_AMETHYST_STAIRS = registerSimpleBlockItem("cut_amethyst_stairs", ModBlocks.CUT_AMETHYST_STAIRS, Items.AMETHYST_BLOCK);
 	public static final Supplier<BlockItem> CUT_AMETHYST_SLAB = registerSimpleBlockItem("cut_amethyst_slab", ModBlocks.CUT_AMETHYST_SLAB, Items.AMETHYST_BLOCK);
-	public static final Supplier<BlockItem> CHISELED_AMETHYST = registerSimpleBlockItem("chiseled_amethyst", ModBlocks.CHISELED_AMETHYST, Items.AMETHYST_BLOCK);
-	public static final Supplier<BlockItem> CHISELED_AMETHYST_STAIRS = registerSimpleBlockItem("chiseled_amethyst_stairs", ModBlocks.CHISELED_AMETHYST_STAIRS, Items.AMETHYST_BLOCK);
-	public static final Supplier<BlockItem> CHISELED_AMETHYST_SLAB = registerSimpleBlockItem("chiseled_amethyst_slab", ModBlocks.CHISELED_AMETHYST_SLAB, Items.AMETHYST_BLOCK);
+	public static final Supplier<BlockItem> AMETHYST_MOSAIC = registerSimpleBlockItem("amethyst_mosaic", ModBlocks.AMETHYST_MOSAIC, Items.AMETHYST_BLOCK);
+	public static final Supplier<BlockItem> AMETHYST_MOSAIC_STAIRS = registerSimpleBlockItem("amethyst_mosaic_stairs", ModBlocks.AMETHYST_MOSAIC_STAIRS, Items.AMETHYST_BLOCK);
+	public static final Supplier<BlockItem> AMETHYST_MOSAIC_SLAB = registerSimpleBlockItem("amethyst_mosaic_slab", ModBlocks.AMETHYST_MOSAIC_SLAB, Items.AMETHYST_BLOCK);
 
 	public static final Supplier<BlockItem> LAPIS_LAZULI_BRICKS = registerSimpleBlockItem("lapis_lazuli_bricks", ModBlocks.LAPIS_LAZULI_BRICKS, Items.LAPIS_BLOCK);
 	public static final Supplier<BlockItem> LAPIS_LAZULI_BRICK_STAIRS = registerSimpleBlockItem("lapis_lazuli_brick_stairs", ModBlocks.LAPIS_LAZULI_BRICK_STAIRS, Items.LAPIS_BLOCK);

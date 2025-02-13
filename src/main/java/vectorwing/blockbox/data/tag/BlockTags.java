@@ -41,7 +41,7 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.CORRUGATED_IRON_PLATE_STAIRS.get(),
 				ModBlocks.GOLDEN_BRICK_STAIRS.get(),
 				ModBlocks.CUT_AMETHYST_STAIRS.get(),
-				ModBlocks.CHISELED_AMETHYST_STAIRS.get(),
+				ModBlocks.AMETHYST_MOSAIC_STAIRS.get(),
 				ModBlocks.LAPIS_LAZULI_BRICK_STAIRS.get(),
 				ModBlocks.LAPIS_LAZULI_MOSAIC_STAIRS.get()
 		);
@@ -58,7 +58,7 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.CORRUGATED_IRON_PLATE_SLAB.get(),
 				ModBlocks.GOLDEN_BRICK_SLAB.get(),
 				ModBlocks.CUT_AMETHYST_SLAB.get(),
-				ModBlocks.CHISELED_AMETHYST_SLAB.get(),
+				ModBlocks.AMETHYST_MOSAIC_SLAB.get(),
 				ModBlocks.LAPIS_LAZULI_BRICK_SLAB.get(),
 				ModBlocks.LAPIS_LAZULI_MOSAIC_SLAB.get()
 		);
@@ -148,9 +148,9 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.CUT_AMETHYST.get(),
 				ModBlocks.CUT_AMETHYST_STAIRS.get(),
 				ModBlocks.CUT_AMETHYST_SLAB.get(),
-				ModBlocks.CHISELED_AMETHYST.get(),
-				ModBlocks.CHISELED_AMETHYST_STAIRS.get(),
-				ModBlocks.CHISELED_AMETHYST_SLAB.get()
+				ModBlocks.AMETHYST_MOSAIC.get(),
+				ModBlocks.AMETHYST_MOSAIC_STAIRS.get(),
+				ModBlocks.AMETHYST_MOSAIC_SLAB.get()
 		);
 
 		tag(ModTags.IRON_PLATE_BLOCKS).add(
@@ -283,9 +283,9 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.CUT_AMETHYST.get(),
 				ModBlocks.CUT_AMETHYST_STAIRS.get(),
 				ModBlocks.CUT_AMETHYST_SLAB.get(),
-				ModBlocks.CHISELED_AMETHYST_STAIRS.get(),
-				ModBlocks.CHISELED_AMETHYST_SLAB.get(),
-				ModBlocks.CHISELED_AMETHYST.get(),
+				ModBlocks.AMETHYST_MOSAIC_STAIRS.get(),
+				ModBlocks.AMETHYST_MOSAIC_SLAB.get(),
+				ModBlocks.AMETHYST_MOSAIC.get(),
 				ModBlocks.LAPIS_LAZULI_BRICKS.get(),
 				ModBlocks.LAPIS_LAZULI_MOSAIC.get(),
 				ModBlocks.BRAZIER.get(),

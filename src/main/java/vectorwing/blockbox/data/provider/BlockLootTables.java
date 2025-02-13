@@ -123,7 +123,7 @@ public class BlockLootTables extends BlockLootSubProvider
 
 		dropSelf(ModBlocks.POLISHED_AMETHYST.get());
 		addBlockStairSlab(ModBlocks.CUT_AMETHYST.get(), ModBlocks.CUT_AMETHYST_STAIRS.get(), ModBlocks.CUT_AMETHYST_SLAB.get());
-		addBlockStairSlab(ModBlocks.CHISELED_AMETHYST.get(), ModBlocks.CHISELED_AMETHYST_STAIRS.get(), ModBlocks.CHISELED_AMETHYST_SLAB.get());
+		addBlockStairSlab(ModBlocks.AMETHYST_MOSAIC.get(), ModBlocks.AMETHYST_MOSAIC_STAIRS.get(), ModBlocks.AMETHYST_MOSAIC_SLAB.get());
 
 		dropSelf(ModBlocks.LAPIS_LAZULI_BRICKS.get());
 		dropSelf(ModBlocks.LAPIS_LAZULI_BRICK_STAIRS.get());

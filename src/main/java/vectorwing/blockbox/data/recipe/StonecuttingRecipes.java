@@ -154,9 +154,9 @@ public class StonecuttingRecipes
 		stonecutting(output, Items.AMETHYST_BLOCK, ModItems.CUT_AMETHYST.get());
 		stonecutting(output, Items.AMETHYST_BLOCK, ModItems.CUT_AMETHYST_STAIRS.get());
 		stonecutting(output, Items.AMETHYST_BLOCK, ModItems.CUT_AMETHYST_SLAB.get(), 2);
-		stonecutting(output, Items.AMETHYST_BLOCK, ModItems.CHISELED_AMETHYST.get());
-		stonecutting(output, Items.AMETHYST_BLOCK, ModItems.CHISELED_AMETHYST_STAIRS.get());
-		stonecutting(output, Items.AMETHYST_BLOCK, ModItems.CHISELED_AMETHYST_SLAB.get(), 2);
+		stonecutting(output, Items.AMETHYST_BLOCK, ModItems.AMETHYST_MOSAIC.get());
+		stonecutting(output, Items.AMETHYST_BLOCK, ModItems.AMETHYST_MOSAIC_STAIRS.get());
+		stonecutting(output, Items.AMETHYST_BLOCK, ModItems.AMETHYST_MOSAIC_SLAB.get(), 2);
 
 		stonecutting(output, ModItems.LAPIS_LAZULI_BRICKS.get(), ModItems.LAPIS_LAZULI_BRICK_STAIRS.get());
 		stonecutting(output, ModItems.LAPIS_LAZULI_BRICKS.get(), ModItems.LAPIS_LAZULI_BRICK_SLAB.get(), 2);
@@ -169,25 +169,25 @@ public class StonecuttingRecipes
 		stonecutting(output, ModItems.POLISHED_AMETHYST.get(), ModItems.CUT_AMETHYST.get());
 		stonecutting(output, ModItems.POLISHED_AMETHYST.get(), ModItems.CUT_AMETHYST_STAIRS.get());
 		stonecutting(output, ModItems.POLISHED_AMETHYST.get(), ModItems.CUT_AMETHYST_SLAB.get(), 2);
-		stonecutting(output, ModItems.POLISHED_AMETHYST.get(), ModItems.CHISELED_AMETHYST.get());
-		stonecutting(output, ModItems.POLISHED_AMETHYST.get(), ModItems.CHISELED_AMETHYST_STAIRS.get());
-		stonecutting(output, ModItems.POLISHED_AMETHYST.get(), ModItems.CHISELED_AMETHYST_SLAB.get(), 2);
+		stonecutting(output, ModItems.POLISHED_AMETHYST.get(), ModItems.AMETHYST_MOSAIC.get());
+		stonecutting(output, ModItems.POLISHED_AMETHYST.get(), ModItems.AMETHYST_MOSAIC_STAIRS.get());
+		stonecutting(output, ModItems.POLISHED_AMETHYST.get(), ModItems.AMETHYST_MOSAIC_SLAB.get(), 2);
 
 		stonecutting(output, ModItems.CUT_AMETHYST.get(), Items.AMETHYST_BLOCK);
 		stonecutting(output, ModItems.CUT_AMETHYST.get(), ModItems.POLISHED_AMETHYST.get());
 		stonecutting(output, ModItems.CUT_AMETHYST.get(), ModItems.CUT_AMETHYST_STAIRS.get());
 		stonecutting(output, ModItems.CUT_AMETHYST.get(), ModItems.CUT_AMETHYST_SLAB.get(), 2);
-		stonecutting(output, ModItems.CUT_AMETHYST.get(), ModItems.CHISELED_AMETHYST.get());
-		stonecutting(output, ModItems.CUT_AMETHYST.get(), ModItems.CHISELED_AMETHYST_STAIRS.get());
-		stonecutting(output, ModItems.CUT_AMETHYST.get(), ModItems.CHISELED_AMETHYST_SLAB.get(), 2);
+		stonecutting(output, ModItems.CUT_AMETHYST.get(), ModItems.AMETHYST_MOSAIC.get());
+		stonecutting(output, ModItems.CUT_AMETHYST.get(), ModItems.AMETHYST_MOSAIC_STAIRS.get());
+		stonecutting(output, ModItems.CUT_AMETHYST.get(), ModItems.AMETHYST_MOSAIC_SLAB.get(), 2);
 
-		stonecutting(output, ModItems.CHISELED_AMETHYST.get(), Items.AMETHYST_BLOCK);
-		stonecutting(output, ModItems.CHISELED_AMETHYST.get(), ModItems.POLISHED_AMETHYST.get());
-		stonecutting(output, ModItems.CHISELED_AMETHYST.get(), ModItems.CUT_AMETHYST.get());
-		stonecutting(output, ModItems.CHISELED_AMETHYST.get(), ModItems.CUT_AMETHYST_STAIRS.get(), 2);
-		stonecutting(output, ModItems.CHISELED_AMETHYST.get(), ModItems.CUT_AMETHYST_SLAB.get());
-		stonecutting(output, ModItems.CHISELED_AMETHYST.get(), ModItems.CHISELED_AMETHYST_STAIRS.get());
-		stonecutting(output, ModItems.CHISELED_AMETHYST.get(), ModItems.CHISELED_AMETHYST_SLAB.get(), 2);
+		stonecutting(output, ModItems.AMETHYST_MOSAIC.get(), Items.AMETHYST_BLOCK);
+		stonecutting(output, ModItems.AMETHYST_MOSAIC.get(), ModItems.POLISHED_AMETHYST.get());
+		stonecutting(output, ModItems.AMETHYST_MOSAIC.get(), ModItems.CUT_AMETHYST.get());
+		stonecutting(output, ModItems.AMETHYST_MOSAIC.get(), ModItems.CUT_AMETHYST_STAIRS.get(), 2);
+		stonecutting(output, ModItems.AMETHYST_MOSAIC.get(), ModItems.CUT_AMETHYST_SLAB.get());
+		stonecutting(output, ModItems.AMETHYST_MOSAIC.get(), ModItems.AMETHYST_MOSAIC_STAIRS.get());
+		stonecutting(output, ModItems.AMETHYST_MOSAIC.get(), ModItems.AMETHYST_MOSAIC_SLAB.get(), 2);
 	}
 
 	private static void stonecutting(RecipeOutput output, ItemLike input, ItemLike result) {

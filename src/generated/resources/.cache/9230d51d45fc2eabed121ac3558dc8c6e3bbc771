@@ -1,6 +1,9 @@
-// 1.21.1	2025-02-11T19:21:45.7564687	Item Models: blockbox
+// 1.21.1	2025-02-12T23:18:00.1916901	Item Models: blockbox
 fca27dcf20ce91e90812b733713a36b943ebfc8b assets/blockbox/models/item/acacia_palisade.json
 56edae35411785995cfa08df92b58e026b257027 assets/blockbox/models/item/acacia_seat.json
+26682bf43225d445e1c4f8a336b0b22ceaf85737 assets/blockbox/models/item/amethyst_mosaic.json
+5b7534a83b1b325c7860fd709bc0dc33e3efdcdc assets/blockbox/models/item/amethyst_mosaic_slab.json
+58ec76b16c780fbba0d9aac10c52f229df424ae9 assets/blockbox/models/item/amethyst_mosaic_stairs.json
 e12842d08f5c4549ec54b5f285ad05e19032d75a assets/blockbox/models/item/andesite_bricks.json
 5c04596f831d038b600a562a0b4882d421cf49d9 assets/blockbox/models/item/andesite_brick_slab.json
 b147b236446ec824aebb9310145deb9fade501ef assets/blockbox/models/item/andesite_brick_stairs.json
@@ -15,9 +18,6 @@ e906564c7bc89388175b4f06ef6e52920437e99c assets/blockbox/models/item/brown_sky_l
 783ba73fb9f989ee98e75ae39a0ff062f739f3fd assets/blockbox/models/item/carved_snow.json
 9fadb5ae875b6cbba6270834fd422617bb054bfb assets/blockbox/models/item/cherry_palisade.json
 f6bd126baa5124e2f45092b525c49addcf03b3d5 assets/blockbox/models/item/cherry_seat.json
-b2a1266189560e4d6bb15b18ff1300e278a63631 assets/blockbox/models/item/chiseled_amethyst.json
-0ccea150373430bf9b4e3e8fb2cb7bf3e61098c0 assets/blockbox/models/item/chiseled_amethyst_slab.json
-edb65dc33f4d2c23c06f6fe00082907d12a36314 assets/blockbox/models/item/chiseled_amethyst_stairs.json
 c1043a8dea28c0c36b07ddd153551c6dc126df35 assets/blockbox/models/item/chiseled_gold.json
 6b2618e57fe0947dbc5d2ad61dd6b5f67e02c49f assets/blockbox/models/item/clay_tiles.json
 b3b6d132db48add5edc6b97d2543fc5950d51ef3 assets/blockbox/models/item/clay_tile_slab.json

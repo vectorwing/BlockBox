@@ -116,9 +116,9 @@ public class ModBlocks
 	public static final Supplier<Block> CUT_AMETHYST = BLOCKS.registerSimpleBlock("cut_amethyst", BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK));
 	public static final Supplier<Block> CUT_AMETHYST_STAIRS = BLOCKS.register("cut_amethyst_stairs", () -> stair(ModBlocks.CUT_AMETHYST.get(), BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK)));
 	public static final Supplier<Block> CUT_AMETHYST_SLAB = BLOCKS.register("cut_amethyst_slab", () -> slab(BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK)));
-	public static final Supplier<Block> CHISELED_AMETHYST = BLOCKS.registerSimpleBlock("chiseled_amethyst", BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK));
-	public static final Supplier<Block> CHISELED_AMETHYST_STAIRS = BLOCKS.register("chiseled_amethyst_stairs", () -> stair(ModBlocks.CHISELED_AMETHYST.get(), BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK)));
-	public static final Supplier<Block> CHISELED_AMETHYST_SLAB = BLOCKS.register("chiseled_amethyst_slab", () -> slab(BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK)));
+	public static final Supplier<Block> AMETHYST_MOSAIC = BLOCKS.registerSimpleBlock("amethyst_mosaic", BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK));
+	public static final Supplier<Block> AMETHYST_MOSAIC_STAIRS = BLOCKS.register("amethyst_mosaic_stairs", () -> stair(ModBlocks.AMETHYST_MOSAIC.get(), BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK)));
+	public static final Supplier<Block> AMETHYST_MOSAIC_SLAB = BLOCKS.register("amethyst_mosaic_slab", () -> slab(BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK)));
 
 	public static final Supplier<Block> LAPIS_LAZULI_BRICKS = BLOCKS.registerSimpleBlock("lapis_lazuli_bricks", BlockBehaviour.Properties.ofFullCopy(Blocks.LAPIS_BLOCK));
 	public static final Supplier<Block> LAPIS_LAZULI_BRICK_STAIRS = BLOCKS.register("lapis_lazuli_brick_stairs", () -> stair(ModBlocks.LAPIS_LAZULI_BRICKS.get(), BlockBehaviour.Properties.ofFullCopy(Blocks.LAPIS_BLOCK)));

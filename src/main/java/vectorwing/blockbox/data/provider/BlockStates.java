@@ -97,7 +97,7 @@ public class BlockStates extends BlockStateProvider
 
 		simpleBlock(ModBlocks.POLISHED_AMETHYST.get());
 		blockWithStairAndSlab(ModBlocks.CUT_AMETHYST.get(), ModBlocks.CUT_AMETHYST_STAIRS.get(), ModBlocks.CUT_AMETHYST_SLAB.get());
-		blockWithStairAndSlab(ModBlocks.CHISELED_AMETHYST.get(), ModBlocks.CHISELED_AMETHYST_STAIRS.get(), ModBlocks.CHISELED_AMETHYST_SLAB.get());
+		blockWithStairAndSlab(ModBlocks.AMETHYST_MOSAIC.get(), ModBlocks.AMETHYST_MOSAIC_STAIRS.get(), ModBlocks.AMETHYST_MOSAIC_SLAB.get());
 
 		blockWithStairAndSlab(ModBlocks.LAPIS_LAZULI_BRICKS.get(), ModBlocks.LAPIS_LAZULI_BRICK_STAIRS.get(), ModBlocks.LAPIS_LAZULI_BRICK_SLAB.get());
 		blockWithStairAndSlab(ModBlocks.LAPIS_LAZULI_MOSAIC.get(), ModBlocks.LAPIS_LAZULI_MOSAIC_STAIRS.get(), ModBlocks.LAPIS_LAZULI_MOSAIC_SLAB.get());

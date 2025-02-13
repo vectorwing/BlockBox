@@ -1,9 +1,9 @@
-// 1.21.1	2025-02-12T18:25:11.4364674	Tags for minecraft:item mod id vanilla
+// 1.21.1	2025-02-12T23:18:00.194691	Tags for minecraft:item mod id vanilla
 ac505c538459acba3d5cbbc8d6cef561ae253f92 data/blockbox/tags/item/golden_blocks.json
 888158b7f20bfc6d8b528f2d3cada3de04678dd0 data/blockbox/tags/item/sky_lanterns.json
 baae533a53a683480091c4ade29013ea2f5813ef data/minecraft/tags/item/doors.json
 c4500297f029dde8936912f27afdbcd675d074f7 data/minecraft/tags/item/piglin_loved.json
-287ec7c9078c9fa80d5ff1f382400d133730058a data/minecraft/tags/item/slabs.json
-1b7d38d022de160d551e4d6a7a8cf76627028bc8 data/minecraft/tags/item/stairs.json
+b8ff8a5dd09d7fd7d96be3c60339d806bb8b191f data/minecraft/tags/item/slabs.json
+286c2e6738d9d49d162c5d542afa3d3c5a0800ae data/minecraft/tags/item/stairs.json
 bdd7279042a7b839eab436fa8ed89aee817a9a44 data/minecraft/tags/item/trapdoors.json
 9a2977b886ddb17cac8ef98d1d0742277158af37 data/minecraft/tags/item/walls.json
