@@ -1,4 +1,4 @@
-// 1.21.1	2025-02-12T23:18:00.1956911	Loot Tables
+// 1.21.1	2025-02-13T17:28:06.9564141	Loot Tables
 21d023bbc6803113198cdc6b2685f08f98d6e6e5 data/blockbox/loot_table/blocks/acacia_palisade.json
 efe77edd4c80c7ac1a0560a0e8e7cc2c6f8add76 data/blockbox/loot_table/blocks/acacia_seat.json
 cf59f53d85513df5b7135ad8bb3f1c9cc166529b data/blockbox/loot_table/blocks/amethyst_mosaic.json
@@ -14,14 +14,12 @@ d8b265c6f068ecd6a5ef1437b17f4da04cd7820a data/blockbox/loot_table/blocks/andesit
 a64a57a9d8b5f02aab63b55ae41936bb8b11eb91 data/blockbox/loot_table/blocks/black_sky_lantern.json
 7243036303db9bb9d1434ea10e73a0ca21f880b4 data/blockbox/loot_table/blocks/blue_sky_lantern.json
 03ba6770887d18f9df936a10b4f265f83e8f93af data/blockbox/loot_table/blocks/brazier.json
+79adc949c766ceabd24e3181abc2a4bf63b8da79 data/blockbox/loot_table/blocks/broken_tile_mosaic.json
 9fd18b33815cc10d063fa916b3f84e6f9b81b2fe data/blockbox/loot_table/blocks/brown_sky_lantern.json
 18ff45ee88be67368a282419067253792b668deb data/blockbox/loot_table/blocks/carved_snow.json
 a9b0c38fee6d5acdde0d6764030a455f84ec5d4e data/blockbox/loot_table/blocks/cherry_palisade.json
 2ebbd87222913dae07f33f16776b16d983d638f2 data/blockbox/loot_table/blocks/cherry_seat.json
 4ea86fe77a8377858192592b018fdb84ce1df3bf data/blockbox/loot_table/blocks/chiseled_gold.json
-d7e67450cf489e676f4f64b529674eb938a0dac4 data/blockbox/loot_table/blocks/clay_tiles.json
-e6abb48c72e0a5bdd748bc833fee522c7b8a99f7 data/blockbox/loot_table/blocks/clay_tile_slab.json
-74c7e64ab90a3f736d15ddb9b5e82ff9127872ed data/blockbox/loot_table/blocks/clay_tile_stairs.json
 5be0e6e99e2285f231880f691492eb68af841f37 data/blockbox/loot_table/blocks/copper_bars.json
 8151d5ea9e7bec036a407e79020b9f1dee889207 data/blockbox/loot_table/blocks/copper_pillar.json
 15dbb555b6c7d9254b60c21b41edf873be064a87 data/blockbox/loot_table/blocks/corrugated_iron_plate.json
@@ -62,7 +60,6 @@ d714399f9c82177f3f5e255104cd61e1339561c3 data/blockbox/loot_table/blocks/iron_pl
 57de244f3c8714288a32c99f3fdd8ab4491eb789 data/blockbox/loot_table/blocks/iron_tread_plate.json
 aac7fa2104bdb2da7e7ee6c3da8708a32660ef1c data/blockbox/loot_table/blocks/iron_tread_plate_slab.json
 44c440a4a297b734d5df68dc4395041799351b98 data/blockbox/loot_table/blocks/iron_tread_plate_stairs.json
-9778fb6515ad7539b4c6327ccc35e49cce3922f9 data/blockbox/loot_table/blocks/jagged_clay_tiles.json
 d67b9d6eef9143eb1818cfe624afd35bc879bdc1 data/blockbox/loot_table/blocks/jungle_palisade.json
 795875e0ad5c76cfa7b32315f626ae29c1f49edc data/blockbox/loot_table/blocks/jungle_seat.json
 b61e10f6b5ccbbdecbdfb16a49ddbae1971e22f1 data/blockbox/loot_table/blocks/lapis_lazuli_bricks.json
@@ -138,6 +135,9 @@ e1c00c4ca9ecb318da787a446b86a42c4ead9468 data/blockbox/loot_table/blocks/strippe
 d8bcf2c5f16f902467c3ff282e78a5e99acf1d65 data/blockbox/loot_table/blocks/stripped_spiked_warped_palisade.json
 0ca10c308a253fdc2c7dc5eddc3885dbdf9581a3 data/blockbox/loot_table/blocks/stripped_spruce_palisade.json
 bbe4d178da198b513c715754a9bfa27194310f65 data/blockbox/loot_table/blocks/stripped_warped_palisade.json
+4fc53ad5de70552220076b22838cf368dc478e92 data/blockbox/loot_table/blocks/tiles.json
+a9078332418081b2176570382a7e766bd609fe8c data/blockbox/loot_table/blocks/tile_slab.json
+9063e899e84bc0545737c6757e6abf68d29ff7c1 data/blockbox/loot_table/blocks/tile_stairs.json
 61d2462b9b327fc508a379db5f585a68ece7c228 data/blockbox/loot_table/blocks/warped_palisade.json
 b5219aff5ca65e00d7f3009902f4228bb5585c05 data/blockbox/loot_table/blocks/warped_seat.json
 bb9fa063a8fcccef0b19808608142d9e70ed50c4 data/blockbox/loot_table/blocks/waxed_copper_bars.json

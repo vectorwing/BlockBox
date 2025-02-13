@@ -67,10 +67,10 @@ public class ModItems
 	public static final Supplier<BlockItem> RED_SANDSTONE_BRICK_STAIRS = registerSimpleBlockItem("red_sandstone_brick_stairs", ModBlocks.RED_SANDSTONE_BRICK_STAIRS, Items.CUT_RED_SANDSTONE_SLAB);
 	public static final Supplier<BlockItem> RED_SANDSTONE_BRICK_SLAB = registerSimpleBlockItem("red_sandstone_brick_slab", ModBlocks.RED_SANDSTONE_BRICK_SLAB, Items.CUT_RED_SANDSTONE_SLAB);
 
-	public static final Supplier<BlockItem> CLAY_TILES = registerSimpleBlockItem("clay_tiles", ModBlocks.CLAY_TILES, Items.BRICK_WALL);
-	public static final Supplier<BlockItem> CLAY_TILE_STAIRS = registerSimpleBlockItem("clay_tile_stairs", ModBlocks.CLAY_TILE_STAIRS, Items.BRICK_WALL);
-	public static final Supplier<BlockItem> CLAY_TILE_SLAB = registerSimpleBlockItem("clay_tile_slab", ModBlocks.CLAY_TILE_SLAB, Items.BRICK_WALL);
-	public static final Supplier<BlockItem> JAGGED_CLAY_TILES = registerSimpleBlockItem("jagged_clay_tiles", ModBlocks.JAGGED_CLAY_TILES, Items.BRICK_WALL);
+	public static final Supplier<BlockItem> TILES = registerSimpleBlockItem("tiles", ModBlocks.TILES, Items.BRICK_WALL);
+	public static final Supplier<BlockItem> TILE_STAIRS = registerSimpleBlockItem("tile_stairs", ModBlocks.TILE_STAIRS, Items.BRICK_WALL);
+	public static final Supplier<BlockItem> TILE_SLAB = registerSimpleBlockItem("tile_slab", ModBlocks.TILE_SLAB, Items.BRICK_WALL);
+	public static final Supplier<BlockItem> BROKEN_TILE_MOSAIC = registerSimpleBlockItem("broken_tile_mosaic", ModBlocks.BROKEN_TILE_MOSAIC, Items.BRICK_WALL);
 
 	public static final Supplier<BlockItem> POLISHED_PACKED_ICE = registerSimpleBlockItem("polished_packed_ice", ModBlocks.POLISHED_PACKED_ICE, Items.CUT_RED_SANDSTONE_SLAB);
 	public static final Supplier<BlockItem> PACKED_ICE_BRICKS = registerSimpleBlockItem("packed_ice_bricks", ModBlocks.PACKED_ICE_BRICKS, Items.CUT_RED_SANDSTONE_SLAB);

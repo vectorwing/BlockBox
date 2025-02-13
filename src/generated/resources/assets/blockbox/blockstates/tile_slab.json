@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "blockbox:block/tile_slab"
+    },
+    "type=double": {
+      "model": "blockbox:block/tiles"
+    },
+    "type=top": {
+      "model": "blockbox:block/tile_slab_top"
+    }
+  }
+}

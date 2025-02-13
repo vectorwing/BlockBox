@@ -56,11 +56,11 @@ public class StonecuttingRecipes
 		stonecutting(output, ModItems.RED_SANDSTONE_BRICKS.get(), ModItems.RED_SANDSTONE_BRICK_STAIRS.get());
 		stonecutting(output, ModItems.RED_SANDSTONE_BRICKS.get(), ModItems.RED_SANDSTONE_BRICK_SLAB.get(), 2);
 
-		stonecutting(output, Items.TERRACOTTA, ModItems.CLAY_TILES.get());
-		stonecutting(output, Items.TERRACOTTA, ModItems.CLAY_TILE_STAIRS.get());
-		stonecutting(output, Items.TERRACOTTA, ModItems.CLAY_TILE_SLAB.get(), 2);
-		stonecutting(output, ModItems.CLAY_TILES.get(), ModItems.CLAY_TILE_STAIRS.get());
-		stonecutting(output, ModItems.CLAY_TILES.get(), ModItems.CLAY_TILE_SLAB.get(), 2);
+		stonecutting(output, Items.TERRACOTTA, ModItems.TILES.get());
+		stonecutting(output, Items.TERRACOTTA, ModItems.TILE_STAIRS.get());
+		stonecutting(output, Items.TERRACOTTA, ModItems.TILE_SLAB.get(), 2);
+		stonecutting(output, ModItems.TILES.get(), ModItems.TILE_STAIRS.get());
+		stonecutting(output, ModItems.TILES.get(), ModItems.TILE_SLAB.get(), 2);
 
 		stonecutting(output, Items.PACKED_ICE, ModItems.POLISHED_PACKED_ICE.get());
 		stonecutting(output, Items.PACKED_ICE, ModItems.PACKED_ICE_BRICKS.get());

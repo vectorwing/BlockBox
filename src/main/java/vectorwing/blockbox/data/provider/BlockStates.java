@@ -42,8 +42,8 @@ public class BlockStates extends BlockStateProvider
 		blockWithStairAndSlab(ModBlocks.SANDSTONE_BRICKS.get(), ModBlocks.SANDSTONE_BRICK_STAIRS.get(), ModBlocks.SANDSTONE_BRICK_SLAB.get());
 		blockWithStairAndSlab(ModBlocks.RED_SANDSTONE_BRICKS.get(), ModBlocks.RED_SANDSTONE_BRICK_STAIRS.get(), ModBlocks.RED_SANDSTONE_BRICK_SLAB.get());
 
-		blockWithStairAndSlab(ModBlocks.CLAY_TILES.get(), ModBlocks.CLAY_TILE_STAIRS.get(), ModBlocks.CLAY_TILE_SLAB.get());
-		simpleBlock(ModBlocks.JAGGED_CLAY_TILES.get());
+		blockWithStairAndSlab(ModBlocks.TILES.get(), ModBlocks.TILE_STAIRS.get(), ModBlocks.TILE_SLAB.get());
+		simpleBlock(ModBlocks.BROKEN_TILE_MOSAIC.get());
 //		blockWithVariations(ModBlocks.JAGGED_CLAY_TILES.get(), List.of("a", "b", "c"));
 
 		simpleBlock(ModBlocks.PACKED_SNOW.get());

@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_rough_glass": {
+    "has_terracotta": {
       "conditions": {
         "items": [
           {
-            "items": "blockbox:rough_glass"
+            "items": "minecraft:terracotta"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:glass_from_smelting_rough_glass"
+        "recipe": "blockbox:tile_slab_from_terracotta_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_rough_glass"
+      "has_terracotta"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:glass_from_smelting_rough_glass"
+      "blockbox:tile_slab_from_terracotta_stonecutting"
     ]
   }
 }

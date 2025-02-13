@@ -44,10 +44,10 @@ public class ModBlocks
 	public static final Supplier<Block> RED_SANDSTONE_BRICK_STAIRS = BLOCKS.register("red_sandstone_brick_stairs", () -> stair(ModBlocks.RED_SANDSTONE_BRICKS.get(), BlockBehaviour.Properties.ofFullCopy(Blocks.RED_SANDSTONE)));
 	public static final Supplier<Block> RED_SANDSTONE_BRICK_SLAB = BLOCKS.register("red_sandstone_brick_slab", () -> slab(BlockBehaviour.Properties.ofFullCopy(ModBlocks.RED_SANDSTONE_BRICKS.get())));
 
-	public static final Supplier<Block> CLAY_TILES = BLOCKS.registerSimpleBlock("clay_tiles", BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS));
-	public static final Supplier<Block> CLAY_TILE_STAIRS = BLOCKS.register("clay_tile_stairs", () -> stair(ModBlocks.CLAY_TILES.get(), BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
-	public static final Supplier<Block> CLAY_TILE_SLAB = BLOCKS.register("clay_tile_slab", () -> slab(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
-	public static final Supplier<Block> JAGGED_CLAY_TILES = BLOCKS.registerSimpleBlock("jagged_clay_tiles", BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS));
+	public static final Supplier<Block> TILES = BLOCKS.registerSimpleBlock("tiles", BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS));
+	public static final Supplier<Block> TILE_STAIRS = BLOCKS.register("tile_stairs", () -> stair(ModBlocks.TILES.get(), BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
+	public static final Supplier<Block> TILE_SLAB = BLOCKS.register("tile_slab", () -> slab(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
+	public static final Supplier<Block> BROKEN_TILE_MOSAIC = BLOCKS.registerSimpleBlock("broken_tile_mosaic", BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS));
 
 	public static final Supplier<Block> PACKED_SNOW = BLOCKS.register("packed_snow", () -> new PackedSnowBlock(PROPERTIES_PACKED_SNOW));
 	public static final Supplier<Block> CARVED_SNOW = BLOCKS.register("carved_snow", () -> new CarvedSnowBlock(PROPERTIES_PACKED_SNOW));

@@ -60,10 +60,10 @@
   "block.blockbox.red_sandstone_brick_stairs": "Red Sandstone Brick Stairs",
   "block.blockbox.red_sandstone_brick_slab": "Red Sandstone Brick Slab",
 
-  "block.blockbox.clay_tiles": "Clay Tiles",
-  "block.blockbox.clay_tile_stairs": "Clay Tile Stairs",
-  "block.blockbox.clay_tile_slab": "Clay Tile Slab",
-  "block.blockbox.jagged_clay_tiles": "Jagged Clay Tiles",
+  "block.blockbox.tiles": "Tiles",
+  "block.blockbox.tile_stairs": "Tile Stairs",
+  "block.blockbox.tile_slab": "Tile Slab",
+  "block.blockbox.broken_tile_mosaic": "Broken Tile Mosaic",
 
   "block.blockbox.packed_snow": "Packed Snow",
   "block.blockbox.carved_snow": "\"Carved\" Snow",
@@ -229,10 +229,10 @@
   "item.blockbox.red_sandstone_brick_stairs": "Red Sandstone Brick Stairs",
   "item.blockbox.red_sandstone_brick_slab": "Red Sandstone Brick Slab",
 
-  "item.blockbox.clay_tiles": "Clay Tiles",
-  "item.blockbox.clay_tile_stairs": "Clay Tile Stairs",
-  "item.blockbox.clay_tile_slab": "Clay Tile Slab",
-  "item.blockbox.jagged_clay_tiles": "Jagged Clay Tiles",
+  "item.blockbox.tiles": "Tiles",
+  "item.blockbox.tile_stairs": "Tile Stairs",
+  "item.blockbox.tile_slab": "Tile Slab",
+  "item.blockbox.broken_tile_mosaic": "Broken Tile Mosaic",
 
   "item.blockbox.packed_snow": "Packed Snow",
   "item.blockbox.carved_snow": "\"Carved\" Snow",

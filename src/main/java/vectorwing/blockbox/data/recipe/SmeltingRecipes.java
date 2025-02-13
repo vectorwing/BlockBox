@@ -13,11 +13,11 @@ import vectorwing.blockbox.data.provider.Recipes;
 public class SmeltingRecipes
 {
 	public static void register(RecipeOutput output) {
-		SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModBlocks.CLAY_TILES.get()), RecipeCategory.BUILDING_BLOCKS, ModItems.JAGGED_CLAY_TILES.get(), 0.1F, 200)
-				.unlockedBy("has_clay_tiles", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.CLAY_TILES.get()))
+		SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModBlocks.TILES.get()), RecipeCategory.BUILDING_BLOCKS, ModItems.BROKEN_TILE_MOSAIC.get(), 0.1F, 200)
+				.unlockedBy("has_tiles", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.TILES.get()))
 				.save(output);
 		SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModBlocks.ROUGH_GLASS.get()), RecipeCategory.BUILDING_BLOCKS, Items.GLASS, 0.1F, 200)
-				.unlockedBy("has_clay_tiles", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.CLAY_TILES.get()))
+				.unlockedBy("has_rough_glass", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.ROUGH_GLASS.get()))
 				.save(output, Recipes.itemName(Items.GLASS) + "_from_smelting_rough_glass");
 	}
 }
