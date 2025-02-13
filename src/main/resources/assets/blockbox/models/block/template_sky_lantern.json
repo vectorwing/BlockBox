@@ -39,7 +39,7 @@
 			"rotation": {"angle": -45, "axis": "y", "origin": [8, 2, 8]},
 			"faces": {
 				"north": {"uv": [0, 5, 1, 6], "texture": "#candle"},
-				"south": {"uv": [0, 5, 1, 6], "texture": "#candle"}]
+				"south": {"uv": [0, 5, 1, 6], "texture": "#candle"}
 			}
 		},
 		{
