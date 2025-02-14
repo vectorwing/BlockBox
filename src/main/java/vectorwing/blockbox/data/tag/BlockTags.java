@@ -9,6 +9,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import vectorwing.blockbox.BlockBox;
 import vectorwing.blockbox.common.registry.ModBlocks;
+import vectorwing.blockbox.common.tag.CompatibilityTags;
 import vectorwing.blockbox.common.tag.ModTags;
 
 import java.util.concurrent.CompletableFuture;
@@ -24,7 +25,12 @@ public class BlockTags extends BlockTagsProvider
 		this.registerMinecraftTags();
 		this.registerModTags();
 		this.registerCommonTags();
+		this.registerCompatibilityTags();
 		this.registerBlockMineables();
+	}
+
+	private void registerCompatibilityTags() {
+		tag(CompatibilityTags.FARMERS_DELIGHT_TRAY_HEAT_SOURCES).addTag(ModTags.BRAZIERS);
 	}
 
 	private void registerMinecraftTags() {

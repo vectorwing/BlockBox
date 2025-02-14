@@ -18,22 +18,6 @@ public class BlockBox
 	public BlockBox(IEventBus modEventBus, ModContainer modContainer) {
 		modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
 
-		ModBlocks.BLOCKS.addAlias(ResourceLocation.fromNamespaceAndPath(BlockBox.MODID, "clay_tiles"), ResourceLocation.fromNamespaceAndPath(BlockBox.MODID, "tiles"));
-		ModBlocks.BLOCKS.addAlias(ResourceLocation.fromNamespaceAndPath(BlockBox.MODID, "clay_tile_stairs"), ResourceLocation.fromNamespaceAndPath(BlockBox.MODID, "tile_stairs"));
-		ModBlocks.BLOCKS.addAlias(ResourceLocation.fromNamespaceAndPath(BlockBox.MODID, "clay_tile_slab"), ResourceLocation.fromNamespaceAndPath(BlockBox.MODID, "tile_slab"));
-		ModBlocks.BLOCKS.addAlias(ResourceLocation.fromNamespaceAndPath(BlockBox.MODID, "jagged_clay_tiles"), ResourceLocation.fromNamespaceAndPath(BlockBox.MODID, "broken_tile_mosaic"));
-		ModBlocks.BLOCKS.addAlias(ResourceLocation.fromNamespaceAndPath(BlockBox.MODID, "chiseled_amethyst"), ResourceLocation.fromNamespaceAndPath(BlockBox.MODID, "amethyst_mosaic"));
-		ModBlocks.BLOCKS.addAlias(ResourceLocation.fromNamespaceAndPath(BlockBox.MODID, "chiseled_amethyst_stairs"), ResourceLocation.fromNamespaceAndPath(BlockBox.MODID, "amethyst_mosaic_stairs"));
-		ModBlocks.BLOCKS.addAlias(ResourceLocation.fromNamespaceAndPath(BlockBox.MODID, "chiseled_amethyst_slab"), ResourceLocation.fromNamespaceAndPath(BlockBox.MODID, "amethyst_mosaic_slab"));
-
-		ModItems.ITEMS.addAlias(ResourceLocation.fromNamespaceAndPath(BlockBox.MODID, "clay_tiles"), ResourceLocation.fromNamespaceAndPath(BlockBox.MODID, "tiles"));
-		ModItems.ITEMS.addAlias(ResourceLocation.fromNamespaceAndPath(BlockBox.MODID, "clay_tile_stairs"), ResourceLocation.fromNamespaceAndPath(BlockBox.MODID, "tile_stairs"));
-		ModItems.ITEMS.addAlias(ResourceLocation.fromNamespaceAndPath(BlockBox.MODID, "clay_tile_slab"), ResourceLocation.fromNamespaceAndPath(BlockBox.MODID, "tile_slab"));
-		ModItems.ITEMS.addAlias(ResourceLocation.fromNamespaceAndPath(BlockBox.MODID, "jagged_clay_tiles"), ResourceLocation.fromNamespaceAndPath(BlockBox.MODID, "broken_tile_mosaic"));
-		ModItems.ITEMS.addAlias(ResourceLocation.fromNamespaceAndPath(BlockBox.MODID, "chiseled_amethyst"), ResourceLocation.fromNamespaceAndPath(BlockBox.MODID, "amethyst_mosaic"));
-		ModItems.ITEMS.addAlias(ResourceLocation.fromNamespaceAndPath(BlockBox.MODID, "chiseled_amethyst_stairs"), ResourceLocation.fromNamespaceAndPath(BlockBox.MODID, "amethyst_mosaic_stairs"));
-		ModItems.ITEMS.addAlias(ResourceLocation.fromNamespaceAndPath(BlockBox.MODID, "chiseled_amethyst_slab"), ResourceLocation.fromNamespaceAndPath(BlockBox.MODID, "amethyst_mosaic_slab"));
-
 		ModBlocks.BLOCKS.register(modEventBus);
 		ModItems.ITEMS.register(modEventBus);
 		ModEntityTypes.ENTITY_TYPES.register(modEventBus);
