@@ -5,6 +5,8 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import org.jetbrains.annotations.NotNull;
+import vectorwing.blockbox.common.registry.ModBlocks;
 import vectorwing.blockbox.common.registry.ModItems;
 import vectorwing.blockbox.common.tag.ModTags;
 
@@ -18,12 +20,69 @@ public class ItemTags extends ItemTagsProvider
 	}
 
 	@Override
-	protected void addTags(HolderLookup.Provider provider) {
+	protected void addTags(HolderLookup.@NotNull Provider provider) {
 		registerMinecraftTags();
 		registerModTags();
 	}
 
 	private void registerModTags() {
+		tag(ModTags.PALISADE_ITEMS).add(
+				ModItems.OAK_PALISADE.get(),
+				ModItems.SPRUCE_PALISADE.get(),
+				ModItems.BIRCH_PALISADE.get(),
+				ModItems.JUNGLE_PALISADE.get(),
+				ModItems.ACACIA_PALISADE.get(),
+				ModItems.DARK_OAK_PALISADE.get(),
+				ModItems.MANGROVE_PALISADE.get(),
+				ModItems.CHERRY_PALISADE.get(),
+				ModItems.CRIMSON_PALISADE.get(),
+				ModItems.WARPED_PALISADE.get(),
+				ModItems.STRIPPED_OAK_PALISADE.get(),
+				ModItems.STRIPPED_SPRUCE_PALISADE.get(),
+				ModItems.STRIPPED_BIRCH_PALISADE.get(),
+				ModItems.STRIPPED_JUNGLE_PALISADE.get(),
+				ModItems.STRIPPED_ACACIA_PALISADE.get(),
+				ModItems.STRIPPED_DARK_OAK_PALISADE.get(),
+				ModItems.STRIPPED_MANGROVE_PALISADE.get(),
+				ModItems.STRIPPED_CHERRY_PALISADE.get(),
+				ModItems.STRIPPED_CRIMSON_PALISADE.get(),
+				ModItems.STRIPPED_WARPED_PALISADE.get()
+		);
+		tag(ModTags.SPIKED_PALISADE_ITEMS).add(
+				ModItems.SPIKED_OAK_PALISADE.get(),
+				ModItems.SPIKED_SPRUCE_PALISADE.get(),
+				ModItems.SPIKED_BIRCH_PALISADE.get(),
+				ModItems.SPIKED_JUNGLE_PALISADE.get(),
+				ModItems.SPIKED_ACACIA_PALISADE.get(),
+				ModItems.SPIKED_DARK_OAK_PALISADE.get(),
+				ModItems.SPIKED_MANGROVE_PALISADE.get(),
+				ModItems.SPIKED_CHERRY_PALISADE.get(),
+				ModItems.SPIKED_CRIMSON_PALISADE.get(),
+				ModItems.SPIKED_WARPED_PALISADE.get(),
+				ModItems.STRIPPED_SPIKED_OAK_PALISADE.get(),
+				ModItems.STRIPPED_SPIKED_SPRUCE_PALISADE.get(),
+				ModItems.STRIPPED_SPIKED_BIRCH_PALISADE.get(),
+				ModItems.STRIPPED_SPIKED_JUNGLE_PALISADE.get(),
+				ModItems.STRIPPED_SPIKED_ACACIA_PALISADE.get(),
+				ModItems.STRIPPED_SPIKED_DARK_OAK_PALISADE.get(),
+				ModItems.STRIPPED_SPIKED_MANGROVE_PALISADE.get(),
+				ModItems.STRIPPED_SPIKED_CHERRY_PALISADE.get(),
+				ModItems.STRIPPED_SPIKED_CRIMSON_PALISADE.get(),
+				ModItems.STRIPPED_SPIKED_WARPED_PALISADE.get()
+		);
+		tag(ModTags.WOODEN_SEAT_ITEMS).add(
+				ModItems.OAK_SEAT.get(),
+				ModItems.SPRUCE_SEAT.get(),
+				ModItems.BIRCH_SEAT.get(),
+				ModItems.JUNGLE_SEAT.get(),
+				ModItems.ACACIA_SEAT.get(),
+				ModItems.DARK_OAK_SEAT.get(),
+				ModItems.MANGROVE_SEAT.get(),
+				ModItems.CHERRY_SEAT.get(),
+				ModItems.BAMBOO_SEAT.get(),
+				ModItems.CRIMSON_SEAT.get(),
+				ModItems.WARPED_SEAT.get()
+		);
 		tag(ModTags.GOLDEN_BLOCK_ITEMS).add(
 				ModItems.CHISELED_GOLD.get(),
 				ModItems.GOLDEN_TILES.get(),

@@ -31,6 +31,15 @@ public class ModTags
 	// Blocks that are made out of Gold.
 	public static final TagKey<Block> GOLDEN_BLOCKS = modBlockTag("golden_blocks");
 
+	// Item forms of palisades.
+	public static final TagKey<Item> PALISADE_ITEMS = modItemTag("palisades");
+
+	// Item forms of spiked palisades.
+	public static final TagKey<Item> SPIKED_PALISADE_ITEMS = modItemTag("spiked_palisades");
+
+	// Item forms of seats.
+	public static final TagKey<Item> WOODEN_SEAT_ITEMS = modItemTag("wooden_seats");
+
 	// Item forms of blocks made out of Gold.
 	public static final TagKey<Item> GOLDEN_BLOCK_ITEMS = modItemTag("golden_blocks");
 

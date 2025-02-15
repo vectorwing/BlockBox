@@ -1,0 +1,13 @@
+{
+  "values": {
+    "#blockbox:palisades": {
+      "burn_time": 150
+    },
+    "#blockbox:spiked_palisades": {
+      "burn_time": 150
+    },
+    "#blockbox:wooden_seats": {
+      "burn_time": 200
+    }
+  }
+}
