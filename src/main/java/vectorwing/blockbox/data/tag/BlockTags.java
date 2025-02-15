@@ -296,7 +296,7 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.LAPIS_LAZULI_MOSAIC.get(),
 				ModBlocks.BRAZIER.get(),
 				ModBlocks.SOUL_BRAZIER.get()
-		);
+		).remove(ModTags.PALISADES).remove(ModTags.SPIKED_PALISADES);
 		tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_AXE)
 				.addTag(ModTags.PALISADES)
 				.addTag(ModTags.SPIKED_PALISADES)
