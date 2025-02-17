@@ -9,6 +9,7 @@
 - Fix Palisades being tagged as `mineable/pickaxe` due to being tagged as `walls`;
 
 ### Translations
+- Removed unneeded `item` lang lines on all translations, as BlockItems use the `block` lang;
 - Added:
   - es_mx (thanks, cerealconjugo!);
   - ja_jp (thanks, Abbage230!);
