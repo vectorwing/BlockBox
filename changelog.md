@@ -8,6 +8,13 @@
 ### Fixes
 - Fix Palisades being tagged as `mineable/pickaxe` due to being tagged as `walls`;
 
+### Translations
+- Added:
+  - es_mx (thanks, cerealconjugo!);
+  - ja_jp (thanks, Abbage230!);
+  - uk_ua (thanks, TheGridExpert!);
+  - zh_cn (thanks, NumberSir!);
+
 ## 0.1.0
 
 Initial release
