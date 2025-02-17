@@ -13,6 +13,7 @@
 - Added:
   - es_mx (thanks, cerealconjugo!);
   - ja_jp (thanks, Abbage230!);
+  - ru_ru (thanks, mpustovoi!);
   - uk_ua (thanks, TheGridExpert!);
   - zh_cn (thanks, NumberSir!);
 
