@@ -33,6 +33,7 @@ import net.neoforged.neoforge.common.Tags;
 import org.jetbrains.annotations.NotNull;
 import vectorwing.blockbox.common.block.state.PalisadeConnection;
 import vectorwing.blockbox.common.registry.ModBlocks;
+import vectorwing.blockbox.common.registry.ModSounds;
 import vectorwing.blockbox.common.tag.ModTags;
 
 import javax.annotation.Nullable;
@@ -91,8 +92,7 @@ public class PalisadeBlock extends CrossCollisionBlock implements SimpleWaterlog
 			return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
 		}
 		if (stack.canPerformAction(ItemAbilities.SWORD_DIG) && level.getBlockState(pos.above()).isAir()) {
-			level.playSound(null, pos, SoundEvents.WOOD_BREAK, SoundSource.BLOCKS, 1.0F, 0.8F);
-			level.playSound(null, pos, SoundEvents.AXE_STRIP, SoundSource.BLOCKS, 1.0F, 1.0F);
+			level.playSound(null, pos, ModSounds.ITEM_SWORD_CARVE.get(), SoundSource.BLOCKS, 1.0F, 0.9F);
 			level.addDestroyBlockEffect(pos, state);
 			stack.hurtAndBreak(2, player, LivingEntity.getSlotForHand(hand));
 			level.setBlock(pos, spikedForm.get().defaultBlockState()

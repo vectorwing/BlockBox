@@ -1,0 +1,11 @@
+{
+  "item.sword.carve": {
+    "subtitle": "blockbox.subtitles.sword.carve",
+    "sounds": [
+      {
+        "name": "item.axe.strip",
+        "type": "event"
+      }
+    ]
+  }
+}

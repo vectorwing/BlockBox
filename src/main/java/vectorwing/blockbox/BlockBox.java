@@ -21,6 +21,7 @@ public class BlockBox
 		ModBlocks.BLOCKS.register(modEventBus);
 		ModItems.ITEMS.register(modEventBus);
 		ModEntityTypes.ENTITY_TYPES.register(modEventBus);
+		ModSounds.SOUNDS.register(modEventBus);
 		ModParticleTypes.PARTICLE_TYPES.register(modEventBus);
 		ModCreativeTabs.CREATIVE_MODE_TABS.register(modEventBus);
 	}
