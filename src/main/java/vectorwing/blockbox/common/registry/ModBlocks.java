@@ -10,6 +10,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import vectorwing.blockbox.BlockBox;
 import vectorwing.blockbox.common.block.*;
 
+import javax.annotation.Nullable;
 import java.util.function.Supplier;
 import java.util.function.ToIntFunction;
 
@@ -139,47 +140,47 @@ public class ModBlocks
 	public static final Supplier<Block> CRIMSON_SEAT = BLOCKS.register("crimson_seat", () -> new SeatBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRIMSON_PLANKS)));
 	public static final Supplier<Block> WARPED_SEAT = BLOCKS.register("warped_seat", () -> new SeatBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS)));
 
-	public static final Supplier<Block> OAK_PALISADE = BLOCKS.register("oak_palisade", () -> new PalisadeBlock(ModBlocks.STRIPPED_OAK_PALISADE, PROPERTIES_PALISADE.mapColor(MapColor.WOOD)));
-	public static final Supplier<Block> SPIKED_OAK_PALISADE = BLOCKS.register("spiked_oak_palisade", () -> new SpikedPalisadeBlock(ModBlocks.STRIPPED_SPIKED_OAK_PALISADE, PROPERTIES_PALISADE.mapColor(MapColor.WOOD)));
-	public static final Supplier<Block> SPRUCE_PALISADE = BLOCKS.register("spruce_palisade", () -> new PalisadeBlock(ModBlocks.STRIPPED_SPRUCE_PALISADE, PROPERTIES_PALISADE.mapColor(MapColor.PODZOL)));
-	public static final Supplier<Block> SPIKED_SPRUCE_PALISADE = BLOCKS.register("spiked_spruce_palisade", () -> new SpikedPalisadeBlock(ModBlocks.STRIPPED_SPIKED_SPRUCE_PALISADE, PROPERTIES_PALISADE.mapColor(MapColor.PODZOL)));
-	public static final Supplier<Block> BIRCH_PALISADE = BLOCKS.register("birch_palisade", () -> new PalisadeBlock(ModBlocks.STRIPPED_BIRCH_PALISADE, PROPERTIES_PALISADE.mapColor(MapColor.SAND)));
-	public static final Supplier<Block> SPIKED_BIRCH_PALISADE = BLOCKS.register("spiked_birch_palisade", () -> new SpikedPalisadeBlock(ModBlocks.STRIPPED_SPIKED_BIRCH_PALISADE, PROPERTIES_PALISADE.mapColor(MapColor.SAND)));
-	public static final Supplier<Block> JUNGLE_PALISADE = BLOCKS.register("jungle_palisade", () -> new PalisadeBlock(ModBlocks.STRIPPED_JUNGLE_PALISADE, PROPERTIES_PALISADE.mapColor(MapColor.DIRT)));
-	public static final Supplier<Block> SPIKED_JUNGLE_PALISADE = BLOCKS.register("spiked_jungle_palisade", () -> new SpikedPalisadeBlock(ModBlocks.STRIPPED_SPIKED_JUNGLE_PALISADE, PROPERTIES_PALISADE.mapColor(MapColor.DIRT)));
-	public static final Supplier<Block> ACACIA_PALISADE = BLOCKS.register("acacia_palisade", () -> new PalisadeBlock(ModBlocks.STRIPPED_ACACIA_PALISADE, PROPERTIES_PALISADE.mapColor(MapColor.COLOR_ORANGE)));
-	public static final Supplier<Block> SPIKED_ACACIA_PALISADE = BLOCKS.register("spiked_acacia_palisade", () -> new SpikedPalisadeBlock(ModBlocks.STRIPPED_SPIKED_ACACIA_PALISADE, PROPERTIES_PALISADE.mapColor(MapColor.COLOR_ORANGE)));
-	public static final Supplier<Block> DARK_OAK_PALISADE = BLOCKS.register("dark_oak_palisade", () -> new PalisadeBlock(ModBlocks.STRIPPED_DARK_OAK_PALISADE, PROPERTIES_PALISADE.mapColor(MapColor.COLOR_BROWN)));
-	public static final Supplier<Block> SPIKED_DARK_OAK_PALISADE = BLOCKS.register("spiked_dark_oak_palisade", () -> new SpikedPalisadeBlock(ModBlocks.STRIPPED_SPIKED_DARK_OAK_PALISADE, PROPERTIES_PALISADE.mapColor(MapColor.COLOR_BROWN)));
-	public static final Supplier<Block> MANGROVE_PALISADE = BLOCKS.register("mangrove_palisade", () -> new PalisadeBlock(ModBlocks.STRIPPED_MANGROVE_PALISADE, PROPERTIES_PALISADE.mapColor(MapColor.COLOR_RED)));
-	public static final Supplier<Block> SPIKED_MANGROVE_PALISADE = BLOCKS.register("spiked_mangrove_palisade", () -> new SpikedPalisadeBlock(ModBlocks.STRIPPED_SPIKED_MANGROVE_PALISADE, PROPERTIES_PALISADE.mapColor(MapColor.COLOR_RED)));
-	public static final Supplier<Block> CHERRY_PALISADE = BLOCKS.register("cherry_palisade", () -> new PalisadeBlock(ModBlocks.STRIPPED_CHERRY_PALISADE, PROPERTIES_PALISADE.mapColor(MapColor.TERRACOTTA_WHITE).sound(SoundType.CHERRY_WOOD)));
-	public static final Supplier<Block> SPIKED_CHERRY_PALISADE = BLOCKS.register("spiked_cherry_palisade", () -> new SpikedPalisadeBlock(ModBlocks.STRIPPED_SPIKED_CHERRY_PALISADE, PROPERTIES_PALISADE.mapColor(MapColor.TERRACOTTA_WHITE).sound(SoundType.CHERRY_WOOD)));
-	public static final Supplier<Block> CRIMSON_PALISADE = BLOCKS.register("crimson_palisade", () -> new PalisadeBlock(ModBlocks.STRIPPED_CRIMSON_PALISADE, PROPERTIES_NETHER_PALISADE.mapColor(MapColor.CRIMSON_STEM)));
-	public static final Supplier<Block> SPIKED_CRIMSON_PALISADE = BLOCKS.register("spiked_crimson_palisade", () -> new SpikedPalisadeBlock(ModBlocks.STRIPPED_SPIKED_CRIMSON_PALISADE, PROPERTIES_NETHER_PALISADE.mapColor(MapColor.CRIMSON_STEM)));
-	public static final Supplier<Block> WARPED_PALISADE = BLOCKS.register("warped_palisade", () -> new PalisadeBlock(ModBlocks.STRIPPED_WARPED_PALISADE, PROPERTIES_NETHER_PALISADE.mapColor(MapColor.WARPED_STEM)));
-	public static final Supplier<Block> SPIKED_WARPED_PALISADE = BLOCKS.register("spiked_warped_palisade", () -> new SpikedPalisadeBlock(ModBlocks.STRIPPED_SPIKED_WARPED_PALISADE, PROPERTIES_NETHER_PALISADE.mapColor(MapColor.WARPED_STEM)));
+	public static final Supplier<Block> OAK_PALISADE = BLOCKS.register("oak_palisade", () -> palisade(ModBlocks.SPIKED_OAK_PALISADE, ModBlocks.STRIPPED_OAK_PALISADE, MapColor.WOOD));
+	public static final Supplier<Block> SPIKED_OAK_PALISADE = BLOCKS.register("spiked_oak_palisade", () -> spikedPalisade(ModBlocks.STRIPPED_SPIKED_OAK_PALISADE, MapColor.WOOD));
+	public static final Supplier<Block> SPRUCE_PALISADE = BLOCKS.register("spruce_palisade", () -> palisade(ModBlocks.SPIKED_SPRUCE_PALISADE, ModBlocks.STRIPPED_SPRUCE_PALISADE, MapColor.PODZOL));
+	public static final Supplier<Block> SPIKED_SPRUCE_PALISADE = BLOCKS.register("spiked_spruce_palisade", () -> spikedPalisade(ModBlocks.STRIPPED_SPIKED_SPRUCE_PALISADE, MapColor.PODZOL));
+	public static final Supplier<Block> BIRCH_PALISADE = BLOCKS.register("birch_palisade", () -> palisade(ModBlocks.SPIKED_BIRCH_PALISADE, ModBlocks.STRIPPED_BIRCH_PALISADE, MapColor.SAND));
+	public static final Supplier<Block> SPIKED_BIRCH_PALISADE = BLOCKS.register("spiked_birch_palisade", () -> spikedPalisade(ModBlocks.STRIPPED_SPIKED_BIRCH_PALISADE, MapColor.SAND));
+	public static final Supplier<Block> JUNGLE_PALISADE = BLOCKS.register("jungle_palisade", () -> palisade(ModBlocks.SPIKED_JUNGLE_PALISADE, ModBlocks.STRIPPED_JUNGLE_PALISADE, MapColor.DIRT));
+	public static final Supplier<Block> SPIKED_JUNGLE_PALISADE = BLOCKS.register("spiked_jungle_palisade", () -> spikedPalisade(ModBlocks.STRIPPED_SPIKED_JUNGLE_PALISADE, MapColor.DIRT));
+	public static final Supplier<Block> ACACIA_PALISADE = BLOCKS.register("acacia_palisade", () -> palisade(ModBlocks.SPIKED_ACACIA_PALISADE, ModBlocks.STRIPPED_ACACIA_PALISADE, MapColor.COLOR_ORANGE));
+	public static final Supplier<Block> SPIKED_ACACIA_PALISADE = BLOCKS.register("spiked_acacia_palisade", () -> spikedPalisade(ModBlocks.STRIPPED_SPIKED_ACACIA_PALISADE, MapColor.COLOR_ORANGE));
+	public static final Supplier<Block> DARK_OAK_PALISADE = BLOCKS.register("dark_oak_palisade", () -> palisade(ModBlocks.SPIKED_DARK_OAK_PALISADE, ModBlocks.STRIPPED_DARK_OAK_PALISADE, MapColor.COLOR_BROWN));
+	public static final Supplier<Block> SPIKED_DARK_OAK_PALISADE = BLOCKS.register("spiked_dark_oak_palisade", () -> spikedPalisade(ModBlocks.STRIPPED_SPIKED_DARK_OAK_PALISADE, MapColor.COLOR_BROWN));
+	public static final Supplier<Block> MANGROVE_PALISADE = BLOCKS.register("mangrove_palisade", () -> palisade(ModBlocks.SPIKED_MANGROVE_PALISADE, ModBlocks.STRIPPED_MANGROVE_PALISADE, MapColor.COLOR_RED));
+	public static final Supplier<Block> SPIKED_MANGROVE_PALISADE = BLOCKS.register("spiked_mangrove_palisade", () -> spikedPalisade(ModBlocks.STRIPPED_SPIKED_MANGROVE_PALISADE, MapColor.COLOR_RED));
+	public static final Supplier<Block> CHERRY_PALISADE = BLOCKS.register("cherry_palisade", () -> palisade(ModBlocks.SPIKED_CHERRY_PALISADE, ModBlocks.STRIPPED_CHERRY_PALISADE, MapColor.TERRACOTTA_WHITE, SoundType.CHERRY_WOOD));
+	public static final Supplier<Block> SPIKED_CHERRY_PALISADE = BLOCKS.register("spiked_cherry_palisade", () -> spikedPalisade(ModBlocks.STRIPPED_SPIKED_CHERRY_PALISADE, MapColor.TERRACOTTA_WHITE, SoundType.CHERRY_WOOD));
+	public static final Supplier<Block> CRIMSON_PALISADE = BLOCKS.register("crimson_palisade", () -> netherPalisade(ModBlocks.SPIKED_CRIMSON_PALISADE, ModBlocks.STRIPPED_CRIMSON_PALISADE, MapColor.CRIMSON_STEM));
+	public static final Supplier<Block> SPIKED_CRIMSON_PALISADE = BLOCKS.register("spiked_crimson_palisade", () -> netherSpikedPalisade(ModBlocks.STRIPPED_SPIKED_CRIMSON_PALISADE, MapColor.CRIMSON_STEM));
+	public static final Supplier<Block> WARPED_PALISADE = BLOCKS.register("warped_palisade", () -> netherPalisade(ModBlocks.SPIKED_WARPED_PALISADE, ModBlocks.STRIPPED_WARPED_PALISADE, MapColor.WARPED_STEM));
+	public static final Supplier<Block> SPIKED_WARPED_PALISADE = BLOCKS.register("spiked_warped_palisade", () -> netherSpikedPalisade(ModBlocks.STRIPPED_SPIKED_WARPED_PALISADE, MapColor.WARPED_STEM));
 
-	public static final Supplier<Block> STRIPPED_OAK_PALISADE = BLOCKS.register("stripped_oak_palisade", () -> palisade(MapColor.WOOD));
-	public static final Supplier<Block> STRIPPED_SPIKED_OAK_PALISADE = BLOCKS.register("stripped_spiked_oak_palisade", () -> spikedPalisade(MapColor.WOOD));
-	public static final Supplier<Block> STRIPPED_SPRUCE_PALISADE = BLOCKS.register("stripped_spruce_palisade", () -> palisade(MapColor.PODZOL));
-	public static final Supplier<Block> STRIPPED_SPIKED_SPRUCE_PALISADE = BLOCKS.register("stripped_spiked_spruce_palisade", () -> spikedPalisade(MapColor.PODZOL));
-	public static final Supplier<Block> STRIPPED_BIRCH_PALISADE = BLOCKS.register("stripped_birch_palisade", () -> palisade(MapColor.SAND));
-	public static final Supplier<Block> STRIPPED_SPIKED_BIRCH_PALISADE = BLOCKS.register("stripped_spiked_birch_palisade", () -> spikedPalisade(MapColor.SAND));
-	public static final Supplier<Block> STRIPPED_JUNGLE_PALISADE = BLOCKS.register("stripped_jungle_palisade", () -> palisade(MapColor.DIRT));
-	public static final Supplier<Block> STRIPPED_SPIKED_JUNGLE_PALISADE = BLOCKS.register("stripped_spiked_jungle_palisade", () -> spikedPalisade(MapColor.DIRT));
-	public static final Supplier<Block> STRIPPED_ACACIA_PALISADE = BLOCKS.register("stripped_acacia_palisade", () -> palisade(MapColor.COLOR_ORANGE));
-	public static final Supplier<Block> STRIPPED_SPIKED_ACACIA_PALISADE = BLOCKS.register("stripped_spiked_acacia_palisade", () -> spikedPalisade(MapColor.COLOR_ORANGE));
-	public static final Supplier<Block> STRIPPED_DARK_OAK_PALISADE = BLOCKS.register("stripped_dark_oak_palisade", () -> palisade(MapColor.COLOR_BROWN));
-	public static final Supplier<Block> STRIPPED_SPIKED_DARK_OAK_PALISADE = BLOCKS.register("stripped_spiked_dark_oak_palisade", () -> spikedPalisade(MapColor.COLOR_BROWN));
-	public static final Supplier<Block> STRIPPED_MANGROVE_PALISADE = BLOCKS.register("stripped_mangrove_palisade", () -> palisade(MapColor.COLOR_RED));
-	public static final Supplier<Block> STRIPPED_SPIKED_MANGROVE_PALISADE = BLOCKS.register("stripped_spiked_mangrove_palisade", () -> spikedPalisade(MapColor.COLOR_RED));
-	public static final Supplier<Block> STRIPPED_CHERRY_PALISADE = BLOCKS.register("stripped_cherry_palisade", () -> palisade(MapColor.TERRACOTTA_WHITE, SoundType.CHERRY_WOOD));
-	public static final Supplier<Block> STRIPPED_SPIKED_CHERRY_PALISADE = BLOCKS.register("stripped_spiked_cherry_palisade", () -> spikedPalisade(MapColor.TERRACOTTA_WHITE, SoundType.CHERRY_WOOD));
-	public static final Supplier<Block> STRIPPED_CRIMSON_PALISADE = BLOCKS.register("stripped_crimson_palisade", () -> netherPalisade(MapColor.CRIMSON_STEM));
-	public static final Supplier<Block> STRIPPED_SPIKED_CRIMSON_PALISADE = BLOCKS.register("stripped_spiked_crimson_palisade", () -> netherSpikedPalisade(MapColor.CRIMSON_STEM));
-	public static final Supplier<Block> STRIPPED_WARPED_PALISADE = BLOCKS.register("stripped_warped_palisade", () -> netherPalisade(MapColor.WARPED_STEM));
-	public static final Supplier<Block> STRIPPED_SPIKED_WARPED_PALISADE = BLOCKS.register("stripped_spiked_warped_palisade", () -> netherSpikedPalisade(MapColor.WARPED_STEM));
+	public static final Supplier<Block> STRIPPED_OAK_PALISADE = BLOCKS.register("stripped_oak_palisade", () -> palisade(ModBlocks.STRIPPED_SPIKED_OAK_PALISADE, null, MapColor.WOOD));
+	public static final Supplier<Block> STRIPPED_SPIKED_OAK_PALISADE = BLOCKS.register("stripped_spiked_oak_palisade", () -> spikedPalisade(null, MapColor.WOOD));
+	public static final Supplier<Block> STRIPPED_SPRUCE_PALISADE = BLOCKS.register("stripped_spruce_palisade", () -> palisade(ModBlocks.STRIPPED_SPIKED_SPRUCE_PALISADE, null, MapColor.PODZOL));
+	public static final Supplier<Block> STRIPPED_SPIKED_SPRUCE_PALISADE = BLOCKS.register("stripped_spiked_spruce_palisade", () -> spikedPalisade(null, MapColor.PODZOL));
+	public static final Supplier<Block> STRIPPED_BIRCH_PALISADE = BLOCKS.register("stripped_birch_palisade", () -> palisade(ModBlocks.STRIPPED_SPIKED_BIRCH_PALISADE, null, MapColor.SAND));
+	public static final Supplier<Block> STRIPPED_SPIKED_BIRCH_PALISADE = BLOCKS.register("stripped_spiked_birch_palisade", () -> spikedPalisade(null, MapColor.SAND));
+	public static final Supplier<Block> STRIPPED_JUNGLE_PALISADE = BLOCKS.register("stripped_jungle_palisade", () -> palisade(ModBlocks.STRIPPED_SPIKED_JUNGLE_PALISADE, null, MapColor.DIRT));
+	public static final Supplier<Block> STRIPPED_SPIKED_JUNGLE_PALISADE = BLOCKS.register("stripped_spiked_jungle_palisade", () -> spikedPalisade(null, MapColor.DIRT));
+	public static final Supplier<Block> STRIPPED_ACACIA_PALISADE = BLOCKS.register("stripped_acacia_palisade", () -> palisade(ModBlocks.STRIPPED_SPIKED_ACACIA_PALISADE, null, MapColor.COLOR_ORANGE));
+	public static final Supplier<Block> STRIPPED_SPIKED_ACACIA_PALISADE = BLOCKS.register("stripped_spiked_acacia_palisade", () -> spikedPalisade(null, MapColor.COLOR_ORANGE));
+	public static final Supplier<Block> STRIPPED_DARK_OAK_PALISADE = BLOCKS.register("stripped_dark_oak_palisade", () -> palisade(ModBlocks.STRIPPED_SPIKED_DARK_OAK_PALISADE, null, MapColor.COLOR_BROWN));
+	public static final Supplier<Block> STRIPPED_SPIKED_DARK_OAK_PALISADE = BLOCKS.register("stripped_spiked_dark_oak_palisade", () -> spikedPalisade(null, MapColor.COLOR_BROWN));
+	public static final Supplier<Block> STRIPPED_MANGROVE_PALISADE = BLOCKS.register("stripped_mangrove_palisade", () -> palisade(ModBlocks.STRIPPED_SPIKED_MANGROVE_PALISADE, null, MapColor.COLOR_RED));
+	public static final Supplier<Block> STRIPPED_SPIKED_MANGROVE_PALISADE = BLOCKS.register("stripped_spiked_mangrove_palisade", () -> spikedPalisade(null, MapColor.COLOR_RED));
+	public static final Supplier<Block> STRIPPED_CHERRY_PALISADE = BLOCKS.register("stripped_cherry_palisade", () -> palisade(ModBlocks.STRIPPED_SPIKED_CHERRY_PALISADE, null, MapColor.TERRACOTTA_WHITE, SoundType.CHERRY_WOOD));
+	public static final Supplier<Block> STRIPPED_SPIKED_CHERRY_PALISADE = BLOCKS.register("stripped_spiked_cherry_palisade", () -> spikedPalisade(null, MapColor.TERRACOTTA_WHITE, SoundType.CHERRY_WOOD));
+	public static final Supplier<Block> STRIPPED_CRIMSON_PALISADE = BLOCKS.register("stripped_crimson_palisade", () -> netherPalisade(ModBlocks.STRIPPED_SPIKED_CRIMSON_PALISADE, null, MapColor.CRIMSON_STEM));
+	public static final Supplier<Block> STRIPPED_SPIKED_CRIMSON_PALISADE = BLOCKS.register("stripped_spiked_crimson_palisade", () -> netherSpikedPalisade(null, MapColor.CRIMSON_STEM));
+	public static final Supplier<Block> STRIPPED_WARPED_PALISADE = BLOCKS.register("stripped_warped_palisade", () -> netherPalisade(ModBlocks.STRIPPED_SPIKED_WARPED_PALISADE, null, MapColor.WARPED_STEM));
+	public static final Supplier<Block> STRIPPED_SPIKED_WARPED_PALISADE = BLOCKS.register("stripped_spiked_warped_palisade", () -> netherSpikedPalisade(null, MapColor.WARPED_STEM));
 
 
 	public static final Supplier<Block> BRAZIER = BLOCKS.register("brazier", () ->  new BrazierBlock(1, BlockBehaviour.Properties.ofFullCopy(Blocks.LANTERN)
@@ -218,27 +219,27 @@ public class ModBlocks
 		return new SlabBlock(properties);
 	}
 
-	private static Block palisade(MapColor mapColor) {
-		return palisade(mapColor, SoundType.WOOD);
+	private static Block palisade(Supplier<Block> spikedForm, @Nullable Supplier<Block> strippedForm, MapColor mapColor) {
+		return palisade(spikedForm, strippedForm, mapColor, SoundType.WOOD);
 	}
 
-	private static Block palisade(MapColor mapColor, SoundType soundType) {
-		return new PalisadeBlock(PROPERTIES_PALISADE.mapColor(mapColor).sound(soundType).ignitedByLava());
+	private static Block palisade(Supplier<Block> spikedForm, @Nullable Supplier<Block> strippedForm, MapColor mapColor, SoundType soundType) {
+		return new PalisadeBlock(spikedForm, strippedForm, PROPERTIES_PALISADE.mapColor(mapColor).sound(soundType).ignitedByLava());
 	}
 
-	private static Block netherPalisade(MapColor mapColor) {
-		return new PalisadeBlock(PROPERTIES_PALISADE.mapColor(mapColor).sound(SoundType.NETHER_WOOD));
+	private static Block netherPalisade(Supplier<Block> spikedForm, @Nullable Supplier<Block> strippedForm, MapColor mapColor) {
+		return new PalisadeBlock(spikedForm, strippedForm, PROPERTIES_PALISADE.mapColor(mapColor).sound(SoundType.NETHER_WOOD));
 	}
 
-	private static Block spikedPalisade(MapColor mapColor) {
-		return spikedPalisade(mapColor, SoundType.WOOD);
+	private static Block spikedPalisade(@Nullable Supplier<Block> strippedForm, MapColor mapColor) {
+		return spikedPalisade(strippedForm, mapColor, SoundType.WOOD);
 	}
 
-	private static Block spikedPalisade(MapColor mapColor, SoundType soundType) {
-		return new SpikedPalisadeBlock(PROPERTIES_PALISADE.mapColor(mapColor).sound(soundType).ignitedByLava());
+	private static Block spikedPalisade(@Nullable Supplier<Block> strippedForm, MapColor mapColor, SoundType soundType) {
+		return new SpikedPalisadeBlock(strippedForm, PROPERTIES_PALISADE.mapColor(mapColor).sound(soundType).ignitedByLava());
 	}
 
-	private static Block netherSpikedPalisade(MapColor mapColor) {
-		return new SpikedPalisadeBlock(PROPERTIES_PALISADE.mapColor(mapColor).sound(SoundType.NETHER_WOOD));
+	private static Block netherSpikedPalisade(@Nullable Supplier<Block> strippedForm, MapColor mapColor) {
+		return new SpikedPalisadeBlock(strippedForm, PROPERTIES_PALISADE.mapColor(mapColor).sound(SoundType.NETHER_WOOD));
 	}
 }
