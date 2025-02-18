@@ -9,7 +9,9 @@ import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 import vectorwing.blockbox.BlockBox;
 import vectorwing.blockbox.client.particle.SparkleParticle;
+import vectorwing.blockbox.client.renderer.FlyingSkyLanternRenderer;
 import vectorwing.blockbox.common.entity.SeatEntity;
+import vectorwing.blockbox.common.registry.ModBlockEntities;
 import vectorwing.blockbox.common.registry.ModEntityTypes;
 import vectorwing.blockbox.client.particle.StrikeParticle;
 import vectorwing.blockbox.common.registry.ModParticleTypes;
@@ -25,5 +27,6 @@ public class ClientSetupEvents
 	@SubscribeEvent
 	public static void onRegisterRenderers(EntityRenderersEvent.RegisterRenderers event) {
 		event.registerEntityRenderer(ModEntityTypes.SEAT.get(), SeatEntity.Renderer::new);
+		event.registerBlockEntityRenderer(ModBlockEntities.FLYING_SKY_LANTERN.get(), FlyingSkyLanternRenderer::new);
 	}
 }
