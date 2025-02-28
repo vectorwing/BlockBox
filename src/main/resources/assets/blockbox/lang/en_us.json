@@ -135,6 +135,10 @@
   "block.blockbox.lapis_lazuli_mosaic_stairs": "Lapis Lazuli Mosaic Stairs",
   "block.blockbox.lapis_lazuli_mosaic_slab": "Lapis Lazuli Mosaic Slab",
 
+  "block.blockbox.copper_plaque": "Copper Plaque",
+  "block.blockbox.iron_plaque": "Iron Plaque",
+  "block.blockbox.gold_plaque": "Gold Plaque",
+
   "block.blockbox.oak_seat": "Oak Seat",
   "block.blockbox.spruce_seat": "Spruce Seat",
   "block.blockbox.birch_seat": "Birch Seat",

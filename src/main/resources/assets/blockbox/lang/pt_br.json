@@ -135,6 +135,10 @@
   "block.blockbox.lapis_lazuli_mosaic_stairs": "Escadas de mosaico de lápis-lazuli",
   "block.blockbox.lapis_lazuli_mosaic_slab": "Laje de mosaico de lápis-lazuli",
 
+  "block.blockbox.copper_plaque": "Plaqueta de Cobre",
+  "block.blockbox.iron_plaque": "Plaqueta de Ferro",
+  "block.blockbox.gold_plaque": "Plaqueta de Ouro",
+
   "block.blockbox.oak_seat": "Assento de carvalho",
   "block.blockbox.spruce_seat": "Assento de pinheiro",
   "block.blockbox.birch_seat": "Assento de bétula",

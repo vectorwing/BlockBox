@@ -10,6 +10,7 @@ import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import vectorwing.blockbox.BlockBox;
+import vectorwing.blockbox.common.registry.ModBlocks;
 import vectorwing.blockbox.common.registry.ModItems;
 
 import java.util.*;
@@ -121,6 +122,9 @@ public class ItemModels extends ItemModelProvider
 		Set<Item> spritedBlockItems = Sets.newHashSet(
 				ModItems.IRON_PLATE_DOOR.get(),
 				ModItems.GOLDEN_DOOR.get(),
+				ModItems.COPPER_PLAQUE.get(),
+				ModItems.IRON_PLAQUE.get(),
+				ModItems.GOLD_PLAQUE.get(),
 				ModItems.BRAZIER.get(),
 				ModItems.SOUL_BRAZIER.get(),
 				ModItems.WHITE_SKY_LANTERN.get(),

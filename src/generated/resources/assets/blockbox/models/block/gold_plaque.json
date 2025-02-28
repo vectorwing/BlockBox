@@ -1,0 +1,7 @@
+{
+  "parent": "blockbox:block/template_plaque",
+  "textures": {
+    "front": "blockbox:block/gold_plaque_front",
+    "side": "blockbox:block/gold_plaque_side"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "blockbox:block/template_plaque",
+  "textures": {
+    "front": "blockbox:block/copper_plaque_front",
+    "side": "blockbox:block/copper_plaque_side"
+  }
+}

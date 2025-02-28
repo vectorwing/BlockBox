@@ -144,6 +144,10 @@ public class BlockStates extends BlockStateProvider
 		palisadeBlock((PalisadeBlock) ModBlocks.STRIPPED_WARPED_PALISADE.get());
 		spikedPalisadeBlock((SpikedPalisadeBlock) ModBlocks.STRIPPED_SPIKED_WARPED_PALISADE.get(), name(ModBlocks.STRIPPED_WARPED_PALISADE.get()));
 
+		plaqueBlock(ModBlocks.COPPER_PLAQUE.get());
+		plaqueBlock(ModBlocks.IRON_PLAQUE.get());
+		plaqueBlock(ModBlocks.GOLD_PLAQUE.get());
+
 		seatBlock(ModBlocks.OAK_SEAT.get());
 		seatBlock(ModBlocks.SPRUCE_SEAT.get());
 		seatBlock(ModBlocks.BIRCH_SEAT.get());
@@ -190,6 +194,13 @@ public class BlockStates extends BlockStateProvider
 			String variantName = baseName + "_" + suffix;
 			partialBlockstate.addModels(new ConfiguredModel(models().cubeAll(variantName, resourceBlock(variantName))));
 		}
+	}
+
+	private void plaqueBlock(Block block) {
+		String baseName = name(block);
+		horizontalBlock(block, models().withExistingParent(baseName, resourceBlock("template_plaque"))
+				.texture("front", resourceBlock(baseName + "_front"))
+				.texture("side", resourceBlock(baseName + "_side")));
 	}
 
 	private void seatBlock(Block block) {

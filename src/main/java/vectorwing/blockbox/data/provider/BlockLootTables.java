@@ -132,6 +132,10 @@ public class BlockLootTables extends BlockLootSubProvider
 		dropSelf(ModBlocks.LAPIS_LAZULI_MOSAIC_STAIRS.get());
 		dropSelf(ModBlocks.LAPIS_LAZULI_MOSAIC_SLAB.get());
 
+		dropSelf(ModBlocks.COPPER_PLAQUE.get());
+		dropSelf(ModBlocks.IRON_PLAQUE.get());
+		dropSelf(ModBlocks.GOLD_PLAQUE.get());
+
 		dropSelf(ModBlocks.OAK_SEAT.get());
 		dropSelf(ModBlocks.SPRUCE_SEAT.get());
 		dropSelf(ModBlocks.BIRCH_SEAT.get());
