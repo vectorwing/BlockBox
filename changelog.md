@@ -7,6 +7,7 @@
 
 ### Fixes
 - Fix Palisades being tagged as `mineable/pickaxe` due to being tagged as `walls`;
+- Fix Nether Palisades using Nether plank sounds, instead of Nether stem sounds;
 
 ### Translations
 - Removed unneeded `item` lang lines on all translations, as BlockItems use the `block` lang;

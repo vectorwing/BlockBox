@@ -21,7 +21,6 @@ public class ModBlocks
 	public static final BlockBehaviour.Properties PROPERTIES_PACKED_SNOW = BlockBehaviour.Properties.of().mapColor(MapColor.SNOW).strength(0.6F).sound(SoundType.SNOW);
 	public static final BlockBehaviour.Properties PROPERTIES_PACKED_ICE = BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_ICE).strength(0.4F).requiresCorrectToolForDrops();
 	public static final BlockBehaviour.Properties PROPERTIES_IRON_PLATE = BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).strength(4.0F, 6.0F).sound(SoundType.NETHERITE_BLOCK);
-	public static final BlockBehaviour.Properties PROPERTIES_NETHER_PALISADE = BlockBehaviour.Properties.of().strength(2.0F).instrument(NoteBlockInstrument.BASS).sound(SoundType.NETHER_WOOD);
 	public static final BlockBehaviour.Properties PROPERTIES_PALISADE = BlockBehaviour.Properties.of().strength(2.0F).instrument(NoteBlockInstrument.BASS).sound(SoundType.WOOD).ignitedByLava();
 	public static final BlockBehaviour.Properties PROPERTIES_SKY_LANTERN = BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.GUITAR).noOcclusion().lightLevel((state) -> 15).ignitedByLava().sound(SoundType.WOOL);
 
@@ -228,7 +227,7 @@ public class ModBlocks
 	}
 
 	private static Block netherPalisade(Supplier<Block> spikedForm, @Nullable Supplier<Block> strippedForm, MapColor mapColor) {
-		return new PalisadeBlock(spikedForm, strippedForm, PROPERTIES_PALISADE.mapColor(mapColor).sound(SoundType.NETHER_WOOD));
+		return new PalisadeBlock(spikedForm, strippedForm, PROPERTIES_PALISADE.mapColor(mapColor).sound(SoundType.STEM));
 	}
 
 	private static Block spikedPalisade(@Nullable Supplier<Block> strippedForm, MapColor mapColor) {
@@ -240,6 +239,6 @@ public class ModBlocks
 	}
 
 	private static Block netherSpikedPalisade(@Nullable Supplier<Block> strippedForm, MapColor mapColor) {
-		return new SpikedPalisadeBlock(strippedForm, PROPERTIES_PALISADE.mapColor(mapColor).sound(SoundType.NETHER_WOOD));
+		return new SpikedPalisadeBlock(strippedForm, PROPERTIES_PALISADE.mapColor(mapColor).sound(SoundType.STEM));
 	}
 }
