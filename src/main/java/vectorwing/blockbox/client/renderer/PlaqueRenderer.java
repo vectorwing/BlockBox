@@ -78,10 +78,17 @@ public class PlaqueRenderer implements BlockEntityRenderer<PlaqueBlockEntity>
 			FormattedCharSequence formattedcharsequence = aformattedcharsequence[i1];
 			float f = (float) (-this.font.width(formattedcharsequence) / 2);
 
-			Matrix4f offsetHighlight = new Matrix4f(poseStack.last().pose());
-			offsetHighlight.translate(new Vector3f(1F, 1F, -0.03F));
-			this.font.drawInBatch(formattedcharsequence, f, (float) (i1 * lineHeight - j), block.getTextColor(), false, poseStack.last().pose(), buffer, Font.DisplayMode.POLYGON_OFFSET, 0, l);
-			this.font.drawInBatch(formattedcharsequence, f, (float) (i1 * lineHeight - j), block.getHighlightColor(), false, offsetHighlight, buffer, Font.DisplayMode.POLYGON_OFFSET, 0, l);
+			Matrix4f textOffset = new Matrix4f(poseStack.last().pose());
+			this.font.drawInBatch(formattedcharsequence, f, (float) (i1 * lineHeight - j), block.getTextColor(), false, textOffset, buffer, Font.DisplayMode.POLYGON_OFFSET, 0, l);
+
+//			textOffset.translate(-1.0F, 0.0F, 0.0F);
+//			this.font.drawInBatch(formattedcharsequence, f, (float) (i1 * lineHeight - j), block.getTextColor(), false, textOffset, buffer, Font.DisplayMode.POLYGON_OFFSET, 0, l);
+
+			textOffset.translate(1.0F, 1.0F, -0.03F);
+			this.font.drawInBatch(formattedcharsequence, f, (float) (i1 * lineHeight - j), block.getHighlightColor(), false, textOffset, buffer, Font.DisplayMode.POLYGON_OFFSET, 0, l);
+
+//			textOffset.translate(1.0F, 0.0F, 0.0F);
+//			this.font.drawInBatch(formattedcharsequence, f, (float) (i1 * lineHeight - j), block.getHighlightColor(), false, textOffset, buffer, Font.DisplayMode.POLYGON_OFFSET, 0, l);
 		}
 
 		poseStack.popPose();
