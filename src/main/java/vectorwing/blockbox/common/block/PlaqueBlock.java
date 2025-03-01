@@ -48,8 +48,8 @@ public class PlaqueBlock extends BaseEntityBlock implements SimpleWaterloggedBlo
 	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 	public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
-	public static final int textColor = 4473924;
-	public static final int highlightColor = 13421772;
+	private final int textColor;
+	private final int highlightColor;
 
 	private static final Map<Direction, VoxelShape> SHAPES_FACING = Maps.newEnumMap(
 			ImmutableMap.of(
@@ -71,8 +71,24 @@ public class PlaqueBlock extends BaseEntityBlock implements SimpleWaterloggedBlo
 	}
 
 	public PlaqueBlock(Properties properties) {
-		super(properties);
+		this(Integer.parseInt("444444", 16), Integer.parseInt("AAAAAA", 16), properties);
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(WATERLOGGED, false));
+	}
+
+	public PlaqueBlock(int textColor, int highlightColor, Properties properties) {
+		super(properties);
+		this.textColor = textColor;
+		this.highlightColor = highlightColor;
+		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(WATERLOGGED, false));
+	}
+
+
+	public int getTextColor() {
+		return this.textColor;
+	}
+
+	public int getHighlightColor() {
+		return this.highlightColor;
 	}
 
 	@Override

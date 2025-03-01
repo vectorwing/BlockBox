@@ -11,6 +11,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.util.FastColor;
 import net.minecraft.util.FormattedCharSequence;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.StandingSignBlock;
 import net.minecraft.world.level.block.entity.SignText;
 import net.minecraft.world.level.block.state.BlockState;
@@ -38,7 +39,7 @@ public class PlaqueRenderer implements BlockEntityRenderer<PlaqueBlockEntity>
 		PlaqueBlock plaqueBlock = (PlaqueBlock) state.getBlock();
 
 		this.translateSign(poseStack, -plaqueBlock.getYRotationDegrees(state), state);
-		this.renderSignText(blockEntity.getBlockPos(), blockEntity.getFrontText(), poseStack, bufferSource, packedLight, blockEntity.getTextLineHeight(), blockEntity.getMaxTextLineWidth());
+		this.renderSignText(plaqueBlock, blockEntity.getFrontText(), poseStack, bufferSource, packedLight, blockEntity.getTextLineHeight(), blockEntity.getMaxTextLineWidth());
 	}
 
 	public float getSignTextRenderScale() {
@@ -53,7 +54,7 @@ public class PlaqueRenderer implements BlockEntityRenderer<PlaqueBlockEntity>
 		}
 	}
 
-	private void renderSignText(BlockPos pos, SignText text, PoseStack poseStack, MultiBufferSource buffer, int packedLight, int lineHeight, int maxWidth) {
+	private void renderSignText(PlaqueBlock block, SignText text, PoseStack poseStack, MultiBufferSource buffer, int packedLight, int lineHeight, int maxWidth) {
 		poseStack.pushPose();
 
 		this.translateSignText(poseStack, new Vec3(0.0, 0.32F, 0.075F));
@@ -77,10 +78,10 @@ public class PlaqueRenderer implements BlockEntityRenderer<PlaqueBlockEntity>
 			FormattedCharSequence formattedcharsequence = aformattedcharsequence[i1];
 			float f = (float) (-this.font.width(formattedcharsequence) / 2);
 
-			Matrix4f matrix4f = new Matrix4f(poseStack.last().pose());
-			matrix4f.translate(new Vector3f(1F, 1F, -0.03F));
-			this.font.drawInBatch(formattedcharsequence, f, (float) (i1 * lineHeight - j), PlaqueBlock.textColor, false, poseStack.last().pose(), buffer, Font.DisplayMode.POLYGON_OFFSET, 0, l);
-			this.font.drawInBatch(formattedcharsequence, f, (float) (i1 * lineHeight - j), 11184810, false, matrix4f, buffer, Font.DisplayMode.POLYGON_OFFSET, 0, l);
+			Matrix4f offsetHighlight = new Matrix4f(poseStack.last().pose());
+			offsetHighlight.translate(new Vector3f(1F, 1F, -0.03F));
+			this.font.drawInBatch(formattedcharsequence, f, (float) (i1 * lineHeight - j), block.getTextColor(), false, poseStack.last().pose(), buffer, Font.DisplayMode.POLYGON_OFFSET, 0, l);
+			this.font.drawInBatch(formattedcharsequence, f, (float) (i1 * lineHeight - j), block.getHighlightColor(), false, offsetHighlight, buffer, Font.DisplayMode.POLYGON_OFFSET, 0, l);
 		}
 
 		poseStack.popPose();
