@@ -1,7 +1,6 @@
 package vectorwing.blockbox;
 
 import com.mojang.logging.LogUtils;
-import net.minecraft.resources.ResourceLocation;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
@@ -21,6 +20,7 @@ public class BlockBox
 		ModBlocks.BLOCKS.register(modEventBus);
 		ModItems.ITEMS.register(modEventBus);
 		ModEntityTypes.ENTITY_TYPES.register(modEventBus);
+		ModBlockEntities.BLOCK_ENTITIES.register(modEventBus);
 		ModSounds.SOUNDS.register(modEventBus);
 		ModParticleTypes.PARTICLE_TYPES.register(modEventBus);
 		ModCreativeTabs.CREATIVE_MODE_TABS.register(modEventBus);

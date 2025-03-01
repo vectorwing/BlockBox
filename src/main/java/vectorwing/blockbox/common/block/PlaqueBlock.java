@@ -6,12 +6,18 @@ import com.mojang.serialization.MapCodec;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.network.chat.CommonComponents;
+import net.minecraft.network.chat.contents.PlainTextContents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -19,12 +25,18 @@ import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
+import vectorwing.blockbox.common.block.state.PlaqueBlockEntity;
+import vectorwing.blockbox.common.registry.ModBlockEntities;
 
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.Arrays;
 import java.util.Map;
+import java.util.UUID;
 
 @ParametersAreNonnullByDefault
 @MethodsReturnNonnullByDefault
@@ -35,6 +47,9 @@ public class PlaqueBlock extends BaseEntityBlock implements SimpleWaterloggedBlo
 
 	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 	public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
+
+	public static final int textColor = 4473924;
+	public static final int highlightColor = 13421772;
 
 	private static final Map<Direction, VoxelShape> SHAPES_FACING = Maps.newEnumMap(
 			ImmutableMap.of(
@@ -58,6 +73,50 @@ public class PlaqueBlock extends BaseEntityBlock implements SimpleWaterloggedBlo
 	public PlaqueBlock(Properties properties) {
 		super(properties);
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(WATERLOGGED, false));
+	}
+
+	@Override
+	protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
+		if (level.getBlockEntity(pos) instanceof PlaqueBlockEntity plaque) {
+			boolean flag1 = plaque.isFacingFrontText(player);
+			if (plaque.isWaxed()) {
+				level.playSound(null, plaque.getBlockPos(), plaque.getSignInteractionFailedSoundEvent(), SoundSource.BLOCKS);
+				return InteractionResult.SUCCESS;
+			} else if (plaque.executeClickCommandsIfPresent(player, level, pos, flag1)) {
+				return InteractionResult.SUCCESS;
+			} else if (!this.isOtherPlayerEditingSign(player, plaque)
+					&& player.mayBuild()
+					&& this.hasEditableText(player, plaque, flag1)) {
+				this.openTextEdit(player, plaque, flag1);
+				return InteractionResult.SUCCESS;
+			}
+		}
+		return InteractionResult.PASS;
+	}
+
+	public float getYRotationDegrees(BlockState state) {
+		return state.getValue(FACING).toYRot();
+	}
+
+	public Vec3 getSignHitboxCenterPosition(BlockState state) {
+		VoxelShape voxelshape = SHAPES_FACING.get(state.getValue(FACING));
+		return voxelshape.bounds().getCenter();
+	}
+
+	private boolean hasEditableText(Player player, SignBlockEntity signEntity, boolean isFrontText) {
+		SignText signText = signEntity.getText(isFrontText);
+		return Arrays.stream(signText.getMessages(player.isTextFilteringEnabled()))
+				.allMatch(p_339537_ -> p_339537_.equals(CommonComponents.EMPTY) || p_339537_.getContents() instanceof PlainTextContents);
+	}
+
+	public void openTextEdit(Player player, SignBlockEntity signEntity, boolean isFrontText) {
+		signEntity.setAllowedPlayerEditor(player.getUUID());
+		player.openTextEdit(signEntity, isFrontText);
+	}
+
+	private boolean isOtherPlayerEditingSign(Player player, SignBlockEntity signEntity) {
+		UUID uuid = signEntity.getPlayerWhoMayEdit();
+		return uuid != null && !uuid.equals(player.getUUID());
 	}
 
 	@Override
@@ -111,7 +170,12 @@ public class PlaqueBlock extends BaseEntityBlock implements SimpleWaterloggedBlo
 	@Nullable
 	@Override
 	public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-		return null;
+		return ModBlockEntities.PLAQUE.get().create(pos, state);
+	}
+
+	@Override
+	public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> blockEntityType) {
+		return createTickerHelper(blockEntityType, ModBlockEntities.PLAQUE.get(), PlaqueBlockEntity::tick);
 	}
 
 	@Override
