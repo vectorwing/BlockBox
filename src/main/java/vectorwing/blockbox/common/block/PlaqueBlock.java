@@ -7,10 +7,18 @@ import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.CommonComponents;
+import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.contents.PlainTextContents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.stats.Stats;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.HoneycombItem;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.SignApplicator;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -23,13 +31,16 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.neoforged.neoforge.common.Tags;
 import org.jetbrains.annotations.Nullable;
+import vectorwing.blockbox.BlockBox;
 import vectorwing.blockbox.common.block.state.PlaqueBlockEntity;
 import vectorwing.blockbox.common.registry.ModBlockEntities;
 
@@ -92,19 +103,54 @@ public class PlaqueBlock extends BaseEntityBlock implements SimpleWaterloggedBlo
 	}
 
 	@Override
+	protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
+		if (level.getBlockEntity(pos) instanceof PlaqueBlockEntity plaque) {
+			SignApplicator applicatorItem = stack.getItem() instanceof SignApplicator signApplicator ? signApplicator : null;
+			boolean isApplicationValid = applicatorItem != null && player.mayBuild();
+			if (!level.isClientSide) {
+				if (isApplicationValid && !plaque.isWaxed() && !this.isOtherPlayerEditingSign(player, plaque)) {
+					if (!stack.getItem().equals(Items.HONEYCOMB)) {
+						player.displayClientMessage(Component.translatable(BlockBox.MODID + ".block.plaque.invalid_applicator"), true);
+						return ItemInteractionResult.FAIL;
+					}
+					if (applicatorItem.canApplyToSign(plaque.getText(true), player)
+							&& applicatorItem.tryApplyToSign(level, plaque, true, player)) {
+						plaque.executeClickCommandsIfPresent(player, level, pos, true);
+						player.awardStat(Stats.ITEM_USED.get(stack.getItem()));
+						level.gameEvent(
+								GameEvent.BLOCK_CHANGE, plaque.getBlockPos(), GameEvent.Context.of(player, plaque.getBlockState())
+						);
+						stack.consume(1, player);
+						return ItemInteractionResult.SUCCESS;
+					} else {
+						return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
+					}
+				} else {
+					return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
+				}
+			} else {
+				return !isApplicationValid && !plaque.isWaxed() ? ItemInteractionResult.CONSUME : ItemInteractionResult.SUCCESS;
+			}
+		}
+		return ItemInteractionResult.SKIP_DEFAULT_BLOCK_INTERACTION;
+	}
+
+	@Override
 	protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
 		if (level.getBlockEntity(pos) instanceof PlaqueBlockEntity plaque) {
-			boolean flag1 = plaque.isFacingFrontText(player);
+			boolean isCommandExecuted = plaque.executeClickCommandsIfPresent(player, level, pos, true);
 			if (plaque.isWaxed()) {
 				level.playSound(null, plaque.getBlockPos(), plaque.getSignInteractionFailedSoundEvent(), SoundSource.BLOCKS);
 				return InteractionResult.SUCCESS;
-			} else if (plaque.executeClickCommandsIfPresent(player, level, pos, flag1)) {
+			} else if (isCommandExecuted) {
 				return InteractionResult.SUCCESS;
 			} else if (!this.isOtherPlayerEditingSign(player, plaque)
 					&& player.mayBuild()
-					&& this.hasEditableText(player, plaque, flag1)) {
-				this.openTextEdit(player, plaque, flag1);
+					&& this.hasEditableText(player, plaque)) {
+				this.openTextEdit(player, plaque, true);
 				return InteractionResult.SUCCESS;
+			} else {
+				return InteractionResult.PASS;
 			}
 		}
 		return InteractionResult.PASS;
@@ -119,19 +165,19 @@ public class PlaqueBlock extends BaseEntityBlock implements SimpleWaterloggedBlo
 		return voxelshape.bounds().getCenter();
 	}
 
-	private boolean hasEditableText(Player player, SignBlockEntity signEntity, boolean isFrontText) {
-		SignText signText = signEntity.getText(isFrontText);
+	private boolean hasEditableText(Player player, PlaqueBlockEntity plaque) {
+		SignText signText = plaque.getText(true);
 		return Arrays.stream(signText.getMessages(player.isTextFilteringEnabled()))
 				.allMatch(p_339537_ -> p_339537_.equals(CommonComponents.EMPTY) || p_339537_.getContents() instanceof PlainTextContents);
 	}
 
-	public void openTextEdit(Player player, SignBlockEntity signEntity, boolean isFrontText) {
-		signEntity.setAllowedPlayerEditor(player.getUUID());
-		player.openTextEdit(signEntity, isFrontText);
+	public void openTextEdit(Player player, PlaqueBlockEntity plaque, boolean isFrontText) {
+		plaque.setAllowedPlayerEditor(player.getUUID());
+		player.openTextEdit(plaque, isFrontText);
 	}
 
-	private boolean isOtherPlayerEditingSign(Player player, SignBlockEntity signEntity) {
-		UUID uuid = signEntity.getPlayerWhoMayEdit();
+	private boolean isOtherPlayerEditingSign(Player player, PlaqueBlockEntity plaque) {
+		UUID uuid = plaque.getPlayerWhoMayEdit();
 		return uuid != null && !uuid.equals(player.getUUID());
 	}
 

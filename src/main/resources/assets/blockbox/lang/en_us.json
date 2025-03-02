@@ -176,5 +176,7 @@
 
   "blockbox.subtitles.sword.carve": "Sword carves",
 
+  "blockbox.block.plaque.invalid_applicator": "This cannot be used in a plaque.",
+
   "death.attack.blockbox.palisade": "%1$s was skewered by a spiked palisade"
 }
