@@ -25,11 +25,16 @@ public class ModTags
 	// Blocks that are made out of Iron Plate.
 	public static final TagKey<Block> IRON_PLATE_BLOCKS = modBlockTag("iron_plate_blocks");
 
+	// Blocks that are made out of Gold.
+	public static final TagKey<Block> GOLDEN_BLOCKS = modBlockTag("golden_blocks");
+
 	// Blocks that are braziers.
 	public static final TagKey<Block> BRAZIERS = modBlockTag("braziers");
 
-	// Blocks that are made out of Gold.
-	public static final TagKey<Block> GOLDEN_BLOCKS = modBlockTag("golden_blocks");
+	// Blocks that are braziers.
+	public static final TagKey<Block> PLAQUES = modBlockTag("plaques");
+
+	////////////////
 
 	// Item forms of palisades.
 	public static final TagKey<Item> PALISADE_ITEMS = modItemTag("palisades");
@@ -45,6 +50,9 @@ public class ModTags
 
 	// Item forms of sky lanterns.
 	public static final TagKey<Item> SKY_LANTERNS = modItemTag("sky_lanterns");
+
+	// Blocks that are braziers.
+	public static final TagKey<Item> PLAQUE_ITEMS = modItemTag("plaques");
 
 	private static TagKey<Block> modBlockTag(String path) {
 		return BlockTags.create(ResourceLocation.fromNamespaceAndPath(BlockBox.MODID, path));

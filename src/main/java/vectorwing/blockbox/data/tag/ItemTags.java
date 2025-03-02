@@ -92,7 +92,8 @@ public class ItemTags extends ItemTagsProvider
 				ModItems.GOLDEN_PILLAR.get(),
 				ModItems.GOLDEN_DOOR.get(),
 				ModItems.GOLDEN_TRAPDOOR.get(),
-				ModItems.GOLDEN_BARS.get()
+				ModItems.GOLDEN_BARS.get(),
+				ModItems.GOLD_PLAQUE.get()
 		);
 		tag(ModTags.SKY_LANTERNS).add(
 				ModItems.WHITE_SKY_LANTERN.get(),
@@ -111,6 +112,11 @@ public class ItemTags extends ItemTagsProvider
 				ModItems.PURPLE_SKY_LANTERN.get(),
 				ModItems.MAGENTA_SKY_LANTERN.get(),
 				ModItems.PINK_SKY_LANTERN.get()
+		);
+		tag(ModTags.PLAQUE_ITEMS).add(
+				ModItems.COPPER_PLAQUE.get(),
+				ModItems.IRON_PLAQUE.get(),
+				ModItems.GOLD_PLAQUE.get()
 		);
 	}
 

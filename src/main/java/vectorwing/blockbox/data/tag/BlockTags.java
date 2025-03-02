@@ -188,6 +188,12 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.BRAZIER.get(),
 				ModBlocks.SOUL_BRAZIER.get()
 		);
+
+		tag(ModTags.PLAQUES).add(
+				ModBlocks.COPPER_PLAQUE.get(),
+				ModBlocks.IRON_PLAQUE.get(),
+				ModBlocks.GOLD_PLAQUE.get()
+		);
 	}
 
 	private void registerCommonTags() {
@@ -295,7 +301,10 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.LAPIS_LAZULI_BRICKS.get(),
 				ModBlocks.LAPIS_LAZULI_MOSAIC.get(),
 				ModBlocks.BRAZIER.get(),
-				ModBlocks.SOUL_BRAZIER.get()
+				ModBlocks.SOUL_BRAZIER.get(),
+				ModBlocks.COPPER_PLAQUE.get(),
+				ModBlocks.IRON_PLAQUE.get(),
+				ModBlocks.GOLD_PLAQUE.get()
 		).remove(ModTags.PALISADES).remove(ModTags.SPIKED_PALISADES);
 		tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_AXE)
 				.addTag(ModTags.PALISADES)
