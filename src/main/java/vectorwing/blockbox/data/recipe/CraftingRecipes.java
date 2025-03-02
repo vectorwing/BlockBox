@@ -26,6 +26,25 @@ public class CraftingRecipes
 		craftCopperBlocks(output);
 		craftFurniture(output);
 		craftSkyLanterns(output);
+		craftPlaques(output);
+	}
+
+	private static void craftPlaques(RecipeOutput output) {
+		ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.COPPER_PLAQUE.get())
+				.requires(ItemTags.SIGNS)
+				.requires(Tags.Items.INGOTS_COPPER)
+				.unlockedBy("has_copper", InventoryChangeTrigger.TriggerInstance.hasItems(Items.COPPER_INGOT))
+				.save(output);
+		ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.IRON_PLAQUE.get())
+				.requires(ItemTags.SIGNS)
+				.requires(Tags.Items.INGOTS_IRON)
+				.unlockedBy("has_iron", InventoryChangeTrigger.TriggerInstance.hasItems(Items.IRON_INGOT))
+				.save(output);
+		ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.GOLD_PLAQUE.get())
+				.requires(ItemTags.SIGNS)
+				.requires(Tags.Items.INGOTS_GOLD)
+				.unlockedBy("has_gold", InventoryChangeTrigger.TriggerInstance.hasItems(Items.GOLD_INGOT))
+				.save(output);
 	}
 
 	private static void craftSkyLanterns(RecipeOutput output) {
