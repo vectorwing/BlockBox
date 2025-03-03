@@ -7,11 +7,9 @@ import net.minecraft.client.gui.Font;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
-import net.minecraft.core.BlockPos;
 import net.minecraft.util.FastColor;
 import net.minecraft.util.FormattedCharSequence;
-import net.minecraft.world.item.DyeColor;
-import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.StandingSignBlock;
 import net.minecraft.world.level.block.entity.SignText;
 import net.minecraft.world.level.block.state.BlockState;
@@ -39,7 +37,7 @@ public class PlaqueRenderer implements BlockEntityRenderer<PlaqueBlockEntity>
 		PlaqueBlock plaqueBlock = (PlaqueBlock) state.getBlock();
 
 		this.translateSign(poseStack, -plaqueBlock.getYRotationDegrees(state), state);
-		this.renderSignText(plaqueBlock, blockEntity.getFrontText(), poseStack, bufferSource, packedLight, blockEntity.getTextLineHeight(), blockEntity.getMaxTextLineWidth());
+		this.renderSignText(plaqueBlock, state, blockEntity.getLevel(), blockEntity.getFrontText(), poseStack, bufferSource, packedLight, blockEntity.getTextLineHeight(), blockEntity.getMaxTextLineWidth());
 	}
 
 	public float getSignTextRenderScale() {
@@ -54,41 +52,34 @@ public class PlaqueRenderer implements BlockEntityRenderer<PlaqueBlockEntity>
 		}
 	}
 
-	private void renderSignText(PlaqueBlock block, SignText text, PoseStack poseStack, MultiBufferSource buffer, int packedLight, int lineHeight, int maxWidth) {
+	private void renderSignText(PlaqueBlock block, BlockState state, Level level, SignText text, PoseStack poseStack, MultiBufferSource buffer, int packedLight, int lineHeight, int maxWidth) {
 		poseStack.pushPose();
 
 		this.translateSignText(poseStack, new Vec3(0.0, 0.32F, 0.075F));
-		int i = getDarkColor(text);
-		int j = 4 * lineHeight / 2;
-		FormattedCharSequence[] aformattedcharsequence = text.getRenderMessages(Minecraft.getInstance().isTextFilteringEnabled(), p_277227_ -> {
-			List<FormattedCharSequence> list = this.font.split(p_277227_, maxWidth);
-			return list.isEmpty() ? FormattedCharSequence.EMPTY : list.get(0);
+		int lineHeightOffset = 4 * lineHeight / 2;
+		FormattedCharSequence[] aformattedcharsequence = text.getRenderMessages(Minecraft.getInstance().isTextFilteringEnabled(), component -> {
+			List<FormattedCharSequence> list = this.font.split(component, maxWidth);
+			return list.isEmpty() ? FormattedCharSequence.EMPTY : list.getFirst();
 		});
-		int k;
-		int l;
-		if (text.hasGlowingText()) {
-			k = text.getColor().getTextColor();
-			l = 15728880;
-		} else {
-			k = i;
-			l = packedLight;
+
+		int textColor = block.getTextColor();
+		int highlightColor = block.getHighlightColor();
+
+		if (level != null) {
+			float shade = level.getShade(state.getValue(PlaqueBlock.FACING), true);
+			textColor = getShadedColor(block.getTextColor(), shade);
+			highlightColor = getShadedColor(block.getHighlightColor(), shade);
 		}
 
-		for (int i1 = 0; i1 < 4; i1++) {
-			FormattedCharSequence formattedcharsequence = aformattedcharsequence[i1];
+		for (int lineIndex = 0; lineIndex < 4; lineIndex++) {
+			FormattedCharSequence formattedcharsequence = aformattedcharsequence[lineIndex];
 			float f = (float) (-this.font.width(formattedcharsequence) / 2);
 
 			Matrix4f textOffset = new Matrix4f(poseStack.last().pose());
-			this.font.drawInBatch(formattedcharsequence, f, (float) (i1 * lineHeight - j), block.getTextColor(), false, textOffset, buffer, Font.DisplayMode.POLYGON_OFFSET, 0, l);
-
-//			textOffset.translate(-1.0F, 0.0F, 0.0F);
-//			this.font.drawInBatch(formattedcharsequence, f, (float) (i1 * lineHeight - j), block.getTextColor(), false, textOffset, buffer, Font.DisplayMode.POLYGON_OFFSET, 0, l);
+			this.font.drawInBatch(formattedcharsequence, f, (float) (lineIndex * lineHeight - lineHeightOffset), textColor, false, textOffset, buffer, Font.DisplayMode.POLYGON_OFFSET, 0, packedLight);
 
 			textOffset.translate(1.0F, 1.0F, -0.03F);
-			this.font.drawInBatch(formattedcharsequence, f, (float) (i1 * lineHeight - j), block.getHighlightColor(), false, textOffset, buffer, Font.DisplayMode.POLYGON_OFFSET, 0, l);
-
-//			textOffset.translate(1.0F, 0.0F, 0.0F);
-//			this.font.drawInBatch(formattedcharsequence, f, (float) (i1 * lineHeight - j), block.getHighlightColor(), false, textOffset, buffer, Font.DisplayMode.POLYGON_OFFSET, 0, l);
+			this.font.drawInBatch(formattedcharsequence, f, (float) (lineIndex * lineHeight - lineHeightOffset), highlightColor, false, textOffset, buffer, Font.DisplayMode.POLYGON_OFFSET, 0, packedLight);
 		}
 
 		poseStack.popPose();
@@ -100,16 +91,10 @@ public class PlaqueRenderer implements BlockEntityRenderer<PlaqueBlockEntity>
 		poseStack.scale(f, -f, f);
 	}
 
-	public static int getDarkColor(SignText signText) {
-		int i = signText.getColor().getTextColor();
-		if (i == DyeColor.BLACK.getTextColor() && signText.hasGlowingText()) {
-			return -988212;
-		} else {
-			double d0 = 0.4;
-			int j = (int) ((double) FastColor.ARGB32.red(i) * 0.4);
-			int k = (int) ((double) FastColor.ARGB32.green(i) * 0.4);
-			int l = (int) ((double) FastColor.ARGB32.blue(i) * 0.4);
-			return FastColor.ARGB32.color(0, j, k, l);
-		}
+	public static int getShadedColor(int color, float shade) {
+		int red = (int) ((double) FastColor.ARGB32.red(color) * shade);
+		int green = (int) ((double) FastColor.ARGB32.green(color) * shade);
+		int blue = (int) ((double) FastColor.ARGB32.blue(color) * shade);
+		return FastColor.ARGB32.color(0, red, green, blue);
 	}
 }
