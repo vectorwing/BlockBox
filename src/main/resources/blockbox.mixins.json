@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "vectorwing.blockbox.common.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [],
+  "client": [
+    "PlaqueEditScreenMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "minVersion": "0.8"
+}
