@@ -82,8 +82,11 @@ public class PlaqueBlock extends BaseEntityBlock implements SimpleWaterloggedBlo
 	}
 
 	public PlaqueBlock(Properties properties) {
-		this(Integer.parseInt("444444", 16), Integer.parseInt("AAAAAA", 16), properties);
-		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(WATERLOGGED, false));
+		this("555555", "cccccc", properties);
+	}
+
+	public PlaqueBlock(String hexTextColor, String hexHighlightColor, Properties properties) {
+		this(Integer.parseInt(hexTextColor, 16), Integer.parseInt(hexHighlightColor, 16), properties);
 	}
 
 	public PlaqueBlock(int textColor, int highlightColor, Properties properties) {
