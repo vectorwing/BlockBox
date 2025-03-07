@@ -15,7 +15,6 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.HoneycombItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.SignApplicator;
@@ -25,7 +24,10 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.block.entity.*;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityTicker;
+import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.entity.SignText;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -38,7 +40,6 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.neoforged.neoforge.common.Tags;
 import org.jetbrains.annotations.Nullable;
 import vectorwing.blockbox.BlockBox;
 import vectorwing.blockbox.common.block.state.PlaqueBlockEntity;
@@ -70,16 +71,6 @@ public class PlaqueBlock extends BaseEntityBlock implements SimpleWaterloggedBlo
 					Direction.WEST, Block.box(14.0, 2.0, 0.0, 16.0, 14.0, 16.0)
 			)
 	);
-
-	@Override
-	protected MapCodec<? extends BaseEntityBlock> codec() {
-		return CODEC;
-	}
-
-	@Override
-	protected RenderShape getRenderShape(BlockState state) {
-		return RenderShape.MODEL;
-	}
 
 	public PlaqueBlock(Properties properties) {
 		this("555555", "cccccc", properties);
@@ -120,9 +111,7 @@ public class PlaqueBlock extends BaseEntityBlock implements SimpleWaterloggedBlo
 							&& applicatorItem.tryApplyToSign(level, plaque, true, player)) {
 						plaque.executeClickCommandsIfPresent(player, level, pos, true);
 						player.awardStat(Stats.ITEM_USED.get(stack.getItem()));
-						level.gameEvent(
-								GameEvent.BLOCK_CHANGE, plaque.getBlockPos(), GameEvent.Context.of(player, plaque.getBlockState())
-						);
+						level.gameEvent(GameEvent.BLOCK_CHANGE, plaque.getBlockPos(), GameEvent.Context.of(player, plaque.getBlockState()));
 						stack.consume(1, player);
 						return ItemInteractionResult.SUCCESS;
 					} else {
@@ -256,5 +245,15 @@ public class PlaqueBlock extends BaseEntityBlock implements SimpleWaterloggedBlo
 	@Override
 	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
 		builder.add(FACING, WATERLOGGED);
+	}
+
+	@Override
+	protected MapCodec<? extends BaseEntityBlock> codec() {
+		return CODEC;
+	}
+
+	@Override
+	protected RenderShape getRenderShape(BlockState state) {
+		return RenderShape.MODEL;
 	}
 }

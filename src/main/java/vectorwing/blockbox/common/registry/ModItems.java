@@ -198,9 +198,9 @@ public class ModItems
 	public static final Supplier<BlockItem> STRIPPED_WARPED_PALISADE = registerSimpleBlockItem("stripped_warped_palisade", ModBlocks.STRIPPED_WARPED_PALISADE, Items.WARPED_BUTTON);
 	public static final Supplier<BlockItem> STRIPPED_SPIKED_WARPED_PALISADE = registerSimpleBlockItem("stripped_spiked_warped_palisade", ModBlocks.STRIPPED_SPIKED_WARPED_PALISADE, Items.WARPED_BUTTON);
 
-	public static final Supplier<Item> COPPER_PLAQUE = registerItem("copper_plaque", () -> new PlaqueItem(ModBlocks.COPPER_PLAQUE.get(), new Item.Properties()));
 	public static final Supplier<Item> IRON_PLAQUE = registerItem("iron_plaque", () -> new PlaqueItem(ModBlocks.IRON_PLAQUE.get(), new Item.Properties()));
 	public static final Supplier<Item> GOLD_PLAQUE = registerItem("gold_plaque", () -> new PlaqueItem(ModBlocks.GOLD_PLAQUE.get(), new Item.Properties()));
+	public static final Supplier<Item> COPPER_PLAQUE = registerItem("copper_plaque", () -> new PlaqueItem(ModBlocks.COPPER_PLAQUE.get(), new Item.Properties()));
 
 	public static final Supplier<BlockItem> BRAZIER = registerSimpleBlockItem("brazier", ModBlocks.BRAZIER);
 	public static final Supplier<BlockItem> SOUL_BRAZIER = registerSimpleBlockItem("soul_brazier", ModBlocks.SOUL_BRAZIER);

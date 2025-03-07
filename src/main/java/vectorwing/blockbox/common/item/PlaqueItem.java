@@ -20,15 +20,15 @@ public class PlaqueItem extends BlockItem
 
 	@Override
 	protected boolean updateCustomBlockEntityTag(BlockPos pos, Level level, @Nullable Player player, ItemStack stack, BlockState state) {
-		boolean flag = super.updateCustomBlockEntityTag(pos, level, player, stack, state);
+		boolean hasCustomData = super.updateCustomBlockEntityTag(pos, level, player, stack, state);
 		if (!level.isClientSide
-				&& !flag
+				&& !hasCustomData
 				&& player != null
 				&& level.getBlockEntity(pos) instanceof PlaqueBlockEntity plaqueBlockEntity
 				&& level.getBlockState(pos).getBlock() instanceof PlaqueBlock plaque) {
 			plaque.openTextEdit(player, plaqueBlockEntity, true);
 		}
 
-		return flag;
+		return hasCustomData;
 	}
 }

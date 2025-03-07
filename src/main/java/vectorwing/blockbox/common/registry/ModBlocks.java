@@ -181,9 +181,9 @@ public class ModBlocks
 	public static final Supplier<Block> STRIPPED_WARPED_PALISADE = BLOCKS.register("stripped_warped_palisade", () -> netherPalisade(ModBlocks.STRIPPED_SPIKED_WARPED_PALISADE, null, MapColor.WARPED_STEM));
 	public static final Supplier<Block> STRIPPED_SPIKED_WARPED_PALISADE = BLOCKS.register("stripped_spiked_warped_palisade", () -> netherSpikedPalisade(null, MapColor.WARPED_STEM));
 
-	public static final Supplier<Block> COPPER_PLAQUE = BLOCKS.register("copper_plaque", () -> new PlaqueBlock("5c2715", "e3826c", BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BLOCK).forceSolidOn()));
 	public static final Supplier<Block> IRON_PLAQUE = BLOCKS.register("iron_plaque", () -> new PlaqueBlock("555555", "cccccc", BlockBehaviour.Properties.ofFullCopy(ModBlocks.IRON_PLATE.get()).forceSolidOn()));
 	public static final Supplier<Block> GOLD_PLAQUE = BLOCKS.register("gold_plaque", () -> new PlaqueBlock("925c00", "fff497", BlockBehaviour.Properties.ofFullCopy(Blocks.GOLD_BLOCK).forceSolidOn()));
+	public static final Supplier<Block> COPPER_PLAQUE = BLOCKS.register("copper_plaque", () -> new PlaqueBlock("5c2715", "e3826c", BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BLOCK).forceSolidOn()));
 
 	public static final Supplier<Block> BRAZIER = BLOCKS.register("brazier", () ->  new BrazierBlock(1, BlockBehaviour.Properties.ofFullCopy(Blocks.LANTERN)
 			.lightLevel(litBlockEmission(15))
