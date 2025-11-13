@@ -57,7 +57,7 @@ public class SeatBlock extends HorizontalDirectionalBlock
 		if (level.isClientSide)
 			return;
 		SeatEntity seat = new SeatEntity(level, pos);
-		seat.setPos(pos.getX() + 0.5f, pos.getY(), pos.getZ() + 0.5f);
+		seat.setPos(pos.getX() + 0.5, pos.getY(), pos.getZ() + 0.5);
 		level.addFreshEntity(seat);
 		entity.startRiding(seat, true);
 		if (entity instanceof TamableAnimal animal)
