@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.2
+
+### Translations
+- Added:
+  - fr_fr (thanks, предпочтения!);
+
 ## 0.1.1
 
 ### Updates
