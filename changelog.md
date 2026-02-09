@@ -2,6 +2,9 @@
 
 ## 0.1.2
 
+### Fixes
+- Fix Lapis Lazuli Brick/Mosaic stairs and slabs not being tagged as `mineable/pickaxe`;
+
 ### Translations
 - Added:
   - fr_fr (thanks, предпочтения!);
