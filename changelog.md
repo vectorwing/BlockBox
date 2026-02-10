@@ -8,7 +8,7 @@
 
 ### Translations
 - Added:
-  - fr_fr (thanks, предпочтения!);
+  - fr_fr;
 
 ## 0.1.1
 
