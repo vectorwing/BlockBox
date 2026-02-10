@@ -1,5 +1,6 @@
 {
   "parent": "blockbox:block/template_palisade_post",
+  "render_type": "minecraft:cutout",
   "textures": {
     "side": "blockbox:block/cherry_palisade_side",
     "top": "blockbox:block/cherry_palisade_top"

@@ -435,22 +435,25 @@ public class BlockStates extends BlockStateProvider
 	private ModelFile modelPalisadePost(String baseName, String textureName) {
 		return models().withExistingParent(baseName + "_post", resourceBlock("template_palisade_post"))
 				.texture("top", resourceBlock(textureName + "_top"))
-				.texture("side", resourceBlock(textureName + "_side"));
+				.texture("side", resourceBlock(textureName + "_side"))
+				.renderType(CUTOUT);
 	}
 
 	private ModelFile modelSpikedPalisadePost(String baseName, String textureName) {
 		return models().withExistingParent(baseName + "_post", resourceBlock("template_spiked_palisade_post"))
-				.texture("top", resourceBlock(textureName + "_top")).renderType(CUTOUT)
-				.texture("side", resourceBlock(textureName + "_side"));
+				.texture("top", resourceBlock(textureName + "_top"))
+				.texture("side", resourceBlock(textureName + "_side"))
+				.renderType(CUTOUT);
 	}
 
 	private ModelFile modelPalisadeSide(String baseName, String textureName, boolean isFront, boolean isSpiked) {
 		String suffix = isFront ? "_front" : "_back";
 		String spiked = isSpiked ? "spiked_" : "";
 		return models().withExistingParent(spiked + baseName + suffix, resourceBlock("template_" + spiked + "palisade" + suffix))
-				.texture("top", resourceBlock(textureName + "_top")).renderType(CUTOUT)
+				.texture("top", resourceBlock(textureName + "_top"))
 				.texture("side", resourceBlock(textureName + "_side"))
-				.texture("core", resourceBlock(textureName + "_core"));
+				.texture("core", resourceBlock(textureName + "_core"))
+				.renderType(CUTOUT);
 	}
 
 	public static ResourceLocation resourceBlock(String name) {

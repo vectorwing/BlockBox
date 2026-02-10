@@ -4,6 +4,7 @@
 
 ### Fixes
 - Fix Lapis Lazuli Brick/Mosaic stairs and slabs not being tagged as `mineable/pickaxe`;
+- Fix Palisades having wrong render type when Sodium is installed (may be temporary);
 
 ### Translations
 - Added:
