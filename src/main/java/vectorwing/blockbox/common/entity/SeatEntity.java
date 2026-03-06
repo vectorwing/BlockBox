@@ -58,7 +58,12 @@ public class SeatEntity extends Entity
 		return !(entity instanceof FakePlayer);
 	}
 
-	public static class Renderer extends EntityRenderer<SeatEntity>
+    @Override
+    public void onPassengerTurned(final Entity entity) {
+        entity.setYHeadRot(entity.getYRot());
+    }
+
+    public static class Renderer extends EntityRenderer<SeatEntity>
 	{
 		public Renderer(EntityRendererProvider.Context context) {
 			super(context);
