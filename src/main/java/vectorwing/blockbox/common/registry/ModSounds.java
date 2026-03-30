@@ -1,7 +1,7 @@
 package vectorwing.blockbox.common.registry;
 
 import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.sounds.SoundEvent;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import vectorwing.blockbox.BlockBox;
@@ -14,5 +14,5 @@ public class ModSounds
 
 	// Stove
 	public static final Supplier<SoundEvent> ITEM_SWORD_CARVE = SOUNDS.register("item.sword.carve",
-			() -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(BlockBox.MODID, "item.sword.carve")));
+			() -> SoundEvent.createVariableRangeEvent(Identifier.fromNamespaceAndPath(BlockBox.MODID, "item.sword.carve")));
 }

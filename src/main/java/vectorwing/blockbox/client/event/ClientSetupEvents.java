@@ -14,12 +14,12 @@ import vectorwing.blockbox.common.registry.ModEntityTypes;
 import vectorwing.blockbox.client.particle.StrikeParticle;
 import vectorwing.blockbox.common.registry.ModParticleTypes;
 
-@EventBusSubscriber(modid = BlockBox.MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+@EventBusSubscriber(modid = BlockBox.MODID, value = Dist.CLIENT)
 public class ClientSetupEvents
 {
 	@SubscribeEvent(priority = EventPriority.LOWEST)
 	public static void registerParticles(RegisterParticleProvidersEvent event) {
-		Minecraft.getInstance().particleEngine.register(ModParticleTypes.SPARKLE.get(), SparkleParticle.Provider::new);
+		event.registerSpriteSet(ModParticleTypes.SPARKLE.get(), SparkleParticle.Provider::new);
 	}
 
 	@SubscribeEvent

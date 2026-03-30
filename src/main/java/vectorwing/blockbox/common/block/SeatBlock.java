@@ -1,7 +1,7 @@
 package vectorwing.blockbox.common.block;
 
+import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
 import com.mojang.serialization.MapCodec;
-import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.InteractionResult;
@@ -47,19 +47,19 @@ public class SeatBlock extends HorizontalDirectionalBlock
 	public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
 		if (player.isShiftKeyDown())
 			return InteractionResult.PASS;
-		if (level.isClientSide)
+		if (level.isClientSide())
 			return InteractionResult.SUCCESS;
 		sitDown(level, pos, player);
 		return InteractionResult.SUCCESS;
 	}
 
 	public static void sitDown(Level level, BlockPos pos, Entity entity) {
-		if (level.isClientSide)
+		if (level.isClientSide())
 			return;
 		SeatEntity seat = new SeatEntity(level, pos);
 		seat.setPos(pos.getX() + 0.5, pos.getY(), pos.getZ() + 0.5);
 		level.addFreshEntity(seat);
-		entity.startRiding(seat, true);
+		entity.startRiding(seat, true, true);
 		if (entity instanceof TamableAnimal animal)
 			animal.setInSittingPose(true);
 	}

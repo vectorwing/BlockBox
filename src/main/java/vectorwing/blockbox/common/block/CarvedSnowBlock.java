@@ -29,7 +29,7 @@ public class CarvedSnowBlock extends HorizontalDirectionalBlock
 		if (player.isSecondaryUseActive()) {
 			level.playSound(null, pos, SoundEvents.SNOW_HIT, SoundSource.BLOCKS, 1.0F, 1.0F);
 			level.setBlock(pos, ModBlocks.PACKED_SNOW.get().defaultBlockState(), 11);
-			return InteractionResult.sidedSuccess(level.isClientSide);
+			return InteractionResult.SUCCESS;
 		}
 		return super.useWithoutItem(state, level, pos, player, hitResult);
 	}

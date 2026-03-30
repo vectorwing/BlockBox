@@ -1,44 +1,42 @@
 package vectorwing.blockbox.common.block;
 
+import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Maps;
+import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
 import com.mojang.serialization.MapCodec;
-import net.minecraft.MethodsReturnNonnullByDefault;
-import net.minecraft.Util;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.ItemInteractionResult;
-import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.context.UseOnContext;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.*;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.VoxelShape;
 import net.neoforged.neoforge.common.ItemAbilities;
 import net.neoforged.neoforge.common.ItemAbility;
-import net.neoforged.neoforge.common.Tags;
 import org.jetbrains.annotations.NotNull;
 import vectorwing.blockbox.common.block.state.PalisadeConnection;
-import vectorwing.blockbox.common.registry.ModBlocks;
 import vectorwing.blockbox.common.registry.ModSounds;
 import vectorwing.blockbox.common.tag.ModTags;
 
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.Map;
+import java.util.function.Function;
 import java.util.function.Supplier;
 
 @ParametersAreNonnullByDefault
@@ -55,27 +53,27 @@ public class PalisadeBlock extends CrossCollisionBlock implements SimpleWaterlog
 	public final Supplier<Block> strippedForm;
 	public final Supplier<Block> spikedForm;
 
-	public static final Map<Direction, EnumProperty<PalisadeConnection>> PROPERTY_BY_DIRECTION = Util.make(Maps.newHashMap(), (map) -> {
-		map.put(Direction.NORTH, TYPE_NORTH);
-		map.put(Direction.EAST, TYPE_EAST);
-		map.put(Direction.SOUTH, TYPE_SOUTH);
-		map.put(Direction.WEST, TYPE_WEST);
-	});
+	public static final Map<Direction, EnumProperty<PalisadeConnection>> PROPERTY_BY_DIRECTION = ImmutableMap.copyOf(Maps.newEnumMap(Map.of(
+		Direction.NORTH, TYPE_NORTH,
+		Direction.EAST, TYPE_EAST,
+		Direction.SOUTH, TYPE_SOUTH,
+		Direction.WEST, TYPE_WEST
+	)));
 
 	public PalisadeBlock(Properties properties) {
-		this(null, null, 4.0F, 4.0F, 16.0F, 16.0F, 16.0F, properties);
+		this(null, null, 8.0F, 16.0F, 8.0F, 16.0F, 16.0F, properties);
 	}
 
 	public PalisadeBlock(@Nullable Supplier<Block> spikedForm, Properties properties) {
-		this(spikedForm, null, 4.0F, 4.0F, 16.0F, 16.0F, 16.0F, properties);
+		this(spikedForm, null, 8.0F, 16.0F, 8.0F, 16.0F, 16.0F, properties);
 	}
 
 	public PalisadeBlock(@Nullable Supplier<Block> spikedForm, @Nullable Supplier<Block> strippedForm, Properties properties) {
-		this(spikedForm, strippedForm, 4.0F, 4.0F, 16.0F, 16.0F, 16.0F, properties);
+		this(spikedForm, strippedForm, 8.0F, 16.0F, 8.0F, 16.0F, 16.0F, properties);
 	}
 
-	public PalisadeBlock(@Nullable Supplier<Block> spikedForm, @Nullable Supplier<Block> strippedForm, float nodeWidth, float extensionWidth, float nodeHeight, float extensionHeight, float collisionHeight, Properties properties) {
-		super(nodeWidth, extensionWidth, nodeHeight, extensionHeight, collisionHeight, properties);
+	public PalisadeBlock(@Nullable Supplier<Block> spikedForm, @Nullable Supplier<Block> strippedForm, float postWidth, float postHeight, float wallWidth, float wallHeight, float collisionHeight, Properties properties) {
+		super(postWidth, postHeight, wallWidth, wallHeight, collisionHeight, properties);
 		this.spikedForm = spikedForm;
 		this.strippedForm = strippedForm;
 		this.registerDefaultState(this.stateDefinition.any()
@@ -87,21 +85,39 @@ public class PalisadeBlock extends CrossCollisionBlock implements SimpleWaterlog
 	}
 
 	@Override
-	protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
+	protected Function<BlockState, VoxelShape> makeShapes(float postWidth, float postHeight, float wallWidth, float wallBottom, float wallTop) {
+		VoxelShape post = Block.column(postWidth, 0.0, postHeight);
+		Map<Direction, VoxelShape> arms = Shapes.rotateHorizontal(Block.boxZ(wallWidth, wallBottom, wallTop, 0.0, 8.0));
+		return this.getShapeForEachState(state -> {
+			VoxelShape shape = post;
+
+			for (Map.Entry<Direction, EnumProperty<PalisadeConnection>> entry : PROPERTY_BY_DIRECTION.entrySet()) {
+				if (!state.getValue(entry.getValue()).equals(PalisadeConnection.NONE)) {
+					shape = Shapes.or(shape, arms.get(entry.getKey()));
+				}
+			}
+
+			return shape;
+		}, WATERLOGGED);
+	}
+
+	@Override
+	protected InteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
 		if (spikedForm == null) {
-			return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
+			return InteractionResult.PASS;
 		}
-		if (stack.canPerformAction(ItemAbilities.SWORD_DIG) && level.getBlockState(pos.above()).isAir()) {
+		// TODO: In 1.21.1, this checked if the stack had the ItemAbilities.SWORD_DIG ability - is there a better check in 26.1?
+		if (stack.is(ItemTags.SWORDS) && level.getBlockState(pos.above()).isAir()) {
 			level.playSound(null, pos, ModSounds.ITEM_SWORD_CARVE.get(), SoundSource.BLOCKS, 1.0F, 0.9F);
 			level.addDestroyBlockEffect(pos, state);
-			stack.hurtAndBreak(2, player, LivingEntity.getSlotForHand(hand));
+			stack.hurtAndBreak(2, player, hand.asEquipmentSlot());
 			level.setBlock(pos, spikedForm.get().defaultBlockState()
 					.setValue(SpikedPalisadeBlock.NORTH, !state.getValue(TYPE_NORTH).equals(PalisadeConnection.NONE))
 					.setValue(SpikedPalisadeBlock.EAST, !state.getValue(TYPE_EAST).equals(PalisadeConnection.NONE))
 					.setValue(SpikedPalisadeBlock.SOUTH, !state.getValue(TYPE_SOUTH).equals(PalisadeConnection.NONE))
 					.setValue(SpikedPalisadeBlock.WEST, !state.getValue(TYPE_WEST).equals(PalisadeConnection.NONE))
 					.setValue(WATERLOGGED, state.getValue(WATERLOGGED)), 11);
-			return ItemInteractionResult.sidedSuccess(level.isClientSide);
+			return InteractionResult.SUCCESS;
 		}
 		return super.useItemOn(stack, state, level, pos, player, hand, hitResult);
 	}
@@ -145,42 +161,14 @@ public class PalisadeBlock extends CrossCollisionBlock implements SimpleWaterlog
 	}
 
 	@Override
-	protected BlockState updateShape(BlockState state, Direction facing, BlockState facingState, LevelAccessor level, BlockPos currentPos, BlockPos facingPos) {
+	protected BlockState updateShape(BlockState state, LevelReader level, ScheduledTickAccess ticks, BlockPos currentPos, Direction facing, BlockPos facingPos, BlockState facingState, RandomSource random) {
 		if (state.getValue(WATERLOGGED)) {
-			level.scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
+			ticks.scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
 		}
 
 		return facing.getAxis().getPlane() == Direction.Plane.HORIZONTAL
 				? state.setValue(PROPERTY_BY_DIRECTION.get(facing), this.getConnectionType(facingState, facingState.isFaceSturdy(level, facingPos, facing.getOpposite()), facing.getOpposite()))
-				: super.updateShape(state, facing, facingState, level, currentPos, facingPos);
-	}
-
-	protected static int indexFor(Direction facing) {
-		return 1 << facing.get2DDataValue();
-	}
-
-	@Override
-	protected int getAABBIndex(BlockState state) {
-		return this.stateToIndex.computeIntIfAbsent(state, (currentState) -> {
-			int i = 0;
-			if (!currentState.getValue(TYPE_NORTH).equals(PalisadeConnection.NONE)) {
-				i |= indexFor(Direction.NORTH);
-			}
-
-			if (!currentState.getValue(TYPE_EAST).equals(PalisadeConnection.NONE)) {
-				i |= indexFor(Direction.EAST);
-			}
-
-			if (!currentState.getValue(TYPE_SOUTH).equals(PalisadeConnection.NONE)) {
-				i |= indexFor(Direction.SOUTH);
-			}
-
-			if (!currentState.getValue(TYPE_WEST).equals(PalisadeConnection.NONE)) {
-				i |= indexFor(Direction.WEST);
-			}
-
-			return i;
-		});
+				: super.updateShape(state, level, ticks, currentPos, facing, facingPos, facingState, random);
 	}
 
 	public PalisadeConnection getConnectionType(BlockState state, boolean isSideSolid, Direction direction) {

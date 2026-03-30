@@ -13,6 +13,7 @@ import vectorwing.blockbox.common.item.SkyLanternItem;
 
 import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
+import java.util.function.Function;
 import java.util.function.Supplier;
 
 import static vectorwing.blockbox.common.event.VanillaTabOrdering.FUNCTIONAL_BLOCKS;
@@ -23,14 +24,14 @@ public class ModItems
 	public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(BlockBox.MODID);
 	public static LinkedHashSet<Supplier<? extends Item>> CREATIVE_TAB_ITEMS = Sets.newLinkedHashSet();
 
-	public static Supplier<Item> registerItem(final String name, final Supplier<Item> supplier) {
-		Supplier<Item> block = ITEMS.register(name, supplier);
+	public static Supplier<Item> registerItem(final String name, final Function<Item.Properties, Item> function) {
+		Supplier<Item> block = ITEMS.registerItem(name, function);
 		CREATIVE_TAB_ITEMS.add(block);
 		return block;
 	}
 
-	public static Supplier<Item> registerItem(final String name, final Supplier<Item> supplier, final Item vanillaTabNeighbor, LinkedHashMap<Supplier<? extends Item>, ItemLike> vanillaTab) {
-		Supplier<Item> block = registerItem(name, supplier);
+	public static Supplier<Item> registerItem(final String name, final Function<Item.Properties, Item> function, final Item vanillaTabNeighbor, LinkedHashMap<Supplier<? extends Item>, ItemLike> vanillaTab) {
+		Supplier<Item> block = registerItem(name, function);
 		vanillaTab.put(block, vanillaTabNeighbor);
 		return block;
 	}
@@ -88,15 +89,6 @@ public class ModItems
 
 	public static final Supplier<BlockItem> ROUGH_GLASS = registerSimpleBlockItem("rough_glass", ModBlocks.ROUGH_GLASS);
 	public static final Supplier<BlockItem> ROUGH_GLASS_PANE = registerSimpleBlockItem("rough_glass_pane", ModBlocks.ROUGH_GLASS_PANE);
-
-	public static final Supplier<BlockItem> COPPER_BARS = registerSimpleBlockItem("copper_bars", ModBlocks.COPPER_BARS, Items.COPPER_TRAPDOOR);
-	public static final Supplier<BlockItem> EXPOSED_COPPER_BARS = registerSimpleBlockItem("exposed_copper_bars", ModBlocks.EXPOSED_COPPER_BARS, Items.EXPOSED_COPPER_TRAPDOOR);
-	public static final Supplier<BlockItem> WEATHERED_COPPER_BARS = registerSimpleBlockItem("weathered_copper_bars", ModBlocks.WEATHERED_COPPER_BARS, Items.WEATHERED_COPPER_TRAPDOOR);
-	public static final Supplier<BlockItem> OXIDIZED_COPPER_BARS = registerSimpleBlockItem("oxidized_copper_bars", ModBlocks.OXIDIZED_COPPER_BARS, Items.OXIDIZED_COPPER_TRAPDOOR);
-	public static final Supplier<BlockItem> WAXED_COPPER_BARS = registerSimpleBlockItem("waxed_copper_bars", ModBlocks.WAXED_COPPER_BARS, Items.WAXED_COPPER_TRAPDOOR);
-	public static final Supplier<BlockItem> WAXED_EXPOSED_COPPER_BARS = registerSimpleBlockItem("waxed_exposed_copper_bars", ModBlocks.WAXED_EXPOSED_COPPER_BARS, Items.WAXED_EXPOSED_COPPER_TRAPDOOR);
-	public static final Supplier<BlockItem> WAXED_WEATHERED_COPPER_BARS = registerSimpleBlockItem("waxed_weathered_copper_bars", ModBlocks.WAXED_WEATHERED_COPPER_BARS, Items.WAXED_WEATHERED_COPPER_TRAPDOOR);
-	public static final Supplier<BlockItem> WAXED_OXIDIZED_COPPER_BARS = registerSimpleBlockItem("waxed_oxidized_copper_bars", ModBlocks.WAXED_OXIDIZED_COPPER_BARS, Items.WAXED_OXIDIZED_COPPER_TRAPDOOR);
 
 	public static final Supplier<BlockItem> COPPER_PILLAR = registerSimpleBlockItem("copper_pillar", ModBlocks.COPPER_PILLAR, Items.COPPER_GRATE);
 	public static final Supplier<BlockItem> EXPOSED_COPPER_PILLAR = registerSimpleBlockItem("exposed_copper_pillar", ModBlocks.EXPOSED_COPPER_PILLAR, Items.EXPOSED_COPPER_GRATE);
@@ -201,20 +193,24 @@ public class ModItems
 	public static final Supplier<BlockItem> BRAZIER = registerSimpleBlockItem("brazier", ModBlocks.BRAZIER);
 	public static final Supplier<BlockItem> SOUL_BRAZIER = registerSimpleBlockItem("soul_brazier", ModBlocks.SOUL_BRAZIER);
 
-	public static final Supplier<Item> WHITE_SKY_LANTERN = registerItem("white_sky_lantern", () -> new SkyLanternItem(ModBlocks.WHITE_SKY_LANTERN.get(), new Item.Properties()), Items.PINK_CANDLE, FUNCTIONAL_BLOCKS);
-	public static final Supplier<Item> LIGHT_GRAY_SKY_LANTERN = registerItem("light_gray_sky_lantern", () -> new SkyLanternItem(ModBlocks.LIGHT_GRAY_SKY_LANTERN.get(), new Item.Properties()), Items.PINK_CANDLE, FUNCTIONAL_BLOCKS);
-	public static final Supplier<Item> GRAY_SKY_LANTERN = registerItem("gray_sky_lantern", () -> new SkyLanternItem(ModBlocks.GRAY_SKY_LANTERN.get(), new Item.Properties()), Items.PINK_CANDLE, FUNCTIONAL_BLOCKS);
-	public static final Supplier<Item> BLACK_SKY_LANTERN = registerItem("black_sky_lantern", () -> new SkyLanternItem(ModBlocks.BLACK_SKY_LANTERN.get(), new Item.Properties()), Items.PINK_CANDLE, FUNCTIONAL_BLOCKS);
-	public static final Supplier<Item> BROWN_SKY_LANTERN = registerItem("brown_sky_lantern", () -> new SkyLanternItem(ModBlocks.BROWN_SKY_LANTERN.get(), new Item.Properties()), Items.PINK_CANDLE, FUNCTIONAL_BLOCKS);
-	public static final Supplier<Item> RED_SKY_LANTERN = registerItem("red_sky_lantern", () -> new SkyLanternItem(ModBlocks.RED_SKY_LANTERN.get(), new Item.Properties()), Items.PINK_CANDLE, FUNCTIONAL_BLOCKS);
-	public static final Supplier<Item> ORANGE_SKY_LANTERN = registerItem("orange_sky_lantern", () -> new SkyLanternItem(ModBlocks.ORANGE_SKY_LANTERN.get(), new Item.Properties()), Items.PINK_CANDLE, FUNCTIONAL_BLOCKS);
-	public static final Supplier<Item> YELLOW_SKY_LANTERN = registerItem("yellow_sky_lantern", () -> new SkyLanternItem(ModBlocks.YELLOW_SKY_LANTERN.get(), new Item.Properties()), Items.PINK_CANDLE, FUNCTIONAL_BLOCKS);
-	public static final Supplier<Item> LIME_SKY_LANTERN = registerItem("lime_sky_lantern", () -> new SkyLanternItem(ModBlocks.LIME_SKY_LANTERN.get(), new Item.Properties()), Items.PINK_CANDLE, FUNCTIONAL_BLOCKS);
-	public static final Supplier<Item> GREEN_SKY_LANTERN = registerItem("green_sky_lantern", () -> new SkyLanternItem(ModBlocks.GREEN_SKY_LANTERN.get(), new Item.Properties()), Items.PINK_CANDLE, FUNCTIONAL_BLOCKS);
-	public static final Supplier<Item> CYAN_SKY_LANTERN = registerItem("cyan_sky_lantern", () -> new SkyLanternItem(ModBlocks.CYAN_SKY_LANTERN.get(), new Item.Properties()), Items.PINK_CANDLE, FUNCTIONAL_BLOCKS);
-	public static final Supplier<Item> LIGHT_BLUE_SKY_LANTERN = registerItem("light_blue_sky_lantern", () -> new SkyLanternItem(ModBlocks.LIGHT_BLUE_SKY_LANTERN.get(), new Item.Properties()), Items.PINK_CANDLE, FUNCTIONAL_BLOCKS);
-	public static final Supplier<Item> BLUE_SKY_LANTERN = registerItem("blue_sky_lantern", () -> new SkyLanternItem(ModBlocks.BLUE_SKY_LANTERN.get(), new Item.Properties()), Items.PINK_CANDLE, FUNCTIONAL_BLOCKS);
-	public static final Supplier<Item> PURPLE_SKY_LANTERN = registerItem("purple_sky_lantern", () -> new SkyLanternItem(ModBlocks.PURPLE_SKY_LANTERN.get(), new Item.Properties()), Items.PINK_CANDLE, FUNCTIONAL_BLOCKS);
-	public static final Supplier<Item> MAGENTA_SKY_LANTERN = registerItem("magenta_sky_lantern", () -> new SkyLanternItem(ModBlocks.MAGENTA_SKY_LANTERN.get(), new Item.Properties()), Items.PINK_CANDLE, FUNCTIONAL_BLOCKS);
-	public static final Supplier<Item> PINK_SKY_LANTERN = registerItem("pink_sky_lantern", () -> new SkyLanternItem(ModBlocks.PINK_SKY_LANTERN.get(), new Item.Properties()), Items.PINK_CANDLE, FUNCTIONAL_BLOCKS);
+	public static final Supplier<Item> WHITE_SKY_LANTERN = registerItem("white_sky_lantern", skyLantern(ModBlocks.WHITE_SKY_LANTERN), Items.PINK_CANDLE, FUNCTIONAL_BLOCKS);
+	public static final Supplier<Item> LIGHT_GRAY_SKY_LANTERN = registerItem("light_gray_sky_lantern", skyLantern(ModBlocks.LIGHT_GRAY_SKY_LANTERN), Items.PINK_CANDLE, FUNCTIONAL_BLOCKS);
+	public static final Supplier<Item> GRAY_SKY_LANTERN = registerItem("gray_sky_lantern", skyLantern(ModBlocks.GRAY_SKY_LANTERN), Items.PINK_CANDLE, FUNCTIONAL_BLOCKS);
+	public static final Supplier<Item> BLACK_SKY_LANTERN = registerItem("black_sky_lantern", skyLantern(ModBlocks.BLACK_SKY_LANTERN), Items.PINK_CANDLE, FUNCTIONAL_BLOCKS);
+	public static final Supplier<Item> BROWN_SKY_LANTERN = registerItem("brown_sky_lantern", skyLantern(ModBlocks.BROWN_SKY_LANTERN), Items.PINK_CANDLE, FUNCTIONAL_BLOCKS);
+	public static final Supplier<Item> RED_SKY_LANTERN = registerItem("red_sky_lantern", skyLantern(ModBlocks.RED_SKY_LANTERN), Items.PINK_CANDLE, FUNCTIONAL_BLOCKS);
+	public static final Supplier<Item> ORANGE_SKY_LANTERN = registerItem("orange_sky_lantern", skyLantern(ModBlocks.ORANGE_SKY_LANTERN), Items.PINK_CANDLE, FUNCTIONAL_BLOCKS);
+	public static final Supplier<Item> YELLOW_SKY_LANTERN = registerItem("yellow_sky_lantern", skyLantern(ModBlocks.YELLOW_SKY_LANTERN), Items.PINK_CANDLE, FUNCTIONAL_BLOCKS);
+	public static final Supplier<Item> LIME_SKY_LANTERN = registerItem("lime_sky_lantern", skyLantern(ModBlocks.LIME_SKY_LANTERN), Items.PINK_CANDLE, FUNCTIONAL_BLOCKS);
+	public static final Supplier<Item> GREEN_SKY_LANTERN = registerItem("green_sky_lantern", skyLantern(ModBlocks.GREEN_SKY_LANTERN), Items.PINK_CANDLE, FUNCTIONAL_BLOCKS);
+	public static final Supplier<Item> CYAN_SKY_LANTERN = registerItem("cyan_sky_lantern", skyLantern(ModBlocks.CYAN_SKY_LANTERN), Items.PINK_CANDLE, FUNCTIONAL_BLOCKS);
+	public static final Supplier<Item> LIGHT_BLUE_SKY_LANTERN = registerItem("light_blue_sky_lantern", skyLantern(ModBlocks.LIGHT_BLUE_SKY_LANTERN), Items.PINK_CANDLE, FUNCTIONAL_BLOCKS);
+	public static final Supplier<Item> BLUE_SKY_LANTERN = registerItem("blue_sky_lantern", skyLantern(ModBlocks.BLUE_SKY_LANTERN), Items.PINK_CANDLE, FUNCTIONAL_BLOCKS);
+	public static final Supplier<Item> PURPLE_SKY_LANTERN = registerItem("purple_sky_lantern", skyLantern(ModBlocks.PURPLE_SKY_LANTERN), Items.PINK_CANDLE, FUNCTIONAL_BLOCKS);
+	public static final Supplier<Item> MAGENTA_SKY_LANTERN = registerItem("magenta_sky_lantern", skyLantern(ModBlocks.MAGENTA_SKY_LANTERN), Items.PINK_CANDLE, FUNCTIONAL_BLOCKS);
+	public static final Supplier<Item> PINK_SKY_LANTERN = registerItem("pink_sky_lantern", skyLantern(ModBlocks.PINK_SKY_LANTERN), Items.PINK_CANDLE, FUNCTIONAL_BLOCKS);
+
+	private static Function<Item.Properties, Item> skyLantern(Supplier<Block> block) {
+		return properties -> new SkyLanternItem(block.get(), properties.useBlockDescriptionPrefix());
+	}
 }
