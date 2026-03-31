@@ -3,19 +3,17 @@ package vectorwing.blockbox.data.tag;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.tags.TagsProvider;
+import net.minecraft.data.tags.KeyTagProvider;
 import net.minecraft.world.damagesource.DamageType;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
-import org.jetbrains.annotations.Nullable;
 import vectorwing.blockbox.BlockBox;
 import vectorwing.blockbox.common.registry.ModDamageTypes;
 
 import java.util.concurrent.CompletableFuture;
 
-public class DamageTypeTags extends TagsProvider<DamageType>
+public class DamageTypeTags extends KeyTagProvider<DamageType>
 {
-	public DamageTypeTags(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, @Nullable ExistingFileHelper existingFileHelper) {
-		super(output, Registries.DAMAGE_TYPE, lookupProvider, BlockBox.MODID, existingFileHelper);
+	public DamageTypeTags(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider) {
+		super(output, Registries.DAMAGE_TYPE, lookupProvider, BlockBox.MODID);
 	}
 
 	@Override
