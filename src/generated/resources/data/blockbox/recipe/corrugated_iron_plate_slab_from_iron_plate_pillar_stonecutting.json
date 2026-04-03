@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "blockbox:iron_plate_pillar"
-  },
+  "ingredient": "blockbox:iron_plate_pillar",
   "result": {
     "count": 2,
     "id": "blockbox:corrugated_iron_plate_slab"

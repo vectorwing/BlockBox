@@ -1,7 +1,9 @@
 {
   "parent": "minecraft:block/cube_all",
-  "render_type": "minecraft:translucent",
   "textures": {
-    "all": "blockbox:block/rough_glass"
+    "all": {
+      "force_translucent": true,
+      "sprite": "blockbox:block/rough_glass"
+    }
   }
 }

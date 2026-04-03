@@ -1,10 +1,7 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "blockbox:polished_obsidian"
-  },
+  "ingredient": "blockbox:polished_obsidian",
   "result": {
-    "count": 1,
     "id": "minecraft:obsidian"
   }
 }

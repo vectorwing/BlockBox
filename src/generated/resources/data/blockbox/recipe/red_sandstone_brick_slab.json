@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "blockbox:red_sandstone_bricks"
-    }
+    "#": "blockbox:red_sandstone_bricks"
   },
   "pattern": [
     "###"

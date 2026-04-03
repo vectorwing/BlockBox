@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "blockbox:lapis_lazuli_mosaic"
-    }
+    "#": "blockbox:lapis_lazuli_mosaic"
   },
   "pattern": [
     "###"

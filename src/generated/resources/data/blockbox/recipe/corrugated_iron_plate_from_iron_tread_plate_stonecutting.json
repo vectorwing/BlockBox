@@ -1,10 +1,7 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "blockbox:iron_tread_plate"
-  },
+  "ingredient": "blockbox:iron_tread_plate",
   "result": {
-    "count": 1,
     "id": "blockbox:corrugated_iron_plate"
   }
 }

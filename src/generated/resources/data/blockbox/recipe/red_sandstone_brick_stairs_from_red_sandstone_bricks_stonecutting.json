@@ -1,10 +1,7 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "blockbox:red_sandstone_bricks"
-  },
+  "ingredient": "blockbox:red_sandstone_bricks",
   "result": {
-    "count": 1,
     "id": "blockbox:red_sandstone_brick_stairs"
   }
 }

@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "bb_palisades",
   "key": {
-    "#": {
-      "item": "minecraft:acacia_log"
-    }
+    "#": "minecraft:acacia_log"
   },
   "pattern": [
     "###",

@@ -1,8 +1,0 @@
-{
-  "parent": "blockbox:block/template_hanging_brazier",
-  "textures": {
-    "bottom": "blockbox:block/brazier_bottom",
-    "side": "blockbox:block/hanging_brazier_side",
-    "top": "blockbox:block/soul_brazier_top"
-  }
-}

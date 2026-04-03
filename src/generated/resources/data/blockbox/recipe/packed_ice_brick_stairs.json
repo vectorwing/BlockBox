@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "blockbox:packed_ice_bricks"
-    }
+    "#": "blockbox:packed_ice_bricks"
   },
   "pattern": [
     "#  ",

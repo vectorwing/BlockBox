@@ -26,6 +26,15 @@
     },
     {
       "apply": {
+        "model": "blockbox:block/golden_bars_side",
+        "y": 90
+      },
+      "when": {
+        "east": "true"
+      }
+    },
+    {
+      "apply": {
         "model": "blockbox:block/golden_bars_side_alt"
       },
       "when": {
@@ -39,15 +48,6 @@
       },
       "when": {
         "west": "true"
-      }
-    },
-    {
-      "apply": {
-        "model": "blockbox:block/golden_bars_side",
-        "y": 90
-      },
-      "when": {
-        "east": "true"
       }
     }
   ]

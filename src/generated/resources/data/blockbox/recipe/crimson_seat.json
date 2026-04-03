@@ -3,19 +3,14 @@
   "category": "misc",
   "group": "bb_chairs",
   "key": {
-    "#": {
-      "item": "minecraft:crimson_planks"
-    },
-    "/": {
-      "item": "minecraft:stick"
-    }
+    "#": "minecraft:crimson_planks",
+    "/": "minecraft:stick"
   },
   "pattern": [
     "###",
     "/ /"
   ],
   "result": {
-    "count": 1,
     "id": "blockbox:crimson_seat"
   }
 }

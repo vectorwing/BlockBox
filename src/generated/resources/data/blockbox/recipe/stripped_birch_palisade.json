@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "bb_palisades",
   "key": {
-    "#": {
-      "item": "minecraft:stripped_birch_log"
-    }
+    "#": "minecraft:stripped_birch_log"
   },
   "pattern": [
     "###",

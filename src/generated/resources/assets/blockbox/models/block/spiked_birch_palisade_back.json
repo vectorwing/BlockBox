@@ -1,6 +1,5 @@
 {
   "parent": "blockbox:block/template_spiked_palisade_back",
-  "render_type": "minecraft:cutout",
   "textures": {
     "core": "blockbox:block/birch_palisade_core",
     "side": "blockbox:block/birch_palisade_side",

@@ -3,11 +3,8 @@
   "category": "blocks",
   "cookingtime": 200,
   "experience": 0.1,
-  "ingredient": {
-    "item": "blockbox:tiles"
-  },
+  "ingredient": "blockbox:tiles",
   "result": {
-    "count": 1,
     "id": "blockbox:broken_tile_mosaic"
   }
 }

@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "blockbox:andesite_bricks"
-    }
+    "#": "blockbox:andesite_bricks"
   },
   "pattern": [
     "#  ",

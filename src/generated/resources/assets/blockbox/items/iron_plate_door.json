@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "blockbox:item/iron_plate_door"
+  }
+}

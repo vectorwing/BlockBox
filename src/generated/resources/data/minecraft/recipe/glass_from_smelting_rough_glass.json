@@ -3,11 +3,8 @@
   "category": "blocks",
   "cookingtime": 200,
   "experience": 0.1,
-  "ingredient": {
-    "item": "blockbox:rough_glass"
-  },
+  "ingredient": "blockbox:rough_glass",
   "result": {
-    "count": 1,
     "id": "minecraft:glass"
   }
 }

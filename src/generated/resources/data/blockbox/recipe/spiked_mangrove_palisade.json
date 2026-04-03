@@ -3,12 +3,9 @@
   "category": "misc",
   "group": "bb_spiked_palisades",
   "ingredients": [
-    {
-      "item": "blockbox:mangrove_palisade"
-    }
+    "blockbox:mangrove_palisade"
   ],
   "result": {
-    "count": 1,
     "id": "blockbox:spiked_mangrove_palisade"
   }
 }

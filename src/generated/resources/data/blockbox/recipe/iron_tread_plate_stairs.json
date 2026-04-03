@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "blockbox:iron_tread_plate"
-    }
+    "#": "blockbox:iron_tread_plate"
   },
   "pattern": [
     "#  ",

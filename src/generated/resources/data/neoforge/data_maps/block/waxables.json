@@ -1,25 +1,13 @@
 {
   "values": {
-    "blockbox:copper_bars": {
-      "waxed": "blockbox:waxed_copper_bars"
-    },
     "blockbox:copper_pillar": {
       "waxed": "blockbox:waxed_copper_pillar"
-    },
-    "blockbox:exposed_copper_bars": {
-      "waxed": "blockbox:waxed_exposed_copper_bars"
     },
     "blockbox:exposed_copper_pillar": {
       "waxed": "blockbox:waxed_exposed_copper_pillar"
     },
-    "blockbox:oxidized_copper_bars": {
-      "waxed": "blockbox:waxed_oxidized_copper_bars"
-    },
     "blockbox:oxidized_copper_pillar": {
       "waxed": "blockbox:waxed_oxidized_copper_pillar"
-    },
-    "blockbox:weathered_copper_bars": {
-      "waxed": "blockbox:waxed_weathered_copper_bars"
     },
     "blockbox:weathered_copper_pillar": {
       "waxed": "blockbox:waxed_weathered_copper_pillar"
