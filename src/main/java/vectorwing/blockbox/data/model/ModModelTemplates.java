@@ -21,8 +21,8 @@ public class ModModelTemplates
 	public static final ModelTemplate SEAT = create("template_seat", TextureSlot.TOP, TextureSlot.SIDE);
 	public static final ModelTemplate BRAZIER = create("template_brazier", TextureSlot.TOP, TextureSlot.SIDE, TextureSlot.BOTTOM);
 	public static final ModelTemplate BRAZIER_LIT = create("template_brazier_lit", "_lit", TextureSlot.TOP, TextureSlot.SIDE, TextureSlot.BOTTOM, TextureSlot.FIRE);
-	public static final ModelTemplate HANGING_BRAZIER = create("template_hanging_brazier", "_hanging", TextureSlot.TOP, TextureSlot.SIDE, TextureSlot.BOTTOM);
-	public static final ModelTemplate HANGING_BRAZIER_LIT = create("template_hanging_brazier_lit", "_hanging_lit", TextureSlot.TOP, TextureSlot.SIDE, TextureSlot.BOTTOM, TextureSlot.FIRE);
+	public static final ModelTemplate HANGING_BRAZIER = create("template_brazier_hanging", "_hanging", TextureSlot.TOP, TextureSlot.SIDE, TextureSlot.BOTTOM);
+	public static final ModelTemplate HANGING_BRAZIER_LIT = create("template_brazier_hanging_lit", "_hanging_lit", TextureSlot.TOP, TextureSlot.SIDE, TextureSlot.BOTTOM, TextureSlot.FIRE);
 	public static final ModelTemplate SKY_LANTERN = create("template_sky_lantern", TextureSlot.TOP, TextureSlot.SIDE, TextureSlot.INNER_TOP, ModTextureSlots.INNER_SIDE, TextureSlot.BOTTOM, TextureSlot.CANDLE);
 
 	public static ModelTemplate create(String id, TextureSlot... slots) {
