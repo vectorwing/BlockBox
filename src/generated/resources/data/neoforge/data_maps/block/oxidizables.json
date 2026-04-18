@@ -1,10 +1,19 @@
 {
   "values": {
+    "blockbox:copper_lattice": {
+      "next_oxidation_stage": "blockbox:exposed_copper_lattice"
+    },
     "blockbox:copper_pillar": {
       "next_oxidation_stage": "blockbox:exposed_copper_pillar"
     },
+    "blockbox:exposed_copper_lattice": {
+      "next_oxidation_stage": "blockbox:weathered_copper_lattice"
+    },
     "blockbox:exposed_copper_pillar": {
       "next_oxidation_stage": "blockbox:weathered_copper_pillar"
+    },
+    "blockbox:weathered_copper_lattice": {
+      "next_oxidation_stage": "blockbox:oxidized_copper_lattice"
     },
     "blockbox:weathered_copper_pillar": {
       "next_oxidation_stage": "blockbox:oxidized_copper_pillar"

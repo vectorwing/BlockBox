@@ -66,6 +66,15 @@ public class ModBlocks
 	public static final Supplier<Block> ROUGH_GLASS = BLOCKS.registerBlock("rough_glass", TransparentBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS));
 	public static final Supplier<Block> ROUGH_GLASS_PANE = BLOCKS.registerBlock("rough_glass_pane", IronBarsBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE));
 
+	public static final Supplier<Block> COPPER_LATTICE = BLOCKS.registerBlock("copper_lattice", props -> new WeatheringCopperBarsBlock(WeatheringCopper.WeatherState.UNAFFECTED, props), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BARS.unaffected()));
+	public static final Supplier<Block> EXPOSED_COPPER_LATTICE = BLOCKS.registerBlock("exposed_copper_lattice", props -> new WeatheringCopperBarsBlock(WeatheringCopper.WeatherState.EXPOSED, props), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BARS.exposed()));
+	public static final Supplier<Block> WEATHERED_COPPER_LATTICE = BLOCKS.registerBlock("weathered_copper_lattice", props -> new WeatheringCopperBarsBlock(WeatheringCopper.WeatherState.WEATHERED, props), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BARS.weathered()));
+	public static final Supplier<Block> OXIDIZED_COPPER_LATTICE = BLOCKS.registerBlock("oxidized_copper_lattice", props -> new WeatheringCopperBarsBlock(WeatheringCopper.WeatherState.OXIDIZED, props), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BARS.oxidized()));
+	public static final Supplier<Block> WAXED_COPPER_LATTICE = BLOCKS.registerBlock("waxed_copper_lattice", IronBarsBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BARS.waxed()));
+	public static final Supplier<Block> WAXED_EXPOSED_COPPER_LATTICE = BLOCKS.registerBlock("waxed_exposed_copper_lattice", IronBarsBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BARS.waxedExposed()));
+	public static final Supplier<Block> WAXED_WEATHERED_COPPER_LATTICE = BLOCKS.registerBlock("waxed_weathered_copper_lattice", IronBarsBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BARS.waxedWeathered()));
+	public static final Supplier<Block> WAXED_OXIDIZED_COPPER_LATTICE = BLOCKS.registerBlock("waxed_oxidized_copper_lattice", IronBarsBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BARS.waxedOxidized()));
+
 	public static final Supplier<Block> COPPER_PILLAR = BLOCKS.registerBlock("copper_pillar", props -> new WeatheringCopperPillarBlock(WeatheringCopper.WeatherState.UNAFFECTED, props), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BLOCK));
 	public static final Supplier<Block> EXPOSED_COPPER_PILLAR = BLOCKS.registerBlock("exposed_copper_pillar", props -> new WeatheringCopperPillarBlock(WeatheringCopper.WeatherState.EXPOSED, props), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.EXPOSED_COPPER));
 	public static final Supplier<Block> WEATHERED_COPPER_PILLAR = BLOCKS.registerBlock("weathered_copper_pillar", props -> new WeatheringCopperPillarBlock(WeatheringCopper.WeatherState.WEATHERED, props), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.WEATHERED_COPPER));

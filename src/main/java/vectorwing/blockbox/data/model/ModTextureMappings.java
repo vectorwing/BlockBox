@@ -13,9 +13,10 @@ public class ModTextureMappings
 				.put(TextureSlot.EDGE, TextureMapping.getBlockTexture(block, "_single"));
 	}
 
-	public static TextureMapping modBarsPost(Block block) {
+	public static TextureMapping modBarsAlt(Block block) {
 		return new TextureMapping()
-				.put(TextureSlot.BARS, TextureMapping.getBlockTexture(block, "_single"));
+				.put(TextureSlot.BARS, TextureMapping.getBlockTexture(block, "_single"))
+				.put(TextureSlot.EDGE, TextureMapping.getBlockTexture(block));
 	}
 
 	public static TextureMapping pillar(Block block) {

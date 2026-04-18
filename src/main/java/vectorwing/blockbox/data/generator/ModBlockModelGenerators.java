@@ -52,6 +52,7 @@ public class ModBlockModelGenerators extends BlockModelGenerators
 		createDoor(ModBlocks.GOLDEN_DOOR.get());
 		createTrapdoor(ModBlocks.GOLDEN_TRAPDOOR.get());
 		createModBarsAndItem(ModBlocks.GOLDEN_BARS.get());
+		createCopperLattices();
 		createCopperPillars();
 		createTrivialCube(ModBlocks.POLISHED_AMETHYST.get());
 		createPalisades();
@@ -59,6 +60,13 @@ public class ModBlockModelGenerators extends BlockModelGenerators
 		createBrazier(ModBlocks.BRAZIER.get(), Blocks.CAMPFIRE);
 		createBrazier(ModBlocks.SOUL_BRAZIER.get(), Blocks.SOUL_CAMPFIRE);
 		createSkyLanterns();
+	}
+
+	public void createCopperLattices() {
+		createFlatBarsAndItem(ModBlocks.COPPER_LATTICE.get(), ModBlocks.WAXED_COPPER_LATTICE.get());
+		createFlatBarsAndItem(ModBlocks.EXPOSED_COPPER_LATTICE.get(), ModBlocks.WAXED_EXPOSED_COPPER_LATTICE.get());
+		createFlatBarsAndItem(ModBlocks.WEATHERED_COPPER_LATTICE.get(), ModBlocks.WAXED_WEATHERED_COPPER_LATTICE.get());
+		createFlatBarsAndItem(ModBlocks.OXIDIZED_COPPER_LATTICE.get(), ModBlocks.WAXED_OXIDIZED_COPPER_LATTICE.get());
 	}
 
 	public void createCopperPillars() {
@@ -132,10 +140,10 @@ public class ModBlockModelGenerators extends BlockModelGenerators
 
 	public void createModBarsAndItem(Block block) {
 		TextureMapping mapping = ModTextureMappings.modBars(block);
-		TextureMapping postMapping = ModTextureMappings.modBarsPost(block);
+		TextureMapping altMapping = ModTextureMappings.modBarsAlt(block);
 		createModBars(block,
 				ModModelTemplates.BARS_POST_ENDS.create(block, mapping, modelOutput),
-				ModModelTemplates.BARS_POST.create(block, postMapping, modelOutput),
+				ModModelTemplates.BARS_POST.create(block, altMapping, modelOutput),
 				ModModelTemplates.BARS_POST_SIDE.create(block, mapping, modelOutput),
 				ModModelTemplates.BARS_POST_SIDE_ALT.create(block, mapping, modelOutput));
 		registerSimpleFlatItemModel(block);
@@ -153,6 +161,21 @@ public class ModBlockModelGenerators extends BlockModelGenerators
 				.with(condition().term(BlockStateProperties.EAST, true), side.with(Y_ROT_90))
 				.with(condition().term(BlockStateProperties.SOUTH, true), sideAlt)
 				.with(condition().term(BlockStateProperties.WEST, true), sideAlt.with(Y_ROT_90)));
+	}
+
+	public void createFlatBarsAndItem(Block unwaxed, Block waxed) {
+		TextureMapping mapping = ModTextureMappings.modBars(unwaxed);
+		TextureMapping altMapping = ModTextureMappings.modBarsAlt(unwaxed);
+		MultiVariant post = plainVariant(ModModelTemplates.BARS_POST.create(unwaxed, altMapping, modelOutput));
+		MultiVariant postEnds = plainVariant(ModModelTemplates.BARS_POST_ENDS.create(unwaxed, altMapping, modelOutput));
+		MultiVariant cap = plainVariant(ModModelTemplates.BARS_CAP.create(unwaxed, mapping, modelOutput));
+		MultiVariant capAlt = plainVariant(ModModelTemplates.BARS_CAP_ALT.create(unwaxed, mapping, modelOutput));
+		MultiVariant side = plainVariant(ModModelTemplates.BARS_POST_SIDE_FLAT.create(unwaxed, mapping, modelOutput));
+		MultiVariant sideAlt = plainVariant(ModModelTemplates.BARS_POST_SIDE_FLAT_ALT.create(unwaxed, mapping, modelOutput));
+		blockStateOutput.accept(createFlatBars(unwaxed, post, postEnds, cap, capAlt, side, sideAlt));
+		blockStateOutput.accept(createFlatBars(waxed, post, postEnds, cap, capAlt, side, sideAlt));
+		registerSimpleFlatItemModel(unwaxed);
+		itemModelOutput.copy(unwaxed.asItem(), waxed.asItem());
 	}
 
 	public void createWaxablePillar(Block unwaxed, Block waxed) {
@@ -213,6 +236,20 @@ public class ModBlockModelGenerators extends BlockModelGenerators
 
 	private static ExtendedModelTemplate frontLight(Identifier model) {
 		return new ModelTemplate(Optional.of(model), Optional.empty()).extend().guiLight(UnbakedModel.GuiLight.FRONT).build();
+	}
+
+	public static MultiPartGenerator createFlatBars(Block block, MultiVariant post, MultiVariant postEnds, MultiVariant cap, MultiVariant capAlt, MultiVariant side, MultiVariant sideAlt) {
+		return MultiPartGenerator.multiPart(block)
+				.with(condition().term(BlockStateProperties.NORTH, false).term(BlockStateProperties.EAST, false).term(BlockStateProperties.SOUTH, false).term(BlockStateProperties.WEST, false), post)
+				.with(condition().term(BlockStateProperties.NORTH, false).term(BlockStateProperties.EAST, false).term(BlockStateProperties.SOUTH, false).term(BlockStateProperties.WEST, false), postEnds)
+				.with(condition().term(BlockStateProperties.NORTH, true).term(BlockStateProperties.EAST, false).term(BlockStateProperties.SOUTH, false).term(BlockStateProperties.WEST, false), cap)
+				.with(condition().term(BlockStateProperties.NORTH, false).term(BlockStateProperties.EAST, false).term(BlockStateProperties.SOUTH, true).term(BlockStateProperties.WEST, false), capAlt)
+				.with(condition().term(BlockStateProperties.NORTH, false).term(BlockStateProperties.EAST, false).term(BlockStateProperties.SOUTH, false).term(BlockStateProperties.WEST, true), capAlt.with(Y_ROT_90))
+				.with(condition().term(BlockStateProperties.NORTH, false).term(BlockStateProperties.EAST, true).term(BlockStateProperties.SOUTH, false).term(BlockStateProperties.WEST, false), cap.with(Y_ROT_90))
+				.with(condition().term(BlockStateProperties.NORTH, true), side)
+				.with(condition().term(BlockStateProperties.EAST, true), side.with(Y_ROT_90))
+				.with(condition().term(BlockStateProperties.SOUTH, true), sideAlt)
+				.with(condition().term(BlockStateProperties.WEST, true), sideAlt.with(Y_ROT_90));
 	}
 
 	public static MultiPartGenerator createPalisade(Block block, MultiVariant post, MultiVariant front, MultiVariant spikedFront, MultiVariant back, MultiVariant spikedBack) {

@@ -10,8 +10,12 @@ public class ModModelTemplates
 {
 	public static final ModelTemplate BARS_POST = create("template_bars_post", "_post", TextureSlot.BARS);
 	public static final ModelTemplate BARS_POST_ENDS = create("template_bars_post_ends", "_post_ends", TextureSlot.EDGE);
+	public static final ModelTemplate BARS_CAP = create("template_bars_cap", "_cap", TextureSlot.BARS);
+	public static final ModelTemplate BARS_CAP_ALT = create("template_bars_cap_alt", "_cap_alt", TextureSlot.BARS);
 	public static final ModelTemplate BARS_POST_SIDE = create("template_bars_side", "_side", TextureSlot.BARS, TextureSlot.EDGE);
 	public static final ModelTemplate BARS_POST_SIDE_ALT = create("template_bars_side_alt", "_side_alt", TextureSlot.BARS, TextureSlot.EDGE);
+	public static final ModelTemplate BARS_POST_SIDE_FLAT = create("template_bars_side_flat", "_side", TextureSlot.BARS);
+	public static final ModelTemplate BARS_POST_SIDE_FLAT_ALT = create("template_bars_side_flat_alt", "_side_alt", TextureSlot.BARS);
 	public static final ModelTemplate PALISADE_POST = create("template_palisade_post", "_post", TextureSlot.SIDE, TextureSlot.TOP);
 	public static final ModelTemplate SPIKED_PALISADE_POST = create("template_spiked_palisade_post", "_post", TextureSlot.SIDE, TextureSlot.TOP);
 	public static final ModelTemplate PALISADE_FRONT = create("template_palisade_front", "_front", ModTextureSlots.CORE, TextureSlot.SIDE, TextureSlot.TOP);

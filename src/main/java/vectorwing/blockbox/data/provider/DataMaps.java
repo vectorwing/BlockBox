@@ -8,7 +8,6 @@ import net.neoforged.neoforge.registries.datamaps.builtin.NeoForgeDataMaps;
 import net.neoforged.neoforge.registries.datamaps.builtin.Oxidizable;
 import net.neoforged.neoforge.registries.datamaps.builtin.Waxable;
 import vectorwing.blockbox.common.registry.ModBlocks;
-import vectorwing.blockbox.common.registry.ModItems;
 import vectorwing.blockbox.common.tag.ModTags;
 
 import java.util.concurrent.CompletableFuture;
@@ -24,11 +23,18 @@ public class DataMaps extends DataMapProvider
 	protected void gather(HolderLookup.Provider provider) {
 		builder(NeoForgeDataMaps.OXIDIZABLES)
 				.replace(false)
+				.add(ModBlocks.COPPER_LATTICE.get().builtInRegistryHolder(), new Oxidizable(ModBlocks.EXPOSED_COPPER_LATTICE.get()), false)
+				.add(ModBlocks.EXPOSED_COPPER_LATTICE.get().builtInRegistryHolder(), new Oxidizable(ModBlocks.WEATHERED_COPPER_LATTICE.get()), false)
+				.add(ModBlocks.WEATHERED_COPPER_LATTICE.get().builtInRegistryHolder(), new Oxidizable(ModBlocks.OXIDIZED_COPPER_LATTICE.get()), false)
 				.add(ModBlocks.COPPER_PILLAR.get().builtInRegistryHolder(), new Oxidizable(ModBlocks.EXPOSED_COPPER_PILLAR.get()), false)
 				.add(ModBlocks.EXPOSED_COPPER_PILLAR.get().builtInRegistryHolder(), new Oxidizable(ModBlocks.WEATHERED_COPPER_PILLAR.get()), false)
 				.add(ModBlocks.WEATHERED_COPPER_PILLAR.get().builtInRegistryHolder(), new Oxidizable(ModBlocks.OXIDIZED_COPPER_PILLAR.get()), false);
 		builder(NeoForgeDataMaps.WAXABLES)
 				.replace(false)
+				.add(ModBlocks.COPPER_LATTICE.get().builtInRegistryHolder(), new Waxable(ModBlocks.WAXED_COPPER_LATTICE.get()), false)
+				.add(ModBlocks.EXPOSED_COPPER_LATTICE.get().builtInRegistryHolder(), new Waxable(ModBlocks.WAXED_EXPOSED_COPPER_LATTICE.get()), false)
+				.add(ModBlocks.WEATHERED_COPPER_LATTICE.get().builtInRegistryHolder(), new Waxable(ModBlocks.WAXED_WEATHERED_COPPER_LATTICE.get()), false)
+				.add(ModBlocks.OXIDIZED_COPPER_LATTICE.get().builtInRegistryHolder(), new Waxable(ModBlocks.WAXED_OXIDIZED_COPPER_LATTICE.get()), false)
 				.add(ModBlocks.COPPER_PILLAR.get().builtInRegistryHolder(), new Waxable(ModBlocks.WAXED_COPPER_PILLAR.get()), false)
 				.add(ModBlocks.EXPOSED_COPPER_PILLAR.get().builtInRegistryHolder(), new Waxable(ModBlocks.WAXED_EXPOSED_COPPER_PILLAR.get()), false)
 				.add(ModBlocks.WEATHERED_COPPER_PILLAR.get().builtInRegistryHolder(), new Waxable(ModBlocks.WAXED_WEATHERED_COPPER_PILLAR.get()), false)

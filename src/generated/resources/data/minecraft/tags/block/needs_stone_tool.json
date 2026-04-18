@@ -1,5 +1,13 @@
 {
   "values": [
+    "blockbox:copper_lattice",
+    "blockbox:exposed_copper_lattice",
+    "blockbox:weathered_copper_lattice",
+    "blockbox:oxidized_copper_lattice",
+    "blockbox:waxed_copper_lattice",
+    "blockbox:waxed_exposed_copper_lattice",
+    "blockbox:waxed_weathered_copper_lattice",
+    "blockbox:waxed_oxidized_copper_lattice",
     "blockbox:copper_pillar",
     "blockbox:exposed_copper_pillar",
     "blockbox:weathered_copper_pillar",

@@ -90,6 +90,15 @@ public class ModItems
 	public static final Supplier<BlockItem> ROUGH_GLASS = registerSimpleBlockItem("rough_glass", ModBlocks.ROUGH_GLASS);
 	public static final Supplier<BlockItem> ROUGH_GLASS_PANE = registerSimpleBlockItem("rough_glass_pane", ModBlocks.ROUGH_GLASS_PANE);
 
+	public static final Supplier<BlockItem> COPPER_LATTICE = registerSimpleBlockItem("copper_lattice", ModBlocks.COPPER_LATTICE, Items.COPPER_BARS.unaffected());
+	public static final Supplier<BlockItem> EXPOSED_COPPER_LATTICE = registerSimpleBlockItem("exposed_copper_lattice", ModBlocks.EXPOSED_COPPER_LATTICE, Items.COPPER_BARS.exposed());
+	public static final Supplier<BlockItem> WEATHERED_COPPER_LATTICE = registerSimpleBlockItem("weathered_copper_lattice", ModBlocks.WEATHERED_COPPER_LATTICE, Items.COPPER_BARS.weathered());
+	public static final Supplier<BlockItem> OXIDIZED_COPPER_LATTICE = registerSimpleBlockItem("oxidized_copper_lattice", ModBlocks.OXIDIZED_COPPER_LATTICE, Items.COPPER_BARS.oxidized());
+	public static final Supplier<BlockItem> WAXED_COPPER_LATTICE = registerSimpleBlockItem("waxed_copper_lattice", ModBlocks.WAXED_COPPER_LATTICE, Items.COPPER_BARS.waxed());
+	public static final Supplier<BlockItem> WAXED_EXPOSED_COPPER_LATTICE = registerSimpleBlockItem("waxed_exposed_copper_lattice", ModBlocks.WAXED_EXPOSED_COPPER_LATTICE, Items.COPPER_BARS.waxedExposed());
+	public static final Supplier<BlockItem> WAXED_WEATHERED_COPPER_LATTICE = registerSimpleBlockItem("waxed_weathered_copper_lattice", ModBlocks.WAXED_WEATHERED_COPPER_LATTICE, Items.COPPER_BARS.waxedWeathered());
+	public static final Supplier<BlockItem> WAXED_OXIDIZED_COPPER_LATTICE = registerSimpleBlockItem("waxed_oxidized_copper_lattice", ModBlocks.WAXED_OXIDIZED_COPPER_LATTICE, Items.COPPER_BARS.waxedOxidized());
+
 	public static final Supplier<BlockItem> COPPER_PILLAR = registerSimpleBlockItem("copper_pillar", ModBlocks.COPPER_PILLAR, Items.COPPER_GRATE);
 	public static final Supplier<BlockItem> EXPOSED_COPPER_PILLAR = registerSimpleBlockItem("exposed_copper_pillar", ModBlocks.EXPOSED_COPPER_PILLAR, Items.EXPOSED_COPPER_GRATE);
 	public static final Supplier<BlockItem> WEATHERED_COPPER_PILLAR = registerSimpleBlockItem("weathered_copper_pillar", ModBlocks.WEATHERED_COPPER_PILLAR, Items.WEATHERED_COPPER_GRATE);
