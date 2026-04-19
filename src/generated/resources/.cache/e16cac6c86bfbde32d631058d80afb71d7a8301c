@@ -1,4 +1,4 @@
-// 26.1.2	2026-04-18T18:09:03.1547724	Model Definitions - blockbox
+// 26.1.2	2026-04-18T20:56:37.0351684	Model Definitions - blockbox
 57741ed53ecabbf959a88b1adb4fb893265c9703 assets/blockbox/blockstates/acacia_palisade.json
 231dc493a7620b450bac3161ea140406621455eb assets/blockbox/blockstates/acacia_seat.json
 c980475bf911712269d3c70e52d5f32c5d54acf9 assets/blockbox/blockstates/amethyst_mosaic.json
@@ -510,9 +510,9 @@ d434e869902e262a4da525f2d0de17c4a8e16c16 assets/blockbox/models/block/red_sky_la
 36520eb11a7e296ec1088af23c611a303e447f4d assets/blockbox/models/block/rough_glass.json
 09bb27f9e974a4267c780da1b02d5cd5abfa5095 assets/blockbox/models/block/rough_glass_pane_noside.json
 05c4d54e7319913b1a3c7875190acb2071a0b435 assets/blockbox/models/block/rough_glass_pane_noside_alt.json
-00060af214424609f8ebbba6d430fdb9dc2a755f assets/blockbox/models/block/rough_glass_pane_post.json
-addf855f7ebd3a9afcbda85d5926fb228c914f25 assets/blockbox/models/block/rough_glass_pane_side.json
-08399cdf3f24da7bc4a526b048cc166100409dcf assets/blockbox/models/block/rough_glass_pane_side_alt.json
+f3c9ed3e36c5146499e5dd47613ce04f9439c863 assets/blockbox/models/block/rough_glass_pane_post.json
+ceec72e3066f8dd00318a8198e226e015a564276 assets/blockbox/models/block/rough_glass_pane_side.json
+9d4198e1a1b626e2b6fe8930139651865607dfb9 assets/blockbox/models/block/rough_glass_pane_side_alt.json
 83d6df7cbfa2e699c9ca0fa76d26dcd049f3c342 assets/blockbox/models/block/sandstone_bricks.json
 6e43062d6097759c044e1cf09e2c736a8e2b05f1 assets/blockbox/models/block/sandstone_brick_slab.json
 d551e4146dbcc1cc0d819606157320264b3c5aed assets/blockbox/models/block/sandstone_brick_slab_top.json

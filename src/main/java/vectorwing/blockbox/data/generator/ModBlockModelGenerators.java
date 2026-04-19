@@ -8,10 +8,12 @@ import net.minecraft.client.data.models.blockstates.PropertyDispatch;
 import net.minecraft.client.data.models.model.ModelTemplate;
 import net.minecraft.client.data.models.model.ModelTemplates;
 import net.minecraft.client.data.models.model.TextureMapping;
+import net.minecraft.client.data.models.model.TexturedModel;
 import net.minecraft.client.resources.model.UnbakedModel;
 import net.minecraft.client.resources.model.sprite.Material;
 import net.minecraft.data.BlockFamily;
 import net.minecraft.resources.Identifier;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -44,7 +46,7 @@ public class ModBlockModelGenerators extends BlockModelGenerators
 		createPumpkinVariant(ModBlocks.CARVED_SNOW.get(), TextureMapping.cube(ModBlocks.PACKED_SNOW.get()));
 		createTrivialCube(ModBlocks.POLISHED_PACKED_ICE.get());
 		createTrivialCube(ModBlocks.POLISHED_OBSIDIAN.get());
-		createGlassBlocks(ModBlocks.ROUGH_GLASS.get(), ModBlocks.ROUGH_GLASS_PANE.get());
+		createModGlassBlocks(ModBlocks.ROUGH_GLASS.get(), ModBlocks.ROUGH_GLASS_PANE.get());
 		createPillar(ModBlocks.IRON_PLATE_PILLAR.get());
 		createTrivialCube(ModBlocks.CHISELED_GOLD.get());
 		createTrivialCube(ModBlocks.GOLDEN_TILES.get());
@@ -130,6 +132,28 @@ public class ModBlockModelGenerators extends BlockModelGenerators
 		createSkyLantern(ModBlocks.PURPLE_SKY_LANTERN.get(), Blocks.PURPLE_CANDLE);
 		createSkyLantern(ModBlocks.MAGENTA_SKY_LANTERN.get(), Blocks.MAGENTA_CANDLE);
 		createSkyLantern(ModBlocks.PINK_SKY_LANTERN.get(), Blocks.PINK_CANDLE);
+	}
+
+	public void createModGlassBlocks(Block block, Block pane) {
+		createTrivialBlock(block, TexturedModel.CUBE.updateTexture(TextureMapping::forceAllTranslucent));
+		TextureMapping paneMapping = TextureMapping.pane(block, Blocks.GLASS_PANE).forceAllTranslucent();
+		MultiVariant post = plainVariant(ModelTemplates.STAINED_GLASS_PANE_POST.create(pane, paneMapping, modelOutput));
+		MultiVariant side = plainVariant(ModelTemplates.STAINED_GLASS_PANE_SIDE.create(pane, paneMapping, modelOutput));
+		MultiVariant sideAlt = plainVariant(ModelTemplates.STAINED_GLASS_PANE_SIDE_ALT.create(pane, paneMapping, modelOutput));
+		MultiVariant noSide = plainVariant(ModelTemplates.STAINED_GLASS_PANE_NOSIDE.create(pane, paneMapping, modelOutput));
+		MultiVariant noSideAlt = plainVariant(ModelTemplates.STAINED_GLASS_PANE_NOSIDE_ALT.create(pane, paneMapping, modelOutput));
+		Item paneItem = pane.asItem();
+		registerSimpleItemModel(paneItem, createFlatItemModelWithBlockTexture(paneItem, block));
+		blockStateOutput.accept(MultiPartGenerator.multiPart(pane)
+				.with(post)
+				.with(condition().term(BlockStateProperties.NORTH, true), side)
+				.with(condition().term(BlockStateProperties.EAST, true), side.with(Y_ROT_90))
+				.with(condition().term(BlockStateProperties.SOUTH, true), sideAlt)
+				.with(condition().term(BlockStateProperties.WEST, true), sideAlt.with(Y_ROT_90))
+				.with(condition().term(BlockStateProperties.NORTH, false), noSide)
+				.with(condition().term(BlockStateProperties.EAST, false), noSideAlt)
+				.with(condition().term(BlockStateProperties.SOUTH, false), noSideAlt.with(Y_ROT_90))
+				.with(condition().term(BlockStateProperties.WEST, false), noSide.with(Y_ROT_270)));
 	}
 
 	public void createPillar(Block block) {
