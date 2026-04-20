@@ -4,6 +4,6 @@
     "bottom": "blockbox:block/brazier_bottom",
     "fire": "minecraft:block/campfire_fire",
     "side": "blockbox:block/brazier_side_hanging_lit",
-    "top": "blockbox:block/brazier_top"
+    "top": "blockbox:block/brazier_top_lit"
   }
 }

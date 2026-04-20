@@ -57,7 +57,7 @@ public class ModTextureMappings
 
 	public static TextureMapping brazierLit(Block block, Block campfire) {
 		return new TextureMapping()
-				.put(TextureSlot.TOP, TextureMapping.getBlockTexture(block, "_top"))
+				.put(TextureSlot.TOP, TextureMapping.getBlockTexture(block, "_top_lit"))
 				.put(TextureSlot.SIDE, TextureMapping.getBlockTexture(block, "_side_lit"))
 				.put(TextureSlot.BOTTOM, TextureMapping.getBlockTexture(ModBlocks.BRAZIER.get(), "_bottom"))
 				.put(TextureSlot.FIRE, TextureMapping.getBlockTexture(campfire, "_fire"));
@@ -65,7 +65,7 @@ public class ModTextureMappings
 
 	public static TextureMapping brazierHangingLit(Block block, Block campfire) {
 		return new TextureMapping()
-				.put(TextureSlot.TOP, TextureMapping.getBlockTexture(block, "_top"))
+				.put(TextureSlot.TOP, TextureMapping.getBlockTexture(block, "_top_lit"))
 				.put(TextureSlot.SIDE, TextureMapping.getBlockTexture(block, "_side_hanging_lit"))
 				.put(TextureSlot.BOTTOM, TextureMapping.getBlockTexture(ModBlocks.BRAZIER.get(), "_bottom"))
 				.put(TextureSlot.FIRE, TextureMapping.getBlockTexture(campfire, "_fire"));
