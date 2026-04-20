@@ -166,8 +166,8 @@ public class ModBlockModelGenerators extends BlockModelGenerators
 		createModBars(block,
 				ModModelTemplates.BARS_POST_ENDS.create(block, mapping, modelOutput),
 				ModModelTemplates.BARS_POST.create(block, altMapping, modelOutput),
-				ModModelTemplates.BARS_POST_SIDE.create(block, mapping, modelOutput),
-				ModModelTemplates.BARS_POST_SIDE_ALT.create(block, mapping, modelOutput));
+				ModModelTemplates.BARS_SIDE.create(block, mapping, modelOutput),
+				ModModelTemplates.BARS_SIDE_ALT.create(block, mapping, modelOutput));
 		registerSimpleFlatItemModel(block);
 	}
 
@@ -192,8 +192,8 @@ public class ModBlockModelGenerators extends BlockModelGenerators
 		MultiVariant postEnds = plainVariant(ModModelTemplates.BARS_POST_ENDS.create(unwaxed, altMapping, modelOutput));
 		MultiVariant cap = plainVariant(ModModelTemplates.BARS_CAP.create(unwaxed, mapping, modelOutput));
 		MultiVariant capAlt = plainVariant(ModModelTemplates.BARS_CAP_ALT.create(unwaxed, mapping, modelOutput));
-		MultiVariant side = plainVariant(ModModelTemplates.BARS_POST_SIDE_FLAT.create(unwaxed, mapping, modelOutput));
-		MultiVariant sideAlt = plainVariant(ModModelTemplates.BARS_POST_SIDE_FLAT_ALT.create(unwaxed, mapping, modelOutput));
+		MultiVariant side = plainVariant(ModModelTemplates.BARS_SIDE_FLAT.create(unwaxed, mapping, modelOutput));
+		MultiVariant sideAlt = plainVariant(ModModelTemplates.BARS_SIDE_FLAT_ALT.create(unwaxed, mapping, modelOutput));
 		blockStateOutput.accept(createFlatBars(unwaxed, post, postEnds, cap, capAlt, side, sideAlt));
 		blockStateOutput.accept(createFlatBars(waxed, post, postEnds, cap, capAlt, side, sideAlt));
 		registerSimpleFlatItemModel(unwaxed);
@@ -237,9 +237,9 @@ public class ModBlockModelGenerators extends BlockModelGenerators
 
 	public void createBrazier(Block block, Block campfire) {
 		MultiVariant standing = BlockModelGenerators.plainVariant(ModModelTemplates.BRAZIER.create(block, ModTextureMappings.brazier(block), modelOutput));
-		MultiVariant hanging = BlockModelGenerators.plainVariant(ModModelTemplates.HANGING_BRAZIER.create(block, ModTextureMappings.brazierHanging(block), modelOutput));
+		MultiVariant hanging = BlockModelGenerators.plainVariant(ModModelTemplates.BRAZIER_HANGING.create(block, ModTextureMappings.brazierHanging(block), modelOutput));
 		MultiVariant standingLit = BlockModelGenerators.plainVariant(ModModelTemplates.BRAZIER_LIT.create(block, ModTextureMappings.brazierLit(block, campfire), modelOutput));
-		MultiVariant hangingLit = BlockModelGenerators.plainVariant(ModModelTemplates.HANGING_BRAZIER_LIT.create(block, ModTextureMappings.brazierHangingLit(block, campfire), modelOutput));
+		MultiVariant hangingLit = BlockModelGenerators.plainVariant(ModModelTemplates.BRAZIER_HANGING_LIT.create(block, ModTextureMappings.brazierHangingLit(block, campfire), modelOutput));
 		blockStateOutput.accept(createBrazier(block, standing, standingLit, hanging, hangingLit));
 		registerSimpleFlatItemModel(block.asItem());
 	}
