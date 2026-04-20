@@ -10,7 +10,6 @@ import net.minecraft.client.data.models.model.ModelTemplates;
 import net.minecraft.client.data.models.model.TextureMapping;
 import net.minecraft.client.data.models.model.TexturedModel;
 import net.minecraft.client.resources.model.UnbakedModel;
-import net.minecraft.client.resources.model.sprite.Material;
 import net.minecraft.data.BlockFamily;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.Item;
@@ -18,7 +17,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.neoforged.neoforge.client.model.generators.template.ExtendedModelTemplate;
-import vectorwing.blockbox.BlockBox;
 import vectorwing.blockbox.common.block.BrazierBlock;
 import vectorwing.blockbox.common.block.PalisadeBlock;
 import vectorwing.blockbox.common.block.SpikedPalisadeBlock;
@@ -238,26 +236,18 @@ public class ModBlockModelGenerators extends BlockModelGenerators
 	}
 
 	public void createBrazier(Block block, Block campfire) {
-		TextureMapping mapping = ModTextureMappings.brazier(block, blockMaterial("brazier_side"), blockMaterial("brazier_bottom"));
-		MultiVariant standing = BlockModelGenerators.plainVariant(ModModelTemplates.BRAZIER.create(block, mapping, modelOutput));
-		TextureMapping mappingHanging = ModTextureMappings.brazier(block, blockMaterial("brazier_side_hanging"), blockMaterial("brazier_bottom"));
-		MultiVariant hanging = BlockModelGenerators.plainVariant(ModModelTemplates.HANGING_BRAZIER.create(block, mappingHanging, modelOutput));
-		TextureMapping mappingLit = ModTextureMappings.brazierLit(block, blockMaterial("brazier_bottom"), campfire);
-		MultiVariant standingLit = BlockModelGenerators.plainVariant(ModModelTemplates.BRAZIER_LIT.create(block, mappingLit, modelOutput));
-		TextureMapping mappingHangingLit = ModTextureMappings.brazierHangingLit(block, blockMaterial("brazier_bottom"), campfire);
-		MultiVariant hangingLit = BlockModelGenerators.plainVariant(ModModelTemplates.HANGING_BRAZIER_LIT.create(block, mappingHangingLit, modelOutput));
+		MultiVariant standing = BlockModelGenerators.plainVariant(ModModelTemplates.BRAZIER.create(block, ModTextureMappings.brazier(block), modelOutput));
+		MultiVariant hanging = BlockModelGenerators.plainVariant(ModModelTemplates.HANGING_BRAZIER.create(block, ModTextureMappings.brazierHanging(block), modelOutput));
+		MultiVariant standingLit = BlockModelGenerators.plainVariant(ModModelTemplates.BRAZIER_LIT.create(block, ModTextureMappings.brazierLit(block, campfire), modelOutput));
+		MultiVariant hangingLit = BlockModelGenerators.plainVariant(ModModelTemplates.HANGING_BRAZIER_LIT.create(block, ModTextureMappings.brazierHangingLit(block, campfire), modelOutput));
 		blockStateOutput.accept(createBrazier(block, standing, standingLit, hanging, hangingLit));
 		registerSimpleFlatItemModel(block.asItem());
 	}
 
 	public void createSkyLantern(Block block, Block candle) {
-		TextureMapping mapping = ModTextureMappings.skyLantern(block, blockMaterial("sky_lantern_bottom"), candle);
+		TextureMapping mapping = ModTextureMappings.skyLantern(block, candle);
 		blockStateOutput.accept(BlockModelGenerators.createSimpleBlock(block, BlockModelGenerators.plainVariant(ModModelTemplates.SKY_LANTERN.create(block, mapping, modelOutput))));
 		registerSimpleFlatItemModel(block.asItem());
-	}
-
-	private static Material blockMaterial(String name) {
-		return new Material(Identifier.fromNamespaceAndPath(BlockBox.MODID, "block/" + name));
 	}
 
 	private static ExtendedModelTemplate frontLight(Identifier model) {
