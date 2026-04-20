@@ -3,7 +3,7 @@
   "textures": {
     "bottom": "blockbox:block/brazier_bottom",
     "fire": "minecraft:block/campfire_fire",
-    "side": "blockbox:block/brazier_side_lit",
+    "side": "blockbox:block/brazier_side_hanging_lit",
     "top": "blockbox:block/brazier_top"
   }
 }

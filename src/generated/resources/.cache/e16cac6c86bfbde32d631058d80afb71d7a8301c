@@ -1,4 +1,4 @@
-// 26.1.2	2026-04-18T20:56:37.0351684	Model Definitions - blockbox
+// 26.1.2	2026-04-20T15:55:31.8520528	Model Definitions - blockbox
 57741ed53ecabbf959a88b1adb4fb893265c9703 assets/blockbox/blockstates/acacia_palisade.json
 231dc493a7620b450bac3161ea140406621455eb assets/blockbox/blockstates/acacia_seat.json
 c980475bf911712269d3c70e52d5f32c5d54acf9 assets/blockbox/blockstates/amethyst_mosaic.json
@@ -333,8 +333,8 @@ bb3f4599667098b0eddc1b11b7b609389a5287b0 assets/blockbox/models/block/birch_pali
 a63889d0fc1b20ea9ef6fe44d9a235ab4f69054e assets/blockbox/models/block/black_sky_lantern.json
 6013b32712bcea52b94717aebb31fb4c68a3ce31 assets/blockbox/models/block/blue_sky_lantern.json
 a2732ffa26a48e988b7790c3b2e29a374c350dd4 assets/blockbox/models/block/brazier.json
-06a4b75d2d0e2b5c32e9eb925e80ea643be0a13a assets/blockbox/models/block/brazier_hanging.json
-075ad4216365838c2ac80a7637fa5a6fbbf80a34 assets/blockbox/models/block/brazier_hanging_lit.json
+f6799444283763fe87e542e7c0428a41923fc827 assets/blockbox/models/block/brazier_hanging.json
+d4b18c921ed4f9d69ea3f190d44caaa55998471b assets/blockbox/models/block/brazier_hanging_lit.json
 427e9163bcc09d51cfeff39be5b40b6c14322487 assets/blockbox/models/block/brazier_lit.json
 38aa47b9f20b5fb91429c2b66bea753be7f0093c assets/blockbox/models/block/broken_tile_mosaic.json
 748743b534ff1b39969bf6ace24a54e99eba905b assets/blockbox/models/block/brown_sky_lantern.json
@@ -530,9 +530,9 @@ e21be68169b0ea9507b9fd41a1e68e989db0341f assets/blockbox/models/block/snow_brick
 640d8b4cc81932161bdd42a0a0f2f7f198cb84ee assets/blockbox/models/block/snow_brick_wall_side.json
 69f1c5c9d4958e5bfbeb9797d53c5e628302c498 assets/blockbox/models/block/snow_brick_wall_side_tall.json
 0435303d770244d0a13d2e2610258a330476062e assets/blockbox/models/block/soul_brazier.json
-68688274e46d54abed75fce2bc93d48865def761 assets/blockbox/models/block/soul_brazier_hanging.json
-ab56cae58a29c41f84a5afb202c8db7d58c3e37e assets/blockbox/models/block/soul_brazier_hanging_lit.json
-36f3d1965792c3500e78442ccdaf6760f9e1ec8f assets/blockbox/models/block/soul_brazier_lit.json
+9e6d2c106d7f70aa7d1de96efa2fd33cfd3b6b8d assets/blockbox/models/block/soul_brazier_hanging.json
+b1940640befad640b5234f4714956545eb602421 assets/blockbox/models/block/soul_brazier_hanging_lit.json
+534b8350c23df0101708a07afd5c2bc94d4e7a09 assets/blockbox/models/block/soul_brazier_lit.json
 52660b75fbaf3ef26436e22676435a45acd5a5e3 assets/blockbox/models/block/spiked_acacia_palisade_back.json
 41807fd232583cd3c38b4473a95838804093b901 assets/blockbox/models/block/spiked_acacia_palisade_front.json
 5e3b6d6f54061db94442f7e68425f9aca52dc196 assets/blockbox/models/block/spiked_acacia_palisade_post.json

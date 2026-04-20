@@ -45,10 +45,18 @@ public class ModTextureMappings
 				.put(TextureSlot.BOTTOM, bottom);
 	}
 
-	public static TextureMapping brazierLit(Block block, Material side, Material bottom, Block campfire) {
+	public static TextureMapping brazierLit(Block block, Material bottom, Block campfire) {
 		return new TextureMapping()
 				.put(TextureSlot.TOP, TextureMapping.getBlockTexture(block, "_top"))
-				.put(TextureSlot.SIDE, side)
+				.put(TextureSlot.SIDE, TextureMapping.getBlockTexture(block, "_side_lit"))
+				.put(TextureSlot.BOTTOM, bottom)
+				.put(TextureSlot.FIRE, TextureMapping.getBlockTexture(campfire, "_fire"));
+	}
+
+	public static TextureMapping brazierHangingLit(Block block, Material bottom, Block campfire) {
+		return new TextureMapping()
+				.put(TextureSlot.TOP, TextureMapping.getBlockTexture(block, "_top"))
+				.put(TextureSlot.SIDE, TextureMapping.getBlockTexture(block, "_side_hanging_lit"))
 				.put(TextureSlot.BOTTOM, bottom)
 				.put(TextureSlot.FIRE, TextureMapping.getBlockTexture(campfire, "_fire"));
 	}
