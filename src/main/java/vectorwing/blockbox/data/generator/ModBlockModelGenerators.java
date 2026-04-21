@@ -2,6 +2,7 @@ package vectorwing.blockbox.data.generator;
 
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.MultiVariant;
+import net.minecraft.client.data.models.blockstates.BlockModelDefinitionGenerator;
 import net.minecraft.client.data.models.blockstates.MultiPartGenerator;
 import net.minecraft.client.data.models.blockstates.MultiVariantGenerator;
 import net.minecraft.client.data.models.blockstates.PropertyDispatch;
@@ -10,12 +11,14 @@ import net.minecraft.client.data.models.model.ModelTemplates;
 import net.minecraft.client.data.models.model.TextureMapping;
 import net.minecraft.client.data.models.model.TexturedModel;
 import net.minecraft.client.resources.model.UnbakedModel;
+import net.minecraft.core.Direction;
 import net.minecraft.data.BlockFamily;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.Half;
 import net.neoforged.neoforge.client.model.generators.template.ExtendedModelTemplate;
 import vectorwing.blockbox.common.block.BrazierBlock;
 import vectorwing.blockbox.common.block.PalisadeBlock;
@@ -45,7 +48,10 @@ public class ModBlockModelGenerators extends BlockModelGenerators
 		createTrivialCube(ModBlocks.POLISHED_PACKED_ICE.get());
 		createTrivialCube(ModBlocks.POLISHED_OBSIDIAN.get());
 		createModGlassBlocks(ModBlocks.ROUGH_GLASS.get(), ModBlocks.ROUGH_GLASS_PANE.get());
+		createTrivialCube(ModBlocks.IRON_PLATE.get());
 		createPillar(ModBlocks.IRON_PLATE_PILLAR.get());
+		createDoor(ModBlocks.IRON_PLATE_DOOR.get());
+		createModTrapdoor(ModBlocks.IRON_PLATE_TRAPDOOR.get());
 		createTrivialCube(ModBlocks.CHISELED_GOLD.get());
 		createTrivialCube(ModBlocks.GOLDEN_TILES.get());
 		createPillar(ModBlocks.GOLDEN_PILLAR.get());
@@ -160,6 +166,15 @@ public class ModBlockModelGenerators extends BlockModelGenerators
 		blockStateOutput.accept(createRotatedPillarWithHorizontalVariant(block, model, horizontalModel));
 	}
 
+	public void createModTrapdoor(Block trapdoor) {
+		TextureMapping mapping = TextureMapping.defaultTexture(trapdoor);
+		MultiVariant top = plainVariant(ModelTemplates.ORIENTABLE_TRAPDOOR_TOP.create(trapdoor, mapping, modelOutput));
+		Identifier bottom = ModelTemplates.ORIENTABLE_TRAPDOOR_BOTTOM.create(trapdoor, mapping, modelOutput);
+		MultiVariant open = plainVariant(ModelTemplates.TRAPDOOR_OPEN.create(trapdoor, mapping, modelOutput));
+		blockStateOutput.accept(createModTrapdoor(trapdoor, top, plainVariant(bottom), open));
+		registerSimpleItemModel(trapdoor, bottom);
+	}
+
 	public void createModBarsAndItem(Block block) {
 		TextureMapping mapping = ModTextureMappings.modBars(block);
 		TextureMapping altMapping = ModTextureMappings.modBarsAlt(block);
@@ -252,6 +267,26 @@ public class ModBlockModelGenerators extends BlockModelGenerators
 
 	private static ExtendedModelTemplate frontLight(Identifier model) {
 		return new ModelTemplate(Optional.of(model), Optional.empty()).extend().guiLight(UnbakedModel.GuiLight.FRONT).build();
+	}
+
+	public static BlockModelDefinitionGenerator createModTrapdoor(Block block, MultiVariant top, MultiVariant bottom, MultiVariant open) {
+		return MultiVariantGenerator.dispatch(block).with(PropertyDispatch.initial(BlockStateProperties.HORIZONTAL_FACING, BlockStateProperties.HALF, BlockStateProperties.OPEN)
+				.select(Direction.NORTH, Half.BOTTOM, false, bottom)
+				.select(Direction.SOUTH, Half.BOTTOM, false, bottom.with(Y_ROT_180))
+				.select(Direction.EAST, Half.BOTTOM, false, bottom.with(Y_ROT_90))
+				.select(Direction.WEST, Half.BOTTOM, false, bottom.with(Y_ROT_270))
+				.select(Direction.NORTH, Half.TOP, false, top)
+				.select(Direction.SOUTH, Half.TOP, false, top.with(Y_ROT_180))
+				.select(Direction.EAST, Half.TOP, false, top.with(Y_ROT_90))
+				.select(Direction.WEST, Half.TOP, false, top.with(Y_ROT_270))
+				.select(Direction.NORTH, Half.BOTTOM, true, open)
+				.select(Direction.SOUTH, Half.BOTTOM, true, open.with(Y_ROT_180))
+				.select(Direction.EAST, Half.BOTTOM, true, open.with(Y_ROT_90))
+				.select(Direction.WEST, Half.BOTTOM, true, open.with(Y_ROT_270))
+				.select(Direction.NORTH, Half.TOP, true, open)
+				.select(Direction.SOUTH, Half.TOP, true, open.with(Y_ROT_180))
+				.select(Direction.EAST, Half.TOP, true, open.with(Y_ROT_90))
+				.select(Direction.WEST, Half.TOP, true, open.with(Y_ROT_270)));
 	}
 
 	public static MultiPartGenerator createFlatBars(Block block, MultiVariant post, MultiVariant postEnds, MultiVariant cap, MultiVariant capAlt, MultiVariant side, MultiVariant sideAlt) {

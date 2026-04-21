@@ -1,4 +1,4 @@
-// 26.1.2	2026-04-20T16:46:23.1660955	Model Definitions - blockbox
+// 26.1.2	2026-04-21T18:30:26.1194926	Model Definitions - blockbox
 57741ed53ecabbf959a88b1adb4fb893265c9703 assets/blockbox/blockstates/acacia_palisade.json
 231dc493a7620b450bac3161ea140406621455eb assets/blockbox/blockstates/acacia_seat.json
 c980475bf911712269d3c70e52d5f32c5d54acf9 assets/blockbox/blockstates/amethyst_mosaic.json
@@ -56,7 +56,7 @@ ef308b1ba45f5b4f248cf4982943e44d352f4844 assets/blockbox/blockstates/gray_sky_la
 ef3da1f1e10b136a4060a85e40ff11e8cf4a01d5 assets/blockbox/blockstates/iron_plate.json
 dd2d9efbfbd63a5fd281aa53f820af57c9ea92ef assets/blockbox/blockstates/iron_plate_door.json
 8526f450a34a197c73cb1bc50cb33db6cf30ebde assets/blockbox/blockstates/iron_plate_pillar.json
-fe3d3b5fc5fb6e9e5b7c950f56842aa493b8ceac assets/blockbox/blockstates/iron_plate_trapdoor.json
+9e1588420d4638f6e885c9fd59cfd5039dcad1b9 assets/blockbox/blockstates/iron_plate_trapdoor.json
 86b3e2308733e29cfd3728928ebcd7c6df40779a assets/blockbox/blockstates/iron_tread_plate.json
 b54cfdf513d08638c4061a141bc9444b166007a1 assets/blockbox/blockstates/iron_tread_plate_slab.json
 efb794a4e892d662a40cc8b5c16cdf6e3ec20a11 assets/blockbox/blockstates/iron_tread_plate_stairs.json
@@ -439,7 +439,7 @@ cf9b19e5a5b3b796e16233adeec68dbebbcbf944 assets/blockbox/models/block/iron_plate
 284d5d59c753a02c22941cb100e6bef40530ca0f assets/blockbox/models/block/iron_plate_pillar.json
 def5a74ab078501b248f345b0741da984dd3ac13 assets/blockbox/models/block/iron_plate_pillar_horizontal.json
 5c1e64caac949d3ede3904f6d14be61029cffb36 assets/blockbox/models/block/iron_plate_trapdoor_bottom.json
-95ea7abce903a805d4a72e4d77d1e31e8701fe09 assets/blockbox/models/block/iron_plate_trapdoor_open.json
+807c02763db2da0d8fed45dd9bf223d8cf6b996b assets/blockbox/models/block/iron_plate_trapdoor_open.json
 bb61edb6edf887e66cca617bfcbc8a1379f6200e assets/blockbox/models/block/iron_plate_trapdoor_top.json
 733ae666f88e371945e3096466c0e7ab1a588200 assets/blockbox/models/block/iron_tread_plate.json
 13133b48286a6cac545d0a020cf2e472735ef7eb assets/blockbox/models/block/iron_tread_plate_slab.json

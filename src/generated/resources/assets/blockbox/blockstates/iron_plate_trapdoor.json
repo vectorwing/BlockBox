@@ -14,8 +14,7 @@
     },
     "facing=east,half=top,open=true": {
       "model": "blockbox:block/iron_plate_trapdoor_open",
-      "x": 180,
-      "y": 270
+      "y": 90
     },
     "facing=north,half=bottom,open=false": {
       "model": "blockbox:block/iron_plate_trapdoor_bottom"
@@ -27,9 +26,7 @@
       "model": "blockbox:block/iron_plate_trapdoor_top"
     },
     "facing=north,half=top,open=true": {
-      "model": "blockbox:block/iron_plate_trapdoor_open",
-      "x": 180,
-      "y": 180
+      "model": "blockbox:block/iron_plate_trapdoor_open"
     },
     "facing=south,half=bottom,open=false": {
       "model": "blockbox:block/iron_plate_trapdoor_bottom",
@@ -45,7 +42,7 @@
     },
     "facing=south,half=top,open=true": {
       "model": "blockbox:block/iron_plate_trapdoor_open",
-      "x": 180
+      "y": 180
     },
     "facing=west,half=bottom,open=false": {
       "model": "blockbox:block/iron_plate_trapdoor_bottom",
@@ -61,8 +58,7 @@
     },
     "facing=west,half=top,open=true": {
       "model": "blockbox:block/iron_plate_trapdoor_open",
-      "x": 180,
-      "y": 90
+      "y": 270
     }
   }
 }

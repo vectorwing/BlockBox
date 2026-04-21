@@ -50,10 +50,6 @@ public class ModBlockFamilies
             .slab(ModBlocks.PACKED_ICE_BRICK_SLAB.get())
             .wall(ModBlocks.PACKED_ICE_BRICK_WALL.get())
             .getFamily();
-    public static final BlockFamily IRON_PLATE = familyBuilder(ModBlocks.IRON_PLATE.get())
-            .door(ModBlocks.IRON_PLATE_DOOR.get())
-            .trapdoor(ModBlocks.IRON_PLATE_TRAPDOOR.get())
-            .getFamily();
     public static final BlockFamily IRON_TREAD_PLATE = familyBuilder(ModBlocks.IRON_TREAD_PLATE.get())
             .stairs(ModBlocks.IRON_TREAD_PLATE_STAIRS.get())
             .slab(ModBlocks.IRON_TREAD_PLATE_SLAB.get())
