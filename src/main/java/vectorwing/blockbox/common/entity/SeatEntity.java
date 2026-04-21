@@ -48,7 +48,7 @@ public class SeatEntity extends Entity
 
 	@Override
 	public boolean hurtServer(ServerLevel level, DamageSource source, float damage) {
-		return false; // TODO
+		return false;
 	}
 
 	@Override

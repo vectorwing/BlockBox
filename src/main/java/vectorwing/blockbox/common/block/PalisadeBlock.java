@@ -106,7 +106,6 @@ public class PalisadeBlock extends CrossCollisionBlock implements SimpleWaterlog
 		if (spikedForm == null) {
 			return InteractionResult.PASS;
 		}
-		// TODO: In 1.21.1, this checked if the stack had the ItemAbilities.SWORD_DIG ability - is there a better check in 26.1?
 		if (stack.is(ItemTags.SWORDS) && level.getBlockState(pos.above()).isAir()) {
 			level.playSound(null, pos, ModSounds.ITEM_SWORD_CARVE.get(), SoundSource.BLOCKS, 1.0F, 0.9F);
 			level.addDestroyBlockEffect(pos, state);
