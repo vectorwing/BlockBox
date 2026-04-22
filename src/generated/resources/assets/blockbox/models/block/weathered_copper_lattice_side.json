@@ -1,6 +1,0 @@
-{
-  "parent": "blockbox:block/template_bars_side_flat",
-  "textures": {
-    "bars": "blockbox:block/weathered_copper_lattice"
-  }
-}

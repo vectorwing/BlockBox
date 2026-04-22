@@ -2,6 +2,9 @@
 
 ## 0.1.2
 
+### Updates
+- (26.1+) Copper Bars have been remapped to Copper Chain Links, due to Minecraft having official Copper Bars now;
+
 ### Fixes
 - Fix Lapis Lazuli Brick/Mosaic stairs and slabs not being tagged as `mineable/pickaxe`;
 - Fix Palisades having wrong render type when Sodium is installed (may be temporary);

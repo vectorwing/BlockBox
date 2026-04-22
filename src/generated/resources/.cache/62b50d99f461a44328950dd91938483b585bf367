@@ -1,4 +1,4 @@
-// 26.1.2	2026-04-18T17:57:24.8910214	Tags for minecraft:block mod id blockbox
+// 26.1.2	2026-04-22T12:11:03.1299262	Tags for minecraft:block mod id blockbox
 713e4d947f67872698e3d4c43443368401cd7332 data/blockbox/tags/block/amethyst_blocks.json
 58396f7792ed668419d6e489e8af3d1fc7345eef data/blockbox/tags/block/braziers.json
 ac505c538459acba3d5cbbc8d6cef561ae253f92 data/blockbox/tags/block/golden_blocks.json
@@ -22,11 +22,11 @@ cc2f82a43ed6af49b6c45ce5336ff1af022d3306 data/minecraft/tags/block/dragon_immune
 c4500297f029dde8936912f27afdbcd675d074f7 data/minecraft/tags/block/guarded_by_piglins.json
 7bb19f21df82244955c2b13fc902e89d28bad4ef data/minecraft/tags/block/impermeable.json
 a236871b1fd06943160d4e7eb06e26824f35d448 data/minecraft/tags/block/mineable/axe.json
-1c4247576220867e47238343db054871b61528cb data/minecraft/tags/block/mineable/pickaxe.json
+7db98f37d50587f73334eb28cc9d99235823b374 data/minecraft/tags/block/mineable/pickaxe.json
 fc557e82e3627addd330344d6ab0bffe35f30ddf data/minecraft/tags/block/mineable/shovel.json
 cc2f82a43ed6af49b6c45ce5336ff1af022d3306 data/minecraft/tags/block/needs_diamond_tool.json
 c4500297f029dde8936912f27afdbcd675d074f7 data/minecraft/tags/block/needs_iron_tool.json
-00d27ad83cc24831a2c6abdfa98d955eec26783b data/minecraft/tags/block/needs_stone_tool.json
+cfd3b89f8cdec78011a62639bf4a131d0ac2c29c data/minecraft/tags/block/needs_stone_tool.json
 e2a6ae6c7b2c909ff0bff584601ad2afedc99786 data/minecraft/tags/block/slabs.json
 cb242dc2ff2cf1d593d53aeb00df9f81b6469e52 data/minecraft/tags/block/stairs.json
 bdd7279042a7b839eab436fa8ed89aee817a9a44 data/minecraft/tags/block/trapdoors.json

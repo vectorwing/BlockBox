@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "blockbox:oxidized_copper_chain_links",
+    "minecraft:honeycomb"
+  ],
+  "result": {
+    "id": "blockbox:waxed_oxidized_copper_chain_links"
+  }
+}

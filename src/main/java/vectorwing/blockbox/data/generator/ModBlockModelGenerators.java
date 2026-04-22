@@ -58,7 +58,7 @@ public class ModBlockModelGenerators extends BlockModelGenerators
 		createDoor(ModBlocks.GOLDEN_DOOR.get());
 		createTrapdoor(ModBlocks.GOLDEN_TRAPDOOR.get());
 		createModBarsAndItem(ModBlocks.GOLDEN_BARS.get());
-		createCopperLattices();
+		createCopperChainLinks();
 		createCopperPillars();
 		createTrivialCube(ModBlocks.POLISHED_AMETHYST.get());
 		createPalisades();
@@ -68,11 +68,11 @@ public class ModBlockModelGenerators extends BlockModelGenerators
 		createSkyLanterns();
 	}
 
-	public void createCopperLattices() {
-		createFlatBarsAndItem(ModBlocks.COPPER_LATTICE.get(), ModBlocks.WAXED_COPPER_LATTICE.get());
-		createFlatBarsAndItem(ModBlocks.EXPOSED_COPPER_LATTICE.get(), ModBlocks.WAXED_EXPOSED_COPPER_LATTICE.get());
-		createFlatBarsAndItem(ModBlocks.WEATHERED_COPPER_LATTICE.get(), ModBlocks.WAXED_WEATHERED_COPPER_LATTICE.get());
-		createFlatBarsAndItem(ModBlocks.OXIDIZED_COPPER_LATTICE.get(), ModBlocks.WAXED_OXIDIZED_COPPER_LATTICE.get());
+	public void createCopperChainLinks() {
+		createFlatBarsAndItem(ModBlocks.COPPER_CHAIN_LINKS.get(), ModBlocks.WAXED_COPPER_CHAIN_LINKS.get());
+		createFlatBarsAndItem(ModBlocks.EXPOSED_COPPER_CHAIN_LINKS.get(), ModBlocks.WAXED_EXPOSED_COPPER_CHAIN_LINKS.get());
+		createFlatBarsAndItem(ModBlocks.WEATHERED_COPPER_CHAIN_LINKS.get(), ModBlocks.WAXED_WEATHERED_COPPER_CHAIN_LINKS.get());
+		createFlatBarsAndItem(ModBlocks.OXIDIZED_COPPER_CHAIN_LINKS.get(), ModBlocks.WAXED_OXIDIZED_COPPER_CHAIN_LINKS.get());
 	}
 
 	public void createCopperPillars() {

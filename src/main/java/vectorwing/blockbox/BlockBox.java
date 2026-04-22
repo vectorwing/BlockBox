@@ -24,5 +24,7 @@ public class BlockBox
 		ModSounds.SOUNDS.register(modEventBus);
 		ModParticleTypes.PARTICLE_TYPES.register(modEventBus);
 		ModCreativeTabs.CREATIVE_MODE_TABS.register(modEventBus);
+
+		RegistryAliases.addRegistryAliases();
 	}
 }

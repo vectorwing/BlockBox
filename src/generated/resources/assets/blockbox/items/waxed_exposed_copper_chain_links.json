@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "blockbox:item/exposed_copper_chain_links"
+  }
+}

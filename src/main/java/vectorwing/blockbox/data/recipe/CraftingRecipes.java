@@ -220,17 +220,17 @@ public class CraftingRecipes
 	}
 
 	private static void craftCopperBlocks(HolderGetter<Item> items, RecipeOutput output) {
-		ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, ModBlocks.COPPER_LATTICE.get(), 4)
+		ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, ModBlocks.COPPER_CHAIN_LINKS.get(), 4)
 				.pattern(" # ")
 				.pattern("# #")
 				.pattern(" # ")
 				.define('#', Tags.Items.INGOTS_COPPER)
 				.unlockedBy("has_copper", InventoryChangeTrigger.TriggerInstance.hasItems(Items.COPPER_INGOT))
 				.save(output);
-		waxing(items, output, ModBlocks.WAXED_COPPER_LATTICE.get(), ModBlocks.COPPER_LATTICE.get());
-		waxing(items, output, ModBlocks.WAXED_EXPOSED_COPPER_LATTICE.get(), ModBlocks.EXPOSED_COPPER_LATTICE.get());
-		waxing(items, output, ModBlocks.WAXED_WEATHERED_COPPER_LATTICE.get(), ModBlocks.WEATHERED_COPPER_LATTICE.get());
-		waxing(items, output, ModBlocks.WAXED_OXIDIZED_COPPER_LATTICE.get(), ModBlocks.OXIDIZED_COPPER_LATTICE.get());
+		waxing(items, output, ModBlocks.WAXED_COPPER_CHAIN_LINKS.get(), ModBlocks.COPPER_CHAIN_LINKS.get());
+		waxing(items, output, ModBlocks.WAXED_EXPOSED_COPPER_CHAIN_LINKS.get(), ModBlocks.EXPOSED_COPPER_CHAIN_LINKS.get());
+		waxing(items, output, ModBlocks.WAXED_WEATHERED_COPPER_CHAIN_LINKS.get(), ModBlocks.WEATHERED_COPPER_CHAIN_LINKS.get());
+		waxing(items, output, ModBlocks.WAXED_OXIDIZED_COPPER_CHAIN_LINKS.get(), ModBlocks.OXIDIZED_COPPER_CHAIN_LINKS.get());
 		ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, ModBlocks.COPPER_PILLAR.get(), 2)
 				.pattern("#")
 				.pattern("#")
