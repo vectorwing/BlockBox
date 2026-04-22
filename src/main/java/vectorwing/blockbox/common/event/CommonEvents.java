@@ -1,6 +1,6 @@
 package vectorwing.blockbox.common.event;
 
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.ItemStack;
@@ -14,7 +14,7 @@ import vectorwing.blockbox.Config;
 import vectorwing.blockbox.common.registry.ModBlocks;
 import vectorwing.blockbox.common.registry.ModItems;
 
-@EventBusSubscriber(modid = BlockBox.MODID, bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(modid = BlockBox.MODID)
 @SuppressWarnings("unused")
 public class CommonEvents
 {

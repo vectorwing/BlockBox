@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "bb_palisades",
   "key": {
-    "#": {
-      "item": "minecraft:jungle_log"
-    }
+    "#": "minecraft:jungle_log"
   },
   "pattern": [
     "###",

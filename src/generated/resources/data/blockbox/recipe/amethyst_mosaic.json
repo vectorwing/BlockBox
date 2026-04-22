@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "blockbox:cut_amethyst"
-    }
+    "#": "blockbox:cut_amethyst"
   },
   "pattern": [
     "##",

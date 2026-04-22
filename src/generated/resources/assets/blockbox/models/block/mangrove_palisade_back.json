@@ -1,6 +1,5 @@
 {
   "parent": "blockbox:block/template_palisade_back",
-  "render_type": "minecraft:cutout",
   "textures": {
     "core": "blockbox:block/mangrove_palisade_core",
     "side": "blockbox:block/mangrove_palisade_side",

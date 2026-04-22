@@ -1,10 +1,7 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "blockbox:tiles"
-  },
+  "ingredient": "blockbox:tiles",
   "result": {
-    "count": 1,
     "id": "blockbox:tile_stairs"
   }
 }

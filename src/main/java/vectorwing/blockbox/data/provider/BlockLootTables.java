@@ -88,14 +88,14 @@ public class BlockLootTables extends BlockLootSubProvider
 		dropWhenSilkTouch(ModBlocks.ROUGH_GLASS.get());
 		dropWhenSilkTouch(ModBlocks.ROUGH_GLASS_PANE.get());
 
-		dropSelf(ModBlocks.COPPER_BARS.get());
-		dropSelf(ModBlocks.EXPOSED_COPPER_BARS.get());
-		dropSelf(ModBlocks.WEATHERED_COPPER_BARS.get());
-		dropSelf(ModBlocks.OXIDIZED_COPPER_BARS.get());
-		dropSelf(ModBlocks.WAXED_COPPER_BARS.get());
-		dropSelf(ModBlocks.WAXED_EXPOSED_COPPER_BARS.get());
-		dropSelf(ModBlocks.WAXED_WEATHERED_COPPER_BARS.get());
-		dropSelf(ModBlocks.WAXED_OXIDIZED_COPPER_BARS.get());
+		dropSelf(ModBlocks.COPPER_LATTICE.get());
+		dropSelf(ModBlocks.EXPOSED_COPPER_LATTICE.get());
+		dropSelf(ModBlocks.WEATHERED_COPPER_LATTICE.get());
+		dropSelf(ModBlocks.OXIDIZED_COPPER_LATTICE.get());
+		dropSelf(ModBlocks.WAXED_COPPER_LATTICE.get());
+		dropSelf(ModBlocks.WAXED_EXPOSED_COPPER_LATTICE.get());
+		dropSelf(ModBlocks.WAXED_WEATHERED_COPPER_LATTICE.get());
+		dropSelf(ModBlocks.WAXED_OXIDIZED_COPPER_LATTICE.get());
 
 		dropSelf(ModBlocks.COPPER_PILLAR.get());
 		dropSelf(ModBlocks.EXPOSED_COPPER_PILLAR.get());
@@ -174,7 +174,7 @@ public class BlockLootTables extends BlockLootSubProvider
 	@Override
 	protected void add(Block block, LootTable.Builder builder) {
 		this.generatedLootTables.add(block);
-		this.map.put(block.getLootTable(), builder);
+		super.add(block, builder);
 	}
 
 	@Override

@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "blockbox:corrugated_iron_plate"
-    }
+    "#": "blockbox:corrugated_iron_plate"
   },
   "pattern": [
     "###"

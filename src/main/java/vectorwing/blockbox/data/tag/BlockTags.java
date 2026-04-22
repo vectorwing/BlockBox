@@ -4,9 +4,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 import vectorwing.blockbox.BlockBox;
 import vectorwing.blockbox.common.registry.ModBlocks;
 import vectorwing.blockbox.common.tag.CompatibilityTags;
@@ -16,8 +14,8 @@ import java.util.concurrent.CompletableFuture;
 
 public class BlockTags extends BlockTagsProvider
 {
-	public BlockTags(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, @Nullable ExistingFileHelper existingFileHelper) {
-		super(output, lookupProvider, BlockBox.MODID, existingFileHelper);
+	public BlockTags(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider) {
+		super(output, lookupProvider, BlockBox.MODID);
 	}
 
 	@Override
@@ -250,14 +248,14 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.PACKED_ICE_BRICK_SLAB.get(),
 				ModBlocks.PACKED_ICE_BRICK_WALL.get(),
 				ModBlocks.POLISHED_OBSIDIAN.get(),
-				ModBlocks.COPPER_BARS.get(),
-				ModBlocks.EXPOSED_COPPER_BARS.get(),
-				ModBlocks.WEATHERED_COPPER_BARS.get(),
-				ModBlocks.OXIDIZED_COPPER_BARS.get(),
-				ModBlocks.WAXED_COPPER_BARS.get(),
-				ModBlocks.WAXED_EXPOSED_COPPER_BARS.get(),
-				ModBlocks.WAXED_WEATHERED_COPPER_BARS.get(),
-				ModBlocks.WAXED_OXIDIZED_COPPER_BARS.get(),
+				ModBlocks.COPPER_LATTICE.get(),
+				ModBlocks.EXPOSED_COPPER_LATTICE.get(),
+				ModBlocks.WEATHERED_COPPER_LATTICE.get(),
+				ModBlocks.OXIDIZED_COPPER_LATTICE.get(),
+				ModBlocks.WAXED_COPPER_LATTICE.get(),
+				ModBlocks.WAXED_EXPOSED_COPPER_LATTICE.get(),
+				ModBlocks.WAXED_WEATHERED_COPPER_LATTICE.get(),
+				ModBlocks.WAXED_OXIDIZED_COPPER_LATTICE.get(),
 				ModBlocks.COPPER_PILLAR.get(),
 				ModBlocks.EXPOSED_COPPER_PILLAR.get(),
 				ModBlocks.WEATHERED_COPPER_PILLAR.get(),
@@ -314,14 +312,14 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.SNOW_BRICK_WALL.get()
 		);
 		tag(net.minecraft.tags.BlockTags.NEEDS_STONE_TOOL).add(
-						ModBlocks.COPPER_BARS.get(),
-						ModBlocks.EXPOSED_COPPER_BARS.get(),
-						ModBlocks.WEATHERED_COPPER_BARS.get(),
-						ModBlocks.OXIDIZED_COPPER_BARS.get(),
-						ModBlocks.WAXED_COPPER_BARS.get(),
-						ModBlocks.WAXED_EXPOSED_COPPER_BARS.get(),
-						ModBlocks.WAXED_WEATHERED_COPPER_BARS.get(),
-						ModBlocks.WAXED_OXIDIZED_COPPER_BARS.get(),
+						ModBlocks.COPPER_LATTICE.get(),
+						ModBlocks.EXPOSED_COPPER_LATTICE.get(),
+						ModBlocks.WEATHERED_COPPER_LATTICE.get(),
+						ModBlocks.OXIDIZED_COPPER_LATTICE.get(),
+						ModBlocks.WAXED_COPPER_LATTICE.get(),
+						ModBlocks.WAXED_EXPOSED_COPPER_LATTICE.get(),
+						ModBlocks.WAXED_WEATHERED_COPPER_LATTICE.get(),
+						ModBlocks.WAXED_OXIDIZED_COPPER_LATTICE.get(),
 						ModBlocks.COPPER_PILLAR.get(),
 						ModBlocks.EXPOSED_COPPER_PILLAR.get(),
 						ModBlocks.WEATHERED_COPPER_PILLAR.get(),

@@ -3,12 +3,9 @@
   "category": "misc",
   "group": "bb_spiked_palisades",
   "ingredients": [
-    {
-      "item": "blockbox:dark_oak_palisade"
-    }
+    "blockbox:dark_oak_palisade"
   ],
   "result": {
-    "count": 1,
     "id": "blockbox:spiked_dark_oak_palisade"
   }
 }

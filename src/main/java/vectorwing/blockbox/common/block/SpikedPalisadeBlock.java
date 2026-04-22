@@ -1,16 +1,16 @@
 package vectorwing.blockbox.common.block;
 
+import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
 import com.mojang.serialization.MapCodec;
-import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.InsideBlockEffectApplier;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.context.UseOnContext;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CrossCollisionBlock;
 import net.minecraft.world.level.block.IronBarsBlock;
@@ -47,7 +47,7 @@ public class SpikedPalisadeBlock extends CrossCollisionBlock implements SimpleWa
 	}
 
 	public SpikedPalisadeBlock(@Nullable Supplier<Block> strippedForm, Properties properties) {
-		super(4.0F, 4.0F, 8.0F, 8.0F, 8.0F, properties);
+		super(8.0F, 8.0F, 8.0F, 8.0F, 8.0F, properties);
 		this.strippedForm = strippedForm;
 		this.registerDefaultState(this.stateDefinition.any()
 				.setValue(NORTH, false)
@@ -73,10 +73,10 @@ public class SpikedPalisadeBlock extends CrossCollisionBlock implements SimpleWa
 		return null;
 	}
 
-	protected void entityInside(BlockState state, Level level, BlockPos pos, Entity entity) {
+	protected void entityInside(BlockState state, Level level, BlockPos pos, Entity entity, InsideBlockEffectApplier effectApplier, boolean isPrecise) {
 		if (isEntityTouchingSpike(entity, pos)) {
 			entity.makeStuckInBlock(state, new Vec3(0.8, 0.75, 0.8));
-			if (!level.isClientSide && (entity.xOld != entity.getX() || entity.zOld != entity.getZ())) {
+			if (!level.isClientSide() && (entity.xOld != entity.getX() || entity.zOld != entity.getZ())) {
 				double d0 = Math.abs(entity.getX() - entity.xOld);
 				double d1 = Math.abs(entity.getZ() - entity.zOld);
 				if (d0 >= 0.003 || d1 >= 0.003) {
@@ -91,12 +91,12 @@ public class SpikedPalisadeBlock extends CrossCollisionBlock implements SimpleWa
 		return Shapes.joinIsNotEmpty(collisionShape, Shapes.create(entity.getBoundingBox()), BooleanOp.AND);
 	}
 
-	protected BlockState updateShape(BlockState state, Direction facing, BlockState facingState, LevelAccessor level, BlockPos currentPos, BlockPos facingPos) {
+	protected BlockState updateShape(BlockState state, LevelReader level, ScheduledTickAccess ticks, BlockPos currentPos, Direction facing, BlockPos facingPos, BlockState facingState, RandomSource random) {
 		if (state.getValue(WATERLOGGED)) {
-			level.scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
+			ticks.scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
 		}
 
-		return facing.getAxis().getPlane() == Direction.Plane.HORIZONTAL ? state.setValue(PROPERTY_BY_DIRECTION.get(facing), this.connectsTo(facingState, facingState.isFaceSturdy(level, facingPos, facing.getOpposite()), facing.getOpposite())) : super.updateShape(state, facing, facingState, level, currentPos, facingPos);
+		return facing.getAxis().getPlane() == Direction.Plane.HORIZONTAL ? state.setValue(PROPERTY_BY_DIRECTION.get(facing), this.connectsTo(facingState, facingState.isFaceSturdy(level, facingPos, facing.getOpposite()), facing.getOpposite())) : super.updateShape(state, level, ticks, currentPos, facing, facingPos, facingState, random);
 	}
 
 	public BlockState getStateForPlacement(BlockPlaceContext context) {

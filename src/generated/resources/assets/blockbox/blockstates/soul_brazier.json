@@ -7,10 +7,10 @@
       "model": "blockbox:block/soul_brazier_lit"
     },
     "hanging=true,lit=false": {
-      "model": "blockbox:block/hanging_soul_brazier"
+      "model": "blockbox:block/soul_brazier_hanging"
     },
     "hanging=true,lit=true": {
-      "model": "blockbox:block/hanging_soul_brazier_lit"
+      "model": "blockbox:block/soul_brazier_hanging_lit"
     }
   }
 }

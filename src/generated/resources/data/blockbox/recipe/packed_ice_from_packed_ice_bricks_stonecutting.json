@@ -1,10 +1,7 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "blockbox:packed_ice_bricks"
-  },
+  "ingredient": "blockbox:packed_ice_bricks",
   "result": {
-    "count": 1,
     "id": "minecraft:packed_ice"
   }
 }

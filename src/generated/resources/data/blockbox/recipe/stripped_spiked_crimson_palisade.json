@@ -3,12 +3,9 @@
   "category": "misc",
   "group": "bb_spiked_palisades",
   "ingredients": [
-    {
-      "item": "blockbox:stripped_crimson_palisade"
-    }
+    "blockbox:stripped_crimson_palisade"
   ],
   "result": {
-    "count": 1,
     "id": "blockbox:stripped_spiked_crimson_palisade"
   }
 }

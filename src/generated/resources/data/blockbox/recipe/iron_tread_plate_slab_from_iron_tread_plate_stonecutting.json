@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "blockbox:iron_tread_plate"
-  },
+  "ingredient": "blockbox:iron_tread_plate",
   "result": {
     "count": 2,
     "id": "blockbox:iron_tread_plate_slab"

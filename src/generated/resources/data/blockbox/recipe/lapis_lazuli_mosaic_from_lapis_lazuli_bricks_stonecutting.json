@@ -1,10 +1,7 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "blockbox:lapis_lazuli_bricks"
-  },
+  "ingredient": "blockbox:lapis_lazuli_bricks",
   "result": {
-    "count": 1,
     "id": "blockbox:lapis_lazuli_mosaic"
   }
 }

@@ -3,19 +3,14 @@
   "category": "misc",
   "group": "bb_chairs",
   "key": {
-    "#": {
-      "item": "minecraft:jungle_planks"
-    },
-    "/": {
-      "item": "minecraft:stick"
-    }
+    "#": "minecraft:jungle_planks",
+    "/": "minecraft:stick"
   },
   "pattern": [
     "###",
     "/ /"
   ],
   "result": {
-    "count": 1,
     "id": "blockbox:jungle_seat"
   }
 }

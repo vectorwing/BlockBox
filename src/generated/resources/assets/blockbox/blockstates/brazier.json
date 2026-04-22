@@ -7,10 +7,10 @@
       "model": "blockbox:block/brazier_lit"
     },
     "hanging=true,lit=false": {
-      "model": "blockbox:block/hanging_brazier"
+      "model": "blockbox:block/brazier_hanging"
     },
     "hanging=true,lit=true": {
-      "model": "blockbox:block/hanging_brazier_lit"
+      "model": "blockbox:block/brazier_hanging_lit"
     }
   }
 }

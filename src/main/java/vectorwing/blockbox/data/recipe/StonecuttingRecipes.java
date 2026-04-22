@@ -1,14 +1,17 @@
 package vectorwing.blockbox.data.recipe;
 
-import net.minecraft.advancements.critereon.InventoryChangeTrigger;
+import net.minecraft.advancements.criterion.InventoryChangeTrigger;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.SingleItemRecipeBuilder;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.level.ItemLike;
 import vectorwing.blockbox.BlockBox;
 import vectorwing.blockbox.common.registry.ModItems;
@@ -200,11 +203,11 @@ public class StonecuttingRecipes
 				.save(output, recipeName(result, input));
 	}
 
-	private static ResourceLocation recipeName(ItemLike result, ItemLike ingredient) {
-		return ResourceLocation.fromNamespaceAndPath(BlockBox.MODID, name(result) + "_from_" + name(ingredient) + "_stonecutting");
+	private static ResourceKey<Recipe<?>> recipeName(ItemLike result, ItemLike ingredient) {
+		return ResourceKey.create(Registries.RECIPE, Identifier.fromNamespaceAndPath(BlockBox.MODID, name(result) + "_from_" + name(ingredient) + "_stonecutting"));
 	}
 
-	private static ResourceLocation key(Item item) {
+	private static Identifier key(Item item) {
 		return BuiltInRegistries.ITEM.getKey(item);
 	}
 

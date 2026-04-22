@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "bb_palisades",
   "key": {
-    "#": {
-      "item": "minecraft:warped_stem"
-    }
+    "#": "minecraft:warped_stem"
   },
   "pattern": [
     "###",

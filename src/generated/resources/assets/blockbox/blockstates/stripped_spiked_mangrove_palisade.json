@@ -7,7 +7,7 @@
     },
     {
       "apply": {
-        "model": "blockbox:block/spiked_stripped_mangrove_palisade_front",
+        "model": "blockbox:block/stripped_spiked_mangrove_palisade_front",
         "uvlock": true
       },
       "when": {
@@ -16,7 +16,7 @@
     },
     {
       "apply": {
-        "model": "blockbox:block/spiked_stripped_mangrove_palisade_front",
+        "model": "blockbox:block/stripped_spiked_mangrove_palisade_front",
         "y": 270
       },
       "when": {
@@ -25,7 +25,7 @@
     },
     {
       "apply": {
-        "model": "blockbox:block/spiked_stripped_mangrove_palisade_back",
+        "model": "blockbox:block/stripped_spiked_mangrove_palisade_back",
         "y": 270
       },
       "when": {
@@ -34,7 +34,7 @@
     },
     {
       "apply": {
-        "model": "blockbox:block/spiked_stripped_mangrove_palisade_back",
+        "model": "blockbox:block/stripped_spiked_mangrove_palisade_back",
         "uvlock": true
       },
       "when": {

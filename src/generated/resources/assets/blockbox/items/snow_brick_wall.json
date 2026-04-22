@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "blockbox:block/snow_brick_wall_inventory"
+  }
+}

@@ -3,19 +3,14 @@
   "category": "misc",
   "group": "bb_chairs",
   "key": {
-    "#": {
-      "item": "minecraft:warped_planks"
-    },
-    "/": {
-      "item": "minecraft:stick"
-    }
+    "#": "minecraft:warped_planks",
+    "/": "minecraft:stick"
   },
   "pattern": [
     "###",
     "/ /"
   ],
   "result": {
-    "count": 1,
     "id": "blockbox:warped_seat"
   }
 }

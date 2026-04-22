@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "blockbox:copper_lattice",
+    "minecraft:honeycomb"
+  ],
+  "result": {
+    "id": "blockbox:waxed_copper_lattice"
+  }
+}
