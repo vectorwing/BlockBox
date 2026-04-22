@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": "minecraft:copper_chain"
+    "#": "minecraft:exposed_copper_chain"
   },
   "pattern": [
     " # ",
@@ -11,6 +11,6 @@
   ],
   "result": {
     "count": 8,
-    "id": "blockbox:copper_chain_links"
+    "id": "blockbox:exposed_copper_chain_links"
   }
 }

@@ -3,7 +3,10 @@ package vectorwing.blockbox.data.recipe;
 import net.minecraft.advancements.criterion.InventoryChangeTrigger;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.data.recipes.*;
+import net.minecraft.data.recipes.RecipeCategory;
+import net.minecraft.data.recipes.RecipeOutput;
+import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.ItemTags;
@@ -15,10 +18,10 @@ import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.Tags;
 import vectorwing.blockbox.BlockBox;
+import vectorwing.blockbox.common.helper.RecipeHelper;
 import vectorwing.blockbox.common.registry.ModBlocks;
 import vectorwing.blockbox.common.registry.ModItems;
 import vectorwing.blockbox.common.tag.ModTags;
-import vectorwing.blockbox.data.provider.Recipes;
 
 public class CraftingRecipes
 {
@@ -83,12 +86,12 @@ public class CraftingRecipes
 				.requires(ModItems.SOUL_BRAZIER.get())
 				.requires(Items.NETHERRACK)
 				.unlockedBy("has_netherrack", InventoryChangeTrigger.TriggerInstance.hasItems(Items.NETHERRACK))
-				.save(output, nameWithSuffix(Recipes.itemName(ModItems.BRAZIER.get()), "from_swap"));
+				.save(output, nameWithSuffix(RecipeHelper.itemName(ModItems.BRAZIER.get()), "from_swap"));
 		ShapelessRecipeBuilder.shapeless(items, RecipeCategory.DECORATIONS, ModBlocks.SOUL_BRAZIER.get())
 				.requires(ModItems.BRAZIER.get())
 				.requires(ItemTags.SOUL_FIRE_BASE_BLOCKS)
 				.unlockedBy("has_soul_sand", InventoryChangeTrigger.TriggerInstance.hasItems(Items.SOUL_SAND, Items.SOUL_SOIL))
-				.save(output, nameWithSuffix(Recipes.itemName(ModItems.SOUL_BRAZIER.get()), "from_swap"));
+				.save(output, nameWithSuffix(RecipeHelper.itemName(ModItems.SOUL_BRAZIER.get()), "from_swap"));
 		chair(items, output, ModBlocks.OAK_SEAT.get(), Blocks.OAK_PLANKS);
 		chair(items, output, ModBlocks.SPRUCE_SEAT.get(), Blocks.SPRUCE_PLANKS);
 		chair(items, output, ModBlocks.BIRCH_SEAT.get(), Blocks.BIRCH_PLANKS);
@@ -220,74 +223,32 @@ public class CraftingRecipes
 	}
 
 	private static void craftCopperBlocks(HolderGetter<Item> items, RecipeOutput output) {
-		ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, ModBlocks.COPPER_CHAIN_LINKS.get(), 4)
-				.pattern(" # ")
-				.pattern("# #")
-				.pattern(" # ")
-				.define('#', Tags.Items.INGOTS_COPPER)
-				.unlockedBy("has_copper", InventoryChangeTrigger.TriggerInstance.hasItems(Items.COPPER_INGOT))
-				.save(output);
+		copperChainLink(items, output, ModBlocks.COPPER_CHAIN_LINKS.get(), Items.COPPER_CHAIN.unaffected());
+		copperChainLink(items, output, ModBlocks.EXPOSED_COPPER_CHAIN_LINKS.get(), Items.COPPER_CHAIN.exposed());
+		copperChainLink(items, output, ModBlocks.WEATHERED_COPPER_CHAIN_LINKS.get(), Items.COPPER_CHAIN.weathered());
+		copperChainLink(items, output, ModBlocks.OXIDIZED_COPPER_CHAIN_LINKS.get(), Items.COPPER_CHAIN.oxidized());
+		waxedCopperChainLink(items, output, ModBlocks.WAXED_COPPER_CHAIN_LINKS.get(), Items.COPPER_CHAIN.waxed());
+		waxedCopperChainLink(items, output, ModBlocks.WAXED_EXPOSED_COPPER_CHAIN_LINKS.get(), Items.COPPER_CHAIN.waxedExposed());
+		waxedCopperChainLink(items, output, ModBlocks.WAXED_WEATHERED_COPPER_CHAIN_LINKS.get(), Items.COPPER_CHAIN.waxedWeathered());
+		waxedCopperChainLink(items, output, ModBlocks.WAXED_OXIDIZED_COPPER_CHAIN_LINKS.get(), Items.COPPER_CHAIN.waxedOxidized());
+
+		copperPillar(items, output, ModBlocks.COPPER_PILLAR.get(), Items.CUT_COPPER);
+		copperPillar(items, output, ModBlocks.EXPOSED_COPPER_PILLAR.get(), Items.EXPOSED_CUT_COPPER);
+		copperPillar(items, output, ModBlocks.WEATHERED_COPPER_PILLAR.get(), Items.WEATHERED_CUT_COPPER);
+		copperPillar(items, output, ModBlocks.OXIDIZED_COPPER_PILLAR.get(), Items.OXIDIZED_CUT_COPPER);
+		waxedCopperPillar(items, output, ModBlocks.WAXED_COPPER_PILLAR.get(), Items.WAXED_CUT_COPPER);
+		waxedCopperPillar(items, output, ModBlocks.WAXED_EXPOSED_COPPER_PILLAR.get(), Items.WAXED_EXPOSED_CUT_COPPER);
+		waxedCopperPillar(items, output, ModBlocks.WAXED_WEATHERED_COPPER_PILLAR.get(), Items.WAXED_WEATHERED_CUT_COPPER);
+		waxedCopperPillar(items, output, ModBlocks.WAXED_OXIDIZED_COPPER_PILLAR.get(), Items.WAXED_OXIDIZED_CUT_COPPER);
+
 		waxing(items, output, ModBlocks.WAXED_COPPER_CHAIN_LINKS.get(), ModBlocks.COPPER_CHAIN_LINKS.get());
 		waxing(items, output, ModBlocks.WAXED_EXPOSED_COPPER_CHAIN_LINKS.get(), ModBlocks.EXPOSED_COPPER_CHAIN_LINKS.get());
 		waxing(items, output, ModBlocks.WAXED_WEATHERED_COPPER_CHAIN_LINKS.get(), ModBlocks.WEATHERED_COPPER_CHAIN_LINKS.get());
 		waxing(items, output, ModBlocks.WAXED_OXIDIZED_COPPER_CHAIN_LINKS.get(), ModBlocks.OXIDIZED_COPPER_CHAIN_LINKS.get());
-		ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, ModBlocks.COPPER_PILLAR.get(), 2)
-				.pattern("#")
-				.pattern("#")
-				.define('#', Blocks.CUT_COPPER)
-				.unlockedBy("has_copper", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.COPPER_BLOCK))
-				.save(output);
-		ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_COPPER_PILLAR.get(), 2)
-				.pattern("#")
-				.pattern("#")
-				.define('#', Blocks.EXPOSED_CUT_COPPER)
-				.unlockedBy("has_copper", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.EXPOSED_COPPER))
-				.save(output);
-		ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_COPPER_PILLAR.get(), 2)
-				.pattern("#")
-				.pattern("#")
-				.define('#', Blocks.WEATHERED_CUT_COPPER)
-				.unlockedBy("has_copper", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.WEATHERED_COPPER))
-				.save(output);
-		ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_COPPER_PILLAR.get(), 2)
-				.pattern("#")
-				.pattern("#")
-				.define('#', Blocks.OXIDIZED_CUT_COPPER)
-				.unlockedBy("has_copper", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.OXIDIZED_COPPER))
-				.save(output);
-
-		ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_COPPER_PILLAR.get(), 2)
-				.pattern("#")
-				.pattern("#")
-				.define('#', Blocks.WAXED_CUT_COPPER)
-				.unlockedBy("has_copper", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.COPPER_BLOCK))
-				.group("waxed_copper_pillar")
-				.save(output);
-		ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_COPPER_PILLAR.get(), 2)
-				.pattern("#")
-				.pattern("#")
-				.define('#', Blocks.WAXED_EXPOSED_CUT_COPPER)
-				.unlockedBy("has_copper", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.EXPOSED_COPPER))
-				.group("waxed_exposed_copper_pillar")
-				.save(output);
-		ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_COPPER_PILLAR.get(), 2)
-				.pattern("#")
-				.pattern("#")
-				.define('#', Blocks.WAXED_WEATHERED_CUT_COPPER)
-				.unlockedBy("has_copper", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.WEATHERED_COPPER))
-				.group("waxed_weathered_copper_pillar")
-				.save(output);
-		ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_COPPER_PILLAR.get(), 2)
-				.pattern("#")
-				.pattern("#")
-				.define('#', Blocks.WAXED_OXIDIZED_CUT_COPPER)
-				.unlockedBy("has_copper", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.OXIDIZED_COPPER))
-				.group("waxed_oxidized_copper_pillar")
-				.save(output);
-		waxing(items, output, ModBlocks.WAXED_COPPER_PILLAR.get(), ModBlocks.COPPER_PILLAR.get(), "waxed_copper_pillar");
-		waxing(items, output, ModBlocks.WAXED_EXPOSED_COPPER_PILLAR.get(), ModBlocks.EXPOSED_COPPER_PILLAR.get(), "waxed_exposed_copper_pillar");
-		waxing(items, output, ModBlocks.WAXED_WEATHERED_COPPER_PILLAR.get(), ModBlocks.WEATHERED_COPPER_PILLAR.get(), "waxed_weathered_copper_pillar");
-		waxing(items, output, ModBlocks.WAXED_OXIDIZED_COPPER_PILLAR.get(), ModBlocks.OXIDIZED_COPPER_PILLAR.get(), "waxed_oxidized_copper_pillar");
+		waxing(items, output, ModBlocks.WAXED_COPPER_PILLAR.get(), ModBlocks.COPPER_PILLAR.get());
+		waxing(items, output, ModBlocks.WAXED_EXPOSED_COPPER_PILLAR.get(), ModBlocks.EXPOSED_COPPER_PILLAR.get());
+		waxing(items, output, ModBlocks.WAXED_WEATHERED_COPPER_PILLAR.get(), ModBlocks.WEATHERED_COPPER_PILLAR.get());
+		waxing(items, output, ModBlocks.WAXED_OXIDIZED_COPPER_PILLAR.get(), ModBlocks.OXIDIZED_COPPER_PILLAR.get());
 	}
 
 	private static void craftBasicBlocks(HolderGetter<Item> items, RecipeOutput output) {
@@ -419,21 +380,53 @@ public class CraftingRecipes
 
 	// HELPER METHODS
 
+	public static void copperChainLink(HolderGetter<Item> items, RecipeOutput output, ItemLike chainLink, ItemLike chain) {
+		ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, chainLink, 8)
+				.pattern(" # ")
+				.pattern("# #")
+				.pattern(" # ")
+				.define('#', chain)
+				.unlockedBy("has_copper", InventoryChangeTrigger.TriggerInstance.hasItems(Items.COPPER_INGOT))
+				.save(output);
+	}
+
+	public static void waxedCopperChainLink(HolderGetter<Item> items, RecipeOutput output, ItemLike chainLink, ItemLike chain) {
+		ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, chainLink, 8)
+				.pattern(" # ")
+				.pattern("# #")
+				.pattern(" # ")
+				.define('#', chain)
+				.unlockedBy("has_copper", InventoryChangeTrigger.TriggerInstance.hasItems(Items.COPPER_INGOT))
+				.group(RecipeHelper.itemName(chainLink))
+				.save(output);
+	}
+
+	public static void copperPillar(HolderGetter<Item> items, RecipeOutput output, ItemLike pillar, ItemLike cutCopper) {
+		ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, pillar, 2)
+				.pattern("#")
+				.pattern("#")
+				.define('#', cutCopper)
+				.unlockedBy("has_copper", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.COPPER_BLOCK))
+				.save(output);
+	}
+
+	public static void waxedCopperPillar(HolderGetter<Item> items, RecipeOutput output, ItemLike pillar, ItemLike cutCopper) {
+		ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, pillar, 2)
+				.pattern("#")
+				.pattern("#")
+				.define('#', cutCopper)
+				.unlockedBy("has_copper", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.COPPER_BLOCK))
+				.group(RecipeHelper.itemName(pillar))
+				.save(output);
+	}
+
 	public static void waxing(HolderGetter<Item> items, RecipeOutput output, ItemLike waxedBlock, ItemLike block) {
 		ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, waxedBlock)
 				.requires(block)
 				.requires(Items.HONEYCOMB)
 				.unlockedBy("has_copper_block", InventoryChangeTrigger.TriggerInstance.hasItems(block))
-				.save(output, nameWithSuffix(Recipes.itemName(waxedBlock), "from_honeycomb"));
-	}
-
-	public static void waxing(HolderGetter<Item> items, RecipeOutput output, ItemLike waxedBlock, ItemLike block, String group) {
-		ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, waxedBlock)
-				.requires(block)
-				.requires(Items.HONEYCOMB)
-				.unlockedBy("has_copper_block", InventoryChangeTrigger.TriggerInstance.hasItems(block))
-				.group(group)
-				.save(output, nameWithSuffix(Recipes.itemName(waxedBlock), "from_honeycomb"));
+				.group(RecipeHelper.itemName(waxedBlock))
+				.save(output, nameWithSuffix(RecipeHelper.itemName(waxedBlock), "from_honeycomb"));
 	}
 
 	public static void stairAndSlab(HolderGetter<Item> items, RecipeOutput output, ItemLike stair, ItemLike slab, ItemLike block) {
@@ -473,7 +466,7 @@ public class CraftingRecipes
 				.requires(spikedPalisade)
 				.group("bb_palisades")
 				.unlockedBy("has_matching_log", InventoryChangeTrigger.TriggerInstance.hasItems(log))
-				.save(output, nameWithSuffix(Recipes.itemName(palisade), "from_spiked"));
+				.save(output, nameWithSuffix(RecipeHelper.itemName(palisade), "from_spiked"));
 		ShapelessRecipeBuilder.shapeless(items, RecipeCategory.MISC, spikedPalisade, 1)
 				.requires(palisade)
 				.group("bb_spiked_palisades")
@@ -501,7 +494,7 @@ public class CraftingRecipes
 	}
 
 	private static ResourceKey<Recipe<?>> nameDye(ItemLike item) {
-		return ResourceKey.create(Registries.RECIPE, Identifier.fromNamespaceAndPath(BlockBox.MODID, "dye_" + Recipes.itemName(item)));
+		return ResourceKey.create(Registries.RECIPE, Identifier.fromNamespaceAndPath(BlockBox.MODID, "dye_" + RecipeHelper.itemName(item)));
 	}
 
 	private static ResourceKey<Recipe<?>> nameWithSuffix(String name, String suffix) {

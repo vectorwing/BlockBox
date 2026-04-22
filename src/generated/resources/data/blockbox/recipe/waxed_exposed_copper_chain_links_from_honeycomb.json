@@ -1,6 +1,7 @@
 {
   "type": "minecraft:crafting_shapeless",
   "category": "building",
+  "group": "waxed_exposed_copper_chain_links",
   "ingredients": [
     "blockbox:exposed_copper_chain_links",
     "minecraft:honeycomb"

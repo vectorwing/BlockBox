@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "minecraft:copper_block"
+            "items": "minecraft:copper_ingot"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blockbox:waxed_oxidized_copper_pillar"
+        "recipe": "blockbox:weathered_copper_chain_links"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "blockbox:waxed_oxidized_copper_pillar"
+      "blockbox:weathered_copper_chain_links"
     ]
   }
 }

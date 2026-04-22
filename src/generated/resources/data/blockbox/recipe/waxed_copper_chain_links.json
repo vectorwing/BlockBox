@@ -1,8 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "building",
+  "group": "waxed_copper_chain_links",
   "key": {
-    "#": "minecraft:copper_chain"
+    "#": "minecraft:waxed_copper_chain"
   },
   "pattern": [
     " # ",
@@ -11,6 +12,6 @@
   ],
   "result": {
     "count": 8,
-    "id": "blockbox:copper_chain_links"
+    "id": "blockbox:waxed_copper_chain_links"
   }
 }

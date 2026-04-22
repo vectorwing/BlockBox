@@ -2,11 +2,9 @@ package vectorwing.blockbox.data.provider;
 
 import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
-import net.minecraft.world.level.ItemLike;
 import vectorwing.blockbox.data.recipe.CraftingRecipes;
 import vectorwing.blockbox.data.recipe.SmeltingRecipes;
 import vectorwing.blockbox.data.recipe.StonecuttingRecipes;
@@ -27,10 +25,6 @@ public class Recipes extends RecipeProvider
 		CraftingRecipes.register(items, output);
 		SmeltingRecipes.register(output);
 		StonecuttingRecipes.register(output);
-	}
-
-	public static String itemName(ItemLike itemLike) {
-		return BuiltInRegistries.ITEM.getKey(itemLike.asItem()).getPath();
 	}
 
 	public static class Runner extends RecipeProvider.Runner {

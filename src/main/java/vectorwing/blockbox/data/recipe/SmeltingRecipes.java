@@ -7,9 +7,9 @@ import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.CookingBookCategory;
 import net.minecraft.world.item.crafting.Ingredient;
+import vectorwing.blockbox.common.helper.RecipeHelper;
 import vectorwing.blockbox.common.registry.ModBlocks;
 import vectorwing.blockbox.common.registry.ModItems;
-import vectorwing.blockbox.data.provider.Recipes;
 
 public class SmeltingRecipes
 {
@@ -19,6 +19,6 @@ public class SmeltingRecipes
 				.save(output);
 		SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModBlocks.ROUGH_GLASS.get()), RecipeCategory.BUILDING_BLOCKS, CookingBookCategory.BLOCKS, Items.GLASS, 0.1F, 200)
 				.unlockedBy("has_rough_glass", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.ROUGH_GLASS.get()))
-				.save(output, Recipes.itemName(Items.GLASS) + "_from_smelting_rough_glass");
+				.save(output, RecipeHelper.itemName(Items.GLASS) + "_from_smelting_rough_glass");
 	}
 }
