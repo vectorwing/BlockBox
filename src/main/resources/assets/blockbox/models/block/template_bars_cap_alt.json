@@ -3,8 +3,7 @@
   "render_type": "minecraft:cutout",
   "textures": {
     "particle": "#bars",
-    "bars": "#bars",
-    "edge": "#edge"
+    "bars": "#bars"
   },
   "elements": [
     {   "from": [ 8, 0, 7 ],
