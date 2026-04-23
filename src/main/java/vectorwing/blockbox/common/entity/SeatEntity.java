@@ -1,6 +1,8 @@
 package vectorwing.blockbox.common.entity;
 
-import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
+//? fabric {
+import net.fabricmc.fabric.api.entity.FakePlayer;
+//?}
 import net.minecraft.client.renderer.culling.Frustum;
 import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
@@ -17,14 +19,14 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.storage.ValueInput;
 import net.minecraft.world.level.storage.ValueOutput;
 import net.minecraft.world.phys.Vec3;
-import net.neoforged.neoforge.common.util.FakePlayer;
+//? neoforge {
+/*import net.neoforged.neoforge.common.util.FakePlayer;
+*///?}
+import org.jspecify.annotations.NullMarked;
 import vectorwing.blockbox.common.block.SeatBlock;
 import vectorwing.blockbox.common.registry.ModEntityTypes;
 
-import javax.annotation.ParametersAreNonnullByDefault;
-
-@ParametersAreNonnullByDefault
-@MethodsReturnNonnullByDefault
+@NullMarked
 public class SeatEntity extends Entity
 {
 	public SeatEntity(EntityType<?> entityType, Level level) {

@@ -1,4 +1,5 @@
-package vectorwing.blockbox.data.provider;
+//? neoforge {
+/*package vectorwing.blockbox.data.provider;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -46,3 +47,4 @@ public class DataMaps extends DataMapProvider
 				.add(ModTags.WOODEN_SEAT_ITEMS, new FurnaceFuel(200), false);
 	}
 }
+*///?}

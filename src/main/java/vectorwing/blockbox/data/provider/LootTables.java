@@ -1,4 +1,5 @@
-package vectorwing.blockbox.data.provider;
+//? neoforge {
+/*package vectorwing.blockbox.data.provider;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -17,3 +18,4 @@ public class LootTables extends LootTableProvider
 		), registries);
 	}
 }
+*///?}

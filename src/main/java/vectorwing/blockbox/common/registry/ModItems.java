@@ -1,12 +1,16 @@
 package vectorwing.blockbox.common.registry;
 
 import com.google.common.collect.Sets;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
-import net.neoforged.neoforge.registries.DeferredRegister;
 import vectorwing.blockbox.BlockBox;
 import vectorwing.blockbox.common.event.VanillaTabOrdering;
 import vectorwing.blockbox.common.item.SkyLanternItem;
@@ -21,13 +25,13 @@ import static vectorwing.blockbox.common.event.VanillaTabOrdering.FUNCTIONAL_BLO
 @SuppressWarnings("unused")
 public class ModItems
 {
-	public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(BlockBox.MODID);
 	public static LinkedHashSet<Supplier<? extends Item>> CREATIVE_TAB_ITEMS = Sets.newLinkedHashSet();
 
-	public static Supplier<Item> registerItem(final String name, final Function<Item.Properties, Item> function) {
-		Supplier<Item> block = ITEMS.registerItem(name, function);
-		CREATIVE_TAB_ITEMS.add(block);
-		return block;
+	public static <T extends Item> Supplier<T> registerItem(final String name, final Function<Item.Properties, T> function) {
+		Identifier id = Identifier.fromNamespaceAndPath(BlockBox.MODID, name);
+		T block = Registry.register(BuiltInRegistries.ITEM, id, function.apply(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, id))));
+		CREATIVE_TAB_ITEMS.add(()->block);
+		return ()-> block;
 	}
 
 	public static Supplier<Item> registerItem(final String name, final Function<Item.Properties, Item> function, final Item vanillaTabNeighbor, LinkedHashMap<Supplier<? extends Item>, ItemLike> vanillaTab) {
@@ -37,7 +41,7 @@ public class ModItems
 	}
 
 	public static Supplier<BlockItem> registerSimpleBlockItem(final String name, final Supplier<Block> supplier) {
-		Supplier<BlockItem> block = ITEMS.registerSimpleBlockItem(name, supplier);
+		Supplier<BlockItem> block = registerItem(name, properties -> new BlockItem(supplier.get(), properties.useBlockDescriptionPrefix()));
 		CREATIVE_TAB_ITEMS.add(block);
 		return block;
 	}
@@ -221,5 +225,9 @@ public class ModItems
 
 	private static Function<Item.Properties, Item> skyLantern(Supplier<Block> block) {
 		return properties -> new SkyLanternItem(block.get(), properties.useBlockDescriptionPrefix());
+	}
+
+	public static void register() {
+
 	}
 }

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "${mod_id}",
+  "name": "${mod_name}",
+  "version": "${version}",
+  "authors": ["vectorwing"],
+  "contact": {
+    "sources": "https://github.com/vectorwing/BlockBox",
+    "issues": "https://github.com/vectorwing/BlockBox/issues"
+  },
+  "description": "A collection of building blocks, furniture and decorations!",
+  "icon": "assets/logo.png",
+  "license": "MIT",
+  "environment": "*",
+  "accessWidener": "blockbox.accesswidener",
+  "entrypoints": {
+    "main": [
+      "vectorwing.blockbox.fabric.FabricEntrypoint"
+    ],
+    "client": [
+      "vectorwing.blockbox.fabric.FabricClientEntrypoint"
+    ]
+  },
+  "mixins": [
+    "blockbox.mixins.json"
+  ],
+  "depends": {
+    "fabric-api": "*"
+  }
+}

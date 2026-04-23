@@ -1,5 +1,6 @@
 package vectorwing.blockbox.common.registry;
 
+import net.minecraft.core.registries.BuiltInRegistries;
 import vectorwing.blockbox.common.helper.RecipeHelper;
 
 public class RegistryAliases
@@ -25,10 +26,10 @@ public class RegistryAliases
 	}
 
 	public static void addBlockAlias(String oldName, String newName) {
-		ModBlocks.BLOCKS.addAlias(RecipeHelper.modIdentifier(oldName), RecipeHelper.modIdentifier(newName));
+		BuiltInRegistries.BLOCK.addAlias(RecipeHelper.modIdentifier(oldName), RecipeHelper.modIdentifier(newName));
 	}
 
 	public static void addItemAlias(String oldName, String newName) {
-		ModItems.ITEMS.addAlias(RecipeHelper.modIdentifier(oldName), RecipeHelper.modIdentifier(newName));
+		BuiltInRegistries.ITEM.addAlias(RecipeHelper.modIdentifier(oldName), RecipeHelper.modIdentifier(newName));
 	}
 }

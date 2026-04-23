@@ -4,9 +4,9 @@ license="${mod_license}"
 
 [[mods]] #mandatory
 modId="${mod_id}" #mandatory
-version="${mod_version}" #mandatory
+version="${version}" #mandatory
 displayName="${mod_name}" #mandatory
-logoFile = "logo.png"
+logoFile = "../logo.png"
 logoBlur = false
 credits="Tkain" #optional
 authors="${mod_authors}" #optional

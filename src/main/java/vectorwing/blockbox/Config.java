@@ -12,5 +12,5 @@ public class Config
 			.comment("Should the items from this mod be organized within vanilla tabs? They will be placed together with similar block sets.")
 			.define("addItemsToVanillaTabs", true);
 
-	static final ModConfigSpec SPEC = BUILDER.build();
+	public static final ModConfigSpec SPEC = BUILDER.build();
 }

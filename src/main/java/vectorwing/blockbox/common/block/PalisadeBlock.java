@@ -26,22 +26,26 @@ import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.neoforged.neoforge.common.ItemAbilities;
+//? neoforge {
+/*import net.neoforged.neoforge.common.ItemAbilities;
 import net.neoforged.neoforge.common.ItemAbility;
+*///?} else {
+
+import vectorwing.blockbox.fabric.ItemAbilities;
+import vectorwing.blockbox.fabric.ItemAbility;
+//?}
+import vectorwing.blockbox.fabric.BlockWithItemAbility;
 import org.jetbrains.annotations.NotNull;
+import org.jspecify.annotations.Nullable;
 import vectorwing.blockbox.common.block.state.PalisadeConnection;
 import vectorwing.blockbox.common.registry.ModSounds;
 import vectorwing.blockbox.common.tag.ModTags;
 
-import javax.annotation.Nullable;
-import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
-@ParametersAreNonnullByDefault
-@MethodsReturnNonnullByDefault
-public class PalisadeBlock extends CrossCollisionBlock implements SimpleWaterloggedBlock
+public class PalisadeBlock extends CrossCollisionBlock implements SimpleWaterloggedBlock, BlockWithItemAbility
 {
 	public static final MapCodec<PalisadeBlock> CODEC = simpleCodec(PalisadeBlock::new);
 
@@ -50,8 +54,8 @@ public class PalisadeBlock extends CrossCollisionBlock implements SimpleWaterlog
 	public static final EnumProperty<PalisadeConnection> TYPE_SOUTH = EnumProperty.create("south", PalisadeConnection.class);
 	public static final EnumProperty<PalisadeConnection> TYPE_WEST = EnumProperty.create("west", PalisadeConnection.class);
 
-	public final Supplier<Block> strippedForm;
-	public final Supplier<Block> spikedForm;
+	public final @Nullable Supplier<Block> strippedForm;
+	public final @Nullable Supplier<Block> spikedForm;
 
 	public static final Map<Direction, EnumProperty<PalisadeConnection>> PROPERTY_BY_DIRECTION = ImmutableMap.copyOf(Maps.newEnumMap(Map.of(
 		Direction.NORTH, TYPE_NORTH,

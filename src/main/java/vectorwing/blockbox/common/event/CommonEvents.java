@@ -5,16 +5,21 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.neoforged.bus.api.SubscribeEvent;
+//? neoforge {
+/*import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.registries.RegisterEvent;
+*///?} else {
+import vectorwing.blockbox.fabric.event.BuildCreativeModeTabContentsEvent;
+//?}
 import vectorwing.blockbox.BlockBox;
 import vectorwing.blockbox.Config;
-import vectorwing.blockbox.common.registry.ModBlocks;
 import vectorwing.blockbox.common.registry.ModItems;
 
-@EventBusSubscriber(modid = BlockBox.MODID)
+
+//? neoforge
+/*@EventBusSubscriber(modid = BlockBox.MODID)*/
 @SuppressWarnings("unused")
 public class CommonEvents
 {
@@ -22,8 +27,10 @@ public class CommonEvents
 	// clay_tiles -> tiles
 	// jagged_clay_tiles -> broken_tile_mosaic
 
-	@SubscribeEvent
-	public static void addItemsToVanillaCreativeTabs(BuildCreativeModeTabContentsEvent event) {
+	//? neoforge
+	/*@SubscribeEvent*/
+	public static void addItemsToVanillaCreativeTabs(BuildCreativeModeTabContentsEvent event
+	) {
 		if (!Config.ADD_ITEMS_TO_VANILLA_TABS.get()) {
 			return;
 		}

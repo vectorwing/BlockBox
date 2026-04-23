@@ -1,6 +1,5 @@
 package vectorwing.blockbox.common.block;
 
-import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -23,18 +22,21 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.neoforged.neoforge.common.ItemAbilities;
+//? neoforge {
+/*import net.neoforged.neoforge.common.ItemAbilities;
 import net.neoforged.neoforge.common.ItemAbility;
+*///?} else {
+import vectorwing.blockbox.fabric.ItemAbilities;
+import vectorwing.blockbox.fabric.ItemAbility;
+//?}
+import vectorwing.blockbox.fabric.BlockWithItemAbility;
+import org.jspecify.annotations.Nullable;
 import vectorwing.blockbox.common.registry.ModDamageTypes;
 import vectorwing.blockbox.common.tag.ModTags;
 
-import javax.annotation.Nullable;
-import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.function.Supplier;
 
-@ParametersAreNonnullByDefault
-@MethodsReturnNonnullByDefault
-public class SpikedPalisadeBlock extends CrossCollisionBlock implements SimpleWaterloggedBlock
+public class SpikedPalisadeBlock extends CrossCollisionBlock implements SimpleWaterloggedBlock, BlockWithItemAbility
 {
 	public static final MapCodec<SpikedPalisadeBlock> CODEC = simpleCodec(SpikedPalisadeBlock::new);
 

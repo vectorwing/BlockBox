@@ -1,5 +1,6 @@
 package vectorwing.blockbox.common.tag;
 
+import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
@@ -14,10 +15,10 @@ public class CompatibilityTags
 	public static final TagKey<Block> FARMERS_DELIGHT_TRAY_HEAT_SOURCES = externalBlockTag(FARMERS_DELIGHT, "tray_heat_sources");
 
 	private static TagKey<Block> externalBlockTag(String modId, String path) {
-		return BlockTags.create(Identifier.fromNamespaceAndPath(modId, path));
+		return TagKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(modId, path));
 	}
 
 	private static TagKey<Item> externalItemTag(String modId, String path) {
-		return ItemTags.create(Identifier.fromNamespaceAndPath(modId, path));
+		return TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(modId, path));
 	}
 }
