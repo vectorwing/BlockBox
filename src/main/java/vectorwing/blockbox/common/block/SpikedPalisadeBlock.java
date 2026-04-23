@@ -3,6 +3,8 @@ package vectorwing.blockbox.common.block;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.Identifier;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
@@ -10,10 +12,7 @@ import net.minecraft.world.entity.InsideBlockEffectApplier;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.*;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.CrossCollisionBlock;
-import net.minecraft.world.level.block.IronBarsBlock;
-import net.minecraft.world.level.block.SimpleWaterloggedBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.material.FluidState;
@@ -42,7 +41,7 @@ public class SpikedPalisadeBlock extends CrossCollisionBlock implements SimpleWa
 
 	protected static final VoxelShape SPIKE_SHAPE = Block.box(4.0D, 8.0D, 4.0D, 12.0D, 16.0D, 12.0D);
 
-	public final Supplier<Block> strippedForm;
+	public Supplier<Block> strippedForm;
 
 	public SpikedPalisadeBlock(Properties properties) {
 		this(null, properties);
@@ -62,9 +61,12 @@ public class SpikedPalisadeBlock extends CrossCollisionBlock implements SimpleWa
 	@Override
 	public BlockState getToolModifiedState(BlockState state, UseOnContext context, ItemAbility itemAbility, boolean simulate) {
 		if (strippedForm == null) {
-			return null;
+			strippedForm = ()-> {
+				Identifier stripped = BuiltInRegistries.BLOCK.getKey(this).withPrefix("stripped_");
+				return BuiltInRegistries.BLOCK.getValue(stripped);
+			};
 		}
-		if (itemAbility == ItemAbilities.AXE_STRIP) {
+		if (itemAbility == ItemAbilities.AXE_STRIP && !strippedForm.get().equals(Blocks.AIR)) {
 			return strippedForm.get().defaultBlockState()
 					.setValue(NORTH, state.getValue(NORTH))
 					.setValue(EAST, state.getValue(EAST))
