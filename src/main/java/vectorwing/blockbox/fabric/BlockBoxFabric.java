@@ -1,7 +1,7 @@
 package vectorwing.blockbox.fabric;
 
 //? fabric {
-import fuzs.forgeconfigapiport.fabric.api.v5.ConfigRegistry;
+/*import fuzs.forgeconfigapiport.fabric.api.v5.ConfigRegistry;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.fabricmc.fabric.api.event.player.ItemEvents;
@@ -59,4 +59,4 @@ public class BlockBoxFabric implements ModInitializer {
     }
 
 }
-//?}
+*///?}

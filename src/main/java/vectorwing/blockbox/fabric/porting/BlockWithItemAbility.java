@@ -5,6 +5,6 @@ import net.minecraft.world.level.block.state.BlockState;
 
 public interface BlockWithItemAbility {
 	//? fabric
-	BlockState getToolModifiedState(BlockState state, UseOnContext context, ItemAbility itemAbility, boolean simulate);
+	/*BlockState getToolModifiedState(BlockState state, UseOnContext context, ItemAbility itemAbility, boolean simulate);*/
 
 }

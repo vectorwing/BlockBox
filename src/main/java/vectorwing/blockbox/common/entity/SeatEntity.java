@@ -1,8 +1,8 @@
 package vectorwing.blockbox.common.entity;
 
 //? fabric {
-import net.fabricmc.fabric.api.entity.FakePlayer;
-//?}
+/*import net.fabricmc.fabric.api.entity.FakePlayer;
+*///?}
 import net.minecraft.client.renderer.culling.Frustum;
 import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
@@ -20,8 +20,8 @@ import net.minecraft.world.level.storage.ValueInput;
 import net.minecraft.world.level.storage.ValueOutput;
 import net.minecraft.world.phys.Vec3;
 //? neoforge {
-/*import net.neoforged.neoforge.common.util.FakePlayer;
-*///?}
+import net.neoforged.neoforge.common.util.FakePlayer;
+//?}
 import org.jspecify.annotations.NullMarked;
 import vectorwing.blockbox.common.block.SeatBlock;
 import vectorwing.blockbox.common.registry.ModEntityTypes;

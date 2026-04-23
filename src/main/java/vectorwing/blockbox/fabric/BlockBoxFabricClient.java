@@ -1,7 +1,7 @@
 package vectorwing.blockbox.fabric;
 
 //? fabric {
-import net.fabricmc.api.ClientModInitializer;
+/*import net.fabricmc.api.ClientModInitializer;
 import vectorwing.blockbox.BlockBox;
 import vectorwing.blockbox.client.event.ClientSetupEvents;
 import vectorwing.blockbox.fabric.event.client.EntityRenderersEvent;
@@ -17,4 +17,4 @@ public class BlockBoxFabricClient implements ClientModInitializer {
     }
 
 }
-//?}
+*///?}

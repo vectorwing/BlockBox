@@ -12,9 +12,9 @@ public class PortalFrameBlock extends Block
 	}
 
 	//? neoforge {
-	/*@Override
+	@Override
 	public boolean isPortalFrame(BlockState state, BlockGetter level, BlockPos pos) {
 		return true;
 	}
-	*///?}
+	//?}
 }

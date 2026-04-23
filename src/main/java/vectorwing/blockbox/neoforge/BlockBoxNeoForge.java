@@ -1,7 +1,7 @@
 package vectorwing.blockbox.neoforge;
 
 //? neoforge {
-/*import net.minecraft.core.registries.Registries;
+import net.minecraft.core.registries.Registries;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.config.ModConfig;
@@ -42,4 +42,4 @@ public class BlockBoxNeoForge {
     }
 
 }
-*///?}
+//?}

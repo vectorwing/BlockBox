@@ -1,5 +1,5 @@
 //? fabric {
-package vectorwing.blockbox.fabric.porting;
+/*package vectorwing.blockbox.fabric.porting;
 
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.ItemStack;
@@ -24,4 +24,4 @@ public class ItemAbilities {
 		return null;
 	}
 }
-//?}
+*///?}

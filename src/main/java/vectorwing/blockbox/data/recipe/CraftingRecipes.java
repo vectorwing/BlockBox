@@ -1,5 +1,5 @@
 //? neoforge {
-/*package vectorwing.blockbox.data.recipe;
+package vectorwing.blockbox.data.recipe;
 
 import net.minecraft.advancements.criterion.InventoryChangeTrigger;
 import net.minecraft.core.HolderGetter;
@@ -502,4 +502,4 @@ public class CraftingRecipes
 		return ResourceKey.create(Registries.RECIPE, Identifier.fromNamespaceAndPath(BlockBox.MODID, name + "_" + suffix));
 	}
 }
-*///?}
+//?}

@@ -1,5 +1,5 @@
 //? fabric {
-package vectorwing.blockbox.fabric.mixin;
+/*package vectorwing.blockbox.fabric.mixin;
 
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
@@ -21,4 +21,4 @@ public class PortalShapeMixin {
 		return original.call(instance, block) || instance.getBlock() instanceof PortalFrameBlock;
 	}
 }
-//?}
+*///?}

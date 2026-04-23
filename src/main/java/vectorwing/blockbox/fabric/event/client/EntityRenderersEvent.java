@@ -1,5 +1,5 @@
 //? fabric {
-package vectorwing.blockbox.fabric.event.client;
+/*package vectorwing.blockbox.fabric.event.client;
 
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.EntityRenderers;
@@ -16,4 +16,4 @@ public class EntityRenderersEvent {
 		}
 	}
 }
-//?}
+*///?}

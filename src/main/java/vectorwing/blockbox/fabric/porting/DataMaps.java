@@ -1,5 +1,5 @@
 //? fabric {
-package vectorwing.blockbox.fabric.porting;
+/*package vectorwing.blockbox.fabric.porting;
 
 import net.fabricmc.fabric.api.registry.FuelValueEvents;
 import net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry;
@@ -46,4 +46,4 @@ public class DataMaps {
 		OxidizableBlocksRegistry.registerWaxable(unwaxed.get(), waxed.get());
 	}
 }
-//?}
+*///?}

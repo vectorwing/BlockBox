@@ -28,13 +28,13 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 //? neoforge {
-/*import net.neoforged.neoforge.common.ItemAbilities;
+import net.neoforged.neoforge.common.ItemAbilities;
 import net.neoforged.neoforge.common.ItemAbility;
-*///?} else {
+//?} else {
 
-import vectorwing.blockbox.fabric.porting.ItemAbilities;
+/*import vectorwing.blockbox.fabric.porting.ItemAbilities;
 import vectorwing.blockbox.fabric.porting.ItemAbility;
-//?}
+*///?}
 import vectorwing.blockbox.fabric.porting.BlockWithItemAbility;
 import org.jspecify.annotations.Nullable;
 import vectorwing.blockbox.common.tag.ModTags;

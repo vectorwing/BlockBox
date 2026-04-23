@@ -1,5 +1,5 @@
 //? fabric {
-package vectorwing.blockbox.fabric.event.client;
+/*package vectorwing.blockbox.fabric.event.client;
 
 import net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry;
 import net.minecraft.core.particles.ParticleOptions;
@@ -10,4 +10,4 @@ public class RegisterParticleProvidersEvent {
 		ParticleProviderRegistry.getInstance().register(simpleParticleType, provider);
 	}
 }
-//?}
+*///?}

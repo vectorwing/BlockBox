@@ -1,7 +1,7 @@
 package vectorwing.blockbox.common.registry;
 
 //? fabric
-import net.fabricmc.fabric.api.creativetab.v1.FabricCreativeModeTab;
+/*import net.fabricmc.fabric.api.creativetab.v1.FabricCreativeModeTab;*/
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -17,9 +17,9 @@ public class ModCreativeTabs
 
 	public static final Supplier<CreativeModeTab> TAB_BLOCK_BOX = register("example_tab", () ->
 			//? fabric
-			FabricCreativeModeTab.builder()
+			/*FabricCreativeModeTab.builder()*/
 			//? neoforge
-			/*CreativeModeTab.builder()*/
+			CreativeModeTab.builder()
 			.title(Component.translatable("itemGroup." + BlockBox.MODID))
 			.icon(() -> ModItems.CHISELED_GOLD.get().getDefaultInstance())
 			.displayItems((parameters, output) -> ModItems.CREATIVE_TAB_ITEMS.forEach((item) -> {

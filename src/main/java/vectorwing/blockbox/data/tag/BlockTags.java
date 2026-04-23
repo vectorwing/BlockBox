@@ -1,5 +1,5 @@
 //? neoforge {
-/*package vectorwing.blockbox.data.tag;
+package vectorwing.blockbox.data.tag;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -342,4 +342,4 @@ public class BlockTags extends BlockTagsProvider
 		tag(net.minecraft.tags.BlockTags.NEEDS_DIAMOND_TOOL).add(ModBlocks.POLISHED_OBSIDIAN.get());
 	}
 }
-*///?}
+//?}

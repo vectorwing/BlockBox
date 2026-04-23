@@ -1,5 +1,5 @@
 //? neoforge {
-/*package vectorwing.blockbox.data.provider;
+package vectorwing.blockbox.data.provider;
 
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.Identifier;
@@ -22,4 +22,4 @@ public class ParticleTypes extends ParticleDescriptionProvider
 		);
 	}
 }
-*///?}
+//?}

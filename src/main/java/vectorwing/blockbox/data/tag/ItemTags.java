@@ -1,5 +1,5 @@
 //? neoforge {
-/*package vectorwing.blockbox.data.tag;
+package vectorwing.blockbox.data.tag;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -171,4 +171,4 @@ public class ItemTags extends ItemTagsProvider
 		tag(CommonTags.Items.FIRESTARTERS).add(Items.FLINT_AND_STEEL).add(Items.FIRE_CHARGE);
 	}
 }
-*///?}
+//?}

@@ -1,5 +1,5 @@
 //? fabric {
-package vectorwing.blockbox.fabric.event;
+/*package vectorwing.blockbox.fabric.event;
 
 import net.fabricmc.fabric.api.creativetab.v1.FabricCreativeModeTabOutput;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -26,4 +26,4 @@ public class BuildCreativeModeTabContentsEvent {
 		output.insertAfter(anchor, Collections.singleton(newStack), tabVisibility);
 	}
 }
-//?}
+*///?}

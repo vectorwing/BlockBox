@@ -1,5 +1,5 @@
 //? neoforge {
-/*package vectorwing.blockbox.data.model;
+package vectorwing.blockbox.data.model;
 
 import net.minecraft.client.data.models.model.ModelTemplate;
 import net.minecraft.client.data.models.model.ModelTemplates;
@@ -38,4 +38,4 @@ public class ModModelTemplates
 		return ModelTemplates.create(Identifier.fromNamespaceAndPath(BlockBox.MODID, id).toString(), suffix, slots);
 	}
 }
-*///?}
+//?}
