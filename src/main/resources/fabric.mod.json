@@ -9,22 +9,23 @@
     "issues": "https://github.com/vectorwing/BlockBox/issues"
   },
   "description": "A collection of building blocks, furniture and decorations!",
-  "icon": "assets/logo.png",
+  "icon": "icon.png",
   "license": "MIT",
   "environment": "*",
   "accessWidener": "blockbox.accesswidener",
   "entrypoints": {
     "main": [
-      "vectorwing.blockbox.fabric.FabricEntrypoint"
+      "vectorwing.blockbox.fabric.BlockBoxFabric"
     ],
     "client": [
-      "vectorwing.blockbox.fabric.FabricClientEntrypoint"
+      "vectorwing.blockbox.fabric.BlockBoxFabricClient"
     ]
   },
   "mixins": [
-    "blockbox.mixins.json"
+    "blockbox.fabric.mixins.json"
   ],
   "depends": {
-    "fabric-api": "*"
+    "fabric-api": "*",
+    "forgeconfigapiport": "*"
   }
 }

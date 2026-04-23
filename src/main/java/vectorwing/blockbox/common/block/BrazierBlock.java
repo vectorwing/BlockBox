@@ -15,8 +15,6 @@ import net.minecraft.world.level.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SimpleWaterloggedBlock;
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.CampfireBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -34,10 +32,10 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import net.neoforged.neoforge.common.ItemAbility;
 *///?} else {
 
-import vectorwing.blockbox.fabric.ItemAbilities;
-import vectorwing.blockbox.fabric.ItemAbility;
+import vectorwing.blockbox.fabric.porting.ItemAbilities;
+import vectorwing.blockbox.fabric.porting.ItemAbility;
 //?}
-import vectorwing.blockbox.fabric.BlockWithItemAbility;
+import vectorwing.blockbox.fabric.porting.BlockWithItemAbility;
 import org.jspecify.annotations.Nullable;
 import vectorwing.blockbox.common.tag.ModTags;
 

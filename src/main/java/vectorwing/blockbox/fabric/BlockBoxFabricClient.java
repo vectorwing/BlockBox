@@ -7,7 +7,7 @@ import vectorwing.blockbox.client.event.ClientSetupEvents;
 import vectorwing.blockbox.fabric.event.client.EntityRenderersEvent;
 import vectorwing.blockbox.fabric.event.client.RegisterParticleProvidersEvent;
 
-public class FabricClientEntrypoint implements ClientModInitializer {
+public class BlockBoxFabricClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {

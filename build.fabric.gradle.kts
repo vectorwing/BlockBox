@@ -66,6 +66,13 @@ repositories {
             includeGroupAndSubgroups("mezz.jei")
         }
     }
+    maven {
+        name = "Terraformers (Mod Menu)"
+        url = uri("https://maven.terraformersmc.com/releases/")
+        content {
+            includeGroupAndSubgroups("com.terraformersmc")
+        }
+    }
 }
 
 dependencies {
@@ -77,6 +84,8 @@ dependencies {
     compileOnly("mezz.jei:jei-${property("deps.minecraft")}-fabric-api:${property("deps.jei")}")
     // We add the full version to localRuntime, not runtimeOnly, so that we do not publish a dependency on it
     localRuntime("mezz.jei:jei-${property("deps.minecraft")}-fabric:${property("deps.jei")}")
+    compileOnly("com.terraformersmc:modmenu:${property("deps.modmenu")}")
+    runtimeOnly("com.terraformersmc:modmenu:${property("deps.modmenu")}")
 }
 
 tasks {

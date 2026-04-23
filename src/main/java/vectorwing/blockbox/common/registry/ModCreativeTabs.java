@@ -23,7 +23,7 @@ public class ModCreativeTabs
 			.title(Component.translatable("itemGroup." + BlockBox.MODID))
 			.icon(() -> ModItems.CHISELED_GOLD.get().getDefaultInstance())
 			.displayItems((parameters, output) -> ModItems.CREATIVE_TAB_ITEMS.forEach((item) -> {
-//				output.accept(item.get());
+				output.accept(item.get());
 			}))
 			.build());
 

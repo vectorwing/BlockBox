@@ -32,10 +32,10 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import net.neoforged.neoforge.common.ItemAbility;
 *///?} else {
 
-import vectorwing.blockbox.fabric.ItemAbilities;
-import vectorwing.blockbox.fabric.ItemAbility;
+import vectorwing.blockbox.fabric.porting.ItemAbilities;
+import vectorwing.blockbox.fabric.porting.ItemAbility;
 //?}
-import vectorwing.blockbox.fabric.BlockWithItemAbility;
+import vectorwing.blockbox.fabric.porting.BlockWithItemAbility;
 import org.jspecify.annotations.Nullable;
 import vectorwing.blockbox.common.block.state.PalisadeConnection;
 import vectorwing.blockbox.common.registry.ModSounds;

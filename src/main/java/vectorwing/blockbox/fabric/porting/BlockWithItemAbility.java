@@ -1,8 +1,7 @@
-package vectorwing.blockbox.fabric;
+package vectorwing.blockbox.fabric.porting;
 
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 
 public interface BlockWithItemAbility {
 	//? fabric

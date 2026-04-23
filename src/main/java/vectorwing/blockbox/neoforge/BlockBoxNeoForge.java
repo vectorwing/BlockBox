@@ -17,9 +17,9 @@ import vectorwing.blockbox.common.registry.*;
 
 @Mod(BlockBox.MODID)
 @EventBusSubscriber(modid = BlockBox.MODID)
-public class NeoforgeEntrypoint {
+public class BlockBoxNeoForge {
 
-    public NeoforgeEntrypoint(IEventBus eventBus, ModContainer container) {
+    public BlockBoxNeoForge(IEventBus eventBus, ModContainer container) {
         container.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
         RegistryAliases.addRegistryAliases();
     }

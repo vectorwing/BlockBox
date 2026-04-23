@@ -1,17 +1,10 @@
 //? fabric {
-package vectorwing.blockbox.fabric;
+package vectorwing.blockbox.fabric.porting;
 
 import net.minecraft.tags.ItemTags;
-import net.minecraft.tags.TagKey;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import org.jspecify.annotations.Nullable;
 import vectorwing.blockbox.common.tag.CommonTags;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.List;
 
 public class ItemAbilities {
 	public static final ItemAbility AXE_STRIP = new ItemAbility(ItemTags.AXES);

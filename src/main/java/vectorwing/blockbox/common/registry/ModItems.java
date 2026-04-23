@@ -41,9 +41,7 @@ public class ModItems
 	}
 
 	public static Supplier<BlockItem> registerSimpleBlockItem(final String name, final Supplier<Block> supplier) {
-		Supplier<BlockItem> block = registerItem(name, properties -> new BlockItem(supplier.get(), properties.useBlockDescriptionPrefix()));
-		CREATIVE_TAB_ITEMS.add(block);
-		return block;
+		return registerItem(name, properties -> new BlockItem(supplier.get(), properties.useBlockDescriptionPrefix()));
 	}
 
 	public static Supplier<BlockItem> registerSimpleBlockItem(final String name, final Supplier<Block> supplier, final Item vanillaTabNeighbor) {
