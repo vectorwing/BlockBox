@@ -53,6 +53,7 @@ public class FabricEntrypoint implements ModInitializer {
             }
             return null;
         });
+        DataMaps.register();
     }
 
 }
