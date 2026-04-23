@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "${mod_id}",
   "name": "${mod_name}",
-  "version": "${version}",
+  "version": "${mod_version}",
   "authors": ["vectorwing"],
   "contact": {
     "sources": "https://github.com/vectorwing/BlockBox",
