@@ -168,7 +168,6 @@ public class ItemTags extends ItemTagsProvider
 				ModItems.PACKED_ICE_BRICK_WALL.get()
 		);
 		tag(net.minecraft.tags.ItemTags.PIGLIN_LOVED).addTag(ModTags.GOLDEN_BLOCK_ITEMS);
-		tag(CommonTags.Items.FIRESTARTERS).add(Items.FLINT_AND_STEEL).add(Items.FIRE_CHARGE);
 	}
 }
 //?}

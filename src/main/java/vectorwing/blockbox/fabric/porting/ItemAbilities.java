@@ -8,7 +8,7 @@ import vectorwing.blockbox.common.tag.CommonTags;
 
 public class ItemAbilities {
 	public static final ItemAbility AXE_STRIP = new ItemAbility(ItemTags.AXES);
-	public static final ItemAbility FIRESTARTER_LIGHT = new ItemAbility(CommonTags.Items.FIRESTARTERS);
+	public static final ItemAbility FIRESTARTER_LIGHT = new ItemAbility(CommonTags.Items.IGNITERS);
 	public static final ItemAbility SHOVEL_DOUSE = new ItemAbility(ItemTags.SHOVELS);
 
 	public static @Nullable ItemAbility get(ItemStack itemInHand) {
