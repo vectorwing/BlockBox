@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.1.3
+
+### Additions
+- New block/item tag pairs:
+  - `copper_bars`;
+  - `sky_lanterns`;
+
+### Updates
+- Block Box now tags relevant blocks with **Sable** weight tags:
+  - `super_light`: Bars and Sky Lanterns;
+  - `light`: Palisades and Seats;
+
 ## 0.1.2
 
 ### Fixes

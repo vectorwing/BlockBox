@@ -6,7 +6,6 @@ import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.NotNull;
-import vectorwing.blockbox.common.registry.ModBlocks;
 import vectorwing.blockbox.common.registry.ModItems;
 import vectorwing.blockbox.common.tag.ModTags;
 
@@ -70,6 +69,16 @@ public class ItemTags extends ItemTagsProvider
 				ModItems.STRIPPED_SPIKED_CRIMSON_PALISADE.get(),
 				ModItems.STRIPPED_SPIKED_WARPED_PALISADE.get()
 		);
+		tag(ModTags.COPPER_BAR_ITEMS).add(
+				ModItems.COPPER_BARS.get(),
+				ModItems.EXPOSED_COPPER_BARS.get(),
+				ModItems.WEATHERED_COPPER_BARS.get(),
+				ModItems.OXIDIZED_COPPER_BARS.get(),
+				ModItems.WAXED_COPPER_BARS.get(),
+				ModItems.WAXED_EXPOSED_COPPER_BARS.get(),
+				ModItems.WAXED_WEATHERED_COPPER_BARS.get(),
+				ModItems.WAXED_OXIDIZED_COPPER_BARS.get()
+		);
 		tag(ModTags.WOODEN_SEAT_ITEMS).add(
 				ModItems.OAK_SEAT.get(),
 				ModItems.SPRUCE_SEAT.get(),
@@ -94,7 +103,7 @@ public class ItemTags extends ItemTagsProvider
 				ModItems.GOLDEN_TRAPDOOR.get(),
 				ModItems.GOLDEN_BARS.get()
 		);
-		tag(ModTags.SKY_LANTERNS).add(
+		tag(ModTags.SKY_LANTERN_ITEMS).add(
 				ModItems.WHITE_SKY_LANTERN.get(),
 				ModItems.LIGHT_GRAY_SKY_LANTERN.get(),
 				ModItems.GRAY_SKY_LANTERN.get(),

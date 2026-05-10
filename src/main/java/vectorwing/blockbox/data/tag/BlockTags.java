@@ -9,6 +9,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import vectorwing.blockbox.BlockBox;
 import vectorwing.blockbox.common.registry.ModBlocks;
+import vectorwing.blockbox.common.registry.ModItems;
 import vectorwing.blockbox.common.tag.CompatibilityTags;
 import vectorwing.blockbox.common.tag.ModTags;
 
@@ -31,6 +32,13 @@ public class BlockTags extends BlockTagsProvider
 
 	private void registerCompatibilityTags() {
 		tag(CompatibilityTags.FARMERS_DELIGHT_TRAY_HEAT_SOURCES).addTag(ModTags.BRAZIERS);
+		tag(CompatibilityTags.SABLE_SUPER_LIGHT)
+				.addTag(ModTags.COPPER_BARS)
+				.addTag(ModTags.SKY_LANTERNS)
+				.add(ModBlocks.GOLDEN_BARS.get());
+		tag(CompatibilityTags.SABLE_LIGHT)
+				.addTag(ModTags.PALISADES)
+				.addTag(ModTags.WOODEN_SEATS);
 	}
 
 	private void registerMinecraftTags() {
@@ -158,7 +166,6 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.AMETHYST_MOSAIC_STAIRS.get(),
 				ModBlocks.AMETHYST_MOSAIC_SLAB.get()
 		);
-
 		tag(ModTags.IRON_PLATE_BLOCKS).add(
 				ModBlocks.IRON_PLATE.get(),
 				ModBlocks.IRON_TREAD_PLATE.get(),
@@ -171,7 +178,16 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.IRON_PLATE_DOOR.get(),
 				ModBlocks.IRON_PLATE_TRAPDOOR.get()
 		);
-
+		tag(ModTags.COPPER_BARS).add(
+				ModBlocks.COPPER_BARS.get(),
+				ModBlocks.EXPOSED_COPPER_BARS.get(),
+				ModBlocks.WEATHERED_COPPER_BARS.get(),
+				ModBlocks.OXIDIZED_COPPER_BARS.get(),
+				ModBlocks.WAXED_COPPER_BARS.get(),
+				ModBlocks.WAXED_EXPOSED_COPPER_BARS.get(),
+				ModBlocks.WAXED_WEATHERED_COPPER_BARS.get(),
+				ModBlocks.WAXED_OXIDIZED_COPPER_BARS.get()
+		);
 		tag(ModTags.GOLDEN_BLOCKS).add(
 				ModBlocks.CHISELED_GOLD.get(),
 				ModBlocks.GOLDEN_TILES.get(),
@@ -183,10 +199,27 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.GOLDEN_TRAPDOOR.get(),
 				ModBlocks.GOLDEN_BARS.get()
 		);
-
 		tag(ModTags.BRAZIERS).add(
 				ModBlocks.BRAZIER.get(),
 				ModBlocks.SOUL_BRAZIER.get()
+		);
+		tag(ModTags.SKY_LANTERNS).add(
+				ModBlocks.WHITE_SKY_LANTERN.get(),
+				ModBlocks.LIGHT_GRAY_SKY_LANTERN.get(),
+				ModBlocks.GRAY_SKY_LANTERN.get(),
+				ModBlocks.BLACK_SKY_LANTERN.get(),
+				ModBlocks.BROWN_SKY_LANTERN.get(),
+				ModBlocks.RED_SKY_LANTERN.get(),
+				ModBlocks.ORANGE_SKY_LANTERN.get(),
+				ModBlocks.YELLOW_SKY_LANTERN.get(),
+				ModBlocks.LIME_SKY_LANTERN.get(),
+				ModBlocks.GREEN_SKY_LANTERN.get(),
+				ModBlocks.CYAN_SKY_LANTERN.get(),
+				ModBlocks.LIGHT_BLUE_SKY_LANTERN.get(),
+				ModBlocks.BLUE_SKY_LANTERN.get(),
+				ModBlocks.PURPLE_SKY_LANTERN.get(),
+				ModBlocks.MAGENTA_SKY_LANTERN.get(),
+				ModBlocks.PINK_SKY_LANTERN.get()
 		);
 	}
 
