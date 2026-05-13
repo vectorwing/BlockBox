@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.3
+
+### Fixes
+- (26.1+) Fixed Spiked Palisades dealing no damage to entities moving on their spikes;
+
 ## 0.1.2
 
 ### Updates
