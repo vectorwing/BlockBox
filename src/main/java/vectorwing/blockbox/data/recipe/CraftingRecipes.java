@@ -45,22 +45,22 @@ public class CraftingRecipes
 				.define('c', ItemTags.CANDLES)
 				.unlockedBy("has_candle", InventoryChangeTrigger.TriggerInstance.hasItems(Items.CANDLE))
 				.save(output);
-		dyeItem(items, output, ModItems.WHITE_SKY_LANTERN.get(), Items.WHITE_DYE, ModTags.SKY_LANTERNS, Tags.Items.DYES_WHITE);
-		dyeItem(items, output, ModItems.LIGHT_GRAY_SKY_LANTERN.get(), Items.LIGHT_GRAY_DYE, ModTags.SKY_LANTERNS, Tags.Items.DYES_LIGHT_GRAY);
-		dyeItem(items, output, ModItems.GRAY_SKY_LANTERN.get(), Items.GRAY_DYE, ModTags.SKY_LANTERNS, Tags.Items.DYES_GRAY);
-		dyeItem(items, output, ModItems.BLACK_SKY_LANTERN.get(), Items.BLACK_DYE, ModTags.SKY_LANTERNS, Tags.Items.DYES_BLACK);
-		dyeItem(items, output, ModItems.BROWN_SKY_LANTERN.get(), Items.BROWN_DYE, ModTags.SKY_LANTERNS, Tags.Items.DYES_BROWN);
-		dyeItem(items, output, ModItems.RED_SKY_LANTERN.get(), Items.RED_DYE, ModTags.SKY_LANTERNS, Tags.Items.DYES_RED);
-		dyeItem(items, output, ModItems.ORANGE_SKY_LANTERN.get(), Items.ORANGE_DYE, ModTags.SKY_LANTERNS, Tags.Items.DYES_ORANGE);
-		dyeItem(items, output, ModItems.YELLOW_SKY_LANTERN.get(), Items.YELLOW_DYE, ModTags.SKY_LANTERNS, Tags.Items.DYES_YELLOW);
-		dyeItem(items, output, ModItems.LIME_SKY_LANTERN.get(), Items.LIME_DYE, ModTags.SKY_LANTERNS, Tags.Items.DYES_LIME);
-		dyeItem(items, output, ModItems.GREEN_SKY_LANTERN.get(), Items.GREEN_DYE, ModTags.SKY_LANTERNS, Tags.Items.DYES_GREEN);
-		dyeItem(items, output, ModItems.CYAN_SKY_LANTERN.get(), Items.CYAN_DYE, ModTags.SKY_LANTERNS, Tags.Items.DYES_CYAN);
-		dyeItem(items, output, ModItems.LIGHT_BLUE_SKY_LANTERN.get(), Items.LIGHT_BLUE_DYE, ModTags.SKY_LANTERNS, Tags.Items.DYES_LIGHT_BLUE);
-		dyeItem(items, output, ModItems.BLUE_SKY_LANTERN.get(), Items.BLUE_DYE, ModTags.SKY_LANTERNS, Tags.Items.DYES_BLUE);
-		dyeItem(items, output, ModItems.PURPLE_SKY_LANTERN.get(), Items.PURPLE_DYE, ModTags.SKY_LANTERNS, Tags.Items.DYES_PURPLE);
-		dyeItem(items, output, ModItems.MAGENTA_SKY_LANTERN.get(), Items.MAGENTA_DYE, ModTags.SKY_LANTERNS, Tags.Items.DYES_MAGENTA);
-		dyeItem(items, output, ModItems.PINK_SKY_LANTERN.get(), Items.PINK_DYE, ModTags.SKY_LANTERNS, Tags.Items.DYES_PINK);
+		dyeItem(items, output, ModItems.WHITE_SKY_LANTERN.get(), Items.WHITE_DYE, ModTags.SKY_LANTERN_ITEMS, Tags.Items.DYES_WHITE);
+		dyeItem(items, output, ModItems.LIGHT_GRAY_SKY_LANTERN.get(), Items.LIGHT_GRAY_DYE, ModTags.SKY_LANTERN_ITEMS, Tags.Items.DYES_LIGHT_GRAY);
+		dyeItem(items, output, ModItems.GRAY_SKY_LANTERN.get(), Items.GRAY_DYE, ModTags.SKY_LANTERN_ITEMS, Tags.Items.DYES_GRAY);
+		dyeItem(items, output, ModItems.BLACK_SKY_LANTERN.get(), Items.BLACK_DYE, ModTags.SKY_LANTERN_ITEMS, Tags.Items.DYES_BLACK);
+		dyeItem(items, output, ModItems.BROWN_SKY_LANTERN.get(), Items.BROWN_DYE, ModTags.SKY_LANTERN_ITEMS, Tags.Items.DYES_BROWN);
+		dyeItem(items, output, ModItems.RED_SKY_LANTERN.get(), Items.RED_DYE, ModTags.SKY_LANTERN_ITEMS, Tags.Items.DYES_RED);
+		dyeItem(items, output, ModItems.ORANGE_SKY_LANTERN.get(), Items.ORANGE_DYE, ModTags.SKY_LANTERN_ITEMS, Tags.Items.DYES_ORANGE);
+		dyeItem(items, output, ModItems.YELLOW_SKY_LANTERN.get(), Items.YELLOW_DYE, ModTags.SKY_LANTERN_ITEMS, Tags.Items.DYES_YELLOW);
+		dyeItem(items, output, ModItems.LIME_SKY_LANTERN.get(), Items.LIME_DYE, ModTags.SKY_LANTERN_ITEMS, Tags.Items.DYES_LIME);
+		dyeItem(items, output, ModItems.GREEN_SKY_LANTERN.get(), Items.GREEN_DYE, ModTags.SKY_LANTERN_ITEMS, Tags.Items.DYES_GREEN);
+		dyeItem(items, output, ModItems.CYAN_SKY_LANTERN.get(), Items.CYAN_DYE, ModTags.SKY_LANTERN_ITEMS, Tags.Items.DYES_CYAN);
+		dyeItem(items, output, ModItems.LIGHT_BLUE_SKY_LANTERN.get(), Items.LIGHT_BLUE_DYE, ModTags.SKY_LANTERN_ITEMS, Tags.Items.DYES_LIGHT_BLUE);
+		dyeItem(items, output, ModItems.BLUE_SKY_LANTERN.get(), Items.BLUE_DYE, ModTags.SKY_LANTERN_ITEMS, Tags.Items.DYES_BLUE);
+		dyeItem(items, output, ModItems.PURPLE_SKY_LANTERN.get(), Items.PURPLE_DYE, ModTags.SKY_LANTERN_ITEMS, Tags.Items.DYES_PURPLE);
+		dyeItem(items, output, ModItems.MAGENTA_SKY_LANTERN.get(), Items.MAGENTA_DYE, ModTags.SKY_LANTERN_ITEMS, Tags.Items.DYES_MAGENTA);
+		dyeItem(items, output, ModItems.PINK_SKY_LANTERN.get(), Items.PINK_DYE, ModTags.SKY_LANTERN_ITEMS, Tags.Items.DYES_PINK);
 	}
 
 	private static void craftFurniture(HolderGetter<Item> items, RecipeOutput output) {
