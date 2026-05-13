@@ -11,6 +11,7 @@
 - Block Box now tags relevant blocks with **Sable** weight tags:
   - `super_light`: Bars and Sky Lanterns;
   - `light`: Palisades and Seats;
+- Updated Lapis Lazuli Bricks texture, to alleviate a vertical seam when tiled with itself;
 
 ## 0.1.2
 
