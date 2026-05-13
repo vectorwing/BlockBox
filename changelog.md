@@ -12,6 +12,7 @@
   - `super_light`: Bars and Sky Lanterns;
   - `light`: Palisades and Seats;
 - Updated Lapis Lazuli Bricks texture, to alleviate a vertical seam when tiled with itself;
+- Updated Stripped Palisade textures across the board, to make the edges of each timber more defined;
 
 ## 0.1.2
 
