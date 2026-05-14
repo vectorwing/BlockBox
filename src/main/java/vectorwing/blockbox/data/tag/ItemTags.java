@@ -38,6 +38,7 @@ public class ItemTags extends ItemTagsProvider
 				ModItems.DARK_OAK_PALISADE.get(),
 				ModItems.MANGROVE_PALISADE.get(),
 				ModItems.CHERRY_PALISADE.get(),
+				ModItems.PALE_OAK_PALISADE.get(),
 				ModItems.CRIMSON_PALISADE.get(),
 				ModItems.WARPED_PALISADE.get(),
 				ModItems.STRIPPED_OAK_PALISADE.get(),
@@ -48,6 +49,7 @@ public class ItemTags extends ItemTagsProvider
 				ModItems.STRIPPED_DARK_OAK_PALISADE.get(),
 				ModItems.STRIPPED_MANGROVE_PALISADE.get(),
 				ModItems.STRIPPED_CHERRY_PALISADE.get(),
+				ModItems.STRIPPED_PALE_OAK_PALISADE.get(),
 				ModItems.STRIPPED_CRIMSON_PALISADE.get(),
 				ModItems.STRIPPED_WARPED_PALISADE.get()
 		);
@@ -60,6 +62,7 @@ public class ItemTags extends ItemTagsProvider
 				ModItems.SPIKED_DARK_OAK_PALISADE.get(),
 				ModItems.SPIKED_MANGROVE_PALISADE.get(),
 				ModItems.SPIKED_CHERRY_PALISADE.get(),
+				ModItems.SPIKED_PALE_OAK_PALISADE.get(),
 				ModItems.SPIKED_CRIMSON_PALISADE.get(),
 				ModItems.SPIKED_WARPED_PALISADE.get(),
 				ModItems.STRIPPED_SPIKED_OAK_PALISADE.get(),
@@ -70,6 +73,7 @@ public class ItemTags extends ItemTagsProvider
 				ModItems.STRIPPED_SPIKED_DARK_OAK_PALISADE.get(),
 				ModItems.STRIPPED_SPIKED_MANGROVE_PALISADE.get(),
 				ModItems.STRIPPED_SPIKED_CHERRY_PALISADE.get(),
+				ModItems.STRIPPED_SPIKED_PALE_OAK_PALISADE.get(),
 				ModItems.STRIPPED_SPIKED_CRIMSON_PALISADE.get(),
 				ModItems.STRIPPED_SPIKED_WARPED_PALISADE.get()
 		);
@@ -92,6 +96,7 @@ public class ItemTags extends ItemTagsProvider
 				ModItems.DARK_OAK_SEAT.get(),
 				ModItems.MANGROVE_SEAT.get(),
 				ModItems.CHERRY_SEAT.get(),
+				ModItems.PALE_OAK_SEAT.get(),
 				ModItems.BAMBOO_SEAT.get(),
 				ModItems.CRIMSON_SEAT.get(),
 				ModItems.WARPED_SEAT.get()

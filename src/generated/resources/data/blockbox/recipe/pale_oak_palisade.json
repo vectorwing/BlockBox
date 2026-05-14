@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "bb_palisades",
+  "key": {
+    "#": "minecraft:pale_oak_log"
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 12,
+    "id": "blockbox:pale_oak_palisade"
+  }
+}

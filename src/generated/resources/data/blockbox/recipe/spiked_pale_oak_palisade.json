@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "bb_spiked_palisades",
+  "ingredients": [
+    "blockbox:pale_oak_palisade"
+  ],
+  "result": {
+    "id": "blockbox:spiked_pale_oak_palisade"
+  }
+}

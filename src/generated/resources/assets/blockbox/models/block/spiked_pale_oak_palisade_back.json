@@ -1,0 +1,8 @@
+{
+  "parent": "blockbox:block/template_spiked_palisade_back",
+  "textures": {
+    "core": "blockbox:block/pale_oak_palisade_core",
+    "side": "blockbox:block/pale_oak_palisade_side",
+    "top": "blockbox:block/pale_oak_palisade_top"
+  }
+}

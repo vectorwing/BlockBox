@@ -28,7 +28,7 @@ public class ModBlocks
 	public static final BlockBehaviour.Properties PROPERTIES_PACKED_ICE = BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_ICE).strength(0.4F).requiresCorrectToolForDrops();
 	public static final BlockBehaviour.Properties PROPERTIES_IRON_PLATE = BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).strength(4.0F, 6.0F).sound(SoundType.NETHERITE_BLOCK);
 	public static final BlockBehaviour.Properties PROPERTIES_PALISADE = BlockBehaviour.Properties.of().strength(2.0F).instrument(NoteBlockInstrument.BASS).sound(SoundType.WOOD).ignitedByLava();
-	public static final BlockBehaviour.Properties PROPERTIES_SKY_LANTERN = BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.GUITAR).noOcclusion().lightLevel((state) -> 15).ignitedByLava().sound(SoundType.WOOL);
+	public static final BlockBehaviour.Properties PROPERTIES_SKY_LANTERN = BlockBehaviour.Properties.of().strength(0.2F).instrument(NoteBlockInstrument.GUITAR).noOcclusion().lightLevel((state) -> 15).ignitedByLava().sound(SoundType.WOOL);
 
 	public static final Supplier<Block> GRANITE_BRICKS = registerSimpleBlock("granite_bricks", () -> BlockBehaviour.Properties.ofFullCopy(Blocks.GRANITE));
 	public static final Supplier<Block> GRANITE_BRICK_STAIRS = registerBlock("granite_brick_stairs", props -> stair(ModBlocks.GRANITE_BRICKS.get(), props), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.GRANITE));
@@ -140,9 +140,11 @@ public class ModBlocks
 	public static final Supplier<Block> DARK_OAK_SEAT = registerBlock("dark_oak_seat", SeatBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_PLANKS));
 	public static final Supplier<Block> MANGROVE_SEAT = registerBlock("mangrove_seat", SeatBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.MANGROVE_PLANKS));
 	public static final Supplier<Block> CHERRY_SEAT = registerBlock("cherry_seat", SeatBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_PLANKS));
+	public static final Supplier<Block> PALE_OAK_SEAT = registerBlock("pale_oak_seat", SeatBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.PALE_OAK_PLANKS));
 	public static final Supplier<Block> BAMBOO_SEAT = registerBlock("bamboo_seat", SeatBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_PLANKS));
 	public static final Supplier<Block> CRIMSON_SEAT = registerBlock("crimson_seat", SeatBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.CRIMSON_PLANKS));
 	public static final Supplier<Block> WARPED_SEAT = registerBlock("warped_seat", SeatBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS));
+
 	public static final Supplier<Block> OAK_PALISADE = registerBlock("oak_palisade", props -> palisade(ModBlocks.SPIKED_OAK_PALISADE, ModBlocks.STRIPPED_OAK_PALISADE, MapColor.WOOD, props), () -> PROPERTIES_PALISADE);
 	public static final Supplier<Block> SPIKED_OAK_PALISADE = registerBlock("spiked_oak_palisade", props -> spikedPalisade(ModBlocks.STRIPPED_SPIKED_OAK_PALISADE, MapColor.WOOD, props), () -> PROPERTIES_PALISADE);
 	public static final Supplier<Block> SPRUCE_PALISADE = registerBlock("spruce_palisade", props -> palisade(ModBlocks.SPIKED_SPRUCE_PALISADE, ModBlocks.STRIPPED_SPRUCE_PALISADE, MapColor.PODZOL, props), () -> PROPERTIES_PALISADE);
@@ -159,6 +161,8 @@ public class ModBlocks
 	public static final Supplier<Block> SPIKED_MANGROVE_PALISADE = registerBlock("spiked_mangrove_palisade", props -> spikedPalisade(ModBlocks.STRIPPED_SPIKED_MANGROVE_PALISADE, MapColor.COLOR_RED, props), () -> PROPERTIES_PALISADE);
 	public static final Supplier<Block> CHERRY_PALISADE = registerBlock("cherry_palisade", props -> palisade(ModBlocks.SPIKED_CHERRY_PALISADE, ModBlocks.STRIPPED_CHERRY_PALISADE, MapColor.TERRACOTTA_WHITE, SoundType.CHERRY_WOOD, props), () -> PROPERTIES_PALISADE);
 	public static final Supplier<Block> SPIKED_CHERRY_PALISADE = registerBlock("spiked_cherry_palisade", props -> spikedPalisade(ModBlocks.STRIPPED_SPIKED_CHERRY_PALISADE, MapColor.TERRACOTTA_WHITE, SoundType.CHERRY_WOOD, props), () -> PROPERTIES_PALISADE);
+	public static final Supplier<Block> PALE_OAK_PALISADE = registerBlock("pale_oak_palisade", props -> palisade(ModBlocks.SPIKED_PALE_OAK_PALISADE, ModBlocks.STRIPPED_PALE_OAK_PALISADE, MapColor.TERRACOTTA_WHITE, props), () -> PROPERTIES_PALISADE);
+	public static final Supplier<Block> SPIKED_PALE_OAK_PALISADE = registerBlock("spiked_pale_oak_palisade", props -> spikedPalisade(ModBlocks.STRIPPED_SPIKED_PALE_OAK_PALISADE, MapColor.TERRACOTTA_WHITE, props), () -> PROPERTIES_PALISADE);
 	public static final Supplier<Block> CRIMSON_PALISADE = registerBlock("crimson_palisade", props -> netherPalisade(ModBlocks.SPIKED_CRIMSON_PALISADE, ModBlocks.STRIPPED_CRIMSON_PALISADE, MapColor.CRIMSON_STEM, props), () -> PROPERTIES_PALISADE);
 	public static final Supplier<Block> SPIKED_CRIMSON_PALISADE = registerBlock("spiked_crimson_palisade", props -> netherSpikedPalisade(ModBlocks.STRIPPED_SPIKED_CRIMSON_PALISADE, MapColor.CRIMSON_STEM, props), () -> PROPERTIES_PALISADE);
 	public static final Supplier<Block> WARPED_PALISADE = registerBlock("warped_palisade", props -> netherPalisade(ModBlocks.SPIKED_WARPED_PALISADE, ModBlocks.STRIPPED_WARPED_PALISADE, MapColor.WARPED_STEM, props), () -> PROPERTIES_PALISADE);
@@ -180,6 +184,8 @@ public class ModBlocks
 	public static final Supplier<Block> STRIPPED_SPIKED_MANGROVE_PALISADE = registerBlock("stripped_spiked_mangrove_palisade", props -> spikedPalisade(null, MapColor.COLOR_RED, props), () -> PROPERTIES_PALISADE);
 	public static final Supplier<Block> STRIPPED_CHERRY_PALISADE = registerBlock("stripped_cherry_palisade", props -> palisade(ModBlocks.STRIPPED_SPIKED_CHERRY_PALISADE, null, MapColor.TERRACOTTA_WHITE, SoundType.CHERRY_WOOD, props), () -> PROPERTIES_PALISADE);
 	public static final Supplier<Block> STRIPPED_SPIKED_CHERRY_PALISADE = registerBlock("stripped_spiked_cherry_palisade", props -> spikedPalisade(null, MapColor.TERRACOTTA_WHITE, SoundType.CHERRY_WOOD, props), () -> PROPERTIES_PALISADE);
+	public static final Supplier<Block> STRIPPED_PALE_OAK_PALISADE = registerBlock("stripped_pale_oak_palisade", props -> palisade(ModBlocks.STRIPPED_SPIKED_PALE_OAK_PALISADE, null, MapColor.WOOD, props), () -> PROPERTIES_PALISADE);
+	public static final Supplier<Block> STRIPPED_SPIKED_PALE_OAK_PALISADE = registerBlock("stripped_spiked_pale_oak_palisade", props -> spikedPalisade(null, MapColor.WOOD, props), () -> PROPERTIES_PALISADE);
 	public static final Supplier<Block> STRIPPED_CRIMSON_PALISADE = registerBlock("stripped_crimson_palisade", props -> netherPalisade(ModBlocks.STRIPPED_SPIKED_CRIMSON_PALISADE, null, MapColor.CRIMSON_STEM, props), () -> PROPERTIES_PALISADE);
 	public static final Supplier<Block> STRIPPED_SPIKED_CRIMSON_PALISADE = registerBlock("stripped_spiked_crimson_palisade", props -> netherSpikedPalisade(null, MapColor.CRIMSON_STEM, props), () -> PROPERTIES_PALISADE);
 	public static final Supplier<Block> STRIPPED_WARPED_PALISADE = registerBlock("stripped_warped_palisade", props -> netherPalisade(ModBlocks.STRIPPED_SPIKED_WARPED_PALISADE, null, MapColor.WARPED_STEM, props), () -> PROPERTIES_PALISADE);

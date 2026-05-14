@@ -18,6 +18,7 @@ public class CompatibilityTags
 	public static final String SABLE = "sable";
 	public static final TagKey<Block> SABLE_SUPER_LIGHT = externalBlockTag(SABLE, "super_light");
 	public static final TagKey<Block> SABLE_LIGHT = externalBlockTag(SABLE, "light");
+	public static final TagKey<Block> SABLE_SLIPPERY = externalBlockTag(SABLE, "slippery");
 
 	private static TagKey<Block> externalBlockTag(String modId, String path) {
 		return TagKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(modId, path));

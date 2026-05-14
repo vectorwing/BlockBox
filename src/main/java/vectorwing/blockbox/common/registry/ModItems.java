@@ -154,6 +154,7 @@ public class ModItems
 	public static final Supplier<BlockItem> DARK_OAK_SEAT = registerSimpleBlockItem("dark_oak_seat", ModBlocks.DARK_OAK_SEAT);
 	public static final Supplier<BlockItem> MANGROVE_SEAT = registerSimpleBlockItem("mangrove_seat", ModBlocks.MANGROVE_SEAT);
 	public static final Supplier<BlockItem> CHERRY_SEAT = registerSimpleBlockItem("cherry_seat", ModBlocks.CHERRY_SEAT);
+	public static final Supplier<BlockItem> PALE_OAK_SEAT = registerSimpleBlockItem("pale_oak_seat", ModBlocks.PALE_OAK_SEAT);
 	public static final Supplier<BlockItem> BAMBOO_SEAT = registerSimpleBlockItem("bamboo_seat", ModBlocks.BAMBOO_SEAT);
 	public static final Supplier<BlockItem> CRIMSON_SEAT = registerSimpleBlockItem("crimson_seat", ModBlocks.CRIMSON_SEAT);
 	public static final Supplier<BlockItem> WARPED_SEAT = registerSimpleBlockItem("warped_seat", ModBlocks.WARPED_SEAT);
@@ -174,6 +175,8 @@ public class ModItems
 	public static final Supplier<BlockItem> SPIKED_MANGROVE_PALISADE = registerSimpleBlockItem("spiked_mangrove_palisade", ModBlocks.SPIKED_MANGROVE_PALISADE, Items.MANGROVE_BUTTON);
 	public static final Supplier<BlockItem> CHERRY_PALISADE = registerSimpleBlockItem("cherry_palisade", ModBlocks.CHERRY_PALISADE, Items.CHERRY_BUTTON);
 	public static final Supplier<BlockItem> SPIKED_CHERRY_PALISADE = registerSimpleBlockItem("spiked_cherry_palisade", ModBlocks.SPIKED_CHERRY_PALISADE, Items.CHERRY_BUTTON);
+	public static final Supplier<BlockItem> PALE_OAK_PALISADE = registerSimpleBlockItem("pale_oak_palisade", ModBlocks.PALE_OAK_PALISADE, Items.PALE_OAK_BUTTON);
+	public static final Supplier<BlockItem> SPIKED_PALE_OAK_PALISADE = registerSimpleBlockItem("spiked_pale_oak_palisade", ModBlocks.SPIKED_PALE_OAK_PALISADE, Items.PALE_OAK_BUTTON);
 	public static final Supplier<BlockItem> CRIMSON_PALISADE = registerSimpleBlockItem("crimson_palisade", ModBlocks.CRIMSON_PALISADE, Items.CRIMSON_BUTTON);
 	public static final Supplier<BlockItem> SPIKED_CRIMSON_PALISADE = registerSimpleBlockItem("spiked_crimson_palisade", ModBlocks.SPIKED_CRIMSON_PALISADE, Items.CRIMSON_BUTTON);
 	public static final Supplier<BlockItem> WARPED_PALISADE = registerSimpleBlockItem("warped_palisade", ModBlocks.WARPED_PALISADE, Items.WARPED_BUTTON);
@@ -195,6 +198,8 @@ public class ModItems
 	public static final Supplier<BlockItem> STRIPPED_SPIKED_MANGROVE_PALISADE = registerSimpleBlockItem("stripped_spiked_mangrove_palisade", ModBlocks.STRIPPED_SPIKED_MANGROVE_PALISADE, Items.MANGROVE_BUTTON);
 	public static final Supplier<BlockItem> STRIPPED_CHERRY_PALISADE = registerSimpleBlockItem("stripped_cherry_palisade", ModBlocks.STRIPPED_CHERRY_PALISADE, Items.CHERRY_BUTTON);
 	public static final Supplier<BlockItem> STRIPPED_SPIKED_CHERRY_PALISADE = registerSimpleBlockItem("stripped_spiked_cherry_palisade", ModBlocks.STRIPPED_SPIKED_CHERRY_PALISADE, Items.CHERRY_BUTTON);
+	public static final Supplier<BlockItem> STRIPPED_PALE_OAK_PALISADE = registerSimpleBlockItem("stripped_pale_oak_palisade", ModBlocks.STRIPPED_PALE_OAK_PALISADE, Items.PALE_OAK_BUTTON);
+	public static final Supplier<BlockItem> STRIPPED_SPIKED_PALE_OAK_PALISADE = registerSimpleBlockItem("stripped_spiked_pale_oak_palisade", ModBlocks.STRIPPED_SPIKED_PALE_OAK_PALISADE, Items.PALE_OAK_BUTTON);
 	public static final Supplier<BlockItem> STRIPPED_CRIMSON_PALISADE = registerSimpleBlockItem("stripped_crimson_palisade", ModBlocks.STRIPPED_CRIMSON_PALISADE, Items.CRIMSON_BUTTON);
 	public static final Supplier<BlockItem> STRIPPED_SPIKED_CRIMSON_PALISADE = registerSimpleBlockItem("stripped_spiked_crimson_palisade", ModBlocks.STRIPPED_SPIKED_CRIMSON_PALISADE, Items.CRIMSON_BUTTON);
 	public static final Supplier<BlockItem> STRIPPED_WARPED_PALISADE = registerSimpleBlockItem("stripped_warped_palisade", ModBlocks.STRIPPED_WARPED_PALISADE, Items.WARPED_BUTTON);

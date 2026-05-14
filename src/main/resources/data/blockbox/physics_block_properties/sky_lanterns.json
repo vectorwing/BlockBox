@@ -1,0 +1,7 @@
+{
+  "selector": "#blockbox:sky_lanterns",
+
+  "properties": {
+    "sable:floating_material": "blockbox:sky_lantern"
+  }
+}
