@@ -3,6 +3,7 @@
 ## 0.1.3
 
 ### Additions
+- (26.1+) New blocks: Pale Oak Palisade and Pale Oak Seat;
 - New block/item tag pairs:
   - `copper_bars`;
   - `sky_lanterns`;

@@ -107,6 +107,7 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.DARK_OAK_PALISADE.get(),
 				ModBlocks.MANGROVE_PALISADE.get(),
 				ModBlocks.CHERRY_PALISADE.get(),
+				ModBlocks.PALE_OAK_PALISADE.get(),
 				ModBlocks.CRIMSON_PALISADE.get(),
 				ModBlocks.WARPED_PALISADE.get(),
 				ModBlocks.STRIPPED_OAK_PALISADE.get(),
@@ -117,6 +118,7 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.STRIPPED_DARK_OAK_PALISADE.get(),
 				ModBlocks.STRIPPED_MANGROVE_PALISADE.get(),
 				ModBlocks.STRIPPED_CHERRY_PALISADE.get(),
+				ModBlocks.STRIPPED_PALE_OAK_PALISADE.get(),
 				ModBlocks.STRIPPED_CRIMSON_PALISADE.get(),
 				ModBlocks.STRIPPED_WARPED_PALISADE.get()
 		);
@@ -129,6 +131,7 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.SPIKED_DARK_OAK_PALISADE.get(),
 				ModBlocks.SPIKED_MANGROVE_PALISADE.get(),
 				ModBlocks.SPIKED_CHERRY_PALISADE.get(),
+				ModBlocks.SPIKED_PALE_OAK_PALISADE.get(),
 				ModBlocks.SPIKED_CRIMSON_PALISADE.get(),
 				ModBlocks.SPIKED_WARPED_PALISADE.get(),
 				ModBlocks.STRIPPED_SPIKED_OAK_PALISADE.get(),
@@ -139,6 +142,7 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.STRIPPED_SPIKED_DARK_OAK_PALISADE.get(),
 				ModBlocks.STRIPPED_SPIKED_MANGROVE_PALISADE.get(),
 				ModBlocks.STRIPPED_SPIKED_CHERRY_PALISADE.get(),
+				ModBlocks.STRIPPED_SPIKED_PALE_OAK_PALISADE.get(),
 				ModBlocks.STRIPPED_SPIKED_CRIMSON_PALISADE.get(),
 				ModBlocks.STRIPPED_SPIKED_WARPED_PALISADE.get()
 		);
@@ -151,6 +155,7 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.DARK_OAK_SEAT.get(),
 				ModBlocks.MANGROVE_SEAT.get(),
 				ModBlocks.CHERRY_SEAT.get(),
+				ModBlocks.PALE_OAK_SEAT.get(),
 				ModBlocks.BAMBOO_SEAT.get(),
 				ModBlocks.CRIMSON_SEAT.get(),
 				ModBlocks.WARPED_SEAT.get()

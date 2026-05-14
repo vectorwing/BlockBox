@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "bb_chairs",
+  "key": {
+    "#": "minecraft:pale_oak_planks",
+    "/": "minecraft:stick"
+  },
+  "pattern": [
+    "###",
+    "/ /"
+  ],
+  "result": {
+    "id": "blockbox:pale_oak_seat"
+  }
+}

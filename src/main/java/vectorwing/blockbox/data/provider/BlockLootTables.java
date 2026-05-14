@@ -43,6 +43,8 @@ public class BlockLootTables extends BlockLootSubProvider
 		dropSelf(ModBlocks.SPIKED_MANGROVE_PALISADE.get());
 		dropSelf(ModBlocks.CHERRY_PALISADE.get());
 		dropSelf(ModBlocks.SPIKED_CHERRY_PALISADE.get());
+		dropSelf(ModBlocks.PALE_OAK_PALISADE.get());
+		dropSelf(ModBlocks.SPIKED_PALE_OAK_PALISADE.get());
 		dropSelf(ModBlocks.CRIMSON_PALISADE.get());
 		dropSelf(ModBlocks.SPIKED_CRIMSON_PALISADE.get());
 		dropSelf(ModBlocks.WARPED_PALISADE.get());
@@ -64,6 +66,8 @@ public class BlockLootTables extends BlockLootSubProvider
 		dropSelf(ModBlocks.STRIPPED_SPIKED_MANGROVE_PALISADE.get());
 		dropSelf(ModBlocks.STRIPPED_CHERRY_PALISADE.get());
 		dropSelf(ModBlocks.STRIPPED_SPIKED_CHERRY_PALISADE.get());
+		dropSelf(ModBlocks.STRIPPED_PALE_OAK_PALISADE.get());
+		dropSelf(ModBlocks.STRIPPED_SPIKED_PALE_OAK_PALISADE.get());
 		dropSelf(ModBlocks.STRIPPED_CRIMSON_PALISADE.get());
 		dropSelf(ModBlocks.STRIPPED_SPIKED_CRIMSON_PALISADE.get());
 		dropSelf(ModBlocks.STRIPPED_WARPED_PALISADE.get());
@@ -140,6 +144,7 @@ public class BlockLootTables extends BlockLootSubProvider
 		dropSelf(ModBlocks.DARK_OAK_SEAT.get());
 		dropSelf(ModBlocks.MANGROVE_SEAT.get());
 		dropSelf(ModBlocks.CHERRY_SEAT.get());
+		dropSelf(ModBlocks.PALE_OAK_SEAT.get());
 		dropSelf(ModBlocks.BAMBOO_SEAT.get());
 		dropSelf(ModBlocks.CRIMSON_SEAT.get());
 		dropSelf(ModBlocks.WARPED_SEAT.get());

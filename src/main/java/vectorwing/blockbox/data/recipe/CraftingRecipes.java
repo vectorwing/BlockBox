@@ -100,6 +100,7 @@ public class CraftingRecipes
 		chair(items, output, ModBlocks.DARK_OAK_SEAT.get(), Blocks.DARK_OAK_PLANKS);
 		chair(items, output, ModBlocks.MANGROVE_SEAT.get(), Blocks.MANGROVE_PLANKS);
 		chair(items, output, ModBlocks.CHERRY_SEAT.get(), Blocks.CHERRY_PLANKS);
+		chair(items, output, ModBlocks.PALE_OAK_SEAT.get(), Blocks.PALE_OAK_PLANKS);
 		chair(items, output, ModBlocks.BAMBOO_SEAT.get(), Blocks.BAMBOO_PLANKS);
 		chair(items, output, ModBlocks.CRIMSON_SEAT.get(), Blocks.CRIMSON_PLANKS);
 		chair(items, output, ModBlocks.WARPED_SEAT.get(), Blocks.WARPED_PLANKS);
@@ -114,6 +115,7 @@ public class CraftingRecipes
 		palisade(items, output, ModBlocks.DARK_OAK_PALISADE.get(), ModBlocks.SPIKED_DARK_OAK_PALISADE.get(), Blocks.DARK_OAK_LOG);
 		palisade(items, output, ModBlocks.MANGROVE_PALISADE.get(), ModBlocks.SPIKED_MANGROVE_PALISADE.get(), Blocks.MANGROVE_LOG);
 		palisade(items, output, ModBlocks.CHERRY_PALISADE.get(), ModBlocks.SPIKED_CHERRY_PALISADE.get(), Blocks.CHERRY_LOG);
+		palisade(items, output, ModBlocks.PALE_OAK_PALISADE.get(), ModBlocks.SPIKED_PALE_OAK_PALISADE.get(), Blocks.PALE_OAK_LOG);
 		palisade(items, output, ModBlocks.CRIMSON_PALISADE.get(), ModBlocks.SPIKED_CRIMSON_PALISADE.get(), Blocks.CRIMSON_STEM);
 		palisade(items, output, ModBlocks.WARPED_PALISADE.get(), ModBlocks.SPIKED_WARPED_PALISADE.get(), Blocks.WARPED_STEM);
 
@@ -125,6 +127,7 @@ public class CraftingRecipes
 		palisade(items, output, ModBlocks.STRIPPED_DARK_OAK_PALISADE.get(), ModBlocks.STRIPPED_SPIKED_DARK_OAK_PALISADE.get(), Blocks.STRIPPED_DARK_OAK_LOG);
 		palisade(items, output, ModBlocks.STRIPPED_MANGROVE_PALISADE.get(), ModBlocks.STRIPPED_SPIKED_MANGROVE_PALISADE.get(), Blocks.STRIPPED_MANGROVE_LOG);
 		palisade(items, output, ModBlocks.STRIPPED_CHERRY_PALISADE.get(), ModBlocks.STRIPPED_SPIKED_CHERRY_PALISADE.get(), Blocks.STRIPPED_CHERRY_LOG);
+		palisade(items, output, ModBlocks.STRIPPED_PALE_OAK_PALISADE.get(), ModBlocks.STRIPPED_SPIKED_PALE_OAK_PALISADE.get(), Blocks.STRIPPED_PALE_OAK_LOG);
 		palisade(items, output, ModBlocks.STRIPPED_CRIMSON_PALISADE.get(), ModBlocks.STRIPPED_SPIKED_CRIMSON_PALISADE.get(), Blocks.STRIPPED_CRIMSON_STEM);
 		palisade(items, output, ModBlocks.STRIPPED_WARPED_PALISADE.get(), ModBlocks.STRIPPED_SPIKED_WARPED_PALISADE.get(), Blocks.STRIPPED_WARPED_STEM);
 	}

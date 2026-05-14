@@ -91,6 +91,7 @@ public class ModBlockModelGenerators extends BlockModelGenerators
 		createPalisadeAndSpikedPalisade(ModBlocks.DARK_OAK_PALISADE.get(), ModBlocks.SPIKED_DARK_OAK_PALISADE.get());
 		createPalisadeAndSpikedPalisade(ModBlocks.MANGROVE_PALISADE.get(), ModBlocks.SPIKED_MANGROVE_PALISADE.get());
 		createPalisadeAndSpikedPalisade(ModBlocks.CHERRY_PALISADE.get(), ModBlocks.SPIKED_CHERRY_PALISADE.get());
+		createPalisadeAndSpikedPalisade(ModBlocks.PALE_OAK_PALISADE.get(), ModBlocks.SPIKED_PALE_OAK_PALISADE.get());
 		createPalisadeAndSpikedPalisade(ModBlocks.CRIMSON_PALISADE.get(), ModBlocks.SPIKED_CRIMSON_PALISADE.get());
 		createPalisadeAndSpikedPalisade(ModBlocks.WARPED_PALISADE.get(), ModBlocks.SPIKED_WARPED_PALISADE.get());
 		createPalisadeAndSpikedPalisade(ModBlocks.STRIPPED_OAK_PALISADE.get(), ModBlocks.STRIPPED_SPIKED_OAK_PALISADE.get());
@@ -101,6 +102,7 @@ public class ModBlockModelGenerators extends BlockModelGenerators
 		createPalisadeAndSpikedPalisade(ModBlocks.STRIPPED_DARK_OAK_PALISADE.get(), ModBlocks.STRIPPED_SPIKED_DARK_OAK_PALISADE.get());
 		createPalisadeAndSpikedPalisade(ModBlocks.STRIPPED_MANGROVE_PALISADE.get(), ModBlocks.STRIPPED_SPIKED_MANGROVE_PALISADE.get());
 		createPalisadeAndSpikedPalisade(ModBlocks.STRIPPED_CHERRY_PALISADE.get(), ModBlocks.STRIPPED_SPIKED_CHERRY_PALISADE.get());
+		createPalisadeAndSpikedPalisade(ModBlocks.STRIPPED_PALE_OAK_PALISADE.get(), ModBlocks.STRIPPED_SPIKED_PALE_OAK_PALISADE.get());
 		createPalisadeAndSpikedPalisade(ModBlocks.STRIPPED_CRIMSON_PALISADE.get(), ModBlocks.STRIPPED_SPIKED_CRIMSON_PALISADE.get());
 		createPalisadeAndSpikedPalisade(ModBlocks.STRIPPED_WARPED_PALISADE.get(), ModBlocks.STRIPPED_SPIKED_WARPED_PALISADE.get());
 	}
@@ -114,6 +116,7 @@ public class ModBlockModelGenerators extends BlockModelGenerators
 		createSeat(ModBlocks.DARK_OAK_SEAT.get());
 		createSeat(ModBlocks.MANGROVE_SEAT.get());
 		createSeat(ModBlocks.CHERRY_SEAT.get());
+		createSeat(ModBlocks.PALE_OAK_SEAT.get());
 		createSeat(ModBlocks.BAMBOO_SEAT.get());
 		createSeat(ModBlocks.CRIMSON_SEAT.get());
 		createSeat(ModBlocks.WARPED_SEAT.get());
