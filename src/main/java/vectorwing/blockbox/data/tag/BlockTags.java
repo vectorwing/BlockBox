@@ -9,7 +9,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import vectorwing.blockbox.BlockBox;
 import vectorwing.blockbox.common.registry.ModBlocks;
-import vectorwing.blockbox.common.registry.ModItems;
 import vectorwing.blockbox.common.tag.CompatibilityTags;
 import vectorwing.blockbox.common.tag.ModTags;
 
@@ -33,12 +32,20 @@ public class BlockTags extends BlockTagsProvider
 	private void registerCompatibilityTags() {
 		tag(CompatibilityTags.FARMERS_DELIGHT_TRAY_HEAT_SOURCES).addTag(ModTags.BRAZIERS);
 		tag(CompatibilityTags.SABLE_SUPER_LIGHT)
+				.addTag(ModTags.SPIKED_PALISADES)
 				.addTag(ModTags.COPPER_BARS)
 				.addTag(ModTags.SKY_LANTERNS)
 				.add(ModBlocks.GOLDEN_BARS.get());
 		tag(CompatibilityTags.SABLE_LIGHT)
 				.addTag(ModTags.PALISADES)
 				.addTag(ModTags.WOODEN_SEATS);
+		tag(CompatibilityTags.SABLE_SLIPPERY).add(
+				ModBlocks.POLISHED_PACKED_ICE.get(),
+				ModBlocks.PACKED_ICE_BRICKS.get(),
+				ModBlocks.PACKED_ICE_BRICK_STAIRS.get(),
+				ModBlocks.PACKED_ICE_BRICK_SLAB.get(),
+				ModBlocks.PACKED_ICE_BRICK_WALL.get()
+		);
 	}
 
 	private void registerMinecraftTags() {

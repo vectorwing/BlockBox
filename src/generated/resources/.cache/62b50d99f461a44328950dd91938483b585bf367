@@ -1,4 +1,4 @@
-// 1.21.1	2026-02-09T20:05:33.105784	Tags for minecraft:block mod id blockbox
+// 1.21.1	2026-05-14T13:49:03.5411151	Tags for minecraft:block mod id blockbox
 713e4d947f67872698e3d4c43443368401cd7332 data/blockbox/tags/block/amethyst_blocks.json
 58396f7792ed668419d6e489e8af3d1fc7345eef data/blockbox/tags/block/braziers.json
 9097b75dcd8ee3b5eb6f5dc64b7e9f3a4d8b848e data/blockbox/tags/block/copper_bars.json
@@ -35,4 +35,5 @@ bdd7279042a7b839eab436fa8ed89aee817a9a44 data/minecraft/tags/block/trapdoors.jso
 3de224e3efed2c4bc1754bf3817cc9dcbbbf1709 data/minecraft/tags/block/vibration_resonators.json
 c18e3e90b423d958201ca372f4903f354739b6f9 data/minecraft/tags/block/walls.json
 1fef594f4753f2ef400245aa6f00dd14c8922cc8 data/sable/tags/block/light.json
-d3eece16adcd97d263213e1a82818ff0305268a5 data/sable/tags/block/super_light.json
+062253b88f5e3e67527c1607ceaea6af404ef71e data/sable/tags/block/slippery.json
+abb1fc05efe647fd1ea1612e436a11fdda959eb3 data/sable/tags/block/super_light.json

@@ -9,8 +9,9 @@
 
 ### Updates
 - Block Box now tags relevant blocks with **Sable** weight tags:
-  - `super_light`: Bars and Sky Lanterns;
+  - `super_light`: Spiked Palisades, Bars and Sky Lanterns;
   - `light`: Palisades and Seats;
+  - `slippery`: All blocks in the Packed Ice block set;
 - Updated Lapis Lazuli Bricks texture, to alleviate a vertical seam when tiled with itself;
 - Updated Stripped Palisade textures across the board, to make the edges of each timber more defined;
 
