@@ -1,5 +1,22 @@
 # Changelog
 
+## 0.1.3
+
+### Additions
+- New block/item tag pairs:
+  - `copper_bars`;
+  - `sky_lanterns`;
+
+### Updates
+- Block Box now tags relevant blocks with **Sable** weight tags:
+  - `super_light`: Bars and Sky Lanterns;
+  - `light`: Palisades and Seats;
+- Updated Lapis Lazuli Bricks texture, to alleviate a vertical seam when tiled with itself;
+- Updated Stripped Palisade textures across the board, to make the edges of each timber more defined;
+
+### Fixes
+- (26.1+) Fixed Spiked Palisades dealing no damage to entities moving on their spikes;
+
 ## 0.1.2
 
 ### Updates

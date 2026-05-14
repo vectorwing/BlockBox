@@ -5,6 +5,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
@@ -59,6 +60,7 @@ public class SpikedPalisadeBlock extends CrossCollisionBlock implements SimpleWa
 	}
 
 	@Override
+	@Nullable
 	public BlockState getToolModifiedState(BlockState state, UseOnContext context, ItemAbility itemAbility, boolean simulate) {
 		if (strippedForm == null) {
 			strippedForm = ()-> {
@@ -80,11 +82,14 @@ public class SpikedPalisadeBlock extends CrossCollisionBlock implements SimpleWa
 	protected void entityInside(BlockState state, Level level, BlockPos pos, Entity entity, InsideBlockEffectApplier effectApplier, boolean isPrecise) {
 		if (isEntityTouchingSpike(entity, pos)) {
 			entity.makeStuckInBlock(state, new Vec3(0.8, 0.75, 0.8));
-			if (!level.isClientSide() && (entity.xOld != entity.getX() || entity.zOld != entity.getZ())) {
-				double d0 = Math.abs(entity.getX() - entity.xOld);
-				double d1 = Math.abs(entity.getZ() - entity.zOld);
-				if (d0 >= 0.003 || d1 >= 0.003) {
-					entity.hurt(ModDamageTypes.getSimpleDamageSource(level, ModDamageTypes.PALISADE), 1.0F);
+			if (level instanceof ServerLevel serverLevel) {
+				Vec3 movement = entity.isClientAuthoritative() ? entity.getKnownMovement() : entity.oldPosition().subtract(entity.position());
+				if (movement.horizontalDistanceSqr() > 0.0) {
+					double xs = Math.abs(movement.x());
+					double zs = Math.abs(movement.z());
+					if (xs >= 0.003 || zs >= 0.003) {
+						entity.hurtServer(serverLevel, ModDamageTypes.getSimpleDamageSource(level, ModDamageTypes.PALISADE), 1.0F);
+					}
 				}
 			}
 		}

@@ -1,0 +1,12 @@
+{
+  "values": [
+    "blockbox:copper_chain_links",
+    "blockbox:exposed_copper_chain_links",
+    "blockbox:weathered_copper_chain_links",
+    "blockbox:oxidized_copper_chain_links",
+    "blockbox:waxed_copper_chain_links",
+    "blockbox:waxed_exposed_copper_chain_links",
+    "blockbox:waxed_weathered_copper_chain_links",
+    "blockbox:waxed_oxidized_copper_chain_links"
+  ]
+}

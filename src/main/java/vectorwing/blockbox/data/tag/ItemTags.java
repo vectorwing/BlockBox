@@ -73,6 +73,16 @@ public class ItemTags extends ItemTagsProvider
 				ModItems.STRIPPED_SPIKED_CRIMSON_PALISADE.get(),
 				ModItems.STRIPPED_SPIKED_WARPED_PALISADE.get()
 		);
+		tag(ModTags.COPPER_BAR_ITEMS).add(
+				ModItems.COPPER_CHAIN_LINKS.get(),
+				ModItems.EXPOSED_COPPER_CHAIN_LINKS.get(),
+				ModItems.WEATHERED_COPPER_CHAIN_LINKS.get(),
+				ModItems.OXIDIZED_COPPER_CHAIN_LINKS.get(),
+				ModItems.WAXED_COPPER_CHAIN_LINKS.get(),
+				ModItems.WAXED_EXPOSED_COPPER_CHAIN_LINKS.get(),
+				ModItems.WAXED_WEATHERED_COPPER_CHAIN_LINKS.get(),
+				ModItems.WAXED_OXIDIZED_COPPER_CHAIN_LINKS.get()
+		);
 		tag(ModTags.WOODEN_SEAT_ITEMS).add(
 				ModItems.OAK_SEAT.get(),
 				ModItems.SPRUCE_SEAT.get(),
@@ -97,7 +107,7 @@ public class ItemTags extends ItemTagsProvider
 				ModItems.GOLDEN_TRAPDOOR.get(),
 				ModItems.GOLDEN_BARS.get()
 		);
-		tag(ModTags.SKY_LANTERNS).add(
+		tag(ModTags.SKY_LANTERN_ITEMS).add(
 				ModItems.WHITE_SKY_LANTERN.get(),
 				ModItems.LIGHT_GRAY_SKY_LANTERN.get(),
 				ModItems.GRAY_SKY_LANTERN.get(),
