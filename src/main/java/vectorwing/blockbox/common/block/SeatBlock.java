@@ -1,6 +1,5 @@
 package vectorwing.blockbox.common.block;
 
-import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -19,13 +18,8 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import org.jetbrains.annotations.NotNull;
 import vectorwing.blockbox.common.entity.SeatEntity;
 
-import javax.annotation.ParametersAreNonnullByDefault;
-
-@ParametersAreNonnullByDefault
-@MethodsReturnNonnullByDefault
 public class SeatBlock extends HorizontalDirectionalBlock
 {
 	public static final MapCodec<SeatBlock> CODEC = simpleCodec(SeatBlock::new);
@@ -80,7 +74,7 @@ public class SeatBlock extends HorizontalDirectionalBlock
 	}
 
 	@Override
-	protected @NotNull MapCodec<? extends HorizontalDirectionalBlock> codec() {
+	protected MapCodec<? extends HorizontalDirectionalBlock> codec() {
 		return CODEC;
 	}
 }

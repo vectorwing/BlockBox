@@ -1,3 +1,4 @@
+//? neoforge {
 package vectorwing.blockbox.data;
 
 import net.neoforged.bus.api.SubscribeEvent;
@@ -30,3 +31,4 @@ public class DataGenerators
 		event.createProvider(ParticleTypes::new);
 	}
 }
+//?}

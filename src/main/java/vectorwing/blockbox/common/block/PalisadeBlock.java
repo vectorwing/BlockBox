@@ -2,10 +2,11 @@ package vectorwing.blockbox.common.block;
 
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Maps;
-import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.Identifier;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
@@ -26,32 +27,34 @@ import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+//? neoforge {
 import net.neoforged.neoforge.common.ItemAbilities;
 import net.neoforged.neoforge.common.ItemAbility;
-import org.jetbrains.annotations.NotNull;
+//?} else {
+
+/*import vectorwing.blockbox.fabric.porting.ItemAbilities;
+import vectorwing.blockbox.fabric.porting.ItemAbility;
+*///?}
+import vectorwing.blockbox.fabric.porting.BlockWithItemAbility;
+import org.jspecify.annotations.Nullable;
 import vectorwing.blockbox.common.block.state.PalisadeConnection;
 import vectorwing.blockbox.common.registry.ModSounds;
 import vectorwing.blockbox.common.tag.ModTags;
 
-import javax.annotation.Nullable;
-import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
-@ParametersAreNonnullByDefault
-@MethodsReturnNonnullByDefault
-public class PalisadeBlock extends CrossCollisionBlock implements SimpleWaterloggedBlock
+public class PalisadeBlock extends CrossCollisionBlock implements SimpleWaterloggedBlock, BlockWithItemAbility
 {
-	public static final MapCodec<PalisadeBlock> CODEC = simpleCodec(PalisadeBlock::new);
 
 	public static final EnumProperty<PalisadeConnection> TYPE_NORTH = EnumProperty.create("north", PalisadeConnection.class);
 	public static final EnumProperty<PalisadeConnection> TYPE_EAST = EnumProperty.create("east", PalisadeConnection.class);
 	public static final EnumProperty<PalisadeConnection> TYPE_SOUTH = EnumProperty.create("south", PalisadeConnection.class);
 	public static final EnumProperty<PalisadeConnection> TYPE_WEST = EnumProperty.create("west", PalisadeConnection.class);
 
-	public final Supplier<Block> strippedForm;
-	public final Supplier<Block> spikedForm;
+	public @Nullable Supplier<Block> strippedForm;
+	public @Nullable Supplier<Block> spikedForm;
 
 	public static final Map<Direction, EnumProperty<PalisadeConnection>> PROPERTY_BY_DIRECTION = ImmutableMap.copyOf(Maps.newEnumMap(Map.of(
 		Direction.NORTH, TYPE_NORTH,
@@ -60,22 +63,12 @@ public class PalisadeBlock extends CrossCollisionBlock implements SimpleWaterlog
 		Direction.WEST, TYPE_WEST
 	)));
 
-	public PalisadeBlock(Properties properties) {
-		this(null, null, 8.0F, 16.0F, 8.0F, 16.0F, 16.0F, properties);
-	}
-
-	public PalisadeBlock(@Nullable Supplier<Block> spikedForm, Properties properties) {
-		this(spikedForm, null, 8.0F, 16.0F, 8.0F, 16.0F, 16.0F, properties);
-	}
-
 	public PalisadeBlock(@Nullable Supplier<Block> spikedForm, @Nullable Supplier<Block> strippedForm, Properties properties) {
 		this(spikedForm, strippedForm, 8.0F, 16.0F, 8.0F, 16.0F, 16.0F, properties);
 	}
 
 	public PalisadeBlock(@Nullable Supplier<Block> spikedForm, @Nullable Supplier<Block> strippedForm, float postWidth, float postHeight, float wallWidth, float wallHeight, float collisionHeight, Properties properties) {
 		super(postWidth, postHeight, wallWidth, wallHeight, collisionHeight, properties);
-		this.spikedForm = spikedForm;
-		this.strippedForm = strippedForm;
 		this.registerDefaultState(this.stateDefinition.any()
 				.setValue(TYPE_NORTH, PalisadeConnection.NONE)
 				.setValue(TYPE_EAST, PalisadeConnection.NONE)
@@ -104,9 +97,19 @@ public class PalisadeBlock extends CrossCollisionBlock implements SimpleWaterlog
 	@Override
 	protected InteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
 		if (spikedForm == null) {
-			return InteractionResult.PASS;
+			spikedForm = ()-> {
+				Identifier id = BuiltInRegistries.BLOCK.getKey(this);
+				Identifier spiked;
+				if (id.getPath().contains("stripped")) {
+					spiked = id.withPath(path -> path.replace("stripped", "stripped_spiked"));
+				} else {
+					spiked = id.withPrefix("spiked_");
+				}
+				return BuiltInRegistries.BLOCK.getValue(spiked);
+
+			};
 		}
-		if (stack.is(ItemTags.SWORDS) && level.getBlockState(pos.above()).isAir()) {
+		if (stack.is(ItemTags.SWORDS) && !spikedForm.get().equals(Blocks.AIR) && level.getBlockState(pos.above()).isAir()) {
 			level.playSound(null, pos, ModSounds.ITEM_SWORD_CARVE.get(), SoundSource.BLOCKS, 1.0F, 0.9F);
 			level.addDestroyBlockEffect(pos, state);
 			stack.hurtAndBreak(2, player, hand.asEquipmentSlot());
@@ -124,10 +127,13 @@ public class PalisadeBlock extends CrossCollisionBlock implements SimpleWaterlog
 	@Override
 	public BlockState getToolModifiedState(BlockState state, UseOnContext context, ItemAbility itemAbility, boolean simulate) {
 		if (strippedForm == null) {
-			return null;
+			strippedForm = ()-> {
+				Identifier stripped = BuiltInRegistries.BLOCK.getKey(this).withPrefix("stripped_");
+				return BuiltInRegistries.BLOCK.getValue(stripped);
+			};
 		}
 
-		if (itemAbility == ItemAbilities.AXE_STRIP) {
+		if (itemAbility == ItemAbilities.AXE_STRIP && !strippedForm.get().equals(Blocks.AIR)) {
 			return strippedForm.get().defaultBlockState()
 					.setValue(TYPE_NORTH, state.getValue(TYPE_NORTH))
 					.setValue(TYPE_EAST, state.getValue(TYPE_EAST))
@@ -183,8 +189,8 @@ public class PalisadeBlock extends CrossCollisionBlock implements SimpleWaterlog
 	}
 
 	@Override
-	protected @NotNull MapCodec<? extends CrossCollisionBlock> codec() {
-		return CODEC;
+	protected MapCodec<? extends CrossCollisionBlock> codec() {
+		return null;
 	}
 
 	@Override

@@ -1,6 +1,6 @@
+//? neoforge {
 package vectorwing.blockbox.data.provider;
 
-import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.RecipeOutput;
@@ -9,11 +9,8 @@ import vectorwing.blockbox.data.recipe.CraftingRecipes;
 import vectorwing.blockbox.data.recipe.SmeltingRecipes;
 import vectorwing.blockbox.data.recipe.StonecuttingRecipes;
 
-import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.concurrent.CompletableFuture;
 
-@ParametersAreNonnullByDefault
-@MethodsReturnNonnullByDefault
 public class Recipes extends RecipeProvider
 {
 	public Recipes(HolderLookup.Provider registries, RecipeOutput output) {
@@ -44,3 +41,4 @@ public class Recipes extends RecipeProvider
 		}
 	}
 }
+//?}

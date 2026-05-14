@@ -1,3 +1,4 @@
+//? neoforge {
 package vectorwing.blockbox.data.model;
 
 import net.minecraft.client.data.models.model.ModelTemplate;
@@ -37,3 +38,4 @@ public class ModModelTemplates
 		return ModelTemplates.create(Identifier.fromNamespaceAndPath(BlockBox.MODID, id).toString(), suffix, slots);
 	}
 }
+//?}

@@ -1,9 +1,10 @@
 package vectorwing.blockbox.common.block;
 
-import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.RandomSource;
@@ -11,14 +12,8 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.InsideBlockEffectApplier;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.context.UseOnContext;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.LevelReader;
-import net.minecraft.world.level.ScheduledTickAccess;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.CrossCollisionBlock;
-import net.minecraft.world.level.block.IronBarsBlock;
-import net.minecraft.world.level.block.SimpleWaterloggedBlock;
+import net.minecraft.world.level.*;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.material.FluidState;
@@ -27,24 +22,27 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+//? neoforge {
 import net.neoforged.neoforge.common.ItemAbilities;
 import net.neoforged.neoforge.common.ItemAbility;
+//?} else {
+/*import vectorwing.blockbox.fabric.porting.ItemAbilities;
+import vectorwing.blockbox.fabric.porting.ItemAbility;
+*///?}
+import vectorwing.blockbox.fabric.porting.BlockWithItemAbility;
+import org.jspecify.annotations.Nullable;
 import vectorwing.blockbox.common.registry.ModDamageTypes;
 import vectorwing.blockbox.common.tag.ModTags;
 
-import javax.annotation.Nullable;
-import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.function.Supplier;
 
-@ParametersAreNonnullByDefault
-@MethodsReturnNonnullByDefault
-public class SpikedPalisadeBlock extends CrossCollisionBlock implements SimpleWaterloggedBlock
+public class SpikedPalisadeBlock extends CrossCollisionBlock implements SimpleWaterloggedBlock, BlockWithItemAbility
 {
 	public static final MapCodec<SpikedPalisadeBlock> CODEC = simpleCodec(SpikedPalisadeBlock::new);
 
 	protected static final VoxelShape SPIKE_SHAPE = Block.box(4.0D, 8.0D, 4.0D, 12.0D, 16.0D, 12.0D);
 
-	public final Supplier<Block> strippedForm;
+	public Supplier<Block> strippedForm;
 
 	public SpikedPalisadeBlock(Properties properties) {
 		this(null, properties);
@@ -65,9 +63,12 @@ public class SpikedPalisadeBlock extends CrossCollisionBlock implements SimpleWa
 	@Nullable
 	public BlockState getToolModifiedState(BlockState state, UseOnContext context, ItemAbility itemAbility, boolean simulate) {
 		if (strippedForm == null) {
-			return null;
+			strippedForm = ()-> {
+				Identifier stripped = BuiltInRegistries.BLOCK.getKey(this).withPrefix("stripped_");
+				return BuiltInRegistries.BLOCK.getValue(stripped);
+			};
 		}
-		if (itemAbility == ItemAbilities.AXE_STRIP) {
+		if (itemAbility == ItemAbilities.AXE_STRIP && !strippedForm.get().equals(Blocks.AIR)) {
 			return strippedForm.get().defaultBlockState()
 					.setValue(NORTH, state.getValue(NORTH))
 					.setValue(EAST, state.getValue(EAST))

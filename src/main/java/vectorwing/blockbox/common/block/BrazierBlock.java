@@ -1,6 +1,5 @@
 package vectorwing.blockbox.common.block;
 
-import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
@@ -16,8 +15,6 @@ import net.minecraft.world.level.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SimpleWaterloggedBlock;
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.CampfireBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -30,16 +27,19 @@ import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+//? neoforge {
 import net.neoforged.neoforge.common.ItemAbilities;
 import net.neoforged.neoforge.common.ItemAbility;
+//?} else {
+
+/*import vectorwing.blockbox.fabric.porting.ItemAbilities;
+import vectorwing.blockbox.fabric.porting.ItemAbility;
+*///?}
+import vectorwing.blockbox.fabric.porting.BlockWithItemAbility;
+import org.jspecify.annotations.Nullable;
 import vectorwing.blockbox.common.tag.ModTags;
 
-import javax.annotation.Nullable;
-import javax.annotation.ParametersAreNonnullByDefault;
-
-@ParametersAreNonnullByDefault
-@MethodsReturnNonnullByDefault
-public class BrazierBlock extends Block implements SimpleWaterloggedBlock
+public class BrazierBlock extends Block implements SimpleWaterloggedBlock, BlockWithItemAbility
 {
 	public static final BooleanProperty HANGING = BlockStateProperties.HANGING;
 	public static final BooleanProperty LIT = BlockStateProperties.LIT;
@@ -64,7 +64,6 @@ public class BrazierBlock extends Block implements SimpleWaterloggedBlock
 		this.registerDefaultState(this.stateDefinition.any().setValue(HANGING, false).setValue(LIT, true).setValue(WATERLOGGED, false));
 	}
 
-	@Override
 	public BlockState getToolModifiedState(BlockState state, UseOnContext context, ItemAbility itemAbility, boolean simulate) {
 		if (itemAbility == ItemAbilities.FIRESTARTER_LIGHT && canLight(state)) {
 			return state.setValue(BlockStateProperties.LIT, true);

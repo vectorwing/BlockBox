@@ -1,3 +1,4 @@
+//? neoforge {
 package vectorwing.blockbox.data.provider;
 
 import net.minecraft.client.data.models.BlockModelGenerators;
@@ -18,3 +19,4 @@ public class BlockItemModels extends ModelProvider
 		new ModBlockModelGenerators(blockModels).run();
 	}
 }
+//?}

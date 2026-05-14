@@ -1,3 +1,4 @@
+//? neoforge {
 package vectorwing.blockbox.data.generator;
 
 import net.minecraft.client.data.models.BlockModelGenerators;
@@ -336,3 +337,4 @@ public class ModBlockModelGenerators extends BlockModelGenerators
 				.select(true, true, hangingLit));
 	}
 }
+//?}

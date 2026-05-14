@@ -1,3 +1,4 @@
+//? neoforge {
 package vectorwing.blockbox.data.provider;
 
 import net.minecraft.data.PackOutput;
@@ -21,3 +22,4 @@ public class ParticleTypes extends ParticleDescriptionProvider
 		);
 	}
 }
+//?}

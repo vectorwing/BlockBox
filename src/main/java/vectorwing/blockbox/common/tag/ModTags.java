@@ -1,5 +1,6 @@
 package vectorwing.blockbox.common.tag;
 
+import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
@@ -58,10 +59,10 @@ public class ModTags
 	public static final TagKey<Item> SKY_LANTERN_ITEMS = modItemTag("sky_lanterns");
 
 	private static TagKey<Block> modBlockTag(String path) {
-		return BlockTags.create(Identifier.fromNamespaceAndPath(BlockBox.MODID, path));
+		return TagKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(BlockBox.MODID, path));
 	}
 
 	private static TagKey<Item> modItemTag(String path) {
-		return ItemTags.create(Identifier.fromNamespaceAndPath(BlockBox.MODID, path));
+		return TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(BlockBox.MODID, path));
 	}
 }

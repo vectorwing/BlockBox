@@ -1,0 +1,6 @@
+accessWidener v2 official
+
+accessible method net/minecraft/world/level/block/state/properties/BlockSetType register (Lnet/minecraft/world/level/block/state/properties/BlockSetType;)Lnet/minecraft/world/level/block/state/properties/BlockSetType;
+accessible method net/minecraft/core/particles/SimpleParticleType <init> (Z)V
+
+

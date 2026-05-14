@@ -1,3 +1,4 @@
+//? neoforge {
 package vectorwing.blockbox.data.provider;
 
 import net.minecraft.core.HolderLookup;
@@ -187,3 +188,4 @@ public class BlockLootTables extends BlockLootSubProvider
 		return generatedLootTables;
 	}
 }
+//?}

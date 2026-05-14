@@ -1,3 +1,4 @@
+//? neoforge {
 package vectorwing.blockbox.data.tag;
 
 import net.minecraft.core.HolderLookup;
@@ -386,3 +387,4 @@ public class BlockTags extends BlockTagsProvider
 		tag(net.minecraft.tags.BlockTags.NEEDS_DIAMOND_TOOL).add(ModBlocks.POLISHED_OBSIDIAN.get());
 	}
 }
+//?}

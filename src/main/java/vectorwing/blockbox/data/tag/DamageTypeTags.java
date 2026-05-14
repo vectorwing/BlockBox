@@ -1,3 +1,4 @@
+//? neoforge {
 package vectorwing.blockbox.data.tag;
 
 import net.minecraft.core.HolderLookup;
@@ -22,3 +23,4 @@ public class DamageTypeTags extends KeyTagProvider<DamageType>
 		tag(net.minecraft.tags.DamageTypeTags.PANIC_ENVIRONMENTAL_CAUSES).add(ModDamageTypes.PALISADE);
 	}
 }
+//?}
