@@ -10,8 +10,13 @@
 
 ### Updates
 - Block Box now tags relevant blocks with **Sable** weight tags:
-  - `super_light`: Bars and Sky Lanterns;
+  - `super_light`: Spiked Palisades, Bars and Sky Lanterns;
   - `light`: Palisades and Seats;
+  - `slippery`: All blocks in the Packed Ice block set;
+  - Sky Lanterns were given `floating_materials` attributes:
+    - When assembled, they will float and drift on their own, but are unable to lift anything else but themselves;
+    - This is done to not break Aeronautics progression, and because they would be too light to lift anything anyway;
+- To allow Sky Lanterns to be hand-pushable under Sable physics, they were given a small amount of mining resistance, no longer being instaminable;
 - Updated Lapis Lazuli Bricks texture, to alleviate a vertical seam when tiled with itself;
 - Updated Stripped Palisade textures across the board, to make the edges of each timber more defined;
 
