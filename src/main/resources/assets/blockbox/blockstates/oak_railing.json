@@ -2,7 +2,7 @@
   "multipart": [
     {
       "apply": {
-        "model": "blockbox:block/oak_railing"
+        "model": "blockbox:block/oak_railing_side"
       },
       "when": {
         "north": "true"
@@ -10,7 +10,7 @@
     },
     {
       "apply": {
-        "model": "blockbox:block/oak_railing",
+        "model": "blockbox:block/oak_railing_side",
         "y": 90
       },
       "when": {
@@ -19,7 +19,7 @@
     },
     {
       "apply": {
-        "model": "blockbox:block/oak_railing",
+        "model": "blockbox:block/oak_railing_side",
         "y": 180
       },
       "when": {
@@ -28,11 +28,74 @@
     },
     {
       "apply": {
-        "model": "blockbox:block/oak_railing",
+        "model": "blockbox:block/oak_railing_side",
         "y": 270
       },
       "when": {
         "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "blockbox:block/oak_railing_corner"
+      },
+      "when": {
+        "OR": [
+          {
+            "north": "true"
+          },
+          {
+            "east": "true"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "blockbox:block/oak_railing_corner",
+        "y": 90
+      },
+      "when": {
+        "OR": [
+          {
+            "east": "true"
+          },
+          {
+            "south": "true"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "blockbox:block/oak_railing_corner",
+        "y": 180
+      },
+      "when": {
+        "OR": [
+          {
+            "south": "true"
+          },
+          {
+            "west": "true"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "blockbox:block/oak_railing_corner",
+        "y": 270
+      },
+      "when": {
+        "OR": [
+          {
+            "west": "true"
+          },
+          {
+            "north": "true"
+          }
+        ]
       }
     }
   ]

@@ -30,6 +30,8 @@ public class ItemModels extends ItemModelProvider
 		Set<Item> items = BuiltInRegistries.ITEM.stream().filter(i -> BlockBox.MODID.equals(BuiltInRegistries.ITEM.getKey(i).getNamespace()))
 				.collect(Collectors.toSet());
 
+		items.remove(ModItems.OAK_RAILING.get());
+
 		palisadeModel(ModItems.OAK_PALISADE.get(), items);
 		palisadeModel(ModItems.SPIKED_OAK_PALISADE.get(), items);
 		palisadeModel(ModItems.SPRUCE_PALISADE.get(), items);
