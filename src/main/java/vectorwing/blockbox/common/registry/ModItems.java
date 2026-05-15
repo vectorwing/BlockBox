@@ -155,6 +155,8 @@ public class ModItems
 	public static final Supplier<BlockItem> CRIMSON_SEAT = registerSimpleBlockItem("crimson_seat", ModBlocks.CRIMSON_SEAT);
 	public static final Supplier<BlockItem> WARPED_SEAT = registerSimpleBlockItem("warped_seat", ModBlocks.WARPED_SEAT);
 
+	public static final Supplier<BlockItem> OAK_RAILING = registerSimpleBlockItem("oak_railing", ModBlocks.OAK_RAILING);
+
 	public static final Supplier<BlockItem> OAK_PALISADE = registerSimpleBlockItem("oak_palisade", ModBlocks.OAK_PALISADE, Items.OAK_BUTTON);
 	public static final Supplier<BlockItem> SPIKED_OAK_PALISADE = registerSimpleBlockItem("spiked_oak_palisade", ModBlocks.SPIKED_OAK_PALISADE, Items.OAK_BUTTON);
 	public static final Supplier<BlockItem> SPRUCE_PALISADE = registerSimpleBlockItem("spruce_palisade", ModBlocks.SPRUCE_PALISADE, Items.SPRUCE_BUTTON);
