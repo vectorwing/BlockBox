@@ -1,5 +1,7 @@
 package vectorwing.blockbox.common.block;
 
+import it.unimi.dsi.fastutil.objects.Object2IntMap;
+import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.Util;
 import net.minecraft.core.BlockPos;
@@ -16,7 +18,9 @@ import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import vectorwing.blockbox.common.helper.ClickHelper;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.Map;
@@ -34,21 +38,40 @@ public class RailingBlock extends Block implements SimpleWaterloggedBlock
 			(value) -> value.getKey().getAxis().isHorizontal()
 	).collect(Util.toMap());
 
-	protected static final VoxelShape SHAPE_SIMPLE = Block.box(0.0, 0.0, 0.0, 16.0, 16.0, 2.0);
+	protected static final VoxelShape SHAPE_NORTH = Block.box(0.0, 0.0, 0.0, 16.0, 16.0, 2.0);
+	protected static final VoxelShape SHAPE_SOUTH = Block.box(0.0, 0.0, 14.0, 16.0, 16.0, 16.0);
+	protected static final VoxelShape SHAPE_WEST = Block.box(0.0, 0.0, 0.0, 2.0, 16.0, 16.0);
+	protected static final VoxelShape SHAPE_EAST = Block.box(14.0, 0.0, 0.0, 16.0, 16.0, 16.0);
+
+	protected final VoxelShape[] shapeByIndex;
+	protected Object2IntMap<BlockState> stateToIndex = new Object2IntOpenHashMap<>();
 
 	public RailingBlock(Properties properties) {
 		super(properties);
+		this.shapeByIndex = makeShapes();
+
+		for (BlockState blockstate : this.stateDefinition.getPossibleStates()) {
+			this.getAABBIndex(blockstate);
+		}
+
 		this.registerDefaultState(stateDefinition.any()
 				.setValue(NORTH, true)
 				.setValue(EAST, false)
 				.setValue(SOUTH, false)
 				.setValue(WEST, false)
-				.setValue(WATERLOGGED, false)
-		);
+				.setValue(WATERLOGGED, false));
+	}
+
+	protected VoxelShape[] makeShapes() {
+		VoxelShape northEast = Shapes.or(SHAPE_NORTH, SHAPE_EAST);
+		VoxelShape southWest = Shapes.or(SHAPE_SOUTH, SHAPE_WEST);
+
+		return new VoxelShape[]{
+				Shapes.empty(), SHAPE_SOUTH, SHAPE_WEST, southWest, SHAPE_NORTH, Shapes.or(SHAPE_SOUTH, SHAPE_NORTH), Shapes.or(SHAPE_WEST, SHAPE_NORTH), Shapes.or(southWest, SHAPE_NORTH), SHAPE_EAST, Shapes.or(SHAPE_SOUTH, SHAPE_EAST), Shapes.or(SHAPE_WEST, SHAPE_EAST), Shapes.or(southWest, SHAPE_EAST), northEast, Shapes.or(SHAPE_SOUTH, northEast), Shapes.or(SHAPE_WEST, northEast), Shapes.or(southWest, northEast)};
 	}
 
 	public BlockState getStateForPlacement(BlockPlaceContext context) {
-		Direction facing = context.getHorizontalDirection();
+		Direction facing = context.getClickedFace().getAxis().isHorizontal() ? context.getHorizontalDirection() : ClickHelper.getDirectionByCross(context.getClickedFace(), context.getClickLocation());
 		BooleanProperty targetProperty = PROPERTY_BY_DIRECTION.get(facing);
 		BlockState targetState = context.getLevel().getBlockState(context.getClickedPos());
 		if (targetState.is(this)) {
@@ -61,9 +84,8 @@ public class RailingBlock extends Block implements SimpleWaterloggedBlock
 	}
 
 	public boolean canBeReplaced(BlockState state, BlockPlaceContext context) {
-		Direction facing = context.getHorizontalDirection();
+		Direction facing = context.getClickedFace().getAxis().isHorizontal() ? context.getHorizontalDirection() : ClickHelper.getDirectionByCross(context.getClickedFace(), context.getClickLocation());
 		BooleanProperty targetProperty = PROPERTY_BY_DIRECTION.get(facing);
-		BlockState targetState = context.getLevel().getBlockState(context.getClickedPos());
 
 		return !context.isSecondaryUseActive() && context.getItemInHand().is(this.asItem()) && !state.getValue(targetProperty) || super.canBeReplaced(state, context);
 	}
@@ -74,7 +96,7 @@ public class RailingBlock extends Block implements SimpleWaterloggedBlock
 
 	@Override
 	protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-		return SHAPE_SIMPLE;
+		return this.shapeByIndex[this.getAABBIndex(state)];
 	}
 
 	protected FluidState getFluidState(BlockState state) {
@@ -84,5 +106,32 @@ public class RailingBlock extends Block implements SimpleWaterloggedBlock
 	@Override
 	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
 		builder.add(NORTH, EAST, WEST, SOUTH, WATERLOGGED);
+	}
+
+	private static int indexFor(Direction facing) {
+		return 1 << facing.get2DDataValue();
+	}
+
+	protected int getAABBIndex(BlockState state) {
+		return this.stateToIndex.computeIntIfAbsent(state, (blockState) -> {
+			int i = 0;
+			if (blockState.getValue(NORTH)) {
+				i |= indexFor(Direction.NORTH);
+			}
+
+			if (blockState.getValue(EAST)) {
+				i |= indexFor(Direction.EAST);
+			}
+
+			if (blockState.getValue(SOUTH)) {
+				i |= indexFor(Direction.SOUTH);
+			}
+
+			if (blockState.getValue(WEST)) {
+				i |= indexFor(Direction.WEST);
+			}
+
+			return i;
+		});
 	}
 }
