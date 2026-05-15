@@ -1,5 +1,6 @@
 {
   "format_version": "1.9.0",
+  "ambientocclusion": false,
   "parent": "block/block",
   "textures": {
     "particle": "#side"

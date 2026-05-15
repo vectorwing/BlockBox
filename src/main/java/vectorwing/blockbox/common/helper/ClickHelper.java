@@ -3,6 +3,8 @@ package vectorwing.blockbox.common.helper;
 import net.minecraft.core.Direction;
 import net.minecraft.world.phys.Vec3;
 
+import javax.annotation.Nullable;
+
 /**
  * Helper for measuring click regions.
  * <p>
@@ -10,6 +12,12 @@ import net.minecraft.world.phys.Vec3;
  */
 public class ClickHelper
 {
+	/**
+	 * Selects a direction based on which cross quadrant (areas between an X) of a face was clicked. Works for all cardinal directions.
+	 * @param face The face direction which was clicked.
+	 * @param hitVec The point which was clicked on the surface.
+	 * @return The direction equivalent to the cross quadrant which was clicked.
+	 */
 	public static Direction getDirectionByCross(Direction face, Vec3 hitVec) {
 		hitVec = fraction(hitVec);
 
@@ -35,6 +43,30 @@ public class ClickHelper
 				return y < 0 ? Direction.DOWN : Direction.UP;
 			}
 		}
+	}
+
+	/**
+	 * Selects a horizontal direction based on which third of a horizontal face (shaped like this: [||]) was clicked. Returns the passed face for vertical directions.
+	 * @param face The face direction which was clicked.
+	 * @param hitVec The point which was clicked on the surface.
+	 * @param edgeWidth The horizontal width, in a decimal from 0.0 to 0.5, which should be considered a left/right edge of the face. Set to 0.0 to check two symmetric halves.
+	 * @return The horizontal direction equivalent to the third which was clicked
+	 */
+	public static Direction getHorizontalDirectionByThirds(Direction face, Vec3 hitVec, double edgeWidth) {
+		hitVec = fraction(hitVec);
+		edgeWidth = Math.min(edgeWidth, 0.5);
+		if (isY(face)) {
+			return face;
+		}
+		double xz = (isX(face) ? hitVec.z() : hitVec.x()) - .5;
+		if (isX(face)) {
+			if (xz <= -0.5 + edgeWidth) return Direction.NORTH;
+			if (xz >= 0.5 - edgeWidth) return Direction.SOUTH;
+		} else {
+			if (xz <= -0.5 + edgeWidth) return Direction.WEST;
+			if (xz >= 0.5 - edgeWidth) return Direction.EAST;
+		}
+		return face;
 	}
 
 	public static boolean isX(Direction dir) {

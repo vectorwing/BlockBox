@@ -17,6 +17,7 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -71,23 +72,32 @@ public class RailingBlock extends Block implements SimpleWaterloggedBlock
 	}
 
 	public BlockState getStateForPlacement(BlockPlaceContext context) {
-		Direction facing = context.getClickedFace().getAxis().isHorizontal() ? context.getHorizontalDirection() : ClickHelper.getDirectionByCross(context.getClickedFace(), context.getClickLocation());
-		BooleanProperty targetProperty = PROPERTY_BY_DIRECTION.get(facing);
 		BlockState targetState = context.getLevel().getBlockState(context.getClickedPos());
+		Direction targetDirection = getRailingPlacementTarget(context);
+		BooleanProperty targetProperty = PROPERTY_BY_DIRECTION.get(targetDirection);
 		if (targetState.is(this)) {
 			if (!targetState.getValue(targetProperty)) {
 				return targetState.setValue(targetProperty, true);
 			}
 			return targetState;
 		}
-		return getBlankState().setValue(PROPERTY_BY_DIRECTION.get(facing), true);
+		return getBlankState().setValue(PROPERTY_BY_DIRECTION.get(targetDirection), true);
 	}
 
 	public boolean canBeReplaced(BlockState state, BlockPlaceContext context) {
-		Direction facing = context.getClickedFace().getAxis().isHorizontal() ? context.getHorizontalDirection() : ClickHelper.getDirectionByCross(context.getClickedFace(), context.getClickLocation());
+		Direction facing = getRailingPlacementTarget(context);
 		BooleanProperty targetProperty = PROPERTY_BY_DIRECTION.get(facing);
 
 		return !context.isSecondaryUseActive() && context.getItemInHand().is(this.asItem()) && !state.getValue(targetProperty) || super.canBeReplaced(state, context);
+	}
+
+	public Direction getRailingPlacementTarget(BlockPlaceContext context) {
+		Direction face = context.getClickedFace();
+		if (face.getAxis().isHorizontal() && !context.replacingClickedOnBlock()) {
+			return face.getOpposite();
+		}
+		Vec3 clickLocation = context.getClickLocation();
+		return face.getAxis().isHorizontal() ? ClickHelper.getHorizontalDirectionByThirds(face, clickLocation, 0.3) : ClickHelper.getDirectionByCross(face, context.getClickLocation());
 	}
 
 	public BlockState getBlankState() {
