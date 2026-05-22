@@ -1,10 +1,17 @@
 package vectorwing.blockbox.data.provider;
 
+import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
+import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
+import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
+import vectorwing.blockbox.common.block.RailingBlock;
 import vectorwing.blockbox.common.registry.ModBlocks;
 
 import java.util.HashSet;
@@ -163,12 +170,27 @@ public class BlockLootTables extends BlockLootSubProvider
 		dropSelf(ModBlocks.PURPLE_SKY_LANTERN.get());
 		dropSelf(ModBlocks.MAGENTA_SKY_LANTERN.get());
 		dropSelf(ModBlocks.PINK_SKY_LANTERN.get());
+
+		railing(ModBlocks.OAK_RAILING.get());
 	}
 
 	protected void addBlockStairSlab(Block block, Block stair, Block slab) {
 		dropSelf(block);
 		dropSelf(stair);
 		add(slab, this::createSlabItemTable);
+	}
+
+	protected void railing(Block railingBlock) {
+		add(railingBlock, LootTable.lootTable().withPool(
+				LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).add(this.applyExplosionDecay(railingBlock, LootItem.lootTableItem(railingBlock)
+								.apply(SetItemCountFunction.setCount(ConstantValue.exactly(-1.0F), true))
+								.apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0F), true).when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(railingBlock).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(RailingBlock.NORTH, true))))
+								.apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0F), true).when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(railingBlock).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(RailingBlock.SOUTH, true))))
+								.apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0F), true).when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(railingBlock).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(RailingBlock.WEST, true))))
+								.apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0F), true).when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(railingBlock).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(RailingBlock.EAST, true))))
+						)
+				)
+		));
 	}
 
 	@Override

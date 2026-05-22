@@ -1,4 +1,4 @@
-// 1.21.1	2025-02-13T17:28:06.9564141	Loot Tables
+// 1.21.1	2026-05-22T16:56:57.2149251	Loot Tables
 21d023bbc6803113198cdc6b2685f08f98d6e6e5 data/blockbox/loot_table/blocks/acacia_palisade.json
 efe77edd4c80c7ac1a0560a0e8e7cc2c6f8add76 data/blockbox/loot_table/blocks/acacia_seat.json
 cf59f53d85513df5b7135ad8bb3f1c9cc166529b data/blockbox/loot_table/blocks/amethyst_mosaic.json
@@ -75,6 +75,7 @@ b8cea8a08317d8830c93684274770beb72e1240a data/blockbox/loot_table/blocks/magenta
 0eb31eed96272d8ef82f4bb47f98112650f71399 data/blockbox/loot_table/blocks/mangrove_palisade.json
 0ed862fcda3ecbf4e3aa1a6883e582de828862d7 data/blockbox/loot_table/blocks/mangrove_seat.json
 1160abc455861461ae398ed1f17b4d2debcfe430 data/blockbox/loot_table/blocks/oak_palisade.json
+bb76f8d1ce199dc0ac518fa63b76cbeffbeeca8b data/blockbox/loot_table/blocks/oak_railing.json
 eeb52f1fe52dc1b28f22e316293e19321dd974b8 data/blockbox/loot_table/blocks/oak_seat.json
 c6951fbf2d7f61d068cf8c5d4d83ba1f9af14a37 data/blockbox/loot_table/blocks/orange_sky_lantern.json
 4db068cf6b0a22d3ed537c9a45b0ea46b30a99d5 data/blockbox/loot_table/blocks/oxidized_copper_bars.json

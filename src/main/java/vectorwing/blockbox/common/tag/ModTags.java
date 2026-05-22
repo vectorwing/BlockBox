@@ -10,6 +10,11 @@ import vectorwing.blockbox.BlockBox;
 
 public class ModTags
 {
+	public static class Blocks {
+		public static final TagKey<Block> RAILINGS = modBlockTag("railings");
+		public static final TagKey<Block> RAILINGS_WOODEN = modBlockTag("railings/wooden");
+	}
+
 	// Blocks that are palisades.
 	public static final TagKey<Block> PALISADES = modBlockTag("palisades");
 

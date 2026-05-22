@@ -2,6 +2,7 @@
   "values": [
     "#blockbox:palisades",
     "#blockbox:spiked_palisades",
-    "#blockbox:wooden_seats"
+    "#blockbox:wooden_seats",
+    "#blockbox:railings/wooden"
   ]
 }

@@ -164,6 +164,10 @@ public class BlockTags extends BlockTagsProvider
 				ModBlocks.CRIMSON_SEAT.get(),
 				ModBlocks.WARPED_SEAT.get()
 		);
+		tag(ModTags.Blocks.RAILINGS_WOODEN).add(
+				ModBlocks.OAK_RAILING.get()
+		);
+		tag(ModTags.Blocks.RAILINGS).addTag(ModTags.Blocks.RAILINGS_WOODEN);
 		tag(ModTags.AMETHYST_BLOCKS).add(
 				ModBlocks.POLISHED_AMETHYST.get(),
 				ModBlocks.CUT_AMETHYST.get(),
@@ -344,7 +348,8 @@ public class BlockTags extends BlockTagsProvider
 		tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_AXE)
 				.addTag(ModTags.PALISADES)
 				.addTag(ModTags.SPIKED_PALISADES)
-				.addTag(ModTags.WOODEN_SEATS);
+				.addTag(ModTags.WOODEN_SEATS)
+				.addTag(ModTags.Blocks.RAILINGS_WOODEN);
 		tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_SHOVEL).add(
 				ModBlocks.PACKED_SNOW.get(),
 				ModBlocks.CARVED_SNOW.get(),
