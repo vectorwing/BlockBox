@@ -66,7 +66,7 @@
   "block.blockbox.broken_tile_mosaic": "Разбитая мозаика из плитняка",
 
   "block.blockbox.packed_snow": "Плотный снег",
-  "block.blockbox.carved_snow": "\"Резной\" снег",
+  "block.blockbox.carved_snow": "'Резной' снег",
   "block.blockbox.snow_bricks": "Снежные кирпичи",
   "block.blockbox.snow_brick_stairs": "Ступеньки из снежного кирпича",
   "block.blockbox.snow_brick_slab": "Плита из снежного кирпича",
@@ -170,5 +170,14 @@
 
   "blockbox.tooltip.sky_lantern": "Может быть размещён в воздухе",
 
-  "death.attack.blockbox.palisade": "%1$s был пронзен шипастым частоколом"
+  "blockbox.subtitles.sword.carve": "Меч вырезает",
+
+  "death.attack.blockbox.palisade": "%1$s был пронзен шипастым частоколом",
+
+  "tag.item.blockbox.copper_bars": "Медные прутья",
+  "tag.item.blockbox.golden_blocks": "Золотые блоки",
+  "tag.item.blockbox.palisades": "Частоколы",
+  "tag.item.blockbox.sky_lanterns": "Небесные фонарики",
+  "tag.item.blockbox.spiked_palisades": "Шипастые частоколы",
+  "tag.item.blockbox.wooden_seats": "Деревянные сиденья"
 }
